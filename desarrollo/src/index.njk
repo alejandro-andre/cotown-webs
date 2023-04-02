@@ -1,0 +1,29 @@
+---
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+
+permalink: "index.html"
+---
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+</head>
+
+<body>
+
+    {%- for b in locations %}
+    <p>{{ b.Name }}</p>
+    <ul>
+      {%- for d in b.Districts %}
+        <li>{{ d.Name }}</li>
+      {%- endfor %}
+    </ul>
+    
+    {% endfor %}
+
+</body>
+
+</html>
