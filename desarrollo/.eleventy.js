@@ -1,15 +1,14 @@
-const markdownit = require("markdown-it");
-const cleancss = require("clean-css");
+const MarkdownIt = require("markdown-it");
+const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
-const htmlmin = require("html-minifier");
-const path = require("path");
-const minify = require("terser");
-  
+const HtmlMin = require("html-minifier");
+const { minify } = require("terser");
+
 module.exports = (eleventyConfig) => {
 
   // Markdown to HTML
   eleventyConfig.addFilter("markdown", (value) => {
-    const md = new markdownit();
+    const md = new MarkdownIt();
     return md.render(value);
   });
 
@@ -27,16 +26,14 @@ module.exports = (eleventyConfig) => {
   
   // HTML minification
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    return content;
     if( outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
+      let minified = HtmlMin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true
       });
       return minified;
     }
-
     return content;
   });
   
@@ -53,7 +50,7 @@ module.exports = (eleventyConfig) => {
   
   // CSS minification
   eleventyConfig.addFilter("cssmin", function(code) {
-    return new cleancss({}).minify(code).styles;
+    return new CleanCSS({}).minify(code).styles;
   });
 
   // Image optimizer
@@ -72,7 +69,6 @@ module.exports = (eleventyConfig) => {
 			loading: "lazy",
 			decoding: "async",
 		};
-
     html = Image.generateHTML(metadata, imageAttributes);
 		return html;
 	});
@@ -90,7 +86,6 @@ module.exports = (eleventyConfig) => {
       data: "data",
       output: "www"
     }
-
   };
 
 };

@@ -1,0 +1,23 @@
+---
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+
+permalink: "/index.html"
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador</title>
+  </head>
+  <body>
+    <h1>Buscador</h1>
+    <input type="search" id="search-input" placeholder="Buscar..." />
+    <ul id="search-results"></ul>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    {% set script %}{% include "js/search.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
+  </body>
+</html>

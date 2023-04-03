@@ -1,3 +1,4 @@
 {
-    "locations": { "es": "localizaciones", "en": "locations"}
+    "locations": { "es": "localizaciones", "en": "locations"},
+    "faqs": { "es": "faqs", "en": "faqs"}
 }
