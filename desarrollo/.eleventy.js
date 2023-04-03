@@ -1,8 +1,17 @@
-const CleanCSS = require("clean-css");
+const markdownit = require("markdown-it");
+const cleancss = require("clean-css");
+const Image = require("@11ty/eleventy-img");
 const htmlmin = require("html-minifier");
-const { minify } = require("terser");
+const path = require("path");
+const minify = require("terser");
   
 module.exports = (eleventyConfig) => {
+
+  // Markdown to HTML
+  eleventyConfig.addFilter("markdown", (value) => {
+    const md = new markdownit();
+    return md.render(value);
+  });
 
   // Text to URL
   eleventyConfig.addFilter('ascii', (value) => {
@@ -44,21 +53,32 @@ module.exports = (eleventyConfig) => {
   
   // CSS minification
   eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
+    return new cleancss({}).minify(code).styles;
   });
 
-  // Custom order
-  eleventyConfig.addFilter("sort", function(values, field) {
-    return values.slice().sort((a, b) => a[field].localeCompare(b[field]))
-  });
+  // Image optimizer
+	eleventyConfig.addShortcode("image", async function(src, alt, sizes, name) {
+		let metadata = await Image(src, {
+			widths: [300, 600],
+			urlPath: "/img/",
+      outputDir: "./www/img/",
+      filenameFormat: function (id, src, width, format, options) {
+        return `${name}-${width}w.${format}`;
+      }
+		});
+    let imageAttributes = {
+			alt,
+			sizes,
+			loading: "lazy",
+			decoding: "async",
+		};
 
-  
+    html = Image.generateHTML(metadata, imageAttributes);
+		return html;
+	});
+
   // Copy folders
-  eleventyConfig.addPassthroughCopy("src/fonts");
-  eleventyConfig.addPassthroughCopy("src/img");
-  eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/js");
-  eleventyConfig.addPassthroughCopy("src/icons");
+  eleventyConfig.addPassthroughCopy({"src/assets": "."});
 
   // Config
   return {

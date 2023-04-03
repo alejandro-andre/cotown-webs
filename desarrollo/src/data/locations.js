@@ -1,23 +1,33 @@
 module.exports = async () => {
 
+  const QUERY  = `
+  { 
+    data: Geo_LocationList { 
+      id 
+      Name 
+      Name_en
+      Province: ProvinceViaProvince_id { 
+        Name 
+      } 
+      Districts: DistrictListViaLocation_id { 
+        Name 
+      } 
+    } 
+  }`;
+
+  // Constants
+  var K = require('./constants');
+
+  // Fetch library
   const fetch = require('node-fetch');
 
   // Login
-  const login_res = await fetch('https://experis.flows.ninja/graphql', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ "query": "mutation { login(username:\"modelsadmin\", password:\"Ciber$2022\") }" }),
-  });
-  const { login_data } = await login_res.json();
-  const auth = { authorization : login_data.login };
+  const login_res = await fetch(K.SERVER, { method: 'POST', headers: K.HEADER, body: JSON.stringify({ "query": K.LOGIN }) });
+  const login_data = await login_res.json();
+  const auth = { authorization : login_data.data.login };
 
   // Query
-  const query_res = await fetch('https://experis.flows.ninja/graphql', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ "query": "{ locations: Geo_LocationList { id Name Province: ProvinceViaProvince_id { Name } Districts: DistrictListViaLocation_id { Name } } }", "variables": auth }),
-  });
-  const { query_data } = await query_res.json();
-  
-  return(query_data.locations); 
+  const query_res = await fetch(K.SERVER, { method: 'POST', headers: K.HEADER, body: JSON.stringify({ "query": QUERY, "variables": auth }) });
+  const query_data = await query_res.json();
+  return(query_data.data.data); 
 };

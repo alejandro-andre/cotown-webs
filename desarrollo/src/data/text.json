@@ -1,0 +1,4 @@
+{
+    "titulo": { "es": "Titulo", "en": "Title" },
+    "texto":  { "es": "Esto está **en negrita**", "en": "This is **bold**" }
+}
