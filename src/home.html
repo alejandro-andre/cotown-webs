@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Cotown</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- HTML -->
+  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../iron-image/iron-image.html">
+  <link rel="import" href="skeleton-carousel.html">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/buttons.css">
+  <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/home.css">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="./assets/icons/style.css">
+  <link rel="stylesheet" href="./assets/icons/style.scss">
+  <link rel="stylesheet" href="./assets/icons/variables.scss">
+ 
+  <!-- IMAGES -->
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="./favicon.png">
+
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- HEADER -->
+  <header>
+    <section class="container-header first">
+      <div class="row turquoise-line">
+        <div class="six columns left-content">
+          <h1 class="spot">NUEVA APERTURA EN MADRID, ENTRA Y DESCÚBRELA</h1>
+        </div>
+        <div class="six columns u-pull-right right-content">
+          <div class="lang four columns">            
+            <img class="lang-img" alt="es" src="./assets/img/es.png"></img>
+          </div>
+          <div class="icons-header two columns">
+            <em class="icon-WhatsappPrimary"></em>
+            <em class="icon-Search"></em>
+          </div>
+          <div class="private three columns">
+            <div class="two columns">
+              <em class="icon-Search"></em>
+            </div>
+            <div class="ten columns u-pull-left">
+              <p class="private-area">Área privada</p>
+            </div>
+          </div>
+          <div class="three columns">
+            <button class="btn-outline">RESERVAR</button>
+          </div>          
+        </div>
+      </div> 
+    </section>
+    <section class="container-header second-black">       
+      <div class="row">
+        <div class="logo three columns">
+          <a href="#home">
+            <h1 class="h1-logo"><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
+          </a>
+        </div>
+        <div class="nine columns">
+          <nav class="navBar u-pull-right twelve columns" id="mainNavBar">   
+            <ul class="twelve columns">             
+                <!-- <a href="#locations" onClick="openDrawerMenu()">Localizaciones</a>
+              <a class="icon-CorcheteDown" [ngClass]="openDrawerMenu ? 'icon-CorcheteUp' : 'icon-CorcheteDown' " onClick="openDrawerMenu()"></a> -->
+              <li class="three columns">
+                <button class="nav-select twelve columns" onClick="openListMenu()">
+                  Localizaciones
+                  <i class="icon-CorcheteDown" [ngClass]="openDrawerMenu ? 'icon-CorcheteUp' : 'icon-CorcheteDown'">                    
+                  </i>                  
+                </button>
+                <div id="list" class="container-list twelve columns">
+                  <a href="#locations" class="twelve columns">Barcelona</a>
+                  <a href="#locations" class="twelve columns">Valencia</a>
+                  <a href="#locations" class="twelve columns">Bilbao</a>                  
+                </div>
+              </li>
+
+              <li class="two columns"><a href="#about">Conócenos</a></li>
+              <li class="two columns"><a href="#advantages">Ventajas</a></li>
+              <li class="two columns"><a href="#faqs">FAQS</a></li>
+              <li class="two columns"><a href="#blog">Blog</a></li>
+              <li class="two columns"><a href="#contact">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </header>
+  
+  <!-- MAIN -->
+  <main>
+    <div class="row">
+      <div class="container-main twelve columns">
+        <section class="main-header row">
+          <div class="left four columns">
+            <h1>BIENVENIDO COTOWNER!</h1>
+            <div class="basic-searcher row">
+              <label class="label twelve columns">Quiero vivir en:</label>
+              <select class="twelve columns">
+                <option></option>
+                <option>Barcelona</option>
+                <option>Valencia</option>
+                <option>Bilbao</option>
+              </select>
+              <div class="calendar twelve columns">
+                <div class="from six columns">
+                  <label class="label twelve columns" for="from">Desde:</label>                  
+                  <input class="input twelve columns" type="date" id="start" name="trip-from">
+                </div>
+                <div class="to six columns">
+                  <label class="label twelve columns" for="to">Hasta:</label>
+                  <input class="input twelve columns" type="date" id="start" name="trip-to">
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div id="video" class="video ten columns featured-bg-image">
+            <div href="http://www.youtube.com/embed/EVpyXNiHVbE?autoplay=1" class="video-home">
+              <i class="icon-ArrowRight center"></i>
+            </div>
+          </div>                
+        </section>
+        <section class="main-contain row">         
+          <div class="title-big twelve columns">            
+            <h1 class="h1-big">¿QUE ES COTOWN?</h1>
+            <p class="text">
+              Si has llegado hasta aquí es porque te mueres por saber qué es COTOWN. Cotown llega al mercado para revolucionar el concepto de Coliving en España. Pero, sobre todo, brindar la oportunidad a los futuros cotowners, tanto nómadas digitales internacionales como jóvenes profesionales nacionales, de ser «ciudadanos con suerte».
+              Desde la crew de COTOWN, nos proponemos cubrir y dar apoyo a esta nueva necesidad de vivienda temporal para impulsar la optimización de los espacios dentro de los pisos y transformarlos en un hogar moderno, tecnológico y adaptable a cualquier circunstancia. El 100% de nuestra energía está dedicada a hacer que te sientas como en casa, rollo ¿ese protagonista de película de Netflix con un pisazo en el centro de una ciudad muy molona? Pues ese. 
+              <span class="bold"> ¡Bienvenid@!</span>
+            </p>
+          </div>
+        </section>
+        <section class="carousel-big row">
+          <h2 class="twelve columns">¿DÓNDE QUIERES VIVIR?</h2>
+          <div class="carousel">
+            <div class="container">
+              <div class="img barc">
+                <h3 class="img-title">BARCELONA</h3>
+              </div>
+              <div class="img val">
+                <h3 class="img-title">VALENCIA</h3>
+              </div>
+              <div class="img bilb">
+                <h3 class="img-title">BILBAO</h3>
+              </div>
+            </div>
+            <ul class="arrows row u-full-width">
+              <li class="arrow">
+                <i class="icon-Arrow-Left center"></i>
+              </li>
+              <li class="arrow">
+                <i class="icon-Arrow-Right center"></i>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="pisos row">
+          <h2 class="twelve columns">ELIGE TU PISAZO</h2>
+          <div class="pisos-imgs twelve columns">
+            <div class="container">
+              <div class="img piso">
+                <h3 class="img-title">PISO COMPARTIDO</h3>
+              </div>
+              <div class="img apartm">
+                <h3 class="img-title">APARTAMENTO PRIVADO</h3>
+              </div>
+            </div>
+
+        </section>
+        <section class="servicios row u-full-width">
+          <h2 class="row u-full-width">SERVICIOS INCLUIDOS</h2>
+          <div class="container twelve columns">
+            <div class="backg-turquoise four columns"></div>
+            <div class="cards-first eight columns">
+              <div class="card three columns">
+                <i class="icon-Meh"></i>
+                <p class="bold">24 de asistencia de emergencias</p>
+                <p class="text">Estamos las 24 horas para cualquier urgencia. La invasión alienígena va aparte.</p>
+              </div>
+              <div class="card three columns">
+                <i class="icon-Meh"></i>
+                <p class="bold">24 de asistencia de emergencias</p>
+                <p class="text">Estamos las 24 horas para cualquier urgencia. La invasión alienígena va aparte.</p>
+              </div>
+            </div>
+            <div class="cards-second twelve columns">
+              <div class="card three columns">
+                <i class="icon-Meh"></i>
+                <p class="bold">24 de asistencia de emergencias</p>
+                <p class="text">Estamos las 24 horas para cualquier urgencia. La invasión alienígena va aparte.</p>
+              </div>   
+              <div class="card three columns">
+                <i class="icon-Meh"></i>
+                <p class="bold">24 de asistencia de emergencias</p>
+                <p class="text">Estamos las 24 horas para cualquier urgencia. La invasión alienígena va aparte.</p>
+              </div>
+              <div class="card three columns">
+                <i class="icon-Meh"></i>
+                <p class="bold">24 de asistencia de emergencias</p>
+                <p class="text">Estamos las 24 horas para cualquier urgencia. La invasión alienígena va aparte.</p>
+              </div>
+              <div class="card three columns">
+                <i class="icon-Meh"></i>
+                <p class="bold">24 de asistencia de emergencias</p>
+                <p class="text">Estamos las 24 horas para cualquier urgencia. La invasión alienígena va aparte.</p>
+              </div>         
+            </div>
+          </div>
+        </section>
+        <section class="cotownity row">
+          <div class="container-cotownity twelve columns">
+            <div class="contain-bg ten columns">
+              <div class="title-bg twelve columns">
+                <h2 class="five columns">
+                  ÚNETE A NUESTRA COTOWNITY
+                </h2>
+              </div>
+              <div class="img-small four columns">
+                <img class="small" alt="cotownity-small" src="./assets/img/cotownity-small.png">
+              </div>
+              <div class="img-big eight columns">
+                <img class="big" alt="cotownity-big" src="./assets/img/cotownity-big.png">
+              </div>
+            </div>           
+          </div>
+          <div class="feeling twelve columns">
+            <h2 class="title-feel four columns">#feeling local</h2>
+          </div>
+          <div class="last-contain twelve columns">
+            <div class="insta-fb">
+              <i class="icon-InstagramPrimary"></i>
+              <i class="icon-FacebookPrimary"></i>
+            </div>
+            <div class="carousel-small">
+                <div class="contain">
+                  <div class="img">
+                  </div>
+                  <div class="img ">
+                  </div>
+                  <div class="img">
+                  </div>
+                  <div class="img">
+                  </div>                
+              </div>
+              <ul class="arrows ten columns">
+                <li class="arrow">
+                  <i class="icon-Arrow-Left center"></i>
+                </li>
+                <li class="arrow">
+                  <i class="icon-Arrow-Right center"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="partners row">
+          <h2 class="title twelve columns">            
+              NUESTROS PARTNERS
+          </h2>          
+          <div class="carousel-partners">
+            <div class="contain">
+              <div class="img">
+              </div>
+              <div class="img ">
+              </div>
+              <div class="img">
+              </div>
+              <div class="img">
+              </div>
+
+              <div class="img">
+              </div>
+              <div class="img ">
+              </div>
+              <div class="img">
+              </div>
+              <div class="img">
+              </div>
+
+              <div class="img">
+              </div>
+              <div class="img ">
+              </div>
+              <div class="img">
+              </div>
+              <div class="img">
+              </div>
+
+              <div class="img">
+              </div>
+              <div class="img ">
+              </div>
+              <div class="img">
+              </div>
+              <div class="img">
+              </div>           
+            </div>
+             <!-- <ul class="arrows ten columns">
+              <li class="arrow">
+                <i class="icon-Arrow-Left center"></i>
+              </li>
+              <li class="arrow">
+                <i class="icon-Arrow-Right center"></i>
+              </li>
+            </ul> -->
+          </div>
+        </section>
+        <section class="opinions row">
+          <h2 class="title twelve columns">            
+            QUE DICEN DE NOSOTROS NUESTROS COTOWNERS
+          </h2>          
+          <div class="carousel-opinions">
+            <div class="contain">
+              <div class="card">
+                <div class="avatar three columns">
+                  <img class="img" alt="avatar" src="./assets/img/cotownity-big.png" >
+                  <p class="bold">
+                    Siscu Bates
+                  </p>
+                </div>
+                <div class="opinion nine columns">
+                  <i class="icon-Meh twelve columns"></i>
+                  <p class="text twelve columns">
+                  Lorem ipsum dolor sit amet, coansectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="avatar">
+                  <img class="img" alt="avatar" src="./assets/img/cotownity-big.png" >
+                  <p class="bold">
+                    Siscu Bates
+                  </p>
+                </div>
+                <div class="opinion">
+                  <i class="icon-Meh"></i>
+                  <p class="text">
+                  Lorem ipsum dolor sit amet, coansectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="avatar">
+                  <img class="img" alt="avatar" src="./assets/img/cotownity-big.png" >
+                  <p class="bold">
+                    Siscu Bates
+                  </p>
+                </div>
+                <div class="opinion">
+                  <i class="icon-Meh"></i>
+                  <p class="text">
+                  Lorem ipsum dolor sit amet, coansectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+                </div>
+              </div>         
+            </div>
+            <ul class="arrows ten columns">
+              <li class="arrow">
+                <i class="icon-Arrow-Left center"></i>
+              </li>
+              <li class="arrow">
+                <i class="icon-Arrow-Right center"></i>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ICONOS CHAT -->
+  <section class="iconos-chat row u-full-width">
+    <div><em class="icon-CloseRound icon-cascos"></em></div>
+    <div><em class="icon-Meh icon-chat"></em></div>    
+  </section> 
+
+  <!-- FOOTER -->
+  <footer>   
+    <section class="container-footer">       
+      <div class="row">
+        <div class="left four columns">
+          <div>
+            <h1 class="footer-logo"><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
+          </div>
+          <div class="redes">
+            <em class="icon-WhatsappPrimary"></em>
+            <em class="icon-FacebookPrimary"></em>
+            <em class="icon-InstagramPrimary"></em>
+            <em class="icon-TiktokPrimary"></em>
+          </div>
+        </div>
+
+        <div class="right eight columns">
+          <div class="footer-contain twelve columns">
+            <div class="four columns">
+              <ul>
+                <li><a href="#locations" onClick="openDrawerMenu()">Localizaciones</a></li>
+                <li><a href="#about">Conócenos</a></li>
+                <li><a href="#advantages">Ventajas Cotowner</a></li>
+              </ul>
+            </div>
+            <div class="four columns">
+              <ul>
+                <li><a href="#faqs">FAQS</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="four columns">
+              <ul>
+                <li>Política de privacidad</li>
+                <li>Aviso legal</li>
+                <li>Seguridad y almacenamiento de los datos</li>
+              </ul>
+            </div>            
+          </div>
+
+          <div class="footer-info twelve columns">
+            <div class="four columns">
+              <p>C / Beethoven 15 7ª planta,</p>
+              <p>08021 Barcelona</p>
+            </div>
+            <div class="four columns bold">
+              +34 93 595 29 39
+            </div>
+            <div class="four columns bold">
+              info@cotown.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </footer>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
