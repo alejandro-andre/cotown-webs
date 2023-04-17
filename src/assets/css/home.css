@@ -1,6 +1,5 @@
 header, main, footer { 
     width: 100%;
-    min-width: 1200px;
     max-width: 100vw;
 }
 header {
@@ -15,34 +14,55 @@ main {
 }
 
 /* FIRST HEADER */
-section.container-header.first {
+.container-header.first {
     color: var(--white);
     background-color: var(--turquoise-light);
-    vertical-align: middle;
     margin: auto;
-    padding: 0 110px;
+    padding: 0;   
 }
-.first .six.left-content {
-    vertical-align: middle;
-    margin: 8px auto 4px;
+.container-header.first .turquoise-line {
+    max-width: 1280px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
 }
-.first .six.right-content {
-    vertical-align: middle;
-    margin: 8px auto 4px;
+.container-header.first .turquoise-line .left-content {
+    margin: 8px 0 4px auto;
+    text-align: right;
+    min-width: fit-content;
+    width: fit-content;    
 }
-
-h1.spot {
+.container-header.first .left-content h1.spot {
     color: var(--white);
     font-size: 35px;
-    text-align: right;
-    margin-bottom: 0;
+    margin: 0 0 0 auto;
+    min-width: fit-content;
+    width: fit-content;
+}
+.container-header.first .right-content {
+    vertical-align: middle;
+    margin: 8px 0 4px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-width: fit-content;
+    width: fit-content;
+}
+.container-header.first .right-content .div-header {
+    display: inline;
+    float: left;
+    margin: 0 1em 0 0.5em;
+    min-width: fit-content;
+    width: fit-content;
 }
 .lang {
     margin: 4px 1.5rem auto auto;
 }
-.lang .lang-img {
-    margin-left: 80%;
-}
+/* .lang .lang-img {
+} */
 .icons-header {
     margin-top: 6px;
 }
@@ -62,13 +82,21 @@ h1.spot {
     margin: 6px 0 auto 0.5em;
 }
 /* SECOND HEADER */
-section.container-header.second-black {
+.container-header.second {
     color: var(--white);
     background-color: var(--black);
-    padding: 0 110px;
-    height: 80px;
+    margin: auto;
+    padding: 0; 
 }
-section.container-header.second-black .nien.columns {
+.container-header .black-line {
+    max-width: 1280px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.container-header.second .right-nav {
     margin-left: 1rem;
 }
 .logo a {
@@ -90,18 +118,28 @@ span.turquoise {
 
 /* NAVIGATION MENU */
 nav.navBar {
-    margin: 22px auto 22px;
-
+    margin: 0 auto;
 }
 nav.navBar ul,
 nav.navBar ul li {
     margin: 0px;
+}
+nav.navBar ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 nav.navBar ul li {
     display: inline;
     float: left;
     position: relative;
     margin: 0 1em 0 0.5em;
+    min-width: fit-content;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 25px;
+    
 }
 nav.navBar ul li:last-of-type {
     margin: 0 0.5em;
@@ -114,16 +152,10 @@ nav.navBar ul li select.nav-select {
     background-color: transparent;
     border: none;
 }
-
 nav.navBar ul li a {
-    display: inline-block;
-    line-height: 36px;
-    color: var(--white);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 25px;
+    color: var(--white);    
 }
-
 nav.navBar ul li button.nav-select {
     display: inline-block;
     line-height: 36px;
@@ -155,7 +187,7 @@ nav.navBar ul li button:hover + #list {
     background-color: var(--black);
     position: absolute;
     top: 36px;
-    left: 20px;
+    left: 0px;
     z-index: 1001;
     height: auto;
     padding: 16px 24px 16px 16px;
@@ -200,26 +232,25 @@ nav.navBar ul li button i:hover:before {
     margin-bottom: 0px;
 }
 .main-header .left .basic-searcher select {
+    height: 40px;
     margin-bottom: 0.5em;
     color: var(--black);
     border-radius: 0;
     padding-top: 0;
     border: 0px solid transparent;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    background-image: url(./../img/CorcheteDown.svg); /*aquí deberás escribir la ruta de la imagen que utilizarás como flecha del desplegable*/
+    background-repeat: no-repeat;
+    background-position: right center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
 }
 .main-header .left .basic-searcher select:focus {
     border: 0px solid transparent;
     outline: 0
 }
-.main-header .left .basic-searcher select {
-background-image: url(./../img/CorcheteDown.svg); /*aquí deberás escribir la ruta de la imagen que utilizarás como flecha del desplegable*/
-background-repeat: no-repeat;
-background-position: right center;
--webkit-appearance: none;
--moz-appearance: none;
--o-appearance: none;
-appearance: none;
-}
-
 .main-header .left .basic-searcher select::-ms-expand {
 display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 }
@@ -228,7 +259,11 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     border-bottom: 1px solid var(--black);
 }
 .main-header .left .basic-searcher input {
+    height: 40px;
     margin-bottom: 0.5em;
+    border: 0px solid transparent;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    padding-right: 0.5em;
 }
 .main-header .left .basic-searcher .from {
     margin-right: 4%;
@@ -268,22 +303,31 @@ background-position: right center;
 -o-appearance: none;
 appearance: none;
 }
-
 .main-header .video .video-home i::-ms-expand {
 display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 }
-.main-contain .title-big {
+
+/* BLOQUE 1 */
+
+.first-contain .title-big {
     padding: 2em 14%;
+    max-width: 1280px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: left;
+    margin: 0 auto;
 }
-.main-contain .title-big .h1-big {
+.first-contain .title-big .h2-big {
    font-size: 10em;
 }
-.main-contain .title-big .text {
+.first-contain .title-big .text {
     font-size: 30px;
     line-height: 36px;
     font-weight: 500;
+    margin-bottom: 0.5em;
 }
-.main-contain .title-big .text .bold {
+.first-contain .title-big .text .bold {
     font-weight: 700;
 }
 
@@ -301,26 +345,26 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     margin: auto;
     overflow: hidden;
 }
-.carousel-big .carousel .container {
-    width: 99%;
+.carousel-big .carousel .carousel-locations {
+    width: 140%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
     margin: 0;
 }
-.carousel-big .carousel .container .img {
-    width: calc(99% / 3);
+.carousel-big .carousel .carousel-locations .img {
+    width: calc(140% / 4);
     margin-right: 1em;
     height: auto;
     min-height: 356px;
     position: relative;
     cursor: pointer;
 }
-.carousel-big .carousel .container .img:last-of-type {
+.carousel-big .carousel .carousel-locations .img:last-of-type {
     margin-right: 0;
 }
-.carousel-big .carousel .container .img .img-title {
+.carousel-big .carousel .carousel-locations .img .img-title {
     color: var(--white);
     font-weight: 400;
     font-size: 78px;
@@ -328,7 +372,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     bottom: 0;
     margin: 0 0 0 0.3em;    
 }
-.carousel-big .carousel .container .img.barc {
+.carousel-big .carousel .carousel-locations .img.barc {
     background-image: url(./../img/barcelona.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -339,7 +383,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     background-size: 100%;
     transition: 0.5s;
 }
-.carousel-big .carousel .container .img.val {
+.carousel-big .carousel .carousel-locations .img.val {
     background-image: url(./../img/valencia.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -350,7 +394,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     background-size: 100%;
     transition: 0.5s;
 }
-.carousel-big .carousel .container .img.bilb {
+.carousel-big .carousel .carousel-locations .img.bilb {
     background-image: url(./../img/bilbao.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -362,10 +406,10 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     transition: 0.5s;
 }
 
-.carousel-big .carousel .container .img:hover {
+.carousel-big .carousel .carousel-locations .img:hover {
     background-size: 120%;
  }
-.carousel-big .carousel .container .img:hover > .img-title {
+.carousel-big .carousel .carousel-locations .img:hover > .img-title {
     color: var(--turquoise-light);
 }
 
@@ -376,7 +420,11 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
-    padding: 2em 0
+    padding: 2em 0;
+    
+}
+.carousel-big .carousel .arrows {
+    cursor: pointer;
 }
 .carousel-big .carousel .arrows .arrow i {
     width: 36px;
@@ -689,8 +737,6 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     font-size: 24px;
     line-height: 33px;
 }
-
-
 .opinions .carousel-opinions .arrows {
     list-style: none;
     display: flex;
@@ -708,7 +754,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 
 /* ICONOS CHAT */
 .iconos-chat {
-    padding: 10px 140px 10px 0;
+    padding: 0.5em 9em 0.5em 0;
     text-align: right;
     position: fixed;
     bottom: 0;
@@ -789,4 +835,137 @@ footer .container-footer .right .footer-info div:first-child p {
 }
 footer .container-footer .right .footer-info .bold {
     font-weight: 700;
+}
+
+
+/* RESPONSIVE */
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .div-header.lang, .div-header.booking, .right-nav .icon-Piso, .left-mobile {
+        display: none;
+    }
+    
+}
+
+/* DESKTOP SMALL */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .first .left-content h1.spot {
+        font-size: 30px;
+    }
+    .main-header .left {
+        width: 48%;
+    }    
+}
+
+/* TABLET */
+@media (max-width: 1023px) {
+    main {
+        margin-top: 90px;
+    }
+    .container-header.first {
+        display: none;
+    }
+    nav.navBar {
+        display: none;
+    }
+    .main-header .left {
+        display: none;
+    }
+    .main-header .video {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 823px;
+        max-width: 100%;
+        width: 100%;
+    }
+    .main-header  .left-mobile {
+        position: relative;
+        padding: 2em;
+        background-color: var(--turquoise-light);
+        color: var(--white);
+    }
+    .main-header .left-mobile h1 {
+        font-size: 78px;
+        line-height:80px;
+        position: absolute;
+        top: -10em;
+        width: 50%;
+    }
+    .main-header .left-mobile .basic-searcher label {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 0px;
+    }
+    .main-header .left-mobile .basic-searcher select {
+        margin-bottom: 0.5em;
+        color: var(--black);
+        border-radius: 0;
+        border: 0px solid transparent;
+        background-image: url(./../img/CorcheteDown.svg); /*aquí deberás escribir la ruta de la imagen que utilizarás como flecha del desplegable*/
+        background-repeat: no-repeat;
+        background-position: right center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+    }
+    .main-header .left-mobile .basic-searcher select:focus {
+        border: 0px solid transparent;
+        outline: 0
+    }
+    .main-header .left-mobile .basic-searcher select::-ms-expand {
+    display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
+    }
+    .main-header .left-mobile .basic-searcher select option {
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid var(--black);
+    }
+    .main-header .left-mobile .basic-searcher input {
+        height: 40px;
+        margin-bottom: 0.5em;
+        border: 0px solid transparent;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+        padding-right: 0.5em;
+    }
+    .main-header .left-mobile .basic-searcher .from {
+        margin-right: 4%;
+    }
+    .btn-outline {
+        margin-top: 1em;
+    }
+    /* ICONOS CHAT */
+    .iconos-chat {
+        padding: 0.5em 2em 0.5em 0;
+        gap: 0;
+    }
+    .iconos-chat .icon-cascos {
+        display: none;
+    }
+    .first-contain .title-big {
+        padding: 2em 1.5em;
+        text-align: center;
+    }
+    .first-contain .title-big .h2-big {
+        font-size: 2.5em;
+        margin: 0 auto;
+    }
+    .first-contain .title-big .text {
+        font-size: 1em;
+        line-height: 1.2;
+        font-weight: 400;
+        margin: 0.5em 0 0;
+    }
+    
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+    /* .container-header.first {
+        display: none;
+    } */
+    .main-header .left-mobile h1 {
+        width: 80%;
+    }
 }
