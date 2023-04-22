@@ -20,21 +20,20 @@ permalink: "/{{langs[L].folder}}/{{url.locations[L]}}.html"
 
 <body>
     <!-- Multilanguage labels -->
-    <h1>{{text.titulo[l]}}</h1>
+    <h1>{{text.titulo[L]}}</h1>
 
-    {% image "https://experis.flows.ninja/wopi/files/Marketing/Media_building/1/Image/contents?access_token="+token, "Imagen", "(min-width: 30em) 50vw, 100vw", "building" %}
-    
     <!-- Markdown in texts -->
     <p>{{text.texto[L] | markdown | safe}}</p>
 
     <!-- GraphQL data -->
     {% for b in locations %}
-    <p>{{ b.Name_en }}</p>
-    <ul>
-      {%- for d in b.Districts %}
-        <li>{{ d.Name }}</li>
-      {%- endfor %}
-    </ul>    
+    {% image 
+        constants.SERVER + "/wopi/files/Marketing/Media_location/" + b.Image[0].id +"/Image/contents?access_token=" + token, 
+        b | translate('Name', L),
+        "(min-width: 30em) 50vw, 100vw", 
+        b | translate('Name', L) | lower
+    %}  
+    <p>{{ b | translate('Name', L) }}</p>
     {% endfor %}
 </body>
 

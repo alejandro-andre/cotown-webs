@@ -24,19 +24,6 @@ module.exports = (eleventyConfig) => {
     return null;
   });
   
-  // HTML minification
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath.endsWith(".html") ) {
-      let minified = HtmlMin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
-    return content;
-  });
-  
   // JS minification
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (code, callback) {
     try {
@@ -53,26 +40,58 @@ module.exports = (eleventyConfig) => {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  // HTML minification
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    if( outputPath.endsWith(".html") ) {
+      let minified = HtmlMin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+    return content;
+  });
+  
   // Image optimizer
 	eleventyConfig.addShortcode("image", async function(src, alt, sizes, name) {
-		let metadata = await Image(src, {
-			widths: [300, 600],
-			urlPath: "/img/",
-      outputDir: "./www/img/",
-      filenameFormat: function (id, src, width, format, options) {
-        return `${name}-${width}w.${format}`;
-      }
-		});
-    let imageAttributes = {
-			alt,
-			sizes,
-			loading: "lazy",
-			decoding: "async",
-		};
-    html = Image.generateHTML(metadata, imageAttributes);
-		return html;
+    try {
+
+      // Gety metadata
+      let metadata = await Image(src, {
+        widths: [300, 600],
+        urlPath: "/img/",
+        outputDir: "./www/img/",
+        filenameFormat: function (id, src, width, format, options) {
+          return `${name}-${width}w.${format}`;
+        }
+      });
+
+      // Image attributes
+      let imageAttributes = {
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async",
+      };
+
+      // Generate HTML
+      html = Image.generateHTML(metadata, imageAttributes);
+      return html;
+    } catch {
+      return '<div style="color:red;">[image missing]</div>'
+    }
 	});
 
+  // Translation
+  eleventyConfig.addFilter("translate", function(item, key, lang) {
+    if (lang === 'en') {
+      return item[key + '_en'] || item[key];
+    } else {
+      return item[key];
+    }
+  });
+  
   // Copy folders
   eleventyConfig.addPassthroughCopy({"src/assets": "."});
 

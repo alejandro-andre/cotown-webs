@@ -21,18 +21,15 @@ module.exports = async () => {
   }`;
 
   // Constants
-  var K = require('./constants');
+  const K = require('./constants');
 
-  // Fetch library
-  const fetch = require('node-fetch');
-
-  // Login
-  const login_res = await fetch(K.SERVER, { method: 'POST', headers: K.HEADER, body: JSON.stringify({ "query": K.LOGIN }) });
-  const login_data = await login_res.json();
-  const auth = { authorization : login_data.data.login };
+  // Token
+  const token = require('./token');
+  const auth = { authorization : await token() };
 
   // Query
-  const query_res = await fetch(K.SERVER, { method: 'POST', headers: K.HEADER, body: JSON.stringify({ "query": QUERY, "variables": auth }) });
+  const fetch = require('node-fetch');
+  const query_res = await fetch(K.SERVER + '/graphql', { method: 'POST', headers: K.HEADER, body: JSON.stringify({ "query": QUERY, "variables": auth }) });
   const query_data = await query_res.json();
   return(query_data.data.data); 
 };

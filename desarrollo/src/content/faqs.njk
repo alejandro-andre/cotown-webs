@@ -19,12 +19,12 @@ permalink: "/{{langs[L].folder}}/{{url.faqs[L]}}.html"
 </head>
 
 <body>
-    {% for b in faqs %}
-    <h2>{{ b.Name }}</h2>
+    {% for f in faqs %}
+    <h2>{{ f.Name }}</h2>
     <ul>
-      {%- for d in b.Questions %}
-        <li><h3>{{ d.Question }}<h3></li>
-        <ul><li>{{ d.Response | markdown | safe }}</li></ul>
+      {%- for q in f.Questions %}
+        <li><h3>{{ q.Question }}<h3></li>
+        <ul><li>{{ q.Response | markdown | safe }}</li></ul>
       {%- endfor %}
     </ul>    
     {% endfor %}
