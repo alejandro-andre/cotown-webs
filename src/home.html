@@ -15,6 +15,8 @@
   <!-- HTML -->
   <script src="../webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="../iron-image/iron-image.html">
+  <!-- CARRUSEL 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="import" href="skeleton-carousel.html">
 
   <!-- FONT
@@ -33,6 +35,7 @@
   <link rel="stylesheet" href="./assets/css/buttons.css">
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/home.css">
+
 
   <!-- ICONS -->
   <link rel="stylesheet" href="./assets/icons/style.css">
@@ -78,7 +81,7 @@
             </div>
           </div>
           <div class="div-header booking">
-            <button class="btn-outline">RESERVAR</button>
+            <button class="btn-primary">RESERVAR</button>
           </div>          
         </div>
       </div> 
@@ -86,7 +89,7 @@
     <section class="container-header second">       
       <div class="black-line">
         <div class="div-header booking">
-          <button class="btn-outline">RESERVAR</button>
+          <button class="btn-secondary">Reservar</button>
         </div>
         <div class="logo">
           <a href="#home">
@@ -150,8 +153,11 @@
                   <label class="label twelve columns" for="to">Hasta:</label>
                   <input class="input twelve columns" type="date" id="start" name="trip-to">
                 </div>
-              </div>              
+              </div>                         
             </div>
+            <div class="button-search">
+              <button class="btn-primary">Encuentráme piso</button>
+            </div> 
           </div>
           <div id="video" class="video ten columns featured-bg-image">
             <div href="http://www.youtube.com/embed/EVpyXNiHVbE?autoplay=1" class="video-home">
@@ -163,7 +169,7 @@
             <div class="basic-searcher row">
               <label class="label twelve columns">Quiero vivir en:</label>
               <select class="twelve columns">
-                <option></option>
+                <option>Seleccionar ubicación</option>
                 <option>Barcelona</option>
                 <option>Valencia</option>
                 <option>Bilbao</option>
@@ -179,8 +185,8 @@
                 </div>
               </div>              
             </div>
-            <div class="div-header searcher">
-              <button class="btn-outline">Buscar</button>
+            <div class="button-search">
+              <button class="btn-primary">Buscar</button>
             </div> 
           </div>               
         </section>
@@ -196,33 +202,118 @@
             </p>
           </div>
         </section>
-        <section class="carousel-big row">
+        <section class="locations row">
           <h2 class="twelve columns">¿DÓNDE QUIERES VIVIR?</h2>
+          <!-- <div class="carousel">
+            <div class="embla__viewport">
+              <div class="embla__container">
+                <div class="embla__slide">
+                  <div class="embla__slide__number"><span>1</span></div>
+                  <img
+                    class="embla__slide__img"
+                    src="./assets/images/slide-1.jpg"
+                    alt="Your alt text"
+                  />
+                </div>
+                <div class="embla__slide">
+                  <div class="embla__slide__number"><span>2</span></div>
+                  <img
+                    class="embla__slide__img"
+                    src="./assets/images/slide-2.jpg"
+                    alt="Your alt text"
+                  />
+                </div>
+                <div class="embla__slide">
+                  <div class="embla__slide__number"><span>3</span></div>
+                  <img
+                    class="embla__slide__img"
+                    src="./assets/images/slide-3.jpg"
+                    alt="Your alt text"
+                  />
+                </div>
+                <div class="embla__slide">
+                  <div class="embla__slide__number"><span>4</span></div>
+                  <img
+                    class="embla__slide__img"
+                    src="./assets/images/slide-4.jpg"
+                    alt="Your alt text"
+                  />
+                </div>
+                <div class="embla__slide">
+                  <div class="embla__slide__number"><span>5</span></div>
+                  <img
+                    class="embla__slide__img"
+                    src="./assets/images/slide-1.jpg"
+                    alt="Your alt text"
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="embla__button embla__button--prev" disabled="">
+              <svg
+                class="embla__button__svg"
+                viewBox="137.718 -1.001 366.563 644"
+              >
+                <path
+                  d="M428.36 12.5c16.67-16.67 43.76-16.67 60.42 0 16.67 16.67 16.67 43.76 0 60.42L241.7 320c148.25 148.24 230.61 230.6 247.08 247.08 16.67 16.66 16.67 43.75 0 60.42-16.67 16.66-43.76 16.67-60.42 0-27.72-27.71-249.45-249.37-277.16-277.08a42.308 42.308 0 0 1-12.48-30.34c0-11.1 4.1-22.05 12.48-30.42C206.63 234.23 400.64 40.21 428.36 12.5z"
+                ></path>
+              </svg></button
+            ><button class="embla__button embla__button--next" disabled="">
+              <svg class="embla__button__svg" viewBox="0 0 238.003 238.003">
+                <path
+                  d="M181.776 107.719L78.705 4.648c-6.198-6.198-16.273-6.198-22.47 0s-6.198 16.273 0 22.47l91.883 91.883-91.883 91.883c-6.198 6.198-6.198 16.273 0 22.47s16.273 6.198 22.47 0l103.071-103.039a15.741 15.741 0 0 0 4.64-11.283c0-4.13-1.526-8.199-4.64-11.313z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="embla__dots"></div> -->
+
           <div class="carousel">
-            <div class="carousel-locations">
-              <div class="img barc">
+            <div class="carousel-locations">              
+              <div class="img-container">
+                <div class="img barc">                  
+                </div>
+                <h3 class="img-title">Madrid</h3>
+              </div> 
+              <div class="img-container">
+                <div class="img barc">                 
+                </div>
                 <h3 class="img-title">BARCELONA</h3>
               </div>
-              <div class="img val">
+              <div class="img-container">
+                <div class="img val">                  
+                </div>
                 <h3 class="img-title">VALENCIA</h3>
               </div>
-              <div class="img bilb">
+              <div class="img-container">
+                <div class="img bilb">                  
+                </div>
                 <h3 class="img-title">BILBAO</h3>
-              </div>
-              <div class="img barc">
-                <h3 class="img-title">BARCELONA</h3>
-              </div>
-
+              </div>             
+              <div class="img-container">
+                <div class="img val">                  
+                </div>
+                <h3 class="img-title">Madrid</h3>
+              </div>                   
             </div>
-            <ul class="arrows row u-full-width">
-              <li class="arrow">
-                <i class="icon-Arrow-Left center"></i>
+            <ul class="arrows">
+              <li class="arrow-locations">
+                <i class="icon-CorcheteLeft center"></i>
               </li>
-              <li class="arrow">
-                <i class="icon-Arrow-Right center"></i>
+              <li class="arrow-locations">
+                <i class="icon-CorcheteRight center"></i>
               </li>
             </ul>
+            <div class="dots">
+              <div class="dot"></div>
+              <div class="dot "></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+           
           </div>
+
         </section>
         <section class="pisos row">
           <h2 class="twelve columns">ELIGE TU PISAZO</h2>
@@ -301,16 +392,22 @@
               <i class="icon-InstagramPrimary"></i>
               <i class="icon-FacebookPrimary"></i>
             </div>
-            <div class="carousel-small">
-                <div class="contain">
-                  <div class="img">
-                  </div>
-                  <div class="img ">
-                  </div>
-                  <div class="img">
-                  </div>
-                  <div class="img">
-                  </div>                
+            <div class="carousel-cotownity">
+              <div class="contain">
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
               </div>
               <ul class="arrows ten columns">
                 <li class="arrow">
@@ -457,6 +554,13 @@
           <div>
             <h1 class="footer-logo"><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
           </div>
+          <div class="footer-info mobile twelve columns">
+            <div class="twelve columns">
+              <p>C / Beethoven 15 7ª planta, 08021 Barcelona</p>
+              <p>+34 93 595 29 39</p>
+              <p>info@cotown.com</p>
+            </div>             
+          </div>
           <div class="redes">
             <em class="icon-WhatsappPrimary"></em>
             <em class="icon-FacebookPrimary"></em>
@@ -489,7 +593,16 @@
               </ul>
             </div>            
           </div>
-
+          <div class="mobile-listado">
+            <ul>
+              <li><a href="#about">Conócenos</a></li> |
+              <li><a href="#faqs">FAQS</a></li> |
+              <li><a href="#contact">Contacto</a></li> |
+              <li>Política de privacidad</li> |
+              <li>Aviso legal</li> |
+              <li>Seguridad y almacenamiento de los datos</li>
+            </ul>
+          </div>
           <div class="footer-info twelve columns">
             <div class="four columns">
               <p>C / Beethoven 15 7ª planta,</p>
