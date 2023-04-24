@@ -1,7 +1,7 @@
 'use strict'
 
 const carousel    = document.querySelector('.carousel-locations')
-const arrow     = document.querySelectorAll('.arrow')
+const arrow     = document.querySelectorAll('.arrow-locations')
 
 // Cuando CLICK en arrow
     // Saber la posición de ese arrow
