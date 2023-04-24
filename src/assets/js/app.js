@@ -17,8 +17,7 @@ arrow.forEach( ( cadaArrow , i )=> {
         // Guardar la posición de ese PUNTO
         let posicion  = i
         // Calculando el espacio que debe DESPLAZARSE el GRANDE
-        let operacion = posicion * -50
-
+        let operacion = posicion * -16
         // MOVEMOS el grand
         carousel.style.transform = `translateX(${ operacion }%)`
 
