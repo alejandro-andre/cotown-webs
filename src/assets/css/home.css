@@ -466,10 +466,25 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 }
 
 .locations .carousel .dots {
-
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 40px;
 }
 .locations .carousel .dots .dot {
-    background-color: 
+    background-color: var(--grey-light);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.locations .carousel .dots .dot.active {
+    background-color: var(--turquoise-light);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }
 
 /* PISOS */
