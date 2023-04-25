@@ -15,6 +15,8 @@
   <!-- HTML -->
   <script src="../webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="../iron-image/iron-image.html">
+  <!-- CARRUSEL 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="import" href="skeleton-carousel.html">
 
   <!-- FONT
@@ -34,6 +36,7 @@
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/home.css">
 
+
   <!-- ICONS -->
   <link rel="stylesheet" href="./assets/icons/style.css">
   <link rel="stylesheet" href="./assets/icons/style.scss">
@@ -44,6 +47,9 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="./favicon.png">
+  
+  <!-- JS -->
+  <script defer src="./assets/js/app.js" ></script>
 
 </head>
 
@@ -54,19 +60,19 @@
   <!-- HEADER -->
   <header>
     <section class="container-header first">
-      <div class="row turquoise-line">
-        <div class="six columns left-content">
+      <div class="turquoise-line">
+        <div class="left-content">
           <h1 class="spot">NUEVA APERTURA EN MADRID, ENTRA Y DESCÚBRELA</h1>
         </div>
-        <div class="six columns u-pull-right right-content">
-          <div class="lang four columns">            
+        <div class="right-content">
+          <div class="div-header lang">            
             <img class="lang-img" alt="es" src="./assets/img/es.png"></img>
           </div>
-          <div class="icons-header two columns">
+          <div class="div-header icons-header">
             <em class="icon-WhatsappPrimary"></em>
             <em class="icon-Search"></em>
           </div>
-          <div class="private three columns">
+          <div class="div-header private">
             <div class="two columns">
               <em class="icon-Search"></em>
             </div>
@@ -74,25 +80,32 @@
               <p class="private-area">Área privada</p>
             </div>
           </div>
-          <div class="three columns">
-            <button class="btn-outline">RESERVAR</button>
+          <div class="div-header booking">
+            <button class="btn-primary">RESERVAR</button>
           </div>          
         </div>
       </div> 
     </section>
-    <section class="container-header second-black">       
-      <div class="row">
-        <div class="logo three columns">
+    <section class="container-header second">       
+      <div class="black-line">
+        <div class="div-header booking">
+          <button class="btn-secondary">Reservar</button>
+        </div>
+        <div class="logo">
           <a href="#home">
             <h1 class="h1-logo"><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
           </a>
         </div>
-        <div class="nine columns">
-          <nav class="navBar u-pull-right twelve columns" id="mainNavBar">   
+        <div class="div-header lang">            
+          <img class="lang-img" alt="es" src="./assets/img/es.png"></img>
+        </div>
+        <div class="right-nav">
+          <i class="icon-Piso"></i>
+          <nav class="navBar" id="mainNavBar">   
             <ul class="twelve columns">             
                 <!-- <a href="#locations" onClick="openDrawerMenu()">Localizaciones</a>
               <a class="icon-CorcheteDown" [ngClass]="openDrawerMenu ? 'icon-CorcheteUp' : 'icon-CorcheteDown' " onClick="openDrawerMenu()"></a> -->
-              <li class="three columns">
+              <li class="locations">
                 <button class="nav-select twelve columns" onClick="openListMenu()">
                   Localizaciones
                   <i class="icon-CorcheteDown" [ngClass]="openDrawerMenu ? 'icon-CorcheteUp' : 'icon-CorcheteDown'">                    
@@ -104,12 +117,11 @@
                   <a href="#locations" class="twelve columns">Bilbao</a>                  
                 </div>
               </li>
-
-              <li class="two columns"><a href="#about">Conócenos</a></li>
-              <li class="two columns"><a href="#advantages">Ventajas</a></li>
-              <li class="two columns"><a href="#faqs">FAQS</a></li>
-              <li class="two columns"><a href="#blog">Blog</a></li>
-              <li class="two columns"><a href="#contact">Contacto</a></li>
+              <li class="about"><a href="#about">Conócenos</a></li>
+              <li class="advantages"><a href="#advantages">Ventajas</a></li>
+              <li class="faqs"><a href="#faqs">FAQS</a></li>
+              <li class="blog"><a href="#blog">Blog</a></li>
+              <li class="contact"><a href="#contact">Contacto</a></li>
             </ul>
           </nav>
         </div>
@@ -141,49 +153,94 @@
                   <label class="label twelve columns" for="to">Hasta:</label>
                   <input class="input twelve columns" type="date" id="start" name="trip-to">
                 </div>
-              </div>
-              
+              </div>                         
             </div>
+            <div class="button-search">
+              <button class="btn-primary">Encuentráme piso</button>
+            </div> 
           </div>
           <div id="video" class="video ten columns featured-bg-image">
             <div href="http://www.youtube.com/embed/EVpyXNiHVbE?autoplay=1" class="video-home">
               <i class="icon-ArrowRight center"></i>
             </div>
-          </div>                
+          </div> 
+          <div class="left-mobile twelve columns">
+            <h1>BIENVENIDO COTOWNER!</h1>
+            <div class="basic-searcher row">
+              <label class="label twelve columns">Quiero vivir en:</label>
+              <select class="twelve columns">
+                <option>Seleccionar ubicación</option>
+                <option>Barcelona</option>
+                <option>Valencia</option>
+                <option>Bilbao</option>
+              </select>
+              <div class="calendar twelve columns">
+                <div class="from six columns">
+                  <label class="label twelve columns" for="from">Desde:</label>                  
+                  <input class="input twelve columns" type="date" id="start" name="trip-from">
+                </div>
+                <div class="to six columns">
+                  <label class="label twelve columns" for="to">Hasta:</label>
+                  <input class="input twelve columns" type="date" id="start" name="trip-to">
+                </div>
+              </div>              
+            </div>
+            <div class="button-search">
+              <button class="btn-primary">Buscar</button>
+            </div> 
+          </div>               
         </section>
-        <section class="main-contain row">         
-          <div class="title-big twelve columns">            
-            <h1 class="h1-big">¿QUE ES COTOWN?</h1>
+        <section class="first-contain row">         
+          <div class="title-big">            
+            <h2 class="h2-big">¿QUE ES COTOWN?</h2>
             <p class="text">
-              Si has llegado hasta aquí es porque te mueres por saber qué es COTOWN. Cotown llega al mercado para revolucionar el concepto de Coliving en España. Pero, sobre todo, brindar la oportunidad a los futuros cotowners, tanto nómadas digitales internacionales como jóvenes profesionales nacionales, de ser «ciudadanos con suerte».
-              Desde la crew de COTOWN, nos proponemos cubrir y dar apoyo a esta nueva necesidad de vivienda temporal para impulsar la optimización de los espacios dentro de los pisos y transformarlos en un hogar moderno, tecnológico y adaptable a cualquier circunstancia. El 100% de nuestra energía está dedicada a hacer que te sientas como en casa, rollo ¿ese protagonista de película de Netflix con un pisazo en el centro de una ciudad muy molona? Pues ese. 
+              Si has llegado hasta aquí es porque te mueres por saber qué es COTOWN.Cotown llega al mercado para revolucionar el concepto de Coliving en España. Pero, sobre todo, brindar la oportunidad a los futuros cotowners, tanto nómadas digitales internacionales como jóvenes profesionales nacionales, de ser «ciudadanos con suerte».
+            </p>
+            <p class="text">
+              Desde la crew de COTOWN, nos proponemos cubrir y dar apoyo a esta nueva necesidad de vivienda temporal para impulsar la optimización de los espacios dentro de los pisos y transformarlos en un hogar moderno, tecnológico y adaptable a cualquier circunstancia. El 100% de nuestra energía está dedicada a hacer que te sientas como en casa, rollo ¿ese protagonista de película de Netflix con un pisazo en el centro de una ciudad muy molona? Pues ese. 
               <span class="bold"> ¡Bienvenid@!</span>
             </p>
           </div>
         </section>
-        <section class="carousel-big row">
-          <h2 class="twelve columns">¿DÓNDE QUIERES VIVIR?</h2>
+        <section class="locations row">
+          <h2 class="twelve columns">¿DÓNDE QUIERES VIVIR?</h2>   
           <div class="carousel">
-            <div class="container">
-              <div class="img barc">
+            <div class="carousel-locations">     
+              <div class="img-container">
+                <div class="img barc">                 
+                </div>
                 <h3 class="img-title">BARCELONA</h3>
               </div>
-              <div class="img val">
+              <div class="img-container">
+                <div class="img val">                  
+                </div>
                 <h3 class="img-title">VALENCIA</h3>
               </div>
-              <div class="img bilb">
+              <div class="img-container">
+                <div class="img bilb">                  
+                </div>
                 <h3 class="img-title">BILBAO</h3>
-              </div>
+              </div>             
+              <div class="img-container">
+                <div class="img val">                  
+                </div>
+                <h3 class="img-title">Madrid</h3>
+              </div>                   
             </div>
-            <ul class="arrows row u-full-width">
-              <li class="arrow">
-                <i class="icon-Arrow-Left center"></i>
+            <ul class="arrows">
+              <li class="arrow-locations">
+                <i class="icon-CorcheteLeft center"></i>
               </li>
-              <li class="arrow">
-                <i class="icon-Arrow-Right center"></i>
+              <li class="arrow-locations">
+                <i class="icon-CorcheteRight center"></i>
               </li>
             </ul>
+            <div class="dots">
+              <div class="dot"></div>
+              <div class="dot active"></div>
+            </div>
           </div>
+
         </section>
         <section class="pisos row">
           <h2 class="twelve columns">ELIGE TU PISAZO</h2>
@@ -262,16 +319,22 @@
               <i class="icon-InstagramPrimary"></i>
               <i class="icon-FacebookPrimary"></i>
             </div>
-            <div class="carousel-small">
-                <div class="contain">
-                  <div class="img">
-                  </div>
-                  <div class="img ">
-                  </div>
-                  <div class="img">
-                  </div>
-                  <div class="img">
-                  </div>                
+            <div class="carousel-cotownity">
+              <div class="contain">
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
+                <div class="img">
+                </div>
               </div>
               <ul class="arrows ten columns">
                 <li class="arrow">
@@ -395,15 +458,19 @@
             </ul>
           </div>
         </section>
+      </div>
+
+      <div class="calendar">
 
       </div>
+
     </div>
   </main>
 
   <!-- ICONOS CHAT -->
   <section class="iconos-chat row u-full-width">
-    <div><em class="icon-CloseRound icon-cascos"></em></div>
-    <div><em class="icon-Meh icon-chat"></em></div>    
+    <div class="icon-cascos"><em class="icon-CloseRound icon-cascos"></em></div>
+    <div class="icon-chat"><em class="icon-Meh icon-chat"></em></div>    
   </section> 
 
   <!-- FOOTER -->
@@ -413,6 +480,13 @@
         <div class="left four columns">
           <div>
             <h1 class="footer-logo"><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
+          </div>
+          <div class="footer-info mobile twelve columns">
+            <div class="twelve columns">
+              <p>C / Beethoven 15 7ª planta, 08021 Barcelona</p>
+              <p>+34 93 595 29 39</p>
+              <p>info@cotown.com</p>
+            </div>             
           </div>
           <div class="redes">
             <em class="icon-WhatsappPrimary"></em>
@@ -446,7 +520,16 @@
               </ul>
             </div>            
           </div>
-
+          <div class="mobile-listado">
+            <ul>
+              <li><a href="#about">Conócenos</a></li> |
+              <li><a href="#faqs">FAQS</a></li> |
+              <li><a href="#contact">Contacto</a></li> |
+              <li>Política de privacidad</li> |
+              <li>Aviso legal</li> |
+              <li>Seguridad y almacenamiento de los datos</li>
+            </ul>
+          </div>
           <div class="footer-info twelve columns">
             <div class="four columns">
               <p>C / Beethoven 15 7ª planta,</p>
@@ -462,8 +545,6 @@
         </div>
       </div>
     </section>
-
-
   </footer>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
