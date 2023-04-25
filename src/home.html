@@ -15,9 +15,6 @@
   <!-- HTML -->
   <script src="../webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="../iron-image/iron-image.html">
-  <!-- CARRUSEL 
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="import" href="skeleton-carousel.html">
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -34,7 +31,7 @@
   <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="stylesheet" href="./assets/css/buttons.css">
   <link rel="stylesheet" href="./assets/css/variables.css">
-  <link rel="stylesheet" href="./assets/css/home.css">
+  <link rel="stylesheet" href="./assets/css/global.css">
 
 
   <!-- ICONS -->
@@ -76,7 +73,7 @@
             <div class="two columns">
               <em class="icon-Search"></em>
             </div>
-            <div class="ten columns u-pull-left">
+            <div class="ten columns">
               <p class="private-area">Área privada</p>
             </div>
           </div>
@@ -92,7 +89,7 @@
           <button class="btn-secondary">Reservar</button>
         </div>
         <div class="logo">
-          <a href="#home">
+          <a href="./home.html">
             <h1 class="h1-logo"><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
           </a>
         </div>
@@ -105,11 +102,10 @@
             <ul class="twelve columns">             
                 <!-- <a href="#locations" onClick="openDrawerMenu()">Localizaciones</a>
               <a class="icon-CorcheteDown" [ngClass]="openDrawerMenu ? 'icon-CorcheteUp' : 'icon-CorcheteDown' " onClick="openDrawerMenu()"></a> -->
-              <li class="locations">
-                <button class="nav-select twelve columns" onClick="openListMenu()">
-                  Localizaciones
-                  <i class="icon-CorcheteDown" [ngClass]="openDrawerMenu ? 'icon-CorcheteUp' : 'icon-CorcheteDown'">                    
-                  </i>                  
+              <li class="locations">                
+                <button class="nav-select twelve columns">
+                  <a href="./locations.html">Localizaciones</a>
+                  <i class="icon-CorcheteDown" [ngClass]="openDrawerMenu ? 'icon-CorcheteUp' : 'icon-CorcheteDown'" onClick="openListMenu()"></i>                  
                 </button>
                 <div id="list" class="container-list twelve columns">
                   <a href="#locations" class="twelve columns">Barcelona</a>
@@ -117,11 +113,11 @@
                   <a href="#locations" class="twelve columns">Bilbao</a>                  
                 </div>
               </li>
-              <li class="about"><a href="#about">Conócenos</a></li>
-              <li class="advantages"><a href="#advantages">Ventajas</a></li>
-              <li class="faqs"><a href="#faqs">FAQS</a></li>
-              <li class="blog"><a href="#blog">Blog</a></li>
-              <li class="contact"><a href="#contact">Contacto</a></li>
+              <li class="about"><a href="./about.html">Conócenos</a></li>
+              <li class="advantages"><a href="./advantages.html">Ventajas</a></li>
+              <li class="faqs"><a href="./faqs.html">FAQS</a></li>
+              <li class="blog"><a href="./blog.html">Blog</a></li>
+              <li class="contact"><a href="./contact.html">Contacto</a></li>
             </ul>
           </nav>
         </div>
@@ -191,7 +187,7 @@
           </div>               
         </section>
         <section class="first-contain row">         
-          <div class="title-big">            
+          <div class="title-big home">            
             <h2 class="h2-big">¿QUE ES COTOWN?</h2>
             <p class="text">
               Si has llegado hasta aquí es porque te mueres por saber qué es COTOWN.Cotown llega al mercado para revolucionar el concepto de Coliving en España. Pero, sobre todo, brindar la oportunidad a los futuros cotowners, tanto nómadas digitales internacionales como jóvenes profesionales nacionales, de ser «ciudadanos con suerte».
@@ -242,15 +238,29 @@
           </div>
 
         </section>
-        <section class="pisos row">
+        <section class="pisos">
           <h2 class="twelve columns">ELIGE TU PISAZO</h2>
           <div class="pisos-imgs twelve columns">
-            <div class="container">
-              <div class="img piso">
-                <h3 class="img-title">PISO COMPARTIDO</h3>
-              </div>
+            <div class="container">             
               <div class="img apartm">
-                <h3 class="img-title">APARTAMENTO PRIVADO</h3>
+                <h3 class="img-title1">
+                  <span>APARTAMENTO</span>
+                  <div class="subrayado"></div>
+                </h3>
+                <h3 class="img-title2">
+                  <span>PRIVADO</span>
+                  <div class="subrayado"></div>
+                </h3>
+              </div>
+              <div class="img piso">
+                <h3 class="img-title1">
+                  <span>PISO</span>
+                  <div class="subrayado"></div>
+                </h3>
+                <h3 class="img-title2">
+                  <span>COMPARTIDO</span>
+                  <div class="subrayado"></div>
+                </h3>
               </div>
             </div>
 
@@ -474,7 +484,7 @@
   </section> 
 
   <!-- FOOTER -->
-  <footer>   
+  <footer>  
     <section class="container-footer">       
       <div class="row">
         <div class="left four columns">
@@ -500,16 +510,16 @@
           <div class="footer-contain twelve columns">
             <div class="four columns">
               <ul>
-                <li><a href="#locations" onClick="openDrawerMenu()">Localizaciones</a></li>
-                <li><a href="#about">Conócenos</a></li>
-                <li><a href="#advantages">Ventajas Cotowner</a></li>
+                <li class="locations"><a href="./locations.html">Localizaciones</a></li>
+                <li class="about"><a href="./about.html">Conócenos</a></li>
+                <li class="advantages"><a href="./advantages.html">Ventajas Cotowner</a></li>
               </ul>
             </div>
             <div class="four columns">
               <ul>
-                <li><a href="#faqs">FAQS</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li class="faqs"><a href="./faqs.html">FAQS</a></li>
+                <li class="blog"><a href="./blog.html">Blog</a></li>
+                <li class="contact"><a href="./contact.html">Contacto</a></li>
               </ul>
             </div>
             <div class="four columns">
@@ -522,9 +532,9 @@
           </div>
           <div class="mobile-listado">
             <ul>
-              <li><a href="#about">Conócenos</a></li> |
-              <li><a href="#faqs">FAQS</a></li> |
-              <li><a href="#contact">Contacto</a></li> |
+              <li class="about"><a href="./about.html">Conócenos</a></li> |
+              <li class="faqs"><a href="./faqs.html">FAQS</a></li> |
+              <li class="contact"><a href="./contact.html">Contacto</a></li> |
               <li>Política de privacidad</li> |
               <li>Aviso legal</li> |
               <li>Seguridad y almacenamiento de los datos</li>
