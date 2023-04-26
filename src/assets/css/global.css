@@ -258,6 +258,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 .main-header .left .basic-searcher input {
     height: 40px;
     margin-bottom: 0.5em;
+    color: var(--black);
     border: 0px solid transparent;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     padding-right: 0.5em;
@@ -519,26 +520,27 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     margin: 1em 0 0.3em;
     font-size: 78px;
 }
-.pisos .container {
+.pisos .pisos-container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
     margin: 0;
-
 }
-.pisos .img {
+.pisos .pisos-container  .img-container {
     margin-right: 1em;
     width: calc(50% - 8px);
-    height: 630px;
+    height: 65vh;
+    max-height: 630px;
     min-height: 140px;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
-.pisos .img:last-of-type {
+.pisos .pisos-container  .img-container:last-of-type {
     margin-right: 0;
 }
-.pisos .img h3 {
+.pisos .pisos-container .img-container h3 {
     color: var(--white);
     font-weight: 400;
     font-size: 78px;
@@ -548,33 +550,23 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     text-align: left;
     width: fit-content;
 }
-.pisos .img h3 span {
-    z-index: 20000;
+.pisos .pisos-container .img-container h3 span {
+    z-index: 10;
     position: relative;
     text-shadow: 0px 7.05691px 14.1138px rgba(0, 0, 0, 0.15);
 }
-.pisos .img h3 .subrayado{
-    z-index: 10000;
+.pisos .pisos-container .img-container h3 .subrayado{
+    z-index: 9;
 }
-.pisos .img h3.img-title1 {
+.pisos .pisos-container .img-container h3.img-title1 {
     bottom: 80px;
 }
-.pisos .img h3.img-title2 {
+.pisos .pisos-container .img-container h3.img-title2 {
     bottom: 0;
 }
-.pisos .img.piso {
-    background-image: url(./../img/piso.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    background-size: 100%;
-    transition: all .5s ease;
-    transform: translateX(0%);
-}
-.pisos .img.apartm {
+.pisos .pisos-container .img-container .img.apartm {
+    width: 100%;
+    height: 100%;
     background-image: url(./../img/apartm.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -582,27 +574,41 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
-    background-size: 100%;
-    transition: all .5s ease;
+    background-size: cover;
+    transition: transform .25s ease-in-out;
     transform: translateX(0%);
 }
-.pisos .img-title1, .pisos .img-title2 {
+.pisos .pisos-container .img-container .img.piso {
+    width: 100%;
+    height: 100%;
+    background-image: url(./../img/piso.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background-size: cover;
+    transition: transform .25s ease-in-out;
+    transform: translateX(0%);
+}
+.pisos .pisos-container .img-title1, .pisos .img-title2 {
     text-align: left;
     width: fit-content;
 }
-.pisos .img-title1 .subrayado, .pisos .img-title2 .subrayado {
+.pisos .pisos-container .img-title1 .subrayado, .pisos .img-title2 .subrayado {
     background-color: var(--turquoise-light);
     width: 0%;
     height: 1rem;
     position: relative;
     top: -22px;
 }
-
-.pisos .img:hover {
-    background-size: 115%;
+.pisos .pisos-container .img-container:hover .img{
+    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
     filter: contrast(1.2);
 }
-.pisos .img:hover > h3 .subrayado {
+.pisos .pisos-container .img-container:hover > h3 .subrayado {
     -webkit-transition: width 0.25s ease-in-out;
     -moz-transition: width 0.25s ease-in-out;
     -o-transition: width 0.25s ease-in-out;
@@ -613,49 +619,55 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 /* SERVICIOS */
 .servicios {
     width: 100%;
-    margin: 0 0 3em;
+    text-align: center;
+    margin: 6em 0 4em;
 }
-.servicios .container {
+.servicios .servicios-container {
     margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
-.servicios h2 {
-    padding: 2em 4em 0;
+.servicios h2.title {
     font-size: 78px;
+    margin-bottom: 0;
 }
-.servicios .container .backg-turquoise {
-    background-color: var(--turquoise-light);
-    height: 17em;
+.servicios p.subtitle {
+    font-size: 30px;
 }
-.servicios .container .cards-first {
-    margin-bottom: 1em;
+
+.servicios .servicios-container .cards {    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: left;
+    margin: 0 auto;
 }
-.servicios .container .cards-first .card, .servicios .container .cards-second .card {
-    margin-left: 1em;
-    padding: 2.4em 1.6em;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+.servicios .servicios-container .cards .card {
+    width: calc(25% - 32px);
+    margin: 1em 0;
+    padding: 1em;
     display: flex;
     flex-flow: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 1.8em;
+    align-items: center;
+    gap: 1em;
 }
-.servicios .container .cards-first .card i, .servicios .container .cards-second .card i {
-    font-size: 32px;
+.servicios .servicios-container .cards .card i {
+    font-size: 100px;
 }
-.servicios .container .cards-first .card p, .servicios .container .cards-second .card p {
+.servicios .servicios-container .cards .card p{
     margin-bottom: 0;
 }
-.servicios .container .cards-first .card p.bold, .servicios .container .cards-second .card p.bold {
+.servicios .servicios-container .cards .card p.bold {
     font-weight: 700;
     font-size: 22px;
 }
-.servicios .container .cards-first .card p.text, .servicios .container .cards-second .card p.text {
+.servicios .servicios-container .cards .card p.text {
     font-weight: 500;
-}
-.servicios .container .cards-second {
-    padding: 0 8em;
-    margin: 0 0 4em;
 }
 
 /* COTOWNITY */
@@ -1126,6 +1138,35 @@ footer .container-footer .right .footer-info .bold {
     .container-header.second .right-nav {
         margin-right: 1em;
     }
+    .pisos .pisos-container {
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 1em;
+    }
+    .pisos .pisos-container .img-container {
+        width: 48%;
+        height: 40vh;
+    }
+    .pisos .pisos-container .img-container h3 {
+        font-size: 38px;
+        line-height: 40px;
+    }
+    .pisos .pisos-container .img-container h3.img-title1 {
+        bottom: 40px;
+    }
+    .pisos .pisos-container .img-title1 .subrayado, .pisos .img-title2 .subrayado {
+        height: 8px;
+        top: -12px;
+    }
+    .servicios h2 {
+        padding: 0!important;       
+    }
+    .servicios p.subtitle {
+        font-size: 18px;    
+    }
+    .servicios .servicios-container .cards .card {
+        width: calc(50% - 32px);
+    }
     .cotownity .container-cotownity {
         padding-left: 1em;
     }
@@ -1214,5 +1255,29 @@ footer .container-footer .right .footer-info .bold {
     .main-header .left-mobile h1 {
         width: 80%;
     }
-
+    .pisos .pisos-container {
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        min-width: 100%;
+    }
+    .pisos .pisos-container .img-container {
+        margin: 0;
+        width: 48%;
+        height: 140px;
+    }
+    .pisos .pisos-container .img-container h3 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .pisos .pisos-container .img-container h3.img-title1 {
+        bottom: 18px;
+    }
+    .pisos .pisos-container .img-title1 .subrayado, .pisos .img-title2 .subrayado {
+        height: 4px;
+        top: -6px;
+    }
+    .servicios .servicios-container .cards .card {
+        width: calc(100% - 32px);
+    }
 }
