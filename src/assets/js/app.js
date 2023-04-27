@@ -18,10 +18,24 @@ arrow.forEach( ( cadaArrow , i )=> {
         let posicion  = i
         // Calculando el espacio que debe DESPLAZARSE el GRANDE
         let operacion = posicion * -16
-        // MOVEMOS el grand
+        // MOVEMOS el grande
         carousel.style.transform = `translateX(${ operacion }%)`
+    })
+})
 
-       
+const carousel2    = document.querySelector('.carousel-opinions')
+const arrow2    = document.querySelectorAll('.arrow-opinions')
 
+// Recorrer TODOS los arrow
+arrow2.forEach( ( cadaArrow2 , i )=> {
+    // Asignamos un CLICK a cadaArrow2
+    arrow2[i].addEventListener('click',()=>{
+
+        // Guardar la posición de ese PUNTO
+        let posicion  = i
+        // Calculando el espacio que debe DESPLAZARSE el GRANDE
+        let operacion = posicion * -30
+        // MOVEMOS el grande
+        carousel2.style.transform = `translateX(${ operacion }%)`
     })
 })

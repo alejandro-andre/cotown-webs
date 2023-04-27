@@ -169,6 +169,6 @@ button {
     color: var(--turquoise-dark);
 }
 /* MOBILE */
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1023px) {
 
 }
