@@ -1064,6 +1064,50 @@ main .row .container-main section.banner h2 {
         transform: translateX(-100%);
     }
 }
+main .row .container-main section.members {
+    padding: 2em 4em;
+}
+main .row .container-main section.members .grid {
+    padding: 0 2em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+main .row .container-main section.members .grid .member {
+    width: 25%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+}
+main .row .container-main section.members .grid .member .img-grid {
+    width: 100%;
+}
+main .row .container-main section.members .grid .member .data {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+main .row .container-main section.members .grid .member .data p.name {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    display:flex;
+    text-align: center;;
+    padding: 0 2em;
+    margin: 0 0 .2em;
+}
+main .row .container-main section.members .grid .member .data p.job {
+    font-size: 22px;
+    line-height: 28px;
+    display:flex;
+    text-align: center;;
+    padding: 0;
+    margin: 0 0 .2em;
+}
 
 
 
@@ -1175,7 +1219,21 @@ footer .container-footer .right .footer-info .bold {
     }    
     .cotownity .feeling .title-feel {
         width: 50%;
-    }    
+    }
+
+    /* __________________________ OTHER PAGES ___________________________*/
+/* ABOUT PAGE */
+
+    main .row .container-main section.members {
+        padding: 2em 2em;
+    }
+    main .row .container-main section.members .grid {
+        padding: 0;
+    }
+    main .row .container-main section.members .grid .member .data p.name {
+        font-size: 28px;
+        line-height: 30px;
+    }
 }
 
 /* TABLET */
@@ -1347,6 +1405,27 @@ footer .container-footer .right .footer-info .bold {
         margin: 0.5em 0 0;
     }
 
+/* __________________________ OTHER PAGES ___________________________*/
+/* ABOUT PAGE */
+
+    main .row .container-main section.members {
+        padding: 2em 2em;
+    }
+    main .row .container-main section.members .grid {
+        padding: 0;
+    }
+    main .row .container-main section.members .grid .member {
+        width: 33%;
+    }
+    main .row .container-main section.members .grid .member .data p.name {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    main .row .container-main section.members .grid .member .data p.job {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
     /* FOOTER */
     footer section.container-footer {
         padding: 2em;
@@ -1394,9 +1473,6 @@ footer .container-footer .right .footer-info .bold {
 
 /* MOBILE */
 @media only screen and (max-width: 767px) {
-    /* .container-header.first {
-        display: none;
-    } */
     .main-header .left-mobile h1 {
         width: 80%;
     }
@@ -1429,4 +1505,9 @@ footer .container-footer .right .footer-info .bold {
         padding-left: 0!important;
     }
 
+/* __________________________ OTHER PAGES ___________________________*/
+/* ABOUT PAGE */
+    main .row .container-main section.members .grid .member {
+        width: 50%;
+    } 
 }
