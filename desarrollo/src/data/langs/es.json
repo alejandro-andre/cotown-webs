@@ -1,0 +1,9 @@
+{ 
+    "folder": "",
+    "pages": {
+        "index": { "url": "index", "title": "Inicio" },
+        "locations": { "url": "localizaciones", "title": "Localizaciones" },
+        "faqs": { "url": "preguntas-frecuentes",  "title": "Preguntas frequentes" },
+        "search": {  "url": "buscador", "title": "Buscador" }
+    }
+}

@@ -1,0 +1,9 @@
+{ 
+    "folder":"en/",
+    "pages": {
+        "index": { "url": "index", "title": "Home" },
+        "locations": { "url": "locations", "title": "Locations" },
+        "faqs": { "url": "faqs", "title": "Frequently Asked Questions" },
+        "search": { "url": "search", "title": "Search" }
+    }       
+}

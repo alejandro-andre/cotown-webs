@@ -1,0 +1,25 @@
+---
+name: index
+eleventyComputed:
+    lang: "{{L}}"
+    title: "{{langs[L].pages[name].title}}"
+permalink: "/{{langs[L].folder}}{{langs[L].pages[name].url}}.html"
+layout: layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true   
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<p>{{ texts['BODY'][L] | markdown | safe }}</p>
+
+<!-- Locations -->
+{% include 'sections/locations.html.njk' %}
+
+<!-- FAQs -->
+{% include 'sections/faqs.html.njk' %}
