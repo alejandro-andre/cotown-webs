@@ -1,0 +1,22 @@
+---
+permalink: "/json/{{L}}/index.json"
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true   
+---
+{%-set comma = 0-%}
+[
+{% for item in faqs %}{%-for subitem in item.Questions-%}
+{%-if comma > 0-%}
+,
+{% endif-%}
+{
+  "url":"{{ subitem.id }}",
+  "question":"{{ subitem | translate('Question', L) }}",
+  "response":"{{ subitem | translate('Response', L) | safe }}"
+}
+{%-set comma = 1-%}
+{%-endfor-%}{% endfor %}
+]

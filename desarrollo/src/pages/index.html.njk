@@ -16,10 +16,26 @@ changefreq: "weekly"
 priority: "1.0"
 tags: page
 ---
-<p>{{ texts['BODY'][L] | markdown | safe }}</p>
+<!-- Video -->
+{% include 'sections/home/video.html.njk' %}
 
-<!-- Locations -->
-{% include 'sections/locations.html.njk' %}
+<!-- Que es Cotown -->
+{% include 'sections/home/whatis.html.njk' %}
 
-<!-- FAQs -->
-{% include 'sections/faqs.html.njk' %}
+<!-- Donde quieres vivir -->
+{% include 'sections/home/where.html.njk' %}
+
+<!-- Elige tu pizaso -->
+{% include 'sections/home/choose.html.njk' %}
+
+<!-- Servicios -->
+{% include 'sections/home/services.html.njk' %}
+
+<!-- Instagram -->
+{% include 'sections/home/instagram.html.njk' %}
+
+<!-- Partners -->
+{% include 'sections/home/partners.html.njk' %}
+
+<!-- Testimonios -->
+{% include 'sections/home/testimonials.html.njk' %}

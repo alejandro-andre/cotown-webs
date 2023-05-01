@@ -52,7 +52,16 @@ module.exports = (eleventyConfig) => {
     }
     return content;
   });
-  
+
+  // Literals shortcode
+	eleventyConfig.addShortcode("literal", async function(literals, id, lang) {
+    try {
+      return literals[id][lang];
+    } catch {
+      return `<span style="color:red;">[text missing ${lang}: ${id}]</span>`
+    }
+  });
+
   // Image optimizer
 	eleventyConfig.addShortcode("image", async function(src, alt, sizes, name) {
     try {
@@ -79,7 +88,7 @@ module.exports = (eleventyConfig) => {
       html = Image.generateHTML(metadata, imageAttributes);
       return html;
     } catch {
-      return '<div style="color:red;">[image missing]</div>'
+      return `<span style="color:red;">[image missing ${name}]</span>`;
     }
 	});
 
