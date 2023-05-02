@@ -1,7 +1,7 @@
 (async () => {
 
     // Load index
-    const searchIndex = await fetch("/json/index.json").then((res) =>
+    const searchIndex = await fetch("/json/" + L + "/index.json").then((res) =>
       res.json()
     );
     const idx = lunr(function () {

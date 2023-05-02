@@ -3,7 +3,8 @@ name: search
 eleventyComputed:
     lang: "{{L}}"
     title: "{{langs[L].pages[name].title}}"
-permalink: "/{{langs[L].folder}}{{langs[L].pages[name].url}}.html"
+    description: "{{langs[L].pages[name].description}}"
+permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
 layout: layouts/base.html
 pagination:
     data: langs
@@ -20,4 +21,5 @@ tags: page
 <input type="search" id="search-input" placeholder="Buscar..." />
 <ul id="search-results"></ul>
 <script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>const L="{{L}}";</script>
 {% set script %}{% include "js/search.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>

@@ -15,7 +15,7 @@ pagination:
 {
   "url":"{{ subitem.id }}",
   "question":"{{ subitem | translate('Question', L) }}",
-  "response":"{{ subitem | translate('Response', L) | safe }}"
+  "response":"{{ subitem | translate('Response', L) | cleanup }}"
 }
 {%-set comma = 1-%}
 {%-endfor-%}{% endfor %}

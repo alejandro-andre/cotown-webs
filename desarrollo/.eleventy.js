@@ -6,6 +6,20 @@ const { minify } = require("terser");
 
 module.exports = (eleventyConfig) => {
 
+  // Clean up filter
+  eleventyConfig.addFilter("cleanup", function(text) {
+    return text.replace(/[\x00-\x1F]/g, " ").replace("  ", " ");
+  });
+  
+  // Translation filter
+  eleventyConfig.addFilter("translate", function(item, key, lang) {
+    if (lang === 'en') {
+      return item[key + '_en'] || item[key];
+    } else {
+      return item[key];
+    }
+  });
+  
   // Markdown to HTML
   eleventyConfig.addFilter("markdown", (value) => {
     const md = new MarkdownIt();
@@ -24,6 +38,11 @@ module.exports = (eleventyConfig) => {
     return null;
   });
   
+  // CSS minification
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
+
   // JS minification
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (code, callback) {
     try {
@@ -35,11 +54,6 @@ module.exports = (eleventyConfig) => {
     }
   });
   
-  // CSS minification
-  eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
-
   // HTML minification
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
@@ -62,7 +76,7 @@ module.exports = (eleventyConfig) => {
     }
   });
 
-  // Image optimizer
+  // Image optimizer shorcode
 	eleventyConfig.addShortcode("image", async function(src, alt, sizes, name) {
     try {
 
@@ -92,15 +106,6 @@ module.exports = (eleventyConfig) => {
     }
 	});
 
-  // Translation
-  eleventyConfig.addFilter("translate", function(item, key, lang) {
-    if (lang === 'en') {
-      return item[key + '_en'] || item[key];
-    } else {
-      return item[key];
-    }
-  });
-  
   // Copy folders
   eleventyConfig.addPassthroughCopy({"src/assets": "."});
 

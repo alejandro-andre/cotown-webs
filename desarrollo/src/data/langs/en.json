@@ -1,5 +1,6 @@
 { 
-    "folder":"en/",
+    "folder":"/en",
+    "locale": "es_ES",
     "pages": {
         "index": { "url": "index", "title": "Home" },
         "locations": { "url": "locations", "title": "Locations" },

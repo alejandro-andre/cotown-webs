@@ -3,7 +3,8 @@ name: index
 eleventyComputed:
     lang: "{{L}}"
     title: "{{langs[L].pages[name].title}}"
-permalink: "/{{langs[L].folder}}{{langs[L].pages[name].url}}.html"
+    description: "{{langs[L].pages[name].description}}"
+permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
 layout: layouts/base.html
 pagination:
     data: langs

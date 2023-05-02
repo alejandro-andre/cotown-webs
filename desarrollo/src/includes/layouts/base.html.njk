@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="{{lang}}" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="{{lang}}" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<!-- Head -->
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ title }}</title>
+{% include 'sections/common/head.html.njk' %}
 </head>
+
+<!-- Body -->
 <body>
+
 <!-- Header -->
 {% include 'sections/common/header.html.njk' %}
 
 <!-- Content -->
+<main>
 {{ content | safe }}
+</main>
 
 <!-- Footer -->
 {% include 'sections/common/footer.html.njk' %}
+
 </body>
 </html>
