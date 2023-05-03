@@ -9,11 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Mobile Specific Metas
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- HTML -->
-    <link rel="import" href="../iron-image/iron-image.html">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
 
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -46,7 +45,7 @@
     
     <!-- JS -->
     <script defer src="./assets/js/app.js" ></script>
-
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   </head>
 
   <body>
@@ -370,8 +369,18 @@
       </section>
     </footer>
   <!-- End Document
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->    
-
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+    <script type="application/javascript">
+      $('input[type=file]').change(function(){
+       var filename = jQuery(this).val().split('\\').pop();
+       var idname = jQuery(this).attr('id');
+       console.log(jQuery(this));
+       console.log(filename);
+       console.log(idname);
+       $('span.'+idname).next().find('span').html(filename);
+      });
+      </script>
+    
   </body>
 </html>
     
