@@ -137,7 +137,7 @@ button {
     font-size: 16px;
     line-height: 16px;
     padding: 0 1.5em;
-    border-color: var(--turquoise-light);
+    border: 1px solid var(--turquoise-light);
     background-color: var(--white);
     color: var(--turquoise-light);
 }
@@ -159,7 +159,7 @@ button {
     font-size: 16px;
     line-height: 16px;
     padding: 0 1.5em;
-    border-color: var(--turquoise-light);
+    border: 1px solid var(--turquoise-light);
     background-color: var(--turquoise-light);
     color: var(--white);
 }

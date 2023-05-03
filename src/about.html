@@ -220,6 +220,8 @@
                   <p class="job">Cargo en la empresa</p>
                 </div>
               </div>
+            </div>
+            <div class="grid show">           
               <div class="member">
                 <img class="img-grid" alt="member1" src="./assets/img/us.png">
                 <div class="data">
@@ -235,8 +237,61 @@
                 </div>
               </div>
             </div>
-            
+            <div class="button-more">
+              <button class="more btn-secondary" click="showMore()">Ver más equipo</button>
+            </div>
+          </section>
+          <section class="form row">
+            <h2 class="title">            
+              ¡ÚNETE AL EQUIPO COTOWN!
+            </h2>
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+            <div class="form-container">
+              <div class="campo">
+                <label class="label">Nombre y apellidos</label>                  
+                <input class="input" type="name" id="name" name="name">
+              </div>
+              <div class="campo">
+                <label class="label">Email</label>                  
+                <input class="input" type="email" id="email" name="email">
+              </div>
+              <div class="campo">
+                <label class="label">Teléfono móvil</label>                  
+                <input class="input" type="phone" id="phone" name="phone">
+              </div>
+              <div class="campo">
+                <label class="label">Otros</label>                  
+                <input class="input" type="other" id="other" name="other">
+              </div>
+              <div class="campo">
+                <label class="label" >Otros2</label>                  
+                <input class="input" type="other2" id="other2" name="other2">
+              </div>
 
+              <div class="campo add-file">
+                <label class="label">Subir CV</label>
+                <div class="select">                  
+                  <span class="selected">
+                    <input
+                      id="selected"
+                      class="input selected"                    
+                      accept=".pdf,application/pdf"
+                      type="file"
+                      value="Subir CV"
+                      aria-label="docu"
+                    />                    
+                  </span>
+                  <label for="selected">
+                    <span>nombre del archivo</span>
+                  </label>
+                </div>               
+
+                <button class="select-file btn-primary">Adjuntar archivos</button>
+              </div> 
+              <button class="btn-secondary">Enviar solicitud</button>
+            </div>
           </section>
         </div>
       </div>
@@ -317,6 +372,7 @@
     </footer>
   <!-- End Document
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+
+  </body>
 </html>
     

@@ -23,8 +23,8 @@ arrow.forEach( ( cadaArrow , i )=> {
     })
 })
 
-const carousel2    = document.querySelector('.carousel-opinions')
-const arrow2    = document.querySelectorAll('.arrow-opinions')
+const carousel2  = document.querySelector('.carousel-opinions')
+const arrow2 = document.querySelectorAll('.arrow-opinions')
 
 // Recorrer TODOS los arrow
 arrow2.forEach( ( cadaArrow2 , i )=> {
@@ -38,4 +38,11 @@ arrow2.forEach( ( cadaArrow2 , i )=> {
         // MOVEMOS el grande
         carousel2.style.transform = `translateX(${ operacion }%)`
     })
+})
+
+const show  = document.querySelector('.show')
+const more  = document.querySelector('.more')
+
+more.addEventListener('click',()=>{
+show.style.display = 'flex'
 })
