@@ -271,7 +271,7 @@
               <div class="campo add-file">
                 <label class="label">Subir CV</label>
                 <div class="select">                  
-                  <span class="selected">
+                  <span class="selected">                    
                     <input
                       id="selected"
                       class="input selected"                    
@@ -279,14 +279,19 @@
                       type="file"
                       value="Subir CV"
                       aria-label="docu"
-                    />                    
+                    />
+                    <label class="label btn-primary" for="selected">
+                      <span>Adjuntar archivo</span>
+                    </label>                
                   </span>
-                  <label for="selected">
-                    <span>nombre del archivo</span>
+                  <label class="select-file" for="selected">
+                    <span>Subir CV</span>
                   </label>
+                  <!-- <label for="selected">
+                    <span>Adjuntar archivos</span>
+                  </label> -->
                 </div>               
 
-                <button class="select-file btn-primary">Adjuntar archivos</button>
               </div> 
               <button class="btn-secondary">Enviar solicitud</button>
             </div>
@@ -369,7 +374,8 @@
       </section>
     </footer>
   <!-- End Document
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+    –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
+    <!-- SCRIPT PARA EL ARCHIVO ADJUNTO -->
     <script type="application/javascript">
       $('input[type=file]').change(function(){
        var filename = jQuery(this).val().split('\\').pop();

@@ -1151,23 +1151,19 @@ main .row .container-main section.form .form-container .campo label  {
 main .row .container-main section.form .form-container .campo input  {
     height: 40px;
     width: 98%;
-    padding: 0 1em;
+    padding: 0;
     margin-bottom: 0.5em;
     color: var(--black);
     border: 0px solid transparent;
     box-shadow: 0px 7.15663px 14.3133px rgba(0, 0, 0, 0.15);
-    padding-right: 0.5em;
 }
 
 
 
 /* ---------------------------------------------------------- */
 /* CAMPO ADD FILE */
-main .row .container-main section.form .form-container .campo.add-file  {
-    width: 100%;
-}
 main .row .container-main section.form .form-container .campo.add-file .select  {
-    width: 100%;
+    width: 98%;
     position: relative;
     display: inline-block;
     height: 40px; 
@@ -1177,18 +1173,37 @@ main .row .container-main section.form .form-container .campo.add-file .select  
     margin: 0 0 3em;
     padding: 0;
 }
-main .row .container-main section.form .form-container .campo.add-file .select label[for="selected"] {
+main .row .container-main section.form .form-container .campo.add-file .select label.label[for="selected"] {
     font-size: 14px;
     font-weight: 600;
-    color: #fff;
-    background-color: #106BA0;
+    color: var(--turquoise-light);
+    background-color: var(--white);
     display: inline-block;
     transition: all .5s;
     cursor: pointer;
-    padding: 15px 40px !important;
+    padding: 0.3em 1.5em 0!important;
     text-transform: uppercase;
     width: fit-content;
     text-align: center;
+    position: absolute;
+    left: 81%;
+    top: 0.1em;
+    min-width: fit-content;
+}
+main .row .container-main section.form .form-container .campo.add-file .select label[for="selected"] {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black);
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 0.3em 1.5em 0!important;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+    position: absolute;
+    left: 0%;
+    top: 0.1em;
 }
 main .row .container-main section.form .form-container .campo.add-file .select span#selected {
     height: 40px;
@@ -1196,102 +1211,14 @@ main .row .container-main section.form .form-container .campo.add-file .select s
     padding: 0;
     background-color:rgba(0, 0, 0, 0.15);
 }
-main .row .container-main section.form .form-container .campo.add-file .select span#selected input.add {
-    /* opacity: 0; */
-    position: absolute;
-    /* z-index: -1; */
-    right: 0;
-    padding: 1rem 2rem;
-    min-width: 100%;
-    margin-right: 0 !important;
-    /* opacity: 0; */
-    /* height: 40px;
+main .row .container-main section.form .form-container .campo .select input.selected {
     width: 100%;
-    padding: 0;
-    margin-bottom: 0;
-    color: var(--black);   */
-    /* display: inline-block; 
-    z-index: 2; */
-    /* z-index: 1; */
-    /* padding: 1rem 2rem;
-    background: var(--white);
-    color: var(--blue);
-    border: 1px solid var(--blue);
-    text-transform: uppercase;
-    cursor: pointer;
-    align-items: center; */
+    opacity: 0;    
 }
-/* main .row .container-main section.form .form-container .campo.add-file label span.visually-hidden {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-} */
-/* main .row .container-main section.form .form-container .campo.add .input-container::before { 
-    height: 38px;   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white);
-    color: var(--turquoise-light);
-    border: 1px solid var(--turquoise-light);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 63px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 16px;
-    padding: 0 1em;
-    content: 'Adjuntar archivos';
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-} */
 
-  
-  /* main .row .container-main section.form .form-container .campo.add .input-container input[type="file"] {
-    opacity: 0;
-    height: 40px;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 0;
-    color: var(--black);   
-    display: inline-block;
-  } */
-  
-  /* main .row .container-main section.form .form-container .campo.add .input-container #add::before {
-    content: 'Subir CV';
-    padding: 0 0.5em;
-    top: 0.5em;
-    position: relative;
-    opacity: 1;
-  } */
-  /* span.visually-hidden {
-    width: 0;
-    height: 0;
-  } */
-
-  /* main .row .container-main section.form .form-container .campo.add .select-file {
-    z-index: 1;
-    padding: 1rem 2rem;
-    background: var(--white);
-    color: var(--blue);
-    font-family: 'SuisseIntl-Semibold', sans-serif;
-    font-size: 14px;
-    border: 1px solid var(--blue);
-    text-transform: uppercase;
-    cursor: pointer;
-    align-items: center;
-  } */
-
-
-
-  main .row .container-main section.form .form-container button.btn-secondary {
-    margin: 3em 0;
-  }
+main .row .container-main section.form .form-container button.btn-secondary {
+    margin: 1em 0;
+}
 
 
 
