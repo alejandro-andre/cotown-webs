@@ -261,7 +261,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     color: var(--black);
     border: 0px solid transparent;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    padding-right: 0.5em;
+    padding: 0 0.5em;
 }
 .main-header .left .basic-searcher .from {
     margin-right: 4%;
@@ -309,7 +309,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 }
 
 /* BLOQUE 1 HOME */
-.first-contain .title-big.home {
+main .container-main .first-contain .title-big.home {
     padding: 2em 14%;
     max-width: 1280px;
     display: flex;
@@ -319,7 +319,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     margin: 0 auto;
 }
 /* BLOQUE 1 NO HOME */
-.first-contain .title-big {
+main .container-main .first-contain .title-big {
     padding: 2em 14%;
     max-width: 1280px;
     display: flex;
@@ -328,37 +328,32 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     align-items: center;
     margin: 0 auto 2em;
 }
-.first-contain .title-big .h2-big, .first-contain .title-big .h2-border {
+main .container-main .first-contain .title-big .h2-big, main .container-main .first-contain .title-big .h2-border {
    font-size: 10em;
    line-height: 1em;
-   margin: 0.5em 0 0.1em;
+   margin: 0.3em auto 0.1em;
 }
-.first-contain .title-big .h2-border {
+main .container-main .first-contain .title-big .h2-border {
     color: var(--white);
     text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
     1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #fff;
 }
-.first-contain .title-big .text {
+main .container-main .first-contain .title-big .text {
     font-size: 30px;
     line-height: 36px;
     font-weight: 500;
     margin-bottom: 0.2em;
     text-align: center;
 }
-.first-contain .title-big.home .text {
+main .container-main .first-contain .title-big.home .text {
     font-size: 30px;
     line-height: 36px;
     font-weight: 500;
     margin-bottom: 0.5em;
     text-align: left;
 }
-
-.first-contain .title-big .text .bold {
+main .container-main .first-contain .title-big .text .bold {
     font-weight: 700;
-}
-.first-contain .title-big .text.bold {
-    font-weight: 700;
-    width: 100%;
 }
 
 /* CARRUSEL LOCALIZACIONES */
@@ -461,7 +456,6 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
  }
 .locations .carousel .carousel-locations .img-container:hover .img-title {
     color: var(--turquoise-light);
-
 }
 .locations .carousel ul.arrows {
     width: 100%;
@@ -1029,6 +1023,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 }
 
 /* __________________________ OTHER PAGES ___________________________*/
+
 /* ABOUT PAGE */
 main .row .container-main section.banner {
     background-color: var(--turquoise-light);
@@ -1111,9 +1106,6 @@ main .row .container-main section.members .grid .member .data p.job {
 main .row .container-main section.members .grid.show {
     display: none;
 }
-/* main .row .container-main section.members .grid.more {
-    display: flex
-} */
 main .row .container-main section.members .button-more {
     width: 100%;
     display: flex;
@@ -1125,7 +1117,7 @@ main .row .container-main section.members .button-more {
 }
 /* FORM */
 main .row .container-main section.form {
-    padding: 2em 4em;
+    padding: 2em 14%;
     margin: 4em 0 0;
     background-color: var(--white-background);
 }
@@ -1159,9 +1151,6 @@ main .row .container-main section.form .form-container .campo input  {
     border: 0px solid transparent;
     box-shadow: 0px 7.15663px 14.3133px rgba(0, 0, 0, 0.15);
 }
-
-
-
 /* ---------------------------------------------------------- */
 /* CAMPO ADD FILE */
 main .row .container-main section.form .form-container .campo.add-file .select  {
@@ -1172,7 +1161,7 @@ main .row .container-main section.form .form-container .campo.add-file .select  
     background-color: var(--white);
     border: 0px solid transparent;
     box-shadow: 0px 7.15663px 14.3133px rgba(0, 0, 0, 0.15);
-    margin: 0 0 3em;
+    margin: 0 0 1.5em;
     padding: 0;
 }
 main .row .container-main section.form .form-container .campo.add-file .select .selected  {
@@ -1224,9 +1213,96 @@ main .row .container-main section.form .form-container .campo .select input.sele
     width: 100%;
     opacity: 0;    
 }
+main .row .container-main section.form .form-container .text-ok {
+    color: var(--turquoise-light);
+    font-size: 16px;
+}
 main .row .container-main section.form .form-container button.btn-secondary {
+    margin: 2em 0 1em;
+}
+
+
+/* ADVANTAGES PAGE */
+main.advantages .container-main .first-contain .title-big .h2-big, main.advantages .container-main .first-contain .title-big .h2-border {
+    line-height: 0.9em;
+ }
+main.advantages .container-main .first-contain .title-big .h2-big {
+    margin: 0.3em auto 0;
+}
+main.advantages .container-main .first-contain .title-big .h2-border {
+    margin: 0 auto 0.3em;
+}
+main.advantages .container-main .first-contain .title-big .text {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+main.advantages .container-main section.container-advantages {
+    padding: 2em 4em;
+}
+main.advantages .container-main section.container-advantages .grid {
+    padding: 0 14%;
+    max-width: 1280px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+main.advantages .container-main section.container-advantages .grid .promo {
+    width: calc(25% - 0.8em);
+    height: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-background);
+    margin: 0 0 2em 0.8em;
+}
+main.advantages .container-main section.container-advantages .grid .promo:hover {
+    background-color: var(--turquoise-light);
+}
+main.advantages .container-main section.container-advantages .grid .promo .promo-contain {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+}
+main.advantages .container-main section.container-advantages .grid .promo .promo-contain .promo-title {
+    font-size: 78px;
+    color: var(--white);
+    line-height: 1;
+    margin: 0;
+    opacity: 0;
+}
+main.advantages .container-main section.container-advantages .grid .promo:hover .promo-contain .promo-title  {
+    opacity: 1;
+}
+main.advantages .container-main section.container-advantages .grid .promo .promo-contain .promo-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+}
+main.advantages .container-main section.container-advantages .grid .promo:hover .promo-contain .promo-text {
+    opacity: 1;
+}
+main.advantages .container-main section.container-advantages .grid.show {
+    display: none;
+}
+main.advantages .container-main section.container-advantages .button-more {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin: 1em 0;
 }
+
 
 
 
@@ -1510,15 +1586,15 @@ footer .container-footer .right .footer-info .bold {
     .iconos-chat .icon-cascos {
         display: none;
     }
-    .first-contain .title-big {
+    main .container-main .first-contain .title-big {
         padding: 2em 1.5em;
         text-align: center;
     }
-    .first-contain .title-big .h2-big, .first-contain .title-big .h2-border {
+    main .container-main .first-contain .title-big .h2-big, main .container-main .first-contain .title-big .h2-border {
         font-size: 2.5em;
         margin: 0 auto;
     }
-    .first-contain .title-big .text {
+    main .container-main .first-contain .title-big .text {
         font-size: 1em;
         line-height: 1.2;
         font-weight: 400;
