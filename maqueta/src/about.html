@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Cotown</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/buttons.css">
+    <link rel="stylesheet" href="./assets/css/variables.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="./assets/icons/style.css">
+    <link rel="stylesheet" href="./assets/icons/style.scss">
+    <link rel="stylesheet" href="./assets/icons/variables.scss">
+  
+    <!-- IMAGES -->
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+    
+    <!-- JS -->
+    <script defer src="./assets/js/app.js" ></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- HEADER -->
+    <header>
+      <section class="container-header first">
+        <div class="turquoise-line">
+          <div class="left-content">
+            <h1 class="spot">NUEVA APERTURA EN MADRID, ENTRA Y DESCÚBRELA</h1>
+          </div>
+          <div class="right-content">
+            <div class="div-header lang">            
+              <img class="lang-img" alt="es" src="./assets/img/es.png"></img>
+            </div>
+            <div class="div-header icons-header">
+              <em class="icon-WhatsappPrimary"></em>
+              <em class="icon-Search"></em>
+            </div>
+            <div class="div-header private">
+              <div class="two columns">
+                <em class="icon-Search"></em>
+              </div>
+              <div class="ten columns">
+                <p class="private-area">Área privada</p>
+              </div>
+            </div>
+            <div class="div-header booking">
+              <button class="btn-primary">RESERVAR</button>
+            </div>          
+          </div>
+        </div> 
+      </section>
+      <section class="container-header second">       
+        <div class="black-line">
+          <div class="div-header booking">
+            <button class="btn-secondary">Reservar</button>
+          </div>
+          <div class="logo">
+            <a href="./home.html">
+              <h1 class="h1-logo"><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
+            </a>
+          </div>
+          <div class="div-header lang">            
+            <img class="lang-img" alt="es" src="./assets/img/es.png"></img>
+          </div>
+          <div class="right-nav">
+            <i class="icon-Piso"></i>
+            <nav class="navBar" id="mainNavBar">   
+              <ul class="twelve columns">             
+                  <!-- <a href="#locations" onClick="openDrawerMenu()">Localizaciones</a>
+                <a class="icon-CorcheteDown" [ngClass]="openDrawerMenu ? 'icon-CorcheteUp' : 'icon-CorcheteDown' " onClick="openDrawerMenu()"></a> -->
+                <li class="locations">                
+                  <button class="nav-select twelve columns">
+                    <a href="./locations.html">Localizaciones</a>
+                    <i class="icon-CorcheteDown" [ngClass]="openDrawerMenu ? 'icon-CorcheteUp' : 'icon-CorcheteDown'" onClick="openListMenu()"></i>                  
+                  </button>
+                  <div id="list" class="container-list twelve columns">
+                    <a href="#locations" class="twelve columns">Barcelona</a>
+                    <a href="#locations" class="twelve columns">Valencia</a>
+                    <a href="#locations" class="twelve columns">Bilbao</a>                  
+                  </div>
+                </li>
+                <li class="about"><a href="./about.html">Conócenos</a></li>
+                <li class="advantages"><a href="./advantages.html">Ventajas</a></li>
+                <li class="faqs"><a href="./faqs.html">FAQS</a></li>
+                <li class="blog"><a href="./blog.html">Blog</a></li>
+                <li class="contact"><a href="./contact.html">Contacto</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </header>
+    
+    <!-- MAIN -->
+    <main class="about">
+      <div class="row">
+        <div class="container-main twelve columns">
+          <section class="first-contain row">         
+            <div class="title-big">            
+              <h2 class="h2-big">¡conócenos!</h2>
+              <p class="text">
+                Si has llegado hasta aquí es porque te mueres por saber quién está detrás de este proyecto. Pues sí, somos Cotown, un equipo con mucha ilusión e ideas de bombero dispuesto a crear nuevas tendencias, porque ¿para qué seguirlas? 
+              </p>
+              <p class="text">
+                El 100% de nuestra energía está dedicada a hacer que te sientas como un auténtico “ciudadano con suerte”; ese protagonista de película de Netflix con un pisazo en el centro de una ciudad muy molona.                
+              </p>
+              <p class="text">
+                Ok, pero ¿qué es Cotown? Es un proyecto hecho a medida para todas aquellas personas que decidan teletrabajar o impulsar su propio proyecto personal en ciudades como Barcelona, Valencia, Bilbao o Madrid y quieran alojarse en un lugar donde no echen de menos su hogar, porque ya estarán en él. No nos van las etiquetas y nos adaptamos al momento de vida de cualquier persona. Lo importante para ser un buen Cotowner es querer disfrutar de las nuevas experiencias y vivirlas como si no hubiera un mañana.
+              </p>
+              <p class="text">
+                Por eso, te presentamos a la crew que está detrás de esta fantástica locura. 
+              </p>
+              <p class="text bold">
+                ¡Vamos!
+              </p>
+            </div>
+          </section>
+          <section class="banner">
+            <h2>
+              cuentas |
+              creativos |
+              development |
+              lorem ipsum dolor sit |                          
+            </h2>            
+            <h2>
+              cuentas |
+              creativos |
+              development |
+              lorem ipsum dolor sit | 
+            </h2>
+          </section>
+          <section class="members row">
+            <div class="grid">
+              <div class="member">
+                <img class="img-grid" alt="member1" src="./assets/img/us.png">
+                <div class="data">
+                  <p class="name">Nombre y apellido</p>
+                  <p class="job">Cargo en la empresa</p>
+                </div>
+              </div>
+              <div class="member">
+                <img class="img-grid" alt="member1" src="./assets/img/us.png">
+                <div class="data">
+                  <p class="name">Nombre y apellido</p>
+                  <p class="job">Cargo en la empresa</p>
+                </div>
+              </div>
+              <div class="member">
+                <img class="img-grid" alt="member1" src="./assets/img/us.png">
+                <div class="data">
+                  <p class="name">Nombre y apellido</p>
+                  <p class="job">Cargo en la empresa</p>
+                </div>
+              </div>
+              <div class="member">
+                <img class="img-grid" alt="member1" src="./assets/img/us.png">
+                <div class="data">
+                  <p class="name">Nombre y apellido</p>
+                  <p class="job">Cargo en la empresa</p>
+                </div>
+              </div>
+              <div class="member">
+                <img class="img-grid" alt="member1" src="./assets/img/us.png">
+                <div class="data">
+                  <p class="name">Nombre y apellido</p>
+                  <p class="job">Cargo en la empresa</p>
+                </div>
+              </div>
+              <div class="member">
+                <img class="img-grid" alt="member1" src="./assets/img/us.png">
+                <div class="data">
+                  <p class="name">Nombre y apellido</p>
+                  <p class="job">Cargo en la empresa</p>
+                </div>
+              </div>
+              <div class="member">
+                <img class="img-grid" alt="member1" src="./assets/img/us.png">
+                <div class="data">
+                  <p class="name">Nombre y apellido</p>
+                  <p class="job">Cargo en la empresa</p>
+                </div>
+              </div>
+              <div class="member">
+                <img class="img-grid" alt="member1" src="./assets/img/us.png">
+                <div class="data">
+                  <p class="name">Nombre y apellido</p>
+                  <p class="job">Cargo en la empresa</p>
+                </div>
+              </div>
+            </div>
+            <div class="grid show">           
+              <div class="member">
+                <img class="img-grid" alt="member1" src="./assets/img/us.png">
+                <div class="data">
+                  <p class="name">Nombre y apellido</p>
+                  <p class="job">Cargo en la empresa</p>
+                </div>
+              </div>
+              <div class="member">
+                <img class="img-grid" alt="member1" src="./assets/img/us.png">
+                <div class="data">
+                  <p class="name">Nombre y apellido</p>
+                  <p class="job">Cargo en la empresa</p>
+                </div>
+              </div>
+            </div>
+            <div class="button-more">
+              <button class="more btn-secondary" click="showMore()">Ver más equipo</button>
+            </div>
+          </section>
+          <section class="form row">
+            <h2 class="title">            
+              ¡ÚNETE AL EQUIPO COTOWN!
+            </h2>
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+            <div class="form-container">
+              <div class="campo">
+                <label class="label">Nombre y apellidos</label>                  
+                <input class="input" type="name" id="name" name="name">
+              </div>
+              <div class="campo">
+                <label class="label">Email</label>                  
+                <input class="input" type="email" id="email" name="email">
+              </div>
+              <div class="campo">
+                <label class="label">Teléfono móvil</label>                  
+                <input class="input" type="phone" id="phone" name="phone">
+              </div>
+              <div class="campo">
+                <label class="label">Otros</label>                  
+                <input class="input" type="other" id="other" name="other">
+              </div>
+              <div class="campo">
+                <label class="label" >Otros2</label>                  
+                <input class="input" type="other2" id="other2" name="other2">
+              </div>
+
+              <div class="campo add-file">
+                <label class="label">Subir CV</label>
+                <div class="select">                  
+                  <span class="selected">                    
+                    <input
+                      id="selected"
+                      class="input selected"                    
+                      accept=".pdf,application/pdf"
+                      type="file"
+                      value="Subir CV"
+                      aria-label="docu"
+                    />
+                    <label class="label btn-primary" for="selected">
+                      <span>Adjuntar archivo</span>
+                    </label>                
+                  </span>
+                  <label class="select-file" for="selected">
+                    <span>Subir CV</span>
+                  </label>
+                </div>               
+                <div class="text-ok">
+                  ¡Excelente! Hemos recibido tu CV y lo estaremos revisando cuidadosamente. Si tu perfil coincide con nuestras necesidades y requisitos, nos pondremos en contacto contigo para programar una entrevista. ¡Gracias por tu interés en unirte a nuestro equipo!
+                </div>
+              </div> 
+              <button class="btn-secondary">Enviar solicitud</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+  <!-- FOOTER -->
+    <footer>  
+      <section class="container-footer">       
+        <div class="row">
+          <div class="left four columns">
+            <div>
+              <h1 class="footer-logo"><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
+            </div>
+            <div class="footer-info mobile twelve columns">
+              <div class="twelve columns">
+                <p>C / Beethoven 15 7ª planta, 08021 Barcelona</p>
+                <p>+34 93 595 29 39</p>
+                <p>info@cotown.com</p>
+              </div>             
+            </div>
+            <div class="redes">
+              <em class="icon-WhatsappPrimary"></em>
+              <em class="icon-FacebookPrimary"></em>
+              <em class="icon-InstagramPrimary"></em>
+              <em class="icon-TiktokPrimary"></em>
+            </div>
+          </div>
+          <div class="right eight columns">
+            <div class="footer-contain twelve columns">
+              <div class="four columns">
+                <ul>
+                  <li class="locations"><a href="./locations.html">Localizaciones</a></li>
+                  <li class="about"><a href="./about.html">Conócenos</a></li>
+                  <li class="advantages"><a href="./advantages.html">Ventajas Cotowner</a></li>
+                </ul>
+              </div>
+              <div class="four columns">
+                <ul>
+                  <li class="faqs"><a href="./faqs.html">FAQS</a></li>
+                  <li class="blog"><a href="./blog.html">Blog</a></li>
+                  <li class="contact"><a href="./contact.html">Contacto</a></li>
+                </ul>
+              </div>
+              <div class="four columns">
+                <ul>
+                  <li>Política de privacidad</li>
+                  <li>Aviso legal</li>
+                  <li>Seguridad y almacenamiento de los datos</li>
+                </ul>
+              </div>            
+            </div>
+            <div class="mobile-listado">
+              <ul>
+                <li class="about"><a href="./about.html">Conócenos</a></li> |
+                <li class="faqs"><a href="./faqs.html">FAQS</a></li> |
+                <li class="contact"><a href="./contact.html">Contacto</a></li> |
+                <li>Política de privacidad</li> |
+                <li>Aviso legal</li> |
+                <li>Seguridad y almacenamiento de los datos</li>
+              </ul>
+            </div>
+            <div class="footer-info twelve columns">
+              <div class="four columns">
+                <p>C / Beethoven 15 7ª planta,</p>
+                <p>08021 Barcelona</p>
+              </div>
+              <div class="four columns bold">
+                +34 93 595 29 39
+              </div>
+              <div class="four columns bold">
+                info@cotown.com
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+  <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
+    <!-- SCRIPT PARA EL ARCHIVO ADJUNTO -->
+    <script type="application/javascript">
+      $('input[type=file]').change(function(){
+       var filename = jQuery(this).val().split('\\').pop();
+       var idname = jQuery(this).attr('id');
+       console.log(jQuery(this));
+       console.log(filename);
+       console.log(idname);
+       $('span.'+idname).next().find('span').html(filename);
+      });
+      </script>
+    
+  </body>
+</html>
+    
