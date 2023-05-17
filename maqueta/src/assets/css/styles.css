@@ -42,14 +42,14 @@
 
 
 /* For devices larger than 400px */
-@media (min-width: 400px) {
+@media only screen and (min-width: 400px) {
   .container {
     width: 100%;
     padding: 0; }
 }
 
 /* For devices larger than 550px */
-@media (min-width: 550px) {
+@media only screen and (min-width: 550px) {
   .container {
     width: 100%; }
   .column,
@@ -140,7 +140,7 @@ h5 { font-size: 1.2rem; line-height: 1.5;}
 h6 { font-size: 1rem; line-height: 1.2;}
 
 /* Larger than mobile */
-/* @media (min-width: 550px) {
+/* @media only screen and (min-width: 550px) {
   h1 { font-size: 5.0rem; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
@@ -154,7 +154,6 @@ p {
   line-height: 1;  
   letter-spacing: 0;
 }
-
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -235,13 +234,15 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  height: 38px;
-  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #fff;
-  border: 1px solid #D1D1D1;
-  border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box; }
+  /* height: 38px; */
+  /* padding: 6px 10px;  */
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  /* background-color: #fff;
+  border: 1px solid #D1D1D1; */
+  /* border-radius: 4px; */
+  /* box-shadow: none; */
+  /* box-sizing: border-box; */
+}
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
 input[type="number"],
@@ -267,7 +268,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  /* border: 1px solid #33C3F0; */
   outline: 0; }
 label,
 legend {
@@ -342,7 +343,8 @@ input,
 textarea,
 select,
 fieldset {
-  margin-bottom: 1.5rem; }
+  /* margin-bottom: 1.5rem; */
+ }
 pre,
 blockquote,
 dl,
@@ -409,16 +411,16 @@ there.
 
 
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media only screen and (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media only screen and (min-width: 550px) {}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media only screen and (min-width: 750px) {}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media only screen and (min-width: 1000px) {}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {}
