@@ -356,7 +356,7 @@ main .container-main .first-contain .title-big .text .bold {
 /* __________________________ OTHER PAGES ___________________________*/
 
 /* ABOUT PAGE */
-main .row .container-main section.banner {
+main .container-main section.banner {
     background-color: var(--turquoise-light);
     width: fit-content;
     min-width: min-content;
@@ -366,7 +366,7 @@ main .row .container-main section.banner {
     align-items: center;
     margin-bottom: 6em;
 }
-main .row .container-main section.banner h2 {
+main .container-main section.banner h2 {
     animation: scroll 40s linear infinite;
     -webkit-animation: scroll 40s linear infinite;
     color: var(--white);
@@ -390,17 +390,17 @@ main .row .container-main section.banner h2 {
         transform: translateX(-100%);
     }
 }
-main .row .container-main section.members {
+main .container-main section.members {
     padding: 2em 4em;
 }
-main .row .container-main section.members .grid {
+main .container-main section.members .grid {
     padding: 0 2em;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
 }
-main .row .container-main section.members .grid .member {
+main .container-main section.members .grid .member {
     width: 25%;
     display: flex;
     flex-flow: row wrap;
@@ -408,16 +408,16 @@ main .row .container-main section.members .grid .member {
     align-items: center;
     margin: 1em 0;
 }
-main .row .container-main section.members .grid .member .img-grid {
+main .container-main section.members .grid .member .img-grid {
     width: 100%;
 }
-main .row .container-main section.members .grid .member .data {
+main .container-main section.members .grid .member .data {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
-main .row .container-main section.members .grid .member .data p.name {
+main .container-main section.members .grid .member .data p.name {
     font-weight: 700;
     font-size: 30px;
     line-height: 34px;
@@ -426,7 +426,7 @@ main .row .container-main section.members .grid .member .data p.name {
     padding: 0 2em;
     margin: 0 0 .2em;
 }
-main .row .container-main section.members .grid .member .data p.job {
+main .container-main section.members .grid .member .data p.job {
     font-size: 22px;
     line-height: 28px;
     display:flex;
@@ -434,10 +434,10 @@ main .row .container-main section.members .grid .member .data p.job {
     padding: 0;
     margin: 0 0 .2em;
 }
-main .row .container-main section.members .grid.show {
+main .container-main section.members .grid.show {
     display: none;
 }
-main .row .container-main section.members .button-more {
+main .container-main section.members .button-more {
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -447,33 +447,33 @@ main .row .container-main section.members .button-more {
     margin: 1em 0;
 }
 /* FORM */
-main .row .container-main section.form {
+main .container-main section.form {
     padding: 2em 14%;
     margin: 4em 0 0;
     background-color: var(--white-background);
 }
-main .row .container-main section.form h2.title {
+main .container-main section.form h2.title {
    text-align: center;
 }
-main .row .container-main section.form p.text {
+main .container-main section.form p.text {
     padding: 0 6em; 
 }
-main .row .container-main section.form .form-container {
+main .container-main section.form .form-container {
     padding: 0 6em;
     margin: 1em 0 4em;
 }
-main .row .container-main section.form .form-container .campo {
+main .container-main section.form .form-container .campo {
     width: 100%;
     padding: 0 0 1em;
 }
-main .row .container-main section.form .form-container .campo label  {
+main .container-main section.form .form-container .campo label  {
     width: 100%;
     font-weight: 500;
     font-size: 22px;
     line-height: 28px;
     padding: 0 0.5em;
 }    
-main .row .container-main section.form .form-container .campo input  {
+main .container-main section.form .form-container .campo input  {
     height: 40px;
     width: 100%;
     padding: 0;
@@ -484,7 +484,7 @@ main .row .container-main section.form .form-container .campo input  {
 }
 /* ---------------------------------------------------------- */
 /* CAMPO ADD FILE */
-main .row .container-main section.form .form-container .campo.add-file .select  {
+main .container-main section.form .form-container .campo.add-file .select  {
     width: 100%;
     display: block;
     position: relative;
@@ -495,13 +495,13 @@ main .row .container-main section.form .form-container .campo.add-file .select  
     margin: 0 0 1.5em;
     padding: 0;
 }
-main .row .container-main section.form .form-container .campo.add-file .select .selected  {
+main .container-main section.form .form-container .campo.add-file .select .selected  {
     width: 100%;
     position: relative;
     display: block;
     height: 40px;
 }
-main .row .container-main section.form .form-container .campo.add-file .select .selected label.label[for="selected"] {
+main .container-main section.form .form-container .campo.add-file .select .selected label.label[for="selected"] {
     font-size: 14px;
     font-weight: 600;
     color: var(--turquoise-light);
@@ -518,7 +518,7 @@ main .row .container-main section.form .form-container .campo.add-file .select .
     min-width: fit-content;
     margin: 0;
 }
-main .row .container-main section.form .form-container .campo.add-file .select label[for="selected"] {
+main .container-main section.form .form-container .campo.add-file .select label[for="selected"] {
     font-size: 14px;
     font-weight: 600;
     color: var(--black);
@@ -534,21 +534,21 @@ main .row .container-main section.form .form-container .campo.add-file .select l
     top: 0.1em;
     margin: 0;
 }
-main .row .container-main section.form .form-container .campo.add-file .select span#selected {
+main .container-main section.form .form-container .campo.add-file .select span#selected {
     height: 40px;
     width: 50%;
     padding: 0;
     background-color:rgba(0, 0, 0, 0.15);
 }
-main .row .container-main section.form .form-container .campo .select input.selected {
+main .container-main section.form .form-container .campo .select input.selected {
     width: 100%;
     opacity: 0;    
 }
-main .row .container-main section.form .form-container .text-ok {
+main .container-main section.form .form-container .text-ok {
     color: var(--turquoise-light);
     font-size: 16px;
 }
-main .row .container-main section.form .form-container button.btn-secondary {
+main .container-main section.form .form-container button.btn-secondary {
     margin: 2em 0 1em;
 }
 
@@ -644,53 +644,63 @@ footer section.container-footer {
     background-color: var(--black);
     padding: 3em 4em;    
 }
-footer .container-footer .left {
-    
+footer .container-footer .contain {
+    border-bottom: 1px solid #3c434ab3;
+    padding: 0 0 2em;
 }
-footer .container-footer .left h1.footer-logo {
+footer section.container-footer .contain .left h1.footer-logo {
     font-weight: 700;
-    font-size: 90.5002px;
-    line-height: 91px;
-    margin-bottom: 1rem;
+    font-size: 80px!important;
+    line-height: 82px;
+    margin: 0 0 1rem;
 }
-footer .container-footer .left .redes em {
+footer section.container-footer .contain .left .redes em {
     margin-right: 2.3rem;
     font-size: 32px;
 }
-footer .container-footer .left .redes em:last-of-type {
+footer section.container-footer .contain .left .redes em:last-of-type {
     margin-right: 0;
 }
 
 /* Footer right container */
-footer .container-footer .right .footer-contain ul {
+footer section.container-footer .contain .right .footer-contain ul {
     margin-bottom: 0;
 }
-footer .container-footer .right .footer-contain ul li {
+footer section.container-footer .contain .right .footer-contain ul li {
     display: block;
+    padding: 1em 0;
 }
-footer .container-footer .right .footer-contain ul li a {
+footer section.container-footer .contain .right .footer-contain ul li a {
     line-height: 25px;
     color: var(--white);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 20px;
 }
-footer .container-footer .right .footer-contain ul:last-child {
+footer section.container-footer .contain .right .footer-contain ul li.bold a {    
+    font-weight: 700;
+}
+footer section.container-footer .contain .right .footer-contain ul:last-child {
     padding-right: 6.5rem;
 }
-
-footer .container-footer .right .footer-info {
-    border-top: 1px solid var(--white);
-    padding-top: 24px;
+footer section.container-footer .footer-info {
+    padding-top: 1.5em;    
+}
+footer section.container-footer .footer-info .redes {
+    gap: 3em;
+}
+footer section.container-footer .footer-info .redes em {
+    font-size: 30px;
+    padding-right: 1em;
+    color: var(--turquoise-light);
+}
+footer section.container-footer .footer-info .info {
+    font-size: 16px;
     color: var(--white-background);
-}
-
-footer .container-footer .right .footer-info div:first-child p {
-    font-weight: 300;
-    margin-bottom: 0.2rem;
-}
-footer .container-footer .right .footer-info .bold {
-    font-weight: 700;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 
@@ -709,10 +719,10 @@ footer .container-footer .right .footer-info .bold {
     .black-line .booking, .black-line .lang, .black-line .black-line em.icon-Piso {
         display: none;
     }
-    footer .container-footer .right .footer-info.mobile {
+    footer .container-footer .contain .right .footer-info.mobile {
         display: none;
     }
-    footer .container-footer .right .mobile-listado {
+    footer .container-footer .contain .right .mobile-listado {
         display: none;
     }
 }
@@ -767,13 +777,13 @@ footer .container-footer .right .footer-info .bold {
     /* __________________________ OTHER PAGES ___________________________*/
 /* ABOUT PAGE */
 
-    main .row .container-main section.members {
+    main .container-main section.members {
         padding: 2em 2em;
     }
-    main .row .container-main section.members .grid {
+    main .container-main section.members .grid {
         padding: 0;
     }
-    main .row .container-main section.members .grid .member .data p.name {
+    main .container-main section.members .grid .member .data p.name {
         font-size: 28px;
         line-height: 30px;
     }
@@ -845,61 +855,13 @@ footer .container-footer .right .footer-info .bold {
         gap: .5em;
     }
 
-      
-    .locations .carousel .carousel .img-container {
-        width: calc(120% / 2);       
-    }
-    .pisos .pisos-container {
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 0 1em;
-    }
-    .pisos .pisos-container .img-container {
-        width: 48%;
-        height: 40vh;
-    }
-    .pisos .pisos-container .img-container h3 {
-        font-size: 38px;
-        line-height: 40px;
-    }
-    .pisos .pisos-container .img-container h3.img-title1 {
-        bottom: 40px;
-    }
-    .pisos .pisos-container .img-title1 .subrayado, .pisos .img-title2 .subrayado {
-        height: 8px;
-        top: -12px;
-    }   
-    .servicios p.subtitle {
-        font-size: 18px;    
-    }
-    .servicios .servicios-container .cards .card {
-        width: calc(50% - 32px);
-    }
-    .cotownity .container-cotownity {
-        padding-left: 0;
-    }
-    .cotownity .container-cotownity .contain-bg {
-        background-color: var(--white);
-        padding: 2em 0 ;
-        width: 100%;
-    }
-    .cotownity .container-cotownity .contain-bg .title-bg h2 {
-        font-size: 40px;
-        width: 100%;
-    }
-    .cotownity .container-cotownity .contain-bg .img-small, .cotownity .container-cotownity .contain-bg .img-big  {
-        display: none;
-    }
-    .cotownity .feeling .title-feel {
-        display: none;
-    }
 
     /* ICONOS CHAT */
     .iconos-chat {
         padding: 0.5em 2em 0.5em 0;
         gap: 0;
     }
-    .iconos-chat .icon-cascos {
+    .iconos-chat .spoty {
         display: none;
     }
     main .container-main .first-contain .title-big {
@@ -920,33 +882,33 @@ footer .container-footer .right .footer-info .bold {
 /* __________________________ OTHER PAGES ___________________________*/
 /* ABOUT PAGE */
 
-    main .row .container-main section.members {
+    main .container-main section.members {
         padding: 2em 2em;
     }
-    main .row .container-main section.members .grid {
+    main .container-main section.members .grid {
         padding: 0;
     }
-    main .row .container-main section.members .grid .member {
+    main .container-main section.members .grid .member {
         width: 33%;
     }
-    main .row .container-main section.members .grid .member .data p.name {
+    main .container-main section.members .grid .member .data p.name {
         font-size: 24px;
         line-height: 24px;
     }
-    main .row .container-main section.members .grid .member .data p.job {
+    main .container-main section.members .grid .member .data p.job {
         font-size: 16px;
         line-height: 20px;
     }
-    main .row .container-main section.form p.text {
+    main .container-main section.form p.text {
         padding: 0 1em;
     }
-    main .row .container-main section.form {
+    main .container-main section.form {
         padding: 2em 1em;
     }
-    main .row .container-main section.form .form-container {
+    main .container-main section.form .form-container {
         padding: 0;
     }
-    main .row .container-main section.form .form-container .campo.add-file .select label.label[for="selected"] {
+    main .container-main section.form .form-container .campo.add-file .select label.label[for="selected"] {
         left: calc(100% - 164px)!important;
         font-size: 12px!important;
     }
@@ -956,43 +918,60 @@ footer .container-footer .right .footer-info .bold {
         padding: 2em;
         text-align: center;
     }
-    footer .container-footer .left h1.footer-logo {
+    footer section.container-footer .contain .left h1.footer-logo {
         font-size: 40px;
         line-height: 1.2em;
     }
-    footer .container-footer .left  {
+    footer section.container-footer .contain .left  {
         width: 100%;
         padding-left: 0;
     }    
-    footer .container-footer .left .footer-info.mobile {
+    footer section.container-footer .contain .left .footer-info.mobile {
         text-align: center;
         margin-bottom: 2em
     }
-    footer .container-footer .left .footer-info.mobile p {
+    footer section.container-footer .contain .left .footer-info.mobile p {
         margin: 0.5em;
         font-weight: 600;
         font-size: 12px;
     }
-    footer .container-footer .left .redes {
+    footer section.container-footer .contain .left .redes {
         margin-bottom: 2em;
     }
-    footer .container-footer .right .footer-info {
+    footer section.container-footer .contain .right .footer-info {
         display: none;
     }
-    footer .container-footer .right .footer-contain {
+    footer section.container-footer .contain .right .footer-contain {
         display: none;
     }
-    footer .container-footer .right .mobile-listado ul li {
+    footer section.container-footer .contain .right .mobile-listado ul li {
         display: inline;
         font-weight: 300;
         cursor: pointer;
     }
-    footer .container-footer .right .mobile-listado ul li a {
+    footer section.container-footer .contain .right .mobile-listado ul li a {
         line-height: 25px;
         color: var(--white);
         text-decoration: none;
         font-weight: 300;
         font-size: 16px;
+    }
+    footer section.container-footer  .contain .right .mobile-listado ul {
+        padding: 0;
+    }
+    footer section.container-footer .contain .right, footer section.container-footer .footer-info, footer section.container-footer .footer-info .redes, footer section.container-footer .footer-info .info p, footer section.container-footer .footer-info .redes em {
+        width: 100%;
+        justify-content: stretch;
+        align-content: center;
+    }
+    footer section.container-footer .footer-info .info {
+        width: 100%;
+        justify-content: stretch;
+        align-content: center;
+        padding: 1em 0 0;
+    }    
+    footer section.container-footer .footer-info .redes em {
+        padding: 0 0.5em;
     }
 }
 
@@ -1001,38 +980,11 @@ footer .container-footer .right .footer-info .bold {
     /* .container-header .black-line .black-line {
         max-width: 10%!important;
     }     */
-    .pisos .pisos-container {
-        justify-content: space-around;
-        align-items: center;
-        margin: 0 auto;
-        min-width: 100%;
-    }
-    .pisos .pisos-container .img-container {
-        margin: 0;
-        width: 48%;
-        height: 140px;
-    }
-    .pisos .pisos-container .img-container h3 {
-        font-size: 16px;
-        line-height: 18px;
-    }
-    .pisos .pisos-container .img-container h3.img-title1 {
-        bottom: 18px;
-    }
-    .pisos .pisos-container .img-title1 .subrayado, .pisos .img-title2 .subrayado {
-        height: 4px;
-        top: -6px;
-    }
-    .servicios .servicios-container .cards .card {
-        width: calc(100% - 32px);
-    }
-    .cotownity .container-cotownity {
-        padding-left: 0!important;
-    }
+   
 
 /* __________________________ OTHER PAGES ___________________________*/
 /* ABOUT PAGE */
-    main .row .container-main section.members .grid .member {
+    main .container-main section.members .grid .member {
         width: 50%;
     } 
 }

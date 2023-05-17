@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'cotown';
-  src:  url('fonts/cotown.eot?jdoeao');
-  src:  url('fonts/cotown.eot?jdoeao#iefix') format('embedded-opentype'),
-    url('fonts/cotown.ttf?jdoeao') format('truetype'),
-    url('fonts/cotown.woff?jdoeao') format('woff'),
-    url('fonts/cotown.svg?jdoeao#cotown') format('svg');
+  src:  url('fonts/cotown.eot?4pwoep');
+  src:  url('fonts/cotown.eot?4pwoep#iefix') format('embedded-opentype'),
+    url('fonts/cotown.ttf?4pwoep') format('truetype'),
+    url('fonts/cotown.woff?4pwoep') format('woff'),
+    url('fonts/cotown.svg?4pwoep#cotown') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,9 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-log-in:before {
-  content: "\e900";
-}
 .icon-ArrowLeft:before {
   content: "\e901";
 }
@@ -210,4 +207,19 @@
 }
 .icon-wifi:before {
   content: "\e9b0";
+}
+.icon-log-in:before {
+  content: "\e900";
+}
+.icon-chat:before {
+  content: "\e912";
+}
+.icon-spoty:before {
+  content: "\e913";
+}
+.icon-star:before {
+  content: "\e914";
+}
+.icon-Linkedin:before {
+  content: "\e915";
 }
