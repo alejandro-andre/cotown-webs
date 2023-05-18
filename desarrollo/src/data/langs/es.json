@@ -1,10 +1,16 @@
 { 
     "folder": "",
-    "locale": "en_US",
+    "locale": "es_ES",
     "pages": {
         "index": { "url": "index", "title": "Inicio" },
         "locations": { "url": "localizaciones", "title": "Localizaciones" },
+        "about": { "url": "conocenos", "title": "Conócenos" },
+        "advantages": { "url": "ventajas", "title": "Ventajas" },
         "faqs": { "url": "preguntas-frecuentes",  "title": "Preguntas frequentes" },
-        "search": {  "url": "buscador", "title": "Buscador" }
+        "blog": {  "url": "blog", "title": "Blog" },
+        "contact": {  "url": "contacto", "title": "Contacto" },
+        "privacy": {  "url": "politica-privacidad", "title": "Política de privacidad" },
+        "legal": {  "url": "aviso-legal", "title": "Aviso legal" },
+        "cookies": {  "url": "seguridad-datos", "title": "Seguridad y datos" }
     }
 }

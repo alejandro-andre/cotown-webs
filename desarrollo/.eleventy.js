@@ -56,6 +56,7 @@ module.exports = (eleventyConfig) => {
   
   // HTML minification
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    return content;
     if( outputPath.endsWith(".html") ) {
       let minified = HtmlMin.minify(content, {
         useShortDoctype: true,
@@ -77,12 +78,12 @@ module.exports = (eleventyConfig) => {
   });
 
   // Image optimizer shorcode
-	eleventyConfig.addShortcode("image", async function(src, alt, sizes, name) {
+	eleventyConfig.addShortcode("image", async function(src, alt, width, sizes, name) {
     try {
 
       // Gety metadata
       let metadata = await Image(src, {
-        widths: [300, 600],
+        widths: [width],
         urlPath: "/img/",
         outputDir: "./www/img/",
         filenameFormat: function (id, src, width, format, options) {

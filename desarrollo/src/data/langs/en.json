@@ -1,10 +1,16 @@
 { 
-    "folder":"/en",
-    "locale": "es_ES",
+    "folder": "/es",
+    "locale": "en_US",
     "pages": {
         "index": { "url": "index", "title": "Home" },
-        "locations": { "url": "locations", "title": "Locations" },
-        "faqs": { "url": "faqs", "title": "Frequently Asked Questions" },
-        "search": { "url": "search", "title": "Search" }
-    }       
+        "locations": { "url": "localizaciones", "title": "Locations" },
+        "about": { "url": "conocenos", "title": "About us" },
+        "advantages": { "url": "ventajas", "title": "Advantajes" },
+        "faqs": { "url": "preguntas-frecuentes",  "title": "FAQs" },
+        "blog": {  "url": "blog", "title": "Blog" },
+        "contact": {  "url": "contacto", "title": "Contact" },
+        "privacy": {  "url": "privacy", "title": "Privacy policies" },
+        "legal": {  "url": "aviso-legal", "title": "Legal" },
+        "cookies": {  "url": "seguridad-datos", "title": "Data security" }
+    }
 }

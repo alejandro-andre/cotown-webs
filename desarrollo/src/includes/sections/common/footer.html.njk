@@ -70,3 +70,4 @@
 
 <!-- JS -->
 {% set script %}{% include "js/app.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% set script %}{% include "js/lang.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>

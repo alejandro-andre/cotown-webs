@@ -1,0 +1,28 @@
+---
+name: advantages
+eleventyComputed:
+    title: "{{langs[L].pages[name].title}}"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+layout: layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true   
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<!-- Additional CSS -->
+{% block css %}
+{% endblock %}
+
+<!-- Main -->
+<main class="home">
+  <div class="container-main">
+
+  </div>
+</main>
