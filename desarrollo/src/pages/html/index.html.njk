@@ -16,26 +16,41 @@ changefreq: "weekly"
 priority: "1.0"
 tags: page
 ---
-<!-- Video -->
-{% include 'sections/home/video.html.njk' %}
+<!-- Main -->
+<main class="home">
+  <div class="">
+    <div class="container-main">
 
-<!-- Que es Cotown -->
-{% include 'sections/home/whatis.html.njk' %}
+      <!-- Cabecera -->
+      {% include 'sections/home/main-header.html.njk' %}
 
-<!-- Donde quieres vivir -->
-{% include 'sections/home/where.html.njk' %}
+      <!-- ... -->
+      {% include 'sections/home/first-contain.html.njk' %}
 
-<!-- Elige tu pizaso -->
-{% include 'sections/home/choose.html.njk' %}
+      <!-- Locations -->
+      {% include 'sections/home/locations.html.njk' %}
 
-<!-- Servicios -->
-{% include 'sections/home/services.html.njk' %}
+      <!-- Pisos -->
+      {% include 'sections/home/flats.html.njk' %}
 
-<!-- Instagram -->
-{% include 'sections/home/instagram.html.njk' %}
+      <!-- Servicios -->
+      {% include 'sections/home/services.html.njk' %}
 
-<!-- Partners -->
-{% include 'sections/home/partners.html.njk' %}
+      <!-- Cotownity -->
+      {% include 'sections/home/cotownity.html.njk' %}
 
-<!-- Testimonios -->
-{% include 'sections/home/testimonials.html.njk' %}
+      <!-- Partners -->
+      {% include 'sections/home/partners.html.njk' %}
+
+      <!-- Opinios -->
+      {% include 'sections/home/testimonial.html.njk' %}
+
+    </div>
+  </div>
+</main>
+
+<!-- Iconos chat -->
+<section class="iconos-chat">
+  <div class="spoty"><em class="icon-spoty"></em></div>
+  <div class="chat"><em class="icon-chat"></em></div>
+</section>

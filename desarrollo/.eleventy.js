@@ -107,7 +107,7 @@ module.exports = (eleventyConfig) => {
 	});
 
   // Copy folders
-  eleventyConfig.addPassthroughCopy({"src/assets": "."});
+  eleventyConfig.addPassthroughCopy({"src/assets": "assets"});
 
   // Config
   return {
