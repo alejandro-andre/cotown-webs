@@ -1,4 +1,4 @@
-const MarkdownIt = require("markdown-it");
+const MarkdownIt = require('markdown-it');
 const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
 const HtmlMin = require("html-minifier");
@@ -69,9 +69,14 @@ module.exports = (eleventyConfig) => {
   });
 
   // Literals shortcode
-	eleventyConfig.addShortcode("literal", async function(literals, id, lang) {
+	eleventyConfig.addShortcode("literal", async function(literals, id, lang, md) {
     try {
-      return literals[id][lang];
+      if (md) {
+        const md = new MarkdownIt();
+        return md.render(literals[id][lang]);
+      } else {
+        return literals[id][lang];
+      }
     } catch {
       return `<span style="color:red;">[text missing ${lang}: ${id}]</span>`
     }
