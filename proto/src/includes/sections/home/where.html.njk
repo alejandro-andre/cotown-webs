@@ -1,0 +1,13 @@
+<section>
+<h1>{% literal texts, 'donde-quieres-vivir-title', L %}</h1>
+
+{% for b in locations %}
+{% image 
+    constants.SERVER + "/wopi/files/Marketing/Media_location/" + b.Image[0].id +"/Image/contents?access_token=" + token, 
+    b | translate('Name', L),
+    "(min-width: 30em) 50vw, 100vw", 
+    b | translate('Name', L) | lower
+%}
+<p>{{ b | translate('Name', L) }}</p>
+{% endfor %}
+</section>
