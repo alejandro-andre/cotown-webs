@@ -15,8 +15,8 @@
                 s.Name, s.Name|slug, "service",
                 [100], ""
             %}
-            <p class="bold">{{s.Name}}</p>
-            <p class="text">{{s.Description}}</p>
+            <p class="bold">{{s | translate('Name', L)}}</p>
+            <p class="text">{{s | translate('Description', L)}}</p>
         </div>
         {% endfor %}
 

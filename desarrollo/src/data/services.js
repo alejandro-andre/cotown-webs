@@ -2,9 +2,13 @@ module.exports = async () => {
 
   const QUERY  = `
   {
-    data: Building_Building_service_typeList { 
+    data: Building_Building_service_typeList (
+      orderBy: [{ attribute: Name }]
+      where: { Published: { EQ: true } }
+    ) { 
       id 
       Name
+      Name_en
       Description
       Description_en
       Icon {

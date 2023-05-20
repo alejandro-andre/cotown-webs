@@ -1,5 +1,7 @@
 <header>
 
+{{page.url}}
+
 <section class="container-header first pure-g">
     <div class="turquoise-line pure-u-1 pure-u-lg-1-2">
 
@@ -78,9 +80,14 @@
                     <em class="change-value icon icon-CorcheteDown" for="options"></em>
                 </label>
                 <div data-toggle="close" class="options-loc">
+                    {% for l in locations %}
+                    <div class="option-loc"><a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">{{l | translate('Name', L)}}</a></div>
+                    {% endfor %}
+                    <!--  
                     <div class="option-loc"><a href="#locations">Barcelona</a></div>
                     <div class="option-loc"><a href="#locations">Valencia</a></div>
                     <div class="option-loc"><a href="#locations">Bilbao</a></div>
+                    -->
                 </div>
                 </div>
             </li>

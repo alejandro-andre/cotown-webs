@@ -1,17 +1,19 @@
 module.exports = async () => {
 
   const QUERY  = `
-  { 
-    data: Geo_LocationList (
-      orderBy: [{ attribute: Name }]
-      where: { Published: { EQ: true } }
+  {
+    data: Marketing_TeamList (
+      orderBy: [{ attribute: Order }]
     ) {
       id
       Name
-      Name_en
-      Image: Media_locationListViaLocation_id {
-        id
-        Name
+      Position
+      Position_en
+      Image {
+          name
+      }
+      Second_image {
+          name
       }
     }
   }`;
