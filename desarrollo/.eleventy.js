@@ -6,6 +6,17 @@ const { minify } = require("terser");
 
 module.exports = (eleventyConfig) => {
 
+  // String to slug
+  function slugify(str) {
+    str = str.toLowerCase();
+    str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Acentos
+    str = str.replace(/[^a-z0-9\s-]/g, ''); // Reemplaza caracteres no alfanuméricos por guiones
+    str = str.replace(/\s+/g, '-'); // Reemplaza espacios en blanco por guiones
+    str = str.replace(/-{2,}/g, '-'); // Elimina guiones consecutivos
+    str = str.replace(/^-+|-+$/g, ''); // Elimina guiones al comienzo y al final
+    return str;
+  }
+  
   // Clean up filter
   eleventyConfig.addFilter("cleanup", function(text) {
     return text.replace(/[\x00-\x1F]/g, " ").replace("  ", " ");
@@ -29,12 +40,7 @@ module.exports = (eleventyConfig) => {
   // Text to URL
   eleventyConfig.addFilter('ascii', (value) => {
     if (value != null)
-      return value
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/\s/g, '-')
-        .replace(/,/g, '')
-        .replace(/[\u0300-\u036f]/g, '');
+      return slugify(value);
     return null;
   });
   
@@ -83,16 +89,16 @@ module.exports = (eleventyConfig) => {
   });
 
   // Image optimizer shorcode
-	eleventyConfig.addShortcode("image", async function(src, alt, width, sizes, name) {
+	eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
     try {
-
-      // Gety metadata
+      // Get metadata
       let metadata = await Image(src, {
-        widths: [width],
+        widths: widths,
+        formats: ["webp", "jpeg"],
         urlPath: "/img/",
         outputDir: "./www/img/",
         filenameFormat: function (id, src, width, format, options) {
-          return `${name}-${width}w.${format}`;
+          return `${slugify(alt)}-${width}.${format}`;
         }
       });
 
@@ -100,8 +106,9 @@ module.exports = (eleventyConfig) => {
       let imageAttributes = {
         alt,
         sizes,
+        class: cls,
         loading: "lazy",
-        decoding: "async",
+        decoding: "async"
       };
 
       // Generate HTML
