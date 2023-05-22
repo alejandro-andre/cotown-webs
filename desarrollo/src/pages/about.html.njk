@@ -2,6 +2,9 @@
 name: about
 eleventyComputed:
     title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
     description: "{{langs[L].pages[name].description}}"
     permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
 layout: layouts/base.html
@@ -9,7 +12,7 @@ pagination:
     data: langs
     size: 1
     alias: L
-    addAllPagesToCollections: true   
+    addAllPagesToCollections: true
 
 date: Last Modified
 changefreq: "weekly"
@@ -22,9 +25,26 @@ tags: page
 
 <!-- Main -->
 <main class="home">
-  <div class="container-main">
+  <div class="container-main"> 
 
-  {% image "src/assets/img/madrid.png", "Madrid", 600, "(min-width: 30em) 50vw, 100vw", "Madrid" %}
+    <h1>Team</h1>
+    {% for t in team %}
+    <div>{{t | translate('Name', L)}}</div>
+    <div>{{t | translate('Position', L)}}</div>
+    <div>
+      {% image 
+          constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token, 
+          t.Name, t.Name|slug, "",
+          [200], ""
+      %}
+      {% image 
+          constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Second_image/contents?access_token=" + token, 
+          t.Name, t.Name|slug, "",
+          [200], ""
+      %}
+    </div>
+   <hr> 
+    {% endfor %}
 
   </div>
 </main>

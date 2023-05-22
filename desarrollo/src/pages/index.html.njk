@@ -2,6 +2,9 @@
 name: index
 eleventyComputed:
     title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}"
+      en: "{{langs.en.folder}}"
     description: "{{langs[L].pages[name].description}}"
     permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
 layout: layouts/base.html

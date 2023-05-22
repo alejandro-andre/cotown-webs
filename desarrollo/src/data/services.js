@@ -1,14 +1,18 @@
 module.exports = async () => {
 
   const QUERY  = `
-  { 
-    data: Geo_LocationList {
-      id
+  {
+    data: Building_Building_service_typeList (
+      orderBy: [{ attribute: Name }]
+      where: { Published: { EQ: true } }
+    ) { 
+      id 
       Name
       Name_en
-      Image: Media_locationListViaLocation_id {
-        id
-        Name
+      Description
+      Description_en
+      Icon {
+        name
       }
     }
   }`;

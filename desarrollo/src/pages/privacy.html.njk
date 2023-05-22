@@ -2,6 +2,9 @@
 name: privacy
 eleventyComputed:
     title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
     description: "{{langs[L].pages[name].description}}"
     permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
 layout: layouts/base.html
@@ -23,6 +26,8 @@ tags: page
 <!-- Main -->
 <main class="home">
   <div class="container-main">
+
+    {% literal texts, 'privacidad-text', L, true %}
 
   </div>
 </main>
