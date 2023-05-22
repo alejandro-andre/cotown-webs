@@ -109,6 +109,9 @@
   .slider-nav::after {
     margin-left: 6px;
   }
+  .slider-nav-next::after {
+    margin-left: 10px;
+  }
   
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
