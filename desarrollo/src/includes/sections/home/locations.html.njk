@@ -1,14 +1,16 @@
 <section class="locations">
-<h2 class="h2-where">{% literal texts, 'home-donde-quieres-vivir', L %}</h2>
+<div class="text-container">
+<h2 class="h2-where">{% literal texts, 'home-donde-quieres-vivirº', L %}</h2>
+</div>
 <div class="carousel">
 
     <div class="carousel-locations">
         <!--
-        {% for l in locations %}
+        {% for loc in locations %}
             <div class="img-container">
                 <div class="img mad">
                 </div>
-                <h3 class="img-title">{{l | translate('Name', L)}}</h3>
+                <h3 class="img-title">{{loc.Name}}</h3>
             </div>
         {% endfor %}
         -->

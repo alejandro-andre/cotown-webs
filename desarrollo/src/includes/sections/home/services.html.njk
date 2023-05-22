@@ -1,53 +1,35 @@
 <section class="servicios">
-
+<div class="text-container">
 <h2 class="title">Todos nuestros servicios</h2>
-
 <p class="subtitle">Descubre todo lo que tendrás en tu nuevo hogar</p>
-
+</div>
 <div class="servicios-container twelve columns">
-
     <div class="services-cards">
-
-        {% for s in services %}
-        <div class="card">
-            {% image 
-                constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token, 
-                s.Name, s.Name|slug, "service",
-                [100], ""
-            %}
-            <p class="bold">{{s | translate('Name', L)}}</p>
-            <p class="text">{{s | translate('Description', L)}}</p>
-        </div>
-        {% endfor %}
-
-        <!--
-        <div class="card">
-            <img class="service" alt="serice" src="/assets/images/icons-green/common-areas-cleaning.svg">
-            <p class="bold">SERVICIO DE LIMPIEZA</p>
-            <p class="text">Mary Poppins se largó por la ventana, pero tenemos reemplazo. Todo controlado, tu descansa.</p>
-        </div>
-        <div class="card">
-            <img class="service" alt="serice" src="/assets/images/icons-green/maintenance.svg">
-            <p class="bold">SERVICIO DE MANTENIMIENTO</p>
-            <p class="text">McGyver al lado de nuestro equipo de mantenimiento, era un aficionado.</p>
-        </div>
-        <div class="card">
-            <img class="service" alt="serice" src="/assets/images/icons-green/wifi.svg">
-            <p class="bold">WI-FI</p>
-            <p class="text">Obviamente que va incluido. Qué somos ¿torturadores?</p>
-        </div>
-        <div class="card">
-            <img class="service" alt="serice" src="/assets/images/icons-green/documents.svg">
-            <p class="bold">APOYO EN TRÁMITES ADMINISTRATIVOS</p>
-            <p class="text">Firmas, papeles, asesoría en empadronamiento… Respira, nosotros nos encargamos.</p>
-        </div>
-        <div class="card">
-            <img class="service" alt="serice" src="/assets/images/icons-green/phone.svg">
-            <p class="bold">24H DE ASISTENCIA EN EMERGENCIAS</p>
-            <p class="text">Estamos las 24 horas para cualquier urgencia. La invasión alienígena va aparte.</p>
-        </div>
-        -->
-        
+    <div class="card">
+        <img class="service" alt="serice" src="/assets/images/icons-green/common-areas-cleaning.svg">
+        <p class="bold">SERVICIO DE LIMPIEZA</p>
+        <p class="text">Mary Poppins se largó por la ventana, pero tenemos reemplazo. Todo controlado, tu descansa.</p>
+    </div>
+    <div class="card">
+        <img class="service" alt="serice" src="/assets/images/icons-green/maintenance.svg">
+        <p class="bold">SERVICIO DE MANTENIMIENTO</p>
+        <p class="text">McGyver al lado de nuestro equipo de mantenimiento, era un aficionado.</p>
+    </div>
+    <div class="card">
+        <img class="service" alt="serice" src="/assets/images/icons-green/wifi.svg">
+        <p class="bold">WI-FI</p>
+        <p class="text">Obviamente que va incluido. Qué somos ¿torturadores?</p>
+    </div>
+    <div class="card">
+        <img class="service" alt="serice" src="/assets/images/icons-green/documents.svg">
+        <p class="bold">APOYO EN TRÁMITES ADMINISTRATIVOS</p>
+        <p class="text">Firmas, papeles, asesoría en empadronamiento… Respira, nosotros nos encargamos.</p>
+    </div>
+    <div class="card">
+        <img class="service" alt="serice" src="/assets/images/icons-green/phone.svg">
+        <p class="bold">24H DE ASISTENCIA EN EMERGENCIAS</p>
+        <p class="text">Estamos las 24 horas para cualquier urgencia. La invasión alienígena va aparte.</p>
+    </div>              
     </div>
 </div>
 </section>
