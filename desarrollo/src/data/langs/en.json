@@ -5,7 +5,7 @@
         "index": { "url": "index", "title": "Home" },
         "locations": { "url": "locations", "title": "Locations" },
         "about": { "url": "about-us", "title": "About us" },
-        "advantages": { "url": "advantages", "title": "Advantajes" },
+        "advantages": { "url": "advantages", "title": "Advantages" },
         "faqs": { "url": "faqs",  "title": "FAQs" },
         "blog": {  "url": "blog", "title": "Blog" },
         "contact": {  "url": "contact", "title": "Contact" },
