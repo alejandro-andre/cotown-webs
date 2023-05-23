@@ -7,10 +7,10 @@
         "about": { "url": "conocenos", "title": "Conócenos" },
         "advantages": { "url": "ventajas", "title": "Ventajas" },
         "faqs": { "url": "preguntas-frecuentes",  "title": "Preguntas frequentes" },
-        "blog": {  "url": "blog", "title": "Blog" },
-        "contact": {  "url": "contacto", "title": "Contacto" },
-        "privacy": {  "url": "politica-privacidad", "title": "Política de privacidad" },
-        "legal": {  "url": "aviso-legal", "title": "Aviso legal" },
-        "data-security": {  "url": "seguridad-datos", "title": "Seguridad y datos" }
+        "blog": { "url": "blog", "title": "Blog" },
+        "contact": { "url": "contacto", "title": "Contacto" },
+        "privacy": { "url": "politica-privacidad", "title": "Política de privacidad" },
+        "legal": { "url": "aviso-legal", "title": "Aviso legal" },
+        "data-security": { "url": "seguridad-datos", "title": "Seguridad y datos" }
     }
 }
