@@ -9,7 +9,13 @@ module.exports = async () => {
       id
       Name
       Name_en
-      Image: Media_locationListViaLocation_id {
+      Description
+      Description_en
+      Details
+      Details_en
+      Image: Media_locationListViaLocation_id (
+        where: { Image_type: { EQ: principal } }
+      ) {
         id
         Name
       }

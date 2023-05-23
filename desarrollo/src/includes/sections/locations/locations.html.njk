@@ -1,7 +1,26 @@
  <section class="all-locations">
+
     <div class="texto-container">
         <h1 class="title-where">¿DÓNDE QUIERES VIVIR?</h1>
     </div>
+
+    {% for l in locations %}
+    <div class="location">
+        <div class="img">
+            {% image 
+                constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token, 
+                l.Name, l.Name|slug, "img-loc",
+                [800], ""
+            %}
+        </div>
+        <div class="text-content">
+            <h2 class="lotation-title">{{l | translate('Name', L)}}</h2>
+            <p class="body1">{{l | translate('Description', L)}}</p>
+        </div>        
+    </div>        
+    {% endfor %}
+
+    <!--
     <div class="location">
         <div class="img barcelona"><img src="./../../../..//src/assets/img/locations/barcelona.png" class="img-loc"></div>
         
@@ -24,4 +43,6 @@
             <p class="body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
         </div>
     </div>
+    -->
+    
 </section>
