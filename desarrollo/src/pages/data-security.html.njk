@@ -1,5 +1,5 @@
 ---
-name: cookies
+name: data-security
 eleventyComputed:
     title: "{{langs[L].pages[name].title}}"
     alt:
@@ -21,11 +21,33 @@ tags: page
 ---
 <!-- Additional CSS -->
 {% block css %}
+<link rel="stylesheet" href="/assets/css/others.css">
 {% endblock %}
 
 <!-- Main -->
 <main class="home">
   <div class="container-main">
-
+    <div class="h1">
+    </div>
+    <div class="p">
+    </div>
+    <table class="pure-table">
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Caducidad</th>
+            <th>Finalidad</th>
+            <th>Propias/terceros</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Analítica</td>
+            <td>Persistente</td>
+            <td>Para determinar nuevas sesiones/visitas</td>
+            <td>Tercero (Google analytics)</td>
+        </tr>        
+    </tbody>
+</table>
   </div>
 </main>
