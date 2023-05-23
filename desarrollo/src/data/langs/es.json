@@ -11,6 +11,6 @@
         "contact": {  "url": "contacto", "title": "Contacto" },
         "privacy": {  "url": "politica-privacidad", "title": "Política de privacidad" },
         "legal": {  "url": "aviso-legal", "title": "Aviso legal" },
-        "cookies": {  "url": "seguridad-datos", "title": "Seguridad y datos" }
+        "data-security": {  "url": "seguridad-datos", "title": "Seguridad y datos" }
     }
 }
