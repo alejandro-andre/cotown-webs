@@ -4,12 +4,25 @@
     <div class="turquoise-line pure-u-1 pure-u-lg-1-2">
 
         <div class="left-content 1-box">
+            {% for b in banners %}
+            {% if loop.index == 1 %}
+            <h1 class="spot">{{b | translate('Text', L)}}</h1>
+            <div class="know">
+                <a href="{{b.Link}}"><button class="btn-primary">{% literal texts, 'descubrir', L %}</button></a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <!--
+        <div class="left-content 1-box">
             <h1 class="spot">NUEVA APERTURA EN MADRID, ENTRA Y DESCÚBRELA</h1>
             <div class="know">
                 <button class="btn-primary">DESCUBRIR</button>
             </div>
         </div>
-
+        -->
+        
         <div class="right-content 1-box">
             <div class="pure-menu pure-menu-horizontal">
                 <ul class="pure-menu-list">
@@ -27,7 +40,7 @@
                                 <span class="select-value">Español (ES)</span>
                             </label>
                             <div data-toggle="collapsed" class="options">
-                                <a href ="{{alt.en}}"><div class="option">English (UK)</div></a>
+                                <a href="{{alt.en}}"><div class="option">English (UK)</div></a>
                             </div>
                             {% else%}
                             <label class="selected-option" for="options">
