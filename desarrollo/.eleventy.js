@@ -84,6 +84,7 @@ module.exports = (eleventyConfig) => {
         return literals[id][lang];
       }
     } catch {
+      console.log(`Mising text (${lang}) ${id}]`);
       return `<span style="color:red;">[text missing ${lang}: ${id}]</span>`
     }
   });
@@ -115,6 +116,7 @@ module.exports = (eleventyConfig) => {
       html = Image.generateHTML(metadata, imageAttributes);
       return html;
     } catch {
+      console.log(`Mising image ${name}]`);
       return `<span style="color:red;">[image missing ${name}]</span>`;
     }
 	});
