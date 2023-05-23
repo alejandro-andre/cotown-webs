@@ -10,10 +10,10 @@ module.exports = async () => {
   }`;
 
   // Constants
-  const K = require('./includes/constants');
+  const K = require('./constants');
 
   // Token
-  const token = require('./includes/token');
+  const token = require('./token');
   const auth = { authorization : await token() };
 
   // Query

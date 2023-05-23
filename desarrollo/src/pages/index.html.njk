@@ -1,0 +1,62 @@
+---
+name: index
+eleventyComputed:
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}"
+      en: "{{langs.en.folder}}"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+layout: layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true   
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<!-- Additional CSS -->
+{% block css %}
+<link rel="stylesheet" href="/assets/css/home.css">
+{% endblock %}
+
+<!-- Main -->
+<main class="home">
+  <div class="container-main">
+
+    <!-- Cabecera -->
+    {% include 'sections/home/main-header.html.njk' %}
+
+    <!-- ... -->
+    {% include 'sections/home/first-contain.html.njk' %}
+
+    <!-- Locations -->
+    {% include 'sections/home/locations.html.njk' %}
+
+    <!-- Pisos -->
+    {% include 'sections/home/flats.html.njk' %}
+
+    <!-- Servicios -->
+    {% include 'sections/home/services.html.njk' %}
+
+    <!-- Cotownity -->
+    {% include 'sections/home/cotownity.html.njk' %}
+
+    <!-- Partners -->
+    {% include 'sections/home/partners.html.njk' %}
+
+    <!-- Opinios -->
+    {% include 'sections/home/testimonial.html.njk' %}
+
+  </div>
+</main>
+
+<!-- Iconos chat -->
+<section class="iconos-chat">
+  <div class="spoty"><em class="icon-spoty"></em></div>
+  <div class="chat"><em class="icon-chat"></em></div>
+</section>

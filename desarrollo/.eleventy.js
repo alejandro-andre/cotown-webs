@@ -1,4 +1,4 @@
-const MarkdownIt = require("markdown-it");
+const MarkdownIt = require('markdown-it');
 const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
 const HtmlMin = require("html-minifier");
@@ -6,6 +6,17 @@ const { minify } = require("terser");
 
 module.exports = (eleventyConfig) => {
 
+  // String to slug
+  function slugify(str) {
+    str = str.toLowerCase();
+    str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Acentos
+    str = str.replace(/[^a-z0-9\s-]/g, ''); // Reemplaza caracteres no alfanuméricos por guiones
+    str = str.replace(/\s+/g, '-'); // Reemplaza espacios en blanco por guiones
+    str = str.replace(/-{2,}/g, '-'); // Elimina guiones consecutivos
+    str = str.replace(/^-+|-+$/g, ''); // Elimina guiones al comienzo y al final
+    return str;
+  }
+  
   // Clean up filter
   eleventyConfig.addFilter("cleanup", function(text) {
     return text.replace(/[\x00-\x1F]/g, " ").replace("  ", " ");
@@ -29,12 +40,7 @@ module.exports = (eleventyConfig) => {
   // Text to URL
   eleventyConfig.addFilter('ascii', (value) => {
     if (value != null)
-      return value
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/\s/g, '-')
-        .replace(/,/g, '')
-        .replace(/[\u0300-\u036f]/g, '');
+      return slugify(value);
     return null;
   });
   
@@ -56,6 +62,7 @@ module.exports = (eleventyConfig) => {
   
   // HTML minification
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    return content;
     if( outputPath.endsWith(".html") ) {
       let minified = HtmlMin.minify(content, {
         useShortDoctype: true,
@@ -68,25 +75,31 @@ module.exports = (eleventyConfig) => {
   });
 
   // Literals shortcode
-	eleventyConfig.addShortcode("literal", async function(literals, id, lang) {
+	eleventyConfig.addShortcode("literal", async function(literals, id, lang, md) {
     try {
-      return literals[id][lang];
+      if (md) {
+        const md = new MarkdownIt();
+        return md.render(literals[id][lang]);
+      } else {
+        return literals[id][lang];
+      }
     } catch {
+      console.log(`Mising text (${lang}) ${id}]`);
       return `<span style="color:red;">[text missing ${lang}: ${id}]</span>`
     }
   });
 
   // Image optimizer shorcode
-	eleventyConfig.addShortcode("image", async function(src, alt, sizes, name) {
+	eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
     try {
-
-      // Gety metadata
+      // Get metadata
       let metadata = await Image(src, {
-        widths: [300, 600],
+        widths: widths,
+        formats: ["webp", "jpeg"],
         urlPath: "/img/",
         outputDir: "./www/img/",
         filenameFormat: function (id, src, width, format, options) {
-          return `${name}-${width}w.${format}`;
+          return `${slugify(alt)}-${width}.${format}`;
         }
       });
 
@@ -94,20 +107,22 @@ module.exports = (eleventyConfig) => {
       let imageAttributes = {
         alt,
         sizes,
+        class: cls,
         loading: "lazy",
-        decoding: "async",
+        decoding: "async"
       };
 
       // Generate HTML
       html = Image.generateHTML(metadata, imageAttributes);
       return html;
     } catch {
+      console.log(`Mising image ${name}]`);
       return `<span style="color:red;">[image missing ${name}]</span>`;
     }
 	});
 
   // Copy folders
-  eleventyConfig.addPassthroughCopy({"src/assets": "."});
+  eleventyConfig.addPassthroughCopy({"src/assets": "assets"});
 
   // Config
   return {

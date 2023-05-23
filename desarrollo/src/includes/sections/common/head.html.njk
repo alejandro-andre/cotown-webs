@@ -1,40 +1,70 @@
 <!-- Google Tag Manager -->
 {% set script %}{% include "js/gtm.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
 
-<!-- Title -->
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <title>{{title}}</title>
-
-<!-- General -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="..."/>
+<meta name="description" content="{{description}}"/>
+<meta name="author" content="{{globals.author}}">
 <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
 
-<!-- Twitter -->
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Links and lang
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{% if page.url == '/index.html' %}
+<link rel="canonical" href="{{globals.url}}"/>
+<link rel="shortlink" href="{{globals.url}}"/>
+{% else %}
+<link rel="canonical" href="{{globals.url}}{{page.url}}"/>
+<link rel="shortlink" href="{{globals.url}}{{page.url}}"/>
+{% endif %}
+<link rel="alternate" hreflang="x-default" href="{{globals.url}}{{page.url}}" />
+<link rel="alternate" hreflang="es" href="{{globals.url}}{{alt.es}}" />
+<link rel="alternate" hreflang="en" href="{{globals.url}}{{alt.en}}" />
+
+<!-- Twitter
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{title}}" />
 <meta name="twitter:description" content="{{description}}" />
 
-<!-- Facebook -->
-<meta property="og:url" content="https://cotown.com{{langs[L].folder}}"/>
+<!-- Facebook
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta property="og:url" content="{{globals.url}}{{langs[L].folder}}"/>
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Cotown" />
 <meta property="og:title" content="{{title}}" />
 <meta property="og:description" content="{{description}}" />
 <meta property="og:locale" content="{{langs[L].locale}}" />
 <meta property="og:updated_time" content="{{page.date}}" />
-<meta property="og:image" content="..."/>
+<meta property="og:image" content="{{globals.image}}"/>
 
-<!-- Links -->
-<link rel="alternate" hreflang="es" href="https://cotown.com{{langs.es.folder}}" />
-<link rel="alternate" hreflang="en" href="https://cotown.com{{langs.en.folder}}" />
-<link rel="alternate" hreflang="x-default" href="https://cotown.com{{langs.es.folder}}" />
-<link rel="canonical" href="https://cotown.com{{langs[L].folder}}" />
-<link rel="shortlink" href="https://cotown.com{{langs[L].folder}}" />
-<link rel="shortcut icon" href="..." type="image/x-icon" />
+<!-- Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
 
-<!-- Styles -->
-{% set css %}{% include "css/skeleton.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
-{% set css %}{% include "css/base.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
+<link rel="stylesheet" href="/assets/css/normalize.css">
+<link rel="stylesheet" href="/assets/css/buttons.css">
+<link rel="stylesheet" href="/assets/css/variables.css">
+<link rel="stylesheet" href="/assets/css/global.css">
+
+<!-- Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="/assets/icons/style.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="{{globals.x_icon}}"/>

@@ -1,0 +1,225 @@
+@font-face {
+  font-family: 'cotown';
+  src:  url('fonts/cotown.eot?4pwoep');
+  src:  url('fonts/cotown.eot?4pwoep#iefix') format('embedded-opentype'),
+    url('fonts/cotown.ttf?4pwoep') format('truetype'),
+    url('fonts/cotown.woff?4pwoep') format('woff'),
+    url('fonts/cotown.svg?4pwoep#cotown') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'cotown' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ArrowLeft:before {
+  content: "\e901";
+}
+.icon-Arrow-Left:before {
+  content: "\e902";
+}
+.icon-ArrowLeftHover:before {
+  content: "\e903";
+}
+.icon-ArrowRight:before {
+  content: "\e904";
+}
+.icon-Arrow-Right:before {
+  content: "\e905";
+}
+.icon-ArrowRightHover:before {
+  content: "\e908";
+}
+.icon-Close:before {
+  content: "\e909";
+}
+.icon-CorcheteDown:before {
+  content: "\e90a";
+}
+.icon-CorcheteLeft:before {
+  content: "\e90b";
+}
+.icon-CorcheteRight:before {
+  content: "\e90c";
+}
+.icon-CorcheteUp:before {
+  content: "\e90d";
+}
+.icon-meh:before {
+  content: "\e90e";
+}
+.icon-picture:before {
+  content: "\e90f";
+}
+.icon-writte:before {
+  content: "\e910";
+}
+.icon-CheckboxOff:before {
+  content: "\e906";
+}
+.icon-CheckboxOn:before {
+  content: "\e907";
+}
+.icon-CloseRound:before {
+  content: "\e911";
+}
+.icon-FacebookPrimary:before {
+  content: "\e916";
+}
+.icon-FacebookSecondary:before {
+  content: "\e917";
+}
+.icon-InstagramPrimary:before {
+  content: "\e918";
+}
+.icon-InstagramSecondary:before {
+  content: "\e919";
+}
+.icon-Loading:before {
+  content: "\e91a";
+}
+.icon-Piso:before {
+  content: "\e91e";
+}
+.icon-Search:before {
+  content: "\e91f";
+}
+.icon-TiktokPrimary:before {
+  content: "\e920";
+}
+.icon-TiktokSecondary:before {
+  content: "\e921";
+}
+.icon-Trash:before {
+  content: "\e922";
+}
+.icon-User:before {
+  content: "\e923";
+}
+.icon-WhatsappPrimary:before {
+  content: "\e924";
+}
+.icon-WhatsappSecondary:before {
+  content: "\e925";
+}
+.icon-air-conditioner:before {
+  content: "\e927";
+}
+.icon-bathroom:before {
+  content: "\e92f";
+}
+.icon-bed:before {
+  content: "\e936";
+}
+.icon-coffee-room:before {
+  content: "\e93b";
+}
+.icon-common-areas-cleaning:before {
+  content: "\e940";
+}
+.icon-documents:before {
+  content: "\e946";
+}
+.icon-downstairs:before {
+  content: "\e94a";
+}
+.icon-elevator:before {
+  content: "\e94c";
+}
+.icon-extinguisher:before {
+  content: "\e951";
+}
+.icon-filters:before {
+  content: "\e953";
+}
+.icon-fridge:before {
+  content: "\e954";
+}
+.icon-gym:before {
+  content: "\e957";
+}
+.icon-heating:before {
+  content: "\e95d";
+}
+.icon-keys:before {
+  content: "\e967";
+}
+.icon-lift:before {
+  content: "\e96c";
+}
+.icon-luggage:before {
+  content: "\e970";
+}
+.icon-maintenance:before {
+  content: "\e972";
+}
+.icon-map:before {
+  content: "\e974";
+}
+.icon-no-bother:before {
+  content: "\e976";
+}
+.icon-oven:before {
+  content: "\e97a";
+}
+.icon-phone:before {
+  content: "\e981";
+}
+.icon-porter:before {
+  content: "\e986";
+}
+.icon-restaurant:before {
+  content: "\e98a";
+}
+.icon-smart-locker:before {
+  content: "\e990";
+}
+.icon-study-room:before {
+  content: "\e993";
+}
+.icon-terrace:before {
+  content: "\e99c";
+}
+.icon-tv:before {
+  content: "\e9a0";
+}
+.icon-upstairs:before {
+  content: "\e9a4";
+}
+.icon-washing-machine:before {
+  content: "\e9a6";
+}
+.icon-wc:before {
+  content: "\e9ae";
+}
+.icon-wifi:before {
+  content: "\e9b0";
+}
+.icon-log-in:before {
+  content: "\e900";
+}
+.icon-chat:before {
+  content: "\e912";
+}
+.icon-spoty:before {
+  content: "\e913";
+}
+.icon-star:before {
+  content: "\e914";
+}
+.icon-Linkedin:before {
+  content: "\e915";
+}
