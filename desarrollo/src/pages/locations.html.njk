@@ -21,11 +21,24 @@ tags: page
 ---
 <!-- Additional CSS -->
 {% block css %}
+<link rel="stylesheet" href="/assets/css/locations.css">
 {% endblock %}
 
 <!-- Main -->
-<main class="home">
+<main class="locations">
   <div class="container-main">
+
+    <!-- main -->
+    {% include 'sections/locations/main-locations.html.njk' %}
+    
+    <!-- services -->
+    {% include 'sections/locations/services.html.njk' %}
 
   </div>
 </main>
+
+<!-- Iconos chat -->
+<section class="iconos-chat">
+  <div class="spoty"><em class="icon-spoty"></em></div>
+  <div class="chat"><em class="icon-chat"></em></div>
+</section>

@@ -1,56 +1,79 @@
 <section class="locations">
-<h2 class="h2-where">{% literal texts, 'home-donde-quieres-vivir', L %}</h2>
+<div class="text-container">
+<h2 class="h2-where">{% literal texts, 'home-donde-quieres-vivirº', L %}</h2>
+</div>
 <div class="carousel">
 
-    <div class="carousel-locations">
-        <!--
-        {% for l in locations %}
+  <div class="swiffy-slider slider-item-show3 slider-item-show2-sm slider-item-reveal slider-item-ratio slider-item-ratio-16x9 slider-item-nosnap-touch slider-nav-visible slider-indicators-round slider-indicators-outside slider-nav-animation slider-item-first-visible">
+      <ul class="slider-container">
+      <!--              
+        {% for loc in locations %}
             <div class="img-container">
-                <div class="img mad">
+                <a href="#">
+                <div class="img-content">
+                <div class="img">
                 </div>
-                <h3 class="img-title">{{l | translate('Name', L)}}</h3>
+                <h3 class="img-title">{{loc.Name}}</h3>
+                </div>
+                </a>
             </div>
         {% endfor %}
         -->
         <div class="img-container">
-            <div class="img mad">
-            </div>
-            <h3 class="img-title">Madrid</h3>
+            <a href="barcelona.html">
+            <div class="img-content">             
+                <div class="img">
+                <img src="./../../../..//src/assets/img/barcelona.png" class="img barcelona">
+                </div>
+                <h3 class="img-title">BARCELONA</h3>                
+            </div>           
+            </a>
         </div>
         <div class="img-container">
-            <div class="img barc">
+            <a href="valencia.html">
+            <div class="img-content">
+                <div class="img">
+                <img src="./../../../..//src/assets/img/valencia.png" class="valencia">
+                </div>
+                <h3 class="img-title">VALENCIA</h3>
             </div>
-            <h3 class="img-title">BARCELONA</h3>
+            </a>          
         </div>
         <div class="img-container">
-            <div class="img val">
-            </div>
-            <h3 class="img-title">VALENCIA</h3>
+            <a href="bilbao.html">
+            <div class="img-content">
+                <div class="img">
+                <img src="./../../../..//src/assets/img/bilbao.png" class="bilbao">
+                </div>
+                <h3 class="img-title">BILBAO</h3>
+            </div>     
+            </a>       
         </div>
-        <div class="img-container">
-            <div class="img bilb">
+         <div class="img-container">
+            <a href="madrid.html">
+            <div class="img-content">
+                <div class="img">
+                <img src="./../../../..//src/assets/img/madrid.png" class="madrid">
+                </div>
+                <h3 class="img-title">MADRID</h3>
             </div>
-            <h3 class="img-title">BILBAO</h3>
+            </a>            
         </div>
-        <div class="img-container">
-            <div class="img mad">
-            </div>
-            <h3 class="img-title">Madrid</h3>
-        </div>
-    </div>
+      </ul>
+      <button type="button" class="slider-nav"></button>
+      <button type="button" class="slider-nav slider-nav-next"></button>
+      <ul class="slider-indicators">
+          <li class="dot active"></li>
+          <li class="dot"></li>
+          <li class="dot"</li>
+      </ul>
+  </div>
 
-    <ul class="arrows">
-        <li class="arrow-locations">
-            <em class="icon-CorcheteLeft center"></em>
-        </li>
-        <li class="arrow-locations">
-            <em class="icon-CorcheteRight center"></em>
-        </li>
-    </ul>
-    <div class="dots">
-        <div class="dot"></div>
-        <div class="dot active"></div>
-    </div>
+
+
+
+
+
 
 </div>
 </section>
