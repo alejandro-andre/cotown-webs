@@ -8,6 +8,7 @@
 
     {% for l in locations %}
     <div class="location">
+        <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
         <div class="img">
             {% image 
                 constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token, 
@@ -15,8 +16,11 @@
                 [800], ""
             %}
         </div>
+        </a>
         <div class="text-content">
+            <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
             <h2 class="lotation-title">{{l | translate('Name', L)}}</h2>
+            </a>
             <p class="body1">{{l | translate('Description', L)}}</p>
         </div>        
     </div>        
