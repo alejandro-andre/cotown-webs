@@ -1,7 +1,9 @@
  <section class="all-locations">
 
     <div class="texto-container">
-        <h1 class="title-where">¿DÓNDE QUIERES VIVIR?</h1>
+        <h1 class="title-where">
+            {% literal texts, 'home-donde-quieres-vivir-title', L %}
+        </h1>
     </div>
 
     {% for l in locations %}
