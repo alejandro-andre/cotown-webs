@@ -61,11 +61,12 @@
     <div class="footer-info pure-g">
 
         <div class="redes pure-u-2-5">
-            <em class="icon-WhatsappPrimary"></em>
-            <em class="icon-TiktokPrimary"></em>
-            <em class="icon-FacebookPrimary"></em><em class="icon-spoty"></em>
-            <em class="icon-InstagramPrimary"></em>
-            <em class="icon-Linkedin"></em>
+            <a href="{{globals.rrss.wh}}" rel="noopener" target="_blank"><em class="icon-WhatsappPrimary"></em></a>
+            <a href="{{globals.rrss.tk}}" rel="noopener" target="_blank"><em class="icon-TiktokPrimary"></em></a>
+            <a href="{{globals.rrss.fb}}" rel="noopener" target="_blank"><em class="icon-FacebookPrimary"></em></a>
+            <a href="{{globals.rrss.sp}}" rel="noopener" target="_blank"><em class="icon-spoty"></em></a>
+            <a href="{{globals.rrss.ig}}" rel="noopener" target="_blank"><em class="icon-InstagramPrimary"></em></a>
+            <a href="{{globals.rrss.in}}" rel="noopener" target="_blank"><em class="icon-Linkedin"></em></a>
         </div>
 
         <div class="info pure-u-3-5">
@@ -84,4 +85,4 @@
 
 <!-- JS -->
 {% set script %}{% include "js/app.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
-{% set script %}{% include "js/lang.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% set script %}{% include "js/dropdown.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
