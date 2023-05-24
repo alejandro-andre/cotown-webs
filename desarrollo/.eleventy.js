@@ -1,4 +1,5 @@
 const MarkdownIt = require('markdown-it');
+const MarkdownItAttrs = require('markdown-it-attrs');
 const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
 const HtmlMin = require("html-minifier");
@@ -33,7 +34,13 @@ module.exports = (eleventyConfig) => {
   
   // Markdown to HTML
   eleventyConfig.addFilter("markdown", (value) => {
-    const md = new MarkdownIt();
+    let options = {
+      html: true,
+      breaks: true,
+      linkify: true
+    };
+    const md = new MarkdownIt(options);
+    md.use(MarkdownItAttrs);
     return md.render(value);
   });
 
@@ -79,6 +86,7 @@ module.exports = (eleventyConfig) => {
     try {
       if (md) {
         const md = new MarkdownIt();
+        md.use(MarkdownItAttrs);
         return md.render(literals[id][lang]);
       } else {
         return literals[id][lang];
@@ -116,7 +124,7 @@ module.exports = (eleventyConfig) => {
       html = Image.generateHTML(metadata, imageAttributes);
       return html;
     } catch {
-      console.log(`Mising image ${name}]`);
+      console.log(`Mising image ${name} ${src}]`);
       return `<span style="color:red;">[image missing ${name}]</span>`;
     }
 	});
