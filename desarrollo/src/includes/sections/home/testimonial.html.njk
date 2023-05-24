@@ -11,35 +11,39 @@
 <div class="carousel-opinions">
     <div class="swiffy-slider slider-item-show3 slider-item-show2-sm slider-item-reveal slider-item-ratio slider-item-ratio-16x9 slider-item-nosnap-touch slider-nav-visible slider-indicators-round slider-indicators-outside slider-nav-animation slider-item-first-visible slider-item-snapstart">
         <ul class="slider-container">
-            <!--              
             {% for t in testimonials %}
-            <div class="card">
-                <div class="avatar">
-                {% image 
+            <li class="slide-visible">
+                <div class="slide-content">
+                <div class="card">
+                    <div class="avatar">
+                    {% image 
                     constants.SERVER + "/wopi/files/Marketing/Testimonials/" + t.id +"/Image/contents?access_token=" + token, 
                     t.Name, t.Name|slug, "img",
                     [100], ""
-                %}
+                    %}
+                    </div>
+                    <div class="opinion">
+                    <div class="title-info">
+                        <p class="name bold">{{t.Name}}</p>
+                        <p class="date">{{t.Date}}</p>
+                    </div>
+                    <h3 class="comillas">“</h3>
+                    <ul class="stars">
+                        {% for i in range(0, t.Stars) %}
+                        <li class="star"><em class="icon-star"></em></li>
+                        {% endfor %}
+                        {% for i in range(t.Stars, 5) %}
+                        <li class="star"><em class="icon-star no-active"></em></li>
+                        {% endfor %}
+                    </ul>
+                    </div>
+                    <p class="text">
+                    {{t | translate ('Text', L)}}
+                    </p>
                 </div>
-                <div class="opinion">
-                <div class="title-info">
-                    <p class="name bold">{{t.Name}}</p>
-                    <p class="date">{{t.Date}}</p>
                 </div>
-                <h3 class="comillas">“</h3>
-                <ul class="stars">
-                    {% for i in range(0, t.Stars) %}
-                    <li class="star"><em class="icon-star"></em></li>
-                    {% endfor %}
-                    {% for i in range(t.Stars, 5) %}
-                    <li class="star"><em class="icon-star no-active"></em></li>
-                    {% endfor %}
-                </ul>
-                </div>
-                <p class="text">{{t | translate ('Text', L)}}</p>
-            </div>
+            </li>
             {% endfor %}
-            -->
             <li class="slide-visible">
                 <div class="slide-content">
                 <div class="card">
@@ -124,7 +128,7 @@
                 </div>
                 </div>
             </li>
-             <li class="slide-visible">
+            <li class="slide-visible">
                 <div class="slide-content">
                 <div class="card">
                     <div class="avatar">
@@ -152,14 +156,17 @@
                 </div>
                 </div>
             </li>
+
         </ul>
+
         <button type="button" class="slider-nav"></button>
         <button type="button" class="slider-nav slider-nav-next"></button>
         <ul class="slider-indicators">
             <li class="dot active"></li>
             <li class="dot"></li>
-            <li class="dot"</li>
+            <li class="dot"></li>
         </ul>
+
     </div>
 </div>
 
