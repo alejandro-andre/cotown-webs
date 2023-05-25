@@ -6,13 +6,45 @@
 
 <!-- Main -->
 <main class="home">
-
-  <div class="container-main">
-    <h1>{{location | translate('Name', L)}}</h1>
-  </div>
-
-  <div id="map"></div>
-
+  <section class="location">
+    <div class="container-main">   
+      <section class="first-contain">         
+        <h1 >{{location | translate('Name', L)}}</h1>
+        <div id="video" class="video-loc">
+          <div class="video featured-bg-image">
+            <video playsinline="true" width="100%" style="object-fit: cover;" autoplay="true" muted="true" loop="true" preload="auto" controls="1">Sorry, your browser doesn't support embedded videos.<source type="video/mp4" src="https://cotown.com/wp-content/uploads/2022/11/pexels-lazar-krstić-10801859-online-video-cutter.com_.mp4"></video>
+          </div>
+          <div class="description">
+            <div class="text"> 
+              <p>
+                Barcelona se describe sola. Un lugar donde es posible tomar el sol en la playa de la Mar Bella y hacer una ruta de montaña en Collserola en menos de 20 minutos de distancia entre sí, o tomarse un “vermut” en la Plaça de la Virreina, <span>...</span>
+              </p>         
+              <div class="expansion">
+                <input type="checkbox" class="tab" id="tab1" tabindex="0"/>
+                <div class="content">
+                  <p>saltar al ritmo de cualquier artista en los mejores festivales de música o comprar una chaqueta vintage en el gótico mientras te comes un bocadillo de fuet y “pa amb tomàquet”.                
+                  Cosmopolita, tradicional, moderna, sorprendente, inclusiva… Mires como la mires, ha sido, es y será sin duda el lugar de los ciudadanos con suerte.
+                  Si ya lo decía Freddie Mercury… “Barcelona! How can I forget?”</p>
+                </div>
+                <label name="tab" for="tab1" tabindex="-1" class="tab_lab" role="tab">                
+                <span class="open-close-icon">
+                  <i class="icon-CorcheteDown"></i>
+                </span>                
+                <p>Leer más</>
+                </label>     
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pisos-slider">         
+        <h2>NUESTROS PISAZOS</h2>
+        <h2><span>EN BARCELONA</span></h2>
+    </seccion>
+    </div> 
+    
+    <div id="map"></div>
+  </section>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
