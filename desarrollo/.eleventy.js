@@ -85,7 +85,12 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addShortcode("literal", async function(literals, id, lang, md) {
     try {
       if (md) {
-        const md = new MarkdownIt();
+        let options = {
+          html: true,
+          breaks: true,
+          linkify: true
+        };    
+        const md = new MarkdownIt(options);
         md.use(MarkdownItAttrs);
         return md.render(literals[id][lang]);
       } else {
@@ -122,7 +127,7 @@ module.exports = (eleventyConfig) => {
 
       // Generate HTML
       html = Image.generateHTML(metadata, imageAttributes);
-      return html;
+      return html.replace("height", "h");
     } catch {
       console.log(`Mising image ${name} ${src}]`);
       return `<span style="color:red;">[image missing ${name}]</span>`;
