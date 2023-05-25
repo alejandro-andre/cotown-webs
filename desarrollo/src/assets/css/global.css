@@ -657,6 +657,7 @@ main .container-main section.form .form-container .campo input  {
     height: 40px;
     width: 100%;
     padding: 0;
+    margin-top: 6px;
     margin-bottom: 0.5em;
     color: var(--black);
     border: 0px solid transparent;
@@ -734,24 +735,28 @@ main .container-main section.form .form-container button.btn-secondary {
 
 
 /* ADVANTAGES PAGE */
-main.advantages .container-main .first-contain .title-big .h2-big, main.advantages .container-main .first-contain .title-big .h2-border {
-    line-height: 0.9em;
+main .container-main .first-contain .title-big .h2-big, main .container-main .first-contain .title-big .h2-border {
+    line-height: 0.9em;    
  }
-main.advantages .container-main .first-contain .title-big .h2-big {
+ main .container-main .first-contain .title-big .h2-border {
+    text-shadow: 2px 0 #00bfb2, -2px 0 #00bfb2, 0 2px #00bfb2, 0 -2px #00bfb2,
+    1px 1px #00bfb2, -1px -1px #00bfb2, 1px -1px #00bfb2, -1px 1px #00bfb2;
+ }
+main .container-main .first-contain .title-big .h2-big {
     margin: 0.3em auto 0;
 }
-main.advantages .container-main .first-contain .title-big .h2-border {
+main .container-main .first-contain .title-big .h2-border {
     margin: 0 auto 0.3em;
 }
-main.advantages .container-main .first-contain .title-big .text {
+main .container-main .first-contain .title-big .text {
     width: 100%;
     text-align: center;
     display: block;
 }
-main.advantages .container-main section.container-advantages {
+main .container-main section.container-advantages {
     padding: 2em 4em;
 }
-main.advantages .container-main section.container-advantages .grid {
+main .container-main section.container-advantages .grid {
     padding: 0 14%;
     max-width: 1280px;
     display: flex;
@@ -760,37 +765,37 @@ main.advantages .container-main section.container-advantages .grid {
     align-items: center;
     margin: 0 auto;
 }
-main.advantages .container-main section.container-advantages .grid .promo {
+main .container-main section.container-advantages .grid .promo {
     width: calc(25% - 0.8em);
     height: 200px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-color: var(--gray-background);
+    background-color: var(--grey-light-dark);
     margin: 0 0 2em 0.8em;
 }
-main.advantages .container-main section.container-advantages .grid .promo:hover {
+main .container-main section.container-advantages .grid .promo:hover {
     background-color: var(--turquoise-light);
 }
-main.advantages .container-main section.container-advantages .grid .promo .promo-contain {
+main .container-main section.container-advantages .grid .promo .promo-contain {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     padding: 0 1em;
 }
-main.advantages .container-main section.container-advantages .grid .promo .promo-contain .promo-title {
+main .container-main section.container-advantages .grid .promo .promo-contain .promo-title {
     font-size: 78px;
     color: var(--white);
     line-height: 1;
     margin: 0;
     opacity: 0;
 }
-main.advantages .container-main section.container-advantages .grid .promo:hover .promo-contain .promo-title  {
+main .container-main section.container-advantages .grid .promo:hover .promo-contain .promo-title  {
     opacity: 1;
 }
-main.advantages .container-main section.container-advantages .grid .promo .promo-contain .promo-text {
+main .container-main section.container-advantages .grid .promo .promo-contain .promo-text {
     font-size: 16px;
     font-weight: 700;
     color: var(--white);
@@ -798,13 +803,13 @@ main.advantages .container-main section.container-advantages .grid .promo .promo
     margin: 0;
     opacity: 0;
 }
-main.advantages .container-main section.container-advantages .grid .promo:hover .promo-contain .promo-text {
+main .container-main section.container-advantages .grid .promo:hover .promo-contain .promo-text {
     opacity: 1;
 }
-main.advantages .container-main section.container-advantages .grid.show {
+main .container-main section.container-advantages .grid.show {
     display: none;
 }
-main.advantages .container-main section.container-advantages .button-more {
+main .container-main section.container-advantages .button-more {
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
