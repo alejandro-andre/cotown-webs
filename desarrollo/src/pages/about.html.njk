@@ -27,29 +27,14 @@ tags: page
 <main class="home">
   <div class="container-main"> 
 
-    <h1>Team</h1>
-    {% for t in team %}
-    <div>{{t | translate('Name', L)}}</div>
-    <div>{{t | translate('Position', L)}}</div>
-    <div>
-      {% image 
-          constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token, 
-          t.Name, t.Name|slug, "",
-          [200], ""
-      %}
-      {% image 
-          constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Second_image/contents?access_token=" + token, 
-          t.Name, t.Name|slug, "",
-          [200], ""
-      %}
-    </div>
-   <hr> 
-    {% endfor %}
-
-
     <div class="container-main">
       <section class="first-contain">         
-        <div class="title-big">            
+
+        <div class="title-big">
+          {% literal texts, 'about-conocenos', L, true %}
+        </div>
+
+        <div class="title-big">
           <h2 class="h2-big">¡conócenos!</h2>
           <p class="text">
             Si has llegado hasta aquí es porque te mueres por saber quién está detrás de este proyecto. Pues sí, somos Cotown, un equipo con mucha ilusión e ideas de bombero dispuesto a crear nuevas tendencias, porque ¿para qué seguirlas? 
@@ -67,7 +52,9 @@ tags: page
             ¡Vamos!
           </p>
         </div>
+
       </section>
+
       <section class="banner">
         <h2>
           cuentas |
@@ -82,59 +69,71 @@ tags: page
           lorem ipsum dolor sit | 
         </h2>
       </section>
+
       <section class="members row">
         <div class="grid">
+
+          {% for i in range(10) %}
+          {% for t in team %}
           <div class="member">
-            <img class="img-grid" alt="member1" src="./assets/img/us.png">
+            {% image 
+              constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token, 
+              t.Name, t.Name|slug, "img-grid",
+              [300], ""
+            %}
+            <div class="data">
+              <p class="name">{{t.Name}}</p>
+              <p class="job">{{t | translate('Position', L)}}</p>
+            </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+
+          <!--
+          <div class="member">
+            <img class="img-grid" width="300"alt="member1" src="./assets/img/us.png">
             <div class="data">
               <p class="name">Nombre y apellido</p>
               <p class="job">Cargo en la empresa</p>
             </div>
           </div>
           <div class="member">
-            <img class="img-grid" alt="member1" src="./assets/img/us.png">
+            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
             <div class="data">
               <p class="name">Nombre y apellido</p>
               <p class="job">Cargo en la empresa</p>
             </div>
           </div>
           <div class="member">
-            <img class="img-grid" alt="member1" src="./assets/img/us.png">
+            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
             <div class="data">
               <p class="name">Nombre y apellido</p>
               <p class="job">Cargo en la empresa</p>
             </div>
           </div>
           <div class="member">
-            <img class="img-grid" alt="member1" src="./assets/img/us.png">
+            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
             <div class="data">
               <p class="name">Nombre y apellido</p>
               <p class="job">Cargo en la empresa</p>
             </div>
           </div>
           <div class="member">
-            <img class="img-grid" alt="member1" src="./assets/img/us.png">
+            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
             <div class="data">
               <p class="name">Nombre y apellido</p>
               <p class="job">Cargo en la empresa</p>
             </div>
           </div>
           <div class="member">
-            <img class="img-grid" alt="member1" src="./assets/img/us.png">
+            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
             <div class="data">
               <p class="name">Nombre y apellido</p>
               <p class="job">Cargo en la empresa</p>
             </div>
           </div>
           <div class="member">
-            <img class="img-grid" alt="member1" src="./assets/img/us.png">
-            <div class="data">
-              <p class="name">Nombre y apellido</p>
-              <p class="job">Cargo en la empresa</p>
-            </div>
-          </div>
-          <div class="member">
-            <img class="img-grid" alt="member1" src="./assets/img/us.png">
+            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
             <div class="data">
               <p class="name">Nombre y apellido</p>
               <p class="job">Cargo en la empresa</p>
@@ -143,24 +142,24 @@ tags: page
         </div>
         <div class="grid show">           
           <div class="member">
-            <img class="img-grid" alt="member1" src="./assets/img/us.png">
+            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
             <div class="data">
               <p class="name">Nombre y apellido</p>
               <p class="job">Cargo en la empresa</p>
             </div>
           </div>
           <div class="member">
-            <img class="img-grid" alt="member1" src="./assets/img/us.png">
+            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
             <div class="data">
               <p class="name">Nombre y apellido</p>
               <p class="job">Cargo en la empresa</p>
             </div>
           </div>
-        </div>
-        <div class="button-more">
-          <button class="more btn-secondary" click="showMore()">Ver más equipo</button>
+          -->
+          
         </div>
       </section>
+
       <section class="form row">
         <h2 class="title">            
           ¡ÚNETE AL EQUIPO COTOWN!
@@ -218,10 +217,6 @@ tags: page
         </div>
       </section>
     </div>
-      
-
-
-
 
   </div>
 </main>
