@@ -6,8 +6,10 @@
 
 <!-- Main -->
 <main class="home">
+
   <section class="location">
-    <div class="container-main">   
+    <div class="container-main">
+
       <section class="first-contain">         
         <h1 >{{location | translate('Name', L)}}</h1>
         <div id="video" class="video-loc">
@@ -37,33 +39,58 @@
           </div>
         </div>
       </section>
+
       <section class="pisos-slider">         
-        <h2>NUESTROS PISAZOS</h2>
-        <h2><span>EN BARCELONA</span></h2>
-    </seccion>
-    </div> 
-    
+        <h2>
+          {% literal texts, 'locations-nuestros-pisazos', L %}
+          {{location | translate ('Name', L)}}
+        </h2>
+      </seccion>
+
+    </div>    
+  </section>
+
+  <section class="location">
     <div id="map"></div>
   </section>
+
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
 <script>
+  // Map
   var map = L.map('map').setView([41.3933, 2.1377], 16);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     maxZoom: 18,
   }).addTo(map);
+
+  // Custom icon
+  var LeafIcon = L.Icon.extend({
+    options: {
+       iconSize:     [38, 44],
+       iconAnchor:   [19, 44],
+       popupAnchor:  [0, -50]
+    }
+  });
+  var icon = new LeafIcon({ iconUrl: '/assets/icons/marker.png' })
+
+  // Markers
   var markerArray = [];
   {%-for l in buildings-%}
   {%-if l.Name == location.Name-%}
   {%-for d in l.districts-%}
   {% for b in d.buildings-%}
-  markerArray.push(L.marker([{{b.Lat_lon.slice(1,-1).split(',')[0]}}, {{b.Lat_lon.slice(1,-1).split(',')[1]}}]).addTo(map));
+  var marker = L.marker([{{b.Lat_lon.slice(1,-1).split(',')[0]}}, {{b.Lat_lon.slice(1,-1).split(',')[1]}}], {icon: icon}).addTo(map);
+  marker.bindPopup("<p>{{b.Name}}</p><p>{{b.Address}}</p>");
+  markerArray.push(marker);
   {%-endfor-%}
   {%-endfor-%}
   {%-endif-%}
   {%-endfor-%}
+
+  // Fit map
   var group = L.featureGroup(markerArray).addTo(map);
   map.fitBounds(group.getBounds());
+
 </script>
