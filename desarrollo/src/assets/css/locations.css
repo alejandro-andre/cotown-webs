@@ -32,6 +32,10 @@
     width: 100%;
     min-height: 400px;
 }
+.locations .container-main .all-locations .location .text-content a {
+  color: var(--black);
+  text-decoration: none;
+}
 .locations .container-main .all-locations .location .text-content h2 {
     font-size: 78px;
     font-weight: 400;

@@ -76,14 +76,17 @@ tags: page
           {% for i in range(10) %}
           {% for t in team %}
           <div class="member">
-            {% image 
-              constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token, 
-              t.Name, t.Name|slug, "img-grid",
-              [300], ""
-            %}
-            <div class="data">
-              <p class="name">{{t.Name}}</p>
-              <p class="job">{{t | translate('Position', L)}}</p>
+            <div class="img-member">
+              {% image 
+                constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token, 
+                t.Name, t.Name|slug, "img-grid",
+                [300], ""
+              %}
+              
+              <div class="data">
+                <p class="name">{{t.Name}}</p>
+                <p class="job">{{t | translate('Position', L)}}</p>
+              </div>
             </div>
           </div>
           {% endfor %}
