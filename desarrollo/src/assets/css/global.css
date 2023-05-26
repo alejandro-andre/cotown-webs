@@ -221,6 +221,9 @@ main {
 .container-header.first .right-content {   
     width: fit-content;
 }
+.container-header button:hover {
+    cursor: pointer;
+}
 .container-header.first .right-content .pure-menu ul.pure-menu-list {
     display: flex;
     flex-flow: row nowrap;
@@ -240,6 +243,10 @@ main {
 }
 .icons-header .pure-menu-link {
     padding: 0 0.6em;
+}
+.pure-menu-link:hover {
+    cursor: pointer;
+    background-color: transparent;
 }
 .icons-header em {
     margin: auto 0 auto;
@@ -302,17 +309,23 @@ li .select-container .options .option:first-of-type {
 li .select-container .options .option.selected {
     font-weight: 700;
 }
-.private {
+.private-container .private  {
     display: flex;
-    
+    font-style: normal;   
     min-width: fit-content;
     width: min-content;    
     background-color: transparent;
     margin: 0 0.5em 0 0;
+    cursor: pointer;
 }
-.private p.private-area {
+.private-container .private p, .private-container .private em {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--white);
     margin: 0 0 auto 0.5em;
 }
+
 /* SECOND HEADER */
 .container-header.second {
     color: var(--white);
@@ -514,154 +527,23 @@ main .container-main .first-contain .title-big .h2-border {
     text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
     1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #fff;
 }
-main .container-main .first-contain .title-big .text {
+main .container-main .first-contain .title-big p {
     font-size: 30px;
     line-height: 36px;
     font-weight: 500;
     margin-bottom: 0.2em;
     text-align: center;
 }
-main .container-main .first-contain .title-big.home .text {
+main .container-main .first-contain .title-big.home p {
     font-size: 30px;
     line-height: 36px;
     font-weight: 500;
     margin-bottom: 0.5em;
     text-align: left;
 }
-main .container-main .first-contain .title-big .text .bold {
+main .container-main .first-contain .title-big p .bold {
     font-weight: 700;
 }
-
-/* _________________________ LOCATION _________________________ */
-
-main .location .container-main .first-contain {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 4em;
-}
-main .location .container-main .first-contain h1 {
-    width: 100%;
-    text-align: center;
-    font-size: 170px;
-    line-height: 1em;
-    padding: 0.2em 0 0;
-}
-main .location .container-main .first-contain .video-loc {
-    width: 100%;
-    position: relative;
-    min-height: fit-content;
-}
-
-main .location .container-main .first-contain .video-loc .description {
-    width: 50%;
-    min-height: fit-content;
-    background-color: var(--white);
-    position: relative;
-    top: -100px;
-    left: 100px;
-    padding: 1.5em 3.5em 1.5em 2em;
-}
-main .location .container-main .first-contain .video-loc .description .text {
-    font-size: 30px;
-    line-height: 150%;
-    font-weight: 500;
-    margin: 0;   
-}
-main .location .container-main .first-contain .video-loc .description p {
-    font-size: 30px;
-    line-height: 150%;
-    font-weight: 500;
-    margin: 0;
-}
-.expansion {
-    padding: 0;
-    position: relative;
-    height: fit-content;
-    width: 100%;
-}
-.content{
-    height: auto;
-    max-height: 0;
-    max-width: 100%;
-    position: relative;
-    top: -20px;
-    overflow: hidden;
-    transform: translateY(20px);
-    transition: all 180ms ease-in-out 0ms; 
-}
-input[class^="tab"]:checked ~ .content {
-    max-height: 360px;
-    height: fit-content;
-    transition: all 200ms ease-in-out 0ms;
-}
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    height: 0;
-    margin: 0;
-    padding: 0;
-}
-input[class^="tab"]{   
-    width: 300px;
-    height: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-input[class^="tab"]:hover{
-    cursor: pointer;
-}
-.open-close-icon {
-    margin-right: 20px;
-}
-.open-close-icon .icon-CorcheteDown {
-    transform:rotate(0deg);
-    transition: transform 150ms ease-in-out 0ms;
-}
-input[class^="tab"]:checked ~ .open-close-icon .icon-CorcheteDown {
-    transform: rotate(180deg);
-    transition: transform 150ms ease-in-out 0ms;
-}
-label[class^="tab"]{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: start;
-    align-items: center;  
-    width: 300px;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 34px;
-    margin-top: 20px;
-}
-label[class^="tab"] p {
-    text-decoration: underline;
-} 
-label[class^="tab"]:hover{
-    cursor: pointer;
-}
-
-.pisos-slider {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-.pisos-slider h2 {
-    text-align: center;
-    width: 100%;
-    margin: 0;
-}
-.pisos-slider h2 span {
-    font-weight: 300!important;
-}
-
-
-
-
 
 
 
@@ -720,6 +602,14 @@ main .container-main section.members .grid .member {
     align-items: center;
     margin: 1em 0;
 }
+main .container-main section.members .grid .member .img-member {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
 main .container-main section.members .grid .member .img-grid {
     width: 100%;
 }
@@ -733,18 +623,16 @@ main .container-main section.members .grid .member .data p.name {
     font-weight: 700;
     font-size: 30px;
     line-height: 34px;
-    display:flex;
-    text-align: center;;
-    padding: 0 2em;
-    margin: 0 0 .2em;
+    text-align: center;
+    margin: 0;
+    width: 100%;
 }
 main .container-main section.members .grid .member .data p.job {
     font-size: 22px;
     line-height: 28px;
-    display:flex;
-    text-align: center;;
-    padding: 0;
-    margin: 0 0 .2em;
+    text-align: center;
+    margin: 0;
+    width: 100%;
 }
 main .container-main section.members .grid.show {
     display: none;
@@ -767,7 +655,7 @@ main .container-main section.form {
 main .container-main section.form h2.title {
    text-align: center;
 }
-main .container-main section.form p.text {
+main .container-main section.form p {
     padding: 0 6em; 
 }
 main .container-main section.form .form-container {
@@ -857,7 +745,7 @@ main .container-main section.form .form-container .campo .select input.selected 
     width: 100%;
     opacity: 0;    
 }
-main .container-main section.form .form-container .text-ok {
+main .container-main section.form .form-container p {
     color: var(--turquoise-light);
     font-size: 16px;
 }
@@ -880,7 +768,7 @@ main .container-main .first-contain .title-big .h2-big {
 main .container-main .first-contain .title-big .h2-border {
     margin: 0 auto 0.3em;
 }
-main .container-main .first-contain .title-big .text {
+main .container-main .first-contain .title-big .p {
     width: 100%;
     text-align: center;
     display: block;
@@ -1189,7 +1077,7 @@ footer section.container-footer .footer-info .info {
         font-size: 2.5em;
         margin: 0 auto;
     }
-    main .container-main .first-contain .title-big .text {
+    main .container-main .first-contain .title-big p {
         font-size: 1em;
         line-height: 1.2;
         font-weight: 400;
@@ -1216,7 +1104,7 @@ footer section.container-footer .footer-info .info {
         font-size: 16px;
         line-height: 20px;
     }
-    main .container-main section.form p.text {
+    main .container-main section.form p {
         padding: 0 1em;
     }
     main .container-main section.form {

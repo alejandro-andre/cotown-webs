@@ -1,15 +1,15 @@
 <!-- Additional CSS -->
 {% block css %}
+<link rel="stylesheet" href="/assets/css/location.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9/dist/leaflet.css" />
+<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 <style>#map { height: 600px; }</style>
 {% endblock %}
 
 <!-- Main -->
 <main class="home">
-
   <section class="location">
-    <div class="container-main">
-
+    <div class="container-main">   
       <section class="first-contain">         
         <h1 >{{location | translate('Name', L)}}</h1>
         <div id="video" class="video-loc">
@@ -30,67 +30,220 @@
                 </div>
                 <label name="tab" for="tab1" tabindex="-1" class="tab_lab" role="tab">                
                 <span class="open-close-icon">
-                  <i class="icon-CorcheteDown"></i>
+                  <em class="icon-CorcheteDown"></em>
                 </span>                
-                <p>Leer más</>
+                <p>
+                <span class="more">Leer más</span>
+                </p>
+                <p>
+                <span class="less">Leer menos</span>
+                </p>
                 </label>     
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <section class="pisos-slider">         
-        <h2>
-          {% literal texts, 'locations-nuestros-pisazos', L %}
-          {{location | translate ('Name', L)}}
-        </h2>
+        <h2>NUESTROS PISAZOS<br>EN BARCELONA</h2>
+
+        <!-- <div class="swiffy-slider slider-item-show3 slider-item-reveal slider-item-nosnap-touch slider-nav-visible slider-indicators-round slider-indicators-outside slider-nav-animation slider-item-first-visible">
+          <ul class="slider-container py-4" id="slider2">
+            <li>
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-md-row">
+                        <div class="flex-grow-1">
+                            <strong>LeBron 18</strong>
+                            <p class="card-text">Basketball Shoes</p>
+                        </div>
+                        <div class="px-md-2">$200</div>
+                    </div>
+                </div>
+            </li>
+             <li>
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src=".//src/assets/img/pisos/napoles.png" class="card-img-top" loading="lazy" alt="napoles">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-md-row">
+                        <div class="flex-grow-1">
+                            <strong>LeBron 18</strong>
+                            <p class="card-text">Basketball Shoes</p>
+                        </div>
+                        <div class="px-md-2">$200</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src=".//src/assets/img/pisos/napoles.png" class="card-img-top" loading="lazy" alt="napoles">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-md-row">
+                        <div class="flex-grow-1">
+                            <strong>LeBron 18</strong>
+                            <p class="card-text">Basketball Shoes</p>
+                        </div>
+                        <div class="px-md-2">$200</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src=".//src/assets/img/pisos/napoles.png" class="card-img-top" loading="lazy" alt="napoles">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-md-row">
+                        <div class="flex-grow-1">
+                            <strong>LeBron 18</strong>
+                            <p class="card-text">Basketball Shoes</p>
+                        </div>
+                        <div class="px-md-2">$200</div>
+                    </div>
+                </div>
+            </li>
+          </ul>
+          <button type="button" class="slider-nav"></button>
+          <button type="button" class="slider-nav slider-nav-next"></button>
+          <ul class="slider-indicators">
+              <li class="dot active"></li>
+              <li class="dot"></li>
+              <li class="dot"</li>
+          </ul>
+        </div> -->
+
+
+        <div class="slider">
+         <div class="splide" aria-label="Splide" data-splide='{"type":"loop","perPage":3,"padding":20%,}'>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-md-row">
+                        <div class="flex-grow-1">
+                            <strong>LeBron 18</strong>
+                            <p class="card-text">Basketball Shoes</p>
+                        </div>
+                        <div class="px-md-2">$200</div>
+                    </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-md-row">
+                        <div class="flex-grow-1">
+                            <strong>LeBron 18</strong>
+                            <p class="card-text">Basketball Shoes</p>
+                        </div>
+                        <div class="px-md-2">$200</div>
+                    </div>
+                </div>              
+              </li>
+              <li class="splide__slide">
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-md-row">
+                        <div class="flex-grow-1">
+                            <strong>LeBron 18</strong>
+                            <p class="card-text">Basketball Shoes</p>
+                        </div>
+                        <div class="px-md-2">$200</div>
+                    </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-md-row">
+                        <div class="flex-grow-1">
+                            <strong>LeBron 18</strong>
+                            <p class="card-text">Basketball Shoes</p>
+                        </div>
+                        <div class="px-md-2">$200</div>
+                    </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-1x1">
+                        <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                    </div>
+                    <div class="card-body d-flex flex-column flex-md-row">
+                        <div class="flex-grow-1">
+                            <strong>LeBron 18</strong>
+                            <p class="card-text">Basketball Shoes</p>
+                        </div>
+                        <div class="px-md-2">$200</div>
+                    </div>
+                </div>
+              </li>
+            </ul>
+            <div class="splide__arrows splide__arrows--ltr">
+              <button type="button" class="slider-nav splide__arrow splide__arrow--prev"
+                type="button"
+                aria-label="Previous slide"
+                aria-controls="splide01-track">
+                HOLA
+                <em class="icon-CorcheteRight"></em>
+              </button>
+              <button type="button" class="slider-nav slider-nav-nextsplide__arrow--next"
+                type="button"
+                aria-label="Next slide"
+                aria-controls="splide01-track"> 
+                HOLA
+                 <em class="icon-CorcheteRight"></em
+              </button>
+            </div>
+          </div>
+        </div>
+
       </seccion>
+    </div> 
 
-    </div>    
+
+
+    
+    <!-- <div id="map"></div> -->
   </section>
-
-  <section class="location">
-    <div id="map"></div>
-  </section>
-
 </main>
 
+
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide' );
+    splide.mount();
+  } );
+</script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
 <script>
-  // Map
   var map = L.map('map').setView([41.3933, 2.1377], 16);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     maxZoom: 18,
   }).addTo(map);
-
-  // Custom icon
-  var LeafIcon = L.Icon.extend({
-    options: {
-       iconSize:     [38, 44],
-       iconAnchor:   [19, 44],
-       popupAnchor:  [0, -50]
-    }
-  });
-  var icon = new LeafIcon({ iconUrl: '/assets/icons/marker.png' })
-
-  // Markers
   var markerArray = [];
   {%-for l in buildings-%}
   {%-if l.Name == location.Name-%}
   {%-for d in l.districts-%}
   {% for b in d.buildings-%}
-  var marker = L.marker([{{b.Lat_lon.slice(1,-1).split(',')[0]}}, {{b.Lat_lon.slice(1,-1).split(',')[1]}}], {icon: icon}).addTo(map);
-  marker.bindPopup("<p>{{b.Name}}</p><p>{{b.Address}}</p>");
-  markerArray.push(marker);
+  markerArray.push(L.marker([{{b.Lat_lon.slice(1,-1).split(',')[0]}}, {{b.Lat_lon.slice(1,-1).split(',')[1]}}]).addTo(map));
   {%-endfor-%}
   {%-endfor-%}
   {%-endif-%}
   {%-endfor-%}
-
-  // Fit map
   var group = L.featureGroup(markerArray).addTo(map);
   map.fitBounds(group.getBounds());
-
 </script>
