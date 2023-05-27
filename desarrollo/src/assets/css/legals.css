@@ -17,9 +17,10 @@ main {
 }
 main .container-main {
     width: 60%;
-    display: flex;
+    /*display: flex;*/
     flex-flow: row wrap;
     justify-content: center;
+    text-align: justify;
     align-items: center;
 }
 main .container-main h1 {
@@ -39,7 +40,7 @@ main .container-main h2 {
     width: 100%;    
     margin: 1em 0; 
 }
-main .container-main p {
+main .container-main p, a {
     width: 100%;
     font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 22px;
