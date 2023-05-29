@@ -34,6 +34,7 @@ tags: page
           {% literal texts, 'about-conocenos', L, true %}
         </div>
 
+        <!--$$
         <div class="title-big">
           <h2 class="h2-big">¡conócenos!</h2>
           <p class="text">
@@ -52,6 +53,7 @@ tags: page
             ¡Vamos!
           </p>
         </div>
+        -->
 
       </section>
 
@@ -73,7 +75,6 @@ tags: page
       <section class="members row">
         <div class="grid">
 
-          {% for i in range(10) %}
           {% for t in team %}
           <div class="member">
             <div class="img-member">
@@ -90,9 +91,8 @@ tags: page
             </div>
           </div>
           {% endfor %}
-          {% endfor %}
 
-          <!--
+          <!--$$
           <div class="member">
             <img class="img-grid" width="300"alt="member1" src="./assets/img/us.png">
             <div class="data">
