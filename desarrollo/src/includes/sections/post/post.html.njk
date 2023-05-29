@@ -1,0 +1,18 @@
+<!-- Main -->
+<main class="home">
+  <div class="container-main">
+
+    {% image 
+        constants.SERVER + "/wopi/files/Marketing/Post/" + post.id +"/Image/contents?access_token=" + token, 
+        post.Title, post.Title, "img-loc",
+        [800], ""
+    %}
+    <h3>{{post | translate('Title', L)}}</h3>
+    <p>{{post.Publish_date}}</p>
+    {% for t in p.Tags %}
+    <p>{{t.Tag | translate('Name', L)}}</p>
+    {% endfor %}
+    <p>{{post | translate('Content', L) | markdown | safe }}</p>
+
+  </div>
+</main>

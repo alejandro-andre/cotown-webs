@@ -27,5 +27,16 @@ tags: page
 <main class="home">
   <div class="container-main">
 
+    <section>
+    {% for p in posts %}
+    <h3>{{p | translate('Title', L)}}</h3>
+    <p>{{p.Publish_date}}</p>
+    {% for t in p.Tags %}
+    <p>{{t.Tag | translate('Name', L)}}</p>
+    {% endfor %}
+    <a href="{{langs[L].folder}}/{{p | translate('Slug', L) | ascii}}.html">Link</a>
+    {% endfor %}
+    </section>
+
   </div>
 </main>

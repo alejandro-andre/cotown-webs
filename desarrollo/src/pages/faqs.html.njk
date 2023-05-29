@@ -26,6 +26,8 @@ tags: page
 <!-- Main -->
 <main class="home">
   <div class="container-main">
+
+    <!--$
     <section class="first-contain row">         
       <div class="title-big">            
         <h2 class="h2-big">FAQS</h2>
@@ -39,6 +41,17 @@ tags: page
           <span class="bold"> ¡Vamos!</span>
         </p>
       </div>
+    </section>
+    -->
+
+    <section>
+    {% for f in faqs %}
+    <h1>{{f | translate('Name', L) }}</h1>
+    {% for q in f.Questions %}
+    <h2>{{q | translate('Question', L)}}</h2>
+    <div>{{q | translate('Response', L) | markdown | safe }}</div>
+    {% endfor %}
+    {% endfor %}
     </section>
 
   </div>
