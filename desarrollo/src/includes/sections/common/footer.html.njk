@@ -10,7 +10,7 @@
           <span class="turquoise">C</span>OTOWN<span class="turquoise">.</span>
         </h1>          
         <div class="footer-info mobile">
-          <div class="twelve columns">
+          <div class="info">
             {% for o in offices %}
             {% if loop.index == 1 %}
             <p>{{o.Address}}</p>
@@ -53,7 +53,15 @@
             </ul>
           </div>
         </div>
-
+        <!-- Redes sociales -->
+        <div class="redes-mobile pure-u-1">
+          <a href="{{globals.rrss.wh}}" rel="noopener, noreferrer" target="_blank"><em class="icon-WhatsappPrimary"></em></a>
+          <a href="{{globals.rrss.tk}}" rel="noopener, noreferrer" target="_blank"><em class="icon-TiktokPrimary"></em></a>
+          <a href="{{globals.rrss.fb}}" rel="noopener, noreferrer" target="_blank"><em class="icon-FacebookPrimary"></em></a>
+          <a href="{{globals.rrss.sp}}" rel="noopener, noreferrer" target="_blank"><em class="icon-spoty"></em></a>
+          <a href="{{globals.rrss.ig}}" rel="noopener, noreferrer" target="_blank"><em class="icon-InstagramPrimary"></em></a>
+          <a href="{{globals.rrss.in}}" rel="noopener, noreferrer" target="_blank"><em class="icon-Linkedin"></em></a>
+        </div>
         <!-- Links movil -->
         <div class="mobile-listado">
           <ul>
@@ -73,7 +81,7 @@
 
   </div>
 
-  <div class="footer-info pure-g">
+  <div class="footer-info desktop pure-g">
 
     <!-- Redes sociales -->
     <div class="redes pure-u-2-5">
@@ -86,12 +94,12 @@
     </div>
 
     <!-- Headquarters -->
-    <div class="info pure-u-3-5">
+    <div class="info-desktop pure-u-3-5">
       {% for o in offices %}
       {% if loop.index == 1 %}
-      <p class="pure-u-1-5">{{o.Phones}}</p>
-      <p class="pure-u-1-5">{{o.Email}}</p>
-      <p class="pure-u-2-5">{{o.Address}}</p>
+      <p>{{o.Phones}}</p>
+      <p>{{o.Email}}</p>
+      <p>{{o.Address}}</p>
       {% endif %}
       {% endfor %}
     </div>
