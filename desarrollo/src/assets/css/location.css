@@ -145,7 +145,57 @@ input[class^="tab"]:checked ~ label span.less {
 .pisos-slider .slider .splide {
     visibility: visible;
 }
+.splide__slide {
+    background-color: var(--white-background);
+    max-width: 33%;
+    margin: 0 4em!important;
+}
+.splide__slide .ratio img {
+    vertical-align: bottom;
+    width: 100%;
+}
 
+.splide__slide h3 {
+    font-size: 78px;
+    text-align: left;
+    position: absolute;
+    top: 34%;
+    left: 7%;
+    color: var(--white);
+}
+.splide__slid .card {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-body {
+    padding: 0;
+    width: max-content;
+    padding: 0 2em 2em;
+}
+.types {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.room-type {
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.room-type h4, .room-type p {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
 .slider-nav::before {
     background-color: var(--turquoise-light);
     border-radius: 50%;
@@ -176,6 +226,9 @@ margin-left: 10px;
     height: 10px;
     border-radius: 50%;
 }
+
+
+
 
 #map {
     margin: 6em 0;
