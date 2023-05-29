@@ -1163,6 +1163,10 @@ footer section.container-footer .footer-info.mobile {
         padding: 2em;
         text-align: center;
     }
+    footer section.container-footer .contain {
+        padding: 0;
+        border-bottom: none;
+    }
     footer section.container-footer .contain .left h1.footer-logo {
         font-size: 40px!important;
         line-height: 1.2em;
