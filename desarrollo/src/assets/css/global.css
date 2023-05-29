@@ -518,9 +518,11 @@ main .container-main .first-contain .title-big {
     margin: 0 auto 2em;
 }
 main .container-main .first-contain .title-big .h2-big, main .container-main .first-contain .title-big .h2-border {
-   font-size: 120px;
-   line-height: 1em;
-   margin: 0.3em auto 0.1em;
+    width: 100%;
+    text-align: center;
+    font-size: 120px;
+    line-height: 1em;
+    margin: 0.3em auto 0.1em;
 }
 main .container-main .first-contain .title-big .h2-border {
     color: var(--white);
@@ -1157,6 +1159,10 @@ footer section.container-footer .footer-info.mobile {
         left: calc(100% - 164px)!important;
         font-size: 12px!important;
     }
+    main .container-main .first-contain .title-big .h2-big, main .container-main .first-contain .title-big .h2-border {
+        text-align: start;
+    }
+
 
     /* FOOTER TABLET Y MOBILE */
     footer section.container-footer {
