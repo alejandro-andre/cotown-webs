@@ -44,127 +44,14 @@
                 </div>
             </li>
             {% endfor %}
-            <li class="slide-visible">
-                <div class="slide-content">
-                <div class="card">
-                    <div class="avatar">
-                    <img class="img" alt="avatar" src="/assets/img/cotownity-big.png">
-                    </div>
-                    <div class="opinion">
-                    <div class="title-info">
-                        <p class="name bold">Siscu Bates1</p>
-                        <p class="date">DD/MM/AAAA</p>
-                    </div>
-                    <h3 class="comillas">“</h3>
-                    <ul class="stars">
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star no-active"></em></li>
-                    </ul>
-                    </div>
-                    <p class="text">
-                    Lorem ipsum dolor sit amet, coansectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                </div>
-            </li>
-            <li class="slide-visible">
-                <div class="slide-content">
-                <div class="card">
-                    <div class="avatar">
-                    <img class="img" alt="avatar" src="/assets/img/cotownity-big.png">
-                    </div>
-                    <div class="opinion">
-                    <div class="title-info">
-                        <p class="name bold">Siscu Bates1</p>
-                        <p class="date">DD/MM/AAAA</p>
-                    </div>
-                    <h3 class="comillas">“</h3>
-                    <ul class="stars">
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star no-active"></em></li>
-                    </ul>
-                    </div>
-                    <p class="text">
-                    Lorem ipsum dolor sit amet, coansectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                </div>
-            </li>
-            <li class="slide-visible">
-                <div class="slide-content">
-                <div class="card">
-                    <div class="avatar">
-                    <img class="img" alt="avatar" src="/assets/img/cotownity-big.png">
-                    </div>
-                    <div class="opinion">
-                    <div class="title-info">
-                        <p class="name bold">Siscu Bates1</p>
-                        <p class="date">DD/MM/AAAA</p>
-                    </div>
-                    <h3 class="comillas">“</h3>
-                    <ul class="stars">
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star no-active"></em></li>
-                    </ul>
-                    </div>
-                    <p class="text">
-                    Lorem ipsum dolor sit amet, coansectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                </div>
-            </li>
-            <li class="slide-visible">
-                <div class="slide-content">
-                <div class="card">
-                    <div class="avatar">
-                    <img class="img" alt="avatar" src="/assets/img/cotownity-big.png">
-                    </div>
-                    <div class="opinion">
-                    <div class="title-info">
-                        <p class="name bold">Siscu Bates1</p>
-                        <p class="date">DD/MM/AAAA</p>
-                    </div>
-                    <h3 class="comillas">“</h3>
-                    <ul class="stars">
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star"></em></li>
-                        <li class="star"><em class="icon-star no-active"></em></li>
-                    </ul>
-                    </div>
-                    <p class="text">
-                    Lorem ipsum dolor sit amet, coansectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                </div>
-            </li>
-
         </ul>
 
         <button type="button" class="slider-nav"></button>
         <button type="button" class="slider-nav slider-nav-next"></button>
         <ul class="slider-indicators">
-            <li class="dot active"></li>
-            <li class="dot"></li>
-            <li class="dot"></li>
+            {% for t in testimonials %}
+            <li class="dot{% if loop.index==1 %} active{% endif %}"></li>
+            {% endfor %}
         </ul>
 
     </div>

@@ -6,7 +6,7 @@
         "locations": { "url": "localizaciones", "title": "Localizaciones" },
         "about": { "url": "conocenos", "title": "Conócenos" },
         "advantages": { "url": "ventajas", "title": "Ventajas" },
-        "faqs": { "url": "preguntas-frecuentes",  "title": "Preguntas frequentes" },
+        "faqs": { "url": "preguntas-frecuentes",  "title": "FAQs" },
         "blog": { "url": "blog", "title": "Blog" },
         "contact": { "url": "contacto", "title": "Contacto" },
         "privacy": { "url": "politica-privacidad", "title": "Política de privacidad" },
