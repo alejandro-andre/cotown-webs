@@ -10,6 +10,7 @@ module.exports = async () => {
         Location
         Email
         Phone
+        Lat_lon
     }
   }`;
 
