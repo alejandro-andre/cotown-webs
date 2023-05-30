@@ -1,10 +1,10 @@
 <!-- Additional CSS -->
 {% block css %}
 <link rel="stylesheet" href="/assets/css/location.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <style>#map { width:100%; height: 600px; }</style>
+<link rel="stylesheet" href="/assets/css/splide.min.css" />
 {% endblock %}
 
 <!-- Main -->
@@ -41,146 +41,29 @@
 
       </section>
 
-      <section class="pisos-slider">         
+      <section class="pisos-slider pure-u-1">         
         <h2>NUESTROS PISAZOS<br>EN BARCELONA</h2>
 
-        <!-- <div class="swiffy-slider slider-item-show3 slider-item-reveal slider-item-nosnap-touch slider-nav-visible slider-indicators-round slider-indicators-outside slider-nav-animation slider-item-first-visible">
-          <ul class="slider-container py-4" id="slider2">
-            <li>
-                <div class="card shadow ">
-                    <div class="ratio">
-                        <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">                       
-                    </div>
-                    <div class="card-body d-flex flex-column flex-md-row">
-                        <div class="flex-grow-1">
-                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                        </div>
-                        <div class="types">
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/shared-room.png">
-                            <h4>HABITACIÓN CONPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/individual-room.png">
-                            <h4>HABITACIÓN INDIVIDUAL</h4>
-                            <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/llaves.png">
-                            <h4>APARTEMENTO CONPARTIDA</h4>  
-                            <button class="green-button">Ver más</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-             <li>
-                <div class="card shadow ">
-                    <div class="ratio">
-                        <img src=".//src/assets/img/pisos/napoles.png" class="card-img-top" loading="lazy" alt="napoles">
-                    </div>
-                    <div class="card-body d-flex flex-column flex-md-row">
-                        <div class="flex-grow-1">
-                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                        </div>
-                        <div class="types">
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/shared-room.png">
-                            <h4>HABITACIÓN CONPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/individual-room.png">
-                            <h4>HABITACIÓN INDIVIDUAL</h4>
-                            <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/llaves.png">
-                            <h4>APARTEMENTO CONPARTIDA</h4>  
-                            <button class="green-button">Ver más</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="card shadow ">
-                    <div class="ratio">
-                        <img src=".//src/assets/img/pisos/napoles.png" class="card-img-top" loading="lazy" alt="napoles">
-                    </div>
-                    <div class="card-body d-flex flex-column flex-md-row">
-                        <div class="flex-grow-1">
-                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                        </div>
-                        <div class="types">
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/shared-room.png">
-                            <h4>HABITACIÓN CONPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/individual-room.png">
-                            <h4>HABITACIÓN INDIVIDUAL</h4>
-                            <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/llaves.png">
-                            <h4>APARTEMENTO CONPARTIDA</h4>  
-                            <button class="green-button">Ver más</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="card shadow ">
-                    <div class="ratio">
-                        <img src=".//src/assets/img/pisos/napoles.png" class="card-img-top" loading="lazy" alt="napoles">
-                    </div>
-                   <div class="card-body d-flex flex-column flex-md-row">
-                        <div class="flex-grow-1">
-                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                        </div>
-                        <div class="types">
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/shared-room.png">
-                            <h4>HABITACIÓN CONPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/individual-room.png">
-                            <h4>HABITACIÓN INDIVIDUAL</h4>
-                            <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/llaves.png">
-                            <h4>APARTEMENTO CONPARTIDA</h4>  
-                            <button class="green-button">Ver más</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-          </ul>
-          <button type="button" class="slider-nav"></button>
-          <button type="button" class="slider-nav slider-nav-next"></button>
-          <ul class="slider-indicators">
-              <li class="dot active"></li>
-              <li class="dot"></li>
-              <li class="dot"</li>
-          </ul>
-        </div> -->
 
 
-        <div class="slider">
-         <div class="splide" aria-label="Splide" data-splide='{"type":"loop","perPage":3,"padding":20%,}'>
-          <div class="splide__track">
-            <ul class="splide__list">
+        <div class="carousel">
+        <div class="splide" aria-label="Slider" data-splide='{"type":"loop","perPage":3, "padding":"20%", "focus":"center"}' >            
+          <div class="splide__track">  
+            <div class="splide__arrows arrows">
+              <button type="button" class="arrow-nav splide__arrow splide__arrow--prev"
+                type="button"
+                aria-label="Previous slide"
+                aria-controls="splide01-track">                
+                <i class="icon-CorcheteLeft"></i>
+              </button>
+              <button type="button" class="arrow-nav splide__arrow splide__arrow--next"
+                type="button"
+                aria-label="Next slide"
+                aria-controls="splide01-track">                
+                <i class="icon-CorcheteRight"></i>
+              </button>
+            </div>          
+            <ul class="splide__list carousel-list">
               <li class="splide__slide">
                 <div class="card shadow ">
                     <div class="ratio">
@@ -336,27 +219,12 @@
                     </div>
                 </div>
               </li>
-            </ul>
-            <div class="splide__arrows splide__arrows--ltr">
-              <button type="button" class="slider-nav splide__arrow splide__arrow--prev"
-                type="button"
-                aria-label="Previous slide"
-                aria-controls="splide01-track">
-                HOLA
-                <em class="icon-CorcheteRight"></em>
-              </button>
-              <button type="button" class="slider-nav slider-nav-nextsplide__arrow--next"
-                type="button"
-                aria-label="Next slide"
-                aria-controls="splide01-track"> 
-                HOLA
-                 <em class="icon-CorcheteRight"></em
-              </button>
-            </div>
+            </ul>           
           </div>
         </div>
+         
 
-      </seccion>
+      </div>
     </div> 
     
     <div id="map"></div>
@@ -365,12 +233,6 @@
 </main>
 
 
-<script>
-  document.addEventListener( 'DOMContentLoaded', function() {
-    var splide = new Splide( '.splide' );
-    splide.mount();
-  } );
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
 {% set script %}
@@ -391,3 +253,9 @@ var group = L.featureGroup(markerArray).addTo(map);
 map.fitBounds(group.getBounds());
 {% endset %}
 <script>{{ script | jsmin | safe }}</script>
+<!-- SLIDER -->
+<script src="/includes/js/splide.min.js"></script>
+
+
+
+   

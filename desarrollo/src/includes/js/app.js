@@ -53,12 +53,5 @@ show.style.display = 'flex'
 
 
 
-new Splide( '.splide', {
-    arrowPath: 'm15.5 0.932-4.3 4.38...',
-    updateOnMove: true,
-    type        : 'loop',
-    perPage     : 3,
-    perMove     : 1,
-    focus       : 'center',
-  } ).mount();
+
 
