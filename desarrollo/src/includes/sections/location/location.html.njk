@@ -43,11 +43,8 @@
 
       <section class="pisos-slider pure-u-1">         
         <h2>NUESTROS PISAZOS<br>EN BARCELONA</h2>
-
-
-
         <div class="carousel">
-        <div class="splide" aria-label="Slider" data-splide='{"type":"loop","perPage":3, "padding":"20%", "focus":"center"}' >            
+        <div class="splide" id="slider" aria-label="Slider" data-splide='{"type":"loop","perPage":3, "padding":"20%", "focus":"center"}'>            
           <div class="splide__track">  
             <div class="splide__arrows arrows">
               <button type="button" class="arrow-nav splide__arrow splide__arrow--prev"
@@ -64,7 +61,7 @@
               </button>
             </div>          
             <ul class="splide__list carousel-list">
-              <li class="splide__slide">
+              <li class="splide__slide prueba1">
                 <div class="card shadow ">
                     <div class="ratio">
                       <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
@@ -95,7 +92,7 @@
                     </div>
                 </div>
               </li>
-              <li class="splide__slide">
+              <li class="splide__slide prueba2">
                 <div class="card shadow ">
                     <div class="ratio">
                         <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
@@ -126,7 +123,7 @@
                     </div>
                 </div>              
               </li>
-              <li class="splide__slide">
+              <li class="splide__slide prueba 3">
                 <div class="card shadow ">
                     <div class="ratio">
                         <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
@@ -135,6 +132,77 @@
                     <div class="card-body d-flex flex-column">
                         <div class="flex-grow-1">
                             <p>La definición de un ciudadano con suerte cobra sentido.</p>
+                        </div>
+                        <!-- CAROUSEL INTERNO -->
+                        <div class="carousel-mini">
+                          <div class="splide mini" id="sliderMini" aria-label="SliderMini">            
+                            <div class="splide__track">  
+                              <div class="splide__arrows arrows-mini">
+                                <button type="button" class="arrow-mini splide__arrow splide__arrow--prev"
+                                  type="button"
+                                  aria-label="Previous slide"
+                                  aria-controls="splide01-track">                
+                                  <i class="icon-CorcheteLeft"></i>
+                                </button>
+                                <button type="button" class="arrow-mini splide__arrow splide__arrow--next"
+                                  type="button"
+                                  aria-label="Next slide"
+                                  aria-controls="splide01-track">                
+                                  <i class="icon-CorcheteRight"></i>
+                                </button>
+                              </div>          
+                              <ul class="splide__list carousel-mini">
+                                <li class="splide__slide">
+                                  <div class="card shadow">
+                                    <div class="ratio carousel-ratio">
+                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="napoles">
+                                      <p>2 habitaciones con cama doble</p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="splide__slide">
+                                  <div class="card shadow">
+                                    <div class="ratio carousel-ratio">
+                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="napoles">
+                                      <p>2 habitaciones con cama doble</p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="splide__slide">
+                                  <div class="card shadow">
+                                    <div class="ratio carousel-ratio">
+                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="napoles">
+                                      <p>2 habitaciones con cama doble</p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="splide__slide">
+                                  <div class="card shadow">
+                                    <div class="ratio carousel-ratio">
+                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="napoles">
+                                      <p>2 habitaciones con cama doble</p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="splide__slide">
+                                  <div class="card shadow">
+                                    <div class="ratio carousel-ratio">
+                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="napoles">
+                                      <p>2 habitaciones con cama doble</p>
+                                    </div>
+                                  </div>
+                                </li> 
+                                <li class="splide__slide">
+                                  <div class="card shadow">
+                                    <div class="ratio carousel-ratio">
+                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="napoles">
+                                      <p>2 habitaciones con cama doble</p>
+                                    </div>
+                                  </div>
+                                </li> 
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                         <div class="types">
                           <div class="room-type">
@@ -255,7 +323,20 @@ map.fitBounds(group.getBounds());
 <script>{{ script | jsmin | safe }}</script>
 <!-- SLIDER -->
 <script src="/includes/js/splide.min.js"></script>
-
-
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '#splide' );
+    splide.mount();
+  } );
+</script>
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '#sliderMini',{
+      type   : 'loop',
+      perPage: 4,
+    } );
+    splide.mount();
+  } );
+</script>
 
    

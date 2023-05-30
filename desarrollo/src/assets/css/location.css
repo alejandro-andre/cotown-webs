@@ -158,7 +158,6 @@ input[class^="tab"]:checked ~ label span.less {
     vertical-align: bottom;
     width: 100%;
 }
-
 .splide__slide h3 {
     font-size: 78px;
     text-align: left;
@@ -177,9 +176,9 @@ input[class^="tab"]:checked ~ label span.less {
     padding: 0;
     width: max-content;
     padding: 0 0 2em;
-    /* max-width: 748px; */
 }
 .types {
+    width: fit-content;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -190,7 +189,7 @@ input[class^="tab"]:checked ~ label span.less {
     padding-left: 2em;
 }
 .room-type {
-    width: 30%;
+    width: 26%;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -204,6 +203,7 @@ input[class^="tab"]:checked ~ label span.less {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    padding: 0.5em 0;
     margin: 0;
 }
 .room-type h4 {
@@ -220,19 +220,72 @@ input[class^="tab"]:checked ~ label span.less {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    padding: 0 20%;
+    padding: 0.5em 0 0;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
     color: var(--turquoise-dark);
+    letter-spacing: 0.145em;
 }
-.splide__arrow.splide__arrow--prev {
-    left: 40%;
+.arrow-nav.splide__arrow {
+    height: 4em;
+    width: 4em;
+    background-color: var(--grey-background);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
-.splide__arrow.splide__arrow--next {
-    right: 40%;
+.arrow-nav.splide__arrow.splide__arrow--prev {
+    left: 39%;
+}
+.arrow-nav.splide__arrow.splide__arrow--next {
+    right: 39%;
+}
+.arrow-nav.splide__arrow.splide__arrow--prev i, .arrow-nav.splide__arrow.splide__arrow--next i {
+    font-size: 34px;
 }
 
+.carousel-mini {
+    /* width: 90%;
+    margin: 2em 5% 0; */
+    position: relative;
+}
+.splide.mini {
+    padding: 6%;
+}
+.carousel-mini.splide__list {
+    gap: 2em;
+    position: relative;
+    padding: 0 2em!important;
+}
+.splide__slide .ratio.carousel-ratio {
+    max-width: 120px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+.splide__slide .ratio.carousel-ratio img {
+    width: 40px;
+}
+.splide__slide .ratio.carousel-ratio p {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5em 0;
+    margin: 0;
+}
+.arrow-mini.splide__arrow--prev {
+    left: 0;
+}
+.arrow-mini.splide__arrow--next {
+    right: 0;
+}
+.arrow-mini.splide__arrow.splide__arrow--prev i, .arrow-mini.splide__arrow.splide__arrow--next i {
+    font-size: 20px;
+}
 
 #map {
     margin: 6em 0;
