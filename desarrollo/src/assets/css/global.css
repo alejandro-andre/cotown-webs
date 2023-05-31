@@ -181,7 +181,7 @@
         z-index: 1000;
     }
     main {
-        margin-top: 110px;
+        margin-top: 136px;
         overflow: hidden;
     }
     
@@ -198,16 +198,14 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 4em;
-        padding: 6px 0 8px;
+        height: 57px;
         gap: 2em;
     }
     .container-header.first .turquoise-line .left-content {  
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        align-items: center;  
-        min-width: fit-content;
-        width: min-content;
+        align-items: flex-start;  
         gap: 1em;
     }
     .container-header.first .left-content h1.spot {
@@ -217,23 +215,23 @@
         min-width: fit-content;
         width: fit-content;
         padding-top: 6px;
+        letter-spacing: 0.02em;
+        font-style: normal;
     }
     .container-header.first .right-content {   
         width: fit-content;
+        align-items: flex-end;  
     }
     .container-header button:hover {
         cursor: pointer;
     }
-    .container-header.first .right-content .pure-menu ul.pure-menu-list {
+    .container-header.first .turquoise-line .right-content .pure-menu ul.pure-menu-list {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;  
-        min-width: fit-content;
-        width: min-content;
-        gap: 2em;
+        justify-content: stretch;
+        align-items: center;
     }
-    .container-header.first .right-content .pure-menu .pure-menu-list .icons-header.pure-menu-item {
+    .container-header.first .turquoise-line .right-content .pure-menu .pure-menu-list .icons-header.pure-menu-item {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -362,16 +360,13 @@
         display: none;
     }
     .black-line .pure-menu.pure-menu-horizontal {
-        margin: 0 auto;
+        margin: 0;
     }
     .black-line .pure-menu.pure-menu-horizontal ul.pure-menu-list {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: flex-end;
-        align-items: center;  
-        min-width: fit-content;
-        width:100%;
-        gap: 1.5em;
+        justify-content: space-between;
+        align-items: center;
     }
     .black-line .pure-menu.pure-menu-horizontal ul li {
         display: inline;
@@ -415,6 +410,7 @@
         height: 0px;
         position: fixed;
         top: 36px;
+        z-index: 2000;
     }
     .black-line .pure-menu.pure-menu-horizontal ul li #list a {
         display: inline-block;
@@ -469,7 +465,7 @@
     li .locations-container label.locations-label .loc a {    
         font-size: 25px;
         line-height: 1.1em;
-        font-weight: 700;
+        font-weight: 600;
         padding-left:0.5em;
     }
     li .locations-container label.locations-label em {
@@ -913,13 +909,14 @@
     
     }
     @media only screen and (min-width: 1024px) {
-        .container-header.second .black-line.custom-wrapper {
+        .container-header.second .black-line.custom-wrapper {            
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
             padding: 0.2em 4em;
             width: 100%;
+            height: 80px;
         }
         .black-line .booking, .black-line .lang, .black-line .black-line em.icon-Piso {
             display: none;
@@ -964,7 +961,7 @@
             gap: 0.5em;
         }
         .container-header.first .right-content .pure-menu ul.pure-menu-list {
-            gap: 0;
+            gap: 0.5em;
         }
         .black-line .pure-menu.pure-menu-horizontalul li {
             margin: 0 0.5em 0 0.5em;   
@@ -1101,30 +1098,34 @@
             width:100%;
             gap: .5em;
         }
-    
-    
-        /* ICONOS CHAT */
-        .iconos-chat {
-            padding: 0.5em 2em 0.5em 0;
-            gap: 0;
-        }
-        .iconos-chat .spoty {
-            display: none;
-        }
-        main .container-main .first-contain .title-big {
-            padding: 2em 1.5em;
-            text-align: center;
-        }
-        main .container-main .first-contain .title-big .h2-big, main .container-main .first-contain .title-big .h2-border {
-            font-size: 2.5em;
-            margin: 0 auto;
-        }
-        main .container-main .first-contain .title-big p {
-            font-size: 1em;
-            line-height: 1.2;
-            font-weight: 400;
-            margin: 0.5em 0 0;
-        }
+    /* ICONOS CHAT */
+    section.iconos-chat {
+        padding: 0.5em 9em 0.5em 0;
+        text-align: right;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 4em;
+    }
+    section.iconos-chat div {
+        background-color: var(--turquoise-light);
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    section.iconos-chat div em {
+        color: var(--white);
+        font-size: 32px;
+    }
+
     
     /* __________________________ OTHER PAGES ___________________________*/
     /* ABOUT PAGE */
