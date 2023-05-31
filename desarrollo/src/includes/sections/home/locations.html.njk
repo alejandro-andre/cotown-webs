@@ -1,93 +1,41 @@
 <section class="locations">
-<div class="text-container">
-<h2 class="h2-where">{% literal texts, 'home-donde-quieres-vivir-title', L %}</h2>
-</div>
-<div class="carousel">
 
-  <div class="swiffy-slider slider-item-show3 slider-item-show2-sm slider-item-reveal slider-item-ratio slider-item-ratio-16x9 slider-item-nosnap-touch slider-nav-visible slider-indicators-round slider-indicators-outside slider-nav-animation slider-item-first-visible">
-
-    <ul class="slider-container">
-      {% for l in locations %}
-      <div class="img-container">
-        <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
-        <div class="img-content">
-          <div class="img">
-          {% image 
-            constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token, 
-            l.Name, l.Name|slug, "img",
-            [800], ""
-          %}
-          </div>
-          <h3 class="img-title">{{l.Name}}</h3>
-        </div>
-        </a>
-      </div>
-      {% endfor %}
-    </ul>
-
-    <button type="button" class="slider-nav"></button>
-    <button type="button" class="slider-nav slider-nav-next"></button>
-
-    <ul class="slider-indicators">
-      {% for l in locations %}
-      <li class="dot {%if loop.index == 1%}active{%endif%}"></li>
-      {% endfor %}
-    </ul>
-
+  <div class="text-container">
+    <h2 class="h2-where">{% literal texts, 'home-donde-quieres-vivir-title', L %}</h2>
   </div>
-  
-  <div class="swiffy-slider slider-item-show3 slider-item-show2-sm slider-item-reveal slider-item-ratio slider-item-ratio-16x9 slider-item-nosnap-touch slider-nav-visible slider-indicators-round slider-indicators-outside slider-nav-animation slider-item-first-visible">
 
-    <ul class="slider-container">
-      <div class="img-container">
-          <a href="barcelona.html">
-          <div class="img-content">             
-              <div class="img">
-              <img src=".//src/assets/img/barcelona.png" class="img barcelona">
-              </div>
-              <h3 class="img-title">BARCELONA</h3>                
-          </div>           
-          </a>
-      </div>
-      <div class="img-container">
-          <a href="valencia.html">
-          <div class="img-content">
-              <div class="img">
-              <img src=".//src/assets/img/valencia.png" class="valencia">
-              </div>
-              <h3 class="img-title">VALENCIA</h3>
-          </div>
-          </a>          
-      </div>
-      <div class="img-container">
-          <a href="bilbao.html">
-          <div class="img-content">
-              <div class="img">
-              <img src=".//src/assets/img/bilbao.png" class="bilbao">
-              </div>
-              <h3 class="img-title">BILBAO</h3>
-          </div>     
-          </a>       
-      </div>
+  <div class="carousel">
+    <div class="swiffy-slider slider-item-show3 slider-item-show2-sm slider-item-reveal slider-item-ratio slider-item-ratio-16x9 slider-item-nosnap-touch slider-nav-visible slider-indicators-round slider-indicators-outside slider-nav-animation slider-item-first-visible">
+
+      <ul class="slider-container">
+        {% for l in locations %}
         <div class="img-container">
-          <a href="madrid.html">
+          <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
           <div class="img-content">
-              <div class="img">
-              <img src=".//src/assets/img/madrid.png" class="madrid">
-              </div>
-              <h3 class="img-title">MADRID</h3>
+            <div class="img">
+            {% image 
+              constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token, 
+              l.Name, l.Name|slug, "img",
+              [800], ""
+            %}
+            </div>
+            <h3 class="img-title">{{l.Name}}</h3>
           </div>
-          </a>            
-      </div>
-    </ul>
-    <button type="button" class="slider-nav"></button>
-    <button type="button" class="slider-nav slider-nav-next"></button>
-    <ul class="slider-indicators">
-        <li class="dot active"></li>
-        <li class="dot"></li>
-        <li class="dot"></li>
-    </ul>
+          </a>
+        </div>
+        {% endfor %}
+      </ul>
 
+      <button type="button" class="slider-nav"></button>
+      <button type="button" class="slider-nav slider-nav-next"></button>
+
+      <ul class="slider-indicators">
+        {% for l in locations %}
+        <li class="dot {%if loop.index == 1%}active{%endif%}"></li>
+        {% endfor %}
+      </ul>
+
+    </div>
   </div>
-</div>
+
 </section>
