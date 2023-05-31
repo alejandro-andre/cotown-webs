@@ -342,16 +342,16 @@ section.necesidades .grid .necesidad .p-text p {
     line-height: 150%;
     margin: 0;
 }
-@media only screen and (min-width: 1024px) and (max-width: 1665px){
+@media only screen and (min-width: 1024px) and (max-width: 1279.9px){
     section.necesidades {
         padding: 0 2em;
     }
     section.necesidades .grid {
-        padding: 0 0 0 5em;
+        padding: 0;
     }
     section.necesidades .contain .title h2 {
-        width: 70%;
-        padding: 0 0 0 1em;
+        width: 86%;
+        padding: 0;
     }
 }
 
