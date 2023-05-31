@@ -324,8 +324,7 @@ section.necesidades .grid {
     align-items: flex-start;
     padding: 0 0 0 10em;
 }
-section.necesidades .grid .necesidad {
-}
+
 section.necesidades .grid .necesidad img {
     width: 75px;
     padding: 1em 0 .5em;
@@ -342,4 +341,19 @@ section.necesidades .grid .necesidad .p-text p {
     font-size: 22px;
     line-height: 150%;
     margin: 0;
+}
+
+@media only screen and (max-width: 1023.9px) {    
+    section.necesidades .grid {
+        align-items: center;
+        padding: 0;
+    }
+
+    section.necesidades .contain .title h2 {
+        width: 100%;
+        padding: 0;
+    }
+    section.necesidades .contain .text p {
+        width: 100%;
+    }
 }
