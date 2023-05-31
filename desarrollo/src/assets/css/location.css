@@ -152,7 +152,7 @@ input[class^="tab"]:checked ~ label span.less {
 }
 .splide__slide {
     background-color: var(--white-background);
-    /* max-width: 748px; */
+    max-width: 748px;
 }
 .splide__slide .ratio img {
     vertical-align: bottom;
@@ -162,7 +162,7 @@ input[class^="tab"]:checked ~ label span.less {
     font-size: 78px;
     text-align: left;
     position: absolute;
-    bottom: 38%;
+    top: 35%;
     left: 7%;
     color: var(--white);
 }
@@ -178,6 +178,7 @@ input[class^="tab"]:checked ~ label span.less {
     padding: 0 0 2em;
 }
 .types {
+    max-width: 748px;
     width: fit-content;
     display: flex;
     flex-flow: row wrap;
@@ -227,6 +228,10 @@ input[class^="tab"]:checked ~ label span.less {
     color: var(--turquoise-dark);
     letter-spacing: 0.145em;
 }
+.room-type button.green-button {
+
+}
+
 .arrow-nav.splide__arrow {
     height: 4em;
     width: 4em;
@@ -244,9 +249,8 @@ input[class^="tab"]:checked ~ label span.less {
 }
 
 .carousel-mini {
-    /* width: 90%;
-    margin: 2em 5% 0; */
     position: relative;
+    max-width: 748px;
 }
 .splide.mini {
     padding: 6%;
@@ -289,4 +293,53 @@ input[class^="tab"]:checked ~ label span.less {
 
 #map {
     margin: 6em 0;
+}
+
+section.necesidades {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 4em;
+    margin: 0 0 6em;
+}
+section.necesidades .contain {
+    display: flex;
+    flex-flow: row wrap;    
+}
+section.necesidades .contain .title h2 {
+    width: 60%;
+    padding: 0 2em 0 2em;
+}
+section.necesidades .contain .text p {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 150%;
+    width: 80%;
+}
+section.necesidades .grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 0 0 10em;
+}
+section.necesidades .grid .necesidad {
+}
+section.necesidades .grid .necesidad img {
+    width: 75px;
+    padding: 1em 0 .5em;
+}
+section.necesidades .grid .necesidad .p-title p {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 150%;
+    margin: 0;
+}
+
+section.necesidades .grid .necesidad .p-text p {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 150%;
+    margin: 0;
 }
