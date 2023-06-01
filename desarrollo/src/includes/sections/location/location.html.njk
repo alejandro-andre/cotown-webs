@@ -31,8 +31,8 @@
                 </div>
                 <label name="tab" for="tab1" tabindex="-1" class="tab_lab" role="tab">
                   <span class="open-close-icon"><em class="icon-CorcheteDown"></em></span>
-                  <p><span class="more">Leer más</span></p>
-                  <p><span class="less">Leer menos</span></p>
+                  <p class="more"><span class="more">Leer más</span></p>
+                  <p class="less"><span class="less">Leer menos</span></p>
                 </label>
               </div>
           </div>
@@ -43,256 +43,299 @@
 
       <section class="pisos-slider pure-u-1">         
         <h2>NUESTROS PISAZOS<br>EN BARCELONA</h2>
-        <div class="carousel">
-        <div class="splide" id="slider" aria-label="Slider" data-splide='{"type":"loop","perPage":3, "padding":"20%", "focus":"center"}'>            
-          <div class="splide__track">  
-            <div class="splide__arrows arrows">
-              <button type="button" class="arrow-nav splide__arrow splide__arrow--prev"
-                type="button"
-                aria-label="Previous slide"
-                aria-controls="splide01-track">                
-                <i class="icon-CorcheteLeft"></i>
-              </button>
-              <button type="button" class="arrow-nav splide__arrow splide__arrow--next"
-                type="button"
-                aria-label="Next slide"
-                aria-controls="splide01-track">                
-                <i class="icon-CorcheteRight"></i>
-              </button>
-            </div>          
-            <ul class="splide__list carousel-list">
-              <li class="splide__slide prueba1">
-                <div class="card shadow ">
-                    <div class="ratio">
-                      <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
-                      <h3>NÀPOLES</h3>
-                    </div>
-                   <div class="card-body d-flex flex-column flex-md-row">
-                        <div class="flex-grow-1">
-                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                        </div>
-                        <div class="types">
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/shared-room.png">
-                            <h4>HABITACIÓN CONPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/individual-room.png">
-                            <h4>HABITACIÓN INDIVIDUAL</h4>
-                            <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/llaves.png">
-                            <h4>APARTEMENTO CONPARTIDA</h4>  
-                            <button class="btn-secondary green-button">Ver más</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-              </li>
-              <li class="splide__slide prueba2">
-                <div class="card shadow ">
-                    <div class="ratio">
+        <div class="carousel desktop">
+          <div class="splide" id="slider" aria-label="Slider" data-splide='{"type":"loop","perPage":3, "padding":"20%", "focus":"center"}'>            
+            <div class="splide__track">  
+              <div class="splide__arrows arrows">
+                <button type="button" class="arrow-nav splide__arrow splide__arrow--prev"
+                  type="button"
+                  aria-label="Previous slide"
+                  aria-controls="splide01-track">                
+                  <i class="icon-CorcheteLeft"></i>
+                </button>
+                <button type="button" class="arrow-nav splide__arrow splide__arrow--next"
+                  type="button"
+                  aria-label="Next slide"
+                  aria-controls="splide01-track">                
+                  <i class="icon-CorcheteRight"></i>
+                </button>
+              </div>          
+              <ul class="splide__list carousel-list">
+                <li class="splide__slide prueba1">
+                  <div class="card shadow ">
+                      <div class="ratio">
                         <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
                         <h3>NÀPOLES</h3>
-                    </div>
-                   <div class="card-body d-flex flex-column flex-md-row">
-                        <div class="flex-grow-1">
-                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                        </div>
-                        <div class="types">
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/shared-room.png">
-                            <h4>HABITACIÓN CONPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                            
+                      </div>
+                    <div class="card-body d-flex flex-column flex-md-row">
+                          <div class="flex-grow-1">
+                              <p>La definición de un ciudadano con suerte cobra sentido.</p>
                           </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/individual-room.png">
-                            <h4>HABITACIÓN INDIVIDUAL</h4>
-                            <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/llaves.png">
-                            <h4>APARTEMENTO CONPARTIDA</h4>  
-                            <button class="btn-secondary green-button">Ver más</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>              
-              </li>
-              <li class="splide__slide prueba 3">
-                <div class="card shadow ">
-                    <div class="ratio">
-                        <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
-                        <h3>NÀPOLES</h3>
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <div class="flex-grow-1">
-                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                        </div>
-                        <!-- CAROUSEL INTERNO -->
-                        <div class="carousel-mini">
-                          <div class="splide mini" id="sliderMini" aria-label="SliderMini">            
-                            <div class="splide__track">  
-                              <div class="splide__arrows arrows-mini">
-                                <button type="button" class="arrow-mini splide__arrow splide__arrow--prev"
-                                  type="button"
-                                  aria-label="Previous slide"
-                                  aria-controls="splide01-track">                
-                                  <i class="icon-CorcheteLeft"></i>
-                                </button>
-                                <button type="button" class="arrow-mini splide__arrow splide__arrow--next"
-                                  type="button"
-                                  aria-label="Next slide"
-                                  aria-controls="splide01-track">                
-                                  <i class="icon-CorcheteRight"></i>
-                                </button>
-                              </div>          
-                              <ul class="splide__list carousel-mini">
-                                <li class="splide__slide">
-                                  <div class="card shadow">
-                                    <div class="ratio carousel-ratio">
-                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                                      <p>2 habitaciones con cama doble</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li class="splide__slide">
-                                  <div class="card shadow">
-                                    <div class="ratio carousel-ratio">
-                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                                      <p>2 habitaciones con cama doble</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li class="splide__slide">
-                                  <div class="card shadow">
-                                    <div class="ratio carousel-ratio">
-                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                                      <p>2 habitaciones con cama doble</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li class="splide__slide">
-                                  <div class="card shadow">
-                                    <div class="ratio carousel-ratio">
-                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                                      <p>2 habitaciones con cama doble</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li class="splide__slide">
-                                  <div class="card shadow">
-                                    <div class="ratio carousel-ratio">
-                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                                      <p>2 habitaciones con cama doble</p>
-                                    </div>
-                                  </div>
-                                </li> 
-                                <li class="splide__slide">
-                                  <div class="card shadow">
-                                    <div class="ratio carousel-ratio">
-                                      <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                                      <p>2 habitaciones con cama doble</p>
-                                    </div>
-                                  </div>
-                                </li> 
-                              </ul>
+                          <div class="types">
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/shared-room.png">
+                              <h4>HABITACIÓN CONPARTIDA</h4>
+                              <p>Desde XXX€/mes</p>                            
+                            </div>
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/individual-room.png">
+                              <h4>HABITACIÓN INDIVIDUAL</h4>
+                              <p>Desde XXX€/mes</p>
+                              <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
+                            </div>
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/llaves.png">
+                              <h4>APARTEMENTO CONPARTIDA</h4>  
+                              <button class="btn-secondary green-button">Ver más</button>
                             </div>
                           </div>
-                        </div>
-                        <div class="types">
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/shared-room.png">
-                            <h4>HABITACIÓN CONPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/individual-room.png">
-                            <h4>HABITACIÓN INDIVIDUAL</h4>
-                            <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
-                          </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/llaves.png">
-                            <h4>APARTEMENTO CONPARTIDA</h4>  
-                            <button class="btn-secondary green-button">Ver más</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="card shadow ">
-                    <div class="ratio">
-                        <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
-                        <h3>NÀPOLES</h3>
-                    </div>
+                      </div>
+                  </div>
+                </li>
+                <li class="splide__slide prueba2">
+                  <div class="card shadow ">
+                      <div class="ratio">
+                          <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                          <h3>NÀPOLES</h3>
+                      </div>
                     <div class="card-body d-flex flex-column flex-md-row">
-                        <div class="flex-grow-1">
-                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                        </div>
-                        <div class="types">
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/shared-room.png">
-                            <h4>HABITACIÓN CONPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                            
+                          <div class="flex-grow-1">
+                              <p>La definición de un ciudadano con suerte cobra sentido.</p>
                           </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/individual-room.png">
-                            <h4>HABITACIÓN INDIVIDUAL</h4>
-                            <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
+                          <div class="types">
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/shared-room.png">
+                              <h4>HABITACIÓN CONPARTIDA</h4>
+                              <p>Desde XXX€/mes</p>                            
+                            </div>
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/individual-room.png">
+                              <h4>HABITACIÓN INDIVIDUAL</h4>
+                              <p>Desde XXX€/mes</p>
+                              <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
+                            </div>
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/llaves.png">
+                              <h4>APARTEMENTO CONPARTIDA</h4>  
+                              <button class="btn-secondary green-button">Ver más</button>
+                            </div>
                           </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/llaves.png">
-                            <h4>APARTEMENTO CONPARTIDA</h4>  
-                            <button class="btn-secondary green-button">Ver más</button>
+                      </div>
+                  </div>              
+                </li>
+                <li class="splide__slide prueba 3">
+                  <div class="card shadow ">
+                      <div class="ratio">
+                          <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                          <h3>NÀPOLES</h3>
+                      </div>
+                      <div class="card-body d-flex flex-column">
+                          <div class="flex-grow-1">
+                              <p>La definición de un ciudadano con suerte cobra sentido.</p>
                           </div>
-                        </div>
-                    </div>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="card shadow ">
-                    <div class="ratio">
-                        <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
-                        <h3>NÀPOLES</h3>
-                    </div>
-                    <div class="card-body d-flex flex-column flex-md-row">
-                        <div class="flex-grow-1">
-                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                        </div>
-                        <div class="types">
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/shared-room.png">
-                            <h4>HABITACIÓN CONPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                            
+                          <!-- CAROUSEL INTERNO -->
+                          <div class="carousel-mini">
+                            <div class="splide mini" id="sliderMini" aria-label="SliderMini">            
+                              <div class="splide__track">  
+                                <div class="splide__arrows arrows-mini">
+                                  <button type="button" class="arrow-mini splide__arrow splide__arrow--prev"
+                                    type="button"
+                                    aria-label="Previous slide"
+                                    aria-controls="splide01-track">                
+                                    <i class="icon-CorcheteLeft"></i>
+                                  </button>
+                                  <button type="button" class="arrow-mini splide__arrow splide__arrow--next"
+                                    type="button"
+                                    aria-label="Next slide"
+                                    aria-controls="splide01-track">                
+                                    <i class="icon-CorcheteRight"></i>
+                                  </button>
+                                </div>          
+                                <ul class="splide__list carousel-mini">
+                                  <li class="splide__slide">
+                                    <div class="card shadow">
+                                      <div class="ratio carousel-ratio">
+                                        <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
+                                        <p>2 habitaciones con cama doble</p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="splide__slide">
+                                    <div class="card shadow">
+                                      <div class="ratio carousel-ratio">
+                                        <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
+                                        <p>2 habitaciones con cama doble</p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="splide__slide">
+                                    <div class="card shadow">
+                                      <div class="ratio carousel-ratio">
+                                        <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
+                                        <p>2 habitaciones con cama doble</p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="splide__slide">
+                                    <div class="card shadow">
+                                      <div class="ratio carousel-ratio">
+                                        <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
+                                        <p>2 habitaciones con cama doble</p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="splide__slide">
+                                    <div class="card shadow">
+                                      <div class="ratio carousel-ratio">
+                                        <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
+                                        <p>2 habitaciones con cama doble</p>
+                                      </div>
+                                    </div>
+                                  </li> 
+                                  <li class="splide__slide">
+                                    <div class="card shadow">
+                                      <div class="ratio carousel-ratio">
+                                        <img src=".//src/assets/images/icons-green/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
+                                        <p>2 habitaciones con cama doble</p>
+                                      </div>
+                                    </div>
+                                  </li> 
+                                </ul>
+                              </div>
+                            </div>
                           </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/individual-room.png">
-                            <h4>HABITACIÓN INDIVIDUAL</h4>
-                            <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
+                          <div class="types">
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/shared-room.png">
+                              <h4>HABITACIÓN CONPARTIDA</h4>
+                              <p>Desde XXX€/mes</p>                            
+                            </div>
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/individual-room.png">
+                              <h4>HABITACIÓN INDIVIDUAL</h4>
+                              <p>Desde XXX€/mes</p>
+                              <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
+                            </div>
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/llaves.png">
+                              <h4>APARTEMENTO CONPARTIDA</h4>  
+                              <button class="btn-secondary green-button">Ver más</button>
+                            </div>
                           </div>
-                          <div class="room-type">
-                            <img src=".//src/assets/images/icons-green/llaves.png">
-                            <h4>APARTEMENTO CONPARTIDA</h4>  
-                            <button class="btn-secondary green-button">Ver más</button>
+                      </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="card shadow ">
+                      <div class="ratio">
+                          <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                          <h3>NÀPOLES</h3>
+                      </div>
+                      <div class="card-body d-flex flex-column flex-md-row">
+                          <div class="flex-grow-1">
+                              <p>La definición de un ciudadano con suerte cobra sentido.</p>
                           </div>
-                        </div>
-                    </div>
-                </div>
-              </li>
-            </ul>           
-          </div>
+                          <div class="types">
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/shared-room.png">
+                              <h4>HABITACIÓN CONPARTIDA</h4>
+                              <p>Desde XXX€/mes</p>                            
+                            </div>
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/individual-room.png">
+                              <h4>HABITACIÓN INDIVIDUAL</h4>
+                              <p>Desde XXX€/mes</p>
+                              <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
+                            </div>
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/llaves.png">
+                              <h4>APARTEMENTO CONPARTIDA</h4>  
+                              <button class="btn-secondary green-button">Ver más</button>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="card shadow ">
+                      <div class="ratio">
+                          <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                          <h3>NÀPOLES</h3>
+                      </div>
+                      <div class="card-body d-flex flex-column flex-md-row">
+                          <div class="flex-grow-1">
+                              <p>La definición de un ciudadano con suerte cobra sentido.</p>
+                          </div>
+                          <div class="types">
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/shared-room.png">
+                              <h4>HABITACIÓN CONPARTIDA</h4>
+                              <p>Desde XXX€/mes</p>                            
+                            </div>
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/individual-room.png">
+                              <h4>HABITACIÓN INDIVIDUAL</h4>
+                              <p>Desde XXX€/mes</p>
+                              <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
+                            </div>
+                            <div class="room-type">
+                              <img src=".//src/assets/images/icons-green/llaves.png">
+                              <h4>APARTEMENTO CONPARTIDA</h4>  
+                              <button class="btn-secondary green-button">Ver más</button>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </li>
+              </ul>           
+            </div>
+          </div>         
         </div>
-         
-
-      </div>
+        <div class="pisos mobile pure-u-1">
+          <div class="piso-contain pure-u-1">
+            <div class="piso-main pure-u-1">
+              <div class="img pure-u-1">
+                <img src=".//src/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+              </div>
+              <div class="piso pure-u-1">
+                <h3>NÀPOLES</h3>                
+                <div class="options pure-u-1">                 
+                  <div class="type pure-u-22-24">
+                    <div class="img-container pure-u-2-24">
+                      <img src=".//src/assets/images/icons-green/individual-room.png">
+                    </div>
+                    <div class="h4-container pure-u-12-24">
+                      <h4 class="pure-u-1-3">HABITACIÓN INDIVIDUAL</h4>
+                    </div>
+                    <div class="p-container pure-u-8-24">
+                      <span>Desde<span>
+                      <p>XXX€/mes</p>
+                    </div>
+                  </div>
+                  <div class="type pure-u-22-24">
+                    <div class="img-container pure-u-2-24">
+                      <img src=".//src/assets/images/icons-green/shared-room.png">
+                    </div>
+                    <div class="h4-container pure-u-12-24">
+                    <h4>HABITACIÓN CONPARTIDA</h4>
+                    </div>
+                    <div class="p-container pure-u-8-24">
+                    <span>Desde<span>
+                    <p>XXX€/mes</p>
+                    </div>                        
+                  </div>
+                  <div class="type pure-u-22-24">
+                    <div class="img-container pure-u-1-3">
+                      <img src=".//src/assets/images/icons-green/llaves.png">
+                    </div>
+                    <h4>APARTEMENTO CONPARTIDA</h4>  
+                    <button class="btn-secondary green-button">Ver más</button>
+                  </div>
+                </div>                
+              </div>
+          </div>
+          
+        </div>
     </div> 
     
     <div id="map"></div>
