@@ -15,36 +15,39 @@
 }
 .locations .container-main .all-locations .location {    
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: stretch;
     align-items: flex-start;
     max-width: 1248px;
     width: 100%;
-    background-color: var(--white-background);
+    background-color: var(--white);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     margin: 0 0 3.5em;
 }
-.locations .container-main .all-locations .location div.img {
-    width: 100%;
-    min-height: 400px;
+.locations .container-main .all-locations .location .img {
+  overflow: hidden;
 }
 .locations .container-main .all-locations .location div.img .img-loc {
-    width: 100%;
-    min-height: 400px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: relative;
+  left: -33%;
 }
 .locations .container-main .all-locations .location .text-content a {
   color: var(--black);
   text-decoration: none;
 }
 .locations .container-main .all-locations .location .text-content h2 {
-    font-size: 78px;
     font-weight: 400;
+    font-size: 64px;
     line-height: 110%;
     margin: 1.5rem 4rem 1rem;
 }
 .locations .container-main .all-locations .location .text-content p {
-    font-size: 30px;
-    line-height: 1.5em;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
     margin: 0 4rem 1rem;
 }
 
@@ -148,6 +151,40 @@ section.iconos-chat div em {
 
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
+  .locations .container-main .all-locations {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 2em;
+}
+  .locations .container-main .all-locations h1.title-where {
+    font-size: 40px;
+    line-height: 100%;
+  }
+  .locations .container-main .all-locations .location {    
+    flex-flow: row wrap;
+  }
+  .locations .container-main .all-locations .location div.img .img-loc {
+    left: 0;
+    width: 100%;
+  }
+  .locations .container-main .all-locations .location .text-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .locations .container-main .all-locations .location .text-content h2 {
+    font-size: 32px!important;
+    line-height: 110%;    
+  }
+  .locations .container-main .all-locations .location .text-content p {
+  font-size: 14px;
+  line-height: 150%;
+  }
+  
+
+
+
 
 }
 

@@ -108,16 +108,16 @@ label[class^="tab"] p {
 label[class^="tab"]:hover{
     cursor: pointer;
 }
-label span.more {
+label p.more {
     display: block;
 }
-input[class^="tab"]:checked ~ label p span.more {
+input[class^="tab"]:checked ~ label p.more {
     display: none;
 }
-label span.less {
+label p.less  {
     display: none;
 }
-input[class^="tab"]:checked ~ label span.less {
+input[class^="tab"]:checked ~ label p.less {
     display: block;
 }
 
@@ -342,30 +342,132 @@ section.necesidades .grid .necesidad .p-text p {
     line-height: 150%;
     margin: 0;
 }
-@media only screen and (min-width: 1024px) and (max-width: 1279.9px){
+@media only screen and (min-width: 1024px) and (max-width: 1400px){
     section.necesidades {
         padding: 0 2em;
     }
-    section.necesidades .grid {
-        padding: 0;
+    section.necesidades .grid.pure-u-lg-3-4 {
+        padding: 0 1em;
+        width: 90%;
     }
     section.necesidades .contain .title h2 {
         width: 86%;
         padding: 0;
     }
 }
-
+@media only screen and (min-width: 1024px) { 
+    .pisos.mobile {
+        display: none;
+    }
+}
 @media only screen and (max-width: 1023.9px) {    
+    main .location .container-main .first-contain h1 {
+        font-size: 68px;
+        line-height: 100%;
+        margin:0.2em 0;
+    }
+    main .location .container-main .first-contain .video-loc .description {
+        width: 100%;
+        min-height: fit-content;
+        background-color: var(--white);
+        top: 0;
+        left: 0;
+        padding: 1em 0;
+    }
+    main .location .container-main .first-contain .video-loc .description p {        
+        font-size: 14px;
+        line-height: 150%;
+        margin: 0;
+        padding: 0 2em;
+    }
+    .expansion {
+        padding: 0;
+        position: relative;
+        height: fit-content;
+        width: 100%;
+    }
+    .content{
+        height: auto;
+        max-height: 0;
+        max-width: 100%;
+        position: relative;
+        top: -20px;
+        overflow: hidden;
+        transform: translateY(20px);
+        transition: all 180ms ease-in-out 0ms; 
+    }
+    label[class^="tab"] {        
+        margin-top: 0px;
+    }
+    .open-close-icon {
+        margin-right: 0;
+        padding-left: 1em;
+    }  
+    main .location .container-main .first-contain .video-loc .description p.more, main .location .container-main .first-contain .video-loc .description p.less {
+        font-size: 14px;
+        line-height: 150%;
+        margin: 0;
+        padding: 0;
+    }
+    main .location .container-main .first-contain {
+        margin: 0 0 1em;
+    }
+    .carousel.desktop {
+        display: none;
+    }
+    .pisos.mobile {
+        margin-top: 1em;
+    }
+    .pisos.mobile .piso-contain {
+        margin-top: 1em;
+    }
+    .pisos.mobile .piso-contain .piso-main .img img {
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+    }
+    .pisos.mobile .piso-contain .piso-main .piso h3 {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 100%;
+        padding: 0 2em;
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options {
+        display: flex;
+        flex-flow: column;
+        justify-content: stretch;
+        align-items: flex-start;
+        
+    }
+    .pisos.mobile .piso-contain .piso-main .piso {
+        
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start; 
+        padding: 0 1em;       
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: flex-end;        
+    }
+
+
     section.necesidades .grid {
         align-items: center;
         padding: 0;
     }
-
     section.necesidades .contain .title h2 {
         width: 100%;
         padding: 0;
     }
     section.necesidades .contain .text p {
         width: 100%;
+        font-size: 14px;
+        line-height: 150%;
     }
 }
