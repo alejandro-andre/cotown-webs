@@ -1,141 +1,98 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
-<link rel="stylesheet" href="../src/assets/css/global.css">
 
-<style>
-/* PISOS */
-.pisos {
-  text-align: center;
-}
-.pisos h2 {
-  margin: 1em 0 0.3em;
-  font-size: 78px;
-}
-.pisos .pisos-imgs .img-container .img {
-  height: 60vh;
-  margin-bottom: 8px;
-  overflow: hidden;
-  cursor: pointer;
-}
-.pisos .pisos-imgs .img-container .img:last-of-type {
-  margin-right: 0;
-}
-@media only screen and (min-width: 1024px) {
-  .pisos .pisos-imgs .img-container .img {
-    margin-right: 1em;
-    margin-bottom: 0;
-  }
-}
-.pisos .pisos-imgs .img-container .img img {
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.pisos .pisos-imgs .img-container:hover img {
-  transform: scale(1.20);
-  -webkit-transform: scale(1.20);
-  filter: contrast(1.2);
-  transition: transform .25s ease-in-out;    
-}
-.pisos .pisos-imgs .img-container .img-title1,
-.pisos .pisos-imgs .img-container .img-title2 {
-    color: var(--white);
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 78px;
-    position: absolute;
-    margin: 0 1em 0 0.3em;  
-    line-height: 78px;
-    text-align: left;
-    width: fit-content;   
-    cursor: pointer;
-}
-.pisos .pisos-imgs .img-container span {
-  z-index: 20;
-  position: relative;
-  display: inline-block;
-  text-shadow: 0px 7px 14px rgba(0, 0, 0, 0.15);
-}
-.pisos .pisos-imgs .img-container .img-title1 span {
-  top: -180px;
-}
-.pisos .pisos-imgs .img-container .img-title2 span {
-  top: -110px;
-}
-.pisos .pisos-imgs .img-container .subrayado {
-  z-index: 18;
-  background-color: var(--turquoise-light);
-  position: absolute;
-  width: 0%;
-  height: 0.8rem;
-}
-.pisos .pisos-imgs .img-container .img-title1 .subrayado {
-  bottom: 188px;
-}
-.pisos .pisos-imgs .img-container .img-title2 .subrayado {
-  bottom: 118px;
-}
-.pisos .pisos-imgs .img-container:hover > .img-title1 .subrayado, 
-.pisos .pisos-imgs .img-container:hover > .img-title2 .subrayado {    
-    width: 100%;
-    -webkit-transition: width 0.25s ease-in-out;
-    -moz-transition: width 0.25s ease-in-out;
-    -o-transition: width 0.25s ease-in-out;
-    transition: width 0.25s ease-in-out;    
-}
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
-</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/2.1.2/pure-min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .grid {
+      display: grid;
+      gap: 10px;
+      padding: 10px;
+    }
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+
 </head>
+
 <body>
 
-<section class="pisos">
-
-  <div class="text-container">
-    <h2 class="twelve columns">ELIGE TU PISAZO</h2>
-  </div>
-
-  <div class="pure-g pisos-imgs">
-
-    <div class="pure-u-lg-1-2 pure-u-1 img-container">
-      <div class="img">
-        <img src="../src/assets/img/apartm.png">
-      </div>
-      <div class="img-title1">
-        <span>APARTAMENTO</span>
-        <div class="subrayado"></div>
-      </div>
-      <div class="img-title2">                    
-        <span>PRIVADO</span>
-        <div class="subrayado"></div>
-      </div>
+  <section id="splide_locations" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div>
+            <img class="img" src="https://picsum.photos/id/241/400/400" alt="Imagen 9">
+            <h3 class="img-title">BARCELONA</h3>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div>
+            <img class="img" src="https://picsum.photos/id/241/400/400" alt="Imagen 9">
+            <h3 class="img-title">BARCELONA</h3>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div>
+            <img class="img" src="https://picsum.photos/id/241/400/400" alt="Imagen 9">
+            <h3 class="img-title">BARCELONA</h3>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div>
+            <img class="img" src="https://picsum.photos/id/241/400/400" alt="Imagen 9">
+            <h3 class="img-title">BARCELONA</h3>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div>
+            <img class="img" src="https://picsum.photos/id/241/400/400" alt="Imagen 9">
+            <h3 class="img-title">BARCELONA</h3>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div>
+            <img class="img" src="https://picsum.photos/id/241/400/400" alt="Imagen 9">
+            <h3 class="img-title">BARCELONA</h3>
+          </div>
+        </li>
+      </ul>
     </div>
-
-    <div class="pure-u-lg-1-2 pure-u-1 img-container">
-      <div class="img">
-        <img src="../src/assets/img/piso.png">
-      </div>
-      <div class="img-title1">
-        <span>PISO</span>
-        <div class="subrayado"></div>
-      </div>
-      <div class="img-title2">                    
-        <span>COMPARTIDO</span>
-        <div class="subrayado"></div>
-      </div>
-    </div>
-
-  </div>
+  </section>
   
-</section>
-
+  <script>
+    new Splide("#splide_locations",  {
+      type       : 'loop',
+      fixedHeight: '20rem',
+      gap        : '0.7rem',
+      padding    : '5rem',
+      perPage    : 3,
+      perMove    : 1,
+      breakpoints: {
+        1024: { perPage: 2 },
+        640: { perPage: 1 },
+      },
+    }).mount();
+    </script>
+    
 </body>
+
 </html>

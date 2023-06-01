@@ -4,8 +4,6 @@
 <!-- Head -->
 <head>
 {% include 'sections/common/head.html.njk' %}
-<!-- Additional CSS
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 {% block head %}{% endblock %}
 </head>
 
@@ -18,8 +16,9 @@
 <!-- Content -->
 {{ content | safe }}
   
-<!-- FOOTER -->
+<!-- Footer -->
 {% include 'sections/common/footer.html.njk' %}
+{% block footer %}{% endblock %}
 
 </body>
 
