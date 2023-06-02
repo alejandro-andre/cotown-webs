@@ -1,10 +1,12 @@
 <section class="locations">
 
   <div class="text-container">
-    <h2 class="h2-where">{% literal texts, 'home-donde-quieres-vivir-title', L %}</h2>
+    <h2 class="title twelve columns">
+      {% literal texts, 'home-donde-quieres-vivir-title', L %}
+    </h2>
   </div>
 
-  <div class="carousel splide" role="group" aria-label="Splide Basic HTML Example">
+  <div class="carousel splide-locations splide" role="group">
     <div class="splide__track">
       <ul class="splide__list">
         {% for l in locations %}
@@ -25,23 +27,4 @@
     </div>
   </div>
 
-  <script>
-      var splide = new Splide(".splide", {
-        type: 'loop',
-        height: '360px',
-        perPage: 3,
-        perMove: 1,
-        padding: '5em',
-        gap: '15px',
-        breakpoints: {
-          1280: { perPage: 2 },
-          1024: { height: '300px' },
-          768: { perPage: 1 },
-        },
-      });
-      splide.mount();
-      </script>
-    
-  </section>
-    
 </section>

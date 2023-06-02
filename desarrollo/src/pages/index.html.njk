@@ -62,3 +62,32 @@ tags: page
   <div class="spoty"><em class="icon-spoty"></em></div>
   <div class="chat"><em class="icon-chat"></em></div>
 </section>
+
+<script>
+  new Splide('.splide-partners', {
+    type: 'loop',
+    height: '180px',
+    fixedWidth: '240px',
+    perMove: 1,
+    drag: 'free',
+    arrows: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    autoScroll: { speed: 2 }
+  }).mount( window.splide.Extensions );
+  
+  new Splide(".splide-locations", {
+    type: 'loop',
+    height: '360px',
+    perPage: 3,
+    perMove: 1,
+    padding: '5em',
+    gap: '15px',
+    breakpoints: {
+      1280: { perPage: 2 },
+      1024: { height: '300px' },
+      768: { perPage: 1 },
+    },
+  }).mount();   
+</script>
+    
