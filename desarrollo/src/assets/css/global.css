@@ -46,7 +46,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
     h1, h2, h3, h4, h5, h6 {
         margin-top: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         font-weight: 300; }
     h1 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 120px; line-height: 95%; font-weight: 400; }
     h2 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 78px; line-height: 118%; font-weight: 400;}
