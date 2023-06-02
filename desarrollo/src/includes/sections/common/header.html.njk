@@ -12,7 +12,7 @@
       {% if loop.index == 1 %}
       <h1 class="spot">{{b | translate('Text', L)}}</h1>
       <div class="know">
-        <a href="{{b.Link}}"><button class="btn-primary">{% literal texts, 'literal-descubrir', L %}</button></a>
+        <a href="{{b.Link}}"><button class="btn-primary">{% literal texts, 'header-descubrir', L %}</button></a>
       </div>
       {% endif %}
       {% endfor %}
@@ -66,14 +66,14 @@
           <li class="pure-menu-item private-container">
             <button class="private">
               <em class="icon-log-in"></em>
-              <p class="private-area">{% literal texts, 'literal-area-privada', L %}</p>
+              <p class="private-area">{% literal texts, 'header-area-privada', L %}</p>
             </button>
           </li>
 
           <!-- Reservar -->
           <li class="pure-menu-item">
             <div class="booking">
-              <button class="btn-primary">{% literal texts, 'literal-reservar', L %}</button></button>
+              <button class="btn-primary">{% literal texts, 'header-reservar', L %}</button></button>
             </div>
           </li>
 
@@ -92,7 +92,7 @@
 
       <!-- Reservar (movil) -->
       <div class="booking pure-u-1-3">
-        <button class="btn-secondary">{% literal texts, 'literal-reservar', L %}</button>
+        <button class="btn-secondary">{% literal texts, 'header-reservar', L %}</button>
       </div>
 
       <!-- Logo -->
