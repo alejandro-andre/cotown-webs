@@ -116,11 +116,29 @@ main .container-main .first-contain .text p {
     height: 3em;
 }
 .splide__arrow svg {
-  fill: var(--white);
+    fill: var(--white);
+}
+.splide__pagination__page {
+    background-color: #ccc;
+    width: 16px;
+    height: 16px;
+    top: 50px;
+}
+@media only screen and (max-width: 1023.9px) {
+    .splide__pagination__page {
+        width: 12px;
+        height: 12px;
+        top: 40px;
+    }
+}
+.splide__pagination__page.is-active {
+    background-color: var(--turquoise-light);
+    transform: scale(1);
 }
 
 /* CARRUSEL LOCALIZACIONES */
 .locations {
+    margin: 2em 0 4em;
     width: 100%;
 }
 .locations .title {
@@ -166,10 +184,11 @@ main .container-main .first-contain .text p {
 
 /* PISOS */
 .pisos {
+    margin: 2em 0 4em;
     text-align: center;
 }
-.pisos h2 {
-    margin: 1em 0 0.3em;
+.pisos .title {
+    padding: 1em 100px 0;
     font-size: 78px;
 }
 .pisos .pisos-imgs .img-container .img {
@@ -249,9 +268,9 @@ main .container-main .first-contain .text p {
 
 /* SERVICIOS */
 .servicios {
+    margin: 3em 0 4em;
     width: 100%;
     text-align: center;
-    margin: 6em 0 4em;
 }
 .servicios .servicios-container {
     margin: 0;
@@ -466,6 +485,7 @@ main .container-main .first-contain .text p {
 /* CAROUSEL PARTNERS */
 .partners {
     width: 100%;
+    margin: 3em 0 4em;
 }
 .partners .title {
     padding: 0;
@@ -483,6 +503,7 @@ main .container-main .first-contain .text p {
 
 .opinions {
     width: 100%;
+    margin: 3em 0 4em;
 }
 .opinions .title {
     width: 100%;
@@ -507,7 +528,6 @@ main .container-main .first-contain .text p {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 0.6em;
-    margin-bottom: 2em;
 }
 .opinions .card-container .avatar img {
     border-radius: 50%;

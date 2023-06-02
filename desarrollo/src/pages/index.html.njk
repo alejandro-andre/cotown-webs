@@ -66,11 +66,12 @@ tags: page
 <script>
   new Splide('.splide-partners', {
     type: 'loop',
-    height: '180px',
     fixedWidth: '240px',
+    focus: 0,
     perMove: 1,
     drag: 'free',
     arrows: false,
+    pagination: false,
     pauseOnHover: false,
     pauseOnFocus: false,
     autoScroll: { speed: 2 }
@@ -79,6 +80,7 @@ tags: page
   new Splide(".splide-locations", {
     type: 'loop',
     height: '360px',
+    focus: 0,
     perPage: 3,
     perMove: 1,
     padding: '5em',
@@ -92,13 +94,14 @@ tags: page
 
   new Splide(".splide-opinions", {
     type: 'slide',
-    height: '360px',
-    perPage: 3,
-    padding: '15em',
-    gap: '15px',
+    autoHeight: true,
+    focus: 0,
+    perPage: 2,
+    perMove: 1,
+    padding: '10em',
+    gap: '20px',
     breakpoints: {
-      1280: { perPage: 2 },
-      768: { perPage: 1 },
+      1024: { perPage: 1 },
     },
   }).mount();   
 </script>
