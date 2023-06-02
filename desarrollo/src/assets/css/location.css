@@ -131,13 +131,20 @@ input[class^="tab"]:checked ~ label p.less {
     align-items: center;
     margin: 0 0 4em;
 }
-.pisos-slider h2 {
+.pisos-slider .h2-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.pisos-slider .h2-container h2 {
     text-align: center;
     width: 100%;
     margin: 0;
+    text-transform: uppercase;
 }
-.pisos-slider h2 span {
-    font-weight: 300!important;
+.pisos-slider .h2-container h2 span {
+    font-weight: 200!important;
 }
 .pisos-slider .carousel {
     padding: 10% 0;
@@ -209,7 +216,10 @@ input[class^="tab"]:checked ~ label p.less {
 }
 .room-type h4 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 600;    
+}
+h4 {
+    text-transform: uppercase;
 }
 .room-type p {
     font-size: 16px;
@@ -228,8 +238,11 @@ input[class^="tab"]:checked ~ label p.less {
     color: var(--turquoise-dark);
     letter-spacing: 0.145em;
 }
-.room-type button.green-button {
-
+button.green-button.btn-secondary {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    padding: 6px 16px;
 }
 
 .arrow-nav.splide__arrow {
@@ -355,11 +368,18 @@ section.necesidades .grid .necesidad .p-text p {
         padding: 0;
     }
 }
+
 @media only screen and (min-width: 1024px) { 
     .pisos.mobile {
         display: none;
     }
+    .pisos-slider .h2-container .button-map-mobile {
+        display: none;
+    }
 }
+
+/* MOBILE */
+
 @media only screen and (max-width: 1023.9px) {    
     main .location .container-main .first-contain h1 {
         font-size: 68px;
@@ -412,6 +432,37 @@ section.necesidades .grid .necesidad .p-text p {
     main .location .container-main .first-contain {
         margin: 0 0 1em;
     }
+    .pisos-slider  {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .pisos-slider .h2-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em;
+    }
+    .pisos-slider .h2-container h2 {
+        width: fit-content;
+        text-align: left;
+    }
+    .pisos-slider .h2-container .button-map-mobile {
+        background-color: transparent;
+    }
+    .pisos-slider .h2-container .button-map-mobile img {
+        width: 40px;
+        text-align: center;
+    }
+    .pisos-slider .h2-container .button-map-mobile p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        margin:0
+    }
+
     .carousel.desktop {
         display: none;
     }
@@ -430,24 +481,53 @@ section.necesidades .grid .necesidad .p-text p {
         font-weight: 400;
         font-size: 40px;
         line-height: 100%;
-        padding: 0 2em;
+        padding: 0 0.4em;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options {
         display: flex;
         flex-flow: column;
         justify-content: stretch;
-        align-items: flex-start;
-        
-    }
-    .pisos.mobile .piso-contain .piso-main .piso {
-        
-    }
+        align-items: flex-start;        
+    }    
     .pisos.mobile .piso-contain .piso-main .piso .options .type {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-start; 
-        padding: 0 1em;       
+        padding: 0.5em 1em;       
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .img-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center; 
+        width: 40px;
+        height: 40px;
+        background-color: var(--white-background);
+        border-radius: 5px;
+        object-fit: cover;
+        object-position: center center;
+        text-align: center;
+        padding: 0.2em;
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .img-container img {
+        width: 25px;      
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin: auto 0;
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 150%;
+    letter-spacing: 0.08em;
+    width: 50%;
+    padding-left: 1em;
+    margin: 0.1em 0 0;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container {
         display: flex;
@@ -455,7 +535,36 @@ section.necesidades .grid .necesidad .p-text p {
         justify-content: flex-end;
         align-items: flex-end;        
     }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container span {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        text-align: right;
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container p {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 150%;
+        margin: 0;
+        text-align: right;
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
 
+    .map {
+        display: none;
+    }
+
+    section.necesidades {
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 1em;
+        margin: 2em 0;
+    }
 
     section.necesidades .grid {
         align-items: center;
@@ -464,10 +573,51 @@ section.necesidades .grid .necesidad .p-text p {
     section.necesidades .contain .title h2 {
         width: 100%;
         padding: 0;
+        text-align: left;
     }
     section.necesidades .contain .text p {
         width: 100%;
         font-size: 14px;
         line-height: 150%;
     }
+
+
+
+}
+
+
+#reservas_form{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;	
+}
+
+button.date-button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    background-color: #fcfcfc;
+    border: 1.5px solid #D1D1D1;
+	box-sizing: border-box;
+    border-radius: 6px;
+}
+button.date-button label.labels {
+    width: 100%;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+}
+
+button.date-button input.inputs {	    
+    height: 16px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: transparent;
+    border: none;
 }
