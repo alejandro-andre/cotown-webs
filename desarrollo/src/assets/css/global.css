@@ -54,7 +54,7 @@
     h4 { font-size: 1.5rem; line-height: 1.35;}
     h5 { font-size: 1.2rem; line-height: 1.5;}
     h6 { font-size: 1rem; line-height: 1.2;}
-    p, input, label, a {font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;font-size: 16px; line-height: 16px;}
+    p, input, label, a {font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;font-size: 16px; }
     a { text-decoration: none; }
     /* BUTTONS */
     button {
@@ -1042,7 +1042,7 @@
             font-size: 38px;
         }
         h2 {
-            font-size: 40px!important;
+            font-size: 40px;
             margin: auto;
             text-align: center;
         }

@@ -23,6 +23,6 @@ module.exports = async () => {
 
   // Transform
   const json = {};
-  query_data.data.data.forEach(o => { json[o.Code] = { en: o.Value_en, es: o.Value } });
+  query_data.data.forEach(o => { json[o.Code] = { en: o.Value_en, es: o.Value } });
   return(json); 
 };

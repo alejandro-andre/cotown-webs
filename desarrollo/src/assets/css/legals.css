@@ -1,13 +1,6 @@
 /* __________________________ LEGAL PAGES ___________________________*/
 
-h1 {
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 78px;
-    line-height: 110%;
-    font-weight: 400;
-}
-
-main {
+.legal {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -15,88 +8,94 @@ main {
     align-items: center;
     margin-bottom: 6em;
 }
-main .container-main {
+.legal .container-main {
     width: 60%;
-    /*display: flex;*/
     flex-flow: row wrap;
     justify-content: center;
     text-align: justify;
     align-items: center;
 }
-main .container-main h1 {
-    width: 100%;
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+.legal .container-main h1 {
     font-size: 78px;
-    line-height: 110%;
     font-weight: 400;
     margin: 1.5em 0 1em;
 }
-
-main .container-main h2 {
-    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 22px; 
+.legal .container-main h2 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 22px;
     font-weight: 700;
-    line-height: 16px;
-    width: 100%;    
     margin: 1em 0; 
 }
-main .container-main p, a {
-    width: 100%;
-    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 22px;
-    line-height: 27px;
+.legal .container-main p, a, ul, li, th, td {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 400;
-    margin: 0.2em 0 1em;
-}
-main .container-main p span {
-    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 22px;
     line-height: 27px;
+}
+.legal .container-main p span {
     font-weight: 700;
-    width: 100%;
     margin: 0.2em 0;
 }
-main .container-main ul li {
-    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 22px; 
+.legal .container-main ul li {
     font-weight: 500;
-    line-height: 33px;
     padding-left: 8px;
 }
-main .container-main table {
-    width: 100%;
+.legal .container-main table {
     margin: 3em 0;
+    text-align: left;
+    border-collapse: collapse;
 }
-main .container-main table thead tr {
-    background-color: transparent;
-    border: none;
-}
-main .container-main table thead tr th {
-    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 22px;
-    line-height: 27px;
-    font-weight: 700;
-    padding: 0.5em;
-}
-main .container-main table tbody tr td {
-    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 22px;
-    line-height: 27px;
-    font-weight: 400;
-    padding: .5em .5em 1em;
-}
-
-main .container-main table thead tr th {
+.legal .container-main table thead tr th,
+.legal .container-main table tbody tr td {
+    padding: .5em 1em;
     border-left: 1px solid var(--black);
     border-bottom: 1px solid var(--black);
 }
-main .container-main table tbody tr td {
-    border-left: 1px solid var(--black);
+.legal .container-main table thead tr th:first-child, 
+.legal .container-main table tbody tr td:first-child {
+    font-weight: 700;
+    border-left: none !important;
 }
-main .container-main table thead tr th:first-child, main .container-main table tbody tr td:first-child {
-    border-top: none!important;
-    border-left: none!important; 
+.legal .container-main table tbody tr:last-child td { 
+    border-bottom: none !important;
 }
-main .container-main table thead tr th:last-child, main .container-main table tbody tr td:last-child {
-    border-right: none!important; 
+@media only screen and (max-width: 1023.9px) {
+    .legal .container-main {
+        font-size: 22px;
+        width: 80%;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: justify;
+        align-items: center;
+    }
+    .legal .container-main h1 {
+        font-size: 48px;
+    }
+    .legal .container-main h2 {
+        font-size: 18px;
+    }
+    .legal .container-main p, a, ul, li {
+        font-size: 20px;
+        line-height: 25px;
+    }    
+}
+@media only screen and (max-width: 767.9px) {
+    .legal .container-main {
+        font-size: 22px;
+        width: 90%;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: justify;
+        align-items: center;
+    }
+    .legal .container-main h1 {
+        font-size: 48px;
+    }
+    .legal .container-main h2 {
+        font-size: 18px;
+    }
+    .legal .container-main p, a, ul, li, th, td {
+        font-size: 18px;
+        line-height: 22px;
+    }    
 }

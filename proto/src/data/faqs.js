@@ -31,5 +31,5 @@ module.exports = async () => {
   const fetch = require('node-fetch');
   const query_res = await fetch(K.SERVER + '/graphql', { method: 'POST', headers: K.HEADER, body: JSON.stringify({ "query": QUERY, "variables": auth }) });
   const query_data = await query_res.json();
-  return(query_data.data.data); 
+  return(query_data.data); 
 };
