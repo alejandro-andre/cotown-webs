@@ -10,21 +10,11 @@
     <div class="left-content pure-1-2">
       {% for b in banners %}
       {% if loop.index == 1 %}
-      <h1 class="spot">{{b | translate('Text', L)}}</h1>
-      <div class="know">
+      <div class="spot">{{b | translate('Text', L)}}</div>
         <a href="{{b.Link}}"><button class="btn-primary">{% literal texts, 'header-descubrir', L %}</button></a>
-      </div>
       {% endif %}
       {% endfor %}
     </div>
-    <!--$$
-    <div class="left-content pure-1-2">
-      <h1 class="spot">NUEVA APERTURA EN MADRID, ENTRA Y DESCÚBRELA</h1>
-      <div class="know">
-        <button class="btn-primary">DESCUBRIR</button>
-      </div>
-    </div>
-    -->
       
     <!-- Cabecera
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -98,7 +88,7 @@
       <!-- Logo -->
       <div class="logo pure-u-1-3">
         <a href="/">
-          <h1 class="h1-logo"><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
+          <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
         </a>
       </div>
 

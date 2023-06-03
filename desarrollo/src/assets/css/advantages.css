@@ -1,0 +1,68 @@
+/* ADVANTAGES PAGE 
+-------------------------------- */
+
+main .container-main section.container-advantages {
+    padding: 2em 4em;
+}
+main .container-main section.container-advantages .grid {
+    padding: 0 14%;
+    max-width: 1280px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+main .container-main section.container-advantages .grid .promo {
+    width: calc(25% - 0.8em);
+    height: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey-light-dark);
+    margin: 0 0 2em 0.8em;
+}
+main .container-main section.container-advantages .grid .promo:hover {
+    background-color: var(--turquoise-light);
+}
+main .container-main section.container-advantages .grid .promo .promo-contain {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+}
+main .container-main section.container-advantages .grid .promo .promo-contain .promo-title {
+    font-size: 78px;
+    color: var(--white);
+    line-height: 1;
+    margin: 0;
+    opacity: 0;
+}
+main .container-main section.container-advantages .grid .promo:hover .promo-contain .promo-title  {
+    opacity: 1;
+}
+main .container-main section.container-advantages .grid .promo .promo-contain .promo-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+}
+main .container-main section.container-advantages .grid .promo:hover .promo-contain .promo-text {
+    opacity: 1;
+}
+main .container-main section.container-advantages .grid.show {
+    display: none;
+}
+main .container-main section.container-advantages .button-more {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1em 0;
+}

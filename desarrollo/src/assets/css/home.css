@@ -260,10 +260,6 @@ main .container-main .first-contain .text p {
     text-align: center;
     padding: 2em 4em;
 }
-.servicios h2.title {
-    font-size: 78px;
-    margin-bottom: 0;
-}
 .servicios .servicios-container .services-cards {    
     display: flex;
     flex-flow: row wrap;
@@ -577,15 +573,7 @@ p.subtitle {
     margin: 0;
 }
 
-/* SPLIDER GENERAL*/
-.splide__pagination__page {
-    width: 12px;
-    height: 12px;
-    top: 40px;
-}
-
 /* SECCIÓN MAIN */ 
-
 .main-header {
     flex-flow: row wrap;
 }

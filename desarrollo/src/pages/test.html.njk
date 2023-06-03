@@ -1,0 +1,32 @@
+---
+name: test
+eleventyComputed:
+    title: "Test"
+    alt:
+      es: "{{langs.es.folder}}/test.html"
+      en: "{{langs.en.folder}}/test.html"
+    description: "Test"
+    permalink: "{{langs[L].folder}}/test.html"
+layout: layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true   
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<!-- Main -->
+<main>
+
+<section>
+  <h1>Cabecera 1</h1>
+  <h2>Cabecera 2</h2>
+  <h3>Cabecera 3</h3>
+  <h4>Cabecera 4</h4>
+</section>
+
+</main>
