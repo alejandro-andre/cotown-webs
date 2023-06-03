@@ -1,4 +1,5 @@
-/* _________________________ LOCATION _________________________ */
+/* LOCATION
+-------------------------------- */
 
 main .location .container-main .first-contain {
     width: 100%;
@@ -20,7 +21,6 @@ main .location .container-main .first-contain .video-loc {
     position: relative;
     min-height: fit-content;
 }
-
 main .location .container-main .first-contain .video-loc .description {
     width: 50%;
     min-height: fit-content;
@@ -121,8 +121,8 @@ input[class^="tab"]:checked ~ label p.less {
     display: block;
 }
 
-
-/* CARRUSEL */
+/* CARRUSEL 
+-------------------------------- */
 
 .pisos-slider {
     display: flex;
