@@ -42,3 +42,19 @@ tags: page
   <div class="spoty"><em class="icon-spoty"></em></div>
   <div class="chat"><em class="icon-chat"></em></div>
 </section>
+
+<script>
+  new Splide(".splide-services", {
+    type: 'slide',
+    autoHeight: true,
+    focus: 0,
+    perPage: 3,
+    perMove: 1,
+    padding: '10em',
+    gap: '20px',
+    breakpoints: {
+      1024: { perPage: 2 },
+      768: { perPage: 1, padding: 0 },
+    },
+  }).mount();   
+</script>

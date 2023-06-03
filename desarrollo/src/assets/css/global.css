@@ -901,7 +901,27 @@
     footer section.container-footer .footer-info.mobile {
        display: none;
     }
-    
+
+/* SPLIDER GENERAL*/
+.splide__arrow {
+    background-color: var(--turquoise-light);
+    width: 3em;
+    height: 3em;
+}
+.splide__arrow svg {
+    fill: var(--white);
+}
+.splide__pagination__page {
+    background-color: #ccc;
+    width: 16px;
+    height: 16px;
+    top: 50px;
+}
+.splide__pagination__page.is-active {
+    background-color: var(--turquoise-light);
+    transform: scale(1);
+}
+
     /* RESPONSIVE */
     
     /* DESKTOP */
@@ -1253,4 +1273,4 @@
             width: 50%;
         } 
     }
-    
+

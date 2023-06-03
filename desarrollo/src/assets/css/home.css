@@ -118,26 +118,6 @@ main .container-main .first-contain .text p {
     line-height: 33px;
 }
 
-/* SPLIDER GENERAL*/
-.splide__arrow {
-    background-color: var(--turquoise-light);
-    width: 3em;
-    height: 3em;
-}
-.splide__arrow svg {
-    fill: var(--white);
-}
-.splide__pagination__page {
-    background-color: #ccc;
-    width: 16px;
-    height: 16px;
-    top: 50px;
-}
-.splide__pagination__page.is-active {
-    background-color: var(--turquoise-light);
-    transform: scale(1);
-}
-
 /* LOCALIZACIONES */
 .locations {
     margin: 2em 0 4em;
@@ -509,7 +489,6 @@ main .container-main .first-contain .text p {
     height: 95px;
     margin: 0 auto;
 }
- 
 .opinions .card-container .opinion {
     width: calc(100% - 108px);
     display: flex;

@@ -1,54 +1,29 @@
  <section class="all-locations">
 
-    <div class="texto-container">
-        <h1 class="title-where">
-            {% literal texts, 'home-localizaciones-titulo', L %}
-        </h1>
-    </div>
+  <div class="texto-container">
+    <h1 class="title-where">
+      {% literal texts, 'home-localizaciones-titulo', L %}
+    </h1>
+  </div>
 
-    {% for l in locations %}
-    <div class="location pure-u-1">
-        <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html" class="pure-u-1 pure-u-lg-1-3">
-        <div class="img pure-u-1">
-          {% image 
-                constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token, 
-                l.Name, l.Name|slug, "img-loc",
-                [800], ""
-            %}
-        </div>
-        </a>
-        <div class="text-content pure-u-1 pure-u-lg-2-3">
-            <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
-            <h2 class="lotation-title">{{l | translate('Name', L)}}</h2>
-            </a>
-            <p class="body1">{{l | translate('Description', L)}}</p>
-        </div>        
+  {% for l in locations %}
+  <div class="location pure-u-1">
+    <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html" class="pure-u-1 pure-u-lg-1-3">
+    <div class="img pure-u-1">
+    {% image 
+       constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token, 
+       l.Name, l.Name|slug, "img-loc",
+       [800], ""
+    %}
+    </div>
+    </a>
+    <div class="text-content pure-u-1 pure-u-lg-2-3">
+      <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
+        <h2 class="lotation-title">{{l | translate('Name', L)}}</h2>
+      </a>
+      <p class="body1">{{l | translate('Description', L)}}</p>
     </div>        
-    {% endfor %}
-
-    <!--$$
-    <div class="location">
-        <div class="img barcelona"><img src="./../../../..//src/assets/img/locations/barcelona.png" class="img-loc"></div>
-        
-        <div class="text-content">
-            <h2 class="lotation-title">BARCELONA</h2>
-            <p class="body1">Barcelona se describe sola. Cosmopolita, tradicional, moderna, sorprendente, inclusiva… Mires como la mires, ha sido, es y será sin duda el lugar de los ciudadanos con suerte.</p>
-        </div>        
-    </div>
-    <div class="location">
-        <div class="img valencia"><img src="./../../../..//src/assets/img/locations/valencia.png" class="img-loc"></div>
-        <div class="text-content">
-            <h2 class="lotation-title">VALENCIA</h2>
-            <p class="body1">Valencia, una ciudad que no necesita presentación. Sus 300 días de sol al año ya la califican de perfecta.</p>
-        </div>
-    </div>
-    <div class="location">        
-        <div class="img bilbao"><img src="./../../../..//src/assets/img/locations/bilbao.png" class="img-loc"></div>
-        <div class="text-content">
-            <h2 class="lotation-title">BILBAO</h2>
-            <p class="body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-        </div>
-    </div>
-    -->
+  </div>        
+  {% endfor %}
     
 </section>
