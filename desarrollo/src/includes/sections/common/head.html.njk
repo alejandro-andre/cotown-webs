@@ -56,15 +56,10 @@
 
 <!-- CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
-<link rel="stylesheet" href="/assets/css/splide.min.css">
-<link rel="stylesheet" href="/assets/css/global.css">
-
-<!-- Script
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<script src="/assets/js/splide.min.js"></script>
-<script src="/assets/js/splide-extension-auto-scroll.min.js"></script>
+{% set css %}{% include "css/purecss/pure.min.css" %}{% endset %}<style>{{ css | safe }}</style>
+{% set css %}{% include "css/purecss/grids-responsive.min.css" %}{% endset %}<style>{{ css | safe }}</style>
+{% set css %}{% include "css/splidejs/splide.min.css" %}{% endset %}<style>{{ css | safe }}</style>
+{% set css %}{% include "css/global.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 
 <!-- Icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -74,3 +69,14 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" type="image/x-icon" href="{{globals.x_icon}}"/>
+
+<!-- Splide
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="/assets/js/splide.min.js"></script>
+<script src="/assets/js/splide-extension-auto-scroll.min.js"></script>
+
+<!-- Cookies
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!--
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="2943c93d-23ed-4b7f-a0c0-f64d87ccec5c" data-blockingmode="auto" type="text/javascript"></script>
+-->

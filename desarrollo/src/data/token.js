@@ -6,8 +6,6 @@ module.exports = async () => {
   // Fetch library
   const fetch = require('node-fetch');
 
-  console.log('GET TOKEN');
-  
   // Login
   const login_res = await fetch(K.SERVER + '/graphql', { method: 'POST', headers: K.HEADER, body: JSON.stringify({ "query": K.LOGIN }) });
   const login_data = await login_res.json();
