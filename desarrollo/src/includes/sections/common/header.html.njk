@@ -24,9 +24,9 @@
 
           <li class="icons-header pure-menu-item">
             <!-- Buscador -->
-            <a href="#" class="pure-menu-link"><em class="icon-Search"></em></a>
+            <a href="#" class="pure-menu-link"><em class="icon-search"></em></a>
             <!-- Whatsapp -->
-            <a href="{{globals.rrss.wh}}" class="pure-menu-link"><em class="icon-WhatsappPrimary"></em></a>
+            <a href="{{globals.rrss.wh}}" class="pure-menu-link"><em class="icon-whatsapp-primary"></em></a>
           </li>
 
           <!-- Idiomas -->
@@ -34,7 +34,7 @@
             <div class="select-container">
               {% if L == 'es' %}
               <label class="selected-option" for="options">
-                <em class="icon-CorcheteDown"></em>
+                <em class="icon-corchete-down"></em>
                 <span class="select-value">Español (ES)</span>
               </label>
               <div data-toggle="collapsed" class="options">
@@ -42,7 +42,7 @@
               </div>
               {% else%}
               <label class="selected-option" for="options">
-                <em class="icon-CorcheteDown"></em>
+                <em class="icon-corchete-down"></em>
                 <span class="select-value">English (EN)</span>
               </label>
               <div data-toggle="collapsed" class="options">
@@ -109,7 +109,7 @@
           <div class="locations-container">
             <label class="locations-label">
                 <span class="loc"><a href="{{langs[L].folder}}/{{langs[L].pages['locations'].url}}.html">{{langs[L].pages['locations'].title}}</a></span>
-                <em class="change-value icon icon-CorcheteDown" for="options"></em>
+                <em class="change-value icon icon-corchete-down" for="options"></em>
             </label>
             <div data-toggle="close" class="options-loc">
                 {% for l in locations %}

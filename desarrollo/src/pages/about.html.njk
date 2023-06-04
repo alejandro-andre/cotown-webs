@@ -79,12 +79,14 @@ tags: page
           {% for t in team %}
           <div class="member">
             <div class="img-member">
+              <!--
               {% image 
                 constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token, 
                 t.Name, t.Name|slug, "img-grid",
                 [300], ""
               %}
-              
+              -->
+              <img class="img-grid" width="300" alt="member1" src="/assets/img/us.png">
               <div class="data">
                 <p class="name">{{t.Name}}</p>
                 <p class="job">{{t | translate('Position', L)}}</p>
@@ -93,74 +95,6 @@ tags: page
           </div>
           {% endfor %}
 
-          <!--$$
-          <div class="member">
-            <img class="img-grid" width="300"alt="member1" src="./assets/img/us.png">
-            <div class="data">
-              <p class="name">Nombre y apellido</p>
-              <p class="job">Cargo en la empresa</p>
-            </div>
-          </div>
-          <div class="member">
-            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
-            <div class="data">
-              <p class="name">Nombre y apellido</p>
-              <p class="job">Cargo en la empresa</p>
-            </div>
-          </div>
-          <div class="member">
-            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
-            <div class="data">
-              <p class="name">Nombre y apellido</p>
-              <p class="job">Cargo en la empresa</p>
-            </div>
-          </div>
-          <div class="member">
-            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
-            <div class="data">
-              <p class="name">Nombre y apellido</p>
-              <p class="job">Cargo en la empresa</p>
-            </div>
-          </div>
-          <div class="member">
-            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
-            <div class="data">
-              <p class="name">Nombre y apellido</p>
-              <p class="job">Cargo en la empresa</p>
-            </div>
-          </div>
-          <div class="member">
-            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
-            <div class="data">
-              <p class="name">Nombre y apellido</p>
-              <p class="job">Cargo en la empresa</p>
-            </div>
-          </div>
-          <div class="member">
-            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
-            <div class="data">
-              <p class="name">Nombre y apellido</p>
-              <p class="job">Cargo en la empresa</p>
-            </div>
-          </div>
-        </div>
-        <div class="grid show">           
-          <div class="member">
-            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
-            <div class="data">
-              <p class="name">Nombre y apellido</p>
-              <p class="job">Cargo en la empresa</p>
-            </div>
-          </div>
-          <div class="member">
-            <img class="img-grid" width="300" alt="member1" src="./assets/img/us.png">
-            <div class="data">
-              <p class="name">Nombre y apellido</p>
-              <p class="job">Cargo en la empresa</p>
-            </div>
-          </div>
-          -->
-          
         </div>
       </section>
 

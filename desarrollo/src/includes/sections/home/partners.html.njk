@@ -9,24 +9,15 @@
   <div class="splide-partners splide" role="group">
     <div class="splide__track">
       <ul class="splide__list">
+        {% for p in partners %}
         <li class="img splide__slide">
-          <img src="/assets/img/partners/01-partner.png">
+          {% image 
+            constants.SERVER + "/wopi/files/Marketing/Partner/" + p.id +"/Image/contents?access_token=" + token, 
+            p.Name, p.Name|slug, "",
+            [300], ""
+          %}
         </li>
-        <li class="img splide__slide">
-          <img src="/assets/img/partners/02-partner.png">
-        </li>
-        <li class="img splide__slide">
-          <img src="/assets/img/partners/03-partner.png">
-        </li>
-        <li class="img splide__slide">
-          <img src="/assets/img/partners/04-partner.png">
-        </li>
-        <li class="img splide__slide">
-          <img src="/assets/img/partners/05-partner.png">
-        </li>
-        <li class="img splide__slide">
-          <img src="/assets/img/partners/06-partner.png">
-        </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
