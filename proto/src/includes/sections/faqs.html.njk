@@ -1,9 +1,0 @@
-{% for f in faqs %}
-<h2>{{ f | translate('Name', L) }}</h2>
-<ul>
-  {%- for q in f.Questions %}
-    <li><h3>{{ q | translate('Question', L) }}<h3></li>
-    <ul><li>{{ q | translate('Response', L) | markdown | safe }}</li></ul>
-  {%- endfor %}
-</ul>    
-{% endfor %}

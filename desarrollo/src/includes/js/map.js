@@ -24,19 +24,24 @@ function createMap(div, lat, lon, zoom) {
   return map;
 }
 
-function putMarker(map, lat, lon) {
+function putMarker(map, lat, lon, popup) {
 
   // Custom icon
   var LeafIcon = L.Icon.extend({
     options: {
       iconSize:     [38, 44],
-      iconAnchor:   [38, 0],
-      popupAnchor:  [0, -80]
+      iconAnchor:   [17, 44],
+      popupAnchor:  [2, -50]
     }
   });
 
   // Crea el marcador
   var icon = new LeafIcon({ iconUrl: '/assets/icons/marker.png' })
   var marker = L.marker([lat, lon], {icon: icon}).addTo(map);
+  if (popup) {
+    marker.bindPopup(popup); 
+  }
+
+  // Return
   return marker;
 }

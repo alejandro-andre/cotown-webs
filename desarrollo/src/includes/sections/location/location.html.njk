@@ -27,7 +27,19 @@ var markerArray = [];
 {%-for d in l.districts-%}
 {% for b in d.buildings-%}
 {{map}}
-markerArray.push(putMarker(map, {{b.Lat_lon.slice(1,-1).split(',')[0]}}, {{b.Lat_lon.slice(1,-1).split(',')[1]}}));
+markerArray.push(putMarker(
+  map, 
+  {{b.Lat_lon.slice(1,-1).split(',')[0]}}, 
+  {{b.Lat_lon.slice(1,-1).split(',')[1]}},
+   `<div class="popup">
+      <img src="/assets/img/pisos/napoles.png">
+      <div class="info">
+        <div class="address">{{b.Name}}</div>
+        <div class="from">desde</div>
+        <div class="price">XXX€/mes</div>
+      </div>
+    </div>`
+  ));
 {%-endfor-%}
 {%-endfor-%}
 {%-endif-%}

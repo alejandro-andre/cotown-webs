@@ -314,7 +314,7 @@ section.necesidades {
     justify-content: center;
     align-items: stretch;
     padding: 0 4em;
-    margin: 0 0 6em;
+    margin: 4em 0 6em;
 }
 section.necesidades .contain {
     display: flex;
@@ -623,4 +623,46 @@ button.date-button input.inputs {
 }
 
 /* MAP */
-#map { width:100%; height: 600px; }
+.map { 
+    width: 100%; 
+    height: 600px; 
+}
+.map a {
+    font-size: 10px;
+}
+.map .leaflet-popup-content-wrapper {
+    text-align: left !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+.map .leaflet-popup-content {
+    margin: 0 !important;
+}
+.popup {
+    min-width: 300px;
+    display: flex;
+}
+.popup img {
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+}
+.popup .info {
+    width: 100%;
+    font-size: 16px !important;
+    padding: 8px 10px;
+}
+.popup .info .address {
+    font-weight: 700;
+    line-height: 36px;
+}
+.popup .info .from {
+    font-size: 14px !important;
+    font-weight: 400;
+    text-align: right;
+}
+.popup .info .price {
+    font-weight: 400;
+    text-align: right;
+    color: var(--turquoise-dark);
+}
