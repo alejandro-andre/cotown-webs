@@ -2,15 +2,15 @@
     "folder": "/en",
     "locale": "en_US",
     "pages": {
-        "index": { "url": "index", "title": "Home" },
-        "locations": { "url": "locations", "title": "Locations" },
-        "about": { "url": "about-us", "title": "About us" },
-        "advantages": { "url": "advantages", "title": "Advantages" },
-        "faqs": { "url": "faqs",  "title": "FAQs" },
-        "blog": { "url": "blog", "title": "Blog" },
-        "contact": { "url": "contact", "title": "Contact" },
-        "privacy": { "url": "privacy", "title": "Privacy policies" },
-        "legal": { "url": "aviso-legal", "title": "Legal" },
-        "data-security": { "url": "data-security", "title": "Data security" }
+        "index": { "url": "index", "title": "Home", "description": "" },
+        "locations": { "url": "locations", "title": "Locations", "description": "" },
+        "about": { "url": "about-us", "title": "About us", "description": "" },
+        "advantages": { "url": "advantages", "title": "Advantages", "description": "" },
+        "faqs": { "url": "faqs",  "title": "FAQs", "description": "" },
+        "blog": { "url": "blog", "title": "Blog", "description": "" },
+        "contact": { "url": "contact", "title": "Contact", "description": "" },
+        "privacy": { "url": "privacy", "title": "Privacy policies", "description": "" },
+        "legal": { "url": "aviso-legal", "title": "Legal", "description": "" },
+        "data-security": { "url": "data-security", "title": "Data security", "description": "" }
     }
 }
