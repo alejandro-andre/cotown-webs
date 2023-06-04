@@ -1,0 +1,28 @@
+<section class="first-contain">         
+
+  <h1>{{location | translate('Name', L)}}</h1>
+
+  <div id="video" class="video-loc">
+
+    <div class="video featured-bg-image">
+      <video playsinline="true" width="100%" style="object-fit: cover;" autoplay="true" muted="true" loop="true" preload="auto" controls="1">Sorry, your browser doesn't support embedded videos.<source type="video/mp4" src="https://cotown.com/wp-content/uploads/2022/11/pexels-lazar-krstić-10801859-online-video-cutter.com_.mp4"></video>
+    </div>
+
+    <div class="description text">
+        <p>{{location | translate('Description', L)}}</p>
+        <div class="expansion">
+          <input type="checkbox" class="tab" id="tab1" tabindex="0"/>
+          <div class="content">
+            <p>{{location | translate('Details', L)}}</p>
+          </div>
+          <label name="tab" for="tab1" tabindex="-1" class="tab_lab" role="tab">
+            <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+            <p class="more"><span class="more">Leer más</span></p>
+            <p class="less"><span class="less">Leer menos</span></p>
+          </label>
+        </div>
+    </div>
+
+  </div>
+
+</section>
