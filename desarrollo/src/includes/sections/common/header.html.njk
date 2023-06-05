@@ -78,25 +78,32 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section class="container-header second pure-g">
   <div class="black-line custom-wrapper pure-g" id="blackMenu">
-    <div class="left-nav pure-u-7-8 pure-u-lg-6-24">
-
-      <!-- Reservar (movil) -->
-      <div class="booking pure-u-1-3">
-        <button class="btn-secondary">{% literal texts, 'header-reservar', L %}</button>
-      </div>
+    <div class="left-nav pure-u-1 pure-u-lg-6-24">
+      <!-- MENU (movil) -->
+      <div class="menu pure-u-1-3">
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label class="menu-icon" for="menu-btn ">
+          <em class="icon-flat"></em>
+        </label>       
+      </div>    
 
       <!-- Logo -->
-      <div class="logo pure-u-1-3">
+      <div class="logo pure-u-1-3">        
         <a href="{{langs[L].folder}}/">
           <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
         </a>
       </div>
 
-      <!-- Idioma (movil) -->
+      <!-- Reservar (movil) -->
+      <div class="booking pure-u-1-3">
+        <button class="btn-primary">{% literal texts, 'header-reservar', L %}</button>
+      </div>
+
+      <!-- Idioma (movil)
       <div class="lang pure-u-1-3">
         <img class="lang-img" alt="es de ser Cotowner" src="/assets/img/es.png"></img>
       </div>
-      <a href="#" class="custom-toggle" id="menuToggle"><em class="icon-Piso"></em></a>
+       -->
     </div>
 
     <div class="right-nav pure-u-1-1 pure-u-lg-18-24 pure-menu pure-menu-horizontal custom-can-transform">
