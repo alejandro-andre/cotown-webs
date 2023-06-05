@@ -139,7 +139,7 @@ input[class^="tab"]:checked ~ label p.less {
 }
 .pisos-slider .h2-container h2 {
     text-align: center;
-    width: 100%;
+    width: 50%;
     margin: 0;
     text-transform: uppercase;
 }
@@ -448,7 +448,7 @@ section.necesidades .grid .necesidad .p-text p {
         padding: 0 1em;
     }
     .pisos-slider .h2-container h2 {
-        width: fit-content;
+        width: 69%;
         text-align: left;
     }
     .pisos-slider .h2-container .button-map-mobile {
