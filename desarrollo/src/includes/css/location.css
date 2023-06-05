@@ -376,6 +376,9 @@ section.necesidades .grid .necesidad .p-text p {
     .pisos-slider .h2-container .button-map-mobile {
         display: none;
     }
+    .calendar {
+        display: none;
+    }
 }
 
 /* MOBILE */

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'cotown';
-  src:  url('fonts/cotown.eot?4pwoep');
-  src:  url('fonts/cotown.eot?4pwoep#iefix')  format('embedded-opentype'),
-        url('fonts/cotown.ttf?4pwoep')        format('truetype'),
-        url('fonts/cotown.woff?4pwoep')       format('woff'),
-        url('fonts/cotown.svg?4pwoep#cotown') format('svg');
+  src:  url('fonts/cotown.eot?c0evi3');
+  src:  url('fonts/cotown.eot?c0evi3#iefix') format('embedded-opentype'),
+    url('fonts/cotown.ttf?c0evi3') format('truetype'),
+    url('fonts/cotown.woff?c0evi3') format('woff'),
+    url('fonts/cotown.svg?c0evi3#cotown') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-log-in:before {
+  content: "\e900";
+}
 .icon-arrow-left:before {
   content: "\e901";
 }
@@ -42,6 +45,12 @@
 }
 .icon-arrow-right-hover:before {
   content: "\e908";
+}
+.icon-checkbox-off:before {
+  content: "\e906";
+}
+.icon-checkbox-on:before {
+  content: "\e907";
 }
 .icon-close:before {
   content: "\e909";
@@ -67,14 +76,20 @@
 .icon-writte:before {
   content: "\e910";
 }
-.icon-checkbox-off:before {
-  content: "\e906";
-}
-.icon-checkbox-on:before {
-  content: "\e907";
-}
 .icon-close-round:before {
   content: "\e911";
+}
+.icon-chat:before {
+  content: "\e912";
+}
+.icon-spotify:before {
+  content: "\e913";
+}
+.icon-star:before {
+  content: "\e914";
+}
+.icon-linkedin:before {
+  content: "\e915";
 }
 .icon-facebook-primary:before {
   content: "\e916";
@@ -208,18 +223,6 @@
 .icon-wifi:before {
   content: "\e9b0";
 }
-.icon-log-in:before {
-  content: "\e900";
-}
-.icon-chat:before {
-  content: "\e912";
-}
-.icon-spotify:before {
-  content: "\e913";
-}
-.icon-star:before {
-  content: "\e914";
-}
-.icon-linkedin:before {
-  content: "\e915";
+.icon-calendar:before {
+  content: "\e91b";
 }
