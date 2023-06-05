@@ -33,7 +33,7 @@ p.subtitle {
     z-index: 1;
     order: 1;
 }
-.main-header .left h1 {
+.main-header .left .text-container h1 {
     font-size: 78px;
     line-height:80px;
     margin: 0 0 0.5em;
@@ -46,9 +46,9 @@ p.subtitle {
     height: 40px;
     margin-bottom: 0.5em;
     color: var(--black);
-    border-radius: 0;
+    border: 1.5px solid #D1D1D1;
+    border-radius: 4px;  
     padding-top: 0;
-    border: 0px solid transparent;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     background-image: url(./../img/corchete-down.svg); /*aquí deberás escribir la ruta de la imagen que utilizarás como flecha del desplegable*/
     background-repeat: no-repeat;
@@ -71,11 +71,12 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 }
 .main-header .left .basic-searcher input {
     height: 40px;
-    margin-bottom: 0.5em;
+    margin: 0 0 0.5em 0;
     color: var(--black);
-    border: 0px solid transparent;
+    border: 1.5px solid #D1D1D1;
+    border-radius: 4px;  
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    padding: 0 0.5em;
+    padding: 0 0.2em 0 0.5em;
 }
 .main-header .left .basic-searcher .calendar {
     display: flex;
@@ -83,11 +84,9 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     justify-content: space-between;
     align-items: left;
 }
-.main-header .left .basic-searcher .calendar .from, .main-header .left .basic-searcher .calendar .to {
-    width: 48%;
-}
-.main-header .left .button-search, .main-header .left-mobile .button-search {
-    margin-top: 2em;
+
+.main-header .left .button-search {
+    margin-top: 1.5em;
 }
 .main-header .video {
     position: relative;
@@ -557,6 +556,19 @@ main .container-main .first-contain .text p {
 /* RESPONSIVE
 -------------------------------- */
 
+@media only screen and (min-width: 1024px) {
+    .main-header .video .text-container.mobile {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+    .main-header .left .text-container h1 {
+        font-size: 70px;
+    }
+}
+
+
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
 
@@ -581,70 +593,33 @@ p.subtitle {
     order: 2;
     position: relative;
     width: 100%;
+    margin: -5px 0;
+    padding: 1em 1em 2em;
+}
+.main-header .left .text-container.desktop {
+    display: none;    
+}
+.main-header .video .text-container.mobile {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+.main-header .video .text-container.mobile h1 {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 100%;
+    text-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: left;
+
 }
 .main-header .video {
     position: relative;
     top: 0;
     left: 0;
-    height: 823px;
     max-width: 100%;
     width: 100%;
     order: 1;
-}
-.main-header .left-mobile h1 {
-    font-size: 78px;
-    line-height:80px;
-    position: absolute;
-    top: -10em;
-    width: 50%;
-}
-.main-header .left-mobile .basic-searcher label {
-    font-size: 30px;
-    line-height: 36px;
-    margin-bottom: 0px;
-}
-.main-header .left-mobile .basic-searcher select {
-    margin-bottom: 0.5em;
-    color: var(--black);
-    border-radius: 0;
-    border: 0px solid transparent;
-    background-image: url(./../img/corchete-down.svg); /*aquí deberás escribir la ruta de la imagen que utilizarás como flecha del desplegable*/
-    background-repeat: no-repeat;
-    background-position: right center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-}
-.main-header .left-mobile .basic-searcher select:focus {
-    border: 0px solid transparent;
-    outline: 0
-}
-.main-header .left-mobile .basic-searcher select::-ms-expand {
-display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
-}
-.main-header .left-mobile .basic-searcher select option {
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid var(--black);
-}
-.main-header .left-mobile .basic-searcher input {
-    height: 40px;
-    margin-bottom: 0.5em;
-    border: 0px solid transparent;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    padding-right: 0.5em;
-}
-.main-header .left-mobile .basic-searcher .from {
-    margin-right: 4%;
-}
-.main-header .left-mobile .button-search {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-.main-header .left-mobile .button-search .btn-outline {
-    margin: 0 1em;
 }
 
 /* LOCALIZACIONES */
@@ -679,10 +654,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 }
 
 /* MOVIL */
-@media only screen and (max-width: 767px) {
-    .main-header .left-mobile h1 {
-        width: 80%;
-    }
+@media only screen and (max-width: 767px) {   
     .servicios .servicios-container .services-cards .card {
         width: calc(100% - 32px);
     }
