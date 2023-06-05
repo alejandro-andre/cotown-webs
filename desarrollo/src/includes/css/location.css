@@ -155,7 +155,6 @@ input[class^="tab"]:checked ~ label p.less {
 .carousel-list.splide__list {
     gap: 6em;
     position: relative;
-    /* padding: 0 30%!important; */
 }
 .splide__slide {
     background-color: var(--white-background);
@@ -465,15 +464,19 @@ section.necesidades .grid .necesidad .p-text p {
         line-height: 19px;
         margin:0
     }
-
     .carousel.desktop {
         display: none;
     }
+
     .pisos.mobile {
         margin-top: 1em;
     }
     .pisos.mobile .piso-contain {
-        margin-top: 1em;
+        margin: 1em 0 2em;
+        background-color: var(--grey-light-background);
+        border: 1px solid var(--grey-light);
+        box-shadow: 0px 20px 30px rgba(22, 22, 22, 0.06);
+        padding: 0 0 1em;
     }
     .pisos.mobile .piso-contain .piso-main .img img {
         object-fit: cover;
@@ -490,7 +493,8 @@ section.necesidades .grid .necesidad .p-text p {
         display: flex;
         flex-flow: column;
         justify-content: stretch;
-        align-items: flex-start;        
+        align-items: flex-start;
+        margin-bottom: 2em;   
     }    
     .pisos.mobile .piso-contain .piso-main .piso .options .type {
         display: flex;
@@ -558,6 +562,38 @@ section.necesidades .grid .necesidad .p-text p {
         align-items: flex-end;
     }
 
+    .piso ul.services-list {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em!important;
+        margin: 0!important;
+        gap: 0.5em;
+        width: fit-content;
+    }
+    .piso .services-list li {
+        background-color: transparent;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0!important;
+    }
+
+    .piso .services-list li img {
+        width: 20px;
+    }
+    .piso .services-list li p {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    
+
+
     .map {
         display: none;
     }
@@ -593,7 +629,8 @@ section.necesidades .grid .necesidad .p-text p {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: flex-start;	
+    align-items: flex-start;
+    margin-top: 0.8em;	
 }
 
 button.date-button {
@@ -606,6 +643,7 @@ button.date-button {
     border: 1.5px solid #D1D1D1;
 	box-sizing: border-box;
     border-radius: 6px;
+    padding: 10px 0 10px 10px;
 }
 button.date-button label.labels {
     width: 100%;
