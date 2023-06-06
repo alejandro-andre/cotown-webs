@@ -74,19 +74,17 @@
   </div>
 </section>
 
-<!-- Menu
+<!-- Menu Desktop Horizontal y Mobile Vertical
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section class="container-header second pure-g">
-  <div class="black-line custom-wrapper pure-g" id="blackMenu">
+  <div class="black-line custom-wrapper pure-g" id="blackMenu"> 
     <div class="left-nav pure-u-1 pure-u-lg-6-24">
       <!-- MENU (movil) -->
-      <div class="menu pure-u-1-3">
-        <input class="menu-btn" type="checkbox" id="menu-btn">
-        <label class="menu-icon" for="menu-btn ">
+      <div class="pure-menu pure-u-1-3">      
+        <a href="#" id="menuLink" class="menu-link" type="button" onclick="mostrarMenuMobile()">
           <em class="icon-flat"></em>
-        </label>       
-      </div>    
-
+        </a>
+      </div>
       <!-- Logo -->
       <div class="logo pure-u-1-3">        
         <a href="{{langs[L].folder}}/">
@@ -106,40 +104,89 @@
        -->
     </div>
 
-    <div class="right-nav pure-u-1-1 pure-u-lg-18-24 pure-menu pure-menu-horizontal custom-can-transform">
-
+    <div class="right-nav pure-u-1-1 pure-u-lg-18-24 pure-menu pure-menu-horizontal custom-can-transform" id="menu">
+      
       <!-- Menu -->
-      <ul class="black-menu pure-menu-list">
-
+      <ul class="black-menu pure-menu-list" id="menu-desplegado">      
+        <! ONLY MOBILE -->
+        <div class="only-mobile-menu pure-u-1-1" id="only-mobile-menu">
+          <div class="only-text pure-u-2-3">
+            Menú
+          </div>
+          <div class="menu-mobile-icons">            
+              <em class="icon-search"></em>
+              <a type="button" onclick="ocultarMenuMobile()"><em class="icon-close"></em></a>
+          </div>          
+        </div>
+        <div class="only-mobile-private pure-u-1-1">
+          <div class="area">
+            <span><em class="icon-user"></em></span>
+            <p>Área privada</p>
+          </div>
+          <div class="lang-mobile">
+            <p>ES</p>
+            <em class="icon-corchete-down"></em>
+          </div>
+        </div>
         <!-- Locations -->
         <li class="locations-dropdown pure-menu-item">
           <div class="locations-container">
             <label class="locations-label">
                 <span class="loc"><a href="{{langs[L].folder}}/{{langs[L].pages['locations'].url}}.html">{{langs[L].pages['locations'].title}}</a></span>
-                <em class="change-value icon icon-corchete-down" for="options"></em>
+                <div class="icons-open-close">
+                  <em class="change-value icon icon-corchete-down" for="options"></em>                  
+                </div>
             </label>
             <div data-toggle="close" class="options-loc">
                 {% for l in locations %}
-                <div class="option-loc"><a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">{{l | translate('Name', L)}}</a></div>
+                <div class="option-loc">
+                  <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
+                  <em class="icon-map-point"></em>
+                    {{l | translate('Name', L)}}
+                  </a>
+                </div>
                 {% endfor %}
             </div>
           </div>
         </li>
 
         <!-- About -->
-        <li class="about"><a href="{{langs[L].folder}}/{{langs[L].pages['about'].url}}.html">{{langs[L].pages['about'].title}}</a></li>
+        <li class="about"><a href="{{langs[L].folder}}/{{langs[L].pages['about'].url}}.html">{{langs[L].pages['about'].title}}</a>
+        </li>
 
         <!-- Advantages -->
-        <li class="advantages"><a href="{{langs[L].folder}}/{{langs[L].pages['advantages'].url}}.html">{{langs[L].pages['advantages'].title}}</a></li>
+        <li class="advantages"><a href="{{langs[L].folder}}/{{langs[L].pages['advantages'].url}}.html">{{langs[L].pages['advantages'].title}}</a>
+        </li>
 
         <!-- Faqs -->
-        <li class="faqs"><a href="{{langs[L].folder}}/{{langs[L].pages['faqs'].url}}.html">{{langs[L].pages['faqs'].title}}</a></li>
+        <li class="faqs"><a href="{{langs[L].folder}}/{{langs[L].pages['faqs'].url}}.html">{{langs[L].pages['faqs'].title}}</a>
+        </li>
 
         <!-- Blog -->
-        <li class="blog"><a href="{{langs[L].folder}}/{{langs[L].pages['blog'].url}}.html">{{langs[L].pages['blog'].title}}</a></li>
+        <li class="blog"><a href="{{langs[L].folder}}/{{langs[L].pages['blog'].url}}.html">{{langs[L].pages['blog'].title}}</a>
+        </li>
 
         <!-- Contact -->
-        <li class="contact"><a href="{{langs[L].folder}}/{{langs[L].pages['contact'].url}}.html">{{langs[L].pages['contact'].title}}</a></li>
+        <li class="contact"><a href="{{langs[L].folder}}/{{langs[L].pages['contact'].url}}.html">{{langs[L].pages['contact'].title}}</a>
+        </li>
+    
+       <!-- MOBILE MENU BOTÓN BOOKING -->
+
+        <li class="only-menu-mobile pure-menu-item">
+          <div class="booking pure-u-1">
+            <button class="btn-secondary">Encuentra mi nuevo hogar
+            <em class="icon-house"></em>
+            </button>
+          </div>
+          
+          <div class="redes-mobile">
+            <a href="{{globals.rrss.wh}}" rel="noopener, noreferrer" target="_blank"><em class="icon-whatsapp-primary"></em></a>
+            <a href="{{globals.rrss.fb}}" rel="noopener, noreferrer" target="_blank"><em class="icon-facebook-primary"></em></a>
+            <a href="{{globals.rrss.in}}" rel="noopener, noreferrer" target="_blank"><em class="icon-linkedin"></em></a>
+            <a href="{{globals.rrss.tk}}" rel="noopener, noreferrer" target="_blank"><em class="icon-tiktok-primary"></em></a>
+          </div>
+        </li>
+
 
       </ul>
 
@@ -148,3 +195,19 @@
 </section>
 
 </header>
+<script>
+
+$(document).ready(main);
+
+
+function mostrarMenuMobile() {
+    document.getElementById('menu-desplegado').style.position = 'absolute';
+    document.getElementById('only-mobile-menu').style.position = 'fixed';
+}
+
+function ocultarMenuMobile() {
+    document.getElementById('menu-desplegado').style.position = 'static';
+    document.getElementById('only-mobile-menu').style.position = 'static';
+}
+
+</script>

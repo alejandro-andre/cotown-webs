@@ -1,4 +1,3 @@
-
 'use strict'
 
 const carousel    = document.querySelector('.carousel-locations')
