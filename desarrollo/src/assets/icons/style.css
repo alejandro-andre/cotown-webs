@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'cotown';
-  src:  url('fonts/cotown.eot?c0evi3');
-  src:  url('fonts/cotown.eot?c0evi3#iefix') format('embedded-opentype'),
-    url('fonts/cotown.ttf?c0evi3') format('truetype'),
-    url('fonts/cotown.woff?c0evi3') format('woff'),
-    url('fonts/cotown.svg?c0evi3#cotown') format('svg');
+  src:  url('fonts/cotown.eot?vaqe7n');
+  src:  url('fonts/cotown.eot?vaqe7n#iefix') format('embedded-opentype'),
+    url('fonts/cotown.ttf?vaqe7n') format('truetype'),
+    url('fonts/cotown.woff?vaqe7n') format('woff'),
+    url('fonts/cotown.svg?vaqe7n#cotown') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -225,4 +225,10 @@
 }
 .icon-calendar:before {
   content: "\e91b";
+}
+.icon-map-point:before {
+  content: "\e91c";
+}
+.icon-house:before {
+  content: "\e91d";
 }
