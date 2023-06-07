@@ -9,29 +9,11 @@
   <div class="container-main">
 
     <!-- main -->
-        <section
-      id="first-slider"
-      class="splide"
-      aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel."
-    >
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="prueba.jpg" alt="">
-          </li>
-          <li class="splide__slide">
-            <img src="prueba.jpg" alt="">
-          </li>
-          <li class="splide__slide">
-            <img src="prueba.jpg" alt="">
-          </li>
-        </ul>
-      </div>
-    </section>
+    {% include 'sections/flat/first.html.njk' %}
    
     
     <!-- services -->
-    {% include 'sections/home/services.html.njk' %}
+    {% include 'sections/locations/services.html.njk' %}
 
   </div>
 </main>
