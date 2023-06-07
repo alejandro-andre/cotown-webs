@@ -25,37 +25,37 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-left:before {
+.icon-ArrowLeft:before {
   content: "\e901";
 }
-.icon-arrow-left:before {
+.icon-Arrow-Left:before {
   content: "\e902";
 }
-.icon-arrow-left-hover:before {
+.icon-ArrowLeftHover:before {
   content: "\e903";
 }
-.icon-arrow-right:before {
+.icon-ArrowRight:before {
   content: "\e904";
 }
-.icon-arrow-right:before {
+.icon-Arrow-Right:before {
   content: "\e905";
 }
-.icon-arrow-right-hover:before {
+.icon-ArrowRightHover:before {
   content: "\e908";
 }
-.icon-close:before {
+.icon-Close:before {
   content: "\e909";
 }
-.icon-corchete-down:before {
+.icon-CorcheteDown:before {
   content: "\e90a";
 }
-.icon-corchete-left:before {
+.icon-CorcheteLeft:before {
   content: "\e90b";
 }
-.icon-corchete-right:before {
+.icon-CorcheteRight:before {
   content: "\e90c";
 }
-.icon-corchete-up:before {
+.icon-CorcheteUp:before {
   content: "\e90d";
 }
 .icon-meh:before {
@@ -67,52 +67,52 @@
 .icon-writte:before {
   content: "\e910";
 }
-.icon-checkbox-off:before {
+.icon-CheckboxOff:before {
   content: "\e906";
 }
-.icon-checkbox-on:before {
+.icon-CheckboxOn:before {
   content: "\e907";
 }
-.icon-close-round:before {
+.icon-CloseRound:before {
   content: "\e911";
 }
-.icon-facebook-primary:before {
+.icon-FacebookPrimary:before {
   content: "\e916";
 }
-.icon-facebook-secondary:before {
+.icon-FacebookSecondary:before {
   content: "\e917";
 }
-.icon-instagram-primary:before {
+.icon-InstagramPrimary:before {
   content: "\e918";
 }
-.icon-instagram-secondary:before {
+.icon-InstagramSecondary:before {
   content: "\e919";
 }
-.icon-loading:before {
+.icon-Loading:before {
   content: "\e91a";
 }
-.icon-flat:before {
+.icon-Piso:before {
   content: "\e91e";
 }
-.icon-search:before {
+.icon-Search:before {
   content: "\e91f";
 }
-.icon-tiktok-primary:before {
+.icon-TiktokPrimary:before {
   content: "\e920";
 }
-.icon-tiktok-secondary:before {
+.icon-TiktokSecondary:before {
   content: "\e921";
 }
-.icon-trash:before {
+.icon-Trash:before {
   content: "\e922";
 }
-.icon-user:before {
+.icon-User:before {
   content: "\e923";
 }
-.icon-whatsapp-primary:before {
+.icon-WhatsappPrimary:before {
   content: "\e924";
 }
-.icon-whatsapp-secondary:before {
+.icon-WhatsappSecondary:before {
   content: "\e925";
 }
 .icon-air-conditioner:before {
@@ -214,12 +214,12 @@
 .icon-chat:before {
   content: "\e912";
 }
-.icon-spotify:before {
+.icon-spoty:before {
   content: "\e913";
 }
 .icon-star:before {
   content: "\e914";
 }
-.icon-linkedin:before {
+.icon-Linkedin:before {
   content: "\e915";
 }

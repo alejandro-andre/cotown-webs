@@ -51,6 +51,6 @@ if (markerArray.length > 0) {
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 
 <script>
-// new Splide('#splide', { type: 'loop', perPage: 3 }).mount();
-new Splide('#sliderMini', { type: 'loop', perPage: 3 }).mount();
+new Splide('#slider', { type: 'loop', gap: '10em' ,focus: 'center', padding: '5rem'}).mount();
+new Splide('#sliderMini', { type: 'loop', perPage: 5 }).mount();
 </script>

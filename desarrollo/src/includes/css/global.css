@@ -836,7 +836,7 @@ transform: scale(1);
     .left-nav .pure-menu {
         display: none;
     }
-    .only-mobile-menu, .only-mobile-private, .only-menu-mobile  {
+    .only-mobile-menu, .only-mobile-private, .black-line .pure-menu.pure-menu-horizontal ul li.only-menu-mobile  {
         display: none;
     }
     .black-line .pure-menu.pure-menu-horizontal ul li .options-loc a .icon-map-point {

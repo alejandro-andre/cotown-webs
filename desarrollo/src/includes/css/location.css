@@ -129,7 +129,7 @@ input[class^="tab"]:checked ~ label p.less {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin: 0 0 4em;
+    margin: 0 0 8em;
 }
 .pisos-slider .h2-container {
     display: flex;
@@ -146,76 +146,83 @@ input[class^="tab"]:checked ~ label p.less {
 .pisos-slider .h2-container h2 span {
     font-weight: 200!important;
 }
-.pisos-slider .carousel {
-    padding: 10% 0;
-}
-.pisos-slider .splide {
-    visibility: visible;
-}
-.carousel-list.splide__list {
-    gap: 6em;
+.carousel {
     position: relative;
+    max-width: 98vw;
 }
-.splide__slide {
+.carousel .splide__slide {
     background-color: var(--white-background);
-    max-width: 748px;
+    max-width: 60vw;
+}
+.carousel .carousel-main-list .splide__slide.is-prev, .carousel .carousel-main-list .splide__slide.is-next {
+    height: 60%;
+    opacity: 0.5;
+    filter: brightness(0.4);
+    margin: 10% 0 10%;
 }
 .splide__slide .ratio img {
     vertical-align: bottom;
     width: 100%;
-}
+} 
 .splide__slide h3 {
     font-size: 78px;
     text-align: left;
     position: absolute;
-    top: 35%;
-    left: 7%;
+    top: 36%;
+    left: 5%;
     color: var(--white);
 }
 .splide__slid .card {
+    width: 60vw;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
 }
 .card-body {
-    padding: 0;
-    width: max-content;
-    padding: 0 0 2em;
+    max-width: 60vw;
+    width: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 4em;
+    margin: 0;
 }
 .types {
-    max-width: 748px;
-    width: fit-content;
+    width: auto;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: center;
     gap: 1em;
 }
 .flex-grow-1 {
-    padding-left: 2em;
-}
+    width: calc(100% - 5em);
+    padding-left: 5em;
+} 
 .room-type {
-    width: 26%;
+    width: 32%;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
     padding: 1.5em 0 0.5em;
-    height: 180px;
+    height: 200px;
 }
 .room-type h4, .room-type p {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5em 0;
+    padding: 0.5em 0.5em;
     margin: 0;
+    max-width: 80%;
 }
 .room-type h4 {
     font-size: 20px;
-    font-weight: 600;    
+    font-weight: 600;
 }
 h4 {
     text-transform: uppercase;
@@ -225,12 +232,15 @@ h4 {
     font-weight: 700;
     line-height: 26px;
 }
-.room-type .text-green p {
+.room-type .text-green {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5em 0 0;
+    padding: 0.5em;
+    max-width: 80%;
+}
+.room-type .text-green p {    
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
@@ -251,10 +261,10 @@ button.green-button.btn-secondary {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .arrow-nav.splide__arrow.splide__arrow--prev {
-    left: 39%;
+    left: 12%;
 }
 .arrow-nav.splide__arrow.splide__arrow--next {
-    right: 39%;
+    right: 12%;
 }
 .arrow-nav.splide__arrow.splide__arrow--prev i, .arrow-nav.splide__arrow.splide__arrow--next i {
     font-size: 34px;
@@ -262,7 +272,7 @@ button.green-button.btn-secondary {
 
 .carousel-mini {
     position: relative;
-    max-width: 748px;
+    width: 59vw;
 }
 .splide.mini {
     padding: 6%;
@@ -293,7 +303,7 @@ button.green-button.btn-secondary {
     padding: 0.5em 0;
     margin: 0;
 }
-.arrow-mini.splide__arrow--prev {
+/* .arrow-mini.splide__arrow--prev {
     left: 0;
 }
 .arrow-mini.splide__arrow--next {
@@ -301,7 +311,7 @@ button.green-button.btn-secondary {
 }
 .arrow-mini.splide__arrow.splide__arrow--prev i, .arrow-mini.splide__arrow.splide__arrow--next i {
     font-size: 20px;
-}
+} */
 
 #map {
     margin: 6em 0;
@@ -365,6 +375,9 @@ section.necesidades .grid .necesidad .p-text p {
     section.necesidades .contain .title h2 {
         width: 86%;
         padding: 0;
+    }
+    .splide__slide h3 {
+        top: 26%;
     }
 }
 

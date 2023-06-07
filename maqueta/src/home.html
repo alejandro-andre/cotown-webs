@@ -72,13 +72,13 @@
                   <em class="icon-Search"></em>
                 </a>
                 <a href="#" class="pure-menu-link">
-                  <em class="icon-whatsapp-primary"></em>
+                  <em class="icon-WhatsappPrimary"></em>
                 </a>
               </li>
               <li class="lang pure-menu-item">
                 <div class="select-container">
                   <label class="selected-option" for="options">
-                    <em class="icon-corchete-down"></em>
+                    <em class="icon-CorcheteDown"></em>
                     <span class="select-value">Español (ES)</span>
                   </label>
                   <div data-toggle="collapsed" class="options">
@@ -125,7 +125,7 @@
               <div class="locations-container">
                 <label class="locations-label">
                   <span class="loc"><a href="#locations">Localizaciones</a></span>
-                  <em class="change-value icon icon-corchete-down" for="options"></em>
+                  <em class="change-value icon icon-CorcheteDown" for="options"></em>
                 </label>
                 <div data-toggle="close" class="options-loc">
                   <div class="option-loc"><a href="#locations">Barcelona</a></div>
@@ -234,10 +234,10 @@
             </div>
             <ul class="arrows">
               <li class="arrow-locations">
-                <em class="icon-corchete-left center"></em>
+                <em class="icon-CorcheteLeft center"></em>
               </li>
               <li class="arrow-locations">
-                <em class="icon-corchete-right center"></em>
+                <em class="icon-CorcheteRight center"></em>
               </li>
             </ul>
             <div class="dots">
@@ -280,27 +280,27 @@
           <div class="servicios-container twelve columns">
             <div class="services-cards">
               <div class="card">
-                <img class="service" alt="serice" src="./assets/icons/common-areas-cleaning.svg">
+                <img class="service" alt="serice" src="./assets/images/icons-green/common-areas-cleaning.svg">
                 <p class="bold">SERVICIO DE LIMPIEZA</p>
                 <p class="text">Mary Poppins se largó por la ventana, pero tenemos reemplazo. Todo controlado, tu descansa.</p>
               </div>
               <div class="card">
-                <img class="service" alt="serice" src="./assets/icons/maintenance.svg">
+                <img class="service" alt="serice" src="./assets/images/icons-green/maintenance.svg">
                 <p class="bold">SERVICIO DE MANTENIMIENTO</p>
                 <p class="text">McGyver al lado de nuestro equipo de mantenimiento, era un aficionado.</p>
               </div>
               <div class="card">
-                <img class="service" alt="serice" src="./assets/icons/wifi.svg">
+                <img class="service" alt="serice" src="./assets/images/icons-green/wifi.svg">
                 <p class="bold">WI-FI</p>
                 <p class="text">Obviamente que va incluido. Qué somos ¿torturadores?</p>
               </div>
               <div class="card">
-                <img class="service" alt="serice" src="./assets/icons/documents.svg">
+                <img class="service" alt="serice" src="./assets/images/icons-green/documents.svg">
                 <p class="bold">APOYO EN TRÁMITES ADMINISTRATIVOS</p>
                 <p class="text">Firmas, papeles, asesoría en empadronamiento… Respira, nosotros nos encargamos.</p>
               </div>
               <div class="card">
-                <img class="service" alt="serice" src="./assets/icons/phone.svg">
+                <img class="service" alt="serice" src="./assets/images/icons-green/phone.svg">
                 <p class="bold">24H DE ASISTENCIA EN EMERGENCIAS</p>
                 <p class="text">Estamos las 24 horas para cualquier urgencia. La invasión alienígena va aparte.</p>
               </div>              
@@ -368,8 +368,8 @@
           </div>
           <div class="last-contain">
             <div class="insta-fb">
-              <em class="icon-instagram-primary"></em>
-              <em class="icon-facebook-primary"></em>
+              <em class="icon-InstagramPrimary"></em>
+              <em class="icon-FacebookPrimary"></em>
             </div>
           </div>
         </section>
@@ -534,10 +534,10 @@
             </div>
             <ul class="arrows">
               <li class="arrow-opinions">
-                <em class="icon-corchete-left center"></em>
+                <em class="icon-CorcheteLeft center"></em>
               </li>
               <li class="arrow-opinions">
-                <em class="icon-corchete-right center"></em>
+                <em class="icon-CorcheteRight center"></em>
               </li>
             </ul>
             <div class="dots">
@@ -553,7 +553,7 @@
 
   <!-- ICONOS CHAT -->
   <section class="iconos-chat">
-    <div class="spotify"><em class="icon-spotify"></em></div>
+    <div class="spoty"><em class="icon-spoty"></em></div>
     <div class="chat"><em class="icon-chat"></em></div>
   </section>
 
@@ -611,10 +611,10 @@
       </div>
       <div class="footer-info pure-g">
         <div class="redes pure-u-2-5">
-          <em class="icon-whatsapp-primary"></em>
-          <em class="icon-tiktok-primary"></em>
-          <em class="icon-facebook-primary"></em><em class="icon-spotify"></em>
-          <em class="icon-instagram-primary"></em>
+          <em class="icon-WhatsappPrimary"></em>
+          <em class="icon-TiktokPrimary"></em>
+          <em class="icon-FacebookPrimary"></em><em class="icon-spoty"></em>
+          <em class="icon-InstagramPrimary"></em>
           <em class="icon-Linkedin"></em>
         </div>
         <div class="info pure-u-3-5">
@@ -634,14 +634,14 @@
     const selectValue = document.querySelector('.select-value')
     const optionContainer = document.querySelector('.options')
     const optionList = document.querySelectorAll('.option')
-    const selectElement = document.querySelector('.icon-corchete-down')   
+    const selectElement = document.querySelector('.icon-CorcheteDown')   
     const selectToggle = () => {
       if (optionContainer.dataset.toggle == 'collapsed') {
         optionContainer.dataset.toggle = '';
-        selectElement.classList.replace('icon-corchete-down', 'icon-corchete-up');
+        selectElement.classList.replace('icon-CorcheteDown', 'icon-CorcheteUp');
       } else {
         optionContainer.dataset.toggle = 'collapsed';
-        selectElement.classList.replace('icon-corchete-up', 'icon-corchete-down');
+        selectElement.classList.replace('icon-CorcheteUp', 'icon-CorcheteDown');
       }
     }
     /** When click on locotion-option */
@@ -654,7 +654,7 @@
       option.addEventListener('click', (e) => {
         updateSelectValue(option)
         selectToggle()
-        selectElement.classList.replace('icon-corchete-up', 'icon-corchete-down');
+        selectElement.classList.replace('icon-CorcheteUp', 'icon-CorcheteDown');
       })
     })
 
@@ -663,14 +663,14 @@
     const Value = document.querySelector('.chang-value')
     const optionContain = document.querySelector('.options-loc')
     const option = document.querySelectorAll('.option-loc')
-    const selectIcon = document.querySelector('.icon.icon-corchete-down')  
+    const selectIcon = document.querySelector('.icon.icon-CorcheteDown')  
     const changeToggle = () => {
       if (optionContain.dataset.toggle == 'close') {
         optionContain.dataset.toggle = '';
-        selectIcon.classList.replace('icon-corchete-down', 'icon-corchete-up');
+        selectIcon.classList.replace('icon-CorcheteDown', 'icon-CorcheteUp');
       } else {
         optionContain.dataset.toggle = 'close';
-        selectIcon.classList.replace('icon-corchete-up', 'icon-corchete-down');
+        selectIcon.classList.replace('icon-CorcheteUp', 'icon-CorcheteDown');
       }
     }
     /** When click on selected-option */
@@ -678,7 +678,7 @@
     option.forEach((option) => {
       option.addEventListener('click', (e) => {
         changeToggle()
-        selectIcon.classList.replace('icon-corchete-up', 'icon-corchete-down');
+        selectIcon.classList.replace('icon-CorcheteUp', 'icon-CorcheteDown');
       })
     })   
 
