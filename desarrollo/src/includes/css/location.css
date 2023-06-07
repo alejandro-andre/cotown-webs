@@ -7,7 +7,7 @@ main .location .container-main .first-contain {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin: 0 0 4em;
+    margin: 0 0 2em;
 }
 main .location .container-main .first-contain h1 {
     width: 100%;
@@ -150,9 +150,9 @@ input[class^="tab"]:checked ~ label p.less {
     position: relative;
     max-width: 98vw;
 }
-.carousel .splide__slide {
+.carousel .carousel-main-list .splide__slide {
     background-color: var(--white-background);
-    max-width: 60vw;
+    max-width: 60vw;   
 }
 .carousel .carousel-main-list .splide__slide.is-prev, .carousel .carousel-main-list .splide__slide.is-next {
     height: 60%;
@@ -160,19 +160,19 @@ input[class^="tab"]:checked ~ label p.less {
     filter: brightness(0.4);
     margin: 10% 0 10%;
 }
-.splide__slide .ratio img {
+.carousel .carousel-main-list .splide__slide .ratio.desktop img {
     vertical-align: bottom;
     width: 100%;
 } 
-.splide__slide h3 {
+.carousel .carousel-main-list .splide__slide h3 {
     font-size: 78px;
     text-align: left;
     position: absolute;
-    top: 32%;
+    top: 35%;
     left: 5%;
     color: var(--white);
 }
-.splide__slid .card {
+.carousel .carousel-main-list  .splide__slid .card.desktop {
     width: 60vw;
     display: flex;
     flex-flow: column;
@@ -187,7 +187,7 @@ a {
     text-decoration:none;
     color: var(--black);
 }
-.card-body {
+.carousel .carousel-main-list .card .card-body {
     max-width: 60vw;
     width: auto;
     display: flex;
@@ -287,18 +287,16 @@ button.green-button.btn-secondary {
     visibility: visible;
 }
 .carousel-mini.splide__list {
-    gap: 2em;
     position: relative;
     padding: 0 2em!important;
 }
 .splide__slide .ratio.carousel-ratio {
-    max-width: 120px;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 0;
+    padding: 0 2em;
 }
 .splide__slide .ratio.carousel-ratio img {
     width: 40px;
@@ -377,8 +375,8 @@ section.necesidades .grid .necesidad .p-text p {
         width: 86%;
         padding: 0;
     }
-    .splide__slide h3 {
-        top: 26%;
+    .carousel .carousel-main-list .splide__slide h3 {
+        top: 23%;
     }
 }
 
@@ -390,8 +388,13 @@ section.necesidades .grid .necesidad .p-text p {
         display: none;
     }
     .calendar {
-        display: none;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2em 04em;
     }
+
 }
 
 /* MOBILE */
