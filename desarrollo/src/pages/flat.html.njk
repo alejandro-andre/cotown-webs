@@ -1,0 +1,34 @@
+
+<!-- Additional HEAD content -->
+{% block head %}
+<link rel="stylesheet" href="/assets/css/flat.css">
+{% endblock %}
+
+<!-- Main -->
+<main class="flat">
+  <div class="container-main">
+
+    <!-- main -->
+   
+    
+    <!-- services -->
+    {% include 'sections/home/services.html.njk' %}
+
+  </div>
+</main>
+
+<script>
+  new Splide(".splide-services", {
+    type: 'loop',
+    autoHeight: true,
+    focus: 0,
+    perPage: 3,
+    perMove: 1,
+    padding: '10em',
+    gap: '10em',
+    breakpoints: {
+      1024: { perPage: 2 },
+      768: { perPage: 1, padding: 0 },
+    },
+  }).mount();   
+</script>
