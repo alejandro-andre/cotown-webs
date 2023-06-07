@@ -716,7 +716,7 @@ footer section.container-footer .footer-info .info {
         padding: 0.2em 4em;
         width: 100%;
     }
-    .black-line .booking, .black-line .lang, .black-line .black-line em.icon-flat {
+    .black-line .booking, .black-line .lang, .black-line .black-line em.icon-Piso {
         display: none;
     }
     footer .container-footer .contain .right .footer-info.mobile {
@@ -837,12 +837,12 @@ footer section.container-footer .footer-info .info {
     .custom-toggle {
         display: block;
     }
-    .custom-toggle em.icon-flat{
+    .custom-toggle em.icon-Piso{
         color: var(--turquoise-light);
         cursor: pointer;
         font-size: 24px;
     }
-    .custom-toggle.x em.icon-flat {
+    .custom-toggle.x em.icon-Piso {
         color: var(--white);
      }
      .black-line .pure-menu.pure-menu-horizontal ul.pure-menu-list {
@@ -861,7 +861,7 @@ footer section.container-footer .footer-info .info {
         padding: 0.5em 2em 0.5em 0;
         gap: 0;
     }
-    .iconos-chat .spotify {
+    .iconos-chat .spoty {
         display: none;
     }
     main .container-main .first-contain .title-big {
