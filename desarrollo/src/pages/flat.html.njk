@@ -25,19 +25,22 @@ tags: page
 {% endblock %}
 
 <!-- Main -->
-<main class="flat">
+<main class="flat pure-u-1">
   <div class="container-main pure-u-1">
-
     <!-- main -->
     <section class="first">
     {% include 'sections/flat/first.html.njk' %}    
     </section>
-    <section class="rooms">
+    <section class="rooms pure-u-7-8">
     {% include 'sections/flat/rooms.html.njk' %}
     </section>
-    <section class="rooms">
-    {% include 'sections/flat/last.html.njk' %}
-    {% include 'sections/flat/services.html.njk' %}
+    <section class="last pure-u-7-8">   
+      <div class="last-zone pure-u-1">
+        {% include 'sections/flat/last.html.njk' %}
+      </div>
+      <div class="last-services pure-u-1">
+        {% include 'sections/flat/services.html.njk' %}
+      </div>
     </section>
   </div>
 </main>

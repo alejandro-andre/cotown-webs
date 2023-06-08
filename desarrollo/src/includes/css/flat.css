@@ -1,3 +1,9 @@
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
 .first .first-contain .first-slider .splide__slide img {
   width: 100%;
   height: auto;
@@ -8,13 +14,39 @@
     height: 100%;
     object-fit: cover;
 }
+.rooms {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center; 
+  padding: 1em 5em;
+  background-color: lightsalmon;
+}
 
 .last {
-
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; 
+  padding: 1em 5em;
+  background-color: lightblue;
 }
 .last h2 {
   text-transform: uppercase;
 }
 .last h2 span {
   color: var(--turquoise-light);
+}
+.last .last-zone, .last .last-services {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.last-services .servicios-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
 }
