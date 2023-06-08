@@ -7,7 +7,7 @@ main .location .container-main .first-contain {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin: 0 0 4em;
+    margin: 0 0 2em;
 }
 main .location .container-main .first-contain h1 {
     width: 100%;
@@ -148,45 +148,55 @@ input[class^="tab"]:checked ~ label p.less {
 }
 .carousel {
     position: relative;
-    max-width: 98vw;
+    max-width: 99vw;
+    height: auto;
 }
-.carousel .splide__slide {
+.carousel .carousel-main-list .splide__slide {
     background-color: var(--white-background);
-    max-width: 60vw;
+    max-width: 50vw;
 }
-.carousel .carousel-main-list .splide__slide.is-prev, .carousel .carousel-main-list .splide__slide.is-next {
-    height: 60%;
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev, .carousel .carousel-main-list .main-slide.splide__slide.is-next {
     opacity: 0.5;
     filter: brightness(0.4);
-    margin: 10% 0 10%;
 }
-.splide__slide .ratio img {
+.carousel .carousel-main-list .splide__slide .ratio.desktop {
+    position: relative;
+}
+.carousel .carousel-main-list .splide__slide .ratio.desktop img {
     vertical-align: bottom;
     width: 100%;
 } 
-.splide__slide h3 {
+.carousel .carousel-main-list .splide__slide h3 {
     font-size: 78px;
     text-align: left;
     position: absolute;
-    top: 36%;
-    left: 5%;
+    bottom: 40px;
+    left: 20px;
     color: var(--white);
 }
-.splide__slid .card {
-    width: 60vw;
+.carousel .carousel-main-list  .splide__slid .card.desktop {
+    width: 50vw;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    text-decoration:none;
+    color: var(--black);
 }
-.card-body {
-    max-width: 60vw;
+a {
+    cursor: pointer;
+    text-decoration:none;
+    color: var(--black);
+}
+.carousel .carousel-main-list .card .card-body {
+    max-width: 50vw;
     width: auto;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 0 0 4em;
+    padding: 0;
     margin: 0;
 }
 .types {
@@ -261,10 +271,10 @@ button.green-button.btn-secondary {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .arrow-nav.splide__arrow.splide__arrow--prev {
-    left: 12%;
+    left: 18%;
 }
 .arrow-nav.splide__arrow.splide__arrow--next {
-    right: 12%;
+    right: 18%;
 }
 .arrow-nav.splide__arrow.splide__arrow--prev i, .arrow-nav.splide__arrow.splide__arrow--next i {
     font-size: 34px;
@@ -272,18 +282,23 @@ button.green-button.btn-secondary {
 
 .carousel-mini {
     position: relative;
-    width: 59vw;
+    width: 50vw;
 }
 .splide.mini {
     padding: 6%;
+    visibility: visible;
 }
-.carousel-mini.splide__list {
-    gap: 2em;
+.carousel-mini .splide__list {
     position: relative;
     padding: 0 2em!important;
 }
+.carousel-mini .splide__slide.is-prev, .carousel-mini .splide__slide.is-next {
+    opacity: 1;
+    filter: none;
+    margin: 0;
+}
+
 .splide__slide .ratio.carousel-ratio {
-    max-width: 120px;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -303,15 +318,7 @@ button.green-button.btn-secondary {
     padding: 0.5em 0;
     margin: 0;
 }
-/* .arrow-mini.splide__arrow--prev {
-    left: 0;
-}
-.arrow-mini.splide__arrow--next {
-    right: 0;
-}
-.arrow-mini.splide__arrow.splide__arrow--prev i, .arrow-mini.splide__arrow.splide__arrow--next i {
-    font-size: 20px;
-} */
+
 
 #map {
     margin: 6em 0;
@@ -376,8 +383,8 @@ section.necesidades .grid .necesidad .p-text p {
         width: 86%;
         padding: 0;
     }
-    .splide__slide h3 {
-        top: 26%;
+    .carousel .carousel-main-list .splide__slide h3 {
+        bottom: 1%;
     }
 }
 
@@ -389,8 +396,13 @@ section.necesidades .grid .necesidad .p-text p {
         display: none;
     }
     .calendar {
-        display: none;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2em 04em;
     }
+
 }
 
 /* MOBILE */
@@ -580,8 +592,8 @@ section.necesidades .grid .necesidad .p-text p {
         flex-flow: row;
         justify-content: center;
         align-items: center;
-        padding: 0 1em!important;
-        margin: 0!important;
+        padding: 0 1em;
+        margin: 0 auto;
         gap: 0.5em;
         width: fit-content;
     }
