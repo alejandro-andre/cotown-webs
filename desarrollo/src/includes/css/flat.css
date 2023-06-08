@@ -48,5 +48,19 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+.last-services .servicios-container .text-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+
+.last-services .servicios-container .services-cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   background-color: aqua;
 }
