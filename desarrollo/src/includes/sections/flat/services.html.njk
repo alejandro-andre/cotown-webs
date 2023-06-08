@@ -1,0 +1,25 @@
+<section class="servicios">
+
+  <div class="text-container">
+    <h2 class="title twelve columns">SERVICIOS INCLUIDOS</h2>
+  </div>
+
+  <div class="servicios-container twelve columns">
+    <div class="services-cards">
+
+      {% for s in services %}
+      <div class="card">
+        {% image 
+            constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token, 
+            s.Name, s.Name|slug, "",
+            [100], ""
+        %}
+        <p class="bold">{{s | translate('Name', L)}}</p>
+        <p class="text">{{s | translate('Description', L)}}</p>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+
+</section>

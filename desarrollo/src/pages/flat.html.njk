@@ -35,36 +35,10 @@ tags: page
     <section class="rooms">
     {% include 'sections/flat/rooms.html.njk' %}
     </section>
-   
-    
-    <!-- services -->
-    <section class="map-services">
-      <div id="splideServices" class="carousel splide splide-services" role="group">
-        <div class="splide__track">
-          <ul class="splide__list">
-
-            {% for s in services %}
-            <li class="splide__slide">
-              <div class="slide">
-                <div class="img">
-                  {% image 
-                      constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token, 
-                      s.Name, s.Name|slug, "",
-                      [100], ""
-                  %}
-                </div>
-              <h3 class="title">{{s | translate('Name', L)}}</h3>
-              <p class="text">{{s | translate('Description', L)}}</p>
-              </div>            
-            </li>
-            {% endfor %}
-
-          </ul>
-        </div>
-      </div>
+    <section class="rooms">
+    {% include 'sections/flat/last.html.njk' %}
+    {% include 'sections/flat/services.html.njk' %}
     </section>
-   
-
   </div>
 </main>
 
@@ -124,7 +98,7 @@ thumbnails.mount();
     gap: '1em',
     breakpoints: {
       1024: { perPage: 4 },
-      768: { perPage: 2, padding: 0.5em },
+      768: { perPage: 2, padding: '0.5em' },
     },
   }).mount();   
 </script>

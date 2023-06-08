@@ -11,6 +11,7 @@
         "contact": { "url": "contacto", "title": "Contacto", "description": "" },
         "privacy": { "url": "politica-privacidad", "title": "Política de privacidad", "description": "" },
         "legal": { "url": "aviso-legal", "title": "Aviso legal", "description": "" },
-        "data-security": { "url": "seguridad-datos", "title": "Seguridad y datos", "description": "" }
+        "data-security": { "url": "seguridad-datos", "title": "Seguridad y datos", "description": "" },
+        "flat": { "url": "flat", "title": "flat", "description": "" }
     }
 }

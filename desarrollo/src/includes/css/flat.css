@@ -1,3 +1,7 @@
+.first .first-contain .first-slider .splide__slide img {
+  width: 100%;
+  height: auto;
+}
 
 .first .first-slider .splide__slide img, .rooms .splide__slide img {
     width: 100%;
@@ -5,40 +9,12 @@
     object-fit: cover;
 }
 
-/* SERVICIOS 
--------------------------------- */
-.servicios {
-  width: 100%;
-  text-align: center;
-  margin: 6em 0 4em;
+.last {
+
 }
-.servicios .text-container h2.title {
-  font-size: 78px;
-  line-height: 1;
-  font-weight: 400;
+.last h2 {
+  text-transform: uppercase;
 }
-.servicios p.subtitle {
-  font-size: 30px;
-}
-.servicios .slide  {
-overflow: hidden;
-}
-.servicios .slide h3 {
-width: 100%!important;
-color: var(--black);
-margin-bottom: 0;
-letter-spacing: 0.1rem;
-}
-.servicios  .slide p {
-font-size: 16px;
-line-height: 150%;
-font-weight: 500;
-}
-.servicios .slide .img  {
-height: 100px;
-}
-.servicios .img img  {
-width: 100%;
-height: 100%;
-object-fit: contain;
+.last h2 span {
+  color: var(--turquoise-light);
 }
