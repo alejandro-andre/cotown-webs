@@ -1,0 +1,69 @@
+
+<!-- Additional HEAD content -->
+{% block head %}
+<link rel="stylesheet" href="/assets/css/flat.css">
+{% endblock %}
+
+<!-- Main -->
+<main class="flat">
+  <div class="container-main">
+
+    <!-- main -->
+    {% include 'sections/flat/first.html.njk' %}
+   
+    
+    <!-- services -->
+    {% include 'sections/locations/services.html.njk' %}
+
+  </div>
+</main>
+
+<script>
+  new Splide(".splide-services", {
+    type: 'loop',
+    autoHeight: true,
+    focus: 0,
+    perPage: 3,
+    perMove: 1,
+    padding: '10em',
+    gap: '10em',
+    breakpoints: {
+      1024: { perPage: 2 },
+      768: { perPage: 1, padding: 0 },
+    },
+  }).mount();   
+</script>
+<script>
+ new Splide( '#first-slider', {
+  type       : 'fade',
+  heightRatio: 0.5,
+  pagination : false,
+  arrows     : false,
+  cover      : true,
+} );
+
+new Splide( '#thumbnail-slider', {
+  rewind          : true,
+  fixedWidth      : 104,
+  fixedHeight     : 58,
+  isNavigation    : true,
+  gap             : 10,
+  focus           : 'center',
+  pagination      : false,
+  cover           : true,
+  dragMinThreshold: {
+    mouse: 4,
+    touch: 10,
+  },
+  breakpoints : {
+    640: {
+      fixedWidth  : 66,
+      fixedHeight : 38,
+    },
+  },
+} );
+
+main.sync( thumbnails );
+main.mount();
+thumbnails.mount();
+</script>
