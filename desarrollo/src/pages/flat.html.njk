@@ -1,40 +1,62 @@
+---
+name: flat
+eleventyComputed:
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+layout: layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true   
 
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
 <!-- Additional HEAD content -->
 {% block head %}
 <link rel="stylesheet" href="/assets/css/flat.css">
 {% endblock %}
 
 <!-- Main -->
-<main class="flat">
-  <div class="container-main">
-
+<main class="flat pure-u-1">
+  <div class="container-main pure-u-1">
     <!-- main -->
-    {% include 'sections/flat/first.html.njk' %}
-   
-    
-    <!-- services -->
-    {% include 'sections/locations/services.html.njk' %}
-
+    <section class="first">
+    {% include 'sections/flat/first.html.njk' %}    
+    </section>
+    <section class="rooms pure-u-7-8">
+    {% include 'sections/flat/rooms.html.njk' %}
+    </section>
+    <section class="last pure-u-7-8">   
+      <div class="last-zone pure-u-1">
+        {% include 'sections/flat/last.html.njk' %}
+      </div>
+      <div class="last-services pure-u-1">
+        {% include 'sections/flat/services.html.njk' %}
+      </div>
+    </section>
   </div>
 </main>
 
+
 <script>
-  new Splide(".splide-services", {
-    type: 'loop',
-    autoHeight: true,
-    focus: 0,
-    perPage: 3,
-    perMove: 1,
-    padding: '10em',
-    gap: '10em',
-    breakpoints: {
-      1024: { perPage: 2 },
-      768: { perPage: 1, padding: 0 },
-    },
-  }).mount();   
+new Splide( '#image-carousel', {
+  type  : 'fade',
+  rewind: true,
+} );
+splide.mount();
 </script>
+
+
 <script>
- new Splide( '#first-slider', {
+ new Splide( '#main-slider', {
   type       : 'fade',
   heightRatio: 0.5,
   pagination : false,
@@ -66,4 +88,20 @@ new Splide( '#thumbnail-slider', {
 main.sync( thumbnails );
 main.mount();
 thumbnails.mount();
+</script>
+
+
+<script>
+  new Splide("#splideServices", {
+    type: 'loop',
+    autoHeight: true,
+    focus: 0,
+    perPage: 8,
+    perMove: 1,
+    gap: '1em',
+    breakpoints: {
+      1024: { perPage: 4 },
+      768: { perPage: 2, padding: '0.5em' },
+    },
+  }).mount();   
 </script>
