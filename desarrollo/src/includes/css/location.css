@@ -324,7 +324,7 @@ button.green-button.btn-secondary {
     margin: 6em 0;
 }
 
-section.necesidades {
+section.necesities {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -332,21 +332,21 @@ section.necesidades {
     padding: 0 4em;
     margin: 4em 0 6em;
 }
-section.necesidades .contain {
+section.necesities .contain {
     display: flex;
     flex-flow: row wrap;    
 }
-section.necesidades .contain .title h2 {
+section.necesities .contain .title h2 {
     width: 60%;
     padding: 0 0 0 2em;
 }
-section.necesidades .contain .text p {
+section.necesities .contain .text p {
     font-weight: 300;
     font-size: 22px;
     line-height: 150%;
     width: 80%;
 }
-section.necesidades .grid {
+section.necesities .grid {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -354,32 +354,32 @@ section.necesidades .grid {
     padding: 0 0 0 10em;
 }
 
-section.necesidades .grid .necesidad img {
+section.necesities .grid .necesidad img {
     width: 75px;
     padding: 1em 0 .5em;
 }
-section.necesidades .grid .necesidad .p-title p {
+section.necesities .grid .necesidad .p-title p {
     font-weight: 700;
     font-size: 30px;
     line-height: 150%;
     margin: 0 0 1em;
 }
 
-section.necesidades .grid .necesidad .p-text p {
+section.necesities .grid .necesidad .p-text p {
     font-weight: 500;
     font-size: 22px;
     line-height: 150%;
     margin: 0;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1400px){
-    section.necesidades {
+    section.necesities {
         padding: 0 2em;
     }
-    section.necesidades .grid.pure-u-lg-3-4 {
+    section.necesities .grid.pure-u-lg-3-4 {
         padding: 0 1em;
         width: 90%;
     }
-    section.necesidades .contain .title h2 {
+    section.necesities .contain .title h2 {
         width: 86%;
         padding: 0;
     }
@@ -623,23 +623,23 @@ section.necesidades .grid .necesidad .p-text p {
         display: none;
     }
 
-    section.necesidades {
+    section.necesities {
         justify-content: flex-start;
         align-items: center;
         padding: 0 1em;
         margin: 2em 0;
     }
 
-    section.necesidades .grid {
+    section.necesities .grid {
         align-items: center;
         padding: 0;
     }
-    section.necesidades .contain .title h2 {
+    section.necesities .contain .title h2 {
         width: 100%;
         padding: 0;
         text-align: left;
     }
-    section.necesidades .contain .text p {
+    section.necesities .contain .text p {
         width: 100%;
         font-size: 14px;
         line-height: 150%;
