@@ -1,5 +1,5 @@
 <section class="first-contain pure-u-1">
-  <section id="image-carousel" class="splide first-slider" aria-label="Beautiful Images">
+  <section id="image-carousel" class="splide first-slider pure-u-1" aria-label="Beautiful Images">
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide">
@@ -15,19 +15,17 @@
     </div>
   </section>
 
+    <div class="text-first pure-u-1 pure-u-lg-4-5">
+      <p>
+      ¿Hay algo más barcelonés y mítico que la Sagrada Família? Ahora imagina vivir a tan sólo 5 minutos andando de semejante monumento. Nàpols 206 es el lugar perfecto tanto para callejear por las calles más interesantes de toda la ciudad como para ser todo un/a Bill Gates petándolo en tu negocio/trabajo desde casa. 
+      Disfrutarás de un pisazo con zonas comunes dignas de un “House Tour” de revista y habitaciones totalmente equipadas para que tus jornadas laborales se conviertan en una zona de confort y relax.
+      Un consejo: si quieres ser un auténtic@ #feelinglocal, deja el brunch a un lado y pásate al tapeo por la Dreta de l’Eixample. ​
+      </p>
+    </div>
 
-
-  <div class="text-first">
-    <p>
-    ¿Hay algo más barcelonés y mítico que la Sagrada Família? Ahora imagina vivir a tan sólo 5 minutos andando de semejante monumento. Nàpols 206 es el lugar perfecto tanto para callejear por las calles más interesantes de toda la ciudad como para ser todo un/a Bill Gates petándolo en tu negocio/trabajo desde casa. 
-    Disfrutarás de un pisazo con zonas comunes dignas de un “House Tour” de revista y habitaciones totalmente equipadas para que tus jornadas laborales se conviertan en una zona de confort y relax.
-    Un consejo: si quieres ser un auténtic@ #feelinglocal, deja el brunch a un lado y pásate al tapeo por la Dreta de l’Eixample. ​
-    </p>
-  </div>
-
-    
+      
     <!-- services -->
-    <section class="map-services">
+    <section class="flat-services pure-u-23-24">
       <div id="splideServices" class="splide splide-services" role="group">
         <div class="splide__track">
           <ul class="splide__list">
@@ -39,11 +37,10 @@
                   {% image 
                       constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token, 
                       s.Name, s.Name|slug, "",
-                      [100], ""
+                      [50], ""
                   %}
                 </div>
-              <h3 class="title">{{s | translate('Name', L)}}</h3>
-              <p class="text">{{s | translate('Description', L)}}</p>
+              <p class="title">{{s | translate('Name', L)}}</p>
               </div>            
             </li>
             {% endfor %}
@@ -54,5 +51,4 @@
     </section>
 
 </section>
-
 
