@@ -45,40 +45,42 @@
         </div>   
         <ul class="splide__list carousel-main-list"> 
           <li class="splide__slide main-slide">
-            <div class="card shadow desktop">
-                <div class="ratio desktop">
-                  <a href="flat.html">
-                    <img src="/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
-                    <h3>NÀPOLES</h3>
-                  </a>
-                </div>
-                <div class="card-body d-flex flex-column">
+            <div class="card-contain">
+              <div class="card shadow desktop">
+                  <div class="ratio desktop">
                     <a href="flat.html">
-                      <div class="flex-grow-1">
-                          <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                      </div>
-                      <div class="types">
-                        <div class="room-type">
-                          <img src="/assets/icons/shared-room.png">
-                          <h4>HABITACIÓN CONPARTIDA</h4>
-                          <p>Desde XXX€/mes</p>                            
-                        </div>
-                        <div class="room-type">
-                          <img src="/assets/icons/individual-room.png">
-                          <h4>HABITACIÓN INDIVIDUAL</h4>
-                          <p>Desde XXX€/mes</p>
-                          <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
-                        </div>
-                        <div class="room-type">
-                          <img src="/assets/icons/llaves.png">
-                          <h4>APARTEMENTO CONPARTIDA</h4>  
-                          <button class="btn-secondary green-button">Ver más</button>
-                        </div>
-                      </div>
+                      <img src="/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+                      <h3>NÀPOLES</h3>
                     </a>
-                    <!-- CAROUSEL INTERNO -->
-                    {% include 'sections/location/carousel-interno.njk' %}                    
-                </div>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                      <a href="flat.html">
+                        <div class="flex-grow-1">
+                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
+                        </div>
+                        <div class="types">
+                          <div class="room-type">
+                            <img src="/assets/icons/shared-room.png">
+                            <h4>HABITACIÓN CONPARTIDA</h4>
+                            <p>Desde XXX€/mes</p>                            
+                          </div>
+                          <div class="room-type">
+                            <img src="/assets/icons/individual-room.png">
+                            <h4>HABITACIÓN INDIVIDUAL</h4>
+                            <p>Desde XXX€/mes</p>
+                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
+                          </div>
+                          <div class="room-type">
+                            <img src="/assets/icons/llaves.png">
+                            <h4>APARTEMENTO CONPARTIDA</h4>  
+                            <button class="btn-secondary green-button">Ver más</button>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- CAROUSEL INTERNO -->
+                      {% include 'sections/location/carousel-interno.njk' %}                    
+                  </div>
+              </div>
             </div>
           </li>
         </ul>           

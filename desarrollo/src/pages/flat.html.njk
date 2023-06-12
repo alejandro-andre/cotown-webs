@@ -28,7 +28,7 @@ tags: page
 <main class="flat pure-u-1">
   <div class="container-main pure-u-1">
     <!-- main -->
-    <section class="first">
+    <section class="first pure-u-1">
     {% include 'sections/flat/first.html.njk' %}    
     </section>
     <section class="rooms pure-u-7-8">
@@ -50,53 +50,18 @@ tags: page
 new Splide( '#image-carousel', {
   type  : 'fade',
   rewind: true,
-} );
-splide.mount();
+  perPage: 1,
+  pagination: true,  
+  cover: true,
+  }).mount();
 </script>
-
-
-<script>
- new Splide( '#main-slider', {
-  type       : 'fade',
-  heightRatio: 0.5,
-  pagination : false,
-  arrows     : false,
-  cover      : true,
-} );
-
-new Splide( '#thumbnail-slider', {
-  rewind          : true,
-  fixedWidth      : 104,
-  fixedHeight     : 58,
-  isNavigation    : true,
-  gap             : 10,
-  focus           : 'center',
-  pagination      : false,
-  cover           : true,
-  dragMinThreshold: {
-    mouse: 4,
-    touch: 10,
-  },
-  breakpoints : {
-    640: {
-      fixedWidth  : 66,
-      fixedHeight : 38,
-    },
-  },
-} );
-
-main.sync( thumbnails );
-main.mount();
-thumbnails.mount();
-</script>
-
 
 <script>
   new Splide("#splideServices", {
     type: 'loop',
     autoHeight: true,
     focus: 0,
-    perPage: 8,
+    perPage: 6,
     perMove: 1,
     gap: '1em',
     breakpoints: {
@@ -104,4 +69,41 @@ thumbnails.mount();
       768: { perPage: 2, padding: '0.5em' },
     },
   }).mount();   
+</script>
+
+<script>
+  var splide = new Splide("#main-slider", {
+    width: 747,
+    height: 528,
+    pagination: false,
+    cover: true
+  });
+
+  var thumbnails = document.getElementsByClassName("thumbnail");
+  var current;
+
+  for (var i = 0; i < thumbnails.length; i++) {
+    initThumbnail(thumbnails[i], i);
+  }
+
+  function initThumbnail(thumbnail, index) {
+    thumbnail.addEventListener("click", function () {
+      splide.go(index);
+    });
+  }
+
+  splide.on("mounted move", function () {
+    var thumbnail = thumbnails[splide.index];
+
+    if (thumbnail) {
+      if (current) {
+        current.classList.remove("is-active");
+      }
+
+      thumbnail.classList.add("is-active");
+      current = thumbnail;
+    }
+  });
+
+  splide.mount();
 </script>
