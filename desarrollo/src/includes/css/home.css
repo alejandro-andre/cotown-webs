@@ -10,6 +10,11 @@ p.subtitle {
     font-size: 30px;
     margin-top: 0;
 }
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* MAIN 
 -------------------------------- */
@@ -242,7 +247,7 @@ main .container-main .first-contain .text p {
     transition: width 0.25s ease-in-out;    
 }
 
-/* SERVICIOS 
+    /* SERVICIOS 
 -------------------------------- */
 
 .servicios {
