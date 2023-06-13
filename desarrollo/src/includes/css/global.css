@@ -879,11 +879,7 @@ footer section.container-footer .footer-info.mobile {
 
 /* SPLIDE GENERAL
 -------------------------------- */
-.splide__slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 .splide__arrow {
 background-color: var(--turquoise-light);
 width: 3em;

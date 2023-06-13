@@ -157,7 +157,9 @@ a {
 .carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .room-type , .carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .room-type {
     padding: 0;
 }
-
+.carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type img {
+    width: 46px;
+}
 .room-type h4, .room-type p {
     display: flex;
     flex-flow: column;
