@@ -178,6 +178,89 @@ button {
     color: var(--turquoise-dark);
 }
 
+/* EXPANSION PANEL */
+
+.expansion {
+    padding: 0;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+}
+.content{
+    height: auto;
+    max-height: 0;
+    max-width: 100%;
+    position: relative;
+    top: -20px;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: all 180ms ease-in-out 0ms; 
+}
+input[class^="tab"]:checked ~ .content {
+    max-height: 360px;
+    height: fit-content;
+    transition: all 200ms ease-in-out 0ms;
+}
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+input[class^="tab"]{   
+    width: 300px;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+input[class^="tab"]:hover{
+    cursor: pointer;
+}
+.open-close-icon {
+    margin-right: 20px;
+}
+.open-close-icon em::before {    
+    transition: transform 150ms ease-in-out 0ms;
+}
+input[class^="tab"]:checked ~ label .open-close-icon em::before {
+    content:"\e90d";
+    transition: transform 150ms ease-in-out 0ms;
+}
+label[class^="tab"]{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;  
+    width: 300px;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 34px;
+    margin-top: 20px;
+}
+label[class^="tab"] p {
+    text-decoration: underline;
+} 
+label[class^="tab"]:hover{
+    cursor: pointer;
+}
+label p.more {
+    display: block;
+}
+input[class^="tab"]:checked ~ label p.more {
+    display: none;
+}
+label p.less  {
+    display: none;
+}
+input[class^="tab"]:checked ~ label p.less {
+    display: block;
+}
+
+
+
 /* CSS GLOBAL 
 -------------------------------- */
 
@@ -794,9 +877,13 @@ footer section.container-footer .footer-info.mobile {
     display: none;
 }
 
-/* SPLIDER GENERAL
+/* SPLIDE GENERAL
 -------------------------------- */
-
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .splide__arrow {
 background-color: var(--turquoise-light);
 width: 3em;
@@ -815,6 +902,46 @@ top: 50px;
 background-color: var(--turquoise-light);
 transform: scale(1);
 }
+
+/* RESERVAS GLOBAL STYLE */
+#reservas_form{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 0.8em;	
+}
+
+button.date-button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    background-color: #fcfcfc;
+    border: 1.5px solid var(--grey-light);
+	box-sizing: border-box;
+    border-radius: 6px;
+    padding: 10px 0 10px 10px;
+}
+button.date-button label.labels {
+    width: 100%;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+}
+
+button.date-button input.inputs {	    
+    height: 16px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: transparent;
+    border: none;
+}
+
 
 /* RESPONSIVE 
 -------------------------------- */
@@ -914,6 +1041,7 @@ transform: scale(1);
     .cotownity .feeling .title-feel {
         width: 50%;
     }
+
 
     /* __________________________ OTHER PAGES ___________________________*/
 
