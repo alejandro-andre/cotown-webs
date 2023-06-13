@@ -196,12 +196,12 @@ button {
     transform: translateY(20px);
     transition: all 180ms ease-in-out 0ms; 
 }
-input[class^="tab"]:checked ~ .content {
+.expansion input[class^="tab"]:checked ~ .content {
     max-height: 360px;
     height: fit-content;
     transition: all 200ms ease-in-out 0ms;
 }
-input {
+.expansion input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -209,27 +209,27 @@ input {
     margin: 0;
     padding: 0;
 }
-input[class^="tab"]{   
+.expansion input[class^="tab"]{   
     width: 300px;
     height: 0;
     position: absolute;
     left: 0;
     top: 0;
 }
-input[class^="tab"]:hover{
+.expansion input[class^="tab"]:hover{
     cursor: pointer;
 }
-.open-close-icon {
+.expansion .open-close-icon {
     margin-right: 20px;
 }
-.open-close-icon em::before {    
+.expansion .open-close-icon em::before {    
     transition: transform 150ms ease-in-out 0ms;
 }
-input[class^="tab"]:checked ~ label .open-close-icon em::before {
+.expansion input[class^="tab"]:checked ~ label .open-close-icon em::before {
     content:"\e90d";
     transition: transform 150ms ease-in-out 0ms;
 }
-label[class^="tab"]{
+.expansion label[class^="tab"]{
     display: flex;
     flex-flow: row nowrap;
     justify-content: start;
@@ -240,22 +240,22 @@ label[class^="tab"]{
     line-height: 34px;
     margin-top: 20px;
 }
-label[class^="tab"] p {
+.expansion label[class^="tab"] p {
     text-decoration: underline;
 } 
-label[class^="tab"]:hover{
+.expansion label[class^="tab"]:hover{
     cursor: pointer;
 }
-label p.more {
+.expansion label p.more {
     display: block;
 }
-input[class^="tab"]:checked ~ label p.more {
+.expansion input[class^="tab"]:checked ~ label p.more {
     display: none;
 }
-label p.less  {
+.expansion label p.less  {
     display: none;
 }
-input[class^="tab"]:checked ~ label p.less {
+.expansion input[class^="tab"]:checked ~ label p.less {
     display: block;
 }
 
