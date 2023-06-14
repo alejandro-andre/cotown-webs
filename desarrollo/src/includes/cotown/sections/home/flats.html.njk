@@ -8,7 +8,10 @@
 
     <div class="pure-u-lg-1-2 pure-u-1 img-container">
       <div class="img">
-        <img src="/assets/img/apartm.png">
+        {% image 
+           constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'] +"/Image/contents?access_token=" + token, 
+           "", "", "", [500], ""
+        %}
       </div>
       <div class="img-title1">
         <span>{% literal texts, 'home-pisazos-apartamento', L %}</span>
@@ -22,7 +25,10 @@
 
     <div class="pure-u-lg-1-2 pure-u-1 img-container">
       <div class="img last">
-        <img src="/assets/img/piso.png">
+        {% image 
+           constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'] +"/Image/contents?access_token=" + token, 
+           "", "", "", [500], ""
+        %}
       </div>
       <div class="img-title1">
         <span>{% literal texts, 'home-pisazos-piso', L %}</span>
