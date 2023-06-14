@@ -22,10 +22,8 @@
 {% include "shared/js/map.js" %}
 var map = createMap("map", 41.3933, 2.1377, 16);
 var markerArray = [];
-{%-for l in buildings-%}
-{%-if l.Name == location.Name-%}
-{%-for d in l.districts-%}
-{% for b in d.buildings-%}
+{% for b in buildings-%}
+{%-if b.District.Location.Name == location.Name-%}
 {{map}}
 markerArray.push(putMarker(
   map, 
@@ -40,8 +38,6 @@ markerArray.push(putMarker(
       </div>
     </div>`
   ));
-{%-endfor-%}
-{%-endfor-%}
 {%-endif-%}
 {%-endfor-%}
 if (markerArray.length > 0) {

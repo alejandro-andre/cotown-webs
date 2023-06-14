@@ -1,7 +1,7 @@
 <section class="pisos">
 
   <div class="text-container">
-    <h2 class="title">ELIGE MI PISAZO</h2>
+    <h2 class="title">{% literal texts, 'home-pisazos-elige', L %}</h2>
   </div>
 
   <div class="pure-g container">
@@ -10,7 +10,8 @@
       <div class="img">
         {% image 
            constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'] +"/Image/contents?access_token=" + token, 
-           "", "", "", [500], ""
+           "apartamento-privado", "apartamento-privado", "", 
+           [500], ""
         %}
       </div>
       <div class="img-title1">
@@ -26,8 +27,9 @@
     <div class="pure-u-lg-1-3 pure-u-1 img-container">
       <div class="img">
         {% image 
-           constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'] +"/Image/contents?access_token=" + token, 
-           "", "", "", [500], ""
+           constants.SERVER + "/wopi/files/Marketing/Media/" + images['residencia'] +"/Image/contents?access_token=" + token, 
+           "residencia", "residencia", "", 
+           [500], ""
         %}
       </div>
       <div class="img-title1">
@@ -42,7 +44,11 @@
 
     <div class="pure-u-lg-1-3 pure-u-1 img-container">
       <div class="img last">
-        <img src="/assets/img/piso.png">
+        {% image 
+           constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'] +"/Image/contents?access_token=" + token, 
+           "piso-compartido", "piso-compartido", "", 
+           [500], ""
+        %}
       </div>
       <div class="img-title1">
         <span>{% literal texts, 'home-pisazos-piso', L %}</span>
