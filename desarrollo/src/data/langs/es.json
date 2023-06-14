@@ -2,16 +2,16 @@
     "folder": "",
     "locale": "es_ES",
     "pages": {
-        "index": { "url": "index", "title": "Inicio", "description": "" },
-        "locations": { "url": "localizaciones", "title": "Localizaciones", "description": "" },
-        "about": { "url": "conocenos", "title": "Conócenos", "description": "" },
-        "advantages": { "url": "ventajas", "title": "Ventajas", "description": "" },
-        "faqs": { "url": "preguntas-frecuentes",  "title": "FAQs", "description": "" },
-        "blog": { "url": "blog", "title": "Blog", "description": "" },
-        "contact": { "url": "contacto", "title": "Contacto", "description": "" },
-        "privacy": { "url": "politica-privacidad", "title": "Política de privacidad", "description": "" },
-        "legal": { "url": "aviso-legal", "title": "Aviso legal", "description": "" },
-        "data-security": { "url": "seguridad-datos", "title": "Seguridad y datos", "description": "" },
-        "flat": { "url": "flat", "title": "flat", "description": "" }
+        "index":         { "url": "index",                "title": "Inicio",                 "description": "" },
+        "locations":     { "url": "localizaciones",       "title": "Localizaciones",         "description": "" },
+        "about":         { "url": "conocenos",            "title": "Conócenos",              "description": "" },
+        "advantages":    { "url": "ventajas",             "title": "Ventajas",               "description": "" },
+        "faqs":          { "url": "preguntas-frecuentes", "title": "FAQs",                   "description": "" },
+        "blog":          { "url": "blog",                 "title": "Blog",                   "description": "" },
+        "contact":       { "url": "contacto",             "title": "Contacto",               "description": "" },
+        "privacy":       { "url": "politica-privacidad",  "title": "Política de privacidad", "description": "" },
+        "legal":         { "url": "aviso-legal",          "title": "Aviso legal",            "description": "" },
+        "data-security": { "url": "seguridad-datos",      "title": "Seguridad y datos",      "description": "" },
+        "flat":          { "url": "flat",                 "title": "flat",                   "description": "" }
     }
 }
