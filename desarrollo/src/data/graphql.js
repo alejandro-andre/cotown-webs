@@ -1,4 +1,4 @@
-module.exports = async (query, name) => {
+module.exports = async (query, config, name) => {
 
   if (name == undefined)
     return undefined;
@@ -8,16 +8,14 @@ module.exports = async (query, name) => {
   const token = require('./token');
   const fetch = require('node-fetch');
 
-  console.log('INIT ' + name);
+  console.log('Retrieving content ' + name + ' from ' + config.site);
   
   // Get token
-  const auth = { authorization : await token() };
+  const variables = { id: config.siteid, authorization : await token() };
 
   // Get data
-  const query_res = await fetch(K.SERVER + '/graphql', { method: 'POST', headers: K.HEADER, body: JSON.stringify({ "query": query, "variables": auth }) });
+  const query_res = await fetch(K.SERVER + '/graphql', { method: 'POST', headers: K.HEADER, body: JSON.stringify({ "query": query, "variables": variables }) });
   const query_data = await query_res.json();
-
-  console.log('END ' + name);
 
   return(query_data.data); 
 };

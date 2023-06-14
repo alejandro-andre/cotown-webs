@@ -1,4 +1,4 @@
-module.exports = async () => {
+module.exports = async (config) => {
 
   // Constants
   var K = require('./constants');
