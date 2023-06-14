@@ -140,17 +140,4 @@ module.exports = (eleventyConfig) => {
   // REMOVE !!!
   eleventyConfig.addPassthroughCopy({"src/includes/css": "assets/css"});
   eleventyConfig.addPassthroughCopy({"src/includes/js": "assets/js"});
-
-  // Config
-  return {
-    created: new Date(),
-    passthroughFileCopy: true,
-    dir: {
-      input: "src",
-      includes: "includes",
-      data: "data",
-      output: "www"
-    }
-  };
-
 };
