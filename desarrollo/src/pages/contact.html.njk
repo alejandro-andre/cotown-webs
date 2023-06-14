@@ -7,7 +7,7 @@ eleventyComputed:
       en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
     description: "{{langs[L].pages[name].description}}"
     permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
-layout: layouts/base.html
+layout: shared/layouts/base.html
 pagination:
     data: langs
     size: 1
@@ -38,7 +38,7 @@ tags: page
   </div>
 </main>
 
-{% set script %}{% include "js/map.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% set script %}{% include "shared/js/map.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
 <script>
   var mp, lt, ln;
   {% for o in offices-%}

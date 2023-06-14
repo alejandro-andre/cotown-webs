@@ -7,7 +7,7 @@ eleventyComputed:
       en: "{{langs.en.folder}}/"
     description: "{{langs[L].pages[name].description}}"
     permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
-layout: layouts/base.html
+layout: shared/layouts/base.html
 pagination:
     data: langs
     size: 1
@@ -29,30 +29,30 @@ tags: page
   <div class="container-main">
 
     <!-- Cabecera -->
-    {% include 'sections/home/main-header.html.njk' %}
+    {% include 'shared/sections/home/main-header.html.njk' %}
 
     <!-- ... -->
-    {% include 'sections/home/first-contain.html.njk' %}
+    {% include 'shared/sections/home/first-contain.html.njk' %}
 
     <!-- Locations -->
-    {% include 'sections/home/locations.html.njk' %}
+    {% include 'shared/sections/home/locations.html.njk' %}
 
     <!-- Pisos -->
-    {% include 'sections/home/flats.html.njk' %}
-
+    {% include 'cotown/sections/home/flats.html.njk' %}
+    
     <!-- Servicios -->
-    {% include 'sections/home/services.html.njk' %}
+    {% include 'shared/sections/home/services.html.njk' %}
 
     <!-- Cotownity -->
     <!--?
-    {% include 'sections/home/cotownity.html.njk' %}
+    {% include 'shared/sections/home/cotownity.html.njk' %}
     -->
     
     <!-- Partners -->
-    {% include 'sections/home/partners.html.njk' %}
+    {% include 'shared/sections/home/partners.html.njk' %}
 
     <!-- Opinios -->
-    {% include 'sections/home/testimonial.html.njk' %}
+    {% include 'shared/sections/home/testimonial.html.njk' %}
 
   </div>
 </main>

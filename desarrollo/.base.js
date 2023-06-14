@@ -106,11 +106,13 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
     try {
       // Get metadata
+      console.log(`Retrieving image ${name}`);
       let metadata = await Image(src, {
         widths: widths,
         formats: ["webp", "jpeg"],
         urlPath: "/img/",
         outputDir: "./www/img/",
+        cacheOptions: { removeUrlQueryParams: true },
         filenameFormat: function (id, src, width, format, options) {
           return `${slugify(alt)}-${width}.${format}`;
         }

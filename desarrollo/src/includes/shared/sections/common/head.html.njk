@@ -1,0 +1,89 @@
+<!-- Google Tag Manager -->
+<!--$$
+{% set script %}{% include "shared/js/gtm.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
+-->
+
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<title>{{title}}</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="description" content="{{description}}"/>
+<meta name="author" content="{{globals.author}}">
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Links and lang
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{% if page.url == '/index.html' %}
+<link rel="canonical" href="{{globals.url}}"/>
+<link rel="shortlink" href="{{globals.url}}"/>
+{% else %}
+<link rel="canonical" href="{{globals.url}}{{page.url}}"/>
+<link rel="shortlink" href="{{globals.url}}{{page.url}}"/>
+{% endif %}
+<link rel="alternate" hreflang="x-default" href="{{globals.url}}{{alt.es}}" />
+<link rel="alternate" hreflang="es" href="{{globals.url}}{{alt.es}}" />
+<link rel="alternate" hreflang="en" href="{{globals.url}}{{alt.en}}" />
+
+<!-- Twitter
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{title}}" />
+<meta name="twitter:description" content="{{description}}" />
+
+<!-- Facebook
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta property="og:url" content="{{globals.url}}{{langs[L].folder}}"/>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Cotown" />
+<meta property="og:title" content="{{title}}" />
+<meta property="og:description" content="{{description}}" />
+<meta property="og:locale" content="{{langs[L].locale}}" />
+<meta property="og:updated_time" content="{{page.date}}" />
+<meta property="og:image" content="{{globals.image}}"/>
+
+<!-- Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% if site == "cotown" %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
+{% else %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Moniquer&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Moniquer&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
+{% endif %}
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{% set css %}{% include "shared/css/purecss/pure.min.css" %}{% endset %}<style>{{ css | safe }}</style>
+{% set css %}{% include "shared/css/purecss/grids-responsive.min.css" %}{% endset %}<style>{{ css | safe }}</style>
+{% set css %}{% include "shared/css/splidejs/splide.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% set css %}{% include site +"/css/global.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% set css %}{% include "shared/css/global.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+
+<!-- Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="/assets/icons/style.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png"/>
+
+<!-- Splide
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="/assets/js/splide.min.js"></script>
+<script src="/assets/js/splide-extension-auto-scroll.min.js"></script>
+
+<!-- Cookies
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!--
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="2943c93d-23ed-4b7f-a0c0-f64d87ccec5c" data-blockingmode="auto" type="text/javascript"></script>
+-->
+

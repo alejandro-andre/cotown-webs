@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{L}}">
+
+<!-- Head -->
+<head>
+{% include 'shared/sections/common/head.html.njk' %}
+{% block head %}{% endblock %}
+</head>
+
+<!-- Body -->
+<body>
+
+<!-- Header -->
+{% include 'shared/sections/common/header.html.njk' %}
+
+<!-- Content -->
+{{ content | safe }}
+  
+<!-- Icono spotify -->
+<section class="iconos-chat">
+  <div class="spotify"><em class="icon-spotify"></em></div>
+</section>
+
+<!-- Footer -->
+{% include 'shared/sections/common/footer.html.njk' %}
+{% block footer %}{% endblock %}
+
+</body>
+
+</html>

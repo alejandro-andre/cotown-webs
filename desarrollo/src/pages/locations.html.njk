@@ -7,7 +7,7 @@ eleventyComputed:
       en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
     description: "{{langs[L].pages[name].description}}"
     permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
-layout: layouts/base.html
+layout: shared/layouts/base.html
 pagination:
     data: langs
     size: 1
@@ -29,10 +29,10 @@ tags: page
   <div class="container-main">
 
     <!-- main -->
-    {% include 'sections/locations/locations.html.njk' %}
+    {% include 'shared/sections/locations/locations.html.njk' %}
     
     <!-- services -->
-    {% include 'sections/locations/services.html.njk' %}
+    {% include 'shared/sections/locations/services.html.njk' %}
 
   </div>
 </main>
