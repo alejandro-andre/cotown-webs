@@ -1,4 +1,4 @@
-module.exports = async () => {
+module.exports = async (config) => {
 
   const gql = require('./graphql');
   const QUERY = `
@@ -13,6 +13,6 @@ module.exports = async () => {
         Image { name }
     }
   }`;
-  const data = await gql(QUERY, 'testimonials');
+  const data = await gql(QUERY, config, 'testimonials');
   return data.data;
 };

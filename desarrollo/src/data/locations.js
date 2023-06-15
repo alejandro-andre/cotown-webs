@@ -1,4 +1,4 @@
-module.exports = async () => {
+module.exports = async (config) => {
 
   const gql = require('./graphql');
   const QUERY = `
@@ -22,6 +22,6 @@ module.exports = async () => {
       }
     }
   }`;
-  const data = await gql(QUERY, 'locations');
+  const data = await gql(QUERY, config, 'locations');
   return data.data;
 };
