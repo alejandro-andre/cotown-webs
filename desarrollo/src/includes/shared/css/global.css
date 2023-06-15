@@ -88,7 +88,7 @@ button {
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: fit-content;
     height: 32px;
@@ -107,10 +107,16 @@ button {
     background-color: var(--white);
     color: var(--primary-dark);
 }
+.btn-primary.search {
+    height: 42px;
+    text-transform: capitalize;
+    gap: .5em;
+}
+
 .btn-secondary {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: fit-content;
     height: 32px;
