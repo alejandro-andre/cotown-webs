@@ -88,13 +88,14 @@ tags: page
 
   new Splide(".splide-opinions", {
     type: 'slide',
-    autoHeight: true,
     focus: 0,
-    perPage: 2,
+    height: 340,
+    perPage: 3,
     perMove: 1,
     padding: '10em',
     gap: '20px',
     breakpoints: {
+      1600: { perPage: 2 },
       1024: { perPage: 1 },
       768: { padding: 0 },
     },

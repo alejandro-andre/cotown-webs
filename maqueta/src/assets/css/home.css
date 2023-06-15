@@ -11,7 +11,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: left;
+    align-items: flex-start;;
     background-color: var(--turquoise-light);
     padding: 4em 4em 6em;
     position: absolute;
@@ -70,7 +70,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: left;
+    align-items: flex-start;;
 }
 .main-header .left .basic-searcher .calendar .from, .main-header .left .basic-searcher .calendar .to {
     width: 48%;
@@ -120,13 +120,10 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 
 /* BLOQUE 1 HOME */
 main .container-main .first-contain .title-big.home {
-    padding: 2em 14%;
-    max-width: 1280px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: left;
-    margin: 4em auto 0;
+    align-items: flex-start;;
 }
 
 /* CARRUSEL LOCALIZACIONES */

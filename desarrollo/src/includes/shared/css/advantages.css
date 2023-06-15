@@ -24,7 +24,7 @@ main .container-main section.container-advantages .grid .promo {
     margin: 0 0 2em 0.8em;
 }
 main .container-main section.container-advantages .grid .promo:hover {
-    background-color: var(--turquoise-light);
+    background-color: var(--primary);
 }
 main .container-main section.container-advantages .grid .promo .promo-contain {
     display: flex;
@@ -35,7 +35,7 @@ main .container-main section.container-advantages .grid .promo .promo-contain {
 }
 main .container-main section.container-advantages .grid .promo .promo-contain .promo-title {
     font-size: 78px;
-    color: var(--white);
+    color: var(--primary-text);
     line-height: 1;
     margin: 0;
     opacity: 0;
@@ -46,7 +46,7 @@ main .container-main section.container-advantages .grid .promo:hover .promo-cont
 main .container-main section.container-advantages .grid .promo .promo-contain .promo-text {
     font-size: 16px;
     font-weight: 700;
-    color: var(--white);
+    color: var(--primary-text);
     text-align: center;
     margin: 0;
     opacity: 0;
