@@ -318,8 +318,6 @@ li .locations-container .options-loc .option-loc a:hover {
 
 /* BLOQUE 1 NO HOME */
 main .container-main .first-contain .title-big {
-    padding: 2em 14%;
-    max-width: 1280px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

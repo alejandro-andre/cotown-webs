@@ -202,14 +202,14 @@
   cursor: pointer;
 }
 .right-data input[type=checkbox]:before {	
-  font-family: 'cotown';
+  font-family: 'icons';
   content: "\e906";    
 }
 .right-data input[type=checkbox]:checked:before {
 	content: "\e907";
 }
 .right-data input[type=radio]:before {	
-  font-family: 'cotown';
+  font-family: 'icons';
   content: "\e928";    
 }
 .right-data input[type=radio]:checked:before {
@@ -296,7 +296,7 @@ margin-bottom: 0.5em;
   text-transform: uppercase;
 }
 .last h2 span {
-  color: var(--turquoise-light);
+  color: var(--primary);
 }
 .last .left .text p {
   font-weight: 500;
