@@ -410,7 +410,9 @@ span.turquoise {
 
 /* NAVIGATION MENU 
 -------------------------------- */
-
+.black-line {
+    border-bottom: var(--border-header);
+}
 
 .black-line .pure-menu.pure-menu-horizontal {
     margin: 0;
@@ -561,24 +563,32 @@ li .locations-container .options-loc .option-loc a:hover {
 -------------------------------- */
 
 main .container-main .first-contain .title-big {
-    padding: 2em 4em;
-    max-width: 1280px;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 auto 2em;
+    margin: 6em auto 2em;
+}
+main .container-main .first-contain .title-big .h2-big {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-main .container-main .first-contain .title-big .h2-big,
-main .container-main .first-contain .title-big .h2-border {
+main .container-main .first-contain .title-big .h2-big h2,
+main .container-main .first-contain .title-big .h2-border h2 {
+    width: 100%;
+    font-weight: 400;
     font-size: 120px;
-    line-height: 1em;
+    line-height: 95%;
 }
 main .container-main .first-contain .title-big .h2-border {
     color: var(--primary-text);
-    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
-    1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #fff;
+    text-shadow: var(--h2-border);   
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 95%;
 }
 main .container-main .first-contain .title-big p {
     font-size: 30px;
@@ -591,10 +601,10 @@ main .container-main .first-contain .title-big.home p {
     font-size: 30px;
     line-height: 36px;
     font-weight: 500;
-    margin-bottom: 0.5em;
+    margin: 0 0 0.5em;
     text-align: left;
 }
-main .container-main .first-contain .title-big p .bold {
+main .container-main .first-contain .title-big p span.bold {
     font-weight: 700;
 }
 

@@ -33,7 +33,14 @@
     --yellow: #ecf166;
     --yellow-dark: #bdc152;     
 
+    /* // Header border */    
+    --border-header: 0px;
+
+    --h2-border:2px 0 #00BFB2, -2px 0 #00BFB2, 0 2px #00BFB2, 0 -2px #00BFB2,
+    1px 1px #00BFB2, -1px -1px #00BFB2, 1px -1px #00BFB2, -1px 1px #fff;
     
+   
+
     /* // Feedback color */
     --green-success-light: #e3f2e0;
     --green-success: #8dc881;

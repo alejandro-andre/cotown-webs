@@ -28,7 +28,7 @@ p.subtitle {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: left;
+    align-items: flex-start;
     background-color: var(--primary);
     border-radius: var(--radius-1);
     padding: 4em 4em 6em;
@@ -88,7 +88,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: left;
+    align-items: flex-start;;
 }
 
 .main-header .left .button-search {
@@ -114,20 +114,22 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 
 /* BLOQUE 1 HOME 
 -------------------------------- */
-
+main .container-main .first-contain {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
 main .container-main .first-contain .title-big.home {
-    padding: 2em 4em;
-    max-width: 1280px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: left;
-    margin: 4em auto 0;
+    align-items: flex-start;;
 }
 main .container-main .first-contain .text p {
+    font-weight: 400;
     font-size: 22px;
-    font-weight: 500;
-    line-height: 33px;
+    line-height: 150%;
 }
 
 /* LOCALIZACIONES 
