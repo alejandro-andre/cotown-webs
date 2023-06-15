@@ -118,7 +118,7 @@ a {
     position: absolute;
     bottom: 40px;
     left: 20px;
-    color: var(--white);
+    color: var(--primary-text);
 }
 
 .carousel .carousel-main-list .card .card-body {
@@ -193,7 +193,7 @@ h4 {
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
-    color: var(--turquoise-dark);
+    color: var(--primary-dark);
     letter-spacing: 0.145em;
 }
 button.green-button.btn-secondary {
@@ -636,5 +636,5 @@ section.necesities .grid .necesidad .p-text p {
 .popup .info .price {
     font-weight: 400;
     text-align: right;
-    color: var(--turquoise-dark);
+    color: var(--primary-dark);
 }

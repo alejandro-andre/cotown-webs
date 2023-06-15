@@ -1,11 +1,25 @@
 /* COLORS 
 -------------------------------- */
-
 :root {
     /* // Main color */
-    --turquoise-light: #00bfb2;
-    --turquoise: #00998b;
-    --turquoise-dark: #00736B;
+    --primary: #00bfb2;
+    --primary-regular: #00998b;
+    --primary-dark: #00736B;
+
+    /* // Background color */
+    --secondary-header: #121212;
+    --grey-background: #D9D9D9;
+    --light-grey-background: #FAFAFA;
+    --grey-light-background: #FCFCFC;
+    --white-background: #f4f4f4;
+    --footer: #121212;
+    
+    /* // Text color */
+    --primary-text: #ffffff;
+    --secondary-text-header: #ffffff;    
+    --white: #ffffff;
+    --black: #000000;
+
     
     /* // Secondary color */
     --grey-light: #3c434a;
@@ -17,17 +31,8 @@
     --purple: #ab92e1;
     --purple-dark: #8975b4;
     --yellow: #ecf166;
-    --yellow-dark: #bdc152;
-        
-    /* // Background color */
-    --white-background: #f4f4f4;
-    --black: #000000;
-    --grey-background: #D9D9D9;
-    --light-grey-background: #FAFAFA;
-    --grey-light-background: #FCFCFC;
-    
-    /* // Text color */
-    --white: #ffffff;
+    --yellow-dark: #bdc152;     
+
     
     /* // Feedback color */
     --green-success-light: #e3f2e0;
@@ -44,4 +49,9 @@
     --shadow-medium: rgba(8, 0, 4, 15%);
     --shadow-strong: rgba(16, 0, 8, 20%);
     /* box-shadow: 2px 3px 12px rgba(16, 0, 8, 20%); */
+
+
+    /* // border radius boxes */
+    --radius-1: 0px 0px;
+    --radius-2: 0px;
 }

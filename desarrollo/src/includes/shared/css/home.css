@@ -29,12 +29,13 @@ p.subtitle {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: left;
-    background-color: var(--turquoise-light);
+    background-color: var(--primary);
+    border-radius: var(--radius-1);
     padding: 4em 4em 6em;
     position: absolute;
     top: 0;
     left: 0;
-    color: var(--white);
+    color: var(--primary-text);
     z-index: 1;
     order: 1;
 }
@@ -114,7 +115,7 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
 -------------------------------- */
 
 main .container-main .first-contain .title-big.home {
-    padding: 2em 14%;
+    padding: 2em 4em;
     max-width: 1280px;
     display: flex;
     flex-flow: row wrap;
@@ -146,14 +147,14 @@ main .container-main .first-contain .text p {
     position: absolute!important;
     bottom: 0;
     left: 0.3em;
-    color: var(--white);
+    color: var(--primary-text);
     font-weight: 400;
     font-size: 78px;
     margin: 0;
     line-height: 1;
 }
 .locations .img:hover h3 {
-    color: var(--turquoise-light);
+    color: var(--primary);
 }
 .locations .img img {
     width:100%;
@@ -202,7 +203,7 @@ main .container-main .first-contain .text p {
 }
 .pisos .container .img-container .img-title1,
 .pisos .container .img-container .img-title2 {
-    color: var(--white);
+    color: var(--primary-text);
     font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 400;
     font-size: 78px;
@@ -227,7 +228,7 @@ main .container-main .first-contain .text p {
 }
 .pisos .container .img-container .subrayado {
     z-index: 18;
-    background-color: var(--turquoise-light);
+    background-color: var(--primary);
     position: absolute;
     width: 0%;
     height: 0.8rem;
@@ -366,8 +367,8 @@ main .container-main .first-contain .text p {
 }
 .cotownity .feeling .title-feel {
     width: 80%;
-    background-color: var(--turquoise-light);
-    color: var(--white);
+    background-color: var(--primary);
+    color: var(--primary-text);
     padding: 0.15em 0.8em 0 2em;
     font-weight: 400;
     font-size: 78px;
@@ -392,7 +393,7 @@ main .container-main .first-contain .text p {
 }
 .cotownity .insta-fb em{
     font-size: 80px;
-    color: var(--turquoise-light);
+    color: var(--primary);
 }
 .cotownity .carousel-cotownity {
     width: 100%;
@@ -414,7 +415,7 @@ main .container-main .first-contain .text p {
     transform: translateX(0%);
 }
 .cotownity .carousel-cotownity .contain .img {
-    background-color: var(--turquoise-light);
+    background-color: var(--primary);
     width: calc(150% / 6 - 2em);
     height: 196px;
 }
@@ -436,7 +437,7 @@ main .container-main .first-contain .text p {
     width: 36px;
     font-size: 36px;
     padding: 1em;
-    color: var(--turquoise-light);
+    color: var(--primary);
 }
 .cotownity .carousel-cotownity .arrows .arrow .dots {
     display: flex;
@@ -454,7 +455,7 @@ main .container-main .first-contain .text p {
     cursor: pointer;
 }
 .cotownity .carousel-cotownity .arrows .arrow .dots .dot.active {
-    background-color: var(--turquoise-light);
+    background-color: var(--primary);
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -486,9 +487,12 @@ main .container-main .first-contain .text p {
 }
 .opinions .text-container .title.turquoise {
     padding-top: 0;
-    color: var(--turquoise-light);
+    color: var(--primary);
 }
-.opinions .slide  {
+.splide-opinions.splide {
+    margin-top: 3em;
+}
+.opinions .slide {
     height: fit-content;
     padding: 2em 1.5em 2em;
     background-color: var(--white);
@@ -529,7 +533,7 @@ main .container-main .first-contain .text p {
     line-height: 20px;
 }
 .opinions .slide .opinion h3.comillas {
-    color: var(--turquoise-light);
+    color: var(--primary);
     font-size: 80px;
     margin: 0;
     line-height: 40px;
@@ -545,7 +549,7 @@ main .container-main .first-contain .text p {
     padding: 0.5em 0 0;
 }
 .opinions .slide .opinion ul.stars li em.icon-star {
-    color: var(--turquoise-light);
+    color: var(--primary);
     font-size: 18px;
     margin: 0;
 }
@@ -610,7 +614,7 @@ p.subtitle {
     left: 1em;
 }
 .main-header .video .text-container.mobile h1 {
-    color: var(--white);
+    color: var(--primary-text);
     font-weight: 400;
     font-size: 54px;
     line-height: 100%;
