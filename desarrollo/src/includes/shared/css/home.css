@@ -292,6 +292,9 @@ main .container-main .first-contain .text p {
 .servicios .servicios-container .services-cards .card img {
     width: 100px;
 }
+.servicios .servicios-container .services-cards .card svg {
+    width: 100px;
+}
 .servicios .servicios-container .services-cards .card p {
     margin-bottom: 0;
     

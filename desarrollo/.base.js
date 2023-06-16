@@ -102,6 +102,21 @@ module.exports = (eleventyConfig) => {
     }
   });
 
+  // SVG inline shortcode
+  eleventyConfig.addNunjucksAsyncShortcode('svg', async (src, alt, name, cls, sizes) => {
+    // Get metadata
+    console.log(`Retrieving svg ${name}`);
+    let metadata = await Image(src, {
+      formats: ['svg'],
+      dryRun: true,
+    })
+    try {
+      return metadata.svg[0].buffer.toString();
+    } catch {
+      return '';
+    }
+  })  
+
   // Image optimizer shorcode
 	eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
     try {
