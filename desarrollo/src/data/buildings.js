@@ -17,6 +17,5 @@ module.exports = async (config) => {
     }
   }`;
   const data = await gql(QUERY, config, 'building');
-  console.log(data);
   return data.data;
 };

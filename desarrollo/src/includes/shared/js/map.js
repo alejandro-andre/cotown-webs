@@ -4,10 +4,7 @@ function createMap(div, lat, lon, zoom) {
   var map = L.map(div).setView([lat, lon], zoom);
 
   // Openstreetmap
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-    maxZoom: 18,
-  }).addTo(map);
+  L.tileLayer('{{globals.maps}}', { attribution: '{{globals.attribution|safe}}', maxZoom: 18, }).addTo(map);
 
   // Desactivar zoom con la rueda del ratón durante el scroll
   map.scrollWheelZoom.disable();
