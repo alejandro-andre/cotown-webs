@@ -395,7 +395,7 @@ li .select-container .options .option.selected {
     text-decoration: none;
 }
 .container-header.second h1 {
-    color: var(--secondary-text-header);
+    color: var(--second-header-text);
     font-size: 42px;
     vertical-align: middle;
     margin: 0.2em auto 0;
@@ -445,7 +445,7 @@ span.turquoise {
 }
 .black-line .pure-menu.pure-menu-horizontal ul li a {
     text-decoration: none;
-    color: var(--secondary-text-header);
+    color: var(--second-header-text);
     font-weight: 600;
     font-size: 25px;
     line-height: 1.1em;
@@ -749,39 +749,16 @@ main .container-main section.form .form-container button.btn-secondary {
     
 /* MARQUEE */
 main .container-main section.banner {
-    background-color: var(--primary);
-    width: fit-content;
-    min-width: min-content;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    background-color: var(--primary);    
     margin-bottom: 6em;
 }
 main .container-main section.banner h2 {
-    animation: scroll 40s linear infinite;
-    -webkit-animation: scroll 40s linear infinite;
     color: var(--primary-text);
     font-weight: 400;
     font-size: 78px;
-    width: auto;
-    min-width: fit-content;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 0;    
+    margin-bottom: 0;
 }
-@keyframes scroll {
-    0% {
-        -webkit-transform: translateX(0%);
-        transform: translateX(0%);
-    }
-    100% {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-    }
-}
+
 
 /* FOOTER 
 -------------------------------- */
@@ -910,21 +887,26 @@ button.date-button input.inputs {
 
 /* DESKTOP */
 @media only screen and (min-width: 1280px) {
-
+.container-header.first .turquoise-line {
+    margin: 0 6em;}
+.container-header.second .black-line.custom-wrapper { 
+    padding: 0.2em 6em;}
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {    
     .container-header.second .black-line.custom-wrapper {            
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        padding: 0.2em 4em;
         width: 100%;
         height: 80px;
     }
     .left-nav .pure-menu {
         display: none;
     }
+    .left-nav .logo a.mobile {
+        display: none;
+    } 
     .only-mobile-menu, .only-mobile-private, .black-line .pure-menu.pure-menu-horizontal ul li.only-menu-mobile  {
         display: none;
     }
@@ -1048,7 +1030,7 @@ button.date-button input.inputs {
 }
 
 /* TABLET */
-@media only screen and (max-width: 1023.9px) {    
+@media only screen and (max-width: 1023.9px) {      
     main {
         margin-top: 50px;
     }
@@ -1071,7 +1053,7 @@ button.date-button input.inputs {
         display: none;
     }
     .container-header.second .black-line.custom-wrapper {
-        background-color: var(--secondary-header);
+        background-color: var(--secondary-header-mobile);
         -webkit-font-smoothing: antialiased;
         width: 100%;
         height: 51px;
@@ -1106,6 +1088,9 @@ button.date-button input.inputs {
     .left-nav .pure-menu {
         display: block;
     }
+    .left-nav .logo a.desktop {
+        display: none;
+    }
     .left-nav .pure-menu .menu-link {
         width: 25px;
         height: 25px;
@@ -1133,7 +1118,7 @@ button.date-button input.inputs {
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--secondary-header);
+        background-color: var(--secondary-header-mobile);
         color: var(--primary-text);      
         filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
     }
@@ -1144,12 +1129,22 @@ button.date-button input.inputs {
         align-items: center;
         padding: 1.5em 0 1.5em 1.5em;
     }
+    .only-mobile-menu .only-text p {        
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;
+        margin: 0;
+    }
+    .only-mobile-menu .logo {
+        text-align: center;
+    }
+    
     .only-mobile-menu .menu-mobile-icons {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
-        gap: 3em;
+        gap: 2em;
         padding: 1.5em 1.5em 1.5em 0;
     }
     .only-mobile-menu .menu-mobile-icons em {
@@ -1167,6 +1162,7 @@ button.date-button input.inputs {
         align-items: center;
         background-color: var(--white);
         color: var(--black);
+        margin-top: 64px;
     }
     .only-mobile-private .area {
         display: flex;

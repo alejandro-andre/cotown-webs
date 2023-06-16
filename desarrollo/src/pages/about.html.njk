@@ -29,9 +29,13 @@ tags: page
   <div class="container-main"> 
 
     <div class="container-main">
-      <section class="first-contain">         
+      <section class="first-contain about pure-u-1">    
 
-        <div class="title-big">
+        <div class="img pure-u-1 pure-u-lg-10-24">
+          <img src="/assets/img/about.png" class="card-img-top" loading="lazy" alt="us">
+        </div>
+
+        <div class="title-big pure-u-1 pure-u-lg-16-24">
           {% literal texts, 'about-conocenos', L, true %}
         </div>
 
@@ -59,18 +63,32 @@ tags: page
       </section>
 
       <section class="banner">
-        <h2>
-          cuentas |
-          creativos |
-          development |
-          lorem ipsum dolor sit |                          
-        </h2>            
-        <h2>
-          cuentas |
-          creativos |
-          development |
-          lorem ipsum dolor sit | 
-        </h2>
+        <div class="splide-banner splide" role="group">
+          <div class="splide__track">
+            <ul class="splide__list">        
+              <li class="splide__slide">
+                <h2>
+                cuentas |               
+                </h2>
+              </li>
+              <li class="splide__slide">
+                <h2>
+                creativos |
+                </h2>
+              </li>
+              <li class="splide__slide">
+                <h2>
+                development |
+                </h2>
+              </li>
+              <li class="splide__slide">
+                <h2>
+                lorem ipsum dolor sit |  
+                </h2>
+              </li>                   
+            </ul>
+          </div>
+        </div>     
       </section>
 
       <section class="members row">
@@ -79,11 +97,16 @@ tags: page
           {% for t in team %}
           <div class="member">
             <div class="img-member">
+              <div class="first">
               {% image 
                 constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token, 
                 t.Name, t.Name|slug, "img-grid",
                 [300], ""
               %}
+              </div>
+              <div class="hover">
+                 <img src="/assets/img/member.png" class="img-member" loading="lazy" alt="napoles">           
+              </div>
               <div class="data">
                 <p class="name">{{t.Name}}</p>
                 <p class="job">{{t | translate('Position', L)}}</p>
@@ -155,3 +178,18 @@ tags: page
 
   </div>
 </main>
+
+<script>
+  new Splide('.splide-banner', {
+    type: 'loop',
+    autoWidth: true,
+    focus: 0,
+    perMove: 1,
+    drag: 'free',
+    arrows: false,
+    pagination: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    autoScroll: { speed: 1 }
+  }).mount( window.splide.Extensions );
+</script>
