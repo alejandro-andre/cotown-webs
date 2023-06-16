@@ -289,7 +289,8 @@ main .container-main .first-contain .text p {
 .servicios .servicios-container .services-cards .card:hover {
     background-color: var(--white-background);
 }
-.servicios .servicios-container .services-cards .card img {
+.servicios .servicios-container .services-cards .card img,
+.servicios .servicios-container .services-cards .card svg {
     width: 100px;
 }
 .servicios .servicios-container .services-cards .card p {

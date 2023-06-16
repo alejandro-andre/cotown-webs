@@ -62,3 +62,8 @@
     --radius-2: 0px 12px;
 }
 
+
+
+/* SVG Fill colours */
+.svg_base { fill: #363434 !important; }
+.svg_accent { fill: #ff5166 !important; }

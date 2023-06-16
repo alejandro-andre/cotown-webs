@@ -1,19 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 27.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.svg_base{fill:#363434;}
-	.svg_accent{fill:#00BFB2;}
-	.st2{fill:none;}
-	.st3{fill:#30363B;}
-	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#00BFB2;}
-	.st5{fill:#30363B;stroke:#30363B;stroke-width:0.1828;}
-	.st6{fill:#5ABBA7;}
-	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#30363B;}
-	.st8{fill:#05C0BD;}
-	.st9{fill:#FFFFFF;filter:url(#Adobe_OpacityMaskFilter);}
-	.svg_accent0{mask:url(#mask0_1235_50707_00000062165600384750918480000002694536003139282600_);}
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<symbol id="img" viewBox="0 0 512 512">
+<style>
+.svg_base { fill: var(--color_0) }
+.svg_accent { fill: var(--color_1) }
 </style>
 <g>
 	<path class="svg_base" d="M340.1,51.1c-22.6,0-44.6,6.4-63.6,18.6c-17.8,11.4-32.3,27.3-42.1,46.1c-5.9-1.1-11.8-1.6-17.8-1.5
@@ -46,4 +35,6 @@
 		c0.9,0.2,1.8,0.4,2.7,0.4c1.8,0,3.6-0.5,5.2-1.4c2.4-1.4,4.1-3.7,4.8-6.3l7.6-28.1c0.9-3,0.3-6.2-1.6-8.8
 		C212,359.1,209.2,357.6,206,357.4z"/>
 </g>
+</symbol>
+<use href="#img"></use>
 </svg>

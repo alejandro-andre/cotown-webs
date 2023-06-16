@@ -295,8 +295,8 @@ section.necesities .grid {
     align-items: flex-start;
     padding: 0 0 0 10em;
 }
-
-section.necesities .grid .necesidad img {
+section.necesities .grid .necesidad img,
+section.necesities .grid .necesidad svg {
     width: 75px;
     padding: 1em 0 .5em;
 }
@@ -547,8 +547,10 @@ section.necesities .grid .necesidad .p-text p {
         align-items: center;
         padding: 0!important;
     }
-
     .piso .services-list li img {
+        width: 20px;
+    }
+    .piso .services-list li svg {
         width: 20px;
     }
     .piso .services-list li p {
