@@ -11,6 +11,5 @@ module.exports = async (config) => {
   const data = await gql(QUERY, config, 'images');
   const json = {};
   data.data.forEach(o => { json[o.Code] = o.id });
-  console.log(json);
   return(json); 
 };
