@@ -118,3 +118,21 @@ main .container-main section.members .button-more {
     text-align: center;
     margin: 1em 0;
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    main .container-main section.members .grid .member {
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 1023.9px) { 
+main .container-main section.members .grid .member {
+    width: 50%;
+}
+}
+
+@media only screen and (max-width: 767px) {
+main .container-main section.members .grid .member {
+    width: 98%;
+}
+}
