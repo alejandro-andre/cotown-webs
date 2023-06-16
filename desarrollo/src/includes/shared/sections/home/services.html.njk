@@ -9,7 +9,7 @@
     <div class="services-cards">
 
       {% for s in services %}
-      <div class="card" style="--svg_base:#363434;--svg_accent:#00bfb2;">
+      <div class="card">
         {% svg constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token %}
         <!--
         {% image 
