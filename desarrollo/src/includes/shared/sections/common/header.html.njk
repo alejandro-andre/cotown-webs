@@ -87,8 +87,13 @@
       </div>
       <!-- Logo -->
       <div class="logo pure-u-1-3">        
-        <a href="{{langs[L].folder}}/">
-          <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
+        <a class="desktop" href="{{langs[L].folder}}/">
+          <img class="img-logo" alt="logo" src="/assets/img/vanguard.svg">
+          <!-- <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1> -->
+        </a>
+         <a class="mobile" href="{{langs[L].folder}}/">
+          <img class="img-logo" alt="logo" src="/assets/img/vanguard-white.svg">
+          <!-- <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1> -->
         </a>
       </div>
 
@@ -96,15 +101,9 @@
       <div class="booking pure-u-1-3">
         <button class="btn-primary">{% literal texts, 'header-reservar', L %}</button>
       </div>
-
-      <!-- Idioma (movil)
-      <div class="lang pure-u-1-3">
-        <img class="lang-img" alt="es de ser Cotowner" src="/assets/img/es.png"></img>
-      </div>
-       -->
     </div>
 
-    <div class="right-nav pure-u-1-1 pure-u-lg-18-24 pure-menu pure-menu-horizontal custom-can-transform" id="menu">
+    <div class="right-nav pure-u-1-1 pure-u-lg-16-24 pure-menu pure-menu-horizontal custom-can-transform" id="menu">
       
       <!-- Menu -->
       <ul class="black-menu pure-menu-list" id="menu-desplegado">      
@@ -116,7 +115,8 @@
           <!-- Logo -->
           <div class="logo pure-u-11-24">        
             <a href="{{langs[L].folder}}/">
-              <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
+              <img class="img-logo" alt="logo" src="/assets/shared/img/vanguard-white.svg">
+              <!-- <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1> -->
             </a>
           </div>
           <div class="menu-mobile-icons pure-u-5-24">            

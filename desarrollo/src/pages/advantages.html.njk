@@ -57,9 +57,27 @@ tags: page
     </section>
 
     <section class="banner">
-      <h2>ventajas de ser cotowner | ¡no te las pierdas! | ¡mucho más! |</h2>
-      <h2>ventajas de ser cotowner | ¡no te las pierdas! | ¡mucho más! |</h2>
-    </section>
+        <div class="splide-banner splide" role="group">
+          <div class="splide__track">
+            <ul class="splide__list">        
+              <li class="splide__slide">
+                <h2>
+                creativos |
+                </h2>
+              </li>
+              <li class="splide__slide">
+               <h2>ventajas de ser cotowner | ¡no te las pierdas! | ¡mucho más! |</h2>
+              </li>
+              <li class="splide__slide">
+                <h2>ventajas de ser cotowner | ¡no te las pierdas! | ¡mucho más! |</h2>
+              </li>
+              <li class="splide__slide">
+                <h2>ventajas de ser cotowner | ¡no te las pierdas! | ¡mucho más! |</h2>
+              </li>                   
+            </ul>
+          </div>
+        </div>     
+      </section>    
     
     <section class="container-advantages">
       <div class="grid">
@@ -228,3 +246,17 @@ tags: page
 
   </div>
 </main>
+
+<script>
+  new Splide('.splide-banner', {
+    type: 'loop',
+    focus: 0,
+    perMove: 1,
+    drag: 'free',
+    arrows: false,
+    pagination: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    autoScroll: { speed: 1 }
+  }).mount( window.splide.Extensions );
+</script>
