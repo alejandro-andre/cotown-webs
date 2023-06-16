@@ -32,7 +32,7 @@ module.exports = (eleventyConfig) => {
     }
   });
   
-  // Markdown to HTML
+  // Markdown to HTML filter
   eleventyConfig.addFilter("markdown", (value) => {
     let options = {
       html: true,
@@ -44,19 +44,19 @@ module.exports = (eleventyConfig) => {
     return md.render(value);
   });
 
-  // Text to URL
+  // Text to URL filter
   eleventyConfig.addFilter('ascii', (value) => {
     if (value != null)
       return slugify(value);
     return null;
   });
   
-  // CSS minification
+  // CSS minification filter
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  // JS minification
+  // JS minification filter
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (code, callback) {
     try {
       const minified = await minify(code);
@@ -135,11 +135,4 @@ module.exports = (eleventyConfig) => {
       return `<span style="color:red;">[image missing ${name}]</span>`;
     }
 	});
-
-  // Copy folders
-  eleventyConfig.addPassthroughCopy({"src/assets": "assets"});
-
-  // REMOVE !!!
-  eleventyConfig.addPassthroughCopy({"src/includes/css": "assets/css"});
-  eleventyConfig.addPassthroughCopy({"src/includes/js": "assets/js"});
 };
