@@ -1,5 +1,50 @@
 /* ABOUT PAGE 
 -------------------------------- */
+main .container-main .first-contain.about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+    align-items: stretch;   
+}
+main .container-main .first-contain.about .img {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 320px;
+    left: 0;
+    z-index: 2;
+}
+main .container-main .first-contain.about .title-big {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+    align-items: flex-start;
+    margin: 4em 0 8em 20%;
+    padding: 50px 50px 50px 25%;
+    position: relative;
+    z-index: 1;
+    background-color: var(--primary-background);
+}
+main .container-main .first-contain.about .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main .container-main .first-contain.about .title-big h1 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+}
+main .container-main .first-contain.about .title-big p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    text-align: left;
+}
+
+
 
 /* TEAM */
 main .container-main section.members {
@@ -26,7 +71,16 @@ main .container-main section.members .grid .member .img-member {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    padding: 5%;
+    padding: 5%;    
+}
+main .container-main section.members .grid .member .img-member:hover .first {
+    display: none;   
+}
+main .container-main section.members .grid .member .img-member .hover {
+    display: none;
+}
+main .container-main section.members .grid .member .img-member:hover .hover {
+    display: block;
 }
 main .container-main section.members .grid .member .img-grid {
     width: 100%;
@@ -63,4 +117,22 @@ main .container-main section.members .button-more {
     align-items: center;
     text-align: center;
     margin: 1em 0;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    main .container-main section.members .grid .member {
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 1023.9px) { 
+main .container-main section.members .grid .member {
+    width: 50%;
+}
+}
+
+@media only screen and (max-width: 767px) {
+main .container-main section.members .grid .member {
+    width: 98%;
+}
 }
