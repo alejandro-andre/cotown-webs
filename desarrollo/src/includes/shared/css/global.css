@@ -773,9 +773,9 @@ footer .container-footer .contain {
     border-bottom: 1px solid #3c434ab3;
     padding: 0 0 2em;
 }
-footer section.container-footer .contain .left h1.footer-logo {
-    font-size: 80px!important;
-    line-height: 82px;
+footer section.container-footer .contain .left .footer-logo img {
+    width: 100%;
+    max-width: 374px;
     margin: 0 0 1rem;
 }
 footer section.container-footer .contain .left .redes em {
@@ -1081,6 +1081,7 @@ button.date-button input.inputs {
     }
     .container-header.second .black-line .left-nav .logo {
         text-align: center;
+        height: 50px;
     }
     .container-header.second .black-line .left-nav .lang {
         margin-right: 0;
@@ -1403,9 +1404,9 @@ button.date-button input.inputs {
         padding: 0;
         border-bottom: none;
     }
-    footer section.container-footer .contain .left h1.footer-logo {
-        font-size: 40px!important;
-        line-height: 1.2em;
+    footer section.container-footer .contain .left .footer-logo img {
+        width: 100%;
+        max-width: 197px;
     }
     footer section.container-footer .contain .left  {
         width: 100%;

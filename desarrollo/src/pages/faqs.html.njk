@@ -21,35 +21,55 @@ tags: page
 ---
 <!-- Additional HEAD content -->
 {% block head %}
+<link rel="stylesheet" href="/assets/css/faqs.css">
 {% endblock %}
 
 <!-- Main -->
-<main class="home">
-  <div class="container-main">
-
-    <!--$$
-    <section class="first-contain row">         
+<main class="faqs">
+  <div class="container-main pure-u-23-24 pure-u-lg-1">
+    <section class="first-contain pure-u-1"> 
+      <img class="img-faqs" alt="faqs" src="/assets/img/faqs.png">
       <div class="title-big">            
-        <h2 class="h2-big">FAQS</h2>
-        <p class="text">
-          Si has llegado hasta aquí es porque te mueres por saber quién está detrás de este proyecto. Pues sí, somos Cotown, un equipo con mucha ilusión e ideas de bombero dispuesto a crear nuevas tendencias, porque ¿para qué seguirlas? 
-          El 100% de nuestra energía está dedicada a hacer que te sientas como un auténtico “ciudadano con suerte”; ese protagonista de película de Netflix con un pisazo en el centro de una ciudad muy molona.
-        </p>
-        <p class="text">
-          Ok, pero ¿qué es Cotown? Es un proyecto hecho a medida para todas aquellas personas que decidan teletrabajar o impulsar su propio proyecto personal en ciudades como Barcelona, Valencia, Bilbao o Madrid y quieran alojarse en un lugar donde no echen de menos su hogar, porque ya estarán en él. No nos van las etiquetas y nos adaptamos al momento de vida de cualquier persona. Lo importante para ser un buen Cotowner es querer disfrutar de las nuevas experiencias y vivirlas como si no hubiera un mañana.
-          Por eso, te presentamos a la crew que está detrás de esta fantástica locura. 
-          <span class="bold"> ¡Vamos!</span>
-        </p>
+        <h1 class="h2-big">FAQS</h1>
+      </div>
+      <div class="search pure-u-1">
+        <form>
+          <div class="search-container pure-u-1">            
+            <label class="selected-option pure-u-22-24 pure-u-lg-5-12" for="options">
+                <em class="icon-search"></em>
+                <input
+                type="search"  
+                class="sinBorde"            
+                name=""
+                placeholder="Buscar por palabra..."/>                  
+            </label>             
+          </div>
+                     
+        </form>
       </div>
     </section>
-    -->
+   
 
-    <section>
+
+    <section class="faqs-container pure-u-1 pure-u-lg-5-6">
     {% for f in faqs %}
     <h1>{{f | translate('Name', L) }}</h1>
-    {% for q in f.Questions %}
-    <h2>{{q | translate('Question', L)}}</h2>
-    <div>{{q | translate('Response', L) | markdown | safe }}</div>
+    {% for q in f.Questions %}    
+    <!-- TEXT EXPANSION -->
+    <div class="description text pure-u-23-24">      
+        <div class="expansion pure-u-1">
+          <h2 class="more">
+          {{q | translate('Question', L)}}
+          </h2>
+          <input type="checkbox" class="tab pure-u-1-2" id="tab1" tabindex="0"/>
+          <label name="tab" for="tab1" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
+            <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+          </label>
+          <div class="content pure-u-1">
+           {{q | translate('Response', L) | markdown | safe }}
+          </div>        
+        </div>
+    </div>    
     {% endfor %}
     {% endfor %}
     </section>
