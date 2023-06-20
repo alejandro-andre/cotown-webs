@@ -36,8 +36,20 @@
 .search .search-container label input.sinBorde {
   border: 0;
 }
-
-
+.search .search-container label input {
+  outline: none;
+  font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px; 
+  margin:0; 
+  padding:0;
+  all: unset;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
 
 .faqs-container {
   margin: 2em 0 6em;
