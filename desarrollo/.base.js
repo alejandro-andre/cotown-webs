@@ -97,7 +97,7 @@ module.exports = (eleventyConfig) => {
         return literals[id][lang];
       }
     } catch {
-      console.log(`Mising text (${lang}) ${id}]`);
+      console.log(`Missing text (${lang}) [${id}]`);
       return `<span style="color:red;">[text missing ${lang}: ${id}]</span>`
     }
   });
