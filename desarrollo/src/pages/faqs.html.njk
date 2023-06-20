@@ -27,6 +27,7 @@ tags: page
 <!-- Main -->
 <main class="faqs">
   <div class="container-main pure-u-23-24 pure-u-lg-1">
+
     <section class="first-contain pure-u-1"> 
       <img class="img-faqs" alt="faqs" src="/assets/img/faqs.png">
       <div class="title-big">            
@@ -48,30 +49,27 @@ tags: page
         </form>
       </div>
     </section>
-   
-
 
     <section class="faqs-container pure-u-1 pure-u-lg-5-6">
-    {% for f in faqs %}
-    <h1>{{f | translate('Name', L) }}</h1>
-    {% for q in f.Questions %}    
-    <!-- TEXT EXPANSION -->
-    <div class="description text pure-u-23-24">      
-        <div class="expansion pure-u-1">
-          <h2 class="more">
-          {{q | translate('Question', L)}}
-          </h2>
-          <input type="checkbox" class="tab pure-u-1-2" id="tab1" tabindex="0"/>
-          <label name="tab" for="tab1" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
-            <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
-          </label>
-          <div class="content pure-u-1">
-           {{q | translate('Response', L) | markdown | safe }}
-          </div>        
-        </div>
-    </div>    
-    {% endfor %}
-    {% endfor %}
+      {% for f in faqs %}
+      <h1>{{f | translate('Name', L) }}</h1>
+      {% for q in f.Questions %}    
+      <div class="description text pure-u-23-24">      
+          <div class="expansion pure-u-1">
+            <h2 class="more">
+            {{q | translate('Question', L)}}
+            </h2>
+            <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
+            <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
+              <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+            </label>
+            <div class="content pure-u-1">
+            {{q | translate('Response', L) | markdown | safe }}
+            </div>        
+          </div>
+      </div>    
+      {% endfor %}
+      {% endfor %}
     </section>
 
   </div>
