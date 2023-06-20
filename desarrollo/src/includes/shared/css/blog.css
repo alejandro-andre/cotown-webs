@@ -1,0 +1,206 @@
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  margin: 0 auto;
+}
+.first-contain {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search {
+  margin: 0 2% 3em;
+}
+.search .search-form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  gap: 2em;
+}
+.search select,
+.search .search-container label {
+  border: 1px solid var(--grey-light);
+  box-shadow: 0px 2.93014px 5.86028px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 12px 24px;
+  background-color: var(--white);
+  outline: none;
+  font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px; 
+  margin:0; 
+}
+.search select {  
+  padding: 12px 16px;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Some browsers will not display the caret when using calc, so we put the fallback first */ 
+  background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+  background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+}
+/*For IE*/
+select::-ms-expand { display: none; }
+.search .search-container label input, .search .search-container label input:focus-visible {
+  border: 0;
+  padding: 0;
+  outline-offset: 0;
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+.search .search-container label em {
+  width: 32px;
+  color: var(--primary);
+}
+
+
+
+.posts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 0 2em;
+  gap: 2em;
+}
+.post {
+  position: relative;
+  min-height: 480px;
+  background: var(--white);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1em 0;
+  overflow: hidden;
+}
+.post .img-container {
+  position: relative;
+  width: 100%; 
+  height: 260px;
+}
+.post img {  
+  width: 100%;  
+  object-fit: cover;
+}
+.post .mark-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.post .mark {
+  position: absolute;
+  top: -42px;
+  right: 13px;
+  width: 18px;
+  height: 100px;
+  padding: 1em 0.2em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background:var(--primary);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.post .mark .stars-container {
+  width: 14px;
+  height: 50px;
+}
+.post .mark .icon-star {
+  color: var(--white);
+  font-size: 14px;
+}
+.post .date {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0 1em;
+  margin: 0;
+}
+
+.post .data {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 40%;
+  background-color: var(--white);
+  padding: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0.5em auto 1em;
+  gap: 0.4em;
+}
+.post .data h3 {
+  margin-bottom: 0;
+}
+.post .data p,
+.post .data a {
+  border: 1px solid var(--primary);
+  border-radius: 49px;
+  padding: 0.2em 0.8em;
+  margin: 0;
+}
+
+/* TABLET */
+@media only screen and (max-width: 1023.9px) {
+  .container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;  
+  }
+  .first-contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+  }
+  main .container-main .first-contain .title-big {
+    margin: 1em auto 0;
+
+  }
+  main .container-main .first-contain .title-big .h2-big {
+    font-size: 40px;
+    line-height: 100%;
+  }
+  .search {
+    margin: 0 0 1em;
+  }
+  .search select {
+    display: none;
+  } 
+   
+  .posts {
+    gap: 2em;
+  }
+  .posts .post {
+    border-radius: 16px;
+    filter: drop-shadow(0px 20px 30px rgba(22,22,22,0.06));
+  }
+
+}
