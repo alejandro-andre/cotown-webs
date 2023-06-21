@@ -31,8 +31,11 @@ tags: page
     <div class="container-main">
       <section class="first-contain about pure-u-1">    
 
-        <div class="img pure-u-1 pure-u-lg-10-24">
-          <img src="/assets/img/about.png" class="card-img-top" loading="lazy" alt="us">
+        <div class="img pure-u-1 pure-u-lg-10-24"> 
+          {% image 
+            constants.SERVER + "/wopi/files/Marketing/Media/" + images['conocenos'] +"/Image/contents?access_token=" + token, 
+            title, title, "card-img-top", [500], ""
+          %}
         </div>
 
         <div class="title-big pure-u-1 pure-u-lg-16-24">
@@ -79,12 +82,14 @@ tags: page
               <div class="first">
               {% image 
                 constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token, 
-                t.Name, t.Name|slug, "img-grid",
-                [300], ""
+                t.Name, t.Name|slug, "img-grid", [300], ""
               %}
               </div>
               <div class="hover">
-                 <img src="/assets/img/member.png" class="img-member" loading="lazy" alt="napoles">           
+              {% image 
+                constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Second_image/contents?access_token=" + token, 
+                t.Name, (t.Name+' hover')|slug, "img-grid", [300], ""
+              %}
               </div>
               <div class="data">
                 <p class="name">{{t.Name}}</p>
