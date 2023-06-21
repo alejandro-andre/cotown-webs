@@ -129,7 +129,7 @@ module.exports = (eleventyConfig) => {
         outputDir: "./www/img/",
         cacheOptions: { removeUrlQueryParams: true },
         filenameFormat: function (id, src, width, format, options) {
-          return `${slugify(alt)}-${width}.${format}`;
+          return `${slugify(name)}-${width}.${format}`;
         }
       });
 

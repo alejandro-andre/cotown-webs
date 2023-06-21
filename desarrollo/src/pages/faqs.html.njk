@@ -12,7 +12,7 @@ pagination:
     data: langs
     size: 1
     alias: L
-    addAllPagesToCollections: true   
+    addAllPagesToCollections: true
 
 date: Last Modified
 changefreq: "weekly"
@@ -22,30 +22,31 @@ tags: page
 <!-- Additional HEAD content -->
 {% block head %}
 <link rel="stylesheet" href="/assets/css/faqs.css">
+<style>
+.highlight {
+  background-color: green;
+}
+</style>
 {% endblock %}
 
 <!-- Main -->
 <main class="faqs">
   <div class="container-main pure-u-23-24 pure-u-lg-1">
 
-    <section class="first-contain pure-u-1"> 
+    <section class="first-contain pure-u-1">
       <img class="img-faqs" alt="faqs" src="/assets/img/faqs.png">
-      <div class="title-big">            
+      <div class="title-big">
         <h1 class="h2-big">FAQS</h1>
       </div>
       <div class="search pure-u-1">
         <form>
-          <div class="search-container pure-u-1">            
+          <div class="search-container pure-u-1">
             <label class="selected-option pure-u-22-24 pure-u-lg-5-12" for="options">
-                <em class="icon-search"></em>
-                <input
-                type="search"  
-                class="sinBorde"            
-                name=""
-                placeholder="Buscar por palabra..."/>                  
-            </label>             
+              <em class="icon-search"></em>
+              <input id="search" type="search" class="sinBorde" placeholder="Buscar por palabra..." onkeyup="buscar()" />
+            </label>
           </div>
-                     
+  
         </form>
       </div>
     </section>
@@ -53,8 +54,8 @@ tags: page
     <section class="faqs-container pure-u-1 pure-u-lg-5-6">
       {% for f in faqs %}
       <h1>{{f | translate('Name', L) }}</h1>
-      {% for q in f.Questions %}    
-      <div class="description text pure-u-23-24">      
+      {% for q in f.Questions %}
+      <div class="description text pure-u-23-24">
           <div class="expansion pure-u-1">
             <h2 class="more">
             {{q | translate('Question', L)}}
@@ -65,12 +66,55 @@ tags: page
             </label>
             <div class="content pure-u-1">
             {{q | translate('Response', L) | markdown | safe }}
-            </div>        
+            </div>
           </div>
-      </div>    
+      </div>
       {% endfor %}
       {% endfor %}
     </section>
 
   </div>
 </main>
+
+<script>
+function buscar() {
+
+  // Search text
+  let filter = document.getElementById('search').value.toUpperCase();
+
+  // Question array
+  let preguntasArr = document.getElementsByClassName('expansion');
+  
+
+  for (let i = 0; i < preguntasArr.length; i++) {
+    let divQuestion = preguntasArr[i].getElementsByClassName("more")[0];
+    let divResponse = preguntasArr[i].getElementsByClassName("content")[0];
+    let oldQuestion = divQuestion.innerText;
+    let oldResponse = divResponse.innerHTML;
+    let newQuestion = oldQuestion;
+    let newResponse = oldResponse;
+
+    if (oldQuestion.toUpperCase().indexOf(filter) > -1 || oldResponse.toUpperCase().indexOf(filter) > -1) {
+
+      if (oldQuestion.toUpperCase().indexOf(filter) > -1) {
+        let re = new RegExp(filter, 'gi');
+        newQuestion = oldQuestion.replace(re, function(str) {return '<span class="highlight">' + str + '</span>'});
+      }
+      if (oldResponse.toUpperCase().indexOf(filter) > -1) {
+        let re = new RegExp(filter, 'gi');
+        newResponse = oldResponse.replace(re, function(str) {return '<span class="highlight">' + str + '</span>'});
+        divResponse.classList.add("encontrada");
+      } else {
+        divResponse.classList.remove("encontrada");
+      }
+
+    } else {
+
+    }
+
+    divQuestion.innerHTML = newQuestion;
+    divResponse.innerHTML = newResponse;
+
+  }
+}
+</script>
