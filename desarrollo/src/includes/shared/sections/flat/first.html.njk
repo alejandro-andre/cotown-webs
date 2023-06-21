@@ -33,11 +33,7 @@
           <li class="splide__slide">
             <div class="slide">
               <div class="img">
-                {% image
-                    constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token,
-                    s.Name, s.Name|slug, "",
-                    [50], ""
-                %}
+                {% svg constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token %}
               </div>
             <p class="title">{{s | translate('Name', L)}}</p>
             </div>           
