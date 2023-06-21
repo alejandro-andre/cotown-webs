@@ -51,6 +51,15 @@ module.exports = (eleventyConfig) => {
     return null;
   });
   
+  // Text to date
+  eleventyConfig.addFilter('dmy', (value) => {
+    if (value != null) {
+      var parts = value.split('-');
+      return parts[2] + '/' + parts[1] + '/' + parts[0];
+    }
+    return null;
+  });
+  
   // CSS minification filter
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;

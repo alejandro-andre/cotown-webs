@@ -2,7 +2,7 @@ module.exports = async (config) => {
 
   const gql = require('./graphql');
   const QUERY = `
-  {
+  query data ($id: Int) {
     data: Marketing_TeamList (
       orderBy: [{ attribute: Order }]
       where: { Segment_id: { EQ: $id } } 

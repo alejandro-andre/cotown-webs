@@ -2,15 +2,10 @@ module.exports = async (config) => {
 
   const gql = require('./graphql');
   const QUERY = `
-  { 
+  query data { 
     data: Geo_LocationList (
       orderBy: [{ attribute: Name }]
-      where: { 
-        AND: [
-          { Segment_id: { EQ: $id } }
-          { Published: { EQ: true } }
-        ]
-      }
+      where: { Published: { EQ: true } }
     ) {
       id
       Name

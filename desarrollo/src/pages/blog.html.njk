@@ -34,10 +34,10 @@ tags: page
         <div class="search pure-u-22-24">
           <form class="search-form pure-u-1">
             <select class="pure-u-7-24">
-              <option>Filtrar por categoría</option>
-              <option>Apartamento privado</option>
-              <option>Residencia universitaria</option>
-              <option>Piso compartido</option>
+              <option value="">Filtrar por categoría...</option>
+              {% for t in tags %}
+              <option value="{{t.id}}">{{t | translate('Name')}}</option>
+              {% endfor %}
             </select>
             <div class="search-container pure-u-1 pure-u-lg-2-3">
               <label class="selected-option pure-u-22-24" for="options">
@@ -54,11 +54,12 @@ tags: page
       </section>
 
       <section class="posts pure-u-23-24 pure-g">
-          {% for p in posts %}          
+          {% for p in posts %}
             <div class="post pure-u-1 pure-u-md-11-24 pure-u-lg-7-24 ">
             <a href="{{langs[L].folder}}/{{p | translate('Slug', L) | ascii}}.html">
               <div class="img-container">
                 <div class="mark-content">
+                  {% if p.featured %}
                   <div class="mark">
                     <div class="stars-container">
                       <em class="icon-star"></em>
@@ -66,10 +67,15 @@ tags: page
                       <em class="icon-star"></em>
                     </div>                          
                   </div>
+                  {% endif %}
                 </div>
-                <img src="/assets/img/apartm.png">         
+                {% image 
+                  constants.SERVER + "/wopi/files/Marketing/Post/" + p.id +"/Image/contents?access_token=" + token, 
+                  p.Title, p.Slug|slug, "",
+                  [100], ""
+                %}
                 <div class="date">
-                  <p>{{p.Publish_date}}</p>
+                  <p>{{p.Publish_date|dmy}}</p>
                 </div>
               </div>   
               <div class="data-post pure-u-23-24">              

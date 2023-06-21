@@ -1,14 +1,15 @@
 module.exports = async (config) => {
 
-    const gql = require('./graphql');
-    const QUERY = `
-  {
+  const gql = require('./graphql');
+  const QUERY = `
+  query data ($id: Int) {
     data: Marketing_PostList (
       where: { 
         AND: [
           { Segment_id: { EQ: $id } } 
-          { Published: {EQ: true} } }
+          { Published: {EQ: true } }
         ]
+      }
     ) {
       id
       Publish_date
