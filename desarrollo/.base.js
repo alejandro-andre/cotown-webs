@@ -97,7 +97,7 @@ module.exports = (eleventyConfig) => {
         return literals[id][lang];
       }
     } catch {
-      console.log(`Mising text (${lang}) ${id}]`);
+      console.log(`Missing text (${lang}) [${id}]`);
       return `<span style="color:red;">[text missing ${lang}: ${id}]</span>`
     }
   });
@@ -129,7 +129,7 @@ module.exports = (eleventyConfig) => {
         outputDir: "./www/img/",
         cacheOptions: { removeUrlQueryParams: true },
         filenameFormat: function (id, src, width, format, options) {
-          return `${slugify(alt)}-${width}.${format}`;
+          return `${slugify(name)}-${width}.${format}`;
         }
       });
 

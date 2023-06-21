@@ -1,10 +1,10 @@
 module.exports = async (config) => {
 
   const gql = require('./graphql');
-  const QUERY = `
-  {
+  const QUERY = `query data ($id: Int) { 
     data: Marketing_Faq_topicList (
-      orderBy: [{attribute: Order, direction:ASC, nullsGo: FIRST}]
+      where: { Segment_id: { EQ: $id } }
+      orderBy: [ { attribute: Order, direction:ASC, nullsGo: FIRST } ]
     ) {
       id
       Name
