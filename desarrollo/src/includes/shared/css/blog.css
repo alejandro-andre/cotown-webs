@@ -140,7 +140,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .post .date {
   position: absolute;
-  top: 50%;
+  top: 8.8em;
   left: 0;
   background-color: var(--primary);
   color: var(--white);
@@ -227,6 +227,6 @@ input[type="search"]::-webkit-search-results-decoration {
     top: 52%;
   }
   .post .date {
-    top: 38%;
+    top: 40%;
   }
 }
