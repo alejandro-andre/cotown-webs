@@ -1479,6 +1479,11 @@ button.date-button input.inputs {
         text-align: left;
         margin-bottom: 1em;
     }
+    main.post .container-main .post-content .text p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+    }
     main.post .container-main .like-content .like .text {
         display: flex;
         flex-flow: column;
@@ -1490,6 +1495,7 @@ button.date-button input.inputs {
         font-size: 35.4257px;
         line-height: 36px;        
     }
+    
     main.post .container-main .like-content .like .redes {
         display: flex;
         flex-flow: row wrap;
