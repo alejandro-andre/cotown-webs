@@ -2,7 +2,9 @@
 <main class="post">
   <div class="container-main">
     <section class="post-content pure-u-20-24">
-        <h3>{{post | translate('Title', L)}}</h3>
+      <div class="h1-container pure-u-20-24>
+        <h1>{{post | translate('Title', L)}}</h1>
+      </div>
         {% image 
         constants.SERVER + "/wopi/files/Marketing/Post/" + post.id +"/Image/contents?access_token=" + token, 
         post.Title, post.Title, "img-loc",
@@ -16,13 +18,13 @@
           <p>{{post | translate('Content', L) | markdown | safe }}</p>
         </div>       
     </section>
-    <section class="like-content pure-u-22-24">
-      <div class="like pure-u-22-24 pure-u-lg-1-2">
-        <div class="text pure-u-22-24 pure-u-lg-11-24">
+    <section class="like-content pure-u-1">
+      <div class="like pure-u-1 pure-u-lg-7-12">
+        <div class="text pure-u-22-24 pure-u-lg-15-24">
           <h3>¿te ha gustado?</h3>
           <p>Comparte este artículo</p>
         </div>
-        <div class="redes pure-u-22-24 pure-u-lg-11-24">
+        <div class="redes pure-u-22-24 pure-u-lg-7-24">
           <a href="{{globals.rrss.wh}}" rel="noopener, noreferrer" target="_blank"><em class="icon-whatsapp-primary"></em></a>
           <a href="{{globals.rrss.fb}}" rel="noopener, noreferrer" target="_blank"><em class="icon-facebook-primary"></em></a>
           <a href="{{globals.rrss.ig}}" rel="noopener, noreferrer" target="_blank"><em class="icon-instagram-primary"></em></a>

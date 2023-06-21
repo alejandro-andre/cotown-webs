@@ -770,7 +770,7 @@ main.post .container-main .post-content {
     align-items: center;
     margin: 6em auto;
 }
-main.post .container-main .post-content h3 {
+main.post .container-main .post-content h1 {
     font-weight: 400;
     font-size: 64px;
     line-height: 100%;
@@ -790,14 +790,46 @@ main.post .container-main .like-content {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    margin: 0 0 4em;    
 }
 main.post .container-main .like-content .like {
     background-color: var(--primary);
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    padding: 1em 2em;
+    gap: 1em;
 }
+main.post .container-main .like-content .like .text {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+main.post .container-main .like-content .like .text h3 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    color: var(--white);
+    margin: 0;
+}
+main.post .container-main .like-content .like .text p {
+    color: var(--white);
+    margin: 0;
+}
+main.post .container-main .like-content .like .redes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+main.post .container-main .like-content .like .redes a em {
+    color: var(--white);
+    font-size: 34px;
+}
+
 
 /* FOOTER 
 -------------------------------- */
@@ -1391,12 +1423,7 @@ button.date-button input.inputs {
         justify-content: space-between;
         align-items: center;
         padding: 1em;
-    }    
-    
-
-
-
-
+    }
 
 /* __________________________ OTHER PAGES ___________________________*/
 /* ABOUT PAGE */
@@ -1433,6 +1460,38 @@ button.date-button input.inputs {
     }
     main .container-main .first-contain .title-big .h2-big, main .container-main .first-contain .title-big .h2-border {
         text-align: start;
+    }
+
+/* __________________________ POST  ___________________________*/
+
+    main.post .container-main .like-content {
+        display: flex;
+        flex-direction: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    main.post .container-main .like-content .like .text {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main.post .container-main .like-content .like .text h3 {
+        font-weight: 400;
+        font-size: 35.4257px;
+        line-height: 36px;        
+    }
+
+    main.post .container-main .like-content .like .redes {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;        
+    }
+    main.post .container-main .like-content .like .redes a em {
+        font-size: 24px;
     }
 
 
@@ -1517,8 +1576,8 @@ button.date-button input.inputs {
     }     */
     
 
-/* __________________________ OTHER PAGES ___________________________*/
-/* ABOUT PAGE */
+    /* __________________________ OTHER PAGES ___________________________*/
+    /* ABOUT PAGE */
     main .container-main section.members .grid .member {
         width: 50%;
     } 
