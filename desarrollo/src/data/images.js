@@ -3,9 +3,11 @@ module.exports = async (config) => {
   const gql = require('./graphql');
   const QUERY = `
   {
-    data: Marketing_MediaList {
-        id
-        Code
+    data: Marketing_MediaList (
+      where: { Segment_id: { EQ: $id } } 
+    ) {
+      id
+      Code
     }
   }`;
   const data = await gql(QUERY, config, 'images');

@@ -11,6 +11,7 @@ module.exports = async (config) => {
       Value_en
     }
   }`;
+  
   const data = await gql(QUERY, config, 'texts');
   const json = {};
   data.data.forEach(o => { json[o.Code] = { en: o.Value_en, es: o.Value } });

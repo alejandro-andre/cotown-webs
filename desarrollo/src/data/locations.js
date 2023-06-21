@@ -5,7 +5,12 @@ module.exports = async (config) => {
   { 
     data: Geo_LocationList (
       orderBy: [{ attribute: Name }]
-      where: { Published: { EQ: true } }
+      where: { 
+        AND: [
+          { Segment_id: { EQ: $id } }
+          { Published: { EQ: true } }
+        ]
+      }
     ) {
       id
       Name

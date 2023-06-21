@@ -5,16 +5,17 @@ module.exports = async (config) => {
   {
     data: Marketing_TeamList (
       orderBy: [{ attribute: Order }]
+      where: { Segment_id: { EQ: $id } } 
     ) {
       id
       Name
       Position
       Position_en
       Image {
-          name
+        name
       }
       Second_image {
-          name
+        name
       }
     }
   }`;

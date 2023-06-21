@@ -5,7 +5,12 @@ module.exports = async (config) => {
   {
     data: Building_Building_service_typeList (
       orderBy: [{ attribute: Name }]
-      where: { Published: { EQ: true } }
+      where: { 
+        AND: [
+          { Published: { EQ: true } }
+          { Segment_id: { EQ: $id } } 
+        ]
+      }
     ) { 
       id 
       Name
