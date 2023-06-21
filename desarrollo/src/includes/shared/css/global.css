@@ -760,6 +760,78 @@ main .container-main section.banner h2 {
 }
 
 
+/* BLOG 
+-------------------------------- */
+
+main.post .container-main .post-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 6em auto;
+}
+main.post .container-main .post-content h1 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+main.post .container-main .post-content img {
+    width: 100%;
+}
+main.post .container-main .post-content .text p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+}
+
+main.post .container-main .like-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 4em;    
+}
+main.post .container-main .like-content .like {
+    background-color: var(--primary);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em 2em;
+    gap: 1em;
+}
+main.post .container-main .like-content .like .text {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+main.post .container-main .like-content .like .text h3 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    color: var(--white);
+    margin: 0;
+}
+main.post .container-main .like-content .like .text p {
+    color: var(--white);
+    margin: 0;
+}
+main.post .container-main .like-content .like .redes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+main.post .container-main .like-content .like .redes a em {
+    color: var(--white);
+    font-size: 34px;
+}
+
+
 /* FOOTER 
 -------------------------------- */
 
@@ -772,6 +844,10 @@ footer section.container-footer {
 footer .container-footer .contain {
     border-bottom: 1px solid #3c434ab3;
     padding: 0 0 2em;
+    align-content: space-between;
+}
+footer section.container-footer .contain .left .footer-logo {
+    width: 80%;
 }
 footer section.container-footer .contain .left .footer-logo img {
     width: 100%;
@@ -938,7 +1014,6 @@ button.date-button input.inputs {
         display: none;
     }
 }
-
 /* DESKTOP SMALL */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .icons-header .pure-menu-link {
@@ -1028,7 +1103,6 @@ button.date-button input.inputs {
         margin: 0 0 0 1em;
     }
 }
-
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {      
     main {
@@ -1350,12 +1424,7 @@ button.date-button input.inputs {
         justify-content: space-between;
         align-items: center;
         padding: 1em;
-    }    
-    
-
-
-
-
+    }
 
 /* __________________________ OTHER PAGES ___________________________*/
 /* ABOUT PAGE */
@@ -1392,6 +1461,49 @@ button.date-button input.inputs {
     }
     main .container-main .first-contain .title-big .h2-big, main .container-main .first-contain .title-big .h2-border {
         text-align: start;
+    }
+
+/* __________________________ POST  ___________________________*/
+
+    main.post .container-main .post-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 6em auto;
+    }
+    main.post .container-main .post-content h1 {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 110%;
+        text-align: left;
+        margin-bottom: 1em;
+    }
+    main.post .container-main .post-content .text p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+    }
+    main.post .container-main .like-content .like .text {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main.post .container-main .like-content .like .text h3 {
+        font-weight: 400;
+        font-size: 35.4257px;
+        line-height: 36px;        
+    }
+    
+    main.post .container-main .like-content .like .redes {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;        
+    }
+    main.post .container-main .like-content .like .redes a em {
+        font-size: 24px;
     }
 
 
@@ -1469,7 +1581,6 @@ button.date-button input.inputs {
         display: none;       
     }
 }
-
 /* MOBILE */
 @media only screen and (max-width: 767px) {
     /* .container-header .black-line .black-line {
@@ -1477,8 +1588,8 @@ button.date-button input.inputs {
     }     */
     
 
-/* __________________________ OTHER PAGES ___________________________*/
-/* ABOUT PAGE */
+    /* __________________________ OTHER PAGES ___________________________*/
+    /* ABOUT PAGE */
     main .container-main section.members .grid .member {
         width: 50%;
     } 
