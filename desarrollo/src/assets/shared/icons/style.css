@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?ut2m6p');
-  src:  url('fonts/icons.eot?ut2m6p#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?ut2m6p') format('truetype'),
-    url('fonts/icons.woff?ut2m6p') format('woff'),
-    url('fonts/icons.svg?ut2m6p#icons') format('svg');
+  src:  url('fonts/icons.eot?hlmhv');
+  src:  url('fonts/icons.eot?hlmhv#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?hlmhv') format('truetype'),
+    url('fonts/icons.woff?hlmhv') format('woff'),
+    url('fonts/icons.svg?hlmhv#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -240,4 +240,10 @@
 }
 .icon-circle-checked:before {
   content: "\e929";
+}
+.icon-envelope:before {
+  content: "\e92a";
+}
+.icon-call:before {
+  content: "\e92b";
 }

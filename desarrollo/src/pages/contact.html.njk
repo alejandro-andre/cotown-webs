@@ -27,14 +27,92 @@ tags: page
 
 <!-- Main -->
 <main class="contact">
-  <div class="container-main">
+  <div class="container-main pure-u-1">
+    <section class="first-contact pure-u-1">
+      <h1>CONTACTO</h1>
+    </section>   
+    <section class="contact-main pure-u-1">        
+      <h2>OFICINAS ESPAÑA</h2>
+      {% for o in offices %}
+      <div class="img-content pure-u-22-24 pure-u-lg-1">
 
-    {% for o in offices %}
-    <p>{{o.Location}}</p>
-    <div style="width:400px;height:300px;" id="map-{{o.id}}">
-    </div>
-    {% endfor %}
+        <div class="img-city pure-u-1-8">      
+          <img class="img" alt="city" src="/assets/img/barcelona.svg">
+        </div>
 
+        <div class="contact-content pure-u-23-24 pure-u-lg-5-6">
+
+          <div class="text-location pure-u-1 pure-u-lg-17-24"> 
+            <h3>{{o.Location}}</h3>
+            <p>C / Beethoven 15, 7ª planta. 08021 Barcelona, España.</p>
+            <p>
+              <em class="icon-envelope"></em>
+              <span>info@cotown.com</span>
+            </p>
+            <p>
+              <em class="icon-call"></em>
+              <span>+34 XXX XXX XXX</span>
+            </p>
+          </div>
+
+          <div class="pure-u-1 pure-u-lg-1-8">
+            <div style="width:400px;height:300px;" id="map-{{o.id}}"></div>
+          </div>
+          
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    <section class="form">
+      <h2 class="title">            
+        Si tienes cualquier duda, contáctanos
+      </h2>
+      
+      <div class="form-container pure-g">        
+        <div class="campo pure-u-1 pure-u-lg-1-2">
+          <label class="label">Nombre</label>                  
+          <input class="input" type="name" id="name" name="name">
+        </div>
+        <div class="campo pure-u-1 pure-u-lg-1-2">
+          <label class="label">Apellidos</label>                  
+          <input class="input" type="name" id="name" name="name">
+        </div> 
+        <div class="campo pure-u-1 pure-u-lg-1-2">
+          <label class="label">Correo electrónico</label>                  
+          <input class="input" type="email" id="email" name="email">
+        </div>
+        <div class="campo number pure-u-1 pure-u-lg-1-2">
+          <div class="pure-u-5-24 pure-u-lg-1-6">
+            <label class="label pure-u-1">Código</label>                  
+            <select class="select pure-u-1" type="select" id="code" name="code">
+              <option>+34</option>
+              <option>+34</option>
+              <option>+34</option>
+            </select>
+          </div>
+           <div class="pure-u-3-4">
+            <label class="label pure-u-1">Número de teléfono</label>                  
+            <input class="input pure-u-1" type="phone" id="phone" name="phone">
+          </div>
+        </div>
+        <div class="campo pure-u-1 pure-u-lg-1-2">
+          <label class="label">Empresa</label>                  
+          <input class="input" type="company" id="company" name="company">
+        </div>
+        <div class="campo pure-u-1 pure-u-lg-1-2">
+          <label class="label">Empresa</label>                  
+          <input class="input" type="company" id="company" name="company">
+        </div>
+        <div class="campo coment pure-u-1">
+          <label class="label">Mensaje</label>
+          <textarea type="textarea" id="textarea" name="textarea" rows="4" cols="50">
+          </textarea>
+        </div>
+        
+        <button class="btn-secondary">Enviar</button>
+      </div>
+      
+    </section>
   </div>
 </main>
 
