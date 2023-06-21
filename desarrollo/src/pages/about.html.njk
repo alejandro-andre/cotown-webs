@@ -26,14 +26,14 @@ tags: page
 
 <!-- Main -->
 <main class="about">
-  <div class="container-main"> 
+  <div class="container-main">
 
     <div class="container-main">
-      <section class="first-contain about pure-u-1">    
+      <section class="first-contain about pure-u-1">   
 
-        <div class="img pure-u-1 pure-u-lg-10-24"> 
-          {% image 
-            constants.SERVER + "/wopi/files/Marketing/Media/" + images['conocenos'] +"/Image/contents?access_token=" + token, 
+        <div class="img pure-u-1 pure-u-lg-10-24">
+          {% image
+            constants.SERVER + "/wopi/files/Marketing/Media/" + images['conocenos'] +"/Image/contents?access_token=" + token,
             title, title, "card-img-top", [500], ""
           %}
         </div>
@@ -47,10 +47,10 @@ tags: page
       <section class="banner">
         <div class="splide-banner splide" role="group">
           <div class="splide__track">
-            <ul class="splide__list">        
+            <ul class="splide__list">       
               <li class="splide__slide">
                 <h2>
-                cuentas |               
+                cuentas |              
                 </h2>
               </li>
               <li class="splide__slide">
@@ -65,12 +65,12 @@ tags: page
               </li>
               <li class="splide__slide">
                 <h2>
-                lorem ipsum dolor sit |  
+                lorem ipsum dolor sit | 
                 </h2>
-              </li>                   
+              </li>                  
             </ul>
           </div>
-        </div>     
+        </div>    
       </section>
 
       <section class="members row">
@@ -80,14 +80,14 @@ tags: page
           <div class="member">
             <div class="img-member">
               <div class="first">
-              {% image 
-                constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token, 
+              {% image
+                constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token,
                 t.Name, t.Name|slug, "img-grid", [300], ""
               %}
               </div>
               <div class="hover">
-              {% image 
-                constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Second_image/contents?access_token=" + token, 
+              {% image
+                constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Second_image/contents?access_token=" + token,
                 t.Name, (t.Name+' hover')|slug, "img-grid", [300], ""
               %}
               </div>
@@ -106,33 +106,33 @@ tags: page
         {% literal texts, 'about-unete', L, true %}
         <div class="form-container">
           <div class="campo">
-            <label class="label">Nombre y apellidos</label>                  
+            <label class="label">Nombre y apellidos</label>                 
             <input class="input" type="name" id="name" name="name">
           </div>
           <div class="campo">
-            <label class="label">Email</label>                  
+            <label class="label">Email</label>                 
             <input class="input" type="email" id="email" name="email">
           </div>
           <div class="campo">
-            <label class="label">Teléfono móvil</label>                  
+            <label class="label">Teléfono móvil</label>                 
             <input class="input" type="phone" id="phone" name="phone">
           </div>
           <div class="campo">
-            <label class="label">Otros</label>                  
+            <label class="label">Otros</label>                 
             <input class="input" type="other" id="other" name="other">
           </div>
           <div class="campo">
-            <label class="label" >Otros2</label>                  
+            <label class="label" >Otros2</label>                 
             <input class="input" type="other2" id="other2" name="other2">
           </div>
 
           <div class="campo add-file">
             <label class="label">Subir CV</label>
-            <div class="select">                  
-              <span class="selected">                    
+            <div class="select">                 
+              <span class="selected">                   
                 <input
                   id="selected"
-                  class="input selected"                    
+                  class="input selected"                   
                   accept=".pdf,application/pdf"
                   type="file"
                   value="Subir CV"
@@ -140,16 +140,16 @@ tags: page
                 />
                 <label class="label btn-primary" for="selected">
                   <span>Adjuntar archivo</span>
-                </label>                
+                </label>               
               </span>
               <label class="select-file" for="selected">
                 <span>Subir CV</span>
               </label>
-            </div>               
+            </div>              
             <div class="text-ok">
               ¡Excelente! Hemos recibido tu CV y lo estaremos revisando cuidadosamente. Si tu perfil coincide con nuestras necesities y requisitos, nos pondremos en contacto contigo para programar una entrevista. ¡Gracias por tu interés en unirte a nuestro equipo!
             </div>
-          </div> 
+          </div>
           <button class="btn-secondary">Enviar solicitud</button>
         </div>
       </section>
@@ -158,6 +158,7 @@ tags: page
   </div>
 </main>
 
+{% block footer %}
 <script>
   new Splide('.splide-banner', {
     type: 'loop',
@@ -172,3 +173,4 @@ tags: page
     autoScroll: { speed: 1 }
   }).mount( window.splide.Extensions );
 </script>
+{% endblock %}

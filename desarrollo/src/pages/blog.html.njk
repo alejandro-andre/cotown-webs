@@ -12,7 +12,7 @@ pagination:
     data: langs
     size: 1
     alias: L
-    addAllPagesToCollections: true   
+    addAllPagesToCollections: true  
 
 date: Last Modified
 changefreq: "weekly"
@@ -27,67 +27,85 @@ tags: page
 <!-- Main -->
 <main class="blog">
   <div class="container-main pure-u-20-24">
-    <section class="first-contain pure-u-1"> 
-        <div class="title-big pure-u-1">            
+
+    <!-- Cabecera -->
+    <section class="first-contain pure-u-1">
+        <div class="title-big pure-u-1">           
           <h1 class="h2-big">BLOG</h1>
         </div>
         <div class="search pure-u-22-24">
           <form class="search-form pure-u-1">
-            <select class="pure-u-7-24">
-              <option value="">Filtrar por categoría...</option>
+
+            <!-- Filter -->
+            <select id="category" class="pure-u-7-24" onchange="goTag()">
+              <option value="">{% literal texts, 'filtrar-categoria', L %}</option>
               {% for t in tags %}
-              <option value="{{t.id}}">{{t | translate('Name')}}</option>
+              <option value="{{t | translate('Name')|ascii}}">{{t | translate('Name')}}</option>
               {% endfor %}
             </select>
+
+            <!-- Search -->
             <div class="search-container pure-u-1 pure-u-lg-2-3">
               <label class="selected-option pure-u-22-24" for="options">
                   <em class="icon-search"></em>
                   <input
-                  type="search"  
-                  class="sinBorde"            
+                  type="search" 
+                  class="sinBorde"           
                   name=""
-                  placeholder="Buscar por palabra..."/>                  
-              </label>             
-            </div>                     
+                  placeholder="Buscar por palabra..."/>                 
+              </label>            
+            </div>      
+                         
           </form>
         </div>
-      </section>
+    </section>
 
-      <section class="posts pure-u-23-24 pure-g">
-          {% for p in posts %}
-            <div class="post pure-u-1 pure-u-md-11-24 pure-u-lg-7-24 ">
-            <a href="{{langs[L].folder}}/{{p | translate('Slug', L) | ascii}}.html">
-              <div class="img-container">
-                <div class="mark-content">
-                  {% if p.featured %}
-                  <div class="mark">
-                    <div class="stars-container">
-                      <em class="icon-star"></em>
-                      <em class="icon-star"></em>
-                      <em class="icon-star"></em>
-                    </div>                          
-                  </div>
-                  {% endif %}
+    <!-- Posts -->
+    <section class="posts pure-u-23-24 pure-g">
+        {% for p in posts %}
+          <div class="post pure-u-1 pure-u-md-11-24 pure-u-lg-7-24 ">
+          <a href="{{langs[L].folder}}/{{p | translate('Slug', L) | ascii}}.html">
+            <div class="img-container">
+              <div class="mark-content">
+                {% if p.featured %}
+                <div class="mark">
+                  <div class="stars-container">
+                    <em class="icon-star"></em>
+                    <em class="icon-star"></em>
+                    <em class="icon-star"></em>
+                  </div>                         
                 </div>
-                {% image 
-                  constants.SERVER + "/wopi/files/Marketing/Post/" + p.id +"/Image/contents?access_token=" + token, 
-                  p.Title, p.Slug|slug, "",
-                  [100], ""
-                %}
-                <div class="date">
-                  <p>{{p.Publish_date|dmy}}</p>
-                </div>
-              </div>   
-              <div class="data-post pure-u-23-24">              
-                <h3 class="pure-u-22-24">{{p | translate('Title', L)}}</h3>
-                {% for t in p.Tags %}
-                <p>{{t.Tag | translate('Name', L)}}</p>
-                {% endfor %}                
+                {% endif %}
               </div>
-              </a>
-          </div>
-          
-          {% endfor %}             
-      </section>
+              {% image
+                constants.SERVER + "/wopi/files/Marketing/Post/" + p.id +"/Image/contents?access_token=" + token,
+                p.Title, p.Slug|slug, "",
+                [600,300], "(max-width: 768px) 200px, (max-width: 1024px) 300px, 600px"
+              %}
+              <div class="date">
+                <p>{{p.Publish_date|dmy}}</p>
+              </div>
+            </div>  
+            <div class="data-post pure-u-23-24">             
+              <h3 class="pure-u-22-24">{{p | translate('Title', L)}}</h3>
+              {% for t in p.Tags %}
+              <p>{{t.Tag | translate('Name', L)}}</p>
+              {% endfor %}               
+            </div>
+            </a>
+        </div>
+       
+        {% endfor %}            
+    </section>
+
   </div>
 </main>
+
+{% block footer %}
+<script>
+function goTag(event) {
+  const select = document.getElementById("category");
+  document.location.href="blog/" + select.value + ".html"
+}
+</script>
+{% endblock %}

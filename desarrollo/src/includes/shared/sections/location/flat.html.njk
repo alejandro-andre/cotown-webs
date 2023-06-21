@@ -10,12 +10,12 @@
     </button>
 
     <div class="calendar pure-u-1-1">
-      <div class="reservas_form_div pure-u-1 pure-u-lg-1-2">            
-      <form id="reservas_form" name="form_multi" method="GET"> 
+      <div class="reservas_form_div pure-u-1 pure-u-lg-1-2">           
+      <form id="reservas_form" name="form_multi" method="GET">
         <button class="date-button">
           <label class="labels">Entrada</label>
           <input type="text" id="in" onfocus="(this.type='date')" class="inputs" name="in" placeholder="02/06/2023"/>
-        </button>    
+        </button>   
         <button class="date-button">
           <label class="labels">Salida</label>
           <input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="02/09/2023"/>
@@ -24,26 +24,26 @@
       </div>
     </div>
 
-  </div>        
+  </div>       
 
   <div class="carousel desktop">
-  <div class="splide" id="sliderFlats" aria-label="Slider">            
+  <div class="splide" id="sliderFlats" aria-label="Slider">           
     <div class="splide__track">
         <div class="splide__arrows arrows">
           <button type="button" class="arrow-nav splide__arrow splide__arrow--prev"
             type="button"
             aria-label="Previous slide"
-            aria-controls="splide01-track">                
+            aria-controls="splide01-track">               
             <i class="icon-corchete-left"></i>
           </button>
           <button type="button" class="arrow-nav splide__arrow splide__arrow--next"
             type="button"
             aria-label="Next slide"
-            aria-controls="splide01-track">                
+            aria-controls="splide01-track">               
             <i class="icon-corchete-right"></i>
           </button>
-        </div>   
-        <ul class="splide__list carousel-main-list"> 
+        </div>  
+        <ul class="splide__list carousel-main-list">
           <li class="splide__slide main-slide">
             <div class="card-contain">
               <div class="card shadow desktop">
@@ -62,30 +62,30 @@
                           <div class="room-type">
                             <img src="/assets/icons/shared-room.svg">
                             <h4>HABITACIÓN COMPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                            
+                            <p>Desde XXX€/mes</p>                           
                           </div>
                           <div class="room-type">
                             <img src="/assets/icons/individual-room.svg">
                             <h4>HABITACIÓN INDIVIDUAL</h4>
                             <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                            
+                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                           
                           </div>
                           <div class="room-type">
                             <img src="/assets/icons/keys.svg">
-                            <h4>APARTAMENTO INDIVIDUAL</h4>  
+                            <h4>APARTAMENTO INDIVIDUAL</h4> 
                             <button class="btn-secondary green-button">Ver más</button>
                           </div>
                         </div>
                       </a>
                       <!-- CAROUSEL INTERNO -->
-                      {% include 'shared/sections/location/carousel-interno.njk' %}                    
+                      {% include 'shared/sections/location/carousel-interno.njk' %}                   
                   </div>
               </div>
             </div>
           </li>
-        </ul>           
+        </ul>          
       </div>
-    </div>         
+    </div>        
   </div>
 
   <div class="pisos mobile pure-u-1">
@@ -95,8 +95,8 @@
           <img src="/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
         </div>
         <div class="piso pure-u-1">
-          <h3>NÀPOLES</h3>                
-          <div class="options pure-u-1">                 
+          <h3>NÀPOLES</h3>               
+          <div class="options pure-u-1">                
             <div class="type pure-u-22-24">
               <div class="img-container pure-u-2-24">
                 <img src="/assets/icons/individual-room.svg">
@@ -119,7 +119,7 @@
               <div class="p-container pure-u-8-24">
               <span>Desde<span>
               <p>XXX€/mes</p>
-              </div>                        
+              </div>                       
             </div>
             <div class="type pure-u-22-24">
               <div class="img-container pure-u-2-24">
@@ -154,23 +154,25 @@
                 <img src="/assets/icons/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
                 <p>2 habitaciones con cama doble</p>
             </li>
-          </ul>                 
+          </ul>                
         </div>
       </div>
     </div>
-    
-    
+   
+   
   </div>
 
 </section>
 
+{% block footer %}
 <script>
 new Splide('#sliderMini', {
    type: 'loop',
-   gap: '2em', 
+   gap: '2em',
    perPage: 4,
    breakpoints: {
       1400: { perPage: 3 },
     },
 }).mount();
 </script>
+{% endblock %}

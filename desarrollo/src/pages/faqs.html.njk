@@ -75,6 +75,7 @@ tags: page
   </div>
 </main>
 
+{% block footer %}
 {% set script %}{% include "shared/js/mark.min.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
 <script>
 function buscar() {
@@ -101,8 +102,8 @@ function buscar() {
         if (input)
           input.querySelector('.tab').checked = true;
       },
-    });  
+    }); 
   }
 }
-
 </script>
+{% endblock %}

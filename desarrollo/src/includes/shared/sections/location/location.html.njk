@@ -11,13 +11,14 @@
     <div class="container-main">
     {% include 'shared/sections/location/first.html.njk' %}
     {% include 'shared/sections/location/flat.html.njk' %}
-    </div> 
+    </div>
   </section>
   <section class="map"><div class="map" id="map"></div></section>
   {% include 'shared/sections/location/services.html.njk' %}
 </main>
 
 <!-- Scripts -->
+{% block footer %}
 {% set script %}
 {% include "shared/js/map.js" %}
 var map = createMap("map", 41.3933, 2.1377, 16);
@@ -26,8 +27,8 @@ var markerArray = [];
 {%-if b.District.Location.Name == location.Name-%}
 {{map}}
 markerArray.push(putMarker(
-  map, 
-  {{b.Lat_lon.slice(1,-1).split(',')[0]}}, 
+  map,
+  {{b.Lat_lon.slice(1,-1).split(',')[0]}},
   {{b.Lat_lon.slice(1,-1).split(',')[1]}},
    `<div class="popup">
       <img src="/assets/img/pisos/napoles.png">
@@ -49,3 +50,4 @@ if (markerArray.length > 0) {
 <script>
 new Splide('#sliderFlats', { type: 'loop', gap: '10em' ,focus: 'center', padding: '5rem' }).mount();
 </script>
+{% endblock %}

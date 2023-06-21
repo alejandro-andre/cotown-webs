@@ -12,7 +12,7 @@ pagination:
     data: langs
     size: 1
     alias: L
-    addAllPagesToCollections: true   
+    addAllPagesToCollections: true  
 
 date: Last Modified
 changefreq: "weekly"
@@ -38,6 +38,7 @@ tags: page
   </div>
 </main>
 
+{% block footer %}
 {% set script %}{% include "shared/js/map.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
 <script>
   var mp, lt, ln;
@@ -48,4 +49,4 @@ tags: page
   putMarker(mp, lt, ln);
   {%-endfor %}
 </script>
-
+{% endblock %}

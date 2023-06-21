@@ -9,8 +9,8 @@
 
       {% for s in services %}
       <div class="card">
-        {% image 
-            constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token, 
+        {% image
+            constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token,
             s.Name, s.Name|slug, "",
             [100], ""
         %}

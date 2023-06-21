@@ -154,7 +154,8 @@ module.exports = (eleventyConfig) => {
       // Generate HTML
       html = Image.generateHTML(metadata, imageAttributes);
       return html.replace("height", "h");
-    } catch {
+    } catch (error) {
+      console.log(error);
       console.log(`Mising image ${name} ${src}]`);
       return `<span style="color:red;">[image missing ${name}]</span>`;
     }
