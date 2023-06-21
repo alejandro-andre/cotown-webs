@@ -86,16 +86,7 @@
         </a>
       </div>
       <!-- Logo -->
-      <div class="logo pure-u-1-3">       
-        <a class="desktop" href="{{langs[L].folder}}/">
-          <img class="img-logo" alt="logo" src="/assets/img/vanguard.svg">
-          <!-- <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1> -->
-        </a>
-         <a class="mobile" href="{{langs[L].folder}}/">
-          <img class="img-logo" alt="logo" src="/assets/img/vanguard-header-mobile.png">
-          <!-- <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1> -->
-        </a>
-      </div>
+      {% include site + '/sections/common/header-logo.html.njk' %}
 
       <!-- Reservar (movil) -->
       <div class="booking pure-u-1-3">
