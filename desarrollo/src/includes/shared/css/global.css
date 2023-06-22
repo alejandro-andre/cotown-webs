@@ -17,6 +17,9 @@ a { text-decoration: none; }
 button.btn-primary a {
     color: var(--primary);
 }
+mark {
+    background-color: var(--primary-underline)!important;
+}
 
 /* BOTONES
 -------------------------------- */
@@ -664,12 +667,12 @@ main .container-main section.form .form-container .campo.coment input {
 main .container-main section.form .form-container .campo textarea {
     width: 95%;
 }
-select {
+main .container-main section.form select {
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
 /* Some browsers will not display the caret when using calc, so we put the fallback first */ 
-background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
 background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
 }
 /*For IE*/
@@ -763,12 +766,15 @@ main .container-main section.form .form-container .campo .select input.selected 
     width: 100%;
     opacity: 0;    
 }
-main .container-main section.form .form-container p {
-    color: var(--primary);
+section.form .form-container .text-ok p {
+    color: var(--green-success);
     font-size: 16px;
+    font-style: italic;
+    line-height: 150%;
 }
 main .container-main section.form .form-container button.btn-secondary {
     margin: 2em 0 1em;
+    padding: 20px 40px;
 }
 
 /* ICONOS CHAT */
@@ -1106,9 +1112,100 @@ button.date-button input.inputs {
   }
   .popup .content {
     max-height: 80%;
-    overflow: hidden;
+    max-width: 90%;
+    margin: 2em auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    
   }
+  .popup .content section {    
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+.popup .content section h2 {
+    width: 100%;
+    font-size: 64px;
+    line-height: 110%;
+    text-align: center;
+}
+.popup .content section .city-selector {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.popup .content section .city-selector select { 
+    width: 50%;
+    border: 1.5px solid #d1d1d1;
+    border-radius: 12px;
+    padding: 4px 24px;
+    outline-offset: 0;
+    outline: -webkit-focus-ring-color auto 0;
+    height: 100px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: var(--grey-light);
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: var(--black);   
+}
+.popup .content section .city-selector select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Some browsers will not display the caret when using calc, so we put the fallback first */ 
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 30px) !important; /* Better placement regardless of input width */
+}
+.popup .content section .city-selector .city-icons {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+}
+.popup .content section .city-selector .city-icons .city {
+    width: 25%;
+}
+.popup .content section .city-selector .city-icons .city .content {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2em 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+.popup .content section .city-selector .city-icons .city .content:hover {   
+    transform: scale(1.1);
+    background-color: var(--primary-bg);
+    border-radius: 16px;    
+}
 
+
+.popup .content section .city-selector .city-icons .city img {
+
+}
+.popup .content section .city-selector .city-icons .city p {
+
+}
 
 
 
@@ -1705,6 +1802,7 @@ button.date-button input.inputs {
     main .container-main section.form .form-container .campo textarea {
         width: 90%;
     }
+ 
 
 
     
