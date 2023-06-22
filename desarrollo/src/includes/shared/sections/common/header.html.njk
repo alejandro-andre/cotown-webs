@@ -62,8 +62,12 @@
 
           <!-- Reservar -->
           <li class="pure-menu-item">
-            <div class="booking">
-              <button class="btn-primary">{% literal texts, 'header-reservar', L %}</button></button>
+            <div class="booking">            
+              <button class="btn-primary">
+              <a href="#popupBooking">
+              {% literal texts, 'header-reservar', L %}
+              </a>
+              </button></button>
             </div>
           </li>
 
@@ -90,9 +94,109 @@
 
       <!-- Reservar (movil) -->
       <div class="booking pure-u-1-3">
-        <button class="btn-primary">{% literal texts, 'header-reservar', L %}</button>
+        <button class="btn-primary">
+          <a href="#popupBooking">
+          {% literal texts, 'header-reservar', L %}
+          </a>
+        </button>
       </div>
     </div>
+  <!-- RESERVAS POPUP -->
+    <div id="popupBooking" class="overlay">
+      <div class="popup">
+        <a class="close" href="#">
+          <em class="icon-close"></em>
+        </a>
+        <div class="content">
+          <section>
+            <h2>
+              ¿En qué ciudad quieres vivir?
+            </h2>
+            <div class="city-selector">
+              <select class="select" type="select" id="city-select" name="city-select">
+                <option>Seleccionar Ubicación</option>
+                <option>Barcelona</option>
+                <option>Valencia</option>
+              </select>
+              <div class="city-icons">
+                <div class="city">
+                  <div class="content">
+                    <img class="img" alt="city" src="/assets/img/sagrada-familia.svg">
+                    <p>BARCELONA</p>
+                  </div>                  
+                </div>
+                <div class="city">
+                  <div class="content">
+                    <img class="img" alt="city" src="/assets/img/oceanografic.svg">
+                    <p>VALENCIA</p>
+                  </div>                  
+                </div>
+                <div class="city">
+                  <div class="content">
+                    <img class="img" alt="city" src="/assets/img/guggenheim.svg">
+                    <p>BILBAO</p>
+                  </div>
+                </div>
+                <div class="city">
+                  <div class="content">
+                    <img class="img" alt="city" src="/assets/img/puerta-alcala.svg">
+                    <p>MADRID</p>
+                  </div>                  
+                </div>       
+              </div>
+            </div>
+          </section> 
+          <section>
+            <h2>
+              ¿Qué estás buscando?
+            </h2>
+            <div class="city-selector">              
+              <div class="city-icons">
+                <div class="city">
+                  <div class="content">
+                    <img class="img" alt="city" src="/assets/img/sagrada-familia.svg">
+                    <p>BARCELONA</p>
+                  </div>                  
+                </div>
+                <div class="city">
+                  <div class="content">
+                    <img class="img" alt="city" src="/assets/img/oceanografic.svg">
+                    <p>VALENCIA</p>
+                  </div>                  
+                </div>                     
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>
+              ¿Qué tipo de habitación?
+            </h2>
+            <div class="city-selector">              
+              <div class="city-icons">               
+                <div class="city">
+                  <div class="content">
+                    <img class="img" alt="city" src="/assets/img/guggenheim.svg">
+                    <p>BILBAO</p>
+                  </div>
+                </div>
+                <div class="city">
+                  <div class="content">
+                    <img class="img" alt="city" src="/assets/img/puerta-alcala.svg">
+                    <p>MADRID</p>
+                  </div>                  
+                </div>       
+              </div>
+            </div>
+          </section>
+            
+            
+
+        </div>      
+      </div>
+    </div>
+
+
+
 
     <div class="right-nav pure-u-1-1 pure-u-lg-16-24 pure-menu pure-menu-horizontal custom-can-transform" id="menu">
      

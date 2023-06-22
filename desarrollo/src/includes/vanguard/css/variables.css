@@ -5,6 +5,7 @@
     --primary: #ff5166;
     --primary-light: #fff5f7;
     --primary-dark: #c14256;
+    --primary-underline: #ff516574;
 
     /* // Background color */
     --secondary-header: #ffffff;
@@ -15,6 +16,7 @@
     --grey-light-background: #FCFCFC;
     --white-background: #f4f4f4;
     --footer: #121212;
+    --primary-bg: #ff516587;
     
     /* // Text color */
     --primary-text: #ffffff;
