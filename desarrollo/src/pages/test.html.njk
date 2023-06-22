@@ -28,43 +28,27 @@ tags: page
   box-sizing: border-box;
   width: 100px;
 }
+/*
+.cotown   .svg_base   { fill: #363434; }
+.cotown   .svg_accent { fill: #00bfb2; }
+.vanguard .svg_base   { fill: #363434; }
+.vanguard .svg_accent { fill: #ff5166; }
+
+.svg_base   { fill: red; }
+.svg_accent { fill: green; }
+
 .white { background-color:#f0f0f0; }
-.white .svg_base { fill: #363434; }
-
 .black { background-color:#363434; }
-.black .svg_base { fill: #f0f0f0; }
-
-.cotown.accent { background-color:#00bfb2; }
-.cotown.accent .svg_accent { fill: #f0f0f0; }
-
-.cotown.accent-inv { background-color:#00bfb2; }
-.cotown.accent-inv .svg_base { fill: #f0f0f0; }
-.cotown.accent-inv .svg_accent { fill: #363434; }
-
-.vanguard.accent { background-color:#ff5166; }
-.vanguard.accent .svg_accent { fill: #f0f0f0; }
-
-.vanguard.accent-inv { background-color:#ff5166; }
-.vanguard.accent-inv .svg_base { fill: #f0f0f0; }
-.vanguard.accent-inv .svg_accent { fill: #363434; }
+*/
 </style>
 
-{% set styles = ['white', 'accent', 'black'] %}
-{% set styles = ['white'] %}
+{% set styles = ['white', 'black'] %}
 {% set files  = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61'] %}
 
 {% for s in styles %}
 <div class="container cotown {{s}}">
 {% for f in files %}
   <div class="item">{{f}}{% svg "./src/assets/cotown/icons/ICONOGRAFIA-COTOWN-" + f + ".svg" %}</div>
-{% endfor %}
-</div>
-{% endfor %}
-
-{% for s in styles %}
-<div class="container vanguard {{s}}">
-{% for f in files %}
-  <div class="item">{{f}}{% svg "./src/assets/vanguard/icons/AAFF_ICONOGRAFIA-VANGUARD-" + f + ".svg" %}</div>
 {% endfor %}
 </div>
 {% endfor %}
