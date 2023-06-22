@@ -18,148 +18,49 @@ priority: "1.0"
 tags: page
 ---
 <style>
-svg { width:100px; }
+svg { width:60px; }
+
+.white { background-color:#f0f0f0; }
+.white .svg_base { fill: #363434; }
+
 .black { background-color:#363434; }
 .black .svg_base { fill: #f0f0f0; }
-.turq { background-color:#00bfb2; }
-.turq .svg_accent { fill: #f0f0f0; }
-.turq-inv { background-color:#00bfb2; }
-.turq-inv .svg_base { fill: #f0f0f0; }
-.turq-inv .svg_accent { fill: #363434; }
+
+.cotown.accent { background-color:#00bfb2; }
+.cotown.accent .svg_accent { fill: #f0f0f0; }
+
+.cotown.accent-inv { background-color:#00bfb2; }
+.cotown.accent-inv .svg_base { fill: #f0f0f0; }
+.cotown.accent-inv .svg_accent { fill: #363434; }
+
+.vanguard.accent { background-color:#ff5166; }
+.vanguard.accent .svg_accent { fill: #f0f0f0; }
+
+.vanguard.accent-inv { background-color:#ff5166; }
+.vanguard.accent-inv .svg_base { fill: #f0f0f0; }
+.vanguard.accent-inv .svg_accent { fill: #363434; }
 </style>
 
-<div class="white">
-{% svg "./src/assets/cotown/icons/air-conditioner.svg" %}
-{% svg "./src/assets/cotown/icons/bathroom.svg" %}
-{% svg "./src/assets/cotown/icons/bed.svg" %}
-{% svg "./src/assets/cotown/icons/coffee-room.svg" %}
-{% svg "./src/assets/cotown/icons/common-areas-cleaning.svg" %}
-{% svg "./src/assets/cotown/icons/documents.svg" %}
-{% svg "./src/assets/cotown/icons/downstairs.svg" %}
-{% svg "./src/assets/cotown/icons/elevator.svg" %}
-{% svg "./src/assets/cotown/icons/extinguisher.svg" %}
-{% svg "./src/assets/cotown/icons/filters.svg" %}
-{% svg "./src/assets/cotown/icons/fridge.svg" %}
-{% svg "./src/assets/cotown/icons/gym.svg" %}
-{% svg "./src/assets/cotown/icons/heating.svg" %}
-{% svg "./src/assets/cotown/icons/keys.svg" %}
-{% svg "./src/assets/cotown/icons/lift.svg" %}
-{% svg "./src/assets/cotown/icons/luggage.svg" %}
-{% svg "./src/assets/cotown/icons/maintenance.svg" %}
-{% svg "./src/assets/cotown/icons/map.svg" %}
-{% svg "./src/assets/cotown/icons/no-bother.svg" %}
-{% svg "./src/assets/cotown/icons/oven.svg" %}
-{% svg "./src/assets/cotown/icons/phone.svg" %}
-{% svg "./src/assets/cotown/icons/porter.svg" %}
-{% svg "./src/assets/cotown/icons/restaurant.svg" %}
-{% svg "./src/assets/cotown/icons/smart-locker.svg" %}
-{% svg "./src/assets/cotown/icons/study-room.svg" %}
-{% svg "./src/assets/cotown/icons/terrace.svg" %}
-{% svg "./src/assets/cotown/icons/tv.svg" %}
-{% svg "./src/assets/cotown/icons/upstairs.svg" %}
-{% svg "./src/assets/cotown/icons/washing-machine.svg" %}
-{% svg "./src/assets/cotown/icons/wc.svg" %}
-{% svg "./src/assets/cotown/icons/wifi.svg" %}
+
+{% set styles = ['white', 'black', 'accent', 'accent-inv'] %}
+{% set files = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','30','31','32','33','34','35'] %}
+
+{% for s in styles %}
+<div class="cotown {{s}}">
+{% for f in files %}
+{% svg "./src/assets/cotown/icons/ICONOGRAFIA-COTOWN-" + f + ".svg" %}
+{% endfor %}
 </div>
 
-<div class="turq-inv">
-{% svg "./src/assets/cotown/icons/air-conditioner.svg" %}
-{% svg "./src/assets/cotown/icons/bathroom.svg" %}
-{% svg "./src/assets/cotown/icons/bed.svg" %}
-{% svg "./src/assets/cotown/icons/coffee-room.svg" %}
-{% svg "./src/assets/cotown/icons/common-areas-cleaning.svg" %}
-{% svg "./src/assets/cotown/icons/documents.svg" %}
-{% svg "./src/assets/cotown/icons/downstairs.svg" %}
-{% svg "./src/assets/cotown/icons/elevator.svg" %}
-{% svg "./src/assets/cotown/icons/extinguisher.svg" %}
-{% svg "./src/assets/cotown/icons/filters.svg" %}
-{% svg "./src/assets/cotown/icons/fridge.svg" %}
-{% svg "./src/assets/cotown/icons/gym.svg" %}
-{% svg "./src/assets/cotown/icons/heating.svg" %}
-{% svg "./src/assets/cotown/icons/keys.svg" %}
-{% svg "./src/assets/cotown/icons/lift.svg" %}
-{% svg "./src/assets/cotown/icons/luggage.svg" %}
-{% svg "./src/assets/cotown/icons/maintenance.svg" %}
-{% svg "./src/assets/cotown/icons/map.svg" %}
-{% svg "./src/assets/cotown/icons/no-bother.svg" %}
-{% svg "./src/assets/cotown/icons/oven.svg" %}
-{% svg "./src/assets/cotown/icons/phone.svg" %}
-{% svg "./src/assets/cotown/icons/porter.svg" %}
-{% svg "./src/assets/cotown/icons/restaurant.svg" %}
-{% svg "./src/assets/cotown/icons/smart-locker.svg" %}
-{% svg "./src/assets/cotown/icons/study-room.svg" %}
-{% svg "./src/assets/cotown/icons/terrace.svg" %}
-{% svg "./src/assets/cotown/icons/tv.svg" %}
-{% svg "./src/assets/cotown/icons/upstairs.svg" %}
-{% svg "./src/assets/cotown/icons/washing-machine.svg" %}
-{% svg "./src/assets/cotown/icons/wc.svg" %}
-{% svg "./src/assets/cotown/icons/wifi.svg" %}
+{% endfor %}
+
+{% for s in styles %}
+<div class="vanguard {{s}}">
+{% for f in files %}
+{% svg "./src/assets/vanguard/icons/AAFF_ICONOGRAFIA-VANGUARD-" + f + ".svg" %}
+{% endfor %}
 </div>
 
-<div class="black">
-{% svg "./src/assets/cotown/icons/air-conditioner.svg" %}
-{% svg "./src/assets/cotown/icons/bathroom.svg" %}
-{% svg "./src/assets/cotown/icons/bed.svg" %}
-{% svg "./src/assets/cotown/icons/coffee-room.svg" %}
-{% svg "./src/assets/cotown/icons/common-areas-cleaning.svg" %}
-{% svg "./src/assets/cotown/icons/documents.svg" %}
-{% svg "./src/assets/cotown/icons/downstairs.svg" %}
-{% svg "./src/assets/cotown/icons/elevator.svg" %}
-{% svg "./src/assets/cotown/icons/extinguisher.svg" %}
-{% svg "./src/assets/cotown/icons/filters.svg" %}
-{% svg "./src/assets/cotown/icons/fridge.svg" %}
-{% svg "./src/assets/cotown/icons/gym.svg" %}
-{% svg "./src/assets/cotown/icons/heating.svg" %}
-{% svg "./src/assets/cotown/icons/keys.svg" %}
-{% svg "./src/assets/cotown/icons/lift.svg" %}
-{% svg "./src/assets/cotown/icons/luggage.svg" %}
-{% svg "./src/assets/cotown/icons/maintenance.svg" %}
-{% svg "./src/assets/cotown/icons/map.svg" %}
-{% svg "./src/assets/cotown/icons/no-bother.svg" %}
-{% svg "./src/assets/cotown/icons/oven.svg" %}
-{% svg "./src/assets/cotown/icons/phone.svg" %}
-{% svg "./src/assets/cotown/icons/porter.svg" %}
-{% svg "./src/assets/cotown/icons/restaurant.svg" %}
-{% svg "./src/assets/cotown/icons/smart-locker.svg" %}
-{% svg "./src/assets/cotown/icons/study-room.svg" %}
-{% svg "./src/assets/cotown/icons/terrace.svg" %}
-{% svg "./src/assets/cotown/icons/tv.svg" %}
-{% svg "./src/assets/cotown/icons/upstairs.svg" %}
-{% svg "./src/assets/cotown/icons/washing-machine.svg" %}
-{% svg "./src/assets/cotown/icons/wc.svg" %}
-{% svg "./src/assets/cotown/icons/wifi.svg" %}
-</div>
+{% endfor %}
 
-<div class="turq">
-{% svg "./src/assets/cotown/icons/air-conditioner.svg" %}
-{% svg "./src/assets/cotown/icons/bathroom.svg" %}
-{% svg "./src/assets/cotown/icons/bed.svg" %}
-{% svg "./src/assets/cotown/icons/coffee-room.svg" %}
-{% svg "./src/assets/cotown/icons/common-areas-cleaning.svg" %}
-{% svg "./src/assets/cotown/icons/documents.svg" %}
-{% svg "./src/assets/cotown/icons/downstairs.svg" %}
-{% svg "./src/assets/cotown/icons/elevator.svg" %}
-{% svg "./src/assets/cotown/icons/extinguisher.svg" %}
-{% svg "./src/assets/cotown/icons/filters.svg" %}
-{% svg "./src/assets/cotown/icons/fridge.svg" %}
-{% svg "./src/assets/cotown/icons/gym.svg" %}
-{% svg "./src/assets/cotown/icons/heating.svg" %}
-{% svg "./src/assets/cotown/icons/keys.svg" %}
-{% svg "./src/assets/cotown/icons/lift.svg" %}
-{% svg "./src/assets/cotown/icons/luggage.svg" %}
-{% svg "./src/assets/cotown/icons/maintenance.svg" %}
-{% svg "./src/assets/cotown/icons/map.svg" %}
-{% svg "./src/assets/cotown/icons/no-bother.svg" %}
-{% svg "./src/assets/cotown/icons/oven.svg" %}
-{% svg "./src/assets/cotown/icons/phone.svg" %}
-{% svg "./src/assets/cotown/icons/porter.svg" %}
-{% svg "./src/assets/cotown/icons/restaurant.svg" %}
-{% svg "./src/assets/cotown/icons/smart-locker.svg" %}
-{% svg "./src/assets/cotown/icons/study-room.svg" %}
-{% svg "./src/assets/cotown/icons/terrace.svg" %}
-{% svg "./src/assets/cotown/icons/tv.svg" %}
-{% svg "./src/assets/cotown/icons/upstairs.svg" %}
-{% svg "./src/assets/cotown/icons/washing-machine.svg" %}
-{% svg "./src/assets/cotown/icons/wc.svg" %}
-{% svg "./src/assets/cotown/icons/wifi.svg" %}
-</div>
+
