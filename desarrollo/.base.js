@@ -115,11 +115,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addNunjucksAsyncShortcode('svg', async (src, alt, name, cls, sizes) => {
     // Get metadata
     console.log(`Retrieving svg ${name}`);
-    let metadata = await Image(src, {
-      formats: ['svg'],
-      dryRun: true,
-    })
     try {
+      let metadata = await Image(src, {
+        formats: ['svg'],
+        dryRun: true,
+      });
       return metadata.svg[0].buffer.toString();
     } catch {
       return '';

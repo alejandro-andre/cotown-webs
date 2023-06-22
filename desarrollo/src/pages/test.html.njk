@@ -18,8 +18,16 @@ priority: "1.0"
 tags: page
 ---
 <style>
-svg { width:60px; }
-
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 5px;
+}
+.item {
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 100px;
+}
 .white { background-color:#f0f0f0; }
 .white .svg_base { fill: #363434; }
 
@@ -41,26 +49,22 @@ svg { width:60px; }
 .vanguard.accent-inv .svg_accent { fill: #363434; }
 </style>
 
-
-{% set styles = ['white', 'accent', 'black', 'accent-inv'] %}
-{% set files = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','30','31','32','33','34','35'] %}
-
-{% for s in styles %}
-<div class="cotown {{s}}">
-{% for f in files %}
-{% svg "./src/assets/cotown/icons/ICONOGRAFIA-COTOWN-" + f + ".svg" %}
-{% endfor %}
-</div>
-
-{% endfor %}
+{% set styles = ['white', 'accent', 'black'] %}
+{% set styles = ['white'] %}
+{% set files  = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61'] %}
 
 {% for s in styles %}
-<div class="vanguard {{s}}">
+<div class="container cotown {{s}}">
 {% for f in files %}
-{% svg "./src/assets/vanguard/icons/AAFF_ICONOGRAFIA-VANGUARD-" + f + ".svg" %}
+  <div class="item">{{f}}{% svg "./src/assets/cotown/icons/ICONOGRAFIA-COTOWN-" + f + ".svg" %}</div>
 {% endfor %}
 </div>
-
 {% endfor %}
 
-
+{% for s in styles %}
+<div class="container vanguard {{s}}">
+{% for f in files %}
+  <div class="item">{{f}}{% svg "./src/assets/vanguard/icons/AAFF_ICONOGRAFIA-VANGUARD-" + f + ".svg" %}</div>
+{% endfor %}
+</div>
+{% endfor %}
