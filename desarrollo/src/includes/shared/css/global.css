@@ -14,6 +14,9 @@ h5 { font-size: 1.2rem; line-height: 1.3; }
 h6 { font-size: 1rem; line-height: 1.2; }
 p, input, label, a {font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;font-size: 16px; }
 a { text-decoration: none; }
+button.btn-primary a {
+    color: var(--primary);
+}
 
 /* BOTONES
 -------------------------------- */
@@ -1056,6 +1059,61 @@ button.date-button input.inputs {
 }
 
 
+
+/* <!-- RESERVAS POPUP --> */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white-background);
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000000;
+  }
+  
+  .popup {
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    width: 98%;
+    height: 96%;
+    position: relative;
+  }
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black);
+  }
+  .popup .close:hover {
+    color: var(--primary);
+  }
+  .popup .content {
+    max-height: 80%;
+    overflow: hidden;
+  }
+
+
+
+
+
+
 /* RESPONSIVE 
 -------------------------------- */
 
@@ -1089,7 +1147,7 @@ button.date-button input.inputs {
     }
     .black-line .booking, .black-line .lang, .black-line .black-line em.icon-flat {
         display: none;
-    }
+    }   
     footer .container-footer .contain .right .mobile-listado {
         display: none;
     }
@@ -1604,8 +1662,7 @@ button.date-button input.inputs {
         font-size: 24px;
     }
 
-    /* CONTACTO TABLET Y MOBILE */
-
+    /* CONTACTO TABLET Y MOBILE  ___________________________*/
 
     .first-contact h1 {
         color: var(--white);
@@ -1651,7 +1708,7 @@ button.date-button input.inputs {
 
 
     
-    /* FOOTER TABLET Y MOBILE */
+    /* FOOTER TABLET Y MOBILE  ___________________________*/
     footer section.container-footer {
         padding: 2em;
         text-align: center;
