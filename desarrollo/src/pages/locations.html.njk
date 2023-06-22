@@ -12,7 +12,7 @@ pagination:
     data: langs
     size: 1
     alias: L
-    addAllPagesToCollections: true   
+    addAllPagesToCollections: true  
 
 date: Last Modified
 changefreq: "weekly"
@@ -30,25 +30,27 @@ tags: page
 
     <!-- main -->
     {% include 'shared/sections/locations/locations.html.njk' %}
-    
+   
     <!-- services -->
     {% include 'shared/sections/locations/services.html.njk' %}
 
   </div>
 </main>
 
+{% block footer %}
 <script>
-  new Splide(".splide-services", {
-    type: 'loop',
-    autoHeight: true,
-    focus: 0,
-    perPage: 3,
-    perMove: 1,
-    padding: '10em',
-    gap: '10em',
-    breakpoints: {
-      1024: { perPage: 2 },
-      768: { perPage: 1, padding: 0 },
-    },
-  }).mount();   
+new Splide(".splide-services", {
+  type: 'loop',
+  autoHeight: true,
+  focus: 0,
+  perPage: 3,
+  perMove: 1,
+  padding: '10em',
+  gap: '10em',
+  breakpoints: {
+    1024: { perPage: 2 },
+    768: { perPage: 1, padding: 0 },
+  },
+}).mount();  
 </script>
+{% endblock %}

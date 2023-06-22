@@ -12,7 +12,7 @@ pagination:
     data: langs
     size: 1
     alias: L
-    addAllPagesToCollections: true   
+    addAllPagesToCollections: true  
 
 date: Last Modified
 changefreq: "weekly"
@@ -29,12 +29,12 @@ tags: page
   <div class="container-main pure-u-1">
     <!-- main -->
     <section class="first pure-u-1">
-    {% include 'shared/sections/flat/first.html.njk' %}    
+    {% include 'shared/sections/flat/first.html.njk' %}   
     </section>
     <section class="rooms pure-u-1">
     {% include 'shared/sections/flat/rooms.html.njk' %}
     </section>
-    <section class="last pure-u-1">   
+    <section class="last pure-u-1">  
       <div class="last-zone pure-u-1">
         {% include 'shared/sections/flat/last.html.njk' %}
       </div>
@@ -48,34 +48,29 @@ tags: page
   </div>
 </main>
 
-
+{% block footer %}
 <script>
 new Splide( '#image-carousel', {
   type  : 'fade',
   rewind: true,
   perPage: 1,
-  pagination: true,  
+  pagination: true, 
   cover: true,
   }).mount();
-</script>
+new Splide("#splideServices", {
+  type: 'loop',
+  autoHeight: true,
+  focus: 0,
+  perPage: 6,
+  perMove: 1,
+  gap: '1em',
+  pagination: false,
+  breakpoints: {
+    1024: { perPage: 4 },
+    768: { perPage: 2, padding: '0.5em' },
+  },
+}).mount();  
 
-<script>
-  new Splide("#splideServices", {
-    type: 'loop',
-    autoHeight: true,
-    focus: 0,
-    perPage: 6,
-    perMove: 1,
-    gap: '1em',
-    pagination: false,
-    breakpoints: {
-      1024: { perPage: 4 },
-      768: { perPage: 2, padding: '0.5em' },
-    },
-  }).mount();   
-</script>
-
-<script>
 document.addEventListener( 'DOMContentLoaded', function () {
   var main = new Splide( '#main-carousel', {
     type        : 'fade',
@@ -105,9 +100,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
   thumbnails.mount();
 } );
 
-</script>
-
-<script>
 document.addEventListener( 'DOMContentLoaded', function () {
   var main = new Splide( '#main-gallery', {
     type        : 'fade',
@@ -138,3 +130,4 @@ document.addEventListener( 'DOMContentLoaded', function () {
   thumbnails.mount();
 } );
 </script>
+{% endblock %}

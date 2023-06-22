@@ -13,8 +13,8 @@
         <li class="splide__slide">
           <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
           <div class="img">
-            {% image 
-              constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token, 
+            {% image
+              constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token,
               l.Name, l.Name|slug, "",
               [800], ""
             %}

@@ -2,7 +2,7 @@ module.exports = async (config) => {
 
   const gql = require('./graphql');
   const QUERY = `
-  { 
+  query data { 
     data: Geo_LocationList (
       orderBy: [{ attribute: Name }]
       where: { Published: { EQ: true } }

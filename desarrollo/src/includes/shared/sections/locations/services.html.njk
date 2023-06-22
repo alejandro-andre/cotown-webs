@@ -17,10 +17,10 @@
         <li class="splide__slide">
           <div class="slide">
             <div class="img">
-              {% svg constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token %}
+              {% svg constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token %}
               <!--
-              {% image 
-                  constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token, 
+              {% image
+                  constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token,
                   s.Name, s.Name|slug, "",
                   [100], ""
               %}
@@ -28,7 +28,7 @@
             </div>
           <h3 class="title">{{s | translate('Name', L)}}</h3>
           <p class="text">{{s | translate('Description', L)}}</p>
-          </div>            
+          </div>           
         </li>
         {% endfor %}
 
