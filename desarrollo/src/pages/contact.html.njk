@@ -42,7 +42,7 @@ tags: page
 
         <div class="contact-content pure-u-23-24 pure-u-lg-5-6">
 
-          <div class="text-location pure-u-1 pure-u-lg-17-24"> 
+          <div class="text-location pure-u-1 pure-u-lg-15-24"> 
             <h3>{{o.Location}}</h3>
             <p>C / Beethoven 15, 7ª planta. 08021 Barcelona, España.</p>
             <p>
@@ -55,8 +55,8 @@ tags: page
             </p>
           </div>
 
-          <div class="pure-u-1 pure-u-lg-1-8">
-            <div style="width:400px;height:300px;" id="map-{{o.id}}"></div>
+          <div class="pure-u-1 pure-u-lg-8-24">
+            <div class="pure-u-1" style="width:100%;height:320px;" id="map-{{o.id}}"></div>
           </div>
           
         </div>
@@ -80,25 +80,7 @@ tags: page
         <div class="campo pure-u-1 pure-u-lg-1-2">
           <label class="label">Correo electrónico</label>                  
           <input class="input" type="email" id="email" name="email">
-        </div>
-        <div class="campo number pure-u-1 pure-u-lg-1-2">
-          <div class="pure-u-5-24 pure-u-lg-1-6">
-            <label class="label pure-u-1">Código</label>                  
-            <select class="select pure-u-1" type="select" id="code" name="code">
-              <option>+34</option>
-              <option>+34</option>
-              <option>+34</option>
-            </select>
-          </div>
-           <div class="pure-u-3-4">
-            <label class="label pure-u-1">Número de teléfono</label>                  
-            <input class="input pure-u-1" type="phone" id="phone" name="phone">
-          </div>
-        </div>
-        <div class="campo pure-u-1 pure-u-lg-1-2">
-          <label class="label">Empresa</label>                  
-          <input class="input" type="company" id="company" name="company">
-        </div>
+        </div>         
         <div class="campo pure-u-1 pure-u-lg-1-2">
           <label class="label">Empresa</label>                  
           <input class="input" type="company" id="company" name="company">
@@ -109,7 +91,13 @@ tags: page
           </textarea>
         </div>
         
+        <div class="text-ok">
+          <p>¡Genial! Tu formulario ha sido enviado con éxito. Gracias por tu información, la estaremos revisando lo antes posible. Si es necesario, nos pondremos en contacto contigo. ¡Que tengas un buen día!</p>
+        </div>
+
         <button class="btn-secondary">Enviar</button>
+
+        
       </div>
       
     </section>
