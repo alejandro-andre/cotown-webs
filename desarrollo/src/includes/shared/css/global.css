@@ -1083,7 +1083,7 @@ button.date-button input.inputs {
     opacity: 1;
     z-index: 1000000;
   }
-  
+
   .popup {
     margin: 0 auto;
     padding: 20px;
@@ -1111,19 +1111,21 @@ button.date-button input.inputs {
     color: var(--primary);
   }
   .popup .content-booking {
-    max-height: 80%;
-    max-width: 90%;
+    max-height: 100%;
+    max-width: 98%;
     margin: 2em auto;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     text-align: center;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;    
   }
-  .popup .content-booking section {    
+  .popup .content-booking::-webkit-scrollbar {
+    display: none;
+  }
+  .popup .content-booking section {
     width: 100%;
     text-align: center;
     display: flex;
@@ -1137,13 +1139,14 @@ button.date-button input.inputs {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin: 2em 0;
+    margin: 2em 0 4em;
 }
 .popup .content-booking section h2 {
     width: 100%;
     font-size: 64px;
     line-height: 110%;
     text-align: center;
+    margin-top: 1em;
 }
 .popup .content-booking section .city-selector {
     width: 98%;
@@ -1185,14 +1188,15 @@ button.date-button input.inputs {
     justify-content: center;
     align-items: center;
     margin-top: 4em;
+    gap: 1em;
 }
 .popup .content-booking section .city-selector .city-icons .city {
-    width: 25%;
+    width: 24%;
 }
 .popup .content-booking section .city-selector .city-icons .city .content-selector{
-    /* width: 70%; */
+    width: 60%;
     margin: 0 auto;
-    padding: 2em 0;
+    padding: 2em;
     text-align: center;
     display: flex;
     flex-flow: column;
@@ -1821,9 +1825,11 @@ button.date-button input.inputs {
 
 /* POPUP RESERVAS MOBILE ___________________________*/
 .popup {
-    width: 92%;
+    padding: 4px;
 }
-
+.popup .close {
+    font-size: 20px;
+}
 .popup .content-booking section {    
     text-align: center;
     display: flex;
@@ -1831,13 +1837,16 @@ button.date-button input.inputs {
     justify-content: space-between;
     align-items: center;
 }
-
+.popup .content-booking {
+    margin: 0 auto;
+}
 .popup .content-booking section h2 {
     width: 100%;
-    font-size: 32px;
+    font-size: 24px;
+    text-align: start;
+    margin-top: 2em;
 }
 .popup .content-booking section .city-selector {
-    /* width: 98%; */
     text-align: center;
     display: flex;
     flex-flow: row wrap;
@@ -1845,22 +1854,25 @@ button.date-button input.inputs {
     align-items: center;
 }
 .popup .content-booking section .city-selector select { 
-    width: 100%;  
+    width: 100%;
+    font-size: 14px;
+    height: 56px;
 }
 .popup .content-booking section .city-selector .city-icons {
-    /* width: 100%; */
+    width: 98%;
     text-align: center;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    margin: 1em 0 0;
 }
 .popup .content-booking section .city-selector .city-icons .city {
-    width: 90%;
+    width: 100%;
 }
 .popup .content-booking section .city-selector .city-icons .city .content-selector{
-    margin: 16px 0;
+    width: 90%;
+    margin: 0;
     padding: 8px 20px;
     flex-flow: row wrap;
     cursor: pointer;
@@ -1885,8 +1897,6 @@ button.date-button input.inputs {
 .popup .content-booking section .city-selector .city-icons .city p {
     order:1;
 }
-
-
 .popup .content-booking section.results button.btn-secondary {
     width: 100%;
     text-align: center;
