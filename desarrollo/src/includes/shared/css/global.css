@@ -667,6 +667,11 @@ main .container-main section.form .form-container .campo.coment input {
 }
 main .container-main section.form .form-container .campo textarea {
     width: 95%;
+    border: 1.5px solid #d1d1d1;
+    border-radius: 8px;
+    padding: 8px 16px;
+    outline-offset: 0;
+    outline: -webkit-focus-ring-color auto 0;
 }
 main .container-main section.form select {
 -webkit-appearance: none;
@@ -688,7 +693,6 @@ main .container-main section.form .form-container .campo select {
     color: var(--grey-light);
 }
 main .container-main section.form .form-container .campo select,
-main .container-main section.form .form-container .campo textarea,
 main .container-main section.form .form-container .campo input,
 main .container-main section.form .form-container .campo input:focus-visible {
     width: 90%;
@@ -1830,7 +1834,6 @@ button.date-button input.inputs {
     main .container-main section.form .form-container .campo textarea {
         width: 90%;
     }
-
 
     /* POPUP RESERVAS MOBILE ___________________________*/
     .popup {
