@@ -1139,7 +1139,7 @@ button.date-button input.inputs {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin: 2em 0;
+    margin: 2em 0 4em;
 }
 .popup .content-booking section h2 {
     width: 100%;
