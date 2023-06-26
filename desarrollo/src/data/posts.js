@@ -21,6 +21,7 @@ module.exports = async (config) => {
       Content_en
       Tags: Post_tagListViaPost_id {
         Tag: TagViaTag_id {
+          id
           Name
           Name_en
         }

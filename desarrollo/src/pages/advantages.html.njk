@@ -60,20 +60,16 @@ tags: page
         <div class="splide-banner splide" role="group">
           <div class="splide__track">
             <ul class="splide__list">       
-              <li class="splide__slide">
-                <h2>
-                creativos |
-                </h2>
-              </li>
-              <li class="splide__slide">
-               <h2>ventajas de ser cotowner | </h2>
-              </li>
-              <li class="splide__slide">
-                <h2>¡no te las pierdas! |</h2>
-              </li>
-              <li class="splide__slide">
-                <h2>¡mucho más! |</h2>
-              </li>                  
+              {% for b in banners %}
+              {% if b.Page == 'ventajas' %}
+              {% for p in (b | translate('Text', L)).split('|') %}
+              <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+              {% endfor %}
+              {% for p in (b | translate('Text', L)).split('|') %}
+              <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+              {% endfor %}
+              {% endif %}
+              {% endfor %}
             </ul>
           </div>
         </div>    

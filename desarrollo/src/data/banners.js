@@ -9,7 +9,6 @@ module.exports = async (config) => {
         AND: [
           { Segment_id: { EQ: $id } }
           { Published: { EQ: true } }
-          { Page: { EQ: home } }
         ]
       }
     ) {

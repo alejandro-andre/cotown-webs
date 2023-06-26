@@ -9,7 +9,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="left-content pure-1-2">
       {% for b in banners %}
-      {% if loop.index == 1 %}
+      {% if b.Page == 'home' %}
       <div class="spot">{{b | translate('Text', L)}}</div>
         <a href="{{b.Link}}"><button class="btn-primary">{% literal texts, 'header-descubrir', L %}</button></a>
       {% endif %}
