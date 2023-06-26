@@ -65,6 +65,19 @@ module.exports = (eleventyConfig) => {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  // Includes
+  eleventyConfig.addFilter('includes', function(id, array, tag) {
+    if (id === 0) {
+      return true;
+    }
+    for (let i = 0; i < array.length; i++) {
+      if (array[i][tag].id === id) {
+        return true;
+      }
+    }
+    return false;
+  });
+  
   // JS minification filter
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (code, callback) {
     try {
