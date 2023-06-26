@@ -65,8 +65,6 @@ input[type="search"]::-webkit-search-results-decoration {
   color: var(--primary);
 }
 
-
-
 .posts {
   display: flex;
   flex-flow: row wrap;
@@ -186,7 +184,8 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start; 
+    align-items: flex-start;
+    padding-left: 1em;
   }
   main .container-main .first-contain .title-big {
     margin: 1em auto 0;
