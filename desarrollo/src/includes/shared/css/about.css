@@ -125,10 +125,23 @@ main .container-main section.members .button-more {
     }
 }
 
-@media only screen and (max-width: 1023.9px) { 
-main .container-main section.members .grid .member {
-    width: 50%;
-}
+@media only screen and (max-width: 1023.9px) {
+    main .container-main .first-contain.about .img {
+        position: static;
+    }
+    main .container-main .first-contain.about .title-big {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: stretch;
+        align-items: flex-start;
+        margin: 2em 0 4em 0;
+        padding: 0 2em;
+        position: static;
+        background-color: var(--white);
+    }
+    main .container-main section.members .grid .member {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
