@@ -47,27 +47,17 @@ tags: page
       <section class="banner">
         <div class="splide-banner splide" role="group">
           <div class="splide__track">
-            <ul class="splide__list">       
-              <li class="splide__slide">
-                <h2>
-                cuentas |              
-                </h2>
-              </li>
-              <li class="splide__slide">
-                <h2>
-                creativos |
-                </h2>
-              </li>
-              <li class="splide__slide">
-                <h2>
-                development |
-                </h2>
-              </li>
-              <li class="splide__slide">
-                <h2>
-                lorem ipsum dolor sit | 
-                </h2>
-              </li>                  
+            <ul class="splide__list">
+              {% for b in banners %}
+              {% if b.Page == 'equipo' %}
+              {% for p in (b | translate('Text', L)).split('|') %}
+              <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+              {% endfor %}
+              {% for p in (b | translate('Text', L)).split('|') %}
+              <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+              {% endfor %}
+              {% endif %}
+              {% endfor %}
             </ul>
           </div>
         </div>    
