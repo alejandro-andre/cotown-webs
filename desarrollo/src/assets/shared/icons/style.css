@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?hlmhv');
-  src:  url('fonts/icons.eot?hlmhv#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?hlmhv') format('truetype'),
-    url('fonts/icons.woff?hlmhv') format('woff'),
-    url('fonts/icons.svg?hlmhv#icons') format('svg');
+  src:  url('fonts/icons.eot?v7lc4o');
+  src:  url('fonts/icons.eot?v7lc4o#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?v7lc4o') format('truetype'),
+    url('fonts/icons.woff?v7lc4o') format('woff'),
+    url('fonts/icons.svg?v7lc4o#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -91,17 +91,11 @@
 .icon-linkedin:before {
   content: "\e915";
 }
-.icon-facebook-primary:before {
+.icon-facebook:before {
   content: "\e916";
 }
-.icon-facebook-secondary:before {
-  content: "\e917";
-}
-.icon-instagram-primary:before {
+.icon-instagram:before {
   content: "\e918";
-}
-.icon-instagram-secondary:before {
-  content: "\e919";
 }
 .icon-loading:before {
   content: "\e91a";
@@ -112,11 +106,8 @@
 .icon-search:before {
   content: "\e91f";
 }
-.icon-tiktok-primary:before {
+.icon-tiktok:before {
   content: "\e920";
-}
-.icon-tiktok-secondary:before {
-  content: "\e921";
 }
 .icon-trash:before {
   content: "\e922";
@@ -124,11 +115,8 @@
 .icon-user:before {
   content: "\e923";
 }
-.icon-whatsapp-primary:before {
+.icon-whatsapp:before {
   content: "\e924";
-}
-.icon-whatsapp-secondary:before {
-  content: "\e925";
 }
 .icon-air-conditioner:before {
   content: "\e927";
@@ -246,4 +234,7 @@
 }
 .icon-call:before {
   content: "\e92b";
+}
+.icon-add:before {
+  content: "\e917";
 }
