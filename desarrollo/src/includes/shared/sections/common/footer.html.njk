@@ -48,12 +48,9 @@
         </div>
         <!-- Redes sociales -->
         <div class="redes-mobile pure-u-1">
-          <a href="{{globals.rrss.wh}}" rel="noopener, noreferrer" target="_blank"><em class="icon-whatsapp-primary"></em></a>
-          <a href="{{globals.rrss.tk}}" rel="noopener, noreferrer" target="_blank"><em class="icon-tiktok-primary"></em></a>
-          <a href="{{globals.rrss.fb}}" rel="noopener, noreferrer" target="_blank"><em class="icon-facebook-primary"></em></a>
-          <a href="{{globals.rrss.sp}}" rel="noopener, noreferrer" target="_blank"><em class="icon-spotify"></em></a>
-          <a href="{{globals.rrss.ig}}" rel="noopener, noreferrer" target="_blank"><em class="icon-instagram-primary"></em></a>
-          <a href="{{globals.rrss.in}}" rel="noopener, noreferrer" target="_blank"><em class="icon-linkedin"></em></a>
+          {% for r in rrss %}
+          <a href="{{r.Link}}" rel="noopener, noreferrer" target="_blank"><em class="icon-{{r.Name}}"></em></a>
+          {% endfor %}
         </div>
         <!-- Links movil -->
         <div class="mobile-listado">
@@ -78,12 +75,9 @@
 
     <!-- Redes sociales -->
     <div class="redes pure-u-2-5">
-      <a href="{{globals.rrss.wh}}" rel="noopener, noreferrer" target="_blank"><em class="icon-whatsapp-primary"></em></a>
-      <a href="{{globals.rrss.tk}}" rel="noopener, noreferrer" target="_blank"><em class="icon-tiktok-primary"></em></a>
-      <a href="{{globals.rrss.fb}}" rel="noopener, noreferrer" target="_blank"><em class="icon-facebook-primary"></em></a>
-      <a href="{{globals.rrss.sp}}" rel="noopener, noreferrer" target="_blank"><em class="icon-spotify"></em></a>
-      <a href="{{globals.rrss.ig}}" rel="noopener, noreferrer" target="_blank"><em class="icon-instagram-primary"></em></a>
-      <a href="{{globals.rrss.in}}" rel="noopener, noreferrer" target="_blank"><em class="icon-linkedin"></em></a>
+      {% for r in rrss %}
+      <a href="{{r.Link}}" rel="noopener, noreferrer" target="_blank"><em class="icon-{{r.Name}}"></em></a>
+      {% endfor %}
     </div>
 
     <!-- Headquarters -->
