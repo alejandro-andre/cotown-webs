@@ -143,7 +143,9 @@ button {
 }
 
 /* LEAFLET */
-
+.leaflet-container {
+    z-index: 0;
+}
 .leaflet-control-attribution a {
     font-size: 1em;
 }

@@ -14,15 +14,11 @@
       {% for s in services %}
       <div class="necesidad pure-u-1 pure-u-lg-11-24">
         <div class="img pure-u-1-3">
-        {% svg constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token %}
-        </div>
-        <!--
-        {% image
-            constants.SERVER + "/wopi/files/Building/Building_service_type/" + s.id +"/Icon/contents?access_token=" + token,
-            s.Name, s.Name|slug, "",
-            [100], ""
+        {% svg 
+           constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
+           s.Name
         %}
-        -->
+        </div>
         <div class="p-title pure-u-11-12">
           <p>{{s | translate('Name', L)}}</p>
         </div>

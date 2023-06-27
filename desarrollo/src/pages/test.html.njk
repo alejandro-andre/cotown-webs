@@ -48,7 +48,12 @@ tags: page
 {% for s in styles %}
 <div class="container cotown {{s}}">
 {% for f in files %}
-  <div class="item">{{f}}{% svg "./src/assets/cotown/icons/ICONOGRAFIA-COTOWN-" + f + ".svg" %}</div>
+  <div class="item">{{f}}
+    {% svg 
+       "./res/cotown/icons/ICONOGRAFIA-COTOWN-" + f + ".svg",
+       f
+    %}
+  </div>
 {% endfor %}
 </div>
 {% endfor %}
