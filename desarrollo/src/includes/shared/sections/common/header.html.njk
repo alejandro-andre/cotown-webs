@@ -11,7 +11,7 @@
       {% for b in banners %}
       {% if b.Page == 'home' %}
       <div class="spot">{{b | translate('Text', L)}}</div>
-        <a href="{{b.Link}}"><button class="btn-primary">{% literal texts, 'header-descubrir', L %}</button></a>
+        <a href="{{b.Link}}"><button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button></a>
       {% endif %}
       {% endfor %}
     </div>
@@ -56,7 +56,7 @@
           <li class="pure-menu-item private-container">
             <button class="private">
               <em class="icon-log-in"></em>
-              <p class="private-area">{% literal texts, 'header-area-privada', L %}</p>
+              <p class="private-area">{% literal texts, 'button-area-privada', L %}</p>
             </button>
           </li>
 
@@ -65,7 +65,7 @@
             <div class="booking">            
               <button class="btn-primary">
               <a href="#popupBooking">
-              {% literal texts, 'header-reservar', L %}
+              {% literal texts, 'button-reservar', L %}
               </a>
               </button></button>
             </div>
@@ -82,171 +82,60 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section class="container-header second pure-g">
   <div class="black-line custom-wrapper pure-g" id="blackMenu">
+
     <div class="left-nav pure-u-1 pure-u-lg-6-24">
-      <!-- MENU (movil) -->
+
+      <!-- Icono menú (movil) -->
       <div class="pure-menu pure-u-1-3">     
         <a href="#" id="menuLink" class="menu-link" type="button" onclick="mostrarMenuMobile()">
           <em class="icon-flat"></em>
         </a>
       </div>
+
       <!-- Logo -->
       {% include site + '/sections/common/header-logo.html.njk' %}
 
-      <!-- Reservar (movil) -->
+      <!-- Botón reservar (movil) -->
       <div class="booking pure-u-1-3">
         <button class="btn-primary">
           <a href="#popupBooking">
-          {% literal texts, 'header-reservar', L %}
+          {% literal texts, 'button-reservar', L %}
           </a>
         </button>
       </div>
-    </div>
-  <!-- RESERVAS POPUP -->
-    <div id="popupBooking" class="overlay">
-      <div class="popup">
-        <a class="close" href="#">
-          <em class="icon-close"></em>
-        </a>
-        <div class="content-booking">
-          <section>
-            <h2>
-              ¿En qué ciudad quieres vivir?
-            </h2>
-            <div class="city-selector">
-              <select class="select" type="select" id="city-select" name="city-select">
-                <option>Seleccionar Ubicación</option>
-                <option>Barcelona</option>
-                <option>Valencia</option>
-              </select>
-              <div class="city-icons">
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="/assets/img/sagrada-familia.svg">
-                    <p>BARCELONA</p>
-                  </div>                  
-                </div>
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="/assets/img/oceanografic.svg">
-                    <p>VALENCIA</p>
-                  </div>                  
-                </div>
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="/assets/img/guggenheim.svg">
-                    <p>BILBAO</p>
-                  </div>
-                </div>
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="/assets/img/puerta-alcala.svg">
-                    <p>MADRID</p>
-                  </div>                  
-                </div>       
-              </div>
-            </div>
-          </section> 
-          <section>
-            <h2>
-              ¿Qué estás buscando?
-            </h2>
-            <div class="city-selector">              
-              <div class="city-icons">
-                 <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="/assets/img/piso-compartido.svg">
-                    <p>PISO COMPARTIDO</p>
-                  </div>                  
-                </div>
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="/assets/img/apartamento.svg">
-                    <p>APARTAMENTO PRIVADO</p>
-                  </div>                  
-                </div>
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="/assets/img/residence.svg">
-                    <p>RESIDENCIA</p>
-                  </div>                  
-                </div>                     
-              </div>
-            </div>
-          </section>
-          <section>
-            <h2>
-              ¿Qué tipo de habitación?
-            </h2>
-            <div class="city-selector">              
-              <div class="city-icons">               
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="/assets/img/individual.svg">
-                    <p>HABITACIÓN INDIVIDUAL</p>
-                  </div>
-                </div>
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="/assets/img/habitacion-compartida.svg">
-                    <p>HABITACIÓN COMPARTIDA</p>
-                  </div>                  
-                </div>       
-              </div>
-            </div>
-          </section>
-          <section>
-            <h2>
-              ¿Cuándo?
-            </h2>
-             <!-- CALENDAR -->
-            <div class="calendar pure-u-1-1">
-              <div class="reservas_form_div pure-u-1 pure-u-lg-1-2">           
-                <form id="reservas_form" name="form_multi" method="GET">
-                  <button class="date-button">
-                    <label class="labels">Entrada</label>
-                    <input type="text" id="in" onfocus="(this.type='date')" class="inputs" name="in" placeholder="02/06/2023"/>
-                  </button>   
-                  <button class="date-button">
-                    <label class="labels">Salida</label>
-                    <input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="02/09/2023"/>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </section>
-          <section class="results">
-            <button class="btn-secondary">
-                Ver Resultados
-            </button>
-          </section>
-        </div>      
-      </div>
+
     </div>
 
-
-
-
+    <!-- Menu movil -->
     <div class="right-nav pure-u-1-1 pure-u-lg-16-24 pure-menu pure-menu-horizontal custom-can-transform" id="menu">
-     
-      <!-- Menu -->
       <ul class="black-menu pure-menu-list" id="menu-desplegado">     
-        <! ONLY MOBILE -->
+
         <div class="only-mobile-menu pure-u-1-1" id="only-mobile-menu">
+
+          <!-- Título menu -->
           <div class="only-text pure-u-5-24">
             <p>Menú</p>
           </div>
+
           <!-- Logo -->
           <div class="logo pure-u-11-24">       
             <a href="{{langs[L].folder}}/">
-              <img class="img-logo" alt="logo" src="/assets/shared/img/vanguard-white.svg">
-              <!-- <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1> -->
+              {% if siteid == 1 %}
+              <img class="img-logo" alt="logo" src="/assets/img/vanguard-white.svg">
+              {% else %}
+              <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
+              {% endif %}
             </a>
           </div>
+
+          <!-- Search -->
           <div class="menu-mobile-icons pure-u-5-24">           
               <em class="icon-search"></em>
               <a type="button" onclick="ocultarMenuMobile()"><em class="icon-close"></em></a>
           </div>         
+
         </div>
+
         <div class="only-mobile-private pure-u-1-1">
           <div class="area">
             <span><em class="icon-user"></em></span>
@@ -317,8 +206,7 @@
         <li class="contact"><a href="{{langs[L].folder}}/{{langs[L].pages['contact'].url}}.html">{{langs[L].pages['contact'].title}}</a>
         </li>
    
-       <!-- MOBILE MENU BOTÓN BOOKING -->
-
+        <!-- Botón booking -->
         <li class="only-menu-mobile pure-menu-item">
           <div class="booking pure-u-1">
             <button class="btn-secondary">Encuentra mi nuevo hogar
@@ -334,12 +222,14 @@
           </div>
         </li>
 
-
       </ul>
-
     </div>
+
   </div>     
 </section>
+
+<!-- Reservas popup -->
+{% include 'shared/sections/common/booking.html.njk' %}
 
 </header>
 

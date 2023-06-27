@@ -1,22 +1,23 @@
 <section class="main-header pure-g">
 
+  <!-- Formulario -->
   <div class="left pure-u-1-5">
 
     <div class="text-container desktop">
-      <h1 class="pure-u-1">BIENVENIDO COTOWNER!</h1>
+      <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</h1>
     </div>
 
     <div class="basic-searcher pure-u-1-1">
 
-      <label class="label">Quiero vivir en:</label>
+      <label class="label">{% literal texts, 'home-bienvenido-donde', L %}</label>
       <select class="pure-u-1-1">
         <option></option>
-        <option>Barcelona</option>
-        <option>Valencia</option>
-        <option>Bilbao</option>
+        {% for l in locations %}
+        <option>{{ l | translate('Name', L)}}</option>
+        {% endfor %}
       </select>
 
-      <label class="label">Tipo de piso</label>
+      <label class="label">{% literal texts, 'home-bienvenido-tipo', L %}</label>
       <select class="pure-u-1-1">
         <option></option>
         <option>Apartamento privado</option>
@@ -26,7 +27,7 @@
 
       <div class="calendar pure-u-1-1">
         <div class="pure-u-1-1">
-        <label class="label" for="from">Cuándo</label>
+        <label class="label" for="from">{% literal texts, 'home-bienvenido-cuando', L %}</label>
         <input class="input pure-u-23-24" type="date" id="start" name="trip-from">
         </div>
 
@@ -41,12 +42,16 @@
 
   </div>
 
+  <!-- Video -->
   <div id="video" class="video featured-bg-image">
     <div class="text-container mobile pure-u-1-3">
-      <h1 class="pure-u-1">BIENVENIDO COTOWNER!</h1>
+      <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</h1>
     </div>
     <div class="video-home">
-    <video playsinline="true" width="100%" style="object-fit: cover;" autoplay="true" muted="true" loop="true" preload="auto" controls="1">Sorry, your browser doesn't support embedded videos.<source type="video/mp4" src="https://cotown.com/wp-content/uploads/2023/02/0W0A7742-2-1-1.mp4"></video>
+      <video playsinline="true" width="100%" style="object-fit: cover;" autoplay="true" muted="true" loop="true" preload="auto" controls="1">
+        Sorry, your browser doesn't support embedded videos.
+        <source type="video/mp4" src="https://cotown.com/wp-content/uploads/2023/02/0W0A7742-2-1-1.mp4">
+      </video>
     </div>
   </div>         
 
