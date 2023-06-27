@@ -34,7 +34,10 @@ tags: page
   <div class="container-main pure-u-23-24 pure-u-lg-1">
 
     <section class="first-contain pure-u-1">
-      <img class="img-faqs" alt="faqs" src="/assets/img/faqs.png">
+      {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['faqs'] +"/Image/contents?access_token=" + token,
+          "FAQs", "FAQs", "img-faqs", [auto], ""
+      %}
       <div class="title-big">
         <h1 class="h2-big">FAQS</h1>
       </div>
