@@ -24,6 +24,33 @@ optionList.forEach((option) => {
     })
 })
 
+// Menu languages Mobile
+const selectedOptionMobile = document.querySelector('.selected-option-mobile')
+const selectValueMobile = document.querySelector('.select-value-mobile')
+const optionContainerMobile = document.querySelector('.options-mobile')
+const optionListMobile = document.querySelectorAll('.option-mobile')
+const selectElementMobile = document.querySelector('.icon-corchete-down.mobile')   
+
+const selectToggleMobile = () => {
+    if (optionContainerMobile.dataset.toggle == 'collaps') {
+        optionContainerMobile.dataset.toggle = '';
+        selectElementMobile.classList.replace('icon-corchete-down', 'icon-corchete-up');
+    } else {
+        optionContainerMobile.dataset.toggle = 'collaps';
+        selectElementMobile.classList.replace('icon-corchete-up', 'icon-corchete-down');
+    }
+}
+
+selectedOptionMobile.addEventListener('click', selectToggleMobile);
+optionListMobile.forEach((option) => {
+    option.addEventListener('click', (e) => {
+        selectValueMobile.innerText = option.innerText;
+        selectToggleMobile()
+        selectElementMobile.classList.replace('icon-corchete-up', 'icon-corchete-down');
+    })
+})
+
+
 // Menu locations
 const choosedOption = document.querySelector('.change-value')
 const Value = document.querySelector('.chang-value')
