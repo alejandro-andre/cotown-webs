@@ -1575,33 +1575,7 @@ button.date-button input.inputs {
     .only-mobile-private .area span .icon-user {
         font-size: 14px;
     }
-    /* .only-mobile-private .lang-mobile {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .only-mobile-private .area, .only-mobile-private .lang-mobile {
-        padding: 1.5em;
-    }
-    .only-mobile-private .area p, .only-mobile-private .lang-mobile p { 
-        margin: 0 0.2em;
-           font-weight: 700;
-        font-size: 16px;
-        line-height: 140%;
-    }    
-  
-    .only-mobile-private .lang-mobile span {
-        color: var(--black);
-    }
-    .only-mobile-private .area span .icon-user, .only-mobile-private .lang-mobile span em {
-        font-size: 14px;
-    } */
-
-
-
-
-
+   
     .lang-mobile .select-container-mobile {
         display: block;    
         position: relative;
