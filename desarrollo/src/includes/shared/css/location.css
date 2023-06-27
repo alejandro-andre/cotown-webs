@@ -80,15 +80,8 @@ main .location .container-main .first-contain .video-loc .description p {
 .carousel .carousel-main-list .splide__slide .card-contain {
     background-color: var(--white-background);
 }
-.carousel .carousel-main-list .main-slide.splide__slide.is-prev, .carousel .carousel-main-list .main-slide.splide__slide.is-next {
-    width: 30vw!important;
-}
-
-.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain, .carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain {
-    opacity: 0.5;
-    filter: brightness(0.4);
-    height: 70%;
-    margin: 25% 0;
+.carousel .carousel-main-list .splide__slide .card-contain .types {
+    background-color: var(--white-background);
 }
 .carousel .carousel-main-list  .splide__slid .card.desktop {
     width: 50vw;
@@ -120,7 +113,6 @@ a {
     left: 20px;
     color: var(--primary-text);
 }
-
 .carousel .carousel-main-list .card .card-body {
     max-width: 50vw;
     width: auto;
@@ -135,15 +127,14 @@ a {
     width: auto;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 0.8em;
 }
 .flex-grow-1 {
     width: calc(100% - 5em);
     padding-left: 5em;
 }
-
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type {
     width: 32%;
     display: flex;
@@ -165,7 +156,7 @@ a {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5em 0.5em;
+    padding: 0.1em 0.5em;
     margin: 0;
     max-width: 80%;
 }
@@ -187,20 +178,77 @@ h4 {
     justify-content: center;
     align-items: center;
     padding: 0.5em;
-    max-width: 80%;
+    max-width: 90%;
 }
 .room-type .text-green p {    
     font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 16px;
     color: var(--primary-dark);
-    letter-spacing: 0.145em;
+    letter-spacing: 0.125em;
 }
 button.green-button.btn-secondary {
     font-weight: 700;
     font-size: 14px;
     line-height: 150%;
     padding: 6px 16px;
+}
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev, .carousel .carousel-main-list .main-slide.splide__slide.is-next {
+    width: 30vw!important;
+}
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain, .carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain {
+    opacity: 0.5;
+    filter: brightness(0.4);
+    height: 70%;
+    margin: 25% 0;
+}
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .card-body .types , 
+.carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .card-body .types  {
+    justify-content: center;
+    width: 99%;
+    margin: 0 auto;
+}
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .card-body .types .room-type ,
+.carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .card-body .types .room-type {
+    height: 116px;
+}
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .card-body .types .room-type img , 
+.carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .card-body .types .room-type img {
+    width: 30px;
+    margin-bottom: 12px;
+}
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .card-body .types .room-type h4 , 
+.carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .card-body .types .room-type h4 ,
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .card-body .types .room-type p , 
+.carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .card-body .types .room-type p  {
+    font-size: 70%;
+    line-height: 14px;
+    padding: 0;
+}
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .card-body .types .room-type button.green-button.btn-secondary ,
+.carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .card-body .types .room-type button.green-button.btn-secondary {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 6px;
+}
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .card-body .carousel-mini ,
+.carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .card-body .carousel-mini {
+    width: 96%!important;
+    margin: 0 auto;
+    padding: 12% 2% 0;
+}
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .card-body .carousel-mini .splide.mini,
+.carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .card-body .carousel-mini .splide.mini {
+    padding: 0;
+}
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .card-body .carousel-mini .carousel .carousel-main-list .splide__slide .ratio.carousel-ratio img,
+.carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .card-body .carousel-mini .carousel .carousel-main-list .splide__slide .ratio-carousel-ratio img {
+    width: 16px;
+}
+
+.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain .card-body .carousel-mini .splide__slide .ratio.carousel-ratio img ,
+.carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain .card-body .carousel-mini .splide__slide .ratio.carousel-ratio img {
+    width: 24px;
 }
 
 .arrow-nav.splide__arrow {
@@ -218,7 +266,6 @@ button.green-button.btn-secondary {
 .arrow-nav.splide__arrow.splide__arrow--prev i, .arrow-nav.splide__arrow.splide__arrow--next i {
     font-size: 34px;
 }
-
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .carousel-mini {
     position: relative;
     width: 50vw;
@@ -239,7 +286,6 @@ button.green-button.btn-secondary {
     filter: none;
     margin: 0;
 }
-
 .splide__slide .ratio.carousel-ratio {
     display: flex;
     flex-flow: column;
