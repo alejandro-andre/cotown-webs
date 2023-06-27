@@ -118,14 +118,14 @@ module.exports = (eleventyConfig) => {
       } else {
         return literals[id][lang];
       }
-    } catch {
+    } catch (err) {
       console.log(`Missing text (${lang}) [${id}]`);
       return `<span style="color:red;">[text missing ${lang}: ${id}]</span>`
     }
   });
 
   // SVG inline shortcode
-  eleventyConfig.addNunjucksAsyncShortcode('svg', async (src, alt, name, cls, sizes) => {
+  eleventyConfig.addNunjucksAsyncShortcode('svg', async (src, name) => {
     // Get metadata
     console.log(`Retrieving svg ${name}`);
     try {
@@ -134,7 +134,8 @@ module.exports = (eleventyConfig) => {
         dryRun: true,
       });
       return metadata.svg[0].buffer.toString();
-    } catch {
+    } catch (err) {
+      console.log(`Mising svg ${name} ${src}]`);
       return '';
     }
   })  
@@ -167,8 +168,7 @@ module.exports = (eleventyConfig) => {
       // Generate HTML
       html = Image.generateHTML(metadata, imageAttributes);
       return html.replace("height", "h");
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
       console.log(`Mising image ${name} ${src}]`);
       return `<span style="color:red;">[image missing ${name}]</span>`;
     }

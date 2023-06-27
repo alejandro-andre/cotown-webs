@@ -11,7 +11,7 @@
       {% for b in banners %}
       {% if b.Page == 'home' %}
       <div class="spot">{{b | translate('Text', L)}}</div>
-        <a href="{{b.Link}}"><button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button></a>
+      <a href="{{b.Link}}"><button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button></a>
       {% endif %}
       {% endfor %}
     </div>
@@ -23,10 +23,15 @@
         <ul class="pure-menu-list">
 
           <li class="icons-header pure-menu-item">
-            <!-- Buscador -->
-            <a href="#" class="pure-menu-link"><em class="icon-search"></em></a>
+            <!-- TODO: Buscador -->
+            <!--<a href="#" class="pure-menu-link"><em class="icon-search"></em></a>-->
             <!-- Whatsapp -->
-            <a href="{{globals.rrss.wh}}" class="pure-menu-link"><em class="icon-whatsapp"></em></a>
+            {% for r in rrss %}
+            {% if r.Name == 'whatsapp' %}
+            <a href="{{r.Link}}" class="pure-menu-link"><em class="icon-whatsapp"></em></a>
+            {% endif %}
+            {% endfor %}
+
           </li>
 
           <!-- Idiomas -->
@@ -56,7 +61,9 @@
           <li class="pure-menu-item private-container">
             <button class="private">
               <em class="icon-log-in"></em>
-              <p class="private-area">{% literal texts, 'button-area-privada', L %}</p>
+              <a href="/customer">
+                <p class="private-area">{% literal texts, 'button-area-privada', L %}</p>
+              </a>
             </button>
           </li>
 

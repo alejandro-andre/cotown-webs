@@ -10,7 +10,10 @@
       {% for s in services %}
       <div class="card">
         {{s.Icons|dump}}
-        {% svg constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token %}
+        {% svg 
+           constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
+           s.Name
+        %}
         <p class="bold">{{s | translate('Name', L)}}</p>
         <p class="text">{{s | translate('Description', L)}}</p>
       </div>
