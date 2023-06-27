@@ -57,6 +57,7 @@
     --red-error: #FF0000;
     --red-error-dark: #CC0000;
     
+    --shadow: rgba(22, 22, 22, 0.06);
     --shadow-soft: rgba(2, 0, 2, 15%);
     --shadow-medium: rgba(8, 0, 4, 15%);
     --shadow-strong: rgba(16, 0, 8, 20%);

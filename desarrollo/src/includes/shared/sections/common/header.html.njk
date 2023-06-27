@@ -142,8 +142,25 @@
             <p>Área privada</p>
           </div>
           <div class="lang-mobile">
-            <p>ES</p>
-            <em class="icon-corchete-down"></em>
+            <div class="select-container-mobile">
+              {% if L == 'es' %}
+              <label class="selected-option-mobile" for="options">
+                <span class="select-value-mobile">ES</span>
+                <em class="icon-corchete-down mobile"></em>
+              </label>
+              <div data-toggle="collaps" class="options-mobile">
+                <a href="{{alt.en}}"><div class="option-mobile">UK</div></a>
+              </div>
+              {% else%}
+              <label class="selected-option-mobile" for="options">
+                <span class="select-value-mobile">EN</span>
+                <em class="icon-corchete-down mobile"></em>               
+              </label>
+              <div data-toggle="collaps" class="options-mobile">
+                <a href ="{{alt.es}}"><div class="option-mobile">ES</div></a>
+              </div>
+              {% endif %}
+            </div>            
           </div>
         </div>
 
