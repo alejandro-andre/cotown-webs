@@ -206,62 +206,56 @@ tags: page
     </section>
 
     <section class="form">
-      <h2 class="title">           
-        si eres una empresa
-      </h2>
-      <p class="text">
-        Si eres una empresa y nuestros cotowners te están dando mucha envidia, no pasa nada, porque tú también puedes formar parte de la crew dándoles la oportunidad de hacerles sentir unos ciudadanos con suerte aportando tu granito de arena y colaborando con nosotros.
-        ¿Te animas?
-      </p>
 
- <div class="form-container pure-g">        
-  <div class="campo pure-u-1 pure-u-lg-1-2">
-    <label class="label">Nombre</label>                  
-    <input class="input" type="name" id="name" name="name">
-  </div>
-  <div class="campo pure-u-1 pure-u-lg-1-2">
-    <label class="label">Apellidos</label>                  
-    <input class="input" type="name" id="name" name="name">
-  </div> 
-  <div class="campo pure-u-1 pure-u-lg-1-2">
-    <label class="label">Correo electrónico</label>                  
-    <input class="input" type="email" id="email" name="email">
-  </div>
-  <div class="campo number pure-u-1 pure-u-lg-1-2">
-    <div class="pure-u-5-24 pure-u-lg-1-6">
-      <label class="label pure-u-1">Código</label>                  
-      <select class="select pure-u-1" type="select" id="code" name="code">
-        <option>+34</option>
-        <option>+34</option>
-        <option>+34</option>
-      </select>
-    </div>
-      <div class="pure-u-3-4">
-      <label class="label pure-u-1">Número de teléfono</label>                  
-      <input class="input pure-u-1" type="phone" id="phone" name="phone">
-    </div>
-  </div>
-  <div class="campo pure-u-1 pure-u-lg-1-2">
-    <label class="label">Empresa</label>                  
-    <input class="input" type="company" id="company" name="company">
-  </div>
-  <div class="campo pure-u-1 pure-u-lg-1-2">
-    <label class="label">Empresa</label>                  
-    <input class="input" type="company" id="company" name="company">
-  </div>
-  <div class="campo coment pure-u-1">
-    <label class="label">Mensaje</label>
-    <textarea type="textarea" id="textarea" name="textarea" rows="4" cols="50">
-    </textarea>
-  </div>        
-  <div class="text-ok">
-    <p>¡Genial! Tu formulario ha sido enviado con éxito. Gracias por tu información, la estaremos revisando lo antes posible. Si es necesario, nos pondremos en contacto contigo. ¡Que tengas un buen día!</p>
-  </div>
+      {% literal texts, 'advantages-si-eres-empresa', L, true %}        
 
-  <button class="btn-secondary">Enviar</button>
-  
-</div>
+      <div class="form-container pure-g">        
+        <div class="campo pure-u-1 pure-u-lg-1-2">
+          <label class="label">{% literal texts, 'form-nombre', L%}</label>                  
+          <input class="input" type="name" id="name" name="name">
+        </div>
+        <div class="campo pure-u-1 pure-u-lg-1-2">
+          <label class="label">{% literal texts, 'form-apellidos', L%}</label>                  
+          <input class="input" type="name" id="name" name="name">
+        </div> 
+        <div class="campo pure-u-1 pure-u-lg-1-2">
+          <label class="label">{% literal texts, 'form-email', L%}</label>                  
+          <input class="input" type="email" id="email" name="email">
+        </div>
+        <div class="campo number pure-u-1 pure-u-lg-1-2">
+          <div class="pure-u-5-24 pure-u-lg-1-6">
+            <label class="label pure-u-1">{% literal texts, 'form-prefijo', L%}</label>                  
+            <select class="select pure-u-1" type="select" id="code" name="code">
+              <option>+34</option>
+              <option>+34</option>
+              <option>+34</option>
+            </select>
+          </div>
+            <div class="pure-u-3-4">
+            <label class="label pure-u-1">{% literal texts, 'form-telefono', L%}</label>                  
+            <input class="input pure-u-1" type="phone" id="phone" name="phone">
+          </div>
+        </div>
+        <div class="campo pure-u-1 pure-u-lg-1-2">
+          <label class="label">{% literal texts, 'form-empresa', L%}</label>                  
+          <input class="input" type="company" id="company" name="company">
+        </div>
+        <div class="campo pure-u-1 pure-u-lg-1-2">
+          <label class="label">{% literal texts, 'form-empresa', L%}</label>                  
+          <input class="input" type="company" id="company" name="company">
+        </div>
+        <div class="campo coment pure-u-1">
+          <label class="label">{% literal texts, 'form-mensaje', L%}</label>
+          <textarea type="textarea" id="textarea" name="textarea" rows="4" cols="50">
+          </textarea>
+        </div>        
+        <div class="text-ok">
+          <p>{% literal texts, 'advantages-ok', L%}</p>
+        </div>
 
+        <button class="btn-secondary">{% literal texts, 'form-enviar', L%}</button>
+        
+      </div>
 
     </section>
 
