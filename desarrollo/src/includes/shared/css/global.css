@@ -142,6 +142,12 @@ button {
     color: var(--primary-dark);
 }
 
+/* LEAFLET */
+
+.leaflet-control-attribution a {
+    font-size: 1em;
+}
+
 /* EXPANSION PANEL */
 
 .expansion {
@@ -410,6 +416,9 @@ span.turquoise {
 }
 .icon-list {
     padding: 16px;
+}
+.img-logo {
+    height: 48px;
 }
 
 /* NAVIGATION MENU 
