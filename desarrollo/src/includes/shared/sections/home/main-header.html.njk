@@ -27,8 +27,50 @@
 
       <div class="calendar pure-u-1-1">
         <div class="pure-u-1-1">
+        <!--
         <label class="label" for="from">{% literal texts, 'home-bienvenido-cuando', L %}</label>
         <input class="input pure-u-23-24" type="date" id="start" name="trip-from">
+        -->
+
+        <div class="popup-container">
+          <label class="label" for="login-popup">{% literal texts, 'home-bienvenido-cuando', L %}</label>
+          <input class="input date-picker pure-u-23-24" type="date" id="start" name="trip-from">
+          <input class="input chekckbox pure-u-23-24" type="checkbox" id="login-popup" name="trip-from">
+
+          <!-- 
+          <label class="popup-button" for="login-popup">Login</label>
+          <input type="checkbox" id="login-popup"> 
+          -->
+          <div class="popup">
+            <label for="login-popup" class="transparent-label"></label>
+            <div class="popup-inner">
+              <div class="popup-title">
+                <h6>Login</h6>
+                <label for="login-popup" class="popup-close-btn">Close</label>
+              </div>
+              <div class="popup-content">
+                <form action="">
+                  <ul>
+                    <li>
+                      <input type="text" placeholder="Username">
+                    </li>
+                    <li>
+                      <input type="password" placeholder="Password">
+                    </li>
+                    <li>
+                      <button type="submit">Log in</button>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
         </div>
 
       </div>

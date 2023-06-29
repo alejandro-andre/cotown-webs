@@ -58,14 +58,6 @@ display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
     padding-bottom: 0.5em;
     border-bottom: 1px solid var(--black);
 }
-.main-header .left .basic-searcher input {
-    height: 40px;
-    margin-bottom: 0.5em;
-    color: var(--black);
-    border: 0px solid transparent;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    padding: 0 0.5em;
-}
 .main-header .left .basic-searcher .calendar {
     display: flex;
     flex-flow: row wrap;
