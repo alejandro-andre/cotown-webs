@@ -12,7 +12,7 @@ h3 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-s
 h4 { font-size: 1.5rem; line-height: 1.3; }
 h5 { font-size: 1.2rem; line-height: 1.3; }
 h6 { font-size: 1rem; line-height: 1.2; }
-p, input, label, a {font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;font-size: 16px; }
+p, input, label, a {font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;font-size: 14px; }
 a { text-decoration: none; }
 button.btn-primary a {
     color: var(--primary);
@@ -103,7 +103,7 @@ button {
     font-weight: 700;
     font-size: 14px;
     line-height: 14px;
-    padding: 0 1.5em;
+    padding: 0 12px;
     border: 1px solid var(--primary);
     background-color: var(--white);
     color: var(--primary);
@@ -420,7 +420,7 @@ span.turquoise {
 .icon-list {
     padding: 16px;
 }
-.img-logo {
+.container-header .black-line .left-nav .logo .desktop .img-logo {
     height: 48px;
 }
 
@@ -636,20 +636,27 @@ main .container-main section.form h2.title {
     text-align: center;
 }
 main .container-main section.form p {
-    padding: 0 0 2em; 
+    padding: 0 0 2em;
+    font-size: 22px;
+    line-height: 150%;
 }
 main .container-main section.form .form-container {
     margin: 1em 0 4em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 main .container-main section.form .form-container .campo {
     padding: 0 0 1em;
 }
+
 main .container-main section.form .form-container .campo label {
     display: block;
     width: 90%;
     font-weight: 500;
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 150%;
     padding: 0 0.5em;
 }
 main .container-main section.form .form-container .campo input {
@@ -669,8 +676,14 @@ main .container-main section.form .form-container .campo.number {
     justify-content: space-between;
     align-items: flex-start;
 }
-main .container-main section.form .form-container .campo.number input {
-    width: 87.5%;
+main .container-main section.form .form-container .campo.number .prefix {
+    width: 100px;
+}
+main .container-main section.form .form-container .campo.number .num {
+    width: calc(100% - 112px);
+}
+main .container-main section.form .form-container .campo.number .num input {
+    width: 87%;
 }
 main .container-main section.form .form-container .campo.coment input {
     width: 95%;
@@ -705,7 +718,7 @@ main .container-main section.form .form-container .campo select {
 main .container-main section.form .form-container .campo select,
 main .container-main section.form .form-container .campo input,
 main .container-main section.form .form-container .campo input:focus-visible {
-    width: 90%;
+    font-size: 20px;
     border: 1.5px solid #D1D1D1;
     border-radius: 8px;
     padding: 8px 16px;
@@ -987,7 +1000,7 @@ footer .container-footer .contain {
     align-content: space-between;
 }
 footer section.container-footer .contain .left .footer-logo {
-    width: 80%;
+    width: 100%;
 }
 footer section.container-footer .contain .left .footer-logo img {
     width: 100%;
@@ -1257,15 +1270,38 @@ button.date-button input.inputs {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* RESPONSIVE 
 -------------------------------- */
 
 /* DESKTOP */
 @media only screen and (min-width: 1280px) {
 .container-header.first .turquoise-line {
-    margin: 0 6em;}
+    margin: 0 6em;
+}
 .container-header.second .black-line.custom-wrapper { 
-    padding: 0.2em 6em;}
+    padding: 0.2em 6em;
+}
 }
 @media only screen and (min-width: 1024px) {    
     .container-header.second .black-line.custom-wrapper {            
@@ -1311,6 +1347,9 @@ button.date-button input.inputs {
     }
     .redes-mobile {
         display: none;
+    }
+    footer section.container-footer .contain .left .img-logo {
+        height: 100px;
     }
 }
 /* DESKTOP SMALL */
@@ -1374,6 +1413,15 @@ button.date-button input.inputs {
         font-size: 28px;
         line-height: 30px;
     }
+    main .container-main section.form .form-container .campo label {        
+        font-size: 12px;        
+    }
+    main .container-main section.form .form-container .campo.number .num input {
+        width: 85%;
+    }
+    main .container-main section.form .form-container .campo input, main .container-main section.form .form-container .campo input:focus-visible, main .container-main section.form .form-container .campo textarea {
+        font-size: 18px;
+    }
 
 /* __________________________ FOOTER DESKTOP SMALL ___________________________*/
     footer section.container-footer {
@@ -1405,7 +1453,7 @@ button.date-button input.inputs {
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {      
     main {
-        margin-top: 50px;
+        margin-top: 66px;
     }
     h1.h1-logo {
         font-size: 38px;
@@ -1429,7 +1477,7 @@ button.date-button input.inputs {
         background-color: var(--secondary-header-mobile);
         -webkit-font-smoothing: antialiased;
         width: 100%;
-        height: 51px;
+        height: 66px;        
         overflow: hidden;
         -webkit-transition: height 0.5s;
         -moz-transition: height 0.5s;
@@ -1440,10 +1488,25 @@ button.date-button input.inputs {
         height: 14em;
     }  
     .container-header.second .black-line .left-nav {
+        height: 66px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;   
+    }
+    .container-header .black-line .left-nav .logo {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center; 
+    }
+    .container-header .black-line .left-nav .logo .mobile {
+
+    }
+    .container-header .black-line .left-nav .logo .mobile .img-logo {
+        height: 42px;
+        margin: auto 0;
+        display: inline-flex;
     }
     .container-header.second .black-line .left-nav .booking {
         padding-right: 1em;
@@ -1454,27 +1517,23 @@ button.date-button input.inputs {
     }
     .container-header.second .black-line .left-nav .logo {
         text-align: center;
-        height: 50px;
+        height: 66px;
     }
     .container-header.second .black-line .left-nav .lang {
         margin-right: 0;
     }
     .left-nav .pure-menu {
         display: block;
+        padding-left: 20px;
     }
     .left-nav .logo a.desktop {
         display: none;
     }
     .left-nav .pure-menu .menu-link {
         width: 25px;
-        height: 25px;
-        position: absolute;
-        top: 0.8em;
-        left: 1em;
-        z-index: 1000;
+        height: 25px;        
         color: var(--primary);
         transform: rotateY(180deg);   
-        display: block;
     }
     .left-nav .pure-menu .menu-link em.icon-flat{
         color: var(--primary);
@@ -1484,15 +1543,16 @@ button.date-button input.inputs {
 
 
 
-/* HEADER SELECT 
--------------------------------- */
+    /* HEADER SELECT 
+    -------------------------------- */
 
 
-/* ONLY MOBILE MENU */
+    /* ONLY MOBILE MENU */
 
     #only-mobile-menu {
         top: 0;
         z-index: 10001;
+        height: 66px;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -1506,7 +1566,7 @@ button.date-button input.inputs {
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 1.5em 0 1.5em 1.5em;
+        padding-left: 12px;
     }
     .only-mobile-menu .only-text p {        
         font-weight: 700;
@@ -1516,6 +1576,9 @@ button.date-button input.inputs {
     }
     .only-mobile-menu .logo {
         text-align: center;
+    }
+    .only-mobile-menu .logo .img-logo {
+        height: 42px;
     }
     
     .only-mobile-menu .menu-mobile-icons {
@@ -1541,13 +1604,14 @@ button.date-button input.inputs {
         align-items: center;
         background-color: var(--white);
         color: var(--black);
-        margin-top: 64px;
+        margin-top: 66px;
     }
     .only-mobile-private .area {
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
+        padding: 20px 0 20px 20px
     } 
     .only-mobile-private .area span {
         display: flex;
@@ -1565,9 +1629,7 @@ button.date-button input.inputs {
         color: var(--primary-text);
         font-size: 14px;
     }
-    .only-mobile-private .area{
-        padding: 1.5em;
-    }
+    
     .only-mobile-private .area p { 
         margin: 0 0.2em;
            font-weight: 700;
@@ -1625,28 +1687,6 @@ button.date-button input.inputs {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     #menu-desplegado {
         display: flex;
         flex-flow: column;
@@ -1654,7 +1694,7 @@ button.date-button input.inputs {
         align-items: flex-start;  
         min-width: 100%;
         width:100%;
-        height: 100vh;
+        min-height: 100%;
         gap: 0;
         background-color: var(--white);
         z-index: 10000;
@@ -1790,8 +1830,8 @@ button.date-button input.inputs {
         padding: 1em;
     }
 
-/* __________________________ OTHER PAGES ___________________________*/
-/* ABOUT PAGE */
+    /* __________________________ OTHER PAGES ___________________________*/
+    /* ABOUT PAGE */
 
     main .container-main section.members {
         padding: 2em 2em;
@@ -1811,7 +1851,9 @@ button.date-button input.inputs {
         line-height: 20px;
     }
     main .container-main section.form p {
-        padding: 0 1em;
+        padding: 0 1em;        
+        font-size: 14px;
+        line-height: 150%;
     }
     main .container-main section.form {
         padding: 2em 1em;
@@ -1826,8 +1868,10 @@ button.date-button input.inputs {
     main .container-main .first-contain .title-big .h2-big, main .container-main .first-contain .title-big .h2-border {
         text-align: start;
     }
-
-/* __________________________ POST  ___________________________*/
+    main .container-main section.form .form-container .campo.number .num input {
+        width: 89%;
+    }
+    /* __________________________ POST  ___________________________*/
 
     main.post .container-main .post-content {
         display: flex;
@@ -2079,6 +2123,9 @@ button.date-button input.inputs {
     footer section.container-footer .footer-info .redes {
         display: none;       
     }
+    footer section.container-footer .contain .left .img-logo {
+        height: 69px;
+    }
 }
 /* MOBILE */
 @media only screen and (max-width: 767px) {    
@@ -2088,10 +2135,17 @@ button.date-button input.inputs {
     main .container-main section.members .grid .member {
         width: 50%;
     }
-    main .container-main section.form .form-container .campo input, main .container-main section.form .form-container .campo input:focus-visible, main .container-main section.form .form-container .campo select, main .container-main section.form .form-container .campo textarea {
-        width: 94%;
+    main .container-main section.form .form-container .campo input, main .container-main section.form .form-container .campo input:focus-visible, main .container-main section.form .form-container .campo textarea {
+        width: 86%;
     }
     main .container-main section.form .form-container .campo input#phone {
-        width: 92%;
+        width: 84%;
+    }
+}
+/* SMALL MOBILE */
+@media only screen and (max-width: 669px) {
+    /* ABOUT PAGE */    
+    main .container-main section.form .form-container .campo input#phone {
+        width: 80%;
     }
 }
