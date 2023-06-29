@@ -1,0 +1,113 @@
+.popup-container {
+	display: inline-block;
+}
+.popup-container .popup-button {
+    height: 40px;
+    margin-bottom: 0.5em;
+    color: var(--black);
+    border: 0px solid transparent;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    padding: 0 0.5em;
+}
+.popup-container input.date-picker {
+    height: 40px;
+    margin-bottom: 0.5em;
+    color: var(--black);
+    border: 0px solid transparent;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    padding: 0 0.5em;
+}
+.popup-container >input.checkbox {
+    display: none;
+}
+.popup-container .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000,.7);
+    z-index: 10;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 250ms all;
+}
+.popup-container .popup .popup-inner {
+    width: 400px;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 150%;
+    transition: 250ms all;
+}
+.popup-container .popup .popup-inner .popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.popup-container .popup .popup-inner .popup-title h6 {
+    font-size: 18px;
+    font-weight: 500;
+}
+.popup-container .popup .popup-inner .popup-title .popup-close-btn {
+    cursor: pointer;
+    background: #eee;
+    display: block;
+    line-height: 30px;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #222;
+    border-radius: 3px;
+}
+.popup-container .popup .popup-inner .popup-content ul li {
+    margin-bottom: 10px;
+}
+.popup-container .popup .popup-inner .popup-content ul li:last-child {
+    margin-bottom: 0;
+}
+.popup-container .popup .popup-inner .popup-content ul li input{
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    line-height: 34px;
+    padding: 0 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.popup-container .popup .popup-inner .popup-content ul li  button {
+    width: 100%;
+    line-height: 34px;
+    background: #666;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    font-size: 14px;
+}
+.popup-container .popup .popup-inner .popup-content ul li  button:hover {
+    background: #444;
+}
+.popup-container .popup .transparent-label {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    cursor: pointer;
+}
+/* .popup-container >input {
+    display: none;
+} */
+.popup-container >input:checked + .popup {
+    opacity: 1;
+    visibility: visible;
+}
+.popup-container >input:checked + .popup .popup-inner {
+    top: 50%;
+}
