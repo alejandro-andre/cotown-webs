@@ -24,7 +24,7 @@
 
           <li class="icons-header pure-menu-item">
             <!-- TODO: Buscador -->
-            <!--<a href="#" class="pure-menu-link"><em class="icon-search"></em></a>-->
+            <a href="#" class="pure-menu-link"><em class="icon-search"></em></a>
             <!-- Whatsapp -->
             {% for r in rrss %}
             {% if r.Name == 'whatsapp' %}
@@ -115,17 +115,17 @@
 
     <!-- Menu movil -->
     <div class="right-nav pure-u-1-1 pure-u-lg-16-24 pure-menu pure-menu-horizontal custom-can-transform" id="menu">
-      <ul class="black-menu pure-menu-list" id="menu-desplegado">     
-
+      <ul class="black-menu pure-menu-list" id="menu-desplegado"> 
+      
         <div class="only-mobile-menu pure-u-1-1" id="only-mobile-menu">
 
           <!-- Título menu -->
-          <div class="only-text pure-u-1-3">
+          <div class="only-text pure-u-5-24">
             <p>Menú</p>
           </div>
 
           <!-- Logo -->
-          <div class="logo pure-u-1-3">       
+          <div class="logo pure-u-11-24">       
             <a href="{{langs[L].folder}}/">
               {% if siteid == 1 %}
               <img class="img-logo" alt="logo" src="/assets/img/vanguard-white.svg">
@@ -136,7 +136,7 @@
           </div>
 
           <!-- Search -->
-          <div class="menu-mobile-icons pure-u-1-3">           
+          <div class="menu-mobile-icons pure-u-5-24">      
               <em class="icon-search"></em>
               <a type="button" onclick="ocultarMenuMobile()"><em class="icon-close"></em></a>
           </div>         
