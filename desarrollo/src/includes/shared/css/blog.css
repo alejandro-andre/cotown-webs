@@ -159,7 +159,13 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 0.5em auto 1em;
   gap: 0.4em;
 }
-.post .data-post h3 {
+main .container-main .first-contain .title-big .h2-big h1 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -1.2px;
+}
+.post .data-post h1 {
   margin-bottom: 0;
   font-size: 22px;
   line-height: 25px;
@@ -172,7 +178,17 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 0;
 }
 
-/* TABLET */
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
 @media only screen and (max-width: 1023.9px) {
   .container-main {
     display: flex;
@@ -215,10 +231,19 @@ input[type="search"]::-webkit-search-results-decoration {
   .post .data-post {
     
   }
-  .post .data-post h3 {
-    font-size: 20px;
+  .post .data-post h1 {
+    font-size: 16px;
     line-height: 22px;
   }
+  .post .data-post p,
+  .post .data-post a {
+    border: 0px;
+    padding: 0;    
+  }
+  .post .data-post p::before,
+.post .data-post a::before {
+  content: "#";
+}
 }
 
 @media only screen and (max-width: 767.9px) {

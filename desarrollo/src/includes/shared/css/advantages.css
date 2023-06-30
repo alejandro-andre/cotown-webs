@@ -1,6 +1,55 @@
 /* ADVANTAGES PAGE 
 -------------------------------- */
 
+
+/* BLOQUE 1 NO HOME 
+-------------------------------- */
+
+main .container-main .first-contain .img-right {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+main .container-main .first-contain .advantages.title-big {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto 2em;
+}
+main .container-main .first-contain .advantages.title-big .h2-big {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+main .container-main .first-contain .advantages.title-big .h2-big h1 {
+    font-size: 165px;
+    font-weight: 400;
+    line-height: 95%;
+    letter-spacing: -3.31px;
+}
+main .container-main .first-contain .advantages.title-big .h2-big h1 span.h2-border {
+    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    color: var(--primary-text);
+    text-shadow: var(--h2-border);   
+    font-weight: 400;
+    font-size: 165px;
+    line-height: 95%;
+    letter-spacing: -8.274px;
+}
+main .container-main .first-contain .advantages.title-big .text p {   
+    font-size: 22px;
+    line-height: 150%;
+    font-weight: 400;
+    margin: 0 0 0.5em;
+    text-align: left;
+}
+
+
+/* BLOQUE 2 GRID NO HOME 
+-------------------------------- */
 main .container-main section.container-advantages {
     padding: 2em 4em;
 }
@@ -78,4 +127,56 @@ main .container-main section.container-advantages select {
 
 button.btn-secondary {
     padding: 20px 40px;
+}
+
+/* RESPONSIVE 
+-------------------------------- */
+
+@media only screen and (max-width: 1023.9px) {
+    main .container-main .first-contain .advantages.title-big .h2-big h1 {       
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: -1.2px;
+    }
+    main .container-main .first-contain .advantages.title-big .h2-big h1 span.h2-border {
+        font-size: 40px;
+        letter-spacing: 2.4px;
+    }
+    main .container-main .first-contain .advantages.title-big .text p {   
+        font-size: 14px;        
+        font-weight: 400;
+        line-height: 150%;
+    }
+    main .container-main section.container-advantages {
+        padding: 1em 0;
+    }
+    main .container-main section.container-advantages .grid {
+        padding: 0 0.2em;        
+    }
+    main .container-main section.container-advantages .grid .promo {
+        width: 30%;
+        height: auto;
+        border-radius: 8px;
+        margin: 0.5em;
+        padding: 1em 0.5%;
+    }
+    main .container-main section.container-advantages .grid .promo .promo-contain .promo-title {
+        font-size: 40px;
+    }
+   
+}
+@media only screen and (max-width: 767.9px) {
+    main .container-main section.container-advantages .grid .promo {
+        width: 40%;
+        height: auto;
+        border-radius: 8px;
+        margin: 0.5em;
+        padding: 1em 0.2%;
+    }
+    main .container-main section.container-advantages .grid .promo .promo-contain .promo-title {
+        font-size: 36px;
+    }
+    main .container-main section.container-advantages .grid .promo .promo-contain .promo-text {
+        font-size: 12px;
+    }
 }
