@@ -1,3 +1,6 @@
+/* BLOG 
+-------------------------------- */
+
 .container-main {
   display: flex;
   flex-direction: column;
@@ -24,15 +27,26 @@
 }
 .search select,
 .search .search-container label {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
   border: 1px solid var(--grey-light);
   box-shadow: 0px 2.93014px 5.86028px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
-  padding: 12px 24px;
+  padding: 8px 24px;
   background-color: var(--white);
   outline: none;
   font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px; 
-  margin:0; 
+  font-size: 22px; 
+  margin:0;
+  color: var(--grey-light);
+}
+.search .search-container label input {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--grey-light);
 }
 .search select {  
   padding: 12px 16px;
@@ -60,9 +74,10 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
-.search .search-container label em {
-  width: 32px;
+.search .search-container label em.icon-search {
+  font-size: 32px;
   color: var(--primary);
+  margin-right: 20px;
 }
 
 .posts {
@@ -160,7 +175,7 @@ input[type="search"]::-webkit-search-results-decoration {
   gap: 0.4em;
 }
 main .container-main .first-contain .title-big .h2-big h1 {
-  font-size: 40px;
+  font-size: 120px;
   font-weight: 400;
   line-height: 100%;
   letter-spacing: -1.2px;
@@ -177,6 +192,113 @@ main .container-main .first-contain .title-big .h2-big h1 {
   padding: 0.2em 0.8em;
   margin: 0;
 }
+
+
+
+
+
+/* POST 
+-------------------------------- */
+
+main.post .container-main .post-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 6em auto;
+}
+main.post .container-main .post-content h1 {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+main.post .container-main .post-content img {
+  width: 100%;
+}
+main.post .container-main .post-content .text .date-post {
+  width: fit-content;
+}
+main.post .container-main .post-content .text .date-post p {  
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0 1em;
+  margin: 0;
+}
+main.post .container-main .post-content .text .text-content h2, main.post .container-main .post-content .text .text-content h3 {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 110%;
+  text-align: left;
+}
+main.post .container-main .post-content .text .text-content p, main.post .container-main .post-content .text .text-content ul li, main.post .container-main .post-content .text .text-content ol li {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 150%;
+}
+main.post .container-main .post-content .text .text-content ul li {
+  padding-left: 12px;
+}
+main.post .container-main .post-content .text .text-content ul li::marker {
+  content: "·";
+}
+main.post .container-main .post-content .text .text-content p strong {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+}
+main.post .container-main .post-content .text .text-content p em {
+  font-size: 22px;
+}
+main.post .container-main .like-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 0 4em;    
+}
+main.post .container-main .like-content .like {
+  background-color: var(--primary);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em 2em;
+  gap: 1em;
+}
+main.post .container-main .like-content .like .text {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+main.post .container-main .like-content .like .text h3 {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+  color: var(--white);
+  margin: 0;
+}
+main.post .container-main .like-content .like .text p {
+  color: var(--white);
+  margin: 0;
+}
+main.post .container-main .like-content .like .redes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+main.post .container-main .like-content .like .redes a em {
+  color: var(--white);
+  font-size: 34px;
+}
+
+
+
+
 
 
 
@@ -207,7 +329,7 @@ main .container-main .first-contain .title-big .h2-big h1 {
     margin: 1em auto 0;
 
   }
-  main .container-main .first-contain .title-big .h2-big {
+  main .container-main .first-contain .title-big .h2-big h1 {
     font-size: 40px;
     line-height: 100%;
   }
@@ -216,6 +338,16 @@ main .container-main .first-contain .title-big .h2-big h1 {
   }
   .search select {
     display: none;
+  }
+  .search .search-container label {
+    padding: 8px 14px;
+  }
+  .search .search-container label input {
+    font-size: 14px;
+  }
+  .search .search-container label em.icon-search {
+    font-size: 22px;
+    margin-right: 12px;
   }
   .post {
     border-radius: 16px;
@@ -228,9 +360,6 @@ main .container-main .first-contain .title-big .h2-big h1 {
   .post .date {
     top: 38%;
   }
-  .post .data-post {
-    
-  }
   .post .data-post h1 {
     font-size: 16px;
     line-height: 22px;
@@ -241,10 +370,74 @@ main .container-main .first-contain .title-big .h2-big h1 {
     padding: 0;    
   }
   .post .data-post p::before,
-.post .data-post a::before {
-  content: "#";
+  .post .data-post a::before {
+    content: "#";
+  }
+
+    /* __________________________ POST  ___________________________*/
+
+  main.post .container-main .post-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 6em auto;
+  } 
+  main.post .container-main .post-content h1 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+  main.post .container-main .post-content .text .text-content h2, main.post .container-main .post-content .text .text-content h3 {
+    font-size: 25px;
+  }
+  main.post .container-main .post-content .text .text-content p, main.post .container-main .post-content .text .text-content ul li, main.post .container-main .post-content .text .text-content ol li {
+    font-size: 14px;
+  }
+  main.post .container-main .post-content .text .text-content ul li {
+    padding-left: 12px;
+  }
+ 
+  main.post .container-main .post-content .text .text-content p strong,  main.post .container-main .post-content .text .text-content p em {
+    font-size: 14px;
+  }
+  main.post .container-main .like-content {        
+      margin: 0;
+  }
+  main.post .container-main .like-content .like .text {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+  }
+  main.post .container-main .like-content .like .text h3 {
+      font-weight: 400;
+      font-size: 35.4257px;
+      line-height: 36px;        
+  }
+  
+  main.post .container-main .like-content .like .redes {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;        
+  }
+  main.post .container-main .like-content .like .redes a em {
+      font-size: 24px;
+  }
+
+
+
+
+
 }
-}
+
+
+
+
+
 
 @media only screen and (max-width: 767.9px) {
   .post .data-post {
