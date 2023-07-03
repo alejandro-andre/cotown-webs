@@ -12,7 +12,7 @@
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,13 +33,13 @@
 
     <!-- ICONS -->
     <link rel="stylesheet" href="./assets/icons/style.css">
-  
+
     <!-- IMAGES -->
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="./favicon.png">
-    
+ 
 </head>
 
 <section class="dates-selector">
@@ -49,7 +49,7 @@
 			<em class="icon-close"></em>
 		</div>
 		<div class="clean-dates">
-			<a>Borrar fechas</a>
+			<a href="#" onclick="clear()">Borrar fechas</a>
 		</div>
 	</div>
 
@@ -58,19 +58,19 @@
 		<div class="left">
       <h2>Seleccionar fechas</h2>
       <p>Estancia mínima: 1 mes</p>
-    </div>        
+    </div>     
 
-		<div class="right">     
+		<div class="right">  
       <div class="calendar">
-				<div class="reservas_form_div">           
+				<div class="reservas_form_div">        
 			  	<form id="reservas_form" name="form_multi" method="GET">
 						<button class="date-button">
 							<label class="labels">Entrada</label>
-							<input type="text" id="in"  class="inputs" name="in" placeholder="02/06/2023"/>
-						</button>   
+							<input type="text" id="in" class="inputs" name="in" placeholder="..."/>
+						</button>
 						<button class="date-button">
 							<label class="labels">Salida</label>
-							<input type="text" id="out" class="inputs" name="out" placeholder="02/09/2023"/>
+							<input type="text" id="out" class="inputs" name="out" placeholder="..."/>
 						</button>
 					</form>
 				</div>
@@ -89,7 +89,7 @@
 						<a href="#" class="icon-left" rel="prev" onclick="back()">
 							<em class="icon-corchete-left"></em>
 						</a>
-						<p id="monthleft">Abril 2023</p>
+						<p id="monthleft"></p>
 					</div>
 				</caption>
 	
@@ -116,13 +116,13 @@
 			</div>
 
 		</div>
-       
+    
 		<div class="right">
 			<table id="daysright" summary="a calendar">
 
         <caption>
 					<div class="calendar-header">						
-						<p id="monthright">Mayo 2023</p>
+						<p id="monthright"></p>
 						<a href="#" class="icon-right" rel="next" onclick="forward()">
 							<em class="icon-corchete-right"></em>
 						</a>
@@ -147,8 +147,9 @@
 			</table>
 
         <div class="buttons">
-				<a>Borrar fechas</a>
+				<a href="#" onclick="clear()">Borrar fechas</a>
 				<button class="btn-secondary">Cerrar</button>
+
 			</div>
 
 		</div>
@@ -158,6 +159,21 @@
 </section>
 
 <script>
+
+fdesde = undefined;
+fhasta = undefined;
+ftoday = 2023*12+3;
+flag = false;
+
+const fin = document.getElementById('in');
+const fout =  document.getElementById('out');
+
+function format_date(yy, mm, dd, idioma) {
+  if (idioma = 'es-ES')
+    return dd.toString().padStart(2, '0') + '/' + mm.toString().padStart(2, '0') + '/' + yy;
+  return mm.toString().padStart(2, '0') + '/' + dd.toString().padStart(2, '0') + '/' + yy;
+}
+
 // Nombre del mes, en el idioma deseado
 function month(mes, idioma) {
   var d = new Date(1965, mes);
@@ -166,35 +182,34 @@ function month(mes, idioma) {
 }
 
 // Pinta los dias de un mes
-function pm(cal, yy, mes) {
+function pm(cal, yy, mm) {
 
   // Tabla
   var c = document.querySelector('#days' + cal + ' tbody');
   c.innerHTML = '';
-  
+
   // Nombre del mes
   var name = document.querySelector('#month' + cal);
-  name.textContent = month(mes, 'es-ES') + ' ' + yy;
+  name.textContent = month(mm, 'es-ES') + ' ' + yy;
 
   // Rango de días
-  var ud = new Date(yy, mes + 1, 0).getDate(); // Obtiene el último día del mes
-  var pd = new Date(yy, mes, 1).getDay();      // Obtiene el primer día del mes   
+  var ud = new Date(yy, mm + 1, 0).getDate(); // Obtiene el último día del mes
+  var pd = new Date(yy, mm, 1).getDay();      // Obtiene el primer día del mes
   pd = (pd === 0 ? 7 : pd) - 1;             // Ajusta el primer día de la semana a Lunes
 
   // Crea la cuadrícula del calendario
-  var d = 1;
+  var dd = 1;
   for (var y = 0; y < 6; y++) {
     var rowHTML = document.createElement('tr');
     for (var x = 0; x < 7; x++) {
       var colHTML = document.createElement('td');
-      if (y === 0 && x < pd || d > ud) {
+      if (y === 0 && x < pd || dd > ud) {
         colHTML.textContent = '';
       } else {
-        var yy = document.createElement('a');
-        yy.href = '#';
-        yy.textContent = d;
-        colHTML.appendChild(yy);
-        d++;
+        colHTML.textContent = dd;
+        colHTML.id = format_date(yy, mm + 1, dd);
+        colHTML.addEventListener('click', select)
+        dd++;
       }
       rowHTML.appendChild(colHTML);
     }
@@ -203,29 +218,48 @@ function pm(cal, yy, mes) {
 }
 
 // Pinta ambos meses
-function cal(fecha) {
-  a = Math.floor(fecha / 12);
-  m = fecha % 12
-  pm('left', a, m)
+function cal(date) {
+  yy = Math.floor(date / 12);
+  mm = date % 12
+  pm('left', yy, mm)
 
-  a = Math.floor((fecha + 1) / 12);
-  m = (fecha + 1) % 12
-  pm('right', a, m)
+  yy = Math.floor((date + 1) / 12);
+  mm = (date + 1) % 12
+  pm('right', yy, mm)
 }
 
 // Mes anterior
 function back() {
-  fecha -= 1;
-  cal(fecha)
+  ftoday -= 1;
+  cal(ftoday);
 }
 
 // Mes posterior
 function forward() {
-  fecha += 1;
-  cal(fecha)
+  ftoday += 1;
+  cal(ftoday);
 }
 
-fecha = 2023*12+3;
-cal(fecha);
+// Borrar fechas
+function clear(event) {
+  console.log('clear')
+  event.preventDefault();
+  fin.value = '';
+  fout.value = '';
+  return true;
+}
+
+// Selecciona fecha
+function select(event) {
+  event.preventDefault();
+  flag = !flag;
+  if (flag)
+    fin.value = event.target.id;
+  else
+    fout.value = event.target.id;
+  return true;
+}
+
+cal(ftoday);
 
 </script>
