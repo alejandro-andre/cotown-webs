@@ -692,6 +692,7 @@ main .container-main section.form .form-container .campo textarea {
     padding: 8px 16px;
     outline-offset: 0;
     outline: -webkit-focus-ring-color auto 0;
+    font-size: 20px;
 }
 main .container-main section.form select {
 -webkit-appearance: none;
@@ -809,6 +810,7 @@ main .container-main section.form .form-container button.btn-secondary {
     margin: 2em 0 1em;
     padding: 20px 40px;
     height: 54px;
+    font-size: 22px;
 }
 
 /* ICONOS CHAT */
@@ -852,76 +854,7 @@ main .container-main section.banner h2 {
 }
 
 
-/* BLOG 
--------------------------------- */
 
-main.post .container-main .post-content {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 6em auto;
-}
-main.post .container-main .post-content h1 {
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 100%;
-    text-align: center;
-    margin-bottom: 1em;
-}
-main.post .container-main .post-content img {
-    width: 100%;
-}
-main.post .container-main .post-content .text p {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 150%;
-}
-
-main.post .container-main .like-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 0 4em;    
-}
-main.post .container-main .like-content .like {
-    background-color: var(--primary);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1em 2em;
-    gap: 1em;
-}
-main.post .container-main .like-content .like .text {
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-main.post .container-main .like-content .like .text h3 {
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 100%;
-    color: var(--white);
-    margin: 0;
-}
-main.post .container-main .like-content .like .text p {
-    color: var(--white);
-    margin: 0;
-}
-main.post .container-main .like-content .like .redes {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-main.post .container-main .like-content .like .redes a em {
-    color: var(--white);
-    font-size: 34px;
-}
 /* CONTACTO 
 -------------------------------- */
 .first-contact {
@@ -945,7 +878,6 @@ main.post .container-main .like-content .like .redes a em {
 .contact-main .img-content {
     border-bottom: 1px solid var(--grey-light);
     padding: 2em 0;
-    margin: 0 1em;
 }
 .contact-main .img-content:last-child {
     border-bottom: 0px solid var(--grey-light);
@@ -955,6 +887,9 @@ main.post .container-main .like-content .like .redes a em {
 }
 .contact-main .img-content .contact-content .text-location {
     padding-top: 2em;
+}
+.contact-main .img-content .contact-content .img-city {
+    color: var(--primary-light);
 }
 .contact-main .img-content .contact-content .text-location h3 {
     font-weight: 800;
@@ -970,9 +905,8 @@ main.post .container-main .like-content .like .redes a em {
     vertical-align: bottom;
 }
 .contact-main .img-content .contact-content .text-location p span a {
-    font-weight: bold;
-    text-decoration-line: underline;
-    font-weight: 500;
+    text-decoration: 1px underline;
+    font-weight: 700;
     font-size: 30px;
     line-height: 130%;
     color: var(--black);
@@ -1866,53 +1800,15 @@ button.date-button input.inputs {
     main .container-main section.form .form-container .campo.number .num input {
         width: 89%;
     }
-    /* __________________________ POST  ___________________________*/
+    main .container-main section.form .form-container .campo select,
+    main .container-main section.form .form-container .campo input,
+    main .container-main section.form .form-container .campo input:focus-visible,
+    main .container-main section.form .form-container .campo textarea  {
+        font-size: 16px;        
+    }
 
-    main.post .container-main .post-content {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 6em auto;
-    }
-    main.post .container-main .post-content img {
-        margin-bottom: 1em;
-    }
-    main.post .container-main .post-content h1 {
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 110%;
-        text-align: left;
-        margin-bottom: 1em;
-    }
-    main.post .container-main .post-content .text p {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 150%;
-    }
-    main.post .container-main .like-content {        
-        margin: 0;
-    }
-    main.post .container-main .like-content .like .text {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-    }
-    main.post .container-main .like-content .like .text h3 {
-        font-weight: 400;
-        font-size: 35.4257px;
-        line-height: 36px;        
-    }
-    
-    main.post .container-main .like-content .like .redes {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;        
-    }
-    main.post .container-main .like-content .like .redes a em {
-        font-size: 24px;
+    main .container-main section.form .form-container .campo label {
+        font-size: 12px;
     }
 
     /* CONTACTO TABLET Y MOBILE  ___________________________*/
@@ -1965,6 +1861,10 @@ button.date-button input.inputs {
     }
     main .container-main section.form .form-container .campo textarea {
         width: 90%;
+    }
+
+    main .container-main section.form .form-container button.btn-secondary {
+        font-size: 16px;
     }
 
     /* POPUP RESERVAS MOBILE ___________________________*/
