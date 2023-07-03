@@ -1,0 +1,277 @@
+/* RESERVAS GLOBAL STYLE */
+
+.dates-selector {
+    width: 100%;
+    color: var(--secondary-black);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.dates-selector .selector-header {
+    width: 96%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1em 2%;
+}
+.dates-selector .selector-header .left {
+    width: 46%;
+    padding: 0 2%;
+}
+.dates-selector .selector-header .left h2 {
+    color: var(--secondary-black);
+    font-size: 42px;    
+    font-style: normal;
+    font-weight: 800;
+    line-height: 124%;
+    margin: 0;
+}
+.dates-selector .selector-header .left p {
+    color: var(--secondary-black);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%;
+    letter-spacing: -0.44px;
+    margin: 0;
+}
+.dates-selector .selector-header .right {
+    width: 46%;
+    padding: 0 2%;
+}
+#reservas_form{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 0.8em;	
+}
+button.date-button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    background-color: #fcfcfc;
+    border: 1.5px solid var(--grey-light);
+	box-sizing: border-box;
+    border-radius: 6px;
+    padding: 10px 0 10px 10px;
+}
+button.date-button label.labels {
+    width: 100%;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 16px;
+    text-align: left;
+}
+button.date-button input.inputs {	    
+    text-align: left;
+    font-weight: 400;
+    font-size: 22px;
+   background-color: transparent;
+    border: none;    
+}
+button.date-button input::-webkit-calendar-picker-indicator {
+    display: none;
+    color: transparent;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+button.date-button input:focus-visible,
+button.date-button input:focus,
+button.date-button input:hover,
+button.date-button input:active,
+button.date-button input:target,
+button.date-button input:visited  {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+.dates-selector .selector-main {
+    width: 96%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1em 2%;
+}
+.dates-selector .selector-main .left, .dates-selector .selector-main .right {
+    width: 46%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.dates-selector .selector-main table {
+    width: 100%;
+    margin-bottom: .5rem;
+}
+.dates-selector .selector-main .left table .calendar-header {    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.dates-selector .selector-main .left table .calendar-header p {
+    color: var(--secondary-black);   
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    width: 50%;
+    margin: 0;
+}
+.dates-selector .selector-main .left table .calendar-header a {
+    color: var(--secondary-black);
+    text-decoration: none;
+    font-size: 32px;
+    width: 25%;
+    text-align: start;
+    padding: 0 0 0 4%;
+}
+.dates-selector .selector-main .right table .calendar-header {    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.dates-selector .selector-main .right table .calendar-header p {
+    color: var(--secondary-black);   
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    width: 50%;
+    margin: 0;
+}
+.dates-selector .selector-main .right table .calendar-header a {
+    color: var(--secondary-black);
+    text-decoration: none;
+    font-size: 32px;
+    width: 25%;
+    text-align: end;
+    padding: 0 4% 0 0;
+}
+.dates-selector .selector-main table .calendar-header a em {
+    font-size: 40px;
+}
+.dates-selector .selector-main table thead tr th  {
+    color: var(--secondary-black);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    border-bottom: 0px solid #E1E1E1;
+    padding: 12px;
+}
+.dates-selector .selector-main table tbody tr td {
+    color: var(--grey-light);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 21px;
+    text-decoration: none;
+    border-bottom: 0px solid #E1E1E1;
+    padding: 12px;
+    cursor: pointer;
+}
+.dates-selector .selector-main table th:last-child, .dates-selector .selector-main table td:last-child {
+    padding: 12px;
+}
+.dates-selector .selector-main table tbody tr td a {
+    color: var(--black);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 21px;
+    text-decoration: none;
+}
+.dates-selector .selector-main table tbody tr td:hover,
+.dates-selector .selector-main table tbody tr td:active,
+.dates-selector .selector-main table tbody tr td:focus,
+.dates-selector .selector-main table tbody tr td:visited,
+.dates-selector .selector-main  table tbody tr td:target {
+    background-color: var(--primary);
+    border-radius: 6px;
+}
+.dates-selector .selector-main .left .no-dates p {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 1em 0 0.5em 2em;
+}
+.dates-selector .selector-main .left .no-dates a {
+    color: var(--primary);
+    font-size: 22px;
+    font-style: normal;
+    line-height: 22px;
+    font-weight: 700;
+    text-decoration: 1px underline;
+    margin: 0 0 0 2em;
+    cursor: pointer;
+}
+.dates-selector .selector-main .right .buttons {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.dates-selector .selector-main .right .buttons a {
+    color: var(--black);
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    text-decoration: 1px underline;
+    margin: 1em 0 0 2em;
+    cursor: pointer;
+}
+.dates-selector .selector-main .right .buttons button {
+    margin: 2em  2em 0 0;
+}
+.dates-selector .selector-main .right .buttons button.btn-secondary {
+    padding: 22px 2em;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .dates-selector .mobile {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE */
+@media only screen and (max-width: 1023.9px) {
+    .dates-selector .selector-header {
+        width: 98%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1em 1%;
+    }
+    .dates-selector .mobile {
+        width: 98%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1em 1%;
+    }
+}
