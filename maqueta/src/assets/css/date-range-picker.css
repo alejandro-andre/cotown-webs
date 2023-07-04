@@ -1,14 +1,23 @@
 /* RESERVAS GLOBAL STYLE */
 
-.dates-selector {
+.calendar-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.calendar-container .dates-selector {
     width: 100%;
     color: var(--secondary-black);
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
-.dates-selector .selector-header {
+.calendar-container .dates-selector .selector-header {
     width: 96%;
     display: flex;
     flex-flow: row wrap;
@@ -16,11 +25,11 @@
     align-items: flex-start;
     padding: 1em 2%;
 }
-.dates-selector .selector-header .left {
+.calendar-container .dates-selector .selector-header .left {
     width: 46%;
     padding: 0 2%;
 }
-.dates-selector .selector-header .left h2 {
+.calendar-container .dates-selector .selector-header .left h2 {
     color: var(--secondary-black);
     font-size: 42px;    
     font-style: normal;
@@ -28,7 +37,7 @@
     line-height: 124%;
     margin: 0;
 }
-.dates-selector .selector-header .left p {
+.calendar-container .dates-selector .selector-header .left p {
     color: var(--secondary-black);
     font-size: 22px;
     font-style: normal;
@@ -37,7 +46,7 @@
     letter-spacing: -0.44px;
     margin: 0;
 }
-.dates-selector .selector-header .right {
+.calendar-container .dates-selector .selector-header .right {
     width: 46%;
     padding: 0 2%;
 }
@@ -46,7 +55,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 0.8em;	
+    margin: 0.8em 0 0;	
 }
 button.date-button {
     display: flex;
@@ -67,11 +76,12 @@ button.date-button label.labels {
     line-height: 16px;
     text-align: left;
 }
-button.date-button input.inputs {	    
+button.date-button input.inputs {	 
+    width: 100%;   
     text-align: left;
     font-weight: 400;
     font-size: 22px;
-   background-color: transparent;
+    background-color: transparent;
     border: none;    
 }
 button.date-button input::-webkit-calendar-picker-indicator {
@@ -89,7 +99,7 @@ button.date-button input:target,
 button.date-button input:visited  {
     outline: -webkit-focus-ring-color auto 0px;
 }
-.dates-selector .selector-main {
+.calendar-container .dates-selector .selector-main {
     width: 96%;
     display: flex;
     flex-flow: row wrap;
@@ -97,24 +107,24 @@ button.date-button input:visited  {
     align-items: flex-start;
     padding: 1em 2%;
 }
-.dates-selector .selector-main .left, .dates-selector .selector-main .right {
+.calendar-container .dates-selector .selector-main .left, .calendar-container .dates-selector .selector-main .right {
     width: 46%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
-.dates-selector .selector-main table {
+.calendar-container .dates-selector .selector-main table {
     width: 100%;
     margin-bottom: .5rem;
 }
-.dates-selector .selector-main .left table .calendar-header {    
+.calendar-container .dates-selector .selector-main .left table .calendar-header {    
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.dates-selector .selector-main .left table .calendar-header p {
+.calendar-container .dates-selector .selector-main .left table .calendar-header p {
     color: var(--secondary-black);   
     font-size: 35px;
     font-style: normal;
@@ -123,7 +133,7 @@ button.date-button input:visited  {
     width: 50%;
     margin: 0;
 }
-.dates-selector .selector-main .left table .calendar-header a {
+.calendar-container .dates-selector .selector-main .left table .calendar-header a {
     color: var(--secondary-black);
     text-decoration: none;
     font-size: 32px;
@@ -131,13 +141,13 @@ button.date-button input:visited  {
     text-align: start;
     padding: 0 0 0 4%;
 }
-.dates-selector .selector-main .right table .calendar-header {    
+.calendar-container .dates-selector .selector-main .right table .calendar-header {    
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: flex-start;
 }
-.dates-selector .selector-main .right table .calendar-header p {
+.calendar-container .dates-selector .selector-main .right table .calendar-header p {
     color: var(--secondary-black);   
     font-size: 35px;
     font-style: normal;
@@ -146,7 +156,7 @@ button.date-button input:visited  {
     width: 50%;
     margin: 0;
 }
-.dates-selector .selector-main .right table .calendar-header a {
+.calendar-container .dates-selector .selector-main .right table .calendar-header a {
     color: var(--secondary-black);
     text-decoration: none;
     font-size: 32px;
@@ -154,10 +164,13 @@ button.date-button input:visited  {
     text-align: end;
     padding: 0 4% 0 0;
 }
-.dates-selector .selector-main table .calendar-header a em {
+.calendar-container .dates-selector .selector-main table .calendar-header a em {
     font-size: 40px;
 }
-.dates-selector .selector-main table thead tr th  {
+.calendar-container .dates-selector .selector-main table thead.mobile {
+    display: none;
+}
+.calendar-container .dates-selector .selector-main table thead tr th  {
     color: var(--secondary-black);
     text-align: center;
     font-size: 20px;
@@ -167,7 +180,7 @@ button.date-button input:visited  {
     border-bottom: 0px solid #E1E1E1;
     padding: 12px;
 }
-.dates-selector .selector-main table tbody tr td {
+.calendar-container .dates-selector .selector-main table tbody tr td.null  {
     color: var(--grey-light);
     text-align: center;
     font-size: 20px;
@@ -179,10 +192,10 @@ button.date-button input:visited  {
     padding: 12px;
     cursor: pointer;
 }
-.dates-selector .selector-main table th:last-child, .dates-selector .selector-main table td:last-child {
+.calendar-container .dates-selector .selector-main table th:last-child, .calendar-container .dates-selector .selector-main table td:last-child {
     padding: 12px;
 }
-.dates-selector .selector-main table tbody tr td a {
+.calendar-container .dates-selector .selector-main table tbody tr td {
     color: var(--black);
     text-align: center;
     font-size: 20px;
@@ -190,23 +203,29 @@ button.date-button input:visited  {
     font-weight: 300;
     line-height: 21px;
     text-decoration: none;
+    border-bottom: 0px solid #E1E1E1;
+    padding: 12px;
+    cursor: pointer;
 }
-.dates-selector .selector-main table tbody tr td:hover,
-.dates-selector .selector-main table tbody tr td:active,
-.dates-selector .selector-main table tbody tr td:focus,
-.dates-selector .selector-main table tbody tr td:visited,
-.dates-selector .selector-main  table tbody tr td:target {
+.calendar-container .dates-selector .selector-main table tbody tr td:hover,
+.calendar-container .dates-selector .selector-main table tbody tr td:active,
+.calendar-container .dates-selector .selector-main table tbody tr td:focus,
+.calendar-container .dates-selector .selector-main table tbody tr td:visited,
+.calendar-container .dates-selector .selector-main  table tbody tr td:target {
     background-color: var(--primary);
     border-radius: 6px;
 }
-.dates-selector .selector-main .left .no-dates p {
+.calendar-container .dates-selector .selector-main .right .sticky-mobile {
+    display: none;
+}
+.calendar-container .dates-selector .selector-main .left .no-dates p {
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
     margin: 1em 0 0.5em 2em;
 }
-.dates-selector .selector-main .left .no-dates a {
+.calendar-container .dates-selector .selector-main .left .no-dates a, .sticky-mobile a  {
     color: var(--primary);
     font-size: 22px;
     font-style: normal;
@@ -216,14 +235,14 @@ button.date-button input:visited  {
     margin: 0 0 0 2em;
     cursor: pointer;
 }
-.dates-selector .selector-main .right .buttons {
+.calendar-container .dates-selector .selector-main .right .buttons {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
-.dates-selector .selector-main .right .buttons a {
+.calendar-container .dates-selector .selector-main .right .buttons a {
     color: var(--black);
     font-size: 22px;
     line-height: 22px;
@@ -232,46 +251,223 @@ button.date-button input:visited  {
     margin: 1em 0 0 2em;
     cursor: pointer;
 }
-.dates-selector .selector-main .right .buttons button {
+.calendar-container .dates-selector .selector-main .right .buttons button {
     margin: 2em  2em 0 0;
 }
-.dates-selector .selector-main .right .buttons button.btn-secondary {
+.calendar-container .dates-selector .selector-main .right .buttons button.btn-secondary {
     padding: 22px 2em;
 }
 
 
+.calendar-container .dates-selector .selector-main table tbody tr td.selected{
+    background-color: var(--primary);
+    border-radius: 6px;
+}
+.calendar-container .dates-selector .selector-main table tbody tr td.inside-selected {
+    background-color: var(--primary-light);
+    border-radius: 0px;
+}
+
+
+
+
+/* RESPONSIVE */
 @media only screen and (min-width: 1024px) {
-    .dates-selector .mobile {
+    .calendar-container .dates-selector .mobile {
         display: none;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 /* MOBILE */
 @media only screen and (max-width: 1023.9px) {
-    .dates-selector .selector-header {
-        width: 98%;
+    .calendar-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .calendar-container .dates-selector .selector-header {
+        width: 96%;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 1em 1%;
+        padding: 0 2%;
     }
-    .dates-selector .mobile {
-        width: 98%;
+    .calendar-container .dates-selector .mobile {
+        width: 96%;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 1em 1%;
+        padding: 1em 2%;
     }
+    .calendar-container .dates-selector .mobile .close .icon-close {
+        font-size: 20px;
+    } 
+    .calendar-container .dates-selector .mobile .clean-dates {
+    }
+    .calendar-container .dates-selector .mobile .clean-dates a {
+        color: var(--black);
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        text-decoration: 1px underline;
+        margin: 1em 0 0 2em;
+        cursor: pointer;
+    }
+    .calendar-container .dates-selector .selector-header .left {
+        width: 98%;
+        text-align: left;
+    }
+    .calendar-container .dates-selector .selector-header .left h2 {
+        text-align: left;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: -1.2px;
+    }
+    .calendar-container .dates-selector .selector-header .right {
+        width: 98%;
+    }
+    .calendar-container .dates-selector .selector-header .reservas_form_div {
+        width: fit-content;
+    }
+    #reservas_form {
+        width: fit-conent;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;        
+    }
+    button.date-button {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: fit-content;
+        border: 0px solid var(--grey-light);
+        padding: 10px 0;       
+    }
+    button.date-button label.labels {
+        display: none;
+    }
+    button.date-button input.inputs {	 
+        width: fit-content;   
+        text-align: left;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;    
+    }
+    .calendar-container .dates-selector .selector-main {
+        width: 96%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 2%;
+    }
+    .calendar-container .dates-selector .selector-main .left, .calendar-container .dates-selector .selector-main .right {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .calendar-container .dates-selector .selector-main table .calendar-header {
+        justify-content: flex-start;
+    }
+    .calendar-container .dates-selector .selector-main table .calendar-header .icon-left,
+    .calendar-container .dates-selector .selector-main table .calendar-header .icon-right  {
+        display: none;
+    }
+    .calendar-container .dates-selector .selector-main .left table .calendar-header p,
+    .calendar-container .dates-selector .selector-main .right table .calendar-header p {
+        width: 100%;
+        text-align: left;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 140%;
+    }
+    .calendar-container .dates-selector .selector-main table thead.mobile {
+        display: table-caption;
+        width: 100%;
+        padding: 0 0 20px;
+    }
+
+    .calendar-container .dates-selector .selector-main table thead.mobile tr {
+        width: 100%;
+        display: flex;
+    }
+    .calendar-container .dates-selector .selector-main table thead.mobile tr th {
+        border-bottom: 1px solid var(--grey-light);
+        font-size: 10px;
+        line-height: 12px;
+        width: 14.25%;
+    }
+    .calendar-container .dates-selector .selector-main table tbody tr td {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 15px;
+    }
+
+    .calendar-container .dates-selector .selector-main table thead.desktop {
+        display: none;
+    }
+    .calendar-container .dates-selector .selector-main .left .no-dates,
+    .calendar-container .dates-selector .selector-main .right .buttons {
+        display: none;
+    }
+    .calendar-container .dates-selector .selector-main .right .sticky-mobile {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        bottom: 0px;
+        border-top: 1px solid var(--secondary-01-grisclaro, #D1D1D1);
+        background: #FFF;
+        padding: 12px 0;
+    }
+    .calendar-container .dates-selector .selector-main .right .sticky-mobile  .left {
+        width: 70%;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .calendar-container .dates-selector .selector-main .right .sticky-mobile p {        
+        margin: 1em 0 0.5em 2em;
+        font-size: 12px;       
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0;
+    }
+    .calendar-container .dates-selector .selector-main .right .sticky-mobile a {
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-decoration-line: underline;
+        margin: 0;
+    }
+    .calendar-container .dates-selector .selector-main .right .sticky-mobile .right {
+        width: 30%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .calendar-container .dates-selector .selector-main .right .sticky-mobile .right button.btn-primary {
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        font-size: 15px;
+    }
+
 }
+
