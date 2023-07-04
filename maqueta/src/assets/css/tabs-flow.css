@@ -1,0 +1,319 @@
+.tabs-container {
+width: 100%;
+margin: 0.5em 0;
+padding: 0;
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+align-items: flex-start;
+}
+.tabs-container .header-tabs {
+width: 100%;
+margin: 0;
+padding: 0;
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+align-items: flex-start;
+}
+.tabs-container .header-tabs .left,
+.tabs-container .header-tabs .center,
+.tabs-container .header-tabs .right {
+width: 33%;
+margin: 0;
+padding: 0;
+display: flex;
+flex-flow: row wrap;
+}
+button.back {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+align-items: center;
+background-color: transparent;
+}
+button.back em {
+font-size: 20px;
+margin: 0 6px;
+}
+button.back p {
+margin-bottom: 0;
+}
+.tabs-container .header-tabs .left {
+justify-content: flex-start;
+align-items: flex-start;
+}
+.tabs-container .header-tabs .left button.back {
+justify-content: flex-start;
+align-items: center;
+}
+.tabs-container .header-tabs .center {
+justify-content: center;
+align-items: center;
+}
+.tabs-container .header-tabs .center img.img-logo {
+height: 50px;
+}
+.tabs-container .header-tabs .right {
+justify-content: flex-end;
+align-items: flex-start;
+}
+.tabs-container .header-tabs .right button.back {
+justify-content: flex-end;
+align-items: center;
+}
+.tabset {
+width: 100%;
+background-color: var(--grey-dark);
+margin: 1em 0;
+}
+.tabset .label1 {
+margin-left: 4%;
+}
+.tab-panels {
+background-color: var(--white);
+}
+.tabset label {
+height: 21px;
+}
+.tabset > input[type="radio"] {
+position: absolute;
+left: -200vw;
+}
+.tabset .tab-panel {
+display: none;
+}
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+display: block;
+}
+.tabset > label {
+width: 22%;
+position: relative;
+display: inline-block;
+font-size: 15px;
+font-weight: 800;
+line-height: 140%;
+letter-spacing: -0.15px;
+height: 20px;
+border: 1px solid var(--grey-dark);
+margin: 0;
+color: var(--white);
+padding: 16px 0 16px 1em;
+}
+input:focus-visible + label {
+outline: 0px solid transparent;
+}
+.tabset > label:hover,
+.tabset > input:focus + label,
+.tabset > input:checked + label {
+color: var(--grey-dark);
+background-color: var(--white);
+}
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+background: transparent;
+}
+.tab-panel {
+padding: 30px 0;
+}
+.tabset .tab-panels .tab-panel .panel-container{
+width: 92%;
+padding: 30px 4%;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+align-items: flex-start;
+}
+.tabset .tab-panels .tab-panel .left {
+width: 52%;
+}
+.tabset .tab-panels .tab-panel .left h2 {
+width: 100%;
+font-size: 64px;
+font-weight: 400;
+line-height: 100%;
+letter-spacing: -1.92px;
+}
+.tabset .tab-panels .tab-panel .left form {
+    width: 100%;
+}
+.tabset .tab-panels .tab-panel .left form select {
+width: 90%;
+font-size: 18px;
+font-weight: 400;
+line-height: 150%;
+color: var(--grey-light);
+border: 1px solid var(--grey-light);
+border-radius: 6px;
+padding: 8px 24px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; 
+background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; 
+}
+/*For IE*/
+.tabset .tab-panels .tab-panel .left form select::-ms-expand {
+    display: none;
+}
+   
+
+.tabset .tab-panels .tab-panel .left form select option {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--grey-light);
+}
+.tabset .tab-panels .tab-panel .left form h3 {
+    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 124%;
+    letter-spacing: -0.6px;
+    text-transform: none;
+    margin: 1em 0;
+}
+.tabset .tab-panels .tab-panel .left form .background {
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--primary-light);
+    border-radius: 8px;
+    margin: 0 0 10px;
+}
+.tabset .tab-panels .tab-panel .left form .background em {
+    margin: 24px 12px 24px 24px;
+    width: 32px;
+}
+.tabset .tab-panels .tab-panel .left form .background input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 64px;
+    width: 32px;
+    height: 32px;
+}
+.tabset .tab-panels .tab-panel .left form .background label {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 150%;
+}
+.tabset .tab-panels .tab-panel .left form .background em.checkmark {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--grey-dark);
+}
+.tabset .tab-panels .tab-panel .left form .background:hover input~em.checkmark {
+    border: 4px solid var(--primary);
+    height: 14px;
+    width: 14px;
+}  
+.tabset .tab-panels .tab-panel .left form .background input:checked~em.checkmark {
+    height: 14px;
+    width: 14px;
+    border: 4px solid var(--primary);
+}
+
+.tabset .tab-panels .tab-panel .left form .background em:after {
+    top: 9px;
+}
+.tabset .tab-panels .tab-panel .left form .inputs-container {
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+    margin: 0 0 10px;
+    gap: 14px;
+}
+/* .tabset .tab-panels .tab-panel .left form .inputs-container .dates {
+    width: 30%;
+} */
+.tabset .tab-panels .tab-panel .left form .inputs-container label {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%
+}
+.tabset .tab-panels .tab-panel .left form .inputs-container input {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--grey-light);
+    border: 1px solid var(--grey-light);
+    border-radius: 6px;
+    padding: 8px 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
+}
+
+
+
+.tabset .tab-panels .tab-panel .right {
+    width: 38%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.tabset .tab-panels .tab-panel .right .img-big {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    object-fit: contain;
+}
+.tabset .tab-panels .tab-panel .right .img-big img {
+    width: 100%;    
+}
+
+
+
+/* RESPONSIVE */
+@media only screen and (min-width: 1024px) {
+   
+}
+
+/* MOBILE */
+@media only screen and (max-width: 1023.9px) {
+    .tabset > label {
+        width: 100%;
+        padding: 16px 0 16px;
+        position: absolute;
+        z-index: 1;      
+    }
+    .tabset > label:hover,
+    .tabset > input:focus + label {
+        
+    }
+
+    .tabset > input:checked + label {
+    color: var(--grey-dark);
+    background-color: var(--white);
+    z-index: 2;
+    }
+    .tabset .tab-panels .tab-panel .left {
+        width: 100%;
+    }
+    .tabset .label1 {
+        margin-left: 0;
+    }
+    .tabset .tab-panels .tab-panel .right {
+        display: none;
+    }
+    
+}
