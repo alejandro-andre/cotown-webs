@@ -20,37 +20,49 @@ tags: page
 <style>
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   grid-gap: 5px;
 }
 .item {
-  border: 1px solid black;
+  border: 1px solid lightgray;
   box-sizing: border-box;
-  width: 100px;
+  width: 70px;
 }
-/*
-.cotown   .svg_base   { fill: #363434; }
-.cotown   .svg_accent { fill: #00bfb2; }
-.vanguard .svg_base   { fill: #363434; }
-.vanguard .svg_accent { fill: #ff5166; }
-
-.svg_base   { fill: red; }
-.svg_accent { fill: green; }
 
 .white { background-color:#f0f0f0; }
 .black { background-color:#363434; }
-*/
+
+.black .svg_base { fill:#f0f0f0 !important; }
+.svg_base { fill:#363434 !important; }
+
+.cotown .svg_accent { fill:#00bfb2 !important; }
+.vanguard .svg_accent { fill:#FF5166 !important; }
 </style>
 
 {% set styles = ['white', 'black'] %}
-{% set files  = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61'] %}
+{% set files  = ['icono__ciudad_barcelona.svg','icono__ciudad_madrid.svg','icono__ciudad_valencia.svg','icono__ciudad_bilbao.svg','icono__hab_apartamento_privado.svg','icono__hab_habitacion_compartida.svg','icono__serv_aire_acondicionado.svg','icono__serv_ajustes.svg','icono__serv_ascensor.svg','icono__serv_asistencia.svg','icono__serv_balcon.svg','icono__serv_baño.svg','icono__serv_cafe.svg','icono__serv_caja_fuerte.svg','icono__serv_calefaccion.svg','icono__serv_camara_fotos.svg','icono__serv_cama_doble.svg','icono__serv_cama_individual.svg','icono__serv_comida.svg','icono__serv_conserje.svg','icono__serv_correo.svg','icono__serv_escaleras_abajo.svg','icono__serv_escaleras_arriba.svg','icono__serv_escritorio.svg','icono__serv_extintor.svg','icono__serv_gimnasio.svg','icono__serv_horno.svg','icono__serv_imagen.svg','icono__serv_lavadora.svg','icono__serv_libro.svg','icono__serv_limpieza.svg','icono__serv_llaves.svg','icono__serv_mantenimiento.svg','icono__serv_mapa.svg','icono__serv_nevera.svg','icono__serv_no_molestar.svg','icono__serv_portatil.svg','icono__serv_porta_maletas.svg','icono__serv_sala_creacion_contenido.svg','icono__serv_sala_ensayo.svg','icono__serv_suministros.svg','icono__serv_terraza.svg','icono__serv_tramites.svg','icono__serv_tv.svg','icono__serv_ventilador_techo.svg','icono__serv_wifi.svg','icono__serv_zona_comun_ocio.svg','icono__tipo_apartamento_privado.svg','icono__tipo_piso_compartido.svg','icono__tipo_residencia_universitaria.svg'] %}
 
 {% for s in styles %}
 <div class="container cotown {{s}}">
 {% for f in files %}
-  <div class="item">{{f}}
+  <div class="item">
     {% svg 
-       "./res/cotown/icons/ICONOGRAFIA-COTOWN-" + f + ".svg",
+       "./src/icons/cotown/c." + f,
+       f
+    %}
+  </div>
+{% endfor %}
+</div>
+{% endfor %}
+
+<br><br>
+
+{% for s in styles %}
+<div class="container vanguard {{s}}">
+{% for f in files %}
+  <div class="item">
+    {% svg 
+       "./src/icons/vanguard/v." + f,
        f
     %}
   </div>
