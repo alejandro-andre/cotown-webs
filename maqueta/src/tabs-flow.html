@@ -76,17 +76,45 @@
 	</div>
 	<div class="tabset pure-u-1">
 		<!-- Tab 1 -->
-		<input type="radio" name="tabset" id="tab1" aria-controls="section1" checked>
-		<label class="label1" for="tab1">1. Ubicación y fechas</label>
+		<input type="radio" name="tabset" id="tab1" aria-controls="section1" >
+		<label class="label" for="tab1">
+			<span>1. Ubicación y fechas</span>
+			<div class="label-mobile">
+				<em class="icon-corchete-left"></em>
+				1 de 4 - Ubicación y fechas
+				<em class="icon-close"></em>
+			</div>			
+		</label>
 		<!-- Tab 2 -->
-		<input type="radio" name="tabset" id="tab2" aria-controls="section2">
-		<label class="label2" for="tab2">2. Tipo de habitación</label>
+		<input type="radio" name="tabset" id="tab2" aria-controls="section2" checked>
+		<label class="label" for="tab2">
+			<span>1. Ubicación y fechas</span>
+			<div class="label-mobile">
+				<em class="icon-corchete-left"></em>
+				1 de 4 - Ubicación y fechas
+				<em class="icon-close"></em>
+			</div>
+		</label>
 		<!-- Tab 3 -->
 		<input type="radio" name="tabset" id="tab3" aria-controls="section3">
-		<label class="label3" for="tab3">3. Detalles de la reserva</label>
+		<label class="label" for="tab3">
+			<span>1. Ubicación y fechas</span>
+			<div class="label-mobile">
+				<em class="icon-corchete-left"></em>
+				1 de 4 - Ubicación y fechas
+				<em class="icon-close"></em>
+			</div>
+		</label>
 		<!-- Tab 4 -->
 		<input type="radio" name="tabset" id="tab4" aria-controls="section4">
-		<label class="label4" for="tab4">4. Confirmación</label>
+		<label class="label" for="tab4">
+			<span>1. Ubicación y fechas</span>
+			<div class="label-mobile">
+				<em class="icon-corchete-left"></em>
+				1 de 4 - Ubicación y fechas
+				<em class="icon-close"></em>
+			</div>
+		</label>
 
 		<div class="tab-panels">
 			<section id="section1" class="tab-panel">
@@ -97,7 +125,7 @@
 							<fieldset>	
 								<label>Selecciona una ubicación</label>					
 								<select class="pure-u-1-1">
-									<option></option>
+									<option>Barcelona</option>
 									<option>Apartamento privado</option>
 									<option>Residencia universitaria</option>
 									<option>Piso compartido</option>
@@ -123,14 +151,7 @@
 									<input name="Habitación Compartida" type="radio" value="compartida">
 									<em class="checkmark"></em>
 									<label class="labels">Habitación Compartida</label>
-								</div>
-								<label>¿En qué fechas?</label>
-								<select class="pure-u-1-1">
-									<option></option>
-									<option>Apartamento privado</option>
-									<option>Residencia universitaria</option>
-									<option>Piso compartido</option>
-								</select>
+								</div>								
 								<h3>¿En qué tipo de habitación?</h3>
 								<div class="background">
 									<input name="Habitación Individual" type="radio" value="individual">
@@ -153,22 +174,68 @@
 									<input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="02/09/2023"/>
 									</div>									
 								</div>
+								<section class="next">
+									<button class="btn-secondary">
+										Continuar
+									</button>
+								  </section>
 							</fieldset>
-						</form>
-						
+						</form>						
 					</div>
 					<div class="right">
 						<div class="img-big">
 							<img class="big" alt="cotownity-big" src="./assets/img/cotownity-big.png">
 						</div>
-					</div>
+					</div>					
 				</div>
 				
 			</section>
 			<section id="section2" class="tab-panel">
-				<h2>6B. section2</h2>
-				<p><strong>Overall Impression:</strong>  An elegant, malty German amber lager with a balanced, complementary beechwood smoke character. Toasty-rich malt in aroma and flavor, restrained bitterness, low to high smoke flavor, clean fermentation profile, and an attenuated finish are characteristic.</p>
-				<p><strong>History:</strong> A historical specialty of the city of Bamberg, in the Franconian region of Bavaria in Germany. Beechwood-smoked malt is used to make a Märzen-style amber lager. The smoke character of the malt varies by maltster; some breweries produce their own smoked malt (rauchmalz).</p>
+				<div class="panel-container">
+					<div class="left tab2">						
+						<div class="description">
+							<div class="img">
+								<img class="mini" alt="cotownity-big" src="./assets/img/cotownity-big.png">
+							</div>
+							<div class="desc-container">
+								<div class="first secc">
+									<p>Individual estándar con baño privado</p>
+									<p>925€
+										<br><span>al mes (?)</span>
+									</p>
+								</div>
+								<div class="second secc">
+									<p>Nàpols 206</p>									
+								</div>
+								<div class="third secc">								
+									<button class="btn-secondary">
+										Reservar
+										<em class="icon-arrow-right"></em>
+									</button>
+								</div>
+								<div class="panel-expan secc">
+									<div class="expansion pure-u-1">
+										<input type="checkbox" class="expan pure-u-1-2" id="tab1" tabindex="0"/>
+										
+										<label name="tab" for="tab1" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
+										  <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+										  <p>Ver más información</p>
+										</label>
+										<div class="content pure-u-1">
+										  <p>Se deberá abonar en único pago, una fianza de 900€ o el equivalente a una mensualidad si la renta supera los 900€. Este depósito será devuelto en un plazo máximo de 30 días posterior a la fecha de salida siempre y cuando no haya habido ningún desperfecto en el apartamento. ​Se deberán abonar en un único pago, 375€ en calidad de gastos de gestión de contrato. ​Si necesitas más información acerca de las condiciones de reserva, puedes hacerlo mediante este enlace</p>
+										</div>       
+									  </div>
+								</div>
+								
+							</div>
+						</div>
+					</div>	
+					<div class="right tab2">
+						<div class="resume">
+							<p>¿Dónde quieres vivir?</p>
+						</div>
+					</div>				
+				</div>				
 			</section>
 			<section id="section3" class="tab-panel">
 				<h2>6C. section3 Bock</h2>
@@ -181,7 +248,8 @@
 				<p><strong>History:</strong> Originated in the Northern German city of Einbeck, which was a brewing center and popular exporter in the days of the Hanseatic League (14th to 17th century). Recreated in Munich starting in the 17th century. The name “bock” is based on a corruption of the name “Einbeck” in the Bavarian dialect, and was thus only used after the beer came to Munich. “Bock” also means “Ram” in German, and is often used in logos and advertisements.</p>
 			</section>
 		</div>
-		
+
+			
 	  </div>
 </div>
 
