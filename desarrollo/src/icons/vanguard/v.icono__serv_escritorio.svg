@@ -3,21 +3,12 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
-	.st1{fill:#1B1B1A;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#1B1B1A;}
-	.st3{fill:#BDBDBD;}
-	.st4{fill:url(#SVGID_1_);}
-	.st5{fill:#FF5166;}
-	.st6{fill:#C5C5C5;}
-	.st7{fill:none;}
-	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#FF5166;}
+	.svg_base{fill:#343434;}
+	.svg_accent{fill:#FF5166;}
 </style>
 <g>
-	<g>
-		<rect x="123" y="206.1" class="st1" width="33.2" height="199.5"/>
-		<rect x="355.8" y="206.1" class="st1" width="33.2" height="199.5"/>
-	</g>
-	<path class="st5" d="M56.5,106.4v99.7h398.9v-99.7H56.5z M422.2,172.9H89.8v-33.2h332.4V172.9z"/>
+	<rect x="123" y="206.1" class="svg_base" width="33.2" height="199.5"/>
+	<rect x="355.8" y="206.1" class="svg_base" width="33.2" height="199.5"/>
+	<path class="svg_accent" d="M56.5,106.4v99.7h398.9v-99.7H56.5z M422.2,172.9H89.8v-33.2h332.4V172.9z"/>
 </g>
 </svg>

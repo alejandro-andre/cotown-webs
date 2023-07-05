@@ -3,22 +3,13 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
-	.st1{fill:#1B1B1A;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#1B1B1A;}
-	.st3{fill:#BDBDBD;}
-	.st4{fill:url(#SVGID_1_);}
-	.st5{fill:#FF5166;}
-	.st6{fill:#C5C5C5;}
-	.st7{fill:none;}
-	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#FF5166;}
+	.svg_base{fill:#343434;}
+	.svg_accent{fill:#FF5166;}
 </style>
 <g>
-	<g>
-		<path class="st1" d="M73.2,304.3v166.2h365.7V304.3H73.2z M139.6,437.3h-33.2v-99.7h33.2V437.3z M339.1,337.5v99.7h-33.2v-99.7
-			H339.1z M206.1,437.3h-33.2v-99.7h33.2V437.3z M239.4,337.5h33.2v99.7h-33.2V337.5z M405.6,437.3h-33.2v-99.7h33.2V437.3z"/>
-	</g>
-	<path class="st5" d="M372.4,337.5v99.7h33.2v-99.7H372.4z M106.4,41.5v262.8h33.2V74.7h99.7v229.6h33.2V74.7h99.7v229.6h33.2V41.5
+	<path class="svg_base" d="M73.2,304.3v166.2h365.7V304.3H73.2z M139.6,437.3h-33.2v-99.7h33.2V437.3z M339.1,337.5v99.7h-33.2v-99.7
+		H339.1z M206.1,437.3h-33.2v-99.7h33.2V437.3z M239.4,337.5h33.2v99.7h-33.2V337.5z M405.6,437.3h-33.2v-99.7h33.2V437.3z"/>
+	<path class="svg_accent" d="M372.4,337.5v99.7h33.2v-99.7H372.4z M106.4,41.5v262.8h33.2V74.7h99.7v229.6h33.2V74.7h99.7v229.6h33.2V41.5
 		H106.4z M239.4,337.5v99.7h33.2v-99.7H239.4z M106.4,337.5v99.7h33.2v-99.7H106.4z"/>
 </g>
 </svg>
