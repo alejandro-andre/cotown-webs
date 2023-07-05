@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
 
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -42,121 +43,150 @@
  
 </head>
 
-<section class="dates-selector">
+<body>
 
-	<div class="mobile">
-		<div class="close">
-			<em class="icon-close"></em>
-		</div>
-		<div class="clean-dates">
-			<a href="#" onclick="clear()">Borrar fechas</a>
-		</div>
-	</div>
+<div class="calendar-container">
 
-	<div class="selector-header">
+  <section class="dates-selector">
+	
+    <div class="mobile">
+		  <div class="close">
+  			<em class="icon-close"></em>
+		  </div>
+		  <div class="clean-dates">
+  			<a onclick="empty()">Borrar fechas</a>
+		  </div>
+	  </div>
+	
+    <div class="selector-header">
 
-		<div class="left">
-      <h2>Seleccionar fechas</h2>
-      <p>Estancia mínima: 1 mes</p>
-    </div>     
+      <div class="left">
+		    <h2>Seleccionar fechas</h2>
+		    <p>Estancia mínima: 1 mes</p>
+	    </div>        
 
-		<div class="right">  
-      <div class="calendar">
-				<div class="reservas_form_div">        
-			  	<form id="reservas_form" name="form_multi" method="GET">
+      <div class="right">
+				<div class="calendar">
+					<div class="reservas_form_div">           
+					  <form id="reservas_form" name="form_multi" method="GET">
 						<button class="date-button">
-							<label class="labels">Entrada</label>
-							<input type="text" id="in" class="inputs" name="in" placeholder="..."/>
-						</button>
+						  <label class="labels">Entrada</label>
+						  <input type="text" id="in" class="inputs" name="in"/>
+						</button>   
 						<button class="date-button">
-							<label class="labels">Salida</label>
-							<input type="text" id="out" class="inputs" name="out" placeholder="..."/>
+						  <label class="labels">Salida</label>
+						  <input type="text" id="out" class="inputs" name="out"/>
 						</button>
-					</form>
+					  </form>
+					</div>
+			  </div>
+			</div>
+
+    </div>
+	
+    <div class="selector-main">
+
+      <div class="left">
+
+				<table id="daysleft" summary="a calendar">
+
+					<thead class="mobile">
+						<tr>
+							<th scope="col">L</th>
+							<th scope="col">M</th>
+							<th scope="col">X</th>
+							<th scope="col">J</th>
+							<th scope="col">V</th>
+							<th scope="col">S</th>
+							<th scope="col">D</th>
+						</tr>
+					</thead>
+
+					<caption>
+						<div class="calendar-header">
+							<a class="icon-left" rel="prev" onclick="back()">
+								<em class="icon-corchete-left"></em>
+							</a>
+							<p id="monthleft"></p>
+						</div>
+					</caption>
+		
+					<thead class="desktop">
+						<tr>
+							<th scope="col">L</th>
+							<th scope="col">M</th>
+							<th scope="col">X</th>
+							<th scope="col">J</th>
+							<th scope="col">V</th>
+							<th scope="col">S</th>
+							<th scope="col">D</th>
+						</tr>
+					</thead>
+		
+					<tbody>
+					</tbody>
+		
+				</table>
+
+        <div class="no-dates">
+					<p>¿No encuentras lo que buscas?</p>
+					<a>Avísame cuando tengas disponibilidad</a>
 				</div>
+	
 			</div>
-    </div>
+		   
+			<div class="right">
 
-	</div>
+				<table id="daysright" summary="a calendar">
 
-	<div class="selector-main">
+					<caption>
+						<div class="calendar-header">						
+							<p id="monthright"></p>
+							<a class="icon-right" rel="next" onclick="forward()">
+								<em class="icon-corchete-right"></em>
+							</a>
+						</div>
+					</caption>
+		
+					<thead class="desktop">
+						<tr>
+							<th scope="col">L</th>
+							<th scope="col">M</th>
+							<th scope="col">X</th>
+							<th scope="col">J</th>
+							<th scope="col">V</th>
+							<th scope="col">S</th>
+							<th scope="col">D</th>
+						</tr>
+					</thead>
+		
+					<tbody>
+					</tbody>
 
-		<div class="left">
-			<table id="daysleft" summary="a calendar">
+        </table>
 
-        <caption>
-					<div class="calendar-header">
-						<a href="#" class="icon-left" rel="prev" onclick="back()">
-							<em class="icon-corchete-left"></em>
-						</a>
-						<p id="monthleft"></p>
+				<div class="buttons">
+					<a onclick="empty()">Borrar fechas</a>
+					<button class="btn-secondary">Cerrar</button>
+				</div>
+
+				<div class="sticky-mobile">
+					<div class="left">
+						<p>¿No encuentras lo que buscas?</p>
+						<a>Avísame cuando tengas disponibilidad</a>
 					</div>
-				</caption>
-	
-				<thead>
-					<tr>
-						<th scope="col">L</th>
-						<th scope="col">M</th>
-						<th scope="col">X</th>
-						<th scope="col">J</th>
-						<th scope="col">V</th>
-						<th scope="col">S</th>
-						<th scope="col">D</th>
-					</tr>
-				</thead>
-	
-				<tbody>
-				</tbody>
-	
-			</table>
-
-      <div class="no-dates">
-				<p>¿No encuentras lo que buscas?</p>
-				<a>Avísame cuando tengas disponibilidad</a>
-			</div>
-
-		</div>
-    
-		<div class="right">
-			<table id="daysright" summary="a calendar">
-
-        <caption>
-					<div class="calendar-header">						
-						<p id="monthright"></p>
-						<a href="#" class="icon-right" rel="next" onclick="forward()">
-							<em class="icon-corchete-right"></em>
-						</a>
+					<div class="right">
+						<button class="btn-primary">Aplicar</button>
 					</div>
-				</caption>
+				</div>
 	
-				<thead>
-					<tr>
-						<th scope="col">L</th>
-						<th scope="col">M</th>
-						<th scope="col">X</th>
-						<th scope="col">J</th>
-						<th scope="col">V</th>
-						<th scope="col">S</th>
-						<th scope="col">D</th>
-					</tr>
-				</thead>
-	
-				<tbody>
-				</tbody>
-	
-			</table>
-
-        <div class="buttons">
-				<a href="#" onclick="clear()">Borrar fechas</a>
-				<button class="btn-secondary">Cerrar</button>
-
 			</div>
-
+	
 		</div>
 
-    </div>
+	</section>
 
-</section>
+</div>
 
 <script>
 
@@ -164,18 +194,23 @@ fdesde = undefined;
 fhasta = undefined;
 ftoday = 2023*12+3;
 flag = false;
+idioma = 'es-ES';
 
 const fin = document.getElementById('in');
 const fout =  document.getElementById('out');
 
-function format_date(yy, mm, dd, idioma) {
-  if (idioma = 'es-ES')
-    return dd.toString().padStart(2, '0') + '/' + mm.toString().padStart(2, '0') + '/' + yy;
-  return mm.toString().padStart(2, '0') + '/' + dd.toString().padStart(2, '0') + '/' + yy;
+function internal_date(yy, mm, dd) {
+  return yy + mm.toString().padStart(2, '0') + dd.toString().padStart(2, '0');
+}
+
+function format_date(str) {
+  if (idioma == 'es-ES')
+    return str.slice(6,8) + '/' + str.slice(4,6) + '/' + str.slice(0,4);
+  return str.slice(4,6) + '/' + str.slice(6,8) + '/' + str.slice(0,4);
 }
 
 // Nombre del mes, en el idioma deseado
-function month(mes, idioma) {
+function month(mes) {
   var d = new Date(1965, mes);
   var text = d.toLocaleString(idioma, { month: 'long' });
   return text.charAt(0).toUpperCase() + text.slice(1);
@@ -195,7 +230,7 @@ function pm(cal, yy, mm) {
   // Rango de días
   var ud = new Date(yy, mm + 1, 0).getDate(); // Obtiene el último día del mes
   var pd = new Date(yy, mm, 1).getDay();      // Obtiene el primer día del mes
-  pd = (pd === 0 ? 7 : pd) - 1;             // Ajusta el primer día de la semana a Lunes
+  pd = (pd === 0 ? 7 : pd) - 1;               // Ajusta el primer día de la semana a Lunes
 
   // Crea la cuadrícula del calendario
   var dd = 1;
@@ -207,7 +242,13 @@ function pm(cal, yy, mm) {
         colHTML.textContent = '';
       } else {
         colHTML.textContent = dd;
-        colHTML.id = format_date(yy, mm + 1, dd);
+        colHTML.id = internal_date(yy, mm + 1, dd);
+        if (colHTML.id == fin.dataset.id || colHTML.id == fout.dataset.id) {
+          colHTML.classList.add('selected');
+        }
+        if (colHTML.id > fin.dataset.id && colHTML.id < fout.dataset.id) {
+          colHTML.classList.add('inside-selected');
+        }
         colHTML.addEventListener('click', select)
         dd++;
       }
@@ -241,25 +282,37 @@ function forward() {
 }
 
 // Borrar fechas
-function clear(event) {
-  console.log('clear')
-  event.preventDefault();
+function empty() {
   fin.value = '';
   fout.value = '';
+  fin.dataset.id = undefined;
+  fout.dataset.id = undefined;
+  cal(ftoday);
   return true;
 }
 
 // Selecciona fecha
 function select(event) {
   event.preventDefault();
-  flag = !flag;
-  if (flag)
-    fin.value = event.target.id;
-  else
-    fout.value = event.target.id;
+  date = event.target.id;
+  if (!flag || date < fin.dataset.id) {
+    fin.dataset.id = event.target.id;
+    fout.dataset.id = event.target.id;
+    fin.value = format_date(event.target.id);
+    fout.value = '';
+    flag = true;
+  } else {
+    fout.dataset.id = event.target.id;
+    fout.value = format_date(event.target.id);
+    flag = false;
+  }
+  cal(ftoday);
   return true;
 }
 
 cal(ftoday);
 
 </script>
+
+</body>
+</html>
