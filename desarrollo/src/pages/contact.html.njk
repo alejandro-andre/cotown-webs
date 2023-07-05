@@ -23,7 +23,19 @@ tags: page
 {% block head %}
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<style>.fill{fill:#e0e0e0 !important;}</style>
+<style>
+.office {
+  position: relative;
+  left :-150px;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  z-index:-9999;
+}
+.svg_base {
+  fill:#e0e0e0 !important;
+}
+</style>
 {% endblock %}
 
 <!-- Main -->
@@ -42,10 +54,12 @@ tags: page
       <div class="img-content pure-u-22-24 pure-u-lg-1">
 
         <div class="img-city pure-u-1-8">
+          <div class="office">
           {% svg 
              constants.SERVER + "/wopi/files/Geo/Office/" + o.id +"/Image/contents?access_token=" + token,
              o.Name 
           %}
+          </div>
         </div>
 
         <div class="contact-content pure-u-23-24 pure-u-lg-5-6">
