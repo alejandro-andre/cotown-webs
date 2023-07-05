@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"src/includes/cotown/js": "assets/js"});   // remove
   eleventyConfig.addPassthroughCopy({"src/assets/shared": "assets"});
   eleventyConfig.addPassthroughCopy({"src/assets/cotown": "assets"});
+  eleventyConfig.addPassthroughCopy({"src/icons/cotown": "assets/icons"});
   eleventyConfig.addGlobalData("site", "cotown");
   eleventyConfig.addGlobalData("siteid", 2);
   return {

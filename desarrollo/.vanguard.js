@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"src/includes/vanguard/js": "assets/js"});   // remove
   eleventyConfig.addPassthroughCopy({"src/assets/shared": "assets"});
   eleventyConfig.addPassthroughCopy({"src/assets/vanguard": "assets"});
+  eleventyConfig.addPassthroughCopy({"src/icons/vanguard": "assets/icons"});
   eleventyConfig.addGlobalData("site", "vanguard");
   eleventyConfig.addGlobalData("siteid", 1);
   return {
