@@ -9,7 +9,7 @@
     <div class="pure-u-lg-1-2 pure-u-1 img-container">
       <div class="img">
         {% image
-           constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'] +"/Image/contents?access_token=" + token,
+           constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
            "apartamento-privado", "apartamento-privado", "",
            [500], ""
         %}
@@ -27,7 +27,7 @@
     <div class="pure-u-lg-1-2 pure-u-1 img-container">
       <div class="img last">
         {% image
-           constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'] +"/Image/contents?access_token=" + token,
+           constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'].id +"/Image/contents?access_token=" + token,
            "piso-compartido", "piso-compartido", "",
            [500], ""
         %}
