@@ -26,14 +26,14 @@
 }
 .first .first-contain .first-slider .splide__arrow--prev {
   left: 42%;
-  top:94%;
+  top: 88%;
 }
 .first .first-contain .first-slider .splide__arrow--next {
   right: 42%;
-  top: 94%;
+  top: 88%;
 }
 .first .first-contain .first-slider .splide__pagination {
-  bottom: 5em;
+  bottom: 7em;
 }
 .first .first-contain .first-slider .splide__pagination .splide__pagination__page {
   width: 10px;
@@ -49,7 +49,7 @@
 }
 .first .first-contain .text-first p {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 150%;
 }
 .first .first-contain .flat-services {
@@ -103,12 +103,12 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: stretch;
-  align-items: center;
+  align-items: flex-start;
   padding: 1em 0;
   margin: 0 auto 2em;
 }
 .rooms .all-rooms .card-room .left-carousel {
-  margin-right: 5em;
+  margin-right: 4em;
 }
 .left-carousel #main-carousel .splide__pagination {
   bottom: 4em;
@@ -123,16 +123,16 @@
 }
 .right-data .title-favorite p {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 150%;
 }
 .right-data .title-favorite em {
-  font-size: 28px;
+  font-size: 18px;
   cursor: pointer;
 }
 .right-data .text p {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
 }
 .right-data .option {
@@ -146,17 +146,17 @@
 }
 .right-data .option p.persons {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 150%;
 }
 .right-data .option p.bold {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 150%;
 }
 .right-data .share .title p, .right-data .extra .title p {
   font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 150%;
 }
 .right-data .share .sharing .right, .right-data .extra .extras .right  {
@@ -172,7 +172,7 @@
 }
 .right-data .share .sharing label, .right-data .extra .extras label  {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 150%;
   vertical-align: middle;
   align-items: center;
@@ -180,18 +180,18 @@
 }
 .right-data .share .sharing label input {
   margin: 0 0.4em;
-  font-size: 30px;
+  font-size: 24px;
   width: 30px;
   height: 30px;
 }
 .right-data .share .sharing p, .right-data .extra .extras p {
   font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 150%;
 }
 .right-data .extra .extras label input {
   margin: 0.1em 0.4em 0;
-  font-size: 30px;
+  font-size: 24px;
 }
 .right-data input[type=checkbox], .right-data input[type=checkbox]:focus, .right-data input[type=radio], .right-data input[type=radio]:focus {
 	-moz-appearance:none;
@@ -238,9 +238,10 @@
   cursor: pointer;
   margin-top: 1em;
 }
-.right-data .buttons button {
+.right-data .buttons button.btn-secondary, .right-data .buttons button.btn-primary {
   width: 100%;
   height: 60px;
+  justify-content: center;
 }
 
 .card-room .description.text {
@@ -257,7 +258,7 @@
 }
 .card-room .description.text .expansion p {
 font-weight: 700;
-font-size: 30px;
+font-size: 24px;
 line-height: 150%;
 margin-bottom: 0.5em;
 }
@@ -300,7 +301,7 @@ margin-bottom: 0.5em;
 }
 .last .left .text p {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 150%;
   margin: 0;
 }
@@ -377,17 +378,83 @@ margin-bottom: 0.5em;
 }
 .last-services .servicios-container .services-cards .card p.bold {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 32px;
 }
 .last-services .servicios-container .services-cards .card p.text {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   padding: 0 2rem;
 }
 
 
+/* XL DESKTOP */
+@media only screen and (min-width: 1600px) {
+  .first .first-contain .first-slider .splide__pagination {
+    bottom: 6em;
+  }
+  .first .first-contain .first-slider .splide__arrow--prev {
+    left: 42%;
+    top: 93%;
+  }
+  .first .first-contain .first-slider .splide__arrow--next {
+    right: 42%;
+    top: 93%;
+  }
+  .first .first-contain .text-first p {
+    font-size: 22px;
+  }
+  .right-data .title-favorite p {
+    font-size: 30px;
+  }
+  .right-data .title-favorite em {
+    font-size: 28px;
+  }
+  .right-data .text p {
+    font-size: 16px;
+  } 
+  .right-data .option p.persons {
+    font-size: 22px;
+  }
+  .right-data .option p.bold {
+    font-size: 30px;
+  }
+  .right-data .share .title p, .right-data .extra .title p {
+    font-size: 22px;
+  }
+  .right-data .share .sharing label, .right-data .extra .extras label  {
+    font-size: 22px;
+  }
+  .right-data .share .sharing label input {
+    font-size: 30px;
+  }
+  .right-data .share .sharing p, .right-data .extra .extras p {
+    font-size: 22px;
+  }
+  .right-data .extra .extras label input {
+    font-size: 30px;
+  }
+  .card-room .description.text .expansion p {
+    font-size: 30px;
+  }
+  .last .left .text p {
+    font-size: 22px;
+  }
+  .last-services .servicios-container .services-cards .card p.bold {
+    font-size: 30px;
+  }
+  .last-services .servicios-container .services-cards .card p.text {
+    font-size: 16px;
+  }
+}
 
+/* DESKTOP SMALL */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .first .first-contain .first-slider .splide__pagination {
+    bottom: 7em;
+  }
+  
+}
 
 /* RESPONSIVE */
 

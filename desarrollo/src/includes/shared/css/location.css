@@ -12,7 +12,7 @@ main .location .container-main .first-contain {
 main .location .container-main .first-contain h1 {
     width: 100%;
     text-align: center;
-    font-size: 170px;
+    font-size: 120px;
     line-height: 1em;
     padding: 0.2em 0 0;
 }
@@ -20,6 +20,14 @@ main .location .container-main .first-contain .video-loc {
     width: 100%;
     position: relative;
     min-height: fit-content;
+}
+main .location .container-main .first-contain .video-loc .video .img {
+    width: 100%;
+    object-fit: cover;
+}
+main .location .container-main .first-contain .video-loc .video .img img {
+    width: 100%;
+    object-fit: cover;
 }
 main .location .container-main .first-contain .video-loc .description {
     width: 50%;
@@ -37,7 +45,7 @@ main .location .container-main .first-contain .video-loc .description .text {
     margin: 0;   
 }
 main .location .container-main .first-contain .video-loc .description p {
-    font-size: 30px;
+    font-size: 24px;
     line-height: 150%;
     font-weight: 500;
     margin: 0;
@@ -149,7 +157,7 @@ a {
     padding: 0;
 }
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type img {
-    width: 46px;
+    width: 40px;
 }
 .room-type h4, .room-type p {
     display: flex;
@@ -161,14 +169,14 @@ a {
     max-width: 80%;
 }
 .room-type h4 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
 }
 h4 {
     text-transform: uppercase;
 }
 .room-type p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 26px;
 }
@@ -182,14 +190,14 @@ h4 {
 }
 .room-type .text-green p {    
     font-weight: 300;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 16px;
     color: var(--primary-dark);
     letter-spacing: 0.125em;
 }
 button.green-button.btn-secondary {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 150%;
     padding: 6px 16px;
 }
@@ -348,18 +356,89 @@ section.necesities .grid .necesidad .img svg {
 }
 section.necesities .grid .necesidad .p-title p {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 150%;
     margin: 0 0 1em;
 }
 
 section.necesities .grid .necesidad .p-text p {
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 150%;
     margin: 0;
 }
+
+/* XL DESKTOP */
+@media only screen and (min-width: 1600px) {
+    main .container-main .first-contain .title-big.home p {
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 500;
+        margin: 0 0 0.5em;
+        text-align: left;
+    }
+    .first-contact h1 {       
+        font-size: 120px;
+    }
+    .contact-main h2 {        
+        font-size: 64px;
+    }
+    .contact-main .img-content .contact-content .text-location h3 {
+        font-size: 40px;
+    }
+    .contact-main .img-content .contact-content .text-location p {        
+        font-size: 30px;
+    }
+   
+    .contact-main .img-content .contact-content .text-location p span a {       
+        font-size: 30px;
+    }
+}
+
+
+
+/* XL DESKTOP */
+@media only screen and (min-width: 1600px) {
+    main .location .container-main .first-contain h1 {        
+        font-size: 170px;
+    }
+    main .location .container-main .first-contain .video-loc .description p {
+        font-size: 30px;       
+    }
+    section.necesities .grid .necesidad .p-title p {
+        font-size: 30px;
+    }
+    section.necesities .grid .necesidad .p-text p {        
+        font-size: 22px;
+    }
+    .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type img {
+        width: 46px;
+    }
+    .room-type h4 {
+        font-size: 20px;       
+    }
+    .room-type p {
+        font-size: 16px;        
+    }    
+    .room-type .text-green p {    
+        font-size: 13px;
+    }
+    button.green-button.btn-secondary {
+        font-size: 14px;
+    }
+}
+
 @media only screen and (min-width: 1024px) and (max-width: 1400px){
+   
+    main .location .container-main .first-contain h1 {        
+        font-size: 76px;
+    }
+    main .location .container-main .first-contain .video-loc .description p {
+        font-size: 20px;       
+    }
+    .pisos-slider .h2-container h2 {
+        font-size: 46px;
+    }
     section.necesities {
         padding: 0 2em;
     }
@@ -369,11 +448,18 @@ section.necesities .grid .necesidad .p-text p {
     }
     section.necesities .contain .title h2 {
         width: 86%;
-        padding: 0;
+        padding: 0;   
+        font-size: 46px;
     }
+    section.necesities .contain .text p {
+        font-size: 18px;
+    }
+    
     .carousel .carousel-main-list .splide__slide h3 {
         bottom: 1%;
+        font-size: 46px;
     }
+    
 }
 
 @media only screen and (min-width: 1024px) { 
