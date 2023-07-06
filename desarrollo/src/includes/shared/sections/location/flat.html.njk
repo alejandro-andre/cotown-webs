@@ -164,8 +164,10 @@
 
 </section>
 
+<!-- Sliders -->
 {% block footer %}
-<script>
+{% set script %}
+// Slider
 new Splide('#sliderMini', {
    type: 'loop',
    gap: '2em',
@@ -174,5 +176,5 @@ new Splide('#sliderMini', {
       1400: { perPage: 3 },
     },
 }).mount();
-</script>
+{% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

@@ -84,8 +84,9 @@ tags: page
 </main>
 
 {% block footer %}
-{% set script %}{% include "shared/js/mark.min.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
-<script>
+{% set script %}
+{% include "shared/js/mark.min.js" %}
+// Search
 function buscar() {
 
   // Término buscado
@@ -113,5 +114,5 @@ function buscar() {
     }); 
   }
 }
-</script>
+{% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

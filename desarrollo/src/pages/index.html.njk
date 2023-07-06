@@ -58,7 +58,8 @@ tags: page
 </main>
 
 {% block footer %}
-<script>
+{% set script %}
+// Sliders
 new Splide('.splide-partners', {
   type: 'loop',
   fixedWidth: '240px',
@@ -101,5 +102,5 @@ new Splide(".splide-opinions", {
     768: { padding: 0 },
   },
 }).mount();  
-</script>
+{% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

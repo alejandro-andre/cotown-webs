@@ -128,14 +128,14 @@ tags: page
 </main>
 
 {% block footer %}
-{% set script %}{% include "shared/js/map.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
-<script>
-  var mp, lt, ln;
-  {% for o in offices-%}
-  lt = {{o.Lat_lon.slice(1,-1).split(',')[0]}};
-  ln = {{o.Lat_lon.slice(1,-1).split(',')[1]}};
-  mp = createMap("map-{{o.id}}", lt, ln, 13);
-  putMarker(mp, lt, ln);
-  {%-endfor %}
-</script>
+{% set script %}
+{% include "shared/js/map.js" %}
+var mp, lt, ln;
+{% for o in offices-%}
+lt = {{o.Lat_lon.slice(1,-1).split(',')[0]}};
+ln = {{o.Lat_lon.slice(1,-1).split(',')[1]}};
+mp = createMap("map-{{o.id}}", lt, ln, 13);
+putMarker(mp, lt, ln);
+{%-endfor %}
+{% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

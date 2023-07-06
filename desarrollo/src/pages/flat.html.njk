@@ -49,14 +49,16 @@ tags: page
 </main>
 
 {% block footer %}
-<script>
+{% set script %}
+// Sliders
 new Splide( '#image-carousel', {
   type  : 'fade',
   rewind: true,
   perPage: 1,
   pagination: true, 
   cover: true,
-  }).mount();
+}).mount();
+
 new Splide("#splideServices", {
   type: 'loop',
   autoHeight: true,
@@ -71,63 +73,59 @@ new Splide("#splideServices", {
   },
 }).mount();  
 
-document.addEventListener( 'DOMContentLoaded', function () {
-  var main = new Splide( '#main-carousel', {
-    type        : 'fade',
-    rewind      : true,
-    pagination  : true,
-    arrows      : true,
-    breakpoints : {
-      1024: {
-        autoplay: true,
-        arrows: false,
-        pagination  : false,
-      },
+var main = new Splide( '#main-carousel', {
+  type        : 'fade',
+  rewind      : true,
+  pagination  : true,
+  arrows      : true,
+  breakpoints : {
+    1024: {
+      autoplay: true,
+      arrows: false,
+      pagination  : false,
     },
-  } );
+  },
+});
 
-  var thumbnails = new Splide( '#thumbnail-carousel', {
-    fixedWidth  : 240,
-    fixedHeight : 180,
-    rewind      : true,
-    pagination  : false,
-    arrows      : false,
-    isNavigation: true,
-  } );
+var thumbnails = new Splide('#thumbnail-carousel', {
+  fixedWidth  : 240,
+  fixedHeight : 180,
+  rewind      : true,
+  pagination  : false,
+  arrows      : false,
+  isNavigation: true,
+});
 
-  main.sync( thumbnails );
-  main.mount();
-  thumbnails.mount();
-} );
+main.sync(thumbnails);
+main.mount();
+thumbnails.mount();
 
-document.addEventListener( 'DOMContentLoaded', function () {
-  var main = new Splide( '#main-gallery', {
-    type        : 'fade',
-    rewind      : true,
-    pagination  : true,
-    arrows      : true,
-    breakpoints : {
-      1024: {
-        autoplay: true,
-        arrows: false,
-        pagination  : false,
-      },
+var main = new Splide('#main-gallery', {
+  type        : 'fade',
+  rewind      : true,
+  pagination  : true,
+  arrows      : true,
+  breakpoints : {
+    1024: {
+      autoplay: true,
+      arrows: false,
+      pagination  : false,
     },
-  } );
+  },
+});
 
-  var thumbnails = new Splide( '#thumbnail-gallery', {
-    fixedWidth  : 296,
-    fixedHeight : 212,
-    rewind      : true,
-    pagination  : false,
-    arrows      : false,
-    isNavigation: true,
-    gap         : 10,
-  } );
+var thumbnails = new Splide('#thumbnail-gallery', {
+  fixedWidth  : 296,
+  fixedHeight : 212,
+  rewind      : true,
+  pagination  : false,
+  arrows      : false,
+  isNavigation: true,
+  gap         : 10,
+});
 
-  main.sync( thumbnails );
-  main.mount();
-  thumbnails.mount();
-} );
-</script>
+main.sync( thumbnails );
+main.mount();
+thumbnails.mount();
+{% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

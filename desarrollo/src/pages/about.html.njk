@@ -165,18 +165,19 @@ tags: page
 </main>
 
 {% block footer %}
-<script>
-  new Splide('.splide-banner', {
-    type: 'loop',
-    autoWidth: true,
-    focus: 0,
-    perMove: 1,
-    drag: 'free',
-    arrows: false,
-    pagination: false,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    autoScroll: { speed: 1 }
-  }).mount( window.splide.Extensions );
-</script>
+{% set script %}
+// Slider
+new Splide('.splide-banner', {
+  type: 'loop',
+  autoWidth: true,
+  focus: 0,
+  perMove: 1,
+  drag: 'free',
+  arrows: false,
+  pagination: false,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  autoScroll: { speed: 1 }
+}).mount( window.splide.Extensions );
+{% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

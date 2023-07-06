@@ -84,10 +84,11 @@
 </main>
 
 {% block footer %}
-<script>
+{% set script %}
+// Go tag page
 function goTag(event) {
   const select = document.getElementById("category");
   document.location.href="{{langs[L].folder}}/blog/" + select.value + ".html"
 }
-</script>
+{% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

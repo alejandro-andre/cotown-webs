@@ -38,7 +38,8 @@ tags: page
 </main>
 
 {% block footer %}
-<script>
+{% set script %}
+// Slider
 new Splide(".splide-services", {
   type: 'loop',
   autoHeight: true,
@@ -52,5 +53,5 @@ new Splide(".splide-services", {
     768: { perPage: 1, padding: 0 },
   },
 }).mount();  
-</script>
+{% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
