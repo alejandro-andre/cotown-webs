@@ -8,10 +8,11 @@ module.exports = async (config) => {
     ) {
       id
       Code
+      Image { type }
     }
   }`;
   const data = await gql(QUERY, config, 'images');
   const json = {};
-  data.data.forEach(o => { json[o.Code] = o.id });
+  data.data.forEach(o => { json[o.Code] = { 'id':o.id, 'type':o.Image.type } });
   return(json); 
 };
