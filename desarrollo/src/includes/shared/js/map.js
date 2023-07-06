@@ -26,14 +26,14 @@ function putMarker(map, lat, lon, popup) {
   // Custom icon
   var LeafIcon = L.Icon.extend({
     options: {
-      iconSize:     [38, 44],
-      iconAnchor:   [17, 44],
+      iconSize:     [48, 55],
+      iconAnchor:   [24, 55],
       popupAnchor:  [2, -50]
     }
   });
 
   // Crea el marcador
-  var icon = new LeafIcon({ iconUrl: '/assets/img/marker.png' })
+  var icon = new LeafIcon({ iconUrl: '/assets/img/icono__otros_ubicacion_mapa.svg' })
   var marker = L.marker([lat, lon], {icon: icon}).addTo(map);
   if (popup) {
     marker.bindPopup(popup); 
