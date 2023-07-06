@@ -1,5 +1,5 @@
 { 
-    "folder": "",
+    "folder": "/es",
     "locale": "es_ES",
     "pages": {
         "index":         { "url": "index",                "title": "Inicio",                 "description": "" },
