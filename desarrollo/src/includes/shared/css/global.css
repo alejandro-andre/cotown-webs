@@ -6,20 +6,40 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     font-weight: 300; 
 }
-h1 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 120px; font-weight: 400; }
-h2 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 78px; font-weight: 400; }
-h3 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 1.9rem; line-height: 1.3; }
-h4 { font-size: 1.5rem; line-height: 1.3; }
-h5 { font-size: 1.2rem; line-height: 1.3; }
-h6 { font-size: 1rem; line-height: 1.2; }
-p, input, label, a {font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;font-size: 14px; }
-a { text-decoration: none; }
+
 button.btn-primary a {
     color: var(--primary);
 }
 mark {
     background-color: var(--primary-underline)!important;
 }
+
+/* RESPONSIVE FONTS */
+
+@media only screen and (min-width: 1600px) {
+    h1 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 120px; font-weight: 400; }
+    h2 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 78px; font-weight: 400; }
+    h3 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 50px; line-height: 1.3; }
+    h4 { font-size: 36px; line-height: 1.3; }
+    h5 { font-size: 1.2rem; line-height: 1.3; }
+    h6 { font-size: 1rem; line-height: 1.2; }
+    p, input, label, a {font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;font-size: 14px; }
+    a { text-decoration: none; }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1599px)  {
+    h1 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 78px; font-weight: 400; }
+    h2 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 60px; font-weight: 400; }
+    h3 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 36px; line-height: 1.3; }
+    h4 { font-size: 20px; line-height: 1.3; }
+    h5 { font-size: 1.2rem; line-height: 1.3; }
+    h6 { font-size: 1rem; line-height: 1.2; }
+    p, input, label, a {font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;font-size: 14px; }
+    a { text-decoration: none; }
+}
+
+
+
+
 
 /* BOTONES
 -------------------------------- */
@@ -600,7 +620,7 @@ main .container-main .first-contain .title-big .h2-big {
 main .container-main .first-contain .title-big .h2-big h1 {
     width: 100%;
     font-weight: 400;
-    font-size: 120px;
+    /* font-size: 120px; */
     line-height: 95%;
 }
 main .container-main .first-contain .title-big p {
@@ -610,13 +630,14 @@ main .container-main .first-contain .title-big p {
     margin-bottom: 0.2em;
     text-align: center;
 }
-main .container-main .first-contain .title-big.home p {
-    font-size: 30px;
+
+/* main .container-main .first-contain .title-big.home p {
+    /* font-size: 30px; */
     line-height: 36px;
     font-weight: 500;
     margin: 0 0 0.5em;
     text-align: left;
-}
+} */
 main .container-main .first-contain .title-big p span.bold {
     font-weight: 700;
 }
@@ -865,13 +886,13 @@ main .container-main section.banner h2 {
     padding: 0.2em 0.8em 0;
     margin-bottom: 0;
     font-weight: 400;
-    font-size: 120px;
+    font-size: 76px;
     line-height: 95%;
 }
 .contact-main h2 {
     padding: 1em 1.5em 0;
     font-weight: 400;
-    font-size: 64px;
+    font-size: 46px;
     line-height: 100%;
 }
 
@@ -893,12 +914,12 @@ main .container-main section.banner h2 {
 }
 .contact-main .img-content .contact-content .text-location h3 {
     font-weight: 800;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 140%;
 }
 .contact-main .img-content .contact-content .text-location p {
     font-weight: 500;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 130%;
 }
 .contact-main .img-content .contact-content .text-location p em::before {
@@ -907,7 +928,7 @@ main .container-main section.banner h2 {
 .contact-main .img-content .contact-content .text-location p span a {
     text-decoration: 1px underline;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 130%;
     color: var(--black);
 }
@@ -1223,6 +1244,32 @@ button.date-button input.inputs {
 /* RESPONSIVE 
 -------------------------------- */
 
+/* XL DESKTOP */
+@media only screen and (min-width: 1600px) {
+    main .container-main .first-contain .title-big.home p {
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 500;
+        margin: 0 0 0.5em;
+        text-align: left;
+    }
+    .first-contact h1 {       
+        font-size: 120px;
+    }
+    .contact-main h2 {        
+        font-size: 64px;
+    }
+    .contact-main .img-content .contact-content .text-location h3 {
+        font-size: 40px;
+    }
+    .contact-main .img-content .contact-content .text-location p {        
+        font-size: 30px;
+    }
+   
+    .contact-main .img-content .contact-content .text-location p span a {       
+        font-size: 30px;
+    }
+}
 /* DESKTOP */
 @media only screen and (min-width: 1280px) {
 .container-header.first .turquoise-line {
@@ -1352,7 +1399,7 @@ button.date-button input.inputs {
         font-size: 18px;
     }
 
-/* __________________________ FOOTER DESKTOP SMALL ___________________________*/
+    /* __________________________ FOOTER DESKTOP SMALL ___________________________*/
     footer section.container-footer {
         padding: 3em 1em;    
     }
@@ -2050,3 +2097,6 @@ button.date-button input.inputs {
         width: 80%;
     }
 }
+
+
+

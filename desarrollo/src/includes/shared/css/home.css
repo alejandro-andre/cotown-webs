@@ -1,9 +1,9 @@
 /* GENERAL 
 -------------------------------- */
 
-.title {
-    padding: 1em 100px 0;
-    font-size: 78px;
+h2.title {
+    /* padding: 1em 100px 0;
+    font-size: 78px; */
     text-align: center;
 }
 p.subtitle {
@@ -39,11 +39,11 @@ p.subtitle {
     z-index: 1;
     order: 1;
 }
-.main-header .left .text-container h1 {
+/* .main-header .left .text-container h1 {
     font-size: 78px;
     line-height:80px;
     margin: 0 0 0.5em;
-}
+} */
 .main-header .left .button-search {
     margin-top: 1.5em;
 }
@@ -145,16 +145,16 @@ main .container-main .first-contain .text p {
     width: 100%;
     overflow: hidden;
 }
-.locations .title {
+/* .locations .title {
     text-align: left;
-}
+} */
 .locations h3 {
     position: absolute!important;
     bottom: 0;
     left: 0.3em;
     color: var(--primary-text);
     font-weight: 400;
-    font-size: 78px;
+    /* font-size: 78px; */
     margin: 0;
     line-height: 1;
 }
@@ -206,19 +206,7 @@ main .container-main .first-contain .text p {
     filter: contrast(1.2);
     transition: transform .25s ease-in-out;    
 }
-.pisos .container .img-container .img-title1,
-.pisos .container .img-container .img-title2 {
-    color: var(--primary-text);
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 78px;
-    position: absolute;
-    margin: 0 1em 0 0.3em;  
-    line-height: 78px;
-    text-align: left;
-    width: fit-content;   
-    cursor: pointer;
-}
+
 .pisos .container .img-container span {
     z-index: 20;
     position: relative;
@@ -226,7 +214,7 @@ main .container-main .first-contain .text p {
     text-shadow: 0px 7px 14px rgba(0, 0, 0, 0.15);
 }
 .pisos .container .img-container .img-title1 span {
-    top: -180px;
+    top: -178px;
 }
 .pisos .container .img-container .img-title2 span {
     top: -110px;
@@ -239,10 +227,10 @@ main .container-main .first-contain .text p {
     height: 0.8rem;
 }
 .pisos .container .img-container .img-title1 .subrayado {
-    bottom: 188px;
+    bottom: 178px;
 }
 .pisos .container .img-container .img-title2 .subrayado {
-    bottom: 118px;
+    bottom: 108px;
 }
 .pisos .container .img-container:hover > .img-title1 .subrayado, 
 .pisos .container .img-container:hover > .img-title2 .subrayado {    
@@ -301,8 +289,8 @@ main .container-main .first-contain .text p {
 }
 .servicios .servicios-container .services-cards .card p.bold {
     font-weight: 700;
-    font-size: 30px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 26px;
 }
 .servicios .servicios-container .services-cards .card p.text {
     font-weight: 500;
@@ -498,6 +486,9 @@ main .container-main .first-contain .text p {
 .splide-opinions.splide {
     margin-top: 3em;
 }
+.opinions ul li.splide__slide {
+    min-height: 260px;
+}
 .opinions .slide {
     height: fit-content;
     padding: 2em 1.5em 2em;
@@ -507,7 +498,7 @@ main .container-main .first-contain .text p {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 0.6em;
+    gap: 0.6em;    
 }
 .opinions .slide .avatar img {
     border-radius: 50%;
@@ -567,10 +558,50 @@ main .container-main .first-contain .text p {
     line-height: 26px;
     margin: 0px;
 }
+    .pisos .container .img-container .img-title1,
+    .pisos .container .img-container .img-title2 {
+        color: var(--primary-text);
+        font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+        font-weight: 400;        
+        position: absolute;
+        margin: 0 1em 0 0.3em;
+        font-size: 40px;    
+        line-height: 46px;
+        text-align: left;
+        width: fit-content;   
+        cursor: pointer;
+    }
 
 /* RESPONSIVE
 -------------------------------- */
+@media only screen and (min-width: 1600px) {
+    .pisos .container .img-container .img-title1,
+    .pisos .container .img-container .img-title2 {       
+        font-size: 78px;       
+    }
+    .servicios .servicios-container .services-cards .card p.bold {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 32px;
+    } 
+   
+    .pisos .container .img-container .img-title1 .subrayado {
+        bottom: 174px;
+    }
+    .pisos .container .img-container .img-title2 .subrayado {
+        bottom: 104px;
+    }
+} 
 
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+    p.subtitle {
+        font-size: 22px;
+    }
+    .pisos .container .img-container .img-title1,
+    .pisos .container .img-container .img-title2 {       
+        font-size: 60px;       
+    }
+} 
 @media only screen and (min-width: 1024px) {
     .main-header .video .text-container.mobile {
         display: none;
@@ -578,24 +609,18 @@ main .container-main .first-contain .text p {
     .main-header .left .button-search button.search.mobile {
         display: none;
     }
+    
 }
-
-@media only screen and (min-width: 1024px) and (max-width: 1400px) {
-    .main-header .left .text-container h1 {
-        font-size: 70px;
-    }
-}
-
 
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
 
 /* GENERAL */
-.title {
+h2.title {
     padding: 1em 40px 0;
-    font-size: 48px;
+    /* font-size: 48px; */
     text-align: left;
-}
+} 
 p.subtitle {
     padding: 0 40px 0;
     font-size: 18px;
@@ -694,14 +719,25 @@ main .container-main .first-contain .title-big.home p {
 
 
 /* LOCALIZACIONES */
-.locations h3 {
-    font-size: 50px;
-}
+
 
 /* PISOS */
 .pisos .container .img-container .img {
     margin-bottom: 8px;
 }
+.pisos .container .img-container .img-title1 span {
+    top: -134px;
+}
+.pisos .container .img-container .img-title2 span {
+    top: -80px;
+}
+.pisos .container .img-container .img-title1 .subrayado {
+    bottom: 140px;
+}
+.pisos .container .img-container .img-title2 .subrayado {
+    bottom: 86px;
+}
+
 
 .cotownity .container-cotownity {
     padding-left: 0;

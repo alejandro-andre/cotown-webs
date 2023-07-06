@@ -94,7 +94,14 @@
 
 /* RESPONSIVE
 -------------------------------- */
-
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+  .locations .container-main .all-locations .location .text-content h2 {  
+    font-size: 40px;
+  }
+  .locations .container-main .all-locations .location .text-content p {   
+    font-size: 18px;
+  }
+}
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
   .locations .container-main .all-locations {
@@ -127,11 +134,6 @@
   font-size: 14px;
   line-height: 150%;
   }
-  
-
-
-
-
 }
 
 /* MOVIL*/
