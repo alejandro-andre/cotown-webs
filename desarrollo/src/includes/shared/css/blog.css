@@ -216,16 +216,9 @@ main.post .container-main .post-content h1 {
 }
 main.post .container-main .post-content img {
   width: 100%;
+  margin-bottom: 2em;
 }
-main.post .container-main .post-content .text .date-post {
-  width: fit-content;
-}
-main.post .container-main .post-content .text .date-post p {  
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 0 1em;
-  margin: 0;
-}
+
 main.post .container-main .post-content .text .text-content h2, main.post .container-main .post-content .text .text-content h3 {
   font-size: 64px;
   font-weight: 400;
@@ -311,6 +304,12 @@ main.post .container-main .like-content .like .redes a em {
 
 
 /* RESPONSIVE */
+
+@media only screen and (min-width: 1280px) and (max-width: 1599px) {
+  main .container-main .first-contain .title-big .h2-big h1 {
+    font-size: 76px;    
+  }
+}
 @media only screen and (max-width: 1023.9px) {
   .container-main {
     display: flex;
@@ -427,18 +426,7 @@ main.post .container-main .like-content .like .redes a em {
   main.post .container-main .like-content .like .redes a em {
       font-size: 24px;
   }
-
-
-
-
-
 }
-
-
-
-
-
-
 @media only screen and (max-width: 767.9px) {
   .post .data-post {
     top: 52%;

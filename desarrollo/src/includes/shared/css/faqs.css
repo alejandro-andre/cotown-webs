@@ -107,6 +107,21 @@ input[type="search"]::-webkit-search-results-decoration {
   cursor: pointer;
 }
 
+/* RESPONSIVE 
+-------------------------------- */
+@media only screen and (min-width: 1280px) and (max-width: 1599px) {
+  .faqs-container h1 {
+    font-size: 46px;
+  }
+  .faqs-container .description.text .expansion h2 {    
+    font-size: 26px;   
+  }
+  .faqs-container .description.text .expansion .content p, .faqs-container .description.text .expansion .content p a, .faqs-container .description.text .expansion .content ul li {
+    font-size: 18px;
+  }
+}
+
+
 
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {  
