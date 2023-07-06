@@ -10,11 +10,17 @@ module.exports = async (config) => {
       Name
       Address
       Lat_lon
+      Description
+      Description_en
       District: DistrictViaDistrict_id {
         Name
         Location: LocationViaLocation_id {
+          id
           Name
         }
+      }
+      Photos: Media_buildingListViaBuilding_id {
+        id
       }
     }
   }`;

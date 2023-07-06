@@ -6,18 +6,18 @@
 
     <button class="button-map-mobile pure-u-5-24">
       <img src="/assets/icons/map.png">
-      <p>Ver mapa</p>
+      <p>{% literal texts, 'location-ver-mapa', L %}</p>
     </button>
 
     <div class="calendar pure-u-1-1">
       <div class="reservas_form_div pure-u-1 pure-u-lg-1-2">           
       <form id="reservas_form" name="form_multi" method="GET">
         <button class="date-button">
-          <label class="labels">Entrada</label>
+          <label class="labels">{% literal texts, 'dates-entrada', L %}</label>
           <input type="text" id="in" onfocus="(this.type='date')" class="inputs" name="in" placeholder="02/06/2023"/>
         </button>   
         <button class="date-button">
-          <label class="labels">Salida</label>
+          <label class="labels">{% literal texts, 'dates-salida', L %}</label>
           <input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="02/09/2023"/>
         </button>
       </form>
@@ -27,8 +27,9 @@
   </div>       
 
   <div class="carousel desktop">
-  <div class="splide" id="sliderFlats" aria-label="Slider">           
-    <div class="splide__track">
+    <div class="splide" id="sliderFlats" aria-label="Slider">           
+      <div class="splide__track">
+
         <div class="splide__arrows arrows">
           <button type="button" class="arrow-nav splide__arrow splide__arrow--prev"
             type="button"
@@ -43,93 +44,126 @@
             <i class="icon-corchete-right"></i>
           </button>
         </div>  
+
         <ul class="splide__list carousel-main-list">
+
+          {% for b in buildings %}
+          {% if location.id == b.District.Location.id %}
           <li class="splide__slide main-slide">
             <div class="card-contain">
               <div class="card shadow desktop">
-                  <div class="ratio desktop">
-                    <a href="flat.html">
-                      <img src="/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
-                      <h3>NÀPOLES</h3>
-                    </a>
-                  </div>
-                  <div class="card-body d-flex flex-column">
-                      <a href="flat.html">
-                        <div class="flex-grow-1">
-                            <p>La definición de un ciudadano con suerte cobra sentido.</p>
-                        </div>
-                        <div class="types">
-                          <div class="room-type">
-                            <img src="/assets/icons/shared-room.svg">
-                            <h4>HABITACIÓN COMPARTIDA</h4>
-                            <p>Desde XXX€/mes</p>                           
-                          </div>
-                          <div class="room-type">
-                            <img src="/assets/icons/individual-room.svg">
-                            <h4>HABITACIÓN INDIVIDUAL</h4>
-                            <p>Desde XXX€/mes</p>
-                            <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                           
-                          </div>
-                          <div class="room-type">
-                            <img src="/assets/icons/keys.svg">
-                            <h4>APARTAMENTO INDIVIDUAL</h4> 
-                            <button class="btn-secondary green-button">Ver más</button>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- CAROUSEL INTERNO -->
-                      {% include 'shared/sections/location/carousel-interno.njk' %}                   
-                  </div>
+
+                <div class="ratio desktop">
+                  <a href="flat.html">
+                    {% image
+                        constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
+                        b.Name, b.Name, "card-img-top",
+                        [800], ""
+                    %}
+                    <h3>{{b.Name}}</h3>
+                  </a>
+                </div>
+
+                <div class="card-body d-flex flex-column">
+                  <a href="flat.html">
+
+                    <div class="flex-grow-1">
+                        <p>{{ b | translate ('Description', L) | safe }}</p>
+                    </div>
+
+                    <div class="types">
+
+                      <!-- Habitacion-compartida -->
+                      <div class="room-type">
+                        <img src="/assets/img/icono__hab_habitacion_compartida.svg">
+                        <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
+                        <p>{% literal texts, 'price-desde', L %} XXX€/{% literal texts, 'price-mes', L %}</p>                           
+                      </div>
+
+                      <!-- Habitacion-individual -->
+                      <div class="room-type">
+                        <img src="/assets/img/icono__hab_habitacion_individual.svg">
+                        <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
+                        <p>{% literal texts, 'price-desde', L %} XXX€/{% literal texts, 'price-mes', L %}</p>
+                        <!--
+                        <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>                           
+                        -->
+                      </div>
+
+                      <!-- Apartamento-privado -->
+                      <div class="room-type">
+                        <img src="/assets/img/icono__hab_apartamento_privado.svg">
+                        <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
+                        <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                      </div>
+
+                    </div>
+
+                  </a>
+                  {% include 'shared/sections/location/carousel-interno.njk' %}                   
+                </div>
+
               </div>
             </div>
           </li>
+          {% endif %}
+          {% endfor %}
+
         </ul>          
+
       </div>
     </div>        
   </div>
 
   <div class="pisos mobile pure-u-1">
     <div class="piso-contain pure-u-1">
+      {% for b in buildings %}
       <div class="piso-main pure-u-1">
+
         <div class="img pure-u-1">
-          <img src="/assets/img/pisos/napoles-slider.png" class="card-img-top" loading="lazy" alt="napoles">
+          {% image
+              constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
+              b.Name, b.Name, "card-img-top",
+              [800], ""
+          %}
         </div>
+
         <div class="piso pure-u-1">
-          <h3>NÀPOLES</h3>               
+          <h3>{{b.Name}}</h3>               
           <div class="options pure-u-1">                
             <div class="type pure-u-22-24">
               <div class="img-container pure-u-2-24">
-                <img src="/assets/icons/individual-room.svg">
+                <img src="/assets/img/icono__hab_habitacion_individual.svg">
               </div>
               <div class="h4-container pure-u-12-24">
-                <h4>HABITACIÓN INDIVIDUAL</h4>
+                <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
               </div>
               <div class="p-container pure-u-8-24">
-                <span>Desde<span>
-                <p>XXX€/mes</p>
+                <span>{% literal texts, 'price-desde', L %}<span>
+                <p>XXX€/{% literal texts, 'price-mes', L %}</p>
               </div>
             </div>
             <div class="type pure-u-22-24">
               <div class="img-container pure-u-2-24">
-                <img src="/assets/icons/shared-room.svg">
+                <img src="/assets/img/icono__hab_habitacion_compartida.svg">
               </div>
               <div class="h4-container pure-u-12-24">
-              <h4>HABITACIÓN COMPARTIDA</h4>
+              <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
               </div>
               <div class="p-container pure-u-8-24">
-              <span>Desde<span>
-              <p>XXX€/mes</p>
+              <span>{% literal texts, 'price-desde', L %}<span>
+              <p>XXX€/{% literal texts, 'price-mes', L %}</p>
               </div>                       
             </div>
             <div class="type pure-u-22-24">
               <div class="img-container pure-u-2-24">
-                <img src="/assets/icons/keys.svg">
+                <img src="/assets/img/icono__hab_apartamento_privado.svg">
               </div>
               <div class="h4-container pure-u-12-24">
-              <h4>APARTAMENTO INDIVIDUAL</h4>
+              <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
               </div>
               <div class="button-container pure-u-8-24">
-              <button class="btn-secondary green-button">Ver más</button>
+              <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
               </div>
             </div>
           </div>
@@ -156,10 +190,10 @@
             </li>
           </ul>                
         </div>
+
       </div>
-    </div>
-   
-   
+      {% endfor %}
+    </div>  
   </div>
 
 </section>

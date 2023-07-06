@@ -7,22 +7,34 @@
 
 <!-- Main -->
 <main class="location">
+  
   <section class="location">
     <div class="container-main">
+
+    <!-- First -->
     {% include 'shared/sections/location/first.html.njk' %}
+
+    <!-- Flat -->
     {% include 'shared/sections/location/flat.html.njk' %}
+
     </div>
   </section>
-  <section class="map"><div class="map" id="map"></div></section>
+
+  <!-- Map -->
+  <section class="map">
+    <div class="map" id="map"></div>
+  </section>
+
+  <!-- Services -->
   {% include 'shared/sections/location/services.html.njk' %}
+
 </main>
 
 <!-- Scripts -->
 {% block footer %}
 {% set script %}
-
-// Map
 {% include "shared/js/map.js" %}
+// Map
 var map = createMap("map", 41.3933, 2.1377, 16);
 var markerArray = [];
 {% for b in buildings-%}
