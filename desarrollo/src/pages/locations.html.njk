@@ -1,0 +1,57 @@
+---
+name: locations
+eleventyComputed:
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+layout: shared/layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true  
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<!-- Additional HEAD content -->
+{% block head %}
+<link rel="stylesheet" href="/assets/css/locations.css">
+{% endblock %}
+
+<!-- Main -->
+<main class="locations">
+  <div class="container-main">
+
+    <!-- main -->
+    {% include 'shared/sections/locations/locations.html.njk' %}
+   
+    <!-- services -->
+    {% include 'shared/sections/locations/services.html.njk' %}
+
+  </div>
+</main>
+
+{% block footer %}
+{% set script %}
+// Slider
+new Splide(".splide-services", {
+  type: 'loop',
+  autoHeight: true,
+  focus: 0,
+  perPage: 3,
+  perMove: 1,
+  padding: '10em',
+  gap: '10em',
+  breakpoints: {
+    1024: { perPage: 2 },
+    768: { perPage: 1, padding: 0 },
+  },
+}).mount();  
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

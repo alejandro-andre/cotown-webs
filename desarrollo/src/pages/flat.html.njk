@@ -1,0 +1,141 @@
+---
+name: flat
+eleventyComputed:
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+layout: shared/layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true  
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<!-- Additional HEAD content -->
+{% block head %}
+<link rel="stylesheet" href="/assets/css/flat.css">
+{% endblock %}
+
+<!-- Main -->
+<main class="flat pure-u-1">
+  <div class="container-main pure-u-1">
+
+    <!-- First -->
+    <section class="first pure-u-1">
+    {% include 'shared/sections/flat/first.html.njk' %}   
+    </section>
+
+    <!-- Rooms -->
+    <section class="rooms pure-u-1">
+    {% include 'shared/sections/flat/rooms.html.njk' %}
+    </section>
+
+    <section class="last pure-u-1">  
+      
+      <!-- Last -->
+      <div class="last-zone pure-u-1">
+        {% include 'shared/sections/flat/last.html.njk' %}
+      </div>
+
+      <!-- Map -->
+      <section class="map"><div class="map" id="map">
+      </div></section>
+
+      <!-- Services -->
+      <div class="last-services pure-u-1">
+        {% include 'shared/sections/flat/services.html.njk' %}
+      </div>
+    </section>
+
+  </div>
+</main>
+
+{% block footer %}
+{% set script %}
+// Sliders
+new Splide( '#image-carousel', {
+  type  : 'fade',
+  rewind: true,
+  perPage: 1,
+  pagination: true, 
+  cover: true,
+}).mount();
+
+new Splide("#splideServices", {
+  type: 'loop',
+  autoHeight: true,
+  focus: 0,
+  perPage: 6,
+  perMove: 1,
+  gap: '1em',
+  pagination: false,
+  breakpoints: {
+    1024: { perPage: 4 },
+    768: { perPage: 2, padding: '0.5em' },
+  },
+}).mount();  
+
+var main = new Splide( '#main-carousel', {
+  type        : 'fade',
+  rewind      : true,
+  pagination  : true,
+  arrows      : true,
+  breakpoints : {
+    1024: {
+      autoplay: true,
+      arrows: false,
+      pagination  : false,
+    },
+  },
+});
+
+var thumbnails = new Splide('#thumbnail-carousel', {
+  fixedWidth  : 240,
+  fixedHeight : 180,
+  rewind      : true,
+  pagination  : false,
+  arrows      : false,
+  isNavigation: true,
+});
+
+main.sync(thumbnails);
+main.mount();
+thumbnails.mount();
+
+var main = new Splide('#main-gallery', {
+  type        : 'fade',
+  rewind      : true,
+  pagination  : true,
+  arrows      : true,
+  breakpoints : {
+    1024: {
+      autoplay: true,
+      arrows: false,
+      pagination  : false,
+    },
+  },
+});
+
+var thumbnails = new Splide('#thumbnail-gallery', {
+  fixedWidth  : 296,
+  fixedHeight : 212,
+  rewind      : true,
+  pagination  : false,
+  arrows      : false,
+  isNavigation: true,
+  gap         : 10,
+});
+
+main.sync( thumbnails );
+main.mount();
+thumbnails.mount();
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

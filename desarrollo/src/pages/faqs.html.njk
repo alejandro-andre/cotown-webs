@@ -1,0 +1,118 @@
+---
+name: faqs
+eleventyComputed:
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+layout: shared/layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<!-- Additional HEAD content -->
+{% block head %}
+<link rel="stylesheet" href="/assets/css/faqs.css">
+<style>
+.highlight {
+  background-color: green;
+}
+</style>
+{% endblock %}
+
+<!-- Main -->
+<main class="faqs pure-u-1">
+  <div class="container-main pure-u-1">
+
+    <section class="first-contain pure-u-1">
+      <div class="img-faqs pure-u-1">
+        {% image
+            constants.SERVER + "/wopi/files/Marketing/Media/" + images['faqs'].id +"/Image/contents?access_token=" + token,
+            "FAQs", "FAQs", "img-faqs", [auto], ""
+        %}
+      </div>
+      
+      <div class="title-big">
+        <div class="h2-big">
+          <h1>FAQs</h1>
+        </div>        
+      </div>
+      <div class="search pure-u-22-24">
+        <form>
+          <div class="search-container pure-u-1">
+            <label class="selected-option pure-u-22-24 pure-u-lg-5-12" for="options">
+              <em class="icon-search"></em>
+              <input id="search" type="search" class="sinBorde" placeholder="{{texts['buscar-palabra'][L]}}" onkeyup="buscar()" />
+            </label>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="faqs-container pure-u-22-24 pure-u-lg-5-6">
+      {% for f in faqs %}
+      <h1>{{f | translate('Name', L) }}</h1>
+      {% for q in f.Questions %}
+      <div class="description text pure-u-1">
+        <div class="expansion pure-u-1">
+          <h2>
+          {{q | translate('Question', L)}}
+          </h2>
+          <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
+          <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
+            <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+          </label>
+          <div class="content pure-u-1">
+          {{q | translate('Response', L) | markdown | safe }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% endfor %}
+    </section>
+
+  </div>
+</main>
+
+{% block footer %}
+{% set script %}
+{% include "shared/js/mark.min.js" %}
+// Search
+function buscar() {
+
+  // Término buscado
+  let filter = document.getElementById('search').value.toUpperCase();
+
+  // Colapsa todas las preguntas (¿ocultarlas mejor?)
+  const cbs = document.querySelectorAll('.tab');
+  cbs.forEach((cb) => {
+    cb.checked = false;
+  });
+
+  // Desmarca todo
+  var context = document.querySelector(".faqs-container");
+  var instance = new Mark(context);
+  instance.unmark();
+
+  // Marca y expande las preguntas encontradas
+  if (filter.length > 3) {
+    instance.mark(filter, {
+      "each": function(node){
+        const input = node.closest('.expansion')
+        if (input)
+          input.querySelector('.tab').checked = true;
+      },
+    }); 
+  }
+}
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

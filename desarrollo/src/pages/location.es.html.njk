@@ -1,0 +1,23 @@
+---
+name: location
+eleventyComputed:
+    L: "es"
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{location | translate('Name', 'es') | ascii}}.html"
+      en: "{{langs.en.folder}}/{{location | translate('Name', 'en') | ascii}}.html"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{langs[L].folder}}/{{location | translate('Name', L) | ascii}}.html"
+layout: shared/layouts/base.html
+pagination:
+    data: locations
+    size: 1
+    alias: location
+    addAllPagesToCollections: true  
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+{% include 'shared/sections/location/location.html.njk' %}

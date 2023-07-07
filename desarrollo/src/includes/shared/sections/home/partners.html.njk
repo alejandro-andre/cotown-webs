@@ -1,0 +1,25 @@
+<section class="partners">
+
+  <div class="text-container">
+    <h2 class="title">
+      {% literal texts, 'home-partners-titulo', L %}
+    </h2>
+  </div>
+
+  <div class="splide-partners splide" role="group">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for p in partners %}
+        <li class="img splide__slide">
+          {% image
+            constants.SERVER + "/wopi/files/Marketing/Partner/" + p.id +"/Image/contents?access_token=" + token,
+            p.Name, p.Name|slug, "",
+            [300], ""
+          %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+</section>

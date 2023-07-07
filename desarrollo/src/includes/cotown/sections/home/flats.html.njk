@@ -1,0 +1,47 @@
+<section class="pisos">
+
+  <div class="text-container">
+    <h2 class="title">{% literal texts, 'home-pisazos-elige', L %}</h2>
+  </div>
+
+  <div class="pure-g container">
+
+    <div class="pure-u-lg-1-2 pure-u-1 img-container">
+      <div class="img">
+        {% image
+           constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
+           "apartamento-privado", "apartamento-privado", "",
+           [500], ""
+        %}
+      </div>
+      <div class="img-title1">
+        <span>{% literal texts, 'home-pisazos-apartamento', L %}</span>
+        <div class="subrayado"></div>
+      </div>
+      <div class="img-title2">                   
+        <span>{% literal texts, 'home-pisazos-privado', L %}</span>
+        <div class="subrayado"></div>
+      </div>
+    </div>
+
+    <div class="pure-u-lg-1-2 pure-u-1 img-container">
+      <div class="img last">
+        {% image
+           constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'].id +"/Image/contents?access_token=" + token,
+           "piso-compartido", "piso-compartido", "",
+           [500], ""
+        %}
+      </div>
+      <div class="img-title1">
+        <span>{% literal texts, 'home-pisazos-piso', L %}</span>
+        <div class="subrayado"></div>
+      </div>
+      <div class="img-title2">                   
+        <span>{% literal texts, 'home-pisazos-compartido', L %}</span>
+        <div class="subrayado"></div>
+      </div>
+    </div>
+
+  </div>
+ 
+</section>

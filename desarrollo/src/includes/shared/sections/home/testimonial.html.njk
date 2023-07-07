@@ -1,0 +1,45 @@
+  <section class="opinions">
+
+    <div class="text-container">
+        {% literal texts, 'home-testimonios-titulo', L, true %}
+    </div>
+
+    <div class="carousel splide splide-opinions" role="group">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for t in testimonials %}
+          <li class="splide__slide">
+            <div class="slide">
+              <div class="avatar">
+                {% image
+                  constants.SERVER + "/wopi/files/Marketing/Testimonials/" + t.id +"/Image/contents?access_token=" + token,
+                  t.Name, t.Name|slug, "",
+                  [100], ""
+                %}
+              </div>
+              <div class="opinion">
+                <div class="title-info">
+                  <p class="name bold">{{t.Name}}</p>
+                  <p class="date">{{t.Date}}</p>
+                </div>
+              <h3 class="comillas">“</h3>
+              <ul class="stars">
+                {% for i in range(0, t.Stars) %}
+                <li class="star"><em class="icon-star"></em></li>
+                {% endfor %}
+                {% for i in range(t.Stars, 5) %}
+                <li class="star"><em class="icon-star no-active"></em></li>
+                {% endfor %}
+              </ul>
+              </div>
+              <p class="text">{{t | translate ('Text', L)}}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+
+
+</section>

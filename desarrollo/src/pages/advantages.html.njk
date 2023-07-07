@@ -1,0 +1,267 @@
+---
+name: advantages
+eleventyComputed:
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+layout: shared/layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true  
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<!-- Additional HEAD content -->
+{% block head %}
+<link rel="stylesheet" href="/assets/css/advantages.css">
+{% endblock %}
+
+<!-- Main -->
+<main class="advantages">
+  <div class="container-main">
+
+    <section class="first-contain pure-u-1">
+      <div class="img-right pure-u-1">
+        <img class="img" alt="advantage" src="/assets/img/advantages-logo.svg">
+      </div>
+      <div class="title-big advantages pure-u-22-24">
+        <div class="h2-big pure-u-1 pure-u-lg-5-12 pure-u-xl-7-12">      
+          {% literal texts, 'advantages-titulo', L, true %}
+        </div>
+        <div class="text pure-u-1 pure-u-lg-7-12 pure-u-xl-5-12">
+          {% literal texts, 'advantages-texto', L, true %}
+        </div>
+      </div>    
+    </section>
+
+    <section class="banner">
+      <div class="splide-banner splide" role="group">
+        <div class="splide__track">
+          <ul class="splide__list">       
+            {% for b in banners %}
+            {% if b.Page == 'ventajas' %}
+            {% for p in (b | translate('Text', L)).split('|') %}
+            <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+            {% endfor %}
+            {% for p in (b | translate('Text', L)).split('|') %}
+            <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>    
+    </section>   
+   
+    <section class="container-advantages">
+      <div class="grid">
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid show">
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="promo-contain">
+            <h3 class="promo-title">XX%</h3>
+            <p class="promo-text">Lorem ipsum dolor sit amet consecteur</p>
+          </div>
+        </div>
+      </div>
+      <div class="button-more">
+        <button class="more btn-secondary" click="showMore()">Ver más ventajas</button>
+      </div>
+    </section>
+
+    <section class="form">
+
+      {% literal texts, 'advantages-si-eres-empresa', L, true %}        
+
+      <div class="form-container pure-g">        
+        <div class="campo pure-u-1 pure-u-lg-11-24">
+          <label class="label">{% literal texts, 'form-nombre', L%}</label>                  
+          <input class="input" type="name" id="name" name="name">
+        </div>
+        <div class="campo pure-u-1 pure-u-lg-11-24">
+          <label class="label">{% literal texts, 'form-apellidos', L%}</label>                  
+          <input class="input" type="name" id="name" name="name">
+        </div> 
+        <div class="campo pure-u-1 pure-u-lg-11-24">
+          <label class="label">{% literal texts, 'form-email', L%}</label>                  
+          <input class="input" type="email" id="email" name="email">
+        </div>
+        <div class="campo number pure-u-1 pure-u-lg-11-24">
+            <div class="prefix">
+              <label class="label pure-u-1">{% literal texts, 'form-prefijo', L %}</label>                  
+              <select class="select pure-u-1" type="select" id="code" name="code">
+                <option>+34</option>
+                <option>+34</option>
+                <option>+34</option>
+              </select>
+            </div>
+              <div class="num">
+              <label class="label pure-u-1">{% literal texts, 'form-telefono', L %}</label>                  
+              <input class="input pure-u-1" type="phone" id="phone" name="phone">
+            </div>
+          </div> 
+        <div class="campo pure-u-1 pure-u-lg-11-24">
+          <label class="label">{% literal texts, 'form-empresa', L%}</label>                  
+          <input class="input" type="company" id="company" name="company">
+        </div>
+        <div class="campo pure-u-1 pure-u-lg-11-24">
+          <label class="label">{% literal texts, 'form-empresa', L%}</label>                  
+          <input class="input" type="company" id="company" name="company">
+        </div>
+        <div class="campo coment pure-u-1">
+          <label class="label">{% literal texts, 'form-mensaje', L%}</label>
+          <textarea type="textarea" id="textarea" name="textarea" rows="4" cols="50">
+          </textarea>
+        </div>        
+        <div class="text-ok">
+          <p>{% literal texts, 'advantages-ok', L%}</p>
+        </div>
+
+        <button class="btn-secondary">{% literal texts, 'form-enviar', L%}</button>
+        
+      </div>
+
+    </section>
+
+  </div>
+</main>
+
+{% block footer %}
+{% set script %}
+// Slider
+new Splide('.splide-banner', {
+  type: 'loop',
+  autoWidth: true,
+  focus: 0,
+  perMove: 1,
+  drag: 'free',
+  arrows: false,
+  pagination: false,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  autoScroll: { speed: 1 }
+}).mount( window.splide.Extensions );
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

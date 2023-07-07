@@ -1,0 +1,32 @@
+<section class="necesities">
+  <div class="contain pure-u-1 pure-g">
+
+    <div class="title pure-u-1 pure-u-lg-1-2">
+      <h2>{% literal texts, 'location-servicios-titulo', L %}</h2>
+    </div>
+
+    <div class="text pure-u-1 pure-u-lg-1-2">
+      <p>{% literal texts, 'location-servicios-texto', L %} {{ location | translate ('Name', L)}}.</p>
+    </div>
+
+    <div class="grid pure-u-1 pure-u-lg-3-4 pure-g">
+
+      {% for s in services %}
+      <div class="necesidad pure-u-1 pure-u-lg-11-24">
+        <div class="img pure-u-1-3">
+        {% svg 
+           constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
+           s.Name
+        %}
+        </div>
+        <div class="p-title pure-u-11-12">
+          <p>{{s | translate('Name', L)}}</p>
+        </div>
+        <div class="p-text pure-u-23-24">
+          <p>{{s | translate('Description', L)}}</p>
+        </div>
+      </div>
+      {% endfor %}
+
+  </div>
+</section>

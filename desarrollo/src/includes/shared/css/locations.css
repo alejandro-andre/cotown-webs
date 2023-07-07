@@ -1,0 +1,141 @@
+/* LOCALIZACIONES 
+-------------------------------- */
+
+.locations  {
+    width: 100%;
+}
+.locations .container-main .all-locations {    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 4em auto 0;
+    padding: 0 14%;
+}
+.locations .container-main .all-locations h1.title-where {
+    margin: 0 0 0.3em;
+}
+.locations .container-main .all-locations .location {    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    align-items: flex-start;
+    max-width: 1248px;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    margin: 0 0 3.5em;
+}
+.locations .container-main .all-locations .location .img {
+  overflow: hidden;
+}
+.locations .container-main .all-locations .location div.img .img-loc {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: relative;
+  left: -33%;
+}
+.locations .container-main .all-locations .location .text-content a {
+  color: var(--black);
+  text-decoration: none;
+}
+.locations .container-main .all-locations .location .text-content h2 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 110%;
+    margin: 1.5rem 4rem 1rem;
+}
+.locations .container-main .all-locations .location .text-content p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    margin: 0 4rem 1rem;
+}
+
+/* SERVICIOS 
+-------------------------------- */
+.servicios {
+    width: 100%;
+    text-align: center;
+    margin: 6em 0 4em;
+}
+.servicios .text-container h2.title {
+    font-size: 78px;
+    line-height: 1;
+    font-weight: 400;
+}
+.servicios p.subtitle {
+    font-size: 30px;
+}
+.servicios .slide  {
+  overflow: hidden;
+}
+.servicios .slide h3 {
+  width: 100%!important;
+  color: var(--black);
+  margin-bottom: 0;
+  letter-spacing: 0.1rem;
+}
+.servicios  .slide p {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+}
+.servicios .slide .img  {
+  height: 100px;
+}
+.servicios .img img ,
+.servicios .img svg  {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* RESPONSIVE
+-------------------------------- */
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+  .locations .container-main .all-locations .location .text-content h2 {  
+    font-size: 40px;
+  }
+  .locations .container-main .all-locations .location .text-content p {   
+    font-size: 18px;
+  }
+}
+/* TABLET */
+@media only screen and (max-width: 1023.9px) {
+  .locations .container-main .all-locations {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 2em;
+  }
+  .locations .container-main .all-locations h1.title-where {
+    font-size: 40px;
+    line-height: 100%;
+  }
+  .locations .container-main .all-locations .location {    
+    flex-flow: row wrap;
+  }
+  .locations .container-main .all-locations .location div.img .img-loc {
+    left: 0;
+    width: 100%;
+  }
+  .locations .container-main .all-locations .location .text-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .locations .container-main .all-locations .location .text-content h2 {
+    font-size: 32px!important;
+    line-height: 110%;    
+  }
+  .locations .container-main .all-locations .location .text-content p {
+  font-size: 14px;
+  line-height: 150%;
+  }
+}
+
+/* MOVIL*/
+@media only screen and (max-width: 767px) {
+}
