@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       includes: "includes",
       data: "data",
-      output: "sites/vanguard"
+      output: "sites/cotown"
     }
   };
 };
