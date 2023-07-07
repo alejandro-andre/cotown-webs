@@ -1458,6 +1458,9 @@ button.date-button input.inputs {
     h1.h1-logo {
         font-size: 38px;
     }
+    main .container-main .first-contain .title-big .h2-big h1 {        
+        font-size: 60px;
+    }
     h2 {
         font-size: 40px;
         margin: auto;
