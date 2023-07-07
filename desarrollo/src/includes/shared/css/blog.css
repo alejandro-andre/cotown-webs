@@ -100,6 +100,7 @@ input[type="search"]::-webkit-search-results-decoration {
   align-items: flex-start;
   margin: 1em 0;
   overflow: hidden;
+  background-color: transparent;
 }
 .post a {
   width: 100%;
@@ -126,6 +127,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .post .mark {
   position: absolute;
+  z-index: 200;
   top: -42px;
   right: 13px;
   width: 18px;
@@ -174,6 +176,9 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 0.5em auto 1em;
   gap: 0.4em;
 }
+.post .data-post.primary {
+  background-color: var(--primary);
+}
 main .container-main .first-contain .title-big .h2-big h1 {
   font-size: 120px;
   font-weight: 400;
@@ -182,9 +187,21 @@ main .container-main .first-contain .title-big .h2-big h1 {
 }
 .post .data-post h1 {
   margin-bottom: 0;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 25px;
 }
+.post .data-post.primary h1 {
+  color: var(--white);
+}
+.post .data-post .p-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  gap: 4px;
+  
+}
+
 .post .data-post p,
 .post .data-post a {
   border: 1px solid var(--primary);
@@ -192,7 +209,12 @@ main .container-main .first-contain .title-big .h2-big h1 {
   padding: 0.2em 0.8em;
   margin: 0;
 }
+.post .data-post.primary p,
+.post .data-post.primary a {
+  color: var(--white);
+  border: 1px solid var(--white);
 
+}
 
 
 
@@ -200,91 +222,96 @@ main .container-main .first-contain .title-big .h2-big h1 {
 /* POST 
 -------------------------------- */
 
-main.post .container-main .post-content {
+main.post-page .container-main .post-content {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   margin: 6em auto;
 }
-main.post .container-main .post-content h1 {
+main.post-page .container-main .post-content h1 {
   font-weight: 400;
   font-size: 64px;
   line-height: 100%;
   text-align: center;
   margin-bottom: 1em;
 }
-main.post .container-main .post-content img {
+main.post-page .container-main .post-content img {
   width: 100%;
   margin-bottom: 2em;
 }
 
-main.post .container-main .post-content .text .text-content h2, main.post .container-main .post-content .text .text-content h3 {
+main.post-page .container-main .post-content .text .text-content h2, main.post-page .container-main .post-content .text .text-content h3 {
   font-size: 64px;
   font-weight: 400;
   line-height: 110%;
   text-align: left;
 }
-main.post .container-main .post-content .text .text-content p, main.post .container-main .post-content .text .text-content ul li, main.post .container-main .post-content .text .text-content ol li {
+main.post-page .container-main .post-content .text .text-content p, main.post-page .container-main .post-content .text .text-content ul li, main.post-page .container-main .post-content .text .text-content ol li {
   font-size: 22px;
   font-weight: 500;
   line-height: 150%;
 }
-main.post .container-main .post-content .text .text-content ul li {
+main.post-page .container-main .post-content .text .text-content ul li {
   padding-left: 12px;
 }
-main.post .container-main .post-content .text .text-content ul li::marker {
+main.post-page .container-main .post-content .text .text-content ul li::marker {
   content: "·";
 }
-main.post .container-main .post-content .text .text-content p strong {
+main.post-page .container-main .post-content .text .text-content p strong {
   font-size: 22px;
   font-weight: 700;
   line-height: 150%;
 }
-main.post .container-main .post-content .text .text-content p em {
+main.post-page .container-main .post-content .text .text-content p em {
   font-size: 22px;
 }
-main.post .container-main .like-content {
+main.post-page .container-main .like-content {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   margin: 0 0 4em;    
 }
-main.post .container-main .like-content .like {
+main.post-page .container-main .like-content .like {
   background-color: var(--primary);
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  padding: 1em 2em;
+  padding: 2em;
   gap: 1em;
 }
-main.post .container-main .like-content .like .text {
+
+main.post-page .container-main .like-content .like .text {
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
-main.post .container-main .like-content .like .text h3 {
+main.post-page .container-main .like-content .like .text h3 {
   font-weight: 400;
   font-size: 64px;
   line-height: 100%;
   color: var(--white);
   margin: 0;
 }
-main.post .container-main .like-content .like .text p {
+main.post-page .container-main .like-content .like .text p {
   color: var(--white);
   margin: 0;
+  font-size: 20px;
 }
-main.post .container-main .like-content .like .redes {
+main.post-page .container-main .like-content .like .redes {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  gap: 1em;
+  align-items: center; 
 }
-main.post .container-main .like-content .like .redes a em {
+
+main.post-page .container-main .like-content .like .redes a {
+width: 25%;
+}
+main.post-page .container-main .like-content .like .redes a em {
   color: var(--white);
   font-size: 34px;
 }
@@ -352,6 +379,9 @@ main.post .container-main .like-content .like .redes a em {
     border-radius: 16px;
     filter: drop-shadow(0px 20px 30px rgba(22,22,22,0.06));
   }
+  .post >.data-post.primary {
+    box-shadow: none;   
+  }
   .post .img-container {
     height: 100%;
     min-height: 400px;
@@ -359,77 +389,75 @@ main.post .container-main .like-content .like .redes a em {
   .post .date {
     top: 38%;
   }
-  .post .data-post h1 {
-    font-size: 16px;
-    line-height: 22px;
+  .post .data-post {
+    width: 100%;
+    padding: 0;
+    border-radius:  0 0 16px 16px;
   }
-  .post .data-post p,
-  .post .data-post a {
-    border: 0px;
-    padding: 0;    
-  }
-  .post .data-post p::before,
-  .post .data-post a::before {
-    content: "#";
-  }
+  .post .data-post h1, .post .data-post .p-container {    
+    padding: 3% 4% 0;
+  }  
 
-    /* __________________________ POST  ___________________________*/
+  /* __________________________ POST  ___________________________*/
 
-  main.post .container-main .post-content {
+  main.post-page .container-main .post-content {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
     margin: 6em auto;
   } 
-  main.post .container-main .post-content h1 {
+  main.post-page .container-main .post-content h1 {
     font-weight: 400;
     font-size: 32px;
     line-height: 110%;
     text-align: left;
     margin-bottom: 1em;
   }
-  main.post .container-main .post-content .text .text-content h2, main.post .container-main .post-content .text .text-content h3 {
+  main.post-page .container-main .post-content .text .text-content h2, main.post-page .container-main .post-content .text .text-content h3 {
     font-size: 25px;
   }
-  main.post .container-main .post-content .text .text-content p, main.post .container-main .post-content .text .text-content ul li, main.post .container-main .post-content .text .text-content ol li {
+  main.post-page .container-main .post-content .text .text-content p, main.post-page .container-main .post-content .text .text-content ul li, main.post-page .container-main .post-content .text .text-content ol li {
     font-size: 14px;
   }
-  main.post .container-main .post-content .text .text-content ul li {
+  main.post-page .container-main .post-content .text .text-content ul li {
     padding-left: 12px;
   }
  
-  main.post .container-main .post-content .text .text-content p strong,  main.post .container-main .post-content .text .text-content p em {
+  main.post-page .container-main .post-content .text .text-content p strong,  main.post-page .container-main .post-content .text .text-content p em {
     font-size: 14px;
   }
-  main.post .container-main .like-content {        
+  main.post-page .container-main .like-content {        
       margin: 0;
   }
-  main.post .container-main .like-content .like .text {
+  main.post-page .container-main .like-content .like {
+    align-items: center;
+    justify-content: center;
+  }
+  main.post-page .container-main .like-content .like .text {
       display: flex;
       flex-flow: column;
       justify-content: center;
       align-items: center;
   }
-  main.post .container-main .like-content .like .text h3 {
+  main.post-page .container-main .like-content .like .text h3 {
       font-weight: 400;
       font-size: 35.4257px;
       line-height: 36px;        
   }
+  main.post-page .container-main .like-content .like .redes a {
+    text-align: center;
+  }
+
+  main.post-page .container-main .like-content .like .redes a em {
+      font-size: 25px;
+  }
   
-  main.post .container-main .like-content .like .redes {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-items: center;        
-  }
-  main.post .container-main .like-content .like .redes a em {
-      font-size: 24px;
-  }
 }
 @media only screen and (max-width: 767.9px) {
   .post .data-post {
-    top: 52%;
+    top: 50%;
+    height: 50%;
   }
   .post .date {
     top: 40%;

@@ -72,9 +72,9 @@
 
 
 /* SOLO VANGUARD */
-@media only screen and (min-width: 1023.99px) { 
-.black-menu .locations-dropdown .locations-container .options-loc, .black-menu .locations-dropdown .locations-container .locations-label .icons-open-close {
-    display: none;
-}
+@media only screen and (min-width: 0px) { 
+    .black-menu .locations-dropdown .locations-container .options-loc, .black-menu .locations-dropdown .locations-container .locations-label .icons-open-close {
+        display: none;
+    }
 }
 

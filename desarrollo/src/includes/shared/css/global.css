@@ -4,7 +4,10 @@
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-weight: 300; 
+    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; 
+}
+p, input, label, a {
+    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 button.btn-primary a {
@@ -17,27 +20,36 @@ mark {
 /* RESPONSIVE FONTS */
 
 @media only screen and (min-width: 1600px) {
-    h1 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 120px; font-weight: 400; }
-    h2 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 78px; font-weight: 400; }
-    h3 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 50px; line-height: 1.3; }
+    h1 { font-size: 120px; font-weight: 400; }
+    h2 { font-size: 78px; font-weight: 400; }
+    h3 { font-size: 50px; line-height: 1.3; }
     h4 { font-size: 36px; line-height: 1.3; }
     h5 { font-size: 1.2rem; line-height: 1.3; }
     h6 { font-size: 1rem; line-height: 1.2; }
-    p, input, label, a {font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;font-size: 14px; }
+    p, input, label, a {font-size: 16px; }
     a { text-decoration: none; }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1599px)  {
-    h1 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 78px; font-weight: 400; }
-    h2 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 60px; font-weight: 400; }
-    h3 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif; font-size: 36px; line-height: 1.3; }
+    h1 { font-size: 78px; font-weight: 400; }
+    h2 { font-size: 60px; font-weight: 400; }
+    h3 { font-size: 36px; line-height: 1.3; }
     h4 { font-size: 20px; line-height: 1.3; }
     h5 { font-size: 1.2rem; line-height: 1.3; }
     h6 { font-size: 1rem; line-height: 1.2; }
-    p, input, label, a {font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;font-size: 14px; }
+    p, input, label, a {font-size: 14px; }
     a { text-decoration: none; }
 }
 
-
+@media only screen and (max-width: 1024px)  {
+    h1 { font-size: 36px; font-weight: 400; }
+    h2 { font-size: 24px; font-weight: 400; }
+    h3 { font-size: 16px; line-height: 1.3; }
+    h4 { font-size: 14px; line-height: 1.3; }
+    h5 { font-size: 1.2rem; line-height: 1.3; }
+    h6 { font-size: 1rem; line-height: 1.2; }
+    p, input, label, a {font-size: 12px; }
+    a { text-decoration: none; }
+}
 
 
 
@@ -160,7 +172,7 @@ button {
     height: auto;
     text-transform: capitalize;
     gap: .5em;
-    font-size: 22px;
+    font-size: 18px;
     padding: 14px 26px 14px 20px;
 }
 .btn-secondary.search.mobile {
@@ -620,7 +632,6 @@ main .container-main .first-contain .title-big .h2-big {
 main .container-main .first-contain .title-big .h2-big h1 {
     width: 100%;
     font-weight: 400;
-    /* font-size: 120px; */
     line-height: 95%;
 }
 main .container-main .first-contain .title-big p {
@@ -631,13 +642,13 @@ main .container-main .first-contain .title-big p {
     text-align: center;
 }
 
-/* main .container-main .first-contain .title-big.home p {
-    /* font-size: 30px; */
+ main .container-main .first-contain .title-big.home p {
+    font-size: 30px;
     line-height: 36px;
     font-weight: 500;
     margin: 0 0 0.5em;
     text-align: left;
-} */
+} 
 main .container-main .first-contain .title-big p span.bold {
     font-weight: 700;
 }
@@ -966,6 +977,9 @@ footer section.container-footer .contain .left .redes em:last-of-type {
 }
 
 /* Footer right container */
+footer section.container-footer .contain .right {
+    padding: 0 0 0 6%;
+}
 footer section.container-footer .contain .right .footer-contain ul {
     margin-bottom: 0;
     padding: 0;
@@ -975,11 +989,11 @@ footer section.container-footer .contain .right .footer-contain ul li {
     padding: 1em 0;
 }
 footer section.container-footer .contain .right .footer-contain ul li a {
-    line-height: 25px;
+    line-height: 20px;
     color: var(--primary-text);
     text-decoration: none;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
 }
 footer section.container-footer .contain .right .footer-contain ul li.bold a {    
     font-weight: 700;
@@ -1246,6 +1260,9 @@ button.date-button input.inputs {
 
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
+    .btn-primary.search.desktop {
+        font-size: 20px;
+    }
     main .container-main .first-contain .title-big.home p {
         font-size: 30px;
         line-height: 36px;
@@ -1331,7 +1348,7 @@ button.date-button input.inputs {
 /* DESKTOP SMALL */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .icons-header .pure-menu-link {
-        padding: 0 0.5em
+        padding: 0 0.5em;
     }    
     .container-header.second .black-line.custom-wrapper {
         padding: 0.2em 0.5em;
@@ -1368,7 +1385,7 @@ button.date-button input.inputs {
         text-align: center;
     }
     .cotownity .container-cotownity .contain-bg .title-bg h2 {
-        font-size: 62px;
+        font-size: 64px;
         width: 70%;
     }    
     .cotownity .feeling .title-feel {
