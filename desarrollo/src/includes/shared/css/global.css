@@ -633,6 +633,7 @@ main .container-main .first-contain .title-big .h2-big h1 {
     width: 100%;
     font-weight: 400;
     line-height: 95%;
+    font-size: 78px;
 }
 main .container-main .first-contain .title-big p {
     font-size: 30px;
@@ -1262,6 +1263,12 @@ button.date-button input.inputs {
 @media only screen and (min-width: 1600px) {
     .btn-primary.search.desktop {
         font-size: 20px;
+    }
+    main .container-main .first-contain .title-big .h2-big h1 {
+        width: 100%;
+        font-weight: 400;
+        line-height: 95%;
+        font-size: 100px;
     }
     main .container-main .first-contain .title-big.home p {
         font-size: 30px;
