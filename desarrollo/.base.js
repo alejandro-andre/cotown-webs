@@ -7,6 +7,8 @@ const { minify } = require("terser");
 
 module.exports = (eleventyConfig) => {
 
+  console.log(eleventyConfig.outputDir);
+
   // String to slug
   function slugify(str) {
     str = str.toLowerCase();
@@ -144,15 +146,15 @@ module.exports = (eleventyConfig) => {
   })  
 
   // Image optimizer shorcode
-	eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
+  eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
+    // Get metadata
+    console.log(`Retrieving image ${name}`);
     try {
-      // Get metadata
-      console.log(`Retrieving image ${name}`);
       let metadata = await Image(src, {
         widths: widths,
         formats: ["webp", "jpeg"],
         urlPath: "/img/",
-        outputDir: "./www/img/",
+        outputDir: eleventyConfig.outputDir + "/img/",
         cacheOptions: { removeUrlQueryParams: true },
         filenameFormat: function (id, src, width, format, options) {
           return `${slugify(name)}-${width}.${format}`;
