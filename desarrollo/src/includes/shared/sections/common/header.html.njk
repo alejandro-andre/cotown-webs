@@ -11,7 +11,7 @@
       {% for b in banners %}
       {% if b.Page == 'home' %}
       <div class="spot">{{b | translate('Text', L)}}</div>
-      <a href="{{langs[L].folder}}/{{b.Link}}"><button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button></a>
+      <a href="{{langs[L].folder}}/{{b | translate('Link', L)}}"><button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button></a>
       {% endif %}
       {% endfor %}
     </div>
