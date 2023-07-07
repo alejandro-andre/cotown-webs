@@ -67,6 +67,9 @@ module.exports = (eleventyConfig) => {
 
   // Includes
   eleventyConfig.addFilter('includes', function(id, array, tag) {
+    if (!array) {
+      return false;
+    }
     if (id === 0) {
       return true;
     }
