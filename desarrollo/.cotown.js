@@ -18,7 +18,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       includes: "includes",
       data: "data",
-      output: "www"
+      output: "sites/cotown"
     }
   };
 };

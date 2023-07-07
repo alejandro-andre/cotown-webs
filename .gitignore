@@ -1,4 +1,5 @@
 .cache
+sites
 www
 node_modules
 sync.ffs_db
