@@ -274,7 +274,7 @@ button {
 
 header, main, footer { 
     width: 99.99%;
-    max-width: 99.99vw;
+    min-width: 99.99%;
     display: block;
 }
 header {

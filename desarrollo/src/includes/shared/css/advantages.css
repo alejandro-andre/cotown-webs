@@ -59,7 +59,7 @@ main .container-main section.container-advantages {
     padding: 2em 4em;
 }
 main .container-main section.container-advantages .grid {
-    padding: 0 14%;
+    padding: 0;
     max-width: 1280px;
     display: flex;
     flex-flow: row wrap;
@@ -68,15 +68,39 @@ main .container-main section.container-advantages .grid {
     margin: 0 auto;
 }
 main .container-main section.container-advantages .grid .promo {
-    width: calc(25% - 0.8em);
-    height: 200px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--grey-light-dark);
-    margin: 0 0 2em 0.8em;
+    width: calc(50% - 0.8em);
+    height: 200px;    
 }
+main .container-main section.container-advantages .grid .promo .promo-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+main .container-main section.container-advantages .grid .promo .promo-contain .img-promo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+main .container-main section.container-advantages .grid .promo .promo-contain .img-promo .first img {
+    width: 100%;
+    height: 100%;
+}
+main .container-main section.container-advantages .grid .promo .promo-contain .img-promo:hover .first img {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+main .container-main section.container-advantages .grid .promo .promo-contain  .img-promo .hover img {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+main .container-main section.container-advantages .grid .promo .promo-contain  .img-promo:hover .hover img {
+    display: block;
+}
+
+
+/* 
 main .container-main section.container-advantages .grid .promo:hover {
     background-color: var(--primary);
 }
@@ -107,7 +131,7 @@ main .container-main section.container-advantages .grid .promo .promo-contain .p
 }
 main .container-main section.container-advantages .grid .promo:hover .promo-contain .promo-text {
     opacity: 1;
-}
+} */
 main .container-main section.container-advantages .grid.show {
     display: none;
 }
@@ -146,6 +170,9 @@ button.btn-secondary {
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    main .container-main section.container-advantages .grid {
+        max-width: 100%;
+    }
     main .container-main .first-contain .advantages.title-big .h2-big h1 {
         font-size: 80px;    
     }
@@ -177,7 +204,6 @@ button.btn-secondary {
         padding: 0 0.2em;        
     }
     main .container-main section.container-advantages .grid .promo {
-        width: 30%;
         height: auto;
         border-radius: 8px;
         margin: 0.5em;
@@ -190,7 +216,6 @@ button.btn-secondary {
 }
 @media only screen and (max-width: 767.9px) {
     main .container-main section.container-advantages .grid .promo {
-        width: 40%;
         height: auto;
         border-radius: 8px;
         margin: 0.5em;
