@@ -29,7 +29,7 @@ p.subtitle {
     align-items: flex-start;
     background-color: var(--primary);
     border-radius: var(--radius-1);
-    padding: 4em 4em 6em;
+    padding: 3em 4em;
     position: absolute;
     top: 0;
     left: 0;
@@ -38,8 +38,8 @@ p.subtitle {
     order: 1;
 }
 .main-header .left .text-container h1 {
-    font-size: 78px;
-    line-height:80px;
+    font-size: 64px;
+    line-height: 70px;
     margin: 0 0 0.1em;
 }
 .main-header .left .button-search {
@@ -98,9 +98,9 @@ p.subtitle {
 .main-header .video {
     position: relative;
     top: 0;
-    left: 25%;
+    left: 20%;
     height: fit-content;    
-    min-width: 80%;
+    width: 80%;
     text-align: center;
     vertical-align: middle;
     order: 2;
@@ -110,7 +110,14 @@ p.subtitle {
     vertical-align: middle;
     margin: auto;
     height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
+.main-header .video .video-home img {    
+    object-fit: contain;
+    width: 100%;
+}
+
 
 /* BLOQUE 1 HOME 
 -------------------------------- */
@@ -598,9 +605,8 @@ main .container-main .first-contain .text p {
 -------------------------------- */
 @media only screen and (min-width: 1600px) {
     .main-header .left .text-container h1 {
-        font-size: 120px;
-        line-height: 100px;
-        margin: 0 0 0.1em;
+        font-size: 78px;
+        line-height: 80px;
     }
     .main-header .left .basic-searcher label {
         font-size: 18px;
@@ -632,7 +638,28 @@ main .container-main .first-contain .text p {
     .pisos .container .img-container .img-title2 {       
         font-size: 60px;       
     }
-} 
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .main-header .left {        
+        padding: 2em;        
+    }
+    .main-header .left .text-container.desktop {
+    padding-right: 2em;
+    }
+    .main-header .left .text-container h1 {
+        font-size: 60px;
+        line-height: 62px;
+    }
+    .main-header .left .basic-searcher select {
+        height: 32px;
+        margin-bottom: 0.1em;        
+    }
+    .main-header .left .button-search {
+        margin-top: 0.2em;
+    }
+}
+
 @media only screen and (min-width: 1024px) {
     .main-header .video .text-container.mobile {
         display: none;
@@ -720,7 +747,7 @@ main .container-main .first-contain .text p {
     .main-header .video .text-container.mobile h1 {
         color: var(--primary-text);
         font-weight: 400;
-        font-size: 54px;
+        font-size: 58px;
         line-height: 100%;
         text-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
         text-align: left;
@@ -733,8 +760,7 @@ main .container-main .first-contain .text p {
         max-width: 100%;
         width: 100%;
         order: 1;
-    }
-
+    } 
     main .container-main .first-contain .title-big.home {
         margin: 4em auto 2em
     }
