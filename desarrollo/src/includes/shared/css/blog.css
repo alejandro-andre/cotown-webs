@@ -316,10 +316,52 @@ main.post-page .container-main .like-content .like .redes a em {
   font-size: 34px;
 }
 
+main.blog .container-main .posts .pag {
+  margin: 0 0 2em;
+}
 
+main.blog .container-main .posts .pag ul.pagination {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
 
+main.blog .container-main .posts .pag ul.pagination li {
+  display: inline;
+}
 
-
+main.blog .container-main .posts .pag ul.pagination li a {
+  color: var(--primary);
+  background-color: var(--primary-light);
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 0 8px;
+}
+main.blog .container-main .posts .pag ul.pagination li a.active, main.blog .container-main .posts .pag ul.pagination li a:hover {
+  color: var(--white);
+  background-color: var(--primary);
+  cursor: pointer;
+}
+main.blog .container-main .posts .pag ul.pagination li a.more {
+  background-color: transparent;
+  padding: 8px 0;
+}
+main.blog .container-main .posts .pag ul.pagination li a.arrow {
+  background-color: transparent;
+  font-size: 30px;
+  margin: 0;
+  padding: 8px 0;
+}
+main.blog .container-main .posts .pag ul.pagination li a.arrow:hover {
+  color: var(--primary);
+}
+main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
+  color: var(--grey-light);
+}
 
 
 
