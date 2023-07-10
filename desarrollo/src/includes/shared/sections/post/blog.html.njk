@@ -7,7 +7,7 @@
 <main class="blog">
   <div class="container-main pure-u-20-24">
 
-    <!-- Cabecera -->
+      <!-- Cabecera -->
     <section class="first-contain pure-u-1">
         <div class="title-big pure-u-1">
           <div class="h2-big">
@@ -89,7 +89,24 @@
             </a>
         </div>      
         {% endif %}            
-        {% endfor %}            
+        {% endfor %} 
+
+         <!-- PAGINACIÓN -->        
+        <div class="pag pure-u-23-24">
+          <ul class="pagination">
+            <li><a class="arrow disable" ref="#">
+              <em class="icon-corchete-left"></em>
+            </a></li>
+            <li><a href="#" class="active">1</a></li>
+            <li><a ref="#">2</a></li>
+            <li><a ref="#">3</a></li>
+            <li><a class="more">...</a></li>
+            <li><a ref="#">10</a></li>
+            <li><a class="arrow"ref="#">
+              <em class="icon-corchete-right"></em>
+            </a></li>
+          </ul>
+        </div>          
     </section>
 
   </div>
