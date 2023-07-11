@@ -2,22 +2,29 @@
 
 <!-- Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<section class="container-header first pure-g">
-  <div class="turquoise-line pure-u-1-2 pure-u-lg-1">
+<section class="container-header first pure-g" id="first-line">
+  <div class="turquoise-line pure-u-1-2 pure-u-lg-1" >
 
-    <!-- Banner
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="left-content pure-1-2">
+      <!-- Banner
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="left-content pure-u-md-1-2 pure-u-1" >
+      <div class="banner-container pure-u-1">
       {% for b in banners %}
-      {% if b.Page == 'home' %}
-      <div class="spot">{{b | translate('Text', L)}}</div>
+      {% if b.Page == 'home' %}     
+      <div class="spot">
+        <a class="close" onclick="ocultarBannerMobile()">
+          <em class="icon-close"></em>
+        </a>
+        <h1>{{b | translate('Text', L)}}</h1>
+      </div>
       <a href="{{langs[L].folder}}/{{b | translate('Link', L)}}"><button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button></a>
       {% endif %}
       {% endfor %}
+      </div>
     </div>
-     
-    <!-- Cabecera
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      
+      <!-- Cabecera
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="right-content pure-1-2">
       <div class="pure-menu pure-menu-horizontal">
         <ul class="pure-menu-list">
