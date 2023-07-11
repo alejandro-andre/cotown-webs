@@ -62,16 +62,18 @@ main .container-main section.members .grid .member {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin: 1em 0;
 }
 main .container-main section.members .grid .member .img-member {
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: column;
+    justify-content: flex-start;
     align-items: center;
-    padding: 5%;    
+    padding: 5%;
+    height: 700px;
+    text-align: center;
 }
 main .container-main section.members .grid .member .img-member:hover .first {
     display: none;   
@@ -120,8 +122,12 @@ main .container-main section.members .button-more {
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    main .container-main section.members .grid .member {
-        width: 33%;
+    /* TEAM */
+    main .container-main section.members {
+        padding: 2em 2em;
+    }
+    main .container-main section.members .grid .member .img-member {
+        height: 500px;  
     }
 }
 
@@ -139,13 +145,17 @@ main .container-main section.members .button-more {
         position: static;
         background-color: var(--white);
     }
+    main .container-main section.members {
+        padding: 2em 0;
+    }
     main .container-main section.members .grid .member {
         width: 50%;
     }
+    
 }
 
 @media only screen and (max-width: 767px) {
-main .container-main section.members .grid .member {
-    width: 98%;
-}
+    main .container-main section.members .grid .member .img-member {
+        height: 500px;  
+    }
 }
