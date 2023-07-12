@@ -576,8 +576,9 @@ main .container-main .first-contain .text p {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    min-height: 100px;
 }
 
 .opinions .splide__pagination {
@@ -640,7 +641,7 @@ main .container-main .first-contain .text p {
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
     .main-header .left {        
         padding: 2em;        
     }

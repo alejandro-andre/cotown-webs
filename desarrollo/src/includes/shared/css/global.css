@@ -970,7 +970,7 @@ footer section.container-footer .contain .left .footer-logo {
     width: 100%;
 }
 footer section.container-footer .contain .left .footer-logo img {
-    width: 100%;
+    /* width: 100%; */
     max-width: 374px;
     margin: 0 0 1rem;
 }
@@ -1300,12 +1300,12 @@ button.date-button input.inputs {
     }
 }
 /* DESKTOP */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1281px) {
 .container-header.first .turquoise-line {
-    margin: 0 6em;
+    margin: 0 4em;
 }
 .container-header.second .black-line.custom-wrapper { 
-    padding: 0.2em 6em;
+    padding: 0.2em 4em;
 }
 }
 @media only screen and (min-width: 1024px) { 
@@ -1368,7 +1368,7 @@ button.date-button input.inputs {
     }
 }
 /* DESKTOP SMALL */
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
     .icons-header .pure-menu-link {
         padding: 0 0.5em;
     }    
