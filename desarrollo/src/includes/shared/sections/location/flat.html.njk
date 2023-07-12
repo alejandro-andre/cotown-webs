@@ -100,7 +100,43 @@
                     </div>
 
                   </a>
-                  {% include 'shared/sections/location/carousel-interno.njk' %}                   
+
+                  <div class="carousel-mini">
+                    <div class="splide mini" id="sliderMini" aria-label="SliderMini">           
+                      <div class="splide__track"> 
+                        <div class="splide__arrows arrows-mini">
+                          <button type="button" class="arrow-mini splide__arrow splide__arrow--prev"
+                              type="button"
+                              aria-label="Previous slide"
+                              aria-controls="splide01-track">               
+                              <em class="icon-corchete-left"></em>
+                          </button>
+                          <button type="button" class="arrow-mini splide__arrow splide__arrow--next"
+                              type="button"
+                              aria-label="Next slide"
+                              aria-controls="splide01-track">               
+                              <em class="icon-corchete-right"></em>
+                          </button>
+                        </div>         
+                        <ul class="splide__list list-mini">
+                          {% for s in b.Services %}
+                          <li class="splide__slide">
+                            <div class="card shadow">
+                              <div class="ratio carousel-ratio">
+                                {% svg 
+                                  constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Service.Images[0].id +"/Icon/contents?access_token=" + token,
+                                  s.Name
+                                %}
+                                <p>{{s.Service|translate('Name', L)}}</p>
+                              </div>
+                            </div>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
               </div>
