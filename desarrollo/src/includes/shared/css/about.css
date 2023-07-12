@@ -121,7 +121,7 @@ main .container-main section.members .button-more {
     margin: 1em 0;
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
     /* TEAM */
     main .container-main section.members {
         padding: 2em 2em;
