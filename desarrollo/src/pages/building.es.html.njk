@@ -6,8 +6,8 @@ eleventyComputed:
     alt:
       es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
       en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
-    description: "{{langs[L].pages[name].description}}"
-    permalink: "{{langs[L].folder}}/{{building.Name|ascii}}.html"
+    description: "{{building | translate('Name',L)|ascii}}"
+    permalink: "{{langs[L].folder}}/{{building.Name | ascii}}.html"
 layout: shared/layouts/base.html
 pagination:
     data: buildings

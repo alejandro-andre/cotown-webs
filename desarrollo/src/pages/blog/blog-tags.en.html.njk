@@ -6,7 +6,7 @@ eleventyComputed:
     alt:
       es: "{{langs.es.folder}}/blog/{{tag | translate('Name', 'es') | ascii}}.html"
       en: "{{langs.en.folder}}/blog/{{tag | translate('Name', 'en') | ascii}}.html"
-    description: "{{langs[L].pages[name].description}}"
+    description: "{{langs[L].pages[name].description}} | {{tag | translate('Name', L) | ascii}}"
     permalink: "{{langs[L].folder}}/blog/{{tag | translate('Name', L) | ascii}}.html"
 layout: shared/layouts/base.html
 pagination:
