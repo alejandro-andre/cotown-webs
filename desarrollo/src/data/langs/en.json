@@ -2,7 +2,7 @@
     "folder": "",
     "locale": "en_US",
     "pages": {
-        "index":         { "url": "index",         "title": "Home",             "description": "" },
+        "index":         { "url": "home",          "title": "Home",             "description": "" },
         "locations":     { "url": "locations",     "title": "Locations",        "description": "" },
         "about":         { "url": "about-us",      "title": "About us",         "description": "" },
         "advantages":    { "url": "advantages",    "title": "Advantages",       "description": "" },
