@@ -22,7 +22,30 @@
 
   <!-- Map -->
   <section class="map">
+
+    <!-- Map -->
     <div class="map" id="map"></div>
+
+    <!-- Popups -->
+    {% for b in buildings-%}
+    {% if b.District.Location.Name == location.Name %}
+    <div id="{{b.id}}" style="display: none;">
+      <div class="mappopup" onclick="location.href='{{langs[L].folder}}/{{b.Name|ascii}}.html';">
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
+          b.Name, b.Name, "",
+          [200], ""
+        %}
+        <div class="info">
+          <div class="address">{{b.Name}}</div>
+          <div class="from">desde</div>
+          <div class="price">XXX€/mes</div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
   </section>
 
   <!-- Services -->
@@ -33,28 +56,22 @@
 <!-- Scripts -->
 {% block footer %}
 {% set script %}
+
 {% include "shared/js/map.js" %}
+
 // Map
 var map = createMap("map", 41.3933, 2.1377, 16);
 var markerArray = [];
-{% for b in buildings-%}
-{%-if b.District.Location.Name == location.Name-%}
-{{map}}
+{% for b in buildings %}
+{% if b.District.Location.Name == location.Name %}
 markerArray.push(putMarker(
-  map,
-  {{b.Lat_lon.slice(1,-1).split(',')[0]}},
-  {{b.Lat_lon.slice(1,-1).split(',')[1]}},
-   `<div class="popup">
-      <img src="/assets/img/pisos/napoles.png">
-      <div class="info">
-        <div class="address">{{b.Name}}</div>
-        <div class="from">desde</div>
-        <div class="price">XXX€/mes</div>
-      </div>
-    </div>`
-  ));
-{%-endif-%}
-{%-endfor-%}
+  map, 
+  {{b.Lat_lon.slice(1,-1).split(',')[0]}}, 
+  {{b.Lat_lon.slice(1,-1).split(',')[1]}}, 
+  document.getElementById("{{b.id}}").innerHTML
+));
+{% endif %}
+{% endfor %}
 if (markerArray.length > 0) {
   var group = L.featureGroup(markerArray).addTo(map);
   map.fitBounds(group.getBounds());
@@ -67,5 +84,6 @@ new Splide('#sliderFlats', {
   focus: 'center', 
   padding: '5rem'
 }).mount();
+
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

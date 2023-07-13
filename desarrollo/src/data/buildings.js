@@ -6,6 +6,7 @@ module.exports = async (config) => {
     data: Building_BuildingList ( 
       where: { Segment_id: { EQ: $id } } 
     ) {
+      id
       Code
       Name
       Address

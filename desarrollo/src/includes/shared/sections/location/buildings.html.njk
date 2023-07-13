@@ -2,34 +2,39 @@
 
   <div class="h2-container pure-u-22-24">
 
+    <!-- Title -->
     <h2>{% literal texts, 'location-nuestros-pisos-en', L %} {{ location | translate ('Name', L) | safe }}</h2>
 
+    <!-- See map button (mobile) -->
     <button class="button-map-mobile pure-u-5-24">
-      <img src="/assets/icons/map.png">
+      <img src="/assets/img/icono__serv_mapa.svg">
       <p>{% literal texts, 'location-ver-mapa', L %}</p>
     </button>
 
+    <!-- Dates -->
     <div class="calendar pure-u-1-1">
       <div class="reservas_form_div pure-u-1 pure-u-lg-1-2">           
-      <form id="reservas_form" name="form_multi" method="GET">
-        <button class="date-button">
-          <label class="labels">{% literal texts, 'dates-entrada', L %}</label>
-          <input type="text" id="in" onfocus="(this.type='date')" class="inputs" name="in" placeholder="02/06/2023"/>
-        </button>   
-        <button class="date-button">
-          <label class="labels">{% literal texts, 'dates-salida', L %}</label>
-          <input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="02/09/2023"/>
-        </button>
-      </form>
+        <form id="reservas_form" name="form_multi" method="GET">
+          <button class="date-button">
+            <label class="labels">{% literal texts, 'dates-entrada', L %}</label>
+            <input type="text" id="in" onfocus="(this.type='date')" class="inputs" name="in" placeholder="02/06/2023"/>
+          </button>   
+          <button class="date-button">
+            <label class="labels">{% literal texts, 'dates-salida', L %}</label>
+            <input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="02/09/2023"/>
+          </button>
+        </form>
       </div>
     </div>
 
   </div>       
 
+  <!-- Desktop: slider -->
   <div class="carousel desktop">
     <div class="splide" id="sliderFlats" aria-label="Slider">           
       <div class="splide__track">
 
+        <!-- Silider arrows -->
         <div class="splide__arrows arrows">
           <button type="button" class="arrow-nav splide__arrow splide__arrow--prev"
             type="button"
@@ -45,6 +50,7 @@
           </button>
         </div>  
 
+        <!-- Slider -->
         <ul class="splide__list carousel-main-list">
 
           {% for b in buildings %}
@@ -53,6 +59,7 @@
             <div class="card-contain">
               <div class="card shadow desktop">
 
+                <!-- Photo -->
                 <div class="ratio desktop">
                   <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
                     {% image
@@ -67,10 +74,12 @@
                 <div class="card-body d-flex flex-column">
                   <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
 
+                    <!-- Name -->
                     <div class="flex-grow-1">
-                        <p>{{ b | translate ('Description', L) | safe }}</p>
+                      <p>{{ b | translate ('Description', L) | safe }}</p>
                     </div>
 
+                    <!-- Place types -->
                     <div class="types">
 
                       <!-- Habitacion-compartida -->
@@ -101,9 +110,12 @@
 
                   </a>
 
+                  <!-- Internal slider -->
                   <div class="carousel-mini">
                     <div class="splide mini" id="sliderMini" aria-label="SliderMini">           
                       <div class="splide__track"> 
+
+                        <!-- Arrows -->
                         <div class="splide__arrows arrows-mini">
                           <button type="button" class="arrow-mini splide__arrow splide__arrow--prev"
                               type="button"
@@ -118,6 +130,8 @@
                               <em class="icon-corchete-right"></em>
                           </button>
                         </div>         
+
+                        <!-- Slider -->
                         <ul class="splide__list list-mini">
                           {% for s in b.Services %}
                           <li class="splide__slide">
@@ -133,6 +147,7 @@
                           </li>
                           {% endfor %}
                         </ul>
+
                       </div>
                     </div>
                   </div>
@@ -151,11 +166,13 @@
     </div>        
   </div>
 
+  <!-- Mobile: column -->
   <div class="pisos mobile pure-u-1">
     <div class="piso-contain pure-u-1">
       {% for b in buildings %}
       <div class="piso-main pure-u-1">
 
+        <!-- Photo -->
         <div class="img pure-u-1">
           {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
@@ -165,8 +182,13 @@
         </div>
 
         <div class="piso pure-u-1">
+
           <h3>{{b.Name}}</h3>               
-          <div class="options pure-u-1">                
+
+          <!-- Place types -->
+          <div class="options pure-u-1">
+            
+            <!-- Habitacion individual -->
             <div class="type pure-u-22-24">
               <div class="img-container pure-u-2-24">
                 <img src="/assets/img/icono__hab_habitacion_individual.svg">
@@ -179,52 +201,49 @@
                 <p>XXX€/{% literal texts, 'price-mes', L %}</p>
               </div>
             </div>
+
+            <!-- Habitacion compartida -->
             <div class="type pure-u-22-24">
               <div class="img-container pure-u-2-24">
                 <img src="/assets/img/icono__hab_habitacion_compartida.svg">
               </div>
               <div class="h4-container pure-u-12-24">
-              <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
+                <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
               </div>
               <div class="p-container pure-u-8-24">
-              <span>{% literal texts, 'price-desde', L %}<span>
-              <p>XXX€/{% literal texts, 'price-mes', L %}</p>
+                <span>{% literal texts, 'price-desde', L %}<span>
+                <p>XXX€/{% literal texts, 'price-mes', L %}</p>
               </div>                       
             </div>
+
+            <!-- Apartamento privado -->
             <div class="type pure-u-22-24">
               <div class="img-container pure-u-2-24">
                 <img src="/assets/img/icono__hab_apartamento_privado.svg">
               </div>
               <div class="h4-container pure-u-12-24">
-              <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
+                <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
               </div>
               <div class="button-container pure-u-8-24">
-              <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+               <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
               </div>
             </div>
+
           </div>
+
+          <!-- Amenities -->
           <ul class="services-list pure-u-1">
+            {% for s in b.Services %}
             <li>
-                <img src="/assets/icons/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                <p>2 habitaciones con cama doble</p>
+              {% svg 
+                constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Service.Images[0].id +"/Icon/contents?access_token=" + token,
+                s.Name
+              %}
+              <p>{{s.Service|translate('Name', L)}}</p>
             </li>
-            <li>
-                <img src="/assets/icons/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                <p>2 habitaciones con cama doble</p>
-            </li>
-            <li>
-                <img src="/assets/icons/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                <p>2 habitaciones con cama doble</p>
-            </li>
-            <li>
-                <img src="/assets/icons/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                <p>2 habitaciones con cama doble</p>
-            </li>
-            <li>
-                <img src="/assets/icons/bed.svg" class="carousel-img-top" loading="lazy" alt="bed">
-                <p>2 habitaciones con cama doble</p>
-            </li>
-          </ul>                
+            {% endfor %}
+          </ul>             
+
         </div>
 
       </div>
