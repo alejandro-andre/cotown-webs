@@ -13,6 +13,7 @@ module.exports = async (config) => {
     ) {
       id
       Publish_date
+      Featured
       Slug
       Slug_en
       Title
