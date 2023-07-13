@@ -1,47 +1,53 @@
 <section class="all-rooms pure-u-1">
+
   <div class="title pure-u-1 pure-u-lg-21-24">
     <h2>HABITACIONES INDIVIDUALES</h2>
   </div>
+
   <section class="card-room pure-u-1 pure-u-lg-22-24">
+
     <!-- LEFT -->   
     <div class="left-carousel pure-u-1 pure-u-lg-11-24">
+
       <section id="main-carousel" class="splide rooms-carousel" aria-label="Gallery">
         <div class="splide__track">
           <ul class="splide__list">
+            {% for pt in placetypes %}
+            {% for ph in pt.Photos %}
             <li class="splide__slide">
+              {% image
+                constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + ph.id +"/Image/contents?access_token=" + token,
+                ph.Name, ph.Name, "",
+                [1200], ""
+              %}
               <img src="/assets/img/cotownity-big.png" alt="">
             </li>
-            <li class="splide__slide">
-              <img src="/assets/img/cotownity-big.png" alt="">
-            </li>
-            <li class="splide__slide">
-              <img src="/assets/img/cotownity-big.png" alt="">
-            </li>
-            <li class="splide__slide">
-              <img src="/assets/img/cotownity-big.png" alt="">
-            </li>
+            {% endfor %}
+            {% endfor %}
           </ul>
         </div>
       </section>
+
       <section id="thumbnail-carousel" class="splide" aria-label="Thumbnails">
         <div class="splide__track">
           <ul class="splide__list">
+            {% for pt in placetypes %}
+            {% for ph in pt.Photos %}
             <li class="splide__slide">
-              <img src="/assets/img/cotownity-big.png" alt="">
+              {% image
+                constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + ph.id +"/Image/contents?access_token=" + token,
+                ph.Name, ph.Name, "",
+                [500], ""
+              %}
             </li>
-            <li class="splide__slide">
-              <img src="/assets/img/cotownity-big.png" alt="">
-            </li>
-            <li class="splide__slide">
-              <img src="/assets/img/cotownity-big.png" alt="">
-            </li>
-            <li class="splide__slide">
-              <img src="/assets/img/cotownity-big.png" alt="">
-            </li>
+            {% endfor %}
+            {% endfor %}
           </ul>
         </div>
       </section>
+
     </div>
+
     <!-- RIGHT -->
     <div class="right-data pure-u-11-12 pure-u-lg-11-24">
       <div class="title-favorite pure-u-1">
@@ -101,6 +107,7 @@
         <button class="btn-primary">Agendar Visita</button>
       </div>
     </div>
+
     <!-- TEXT EXPANSION -->
     <div class="description text pure-u-23-24">     
         <div class="expansion pure-u-1">
@@ -114,7 +121,9 @@
           </div>       
         </div>
     </div>
+
   </section>
+
 </section>
 
 
