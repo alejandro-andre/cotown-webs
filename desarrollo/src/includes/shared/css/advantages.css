@@ -80,6 +80,8 @@ main .container-main section.container-advantages .grid .promo-contain .over.ar-
     width: 100%;
     height: auto;
     overflow: hidden;
+    cursor: pointer;
+    background-color: var(--primary-bg);
 }
 
 main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9::before {
@@ -91,7 +93,7 @@ main .container-main section.container-advantages .grid .promo-contain .over.ar-
     z-index: 1;
 }
 
-main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9 img.img1 {
+main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9 .img1 {
     width: 100%;
     height: 100%;
     display: block;
@@ -101,21 +103,22 @@ main .container-main section.container-advantages .grid .promo-contain .over.ar-
     left: 0px;
     object-fit: cover;
 }
-main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9 img.img2 {
+main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9 .img2 {
     display: none;
 }
-main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9:hover img.img1 {
+main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9:hover .img1 {
     display: none;
 }
-main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9:hover img.img2 {
+main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9:hover .img2 {
     width: 100%;
     height: 100%;
-    display: block;
+    display: block!important;
     position: absolute;
     z-index: 2;
     top: 0px;
     left: 0px;
     object-fit: cover;
+    opacity: .8;
 }
 
 main .container-main section.container-advantages .grid.show {
@@ -210,7 +213,7 @@ button.btn-secondary {
         padding-top: 3px;
     }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
     main .container-main .first-contain .img-right img {
         width: 40%;
     }
@@ -225,6 +228,9 @@ button.btn-secondary {
     }
     main .container-main section.container-advantages .grid .promo .promo-contain .promo-text {
         font-size: 12px;
+    }
+    main .container-main section.container-advantages .grid .promo-contain {
+        width: calc(100% - 2em);
     }
 }
 @media only screen and (max-width: 599px) {
