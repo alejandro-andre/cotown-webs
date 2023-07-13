@@ -54,7 +54,7 @@
               <div class="card shadow desktop">
 
                 <div class="ratio desktop">
-                  <a href="flat.html">
+                  <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
                     {% image
                         constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
                         b.Name, b.Name, "card-img-top",
@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="card-body d-flex flex-column">
-                  <a href="flat.html">
+                  <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
 
                     <div class="flex-grow-1">
                         <p>{{ b | translate ('Description', L) | safe }}</p>

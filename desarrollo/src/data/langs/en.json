@@ -12,6 +12,9 @@
         "privacy":       { "url": "privacy",       "title": "Privacy policies", "description": "" },
         "legal":         { "url": "aviso-legal",   "title": "Legal",            "description": "" },
         "data-security": { "url": "data-security", "title": "Data security",    "description": "" },
-        "flat":          { "url": "flat",          "title": "flat",             "description": "" }
+        
+        "building":      { "url": "building",             "title": "building",               "description": "" },
+        "residence":     { "url": "residence",            "title": "residence",              "description": "" },
+        "flat":          { "url": "flat",                 "title": "flat",                   "description": "" }
     }
 }
