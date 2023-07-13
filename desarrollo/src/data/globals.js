@@ -10,8 +10,8 @@ module.exports = async (config) => {
             ...common,
             "author": "COTOWN",
             "image": "TBD",
-            "url": "https://www.cotown.com",
-            "cdn": "https://www.cotown.com",
+            "url": "https://cotown.com",
+            "cdn": "https://cotown.com",
             "rrss": {
                 "wh": "https://api.whatsapp.com/send?phone=+34663041433&text=Hello! I want to be a Cotowner!! ",
                 "tk": "https://www.tiktok.com/@cotown_es",
@@ -28,8 +28,8 @@ module.exports = async (config) => {
             ...common,
             "author": "VANGUARD",
             "image": "TBD",
-            "url": "https://www.pisosestudiantesbarcelona.com",
-            "cdn": "https://www.pisosestudiantesbarcelona.com",
+            "url": "https://vanguard-student-housing.com",
+            "cdn": "https://vanguard-student-housing.com",
             "rrss": {
                 "wh": "https://api.whatsapp.com/send?phone=+34663041433&text=Hello! I want to be a Vanguarder!! ",
                 "tk": "https://www.tiktok.com/@cotown_es",
