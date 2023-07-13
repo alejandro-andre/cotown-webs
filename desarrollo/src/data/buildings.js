@@ -33,8 +33,12 @@ module.exports = async (config) => {
               }
           }
       }
-      Photos: Media_buildingListViaBuilding_id {
+      Photos: Media_buildingListViaBuilding_id (
+        orderBy: [{ attribute: Order }]
+      ) {
         id
+        Order
+        Name
       }
     }
   }`;

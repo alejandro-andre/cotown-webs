@@ -2,15 +2,15 @@
   <section id="image-carousel" class="splide first-slider pure-u-1" aria-label="Beautiful Images">
     <div class="splide__track">
       <ul class="splide__list">
+        {% for i in building.Photos %}
         <li class="splide__slide">
-          <img src="/assets/img/pisos/napoles-slider.png">
+          {% image
+            constants.SERVER + "/wopi/files/Marketing/Media_building/" + i.id +"/Image/contents?access_token=" + token,
+            i.Name, i.Name|slug, "",
+            [1200], ""
+          %}
         </li>
-        <li class="splide__slide">
-          <img src="/assets/img/cotownity-big.png">
-        </li>
-        <li class="splide__slide">
-          <img src="/assets/img/apartm.png">
-        </li>
+        {% endfor %}
       </ul>
     </div>
   </section>

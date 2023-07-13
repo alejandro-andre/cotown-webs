@@ -139,7 +139,7 @@ module.exports = (eleventyConfig) => {
       });
       return metadata.svg[0].buffer.toString();
     } catch (err) {
-      console.log(`Mising svg ${name} ${src}]`);
+      console.log(`Mising svg ${name} ${src}`);
       return '';
     }
   })  
@@ -173,7 +173,8 @@ module.exports = (eleventyConfig) => {
       html = Image.generateHTML(metadata, imageAttributes);
       return html.replace("height", "h");
     } catch (err) {
-      console.log(`Mising image ${name} ${src}]`);
+      console.log(err);
+      console.log(`Mising image ${name} ${src}`);
       return `<span style="color:red;">[image missing ${name}]</span>`;
     }
 	});
