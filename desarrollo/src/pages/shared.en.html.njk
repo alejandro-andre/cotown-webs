@@ -1,7 +1,7 @@
 ---
 name: building
 eleventyComputed:
-    L: "es"
+    L: "en"
     title: "{{langs[L].pages[name].title}}"
     alt:
       es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
@@ -20,4 +20,4 @@ changefreq: "weekly"
 priority: "1.0"
 tags: page
 ---
-{% include 'shared/sections/building/building.html.njk' %}
+{% include 'shared/sections/shared/shared.html.njk' %}
