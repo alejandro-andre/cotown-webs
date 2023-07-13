@@ -1,5 +1,12 @@
 <section class="all-rooms pure-u-1">
-    <section class="card-room pure-u-1 pure-u-lg-22-24">
+  
+  <div class="title pure-u-1 pure-u-lg-23-24">
+    <div class="corner">
+      <img alt="corner" src="/assets/img/corner.svg"></img>
+    </div>
+    <h2>HABITACIONES INDIVIDUALES</h2>
+  </div>
+  <section class="card-room pure-u-1 pure-u-lg-22-24">
     <!-- LEFT -->   
     <div class="left-carousel pure-u-1 pure-u-lg-11-24">
       <section id="main-carousel" class="splide rooms-carousel" aria-label="Gallery">
@@ -42,46 +49,19 @@
     <!-- RIGHT -->
     <div class="right-data pure-u-11-12 pure-u-lg-11-24">
       <div class="title-favorite pure-u-1">
-        <p class="pure-u-7-8">Apartamento privado</p>
+         <p class="pure-u-7-8">Individual económica</p>
         <em class="icon-heart pure-u-1-8"></em>
       </div>
       <div class="text pure-u-1">
         <p>Dicen que “el buen perfume se vende en frasco pequeño” y en este caso es 100% verdad. Esta tipología de habitación no tiene nada que envidiar a las demás ya que posee todo lo necesario para poder dormir, teletrabajar o impulsar el mejor negocio de la historia.<br>
         Escritorio, espacio de almacenaje, cama individual y el espacio suficiente como para crear tu propia república independiente.</p>
       </div>
-      <div class="option pure-u-1">
-        <p class="persons">
-        Apartamento Privado
-        </p>
+      <div class="option pure-u-1">        
         <p class="bold">
         Desde 740€/mes
         </p>
       </div>
-      <form class="pure-form">
-      <fieldset> 
-      </fieldset>
-      </form>
-      <section class="apartment-services pure-u-1">
-        <div id="splideApartment" class="splide splide-services" role="group">
-          <div class="splide__track">
-            <ul class="splide__list">
-              {% for s in services %}
-              <li class="splide__slide">
-                <div class="slide">
-                  <div class="img">
-                    {% svg 
-                      constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
-                      s.Name
-                    %}
-                  </div>
-                <p class="title">{{s | translate('Name', L)}}</p>
-                </div>           
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </section> 
+     
       <div class="buttons pure-u-1">
         <button class="btn-secondary">Reservar</button>
         <button class="btn-primary">Agendar Visita</button>

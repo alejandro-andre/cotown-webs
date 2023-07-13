@@ -45,8 +45,8 @@
     <!-- RIGHT -->
     <div class="right-data pure-u-11-12 pure-u-lg-11-24">
       <div class="title-favorite pure-u-1">
-        <p>Individual económica</p>
-        <em class="icon-heart"></em>
+         <p class="pure-u-7-8">Individual económica</p>
+        <em class="icon-heart pure-u-1-8"></em>
       </div>
       <div class="text pure-u-1">
         <p>Dicen que “el buen perfume se vende en frasco pequeño” y en este caso es 100% verdad. Esta tipología de habitación no tiene nada que envidiar a las demás ya que posee todo lo necesario para poder dormir, teletrabajar o impulsar el mejor negocio de la historia.<br>
@@ -77,28 +77,7 @@
             </div>
           </div>
         </div>
-         <!-- SERVICES  -->
-        <section class="aparment-services pure-u-23-24 pure-u-lg-11-24 ">
-          <div id="splideServices" class="splide splide-services" role="group">
-            <div class="splide__track">
-              <ul class="splide__list">
-                {% for s in services %}
-                <li class="splide__slide">
-                  <div class="slide">
-                    <div class="img">
-                      {% svg 
-                        constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
-                        s.Name
-                      %}
-                    </div>
-                  <p class="title">{{s | translate('Name', L)}}</p>
-                  </div>           
-                </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </section>       
+              
         <div class="extra">
           <div class="title">
             <p>Servicios extra</p>

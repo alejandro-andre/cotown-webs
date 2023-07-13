@@ -1,27 +1,27 @@
 <!-- Additional HEAD content -->
 {% block head %}
-<link rel="stylesheet" href="/assets/css/apartment.css">
+<link rel="stylesheet" href="/assets/css/residence.css">
 {% endblock %}
 
 <!-- Main -->
-<main class="apartment pure-u-1">
+<main class="flat pure-u-1">
   <div class="container-main pure-u-1">
 
     <!-- First -->
     <section class="first pure-u-1">
-    {% include 'shared/sections/apartment/first.html.njk' %}   
+    {% include 'shared/sections/residence/first.html.njk' %}   
     </section>
 
     <!-- Rooms -->
     <section class="rooms pure-u-1">
-    {% include 'shared/sections/apartment/rooms.html.njk' %}
+    {% include 'shared/sections/residence/rooms.html.njk' %}
     </section>
 
     <section class="last pure-u-1">  
       
       <!-- Last -->
       <div class="last-zone pure-u-1">
-        {% include 'shared/sections/apartment/last.html.njk' %}
+        {% include 'shared/sections/residence/last.html.njk' %}
       </div>
 
       <!-- Map -->
@@ -57,22 +57,6 @@ new Splide("#splideServices", {
     768: { perPage: 3, padding: '0.5em' },
   },
 }).mount();  
-
-new Splide("#splideApartment", {
-  type: 'loop',
-  autoHeight: true,
-  focus: 0,
-  perPage: 4,
-  perMove: 1,
-  gap: '1em',
-  pagination: false,
-  breakpoints: {
-    1024: { perPage: 3 },
-    768: { perPage: 3, padding: '0.5em' },
-  },
-}).mount();  
-
-
 
 var main = new Splide( '#main-carousel', {
   type        : 'fade',

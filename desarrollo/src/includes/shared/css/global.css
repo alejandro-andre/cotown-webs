@@ -1553,6 +1553,7 @@ button.date-button input.inputs {
     }   
     .container-header.first .left-content .banner-container .spot .close em {
         font-size: 18px;
+        color: var(--white);
     }
     .container-header.first .left-content .banner-container .spot h1 {
         font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
