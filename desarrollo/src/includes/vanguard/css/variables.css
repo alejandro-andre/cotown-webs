@@ -17,6 +17,8 @@
     --white-background: #f4f4f4;
     --footer: #121212;
     --primary-bg: #ff516587;
+
+    --location-label-bg: rgba(255, 81, 102, 0.20);
     
     /* // Text color */
     --primary-text: #ffffff;
