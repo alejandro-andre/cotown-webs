@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"src/assets/vanguard": "assets"});
   eleventyConfig.addGlobalData("site", "vanguard");
   eleventyConfig.addGlobalData("siteid", 1);
+  eleventyConfig.addGlobalData("year", 2023);
   return {
     created: new Date(),
     passthroughFileCopy: true,

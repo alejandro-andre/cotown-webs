@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"src/assets/cotown": "assets"});
   eleventyConfig.addGlobalData("site", "cotown");
   eleventyConfig.addGlobalData("siteid", 2);
+  eleventyConfig.addGlobalData("year", 2023);
   return {
     created: new Date(),
     passthroughFileCopy: true,

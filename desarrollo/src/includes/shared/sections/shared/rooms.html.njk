@@ -1,7 +1,16 @@
+{% set flag = true %}
 {% for r in rooms %}
 {% if r.id == building.id %}
 {% for p in r.Place_types %}
 {% if p.Code[0] == type %}
+
+{% if flag %}
+{% set flag = false %}
+<div class="title pure-u-1 pure-u-lg-21-24">
+  <h2>{{typetitle}}</h2>
+</div>
+{% endif %}
+
 <section class="card-room pure-u-1 pure-u-lg-22-24">
 
   <!-- LEFT -->   
@@ -51,7 +60,9 @@
     <!-- Title -->
     <div class="title-favorite pure-u-1">
       <p>{{place_types[p.Code] | translate('Name', L)}}</p>
+      <!--
       <em class="icon-heart"></em>
+      -->
     </div>
 
     <!-- Description -->
@@ -92,20 +103,28 @@
 
       <!-- Extra -->
       <div class="extra">
+        {% set flag = false %}
+        {% for a in amenities %}
+        {% if a.id == building.id and a.Place_type == p.Code %}
+        {% if not flag %}
+        {% set flag = true %}
         <div class="title">
           <p>Servicios extra</p>
         </div>
+        {% endif %}
         <div class="extras">
           <div class="left">
             <label for="default-remember" class="pure-checkbox">
               <input type="checkbox" id="default-Kitchenette" value="option"/>
-              Kitchenette
+              {{a | translate('Name', L)}}
             </label>           
           </div>
           <div class="right">
-            <p>XXX€/mes</p>
+            <p>+{{a.Increment}}%/mes</p>
           </div>
         </div> 
+        {% endif %}
+        {% endfor %}
       </div>
 
       </fieldset>

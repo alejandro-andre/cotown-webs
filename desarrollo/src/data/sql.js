@@ -15,7 +15,6 @@ module.exports = async (url, name) => {
 
   // Get data
   addr = K.BACK + url + '?access_token=' + auth;
-  console.log(addr);
   const query_res = await fetch(K.BACK + url + '?access_token=' + auth, { method: 'GET'});
   const query_data = await query_res.json();
   return(query_data); 
