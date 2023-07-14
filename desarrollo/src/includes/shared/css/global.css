@@ -293,7 +293,7 @@ header, main, footer {
     display: block;
 }
 main {
-    margin-top: 136px;
+    margin-top: 145px;
     overflow: hidden;
 }
 
@@ -1490,7 +1490,7 @@ button.date-button input.inputs {
         z-index: 1000;
     }  
     main {
-        margin-top: 0;
+        margin-top: 0px;
     }
     h1.h1-logo {
         font-size: 38px;
