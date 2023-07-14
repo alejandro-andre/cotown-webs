@@ -21,17 +21,17 @@ module.exports = async (config) => {
         }
       }
       Services: Building_serviceListViaBuilding_id {
-          Service: Building_service_typeViaService_id {
-              id
-              Name
-              Name_en
-              Images: Media_service_typeListViaService_type_id (
-                  joinType: INNER
-                  where: { Segment_id: { EQ: $id } }
-              ) {
-                  id
-              }
+        Service: Building_service_typeViaService_id {
+          id
+          Name
+          Name_en
+          Images: Media_service_typeListViaService_type_id (
+            joinType: INNER
+            where: { Segment_id: { EQ: $id } }
+          ) {
+            id
           }
+        }
       }
       Photos: Media_buildingListViaBuilding_id (
         orderBy: [{ attribute: Order }]
