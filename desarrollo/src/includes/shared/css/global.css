@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5, h6 {
 p, input, label, a {
     font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
 }
+a {
+    text-decoration: none;
+    color: var(--black);
+}
 
 button.btn-primary a {
     color: var(--primary);
@@ -180,6 +184,17 @@ button {
     padding: 12px 26px;
 }
 
+.btn-text {
+    color: var(--black);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 150%;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn-text:hover {
+    color: var(--primary);
+}
 /* LEAFLET */
 .leaflet-container {
     z-index: 0;
@@ -1539,6 +1554,7 @@ button.date-button input.inputs {
     }   
     .container-header.first .left-content .banner-container .spot .close em {
         font-size: 18px;
+        color: var(--white);
     }
     .container-header.first .left-content .banner-container .spot h1 {
         font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;

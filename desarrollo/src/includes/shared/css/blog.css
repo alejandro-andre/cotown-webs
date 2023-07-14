@@ -496,7 +496,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
   }
   
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .post .data-post {
     top: 50%;
     height: 50%;

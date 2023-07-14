@@ -123,7 +123,33 @@
   background-color: var(--grey-light-background);
   box-shadow: 0px 20px 30px rgba(22, 22, 22, 0.06);
 }
-
+.rooms .all-rooms .title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 auto 2em;
+}
+.rooms .all-rooms .title .corner {
+  width: fit-content;
+  position: relative;  
+}
+.rooms .all-rooms .title .corner img, .rooms .all-rooms .title .corner svg {
+  width: fit-content;
+  position: absolute;
+  top: -20px;
+  left: -16px;
+}
+.rooms .all-rooms .title h2 {
+  width: fit-content;
+  position: relative;
+  left: 3%;
+  font-size: 64px;
+}
+.rooms .all-rooms .title.no-corner h2 {
+  position: static;  
+  text-align: start;
+}
 .rooms .all-rooms .card-room {
   display: flex;
   flex-flow: row wrap;
@@ -169,7 +195,7 @@
 .right-data .option {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 .right-data .option p {
@@ -309,13 +335,13 @@ margin-bottom: 0.5em;
   line-height: 150%;
   margin: 0 0 2em;
 }
+
 .last {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start; 
   margin-bottom: 2em;
-  padding: 0 auto;
 }
 .last .last-zone {
   display: flex;
@@ -412,6 +438,22 @@ margin-bottom: 0.5em;
   .first .first-contain .after-slide .text-first {    
     margin-left: 1em;
   }
+  .rooms .all-rooms .title {    
+    margin: 0 0.5em 2em;
+    width: 100%;
+  }
+  .rooms .all-rooms .title .corner {    
+    left: 2%;
+  }
+  .rooms .all-rooms .title h2 {
+    width: fit-content;
+    position: relative;
+    font-size: 60px;
+    left: 3%;
+  }
+  .rooms .all-rooms .title.no-corner h2{    
+    margin-left: 0.2em;
+  }
   .last .last-zone .last-content {
     width: 98%;
   }
@@ -430,12 +472,30 @@ margin-bottom: 0.5em;
   .rooms {
     padding: 0;
   }
-  .rooms .all-rooms .title h2 {
-    margin-bottom: 1em;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 100%;
+  .rooms .all-rooms {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 0 0 2em
   }
+  .rooms .all-rooms .title {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 2em auto 0.5em;
+  }
+  .rooms .all-rooms .title .corner img, .rooms .all-rooms .title .corner svg  {
+    display: none;
+  }
+  .rooms .all-rooms .title h2 {
+    position: static;
+    font-size: 40px;
+    text-align: start;   
+  }
+  
   .rooms .all-rooms .card-room{
     display: flex;
     flex-flow: column;
@@ -447,6 +507,7 @@ margin-bottom: 0.5em;
   }  
   .rooms .all-rooms .card-room .left-carousel {
     margin-right: 0;
+    min-height: 300px;
   }
   .first .first-contain .first-slider .splide__arrow--prev {
     left: 32%;
@@ -459,17 +520,31 @@ margin-bottom: 0.5em;
   .first .first-contain .first-slider .splide__pagination {
     bottom: 17%;
   }
+  .right-data {
+    gap: 2em;
+  }
   .right-data .title-favorite {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
   }
-  .rooms .all-rooms .card-room .right-data .title-favorite p {
+  .right-data .title-favorite p {
     font-weight: 700;
-    font-size: 18px;
-    line-height: 130%;
+    font-size: 24px;
+    line-height: 150%;
   }
+  .right-data .title-favorite em {
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .right-data .text p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
   .right-data .option p.persons {
     font-weight: 400;
     font-size: 12px;
@@ -497,6 +572,7 @@ margin-bottom: 0.5em;
   #thumbnail-carousel {
     display: none;
   }
+  
   .last h2 {
     text-align: left;
   }

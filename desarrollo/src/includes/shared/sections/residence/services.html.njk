@@ -1,0 +1,24 @@
+<section class="last-services">
+
+  <div class="text-container">
+    <h2 class="title">Servicios Incluidos</h2>
+  </div>
+
+  <div class="servicios-container">
+    <div class="services-cards">
+
+      {% for s in services %}
+      <div class="card">
+        {% svg 
+           constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
+           s.Name
+        %}
+        <p class="bold">{{s | translate('Name', L)}}</p>
+        <p class="text">{{s | translate('Description', L)}}</p>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+
+</section>

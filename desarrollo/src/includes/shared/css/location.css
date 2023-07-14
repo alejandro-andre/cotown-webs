@@ -121,7 +121,7 @@ a {
     font-size: 78px;
     text-align: left;
     position: absolute;
-    bottom: 40px;
+    bottom: 0;
     left: 20px;
     color: var(--primary-text);
 }
@@ -138,8 +138,11 @@ a {
     z-index: 1000;
     background-color: var(--white-background);
 }
+.carousel .carousel-main-list .card .card-body a {
+    width: 100%;
+}
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .types {
-    width: auto;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -147,8 +150,12 @@ a {
     gap: 0.8em;
 }
 .flex-grow-1 {
-    width: calc(100% - 10em);
-    padding-left: 5em;
+    width: 90%;
+    text-align: center;
+    padding: 0 5%;
+}
+.flex-grow-1 p {
+    font-size: 22px;
 }
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type {
     width: 32%;
@@ -168,13 +175,13 @@ a {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 0.1em 0.5em;
+    padding: 0.1em 5%;
     margin: 0;
-    max-width: 80%;
+    max-width: 90%;
 }
 .room-type h4 {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 400;
 }
 h4 {
     text-transform: uppercase;
@@ -258,7 +265,7 @@ button.green-button.btn-secondary {
     text-align: center;
     padding: 0;
 }
-.splide__slide .ratio.carousel-ratio img {
+.splide__slide .ratio.carousel-ratio svg {
     width: 40px;
 }
 .splide__slide .ratio.carousel-ratio p {
@@ -371,7 +378,7 @@ section.necesities .grid .necesidad .p-text p {
         width: 46px;
     }
     .room-type h4 {
-        font-size: 20px;       
+        font-size: 24px;       
     }
     .room-type p {
         font-size: 16px;        
@@ -412,7 +419,6 @@ section.necesities .grid .necesidad .p-text p {
     }
     
     .carousel .carousel-main-list .splide__slide h3 {
-        bottom: 1%;
         font-size: 46px;
     }
     
@@ -430,7 +436,7 @@ section.necesities .grid .necesidad .p-text p {
         flex-flow: column;
         justify-content: center;
         align-items: center;
-        margin: 2em 04em;
+        margin: 2em 0 4em;
     }
 
 }
@@ -584,7 +590,7 @@ section.necesities .grid .necesidad .p-text p {
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
     font-weight: 400;
-    font-size: 11px;
+    font-size: 20;
     line-height: 150%;
     letter-spacing: 0.08em;
     width: 50%;
@@ -705,7 +711,7 @@ section.necesities .grid .necesidad .p-text p {
     }
 
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
     section.necesities .grid {
         justify-content: flex-start;
     }
