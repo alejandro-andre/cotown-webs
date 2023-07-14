@@ -1,0 +1,504 @@
+
+<section class="first-contain pure-u-1">
+
+  <div class="img-residences pure-u-1">
+    {% image
+      constants.SERVER + "/wopi/files/Marketing/Media/" + images['faqs'].id +"/Image/contents?access_token=" + token,
+      "FAQs", "FAQs", "img-faqs", [auto], ""
+    %}
+  </div>  
+
+  <div class="title-big">
+    <div class="h2-big">
+      <h1>Nuestras residencias</h1>
+    </div>        
+  </div>
+
+  <div class="search pure-u-22-24">
+    <form>
+      <form class="search-form pure-u-1">
+            <!-- Filter -->
+            <select id="category" class="search-container  pure-u-7-24" onchange="goTag()">
+              <option value="">{% literal texts, 'filtrar-categoria', L %}</option>
+              {% for t in tags %}
+              <option value="{{t | translate('Name', L)|ascii}}">{{t | translate('Name', L)}}</option>
+              {% endfor %}
+            </select>
+          </form>
+    </form>
+  </div>
+
+</section>
+
+<section class="residence-locations pure-u-1">
+  <div class="location">
+    <div class="title">
+      <img class="img mobile" src="/assets/img/corner.svg"></img>
+      <h2>barcelona</h2>
+      <img class="img desktop" src="/assets/img/corner.svg"></img>    
+    </div>
+  </div>
+  <div class="residence-cards">
+    <div class="residence-card">
+      <div class="img">
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
+          "apartamento-privado", "apartamento-privado", "",
+          [500], ""
+        %}
+      </div> 
+      <div class="card-title">
+        <h3>Sardenya</h3>
+      </div>
+      <div class="desde">
+        <p>Desde</p>
+      </div>
+      <div class="types">
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="residence-card">
+      <div class="img">
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
+          "apartamento-privado", "apartamento-privado", "",
+          [500], ""
+        %}
+      </div> 
+      <div class="card-title">
+        <h3>Sardenya</h3>
+      </div>
+      <div class="desde">
+        <p>Desde</p>
+      </div>
+      <div class="types">
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="residence-card">
+      <div class="img">
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
+          "apartamento-privado", "apartamento-privado", "",
+          [500], ""
+        %}
+      </div> 
+      <div class="card-title">
+        <h3>Sardenya</h3>
+      </div>
+      <div class="desde">
+        <p>Desde</p>
+      </div>
+      <div class="types">
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</section>
+<section class="residence-locations pure-u-1">
+  <div class="location">
+    <div class="title">
+      <img class="img mobile" src="/assets/img/corner.svg"></img>
+      <h2>barcelona</h2>
+      <img class="img desktop" src="/assets/img/corner.svg"></img>    
+    </div>
+  </div>
+  <div class="residence-cards">
+    <div class="residence-card">
+      <div class="img">
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
+          "apartamento-privado", "apartamento-privado", "",
+          [500], ""
+        %}
+      </div> 
+      <div class="card-title">
+        <h3>Sardenya</h3>
+      </div>
+      <div class="desde">
+        <p>Desde</p>
+      </div>
+      <div class="types">
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="residence-card">
+      <div class="img">
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
+          "apartamento-privado", "apartamento-privado", "",
+          [500], ""
+        %}
+      </div> 
+      <div class="card-title">
+        <h3>Sardenya</h3>
+      </div>
+      <div class="desde">
+        <p>Desde</p>
+      </div>
+      <div class="types">
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="residence-card">
+      <div class="img">
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
+          "apartamento-privado", "apartamento-privado", "",
+          [500], ""
+        %}
+      </div> 
+      <div class="card-title">
+        <h3>Sardenya</h3>
+      </div>
+      <div class="desde">
+        <p>Desde</p>
+      </div>
+      <div class="types">
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+        <div class="type">
+          <p>
+          Individual<br>Estándar       
+          </p>
+          <p class="price">
+          1.020€/mes
+          </p>
+        </div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">
+            <img src="/assets/img/icono__serv_mapa.svg"></img> 
+          </div>
+          <div class="description">
+          2 habitaciones con cama doble
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</section>
