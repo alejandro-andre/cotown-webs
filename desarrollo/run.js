@@ -1,4 +1,4 @@
-const prices = require('./src/data/prices.js');
+const prices = require('./src/data/place_types.js');
 
 (async () => {
   const config = {'site':'vanguard', 'siteid':1};
