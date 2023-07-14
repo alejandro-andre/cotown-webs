@@ -88,7 +88,7 @@
 }
 
 /* MOVIL */
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
     .legal .container-main {
         font-size: 22px;
         width: 90%;
