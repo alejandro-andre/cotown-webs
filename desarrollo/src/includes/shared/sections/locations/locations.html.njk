@@ -1,29 +1,94 @@
- <section class="all-locations">
-
-  <div class="texto-container">
-    <h1 class="title-where">
-      {% literal texts, 'home-localizaciones-titulo', L %}
-    </h1>
-  </div>
-
-  {% for l in locations %}
-  <div class="location pure-u-1">
-    <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html" class="pure-u-1 pure-u-lg-1-3">
-    <div class="img pure-u-1">
-    {% image
-       constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token,
-       l.Name, l.Name|slug, "img-loc",
-       [800], ""
-    %}
+ <section class="all-locations pure-u-1">
+  <div class="left pure-u-1 pure-u-lg-12-24">
+    <div class="texto-container pure-u-1 ">
+      <h1 class="title-where">
+        {% literal texts, 'home-localizaciones-titulo', L %}
+      </h1>
     </div>
-    </a>
-    <div class="text-content pure-u-1 pure-u-lg-2-3">
-      <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
-        <h2 class="lotation-title">{{l | translate('Name', L)}}</h2>
-      </a>
-      <p class="body1">{{l | translate('Description', L)}}</p>
-    </div>       
-  </div>       
-  {% endfor %}
-   
+    <div class="tabs-container pure-u-1">    
+      <div class="tabset">
+
+          <!-- Tabs -->
+        <input type="radio" name="tabset" id="tab1" aria-controls="building" checked>
+        <label for="tab1">
+          <img class="img" src="/assets/img/corner.svg"></img>
+          <div class="label-content">            
+            <img class="icon" alt="" src="/assets/img/icono__hab_habitacion_compartida.svg"></img>
+            <p>PISO<br>COMPARTIDO</p>
+          </div>          
+        </label>
+        <input type="radio" name="tabset" id="tab2" aria-controls="apartment">
+        <label for="tab2">
+          <img class="img" src="/assets/img/corner.svg"></img>
+          <div class="label-content">           
+            <img class="icon" alt="" src="/assets/img/icono__hab_habitacion_compartida.svg"></img>
+            <p>APARTAMENTO<br>PRIVADO</p>
+          </div>          
+        </label>
+        <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+        <label for="tab3">
+          <img class="img" src="/assets/img/corner.svg"></img>
+          <div class="label-content">            
+            <img class="icon" alt="" src="/assets/img/icono__hab_habitacion_compartida.svg"></img>
+            <p>RESIDENCIA<br>UNIVERSITARIA</p>        
+          </div>
+        </label>
+          <!-- Content -->
+        <div class="tab-panels">
+          <section id="building" class="tab-panel">
+            <div class="locations-container pure-u-1">    
+              {% for l in locations %}
+              <div class="location pure-u-1">
+                <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
+                <div class="img pure-u-1">
+                {% image
+                  constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token,
+                  l.Name, l.Name|slug, "img-loc",
+                  [800], ""
+                %}
+                </div>
+                </a>
+                <div class="text-content">
+                  <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
+                    <h2 class="lotation-title">{{l | translate('Name', L)}}</h2>
+                  </a>
+                  <p class="body1">{{l | translate('Description', L)}}</p>
+                </div>       
+              </div>       
+              {% endfor %}
+            </div>
+          </section>
+          <section id="apartment" class="tab-panel">
+           <div class="locations-container pure-u-1">    
+              {% for l in locations %}
+              <div class="location pure-u-1">
+                <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html" class="pure-u-1 pure-u-lg-1-3">
+                <div class="img pure-u-1">
+                {% image
+                  constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token,
+                  l.Name, l.Name|slug, "img-loc",
+                  [800], ""
+                %}
+                </div>
+                </a>
+                <div class="text-content pure-u-1 pure-u-lg-2-3">
+                  <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
+                    <h2 class="lotation-title">{{l | translate('Name', L)}}</h2>
+                  </a>
+                  <p class="body1">{{l | translate('Description', L)}}</p>
+                </div>       
+              </div>       
+              {% endfor %}
+            </div>
+          </section>
+        </div>
+        
+      </div> 
+    </div>    
+  </div>
+  <div class="right pure-u-1 pure-u-lg-10-24">
+    <div class="img">
+      <img class="img" alt="locations" src="/assets/img/"/>
+    </div>
+  </div>
 </section>
