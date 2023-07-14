@@ -1,0 +1,136 @@
+<!-- Additional HEAD content -->
+{% block head %}
+<link rel="stylesheet" href="/assets/css/building.css">
+{% endblock %}
+
+<!-- Main -->
+<main class="flat pure-u-1">
+  <div class="container-main pure-u-1">
+
+    <!-- First -->
+    <section class="first pure-u-1">
+    {% include 'shared/sections/shared/first.html.njk' %}   
+    </section>
+
+    <!-- Rooms -->
+    <section class="rooms pure-u-1">
+      <section class="all-rooms pure-u-1">
+        {% set type = 'I' %}
+        {% set typetitle = 'HABITACIONES INDIVIDUALES' %}
+        {% include 'shared/sections/shared/rooms.html.njk' %}
+        {% set type = 'D' %}
+        {% set typetitle = 'HABITACIONES COMPARTIDAS' %}
+        {% include 'shared/sections/shared/rooms.html.njk' %}
+      </section>
+    </section>
+
+    <!-- Rest of info -->
+    <section class="last pure-u-1">  
+      
+      <!-- Last -->
+      <div class="last-zone pure-u-1">
+        {% include 'shared/sections/shared/last.html.njk' %}
+      </div>
+
+      <!-- Map -->
+      <section class="map"><div class="map" id="map">
+      </div></section>
+
+      <!-- Services -->
+      <div class="last-services pure-u-1">
+        {% include 'shared/sections/shared/services.html.njk' %}
+      </div>
+      
+    </section>
+
+  </div>
+</main>
+
+{% block footer %}
+{% set script %}
+// Slider inicio
+new Splide( '#image-carousel', {
+  type  : 'fade',
+  rewind: true,
+  perPage: 1,
+  pagination: true, 
+  cover: true,
+}).mount();
+
+// Slider servicios
+new Splide("#splideServices", {
+  type: 'loop',
+  autoHeight: true,
+  focus: 0,
+  perPage: 6,
+  perMove: 1,
+  gap: '1em',
+  pagination: false,
+  breakpoints: {
+    1024: { perPage: 4 },
+    768: { perPage: 2, padding: '0.5em' },
+  },
+}).mount();  
+
+// Sliders tipos de habitacion
+{% for r in rooms %}
+{% if r.id == building.id %}
+{% for p in r.Place_types %}
+var main{{p.Code}} = new Splide( '#main-carousel-{{p.Code}}', {
+  type: 'fade',
+  rewind: true,
+  pagination: true,
+  height: '400px',
+  arrows: true,
+  breakpoints: {
+    1024: {
+      autoplay: true,
+      arrows: false,
+      pagination: false,
+    },
+  },
+});
+var thumbnails{{p.Code}} = new Splide('#thumbnail-carousel-{{p.Code}}', {
+  fixedWidth: 240,
+  fixedHeight: 180,
+  rewind: true,
+  pagination: false,
+  arrows: false,
+  isNavigation: true,
+});
+main{{p.Code}}.sync(thumbnails{{p.Code}});
+main{{p.Code}}.mount();
+thumbnails{{p.Code}}.mount();
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+// Slider final
+var main = new Splide('#main-gallery', {
+  type: 'fade',
+  rewind: true,
+  pagination: true,
+  arrows: true,
+  breakpoints: {
+    1024: {
+      autoplay: true,
+      arrows: false,
+      pagination: false,
+    },
+  },
+});
+var thumbnails = new Splide('#thumbnail-gallery', {
+  fixedWidth: 296,
+  fixedHeight: 212,
+  rewind: true,
+  pagination: false,
+  arrows: false,
+  isNavigation: true,
+  gap: 10,
+});
+main.sync(thumbnails);
+main.mount();
+thumbnails.mount();
+
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}
