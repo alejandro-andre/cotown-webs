@@ -126,8 +126,9 @@
 .rooms .all-rooms .title {
   display: flex;
   flex-flow: row wrap;
-  justify-content: stretch;
+  justify-content: flex-start;
   align-items: flex-start;
+  margin: 0 auto 2em;
 }
 .rooms .all-rooms .title .corner {
   width: fit-content;
@@ -137,7 +138,7 @@
   width: fit-content;
   position: absolute;
   top: -20px;
-  left: 10px;
+  left: -16px;
 }
 .rooms .all-rooms .title h2 {
   width: fit-content;
@@ -145,7 +146,10 @@
   left: 3%;
   font-size: 64px;
 }
-
+.rooms .all-rooms .title.no-corner h2 {
+  position: static;  
+  text-align: start;
+}
 .rooms .all-rooms .card-room {
   display: flex;
   flex-flow: row wrap;
@@ -338,7 +342,6 @@ margin-bottom: 0.5em;
   justify-content: center;
   align-items: flex-start; 
   margin-bottom: 2em;
-  padding: 0 auto;
 }
 .last .last-zone {
   display: flex;
@@ -346,6 +349,9 @@ margin-bottom: 0.5em;
   justify-content: center;
   align-items: flex-start;
   padding: 2em auto;
+}
+.last .last-zone .last-content {
+  padding: 1em 0 0;
 }
 .last h2 {
   text-transform: uppercase;
@@ -432,13 +438,23 @@ margin-bottom: 0.5em;
   .first .first-contain .after-slide .text-first {    
     margin-left: 1em;
   }
+  .rooms .all-rooms .title {    
+    margin: 0 0.5em 2em;
+    width: 100%;
+  }
+  .rooms .all-rooms .title .corner {    
+    left: 2%;
+  }
   .rooms .all-rooms .title h2 {
     width: fit-content;
     position: relative;
-    left: 4%;
     font-size: 60px;
+    left: 3%;
   }
-  .last .last-zone .last {
+  .rooms .all-rooms .title.no-corner h2{    
+    margin-left: 0.2em;
+  }
+  .last .last-zone .last-content {
     width: 98%;
   }
 }
@@ -460,21 +476,24 @@ margin-bottom: 0.5em;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: flex-start;    
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 0 0 2em
   }
   .rooms .all-rooms .title {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    margin: 2em auto 0.5em;
   }
   .rooms .all-rooms .title .corner img, .rooms .all-rooms .title .corner svg  {
-    font-size: 40px;
-    text-align: start;
+    display: none;
   }
   .rooms .all-rooms .title h2 {
+    position: static;
     font-size: 40px;
-    text-align: start;
+    text-align: start;   
   }
   
   .rooms .all-rooms .card-room{
@@ -488,6 +507,7 @@ margin-bottom: 0.5em;
   }  
   .rooms .all-rooms .card-room .left-carousel {
     margin-right: 0;
+    min-height: 300px;
   }
   .first .first-contain .first-slider .splide__arrow--prev {
     left: 32%;
@@ -500,7 +520,6 @@ margin-bottom: 0.5em;
   .first .first-contain .first-slider .splide__pagination {
     bottom: 17%;
   }
-  
   .right-data {
     gap: 2em;
   }
@@ -553,6 +572,7 @@ margin-bottom: 0.5em;
   #thumbnail-carousel {
     display: none;
   }
+  
   .last h2 {
     text-align: left;
   }

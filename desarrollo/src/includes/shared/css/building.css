@@ -324,11 +324,14 @@ margin-bottom: 0.5em;
   align-items: flex-start;
   padding: 2em auto;
 }
+.last .last-zone .last-content {
+  padding: 1em 0 0;
+}
 .last h2 {
   text-transform: uppercase;
 }
 .last h2 span {
-  color: var(--white);
+  color: var(--primary);
 }
 .last .left .text p {
   font-weight: 500;
@@ -409,7 +412,7 @@ margin-bottom: 0.5em;
   .first .first-contain .after-slide .text-first {    
     margin-left: 1em;
   }
-  .last .last-zone .last {
+  .last .last-zone .last-content {
     width: 98%;
   }
 }
