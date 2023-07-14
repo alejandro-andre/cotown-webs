@@ -21,7 +21,7 @@ main .container-main .first-contain.about .title-big {
     flex-flow: row wrap;
     justify-content: stretch;
     align-items: flex-start;
-    margin: 4em 0 8em 20%;
+    margin: 0 0 8em 20%;
     padding: 50px 50px 50px 25%;
     position: relative;
     z-index: 1;
