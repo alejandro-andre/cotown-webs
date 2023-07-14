@@ -10,16 +10,16 @@
     <section id="main-carousel-{{p.Code}}" class="splide rooms-carousel" aria-label="Gallery">
       <div class="splide__track">
         <ul class="splide__list">
-          {% for pt in photos %}
-          {% for ph in pt.Photos %}
+          {% for rp in room_photos %}
+          {% if rp.Building.id == building.id and rp.Place_type.Code == p.Code %}
           <li class="splide__slide">
             {% image
-              constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + ph.id +"/Image/contents?access_token=" + token,
-              ph.Name, ph.Name, "",
+              constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
+              rp.Name, rp.Name|ascii, "",
               [500], ""
             %}
           </li>
-          {% endfor %}
+          {% endif %}
           {% endfor %}
         </ul>
       </div>
@@ -28,16 +28,16 @@
     <section id="thumbnail-carousel-{{p.Code}}" class="splide" aria-label="Thumbnails">
       <div class="splide__track">
         <ul class="splide__list">
-          {% for pt in photos %}
-          {% for ph in pt.Photos %}
+          {% for rp in room_photos %}
+          {% if rp.Building.id == building.id and rp.Place_type.Code == p.Code %}
           <li class="splide__slide">
             {% image
-              constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + ph.id +"/Image/contents?access_token=" + token,
-              ph.Name, ph.Name, "",
-              [500], ""
+              constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
+              rp.Name, rp.Name|ascii, "",
+              [300], ""
             %}
           </li>
-          {% endfor %}
+          {% endif %}
           {% endfor %}
         </ul>
       </div>
