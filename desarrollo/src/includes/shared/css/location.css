@@ -105,7 +105,7 @@ a {
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop {
     position: relative;
-    max-height: 300px;
+    max-height: 360px;
     object-fit: cover;
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop img {
@@ -151,7 +151,7 @@ a {
 }
 .flex-grow-1 p {
     font-size: 18px;
-    min-height: 132px;
+    min-height: 100px;
     overflow: hidden;
 }
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type {
@@ -219,7 +219,6 @@ button.green-button.btn-secondary {
     margin: 25% 0; */
 }
 
-
 .arrow-nav.splide__arrow {
     height: 4em;
     width: 4em;
@@ -227,26 +226,25 @@ button.green-button.btn-secondary {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .arrow-nav.splide__arrow.splide__arrow--prev {
-    left: 9%;
+    left: 8%;
 }
 .arrow-nav.splide__arrow.splide__arrow--next {
-    right: 9%;
+    right: 8%;
 }
 .arrow-nav.splide__arrow.splide__arrow--prev i, .arrow-nav.splide__arrow.splide__arrow--next i {
     font-size: 34px;
 }
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .carousel-mini {
     position: relative;
-    width: 70vw;
+    width: 60vw;
 }
-
 .splide.mini {
-    padding: 6%;
+    padding: 10px;
     visibility: visible;
 }
 .carousel-mini .splide__list {
     position: relative;
-    padding: 0 2em!important;
+    padding: 0 1em !important;
 }
 .carousel-mini .splide__slide.is-prev, .carousel-mini .splide__slide.is-next {
     opacity: 1;

@@ -74,7 +74,7 @@
     {% for f in p.Flat_types %}
     <div class="option pure-u-1">
       <p class="persons">{{flat_types[f.Code] | translate('Name', L)}}</p>
-      <p class="bold">Desde {{f.Rent_long}}€/mes</p>
+      <p class="bold">{% literal texts, 'price-desde', L %} {{f.Rent_long}}€/mes</p>
     </div>
     {% endfor %}
     -->
@@ -95,7 +95,7 @@
             </label>
           </div>
           <div class="right">
-            <p>Desde {{f.Rent_long}}/mes</p>
+            <p>{% literal texts, 'price-desde', L %} {{f.Rent_long}}/mes</p>
           </div>
         </div>
         {% endfor %}

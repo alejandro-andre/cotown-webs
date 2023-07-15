@@ -1,7 +1,9 @@
 <!-- Additional HEAD content -->
 {% block head %}
-<link rel="stylesheet" href="/assets/css/location.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+{% set css %}
+{% include "shared/css/location.css" %}
+{% include "shared/css/leaflet/leaflet.css" %}
+{% endset %}<style>{{ css | cssmin | safe }}</style>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 {% endblock %}
 
@@ -29,6 +31,20 @@
     <!-- Popups -->
     {% for b in buildings-%}
     {% if b.District.Location.Name == location.Name %}
+
+    {% set min = 9999 %}
+    {% for r in rooms %}
+    {% if r.id == b.id %}
+      {% for p in r.Place_types %}
+      {% for f in p.Flat_types %}
+        {% if min > f.Rent_long %}
+          {% set min = f.Rent_long %}
+        {% endif %}
+      {% endfor %}
+      {% endfor %}
+    {% endif %}
+    {% endfor %}
+
     <div id="{{b.id}}" style="display: none;">
       <div class="mappopup" onclick="location.href='{{langs[L].folder}}/{{b.Name|ascii}}.html';">
         {% image
@@ -38,8 +54,8 @@
         %}
         <div class="info">
           <div class="address">{{b.Name}}</div>
-          <div class="from">desde</div>
-          <div class="price">XXX€/mes</div>
+          <div class="from">{% literal texts, 'price-desde', L %}</div>
+          <div class="price">{{min}}€/{% literal texts, 'price-mes', L %}</div>
         </div>
       </div>
     </div>
@@ -76,14 +92,5 @@ if (markerArray.length > 0) {
   var group = L.featureGroup(markerArray).addTo(map);
   map.fitBounds(group.getBounds());
 }
-
-// Slider
-new Splide('#sliderFlats', {
-  type: 'loop',
-  gap: '10em',
-  focus: 'center',
-  padding: '5rem'
-}).mount();
-
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
