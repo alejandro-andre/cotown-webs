@@ -4,6 +4,7 @@ module.exports = async (config) => {
   const QUERY  = `
   query data ($id: Int) {
     data: Building_BuildingList ( 
+      orderBy: [{ attribute: Name }]
       where: { Segment_id: { EQ: $id } } 
     ) {
       id

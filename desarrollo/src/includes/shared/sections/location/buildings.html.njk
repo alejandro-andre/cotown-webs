@@ -84,22 +84,43 @@
                     <!-- Place types -->
                     <div class="types">
 
+                      {% set minI = 9999 %}
+                      {% set minD = 9999 %}
+                      {% for r in rooms %}
+                      {% if r.id == b.id %}
+                        {% for p in r.Place_types %}
+                        {% for f in p.Flat_types %}
+                          {% if p.Code[0] == 'I' and minI > f.Rent_long %}
+                            {% set minI = f.Rent_long %}
+                          {% endif %}
+                          {% if p.Code[0] == 'D' and minD > f.Rent_long %}
+                            {% set minD = f.Rent_long %}
+                          {% endif %}
+                        {% endfor %}
+                        {% endfor %}
+                      {% endif %}
+                      {% endfor %}
+
                       <!-- Habitacion-compartida -->
+                      {% if minD < 9999 %}
                       <div class="room-type">
                         <img src="/assets/img/icono__hab_habitacion_compartida.svg">
                         <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
-                        <p>{% literal texts, 'price-desde', L %} XXX€/{% literal texts, 'price-mes', L %}</p>
+                        <p>{% literal texts, 'price-desde', L %} {{minD}}€/{% literal texts, 'price-mes', L %}</p>
                       </div>
+                      {% endif %}
 
                       <!-- Habitacion-individual -->
+                      {% if minI < 9999 %}
                       <div class="room-type">
                         <img src="/assets/img/icono__hab_habitacion_individual.svg">
                         <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
-                        <p>{% literal texts, 'price-desde', L %} XXX€/{% literal texts, 'price-mes', L %}</p>
-                        <!--
+                        <p>{% literal texts, 'price-desde', L %} {{minI}}€/{% literal texts, 'price-mes', L %}</p>
+                        <!-- TODO
                         <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>
                         -->
                       </div>
+                      {% endif %}
 
                       <!-- Apartamento-privado -->
                       <div class="room-type">
@@ -114,7 +135,7 @@
 
                   <!-- Internal slider -->
                   <div class="carousel-mini">
-                    <div class="splide mini" id="sliderMini" aria-label="SliderMini">
+                    <div class="splide mini" id="sliderMini{{b.id}}" aria-label="SliderMini">
                       <div class="splide__track">
 
                         <!-- Arrows -->
@@ -258,14 +279,9 @@
 <!-- Sliders -->
 {% block footer %}
 {% set script %}
-// Slider
-new Splide('#sliderMini', {
-   type: 'loop',
-   gap: '2em',
-   perPage: 4,
-   breakpoints: {
-      1400: { perPage: 3 },
-    },
-}).mount();
+// Sliders
+{% for b in buildings %}
+new Splide('#sliderMini{{b.id}}', { type: 'loop', gap: '1em', perMove:1, perPage: 4 }).mount();
+{% endfor %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
