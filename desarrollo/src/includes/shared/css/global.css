@@ -2218,4 +2218,8 @@ button.date-button input.inputs {
     }
 }
 
-
+/* OTHER */
+.anchor {
+    margin-top: -280px;
+    padding-top: 280px;
+}

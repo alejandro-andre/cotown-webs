@@ -6,11 +6,13 @@
     <h2>{% literal texts, 'location-nuestros-pisos-en', L %} {{ location | translate ('Name', L) | safe }}</h2>
 
     <!-- See map button (mobile) -->
+    <a href="#mapanchor">
     <button class="button-map-mobile pure-u-5-24">
       <img src="/assets/img/icono__serv_mapa.svg">
       <p>{% literal texts, 'location-ver-mapa', L %}</p>
     </button>
-
+    </a>
+    
     <!-- Dates -->
     <!-- TODO
     <div class="calendar pure-u-1-1">
@@ -74,7 +76,6 @@
                 </div>
 
                 <div class="card-body d-flex flex-column">
-                  <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
 
                     <!-- Name -->
                     <div class="flex-grow-1">
@@ -104,21 +105,25 @@
                       <!-- Habitacion-compartida -->
                       {% if minD < 9999 %}
                       <div class="room-type">
+                        <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html#D">
                         <img src="/assets/img/icono__hab_habitacion_compartida.svg">
                         <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
                         <p>{% literal texts, 'price-desde', L %} {{minD}}€/{% literal texts, 'price-mes', L %}</p>
+                        </a>
                       </div>
                       {% endif %}
 
                       <!-- Habitacion-individual -->
                       {% if minI < 9999 %}
                       <div class="room-type">
+                        <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html#I">
                         <img src="/assets/img/icono__hab_habitacion_individual.svg">
                         <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
                         <p>{% literal texts, 'price-desde', L %} {{minI}}€/{% literal texts, 'price-mes', L %}</p>
                         <!-- TODO
                         <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>
                         -->
+                        </a>
                       </div>
                       {% endif %}
 
@@ -130,8 +135,6 @@
                       </div>
 
                     </div>
-
-                  </a>
 
                   <!-- Internal slider -->
                   <div class="carousel-mini">
@@ -197,6 +200,7 @@
       <div class="piso-main pure-u-1">
 
         <!-- Photo -->
+        <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
         <div class="img pure-u-1">
           {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
@@ -204,10 +208,13 @@
               [800], ""
           %}
         </div>
+        </a>
 
         <div class="piso pure-u-1">
 
-          <h3>{{b.Name}}</h3>
+          <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
+            <h3>{{b.Name}}</h3>
+          </a>
 
           {% set minI = 9999 %}
           {% set minD = 9999 %}
@@ -277,17 +284,23 @@
           </div>
 
           <!-- Amenities -->
-          <ul class="services-list pure-u-1">
-            {% for s in b.Services %}
-            <li>
-              {% svg
-                constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Service.Images[0].id +"/Icon/contents?access_token=" + token,
-                s.Name
-              %}
-              <p>{{s.Service|translate('Name', L)}}</p>
-            </li>
-            {% endfor %}
-          </ul>
+          <div class="services-list">
+            <div class="splide mini" id="sliderMiniMobile{{b.id}}" aria-label="SliderMini">
+              <div class="splide__track">
+                <ul class="splide__list list-mini">
+                  {% for s in b.Services %}
+                  <li class="splide__slide">
+                    {% svg
+                      constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Service.Images[0].id +"/Icon/contents?access_token=" + token,
+                      s.Name
+                    %}
+                    <p>{{s.Service|translate('Name', L)}}</p>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
 
         </div>
 
@@ -312,6 +325,7 @@ new Splide('#sliderFlats', {
 {% for b in buildings %}
 {% if location.id == b.District.Location.id %}
 new Splide('#sliderMini{{b.id}}', { type: 'loop', gap: '16px', pagination: false, perMove: 1, perPage: 9 }).mount();
+new Splide('#sliderMiniMobile{{b.id}}', { type: 'loop', gap: '16px', arrows: false, pagination: false, perMove: 1, perPage: 6 }).mount();
 {% endif %}
 {% endfor %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
