@@ -16,14 +16,14 @@
         post.Title, post.Title, "img-loc",
         [800], ""
       %}
-      <div class="text pure-u-1 pure-u-18-24">              
+      <div class="text pure-u-1 pure-u-18-24">            
         <div class="text-content">
           {% for t in p.Tags %}
             {{t.Tag | translate('Name', L)}}
           {% endfor %}
           {{post | translate('Content', L) | markdown | safe }}
-        </div>       
-      </div>      
+        </div>     
+      </div>    
     </section>
 
     <section class="like-content pure-u-1">
@@ -42,7 +42,7 @@
           <a href="https://www.tiktok.com/share?url={{page.url}}" rel="noopener, noreferrer" target="_blank"><em class="icon-tiktok"></em></a>
         </div>
 
-      </div>   
+      </div> 
     </section>
 
   </div>

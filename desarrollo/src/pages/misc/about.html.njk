@@ -29,7 +29,7 @@ tags: page
   <div class="container-main">
 
     <div class="container-main">
-      <section class="first-contain about pure-u-1">   
+      <section class="first-contain about pure-u-1"> 
 
         <div class="img pure-u-1 pure-u-lg-10-24">
           {% image
@@ -60,7 +60,7 @@ tags: page
               {% endfor %}
             </ul>
           </div>
-        </div>    
+        </div>  
       </section>
 
       <section class="members row">
@@ -96,26 +96,26 @@ tags: page
 
         {% literal texts, 'about-unete', L, true %}
 
-        <div class="form-container pure-g"> 
+        <div class="form-container pure-g">
 
           <div class="campo pure-u-1 pure-u-lg-11-24">
-            <label class="label">{% literal texts, 'form-nombre', L %}</label>                  
+            <label class="label">{% literal texts, 'form-nombre', L %}</label>                
             <input class="input" type="name" id="name" name="name">
           </div>
 
           <div class="campo pure-u-1 pure-u-lg-11-24">
-            <label class="label">{% literal texts, 'form-apellidos', L %}</label>                  
+            <label class="label">{% literal texts, 'form-apellidos', L %}</label>                
             <input class="input" type="name" id="name" name="name">
-          </div> 
+          </div>
 
           <div class="campo pure-u-1 pure-u-lg-11-24">
-            <label class="label">{% literal texts, 'form-email', L %}</label>                  
+            <label class="label">{% literal texts, 'form-email', L %}</label>                
             <input class="input" type="email" id="email" name="email">
           </div>
 
           <div class="campo number pure-u-1 pure-u-lg-11-24">
             <div class="prefix">
-              <label class="label pure-u-1">{% literal texts, 'form-prefijo', L %}</label>                  
+              <label class="label pure-u-1">{% literal texts, 'form-prefijo', L %}</label>                
               <select class="select pure-u-1" type="select" id="code" name="code">
                 <option>+34</option>
                 <option>+34</option>
@@ -123,18 +123,18 @@ tags: page
               </select>
             </div>
               <div class="num">
-              <label class="label pure-u-1">{% literal texts, 'form-telefono', L %}</label>                  
+              <label class="label pure-u-1">{% literal texts, 'form-telefono', L %}</label>                
               <input class="input pure-u-1" type="phone" id="phone" name="phone">
             </div>
-          </div>        
+          </div>      
 
           <div class="campo add-file">
             <label class="label">{% literal texts, 'form-subir-cv', L %}</label>
-            <div class="select">                 
-              <span class="selected">                   
+            <div class="select">               
+              <span class="selected">                 
                 <input
                   id="selected"
-                  class="input selected"                   
+                  class="input selected"                 
                   accept=".pdf,application/pdf"
                   type="file"
                   value="Subir CV"
@@ -142,16 +142,16 @@ tags: page
                 />
                 <label class="label btn-primary" for="selected">
                   <span>{% literal texts, 'form-adjuntar', L %}</span>
-                </label>               
+                </label>             
               </span>
               <label class="select-file" for="selected">
                 <span>{% literal texts, 'form-subir-cv', L %}</span>
               </label>
-            </div>              
+            </div>            
             <div class="text-ok">
             <p>
             {% literal texts, 'about-ok', L %}
-            </p>              
+            </p>            
             </div>
           </div>
 

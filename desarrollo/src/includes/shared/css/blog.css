@@ -1,11 +1,11 @@
-/* BLOG 
+/* BLOG
 -------------------------------- */
 
 .container-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   margin: 0 auto;
 }
 .first-contain {
@@ -38,7 +38,7 @@
   background-color: var(--white);
   outline: none;
   font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 22px; 
+  font-size: 22px;
   margin:0;
   color: var(--grey-light);
 }
@@ -48,14 +48,14 @@
   line-height: 150%;
   color: var(--grey-light);
 }
-.search select {  
+.search select {
   padding: 12px 16px;
 }
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  /* Some browsers will not display the caret when using calc, so we put the fallback first */ 
+  /* Some browsers will not display the caret when using calc, so we put the fallback first */
   background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
   background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
 }
@@ -113,8 +113,8 @@ input[type="search"]::-webkit-search-results-decoration {
   height: fit-content;
   min-height: 260px;
 }
-.post img {  
-  width: 100%;  
+.post img {
+  width: 100%;
   object-fit: cover;
 }
 .post .mark-content {
@@ -197,9 +197,9 @@ main .container-main .first-contain .title-big .h2-big h1 {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  align-items: flex-start; 
+  align-items: flex-start;
   gap: 4px;
-  
+
 }
 
 .post .data-post p,
@@ -219,7 +219,7 @@ main .container-main .first-contain .title-big .h2-big h1 {
 
 
 
-/* POST 
+/* POST
 -------------------------------- */
 
 main.post-page .container-main .post-content {
@@ -271,7 +271,7 @@ main.post-page .container-main .like-content {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  margin: 0 0 4em;    
+  margin: 0 0 4em; 
 }
 main.post-page .container-main .like-content .like {
   background-color: var(--primary);
@@ -305,7 +305,7 @@ main.post-page .container-main .like-content .like .redes {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 main.post-page .container-main .like-content .like .redes a {
@@ -376,7 +376,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 
 @media only screen and (min-width: 1281px) and (max-width: 1599px) {
   main .container-main .first-contain .title-big .h2-big h1 {
-    font-size: 76px;    
+    font-size: 76px; 
   }
 }
 @media only screen and (min-width: 1023.9px) and (max-width: 1149px) {
@@ -406,7 +406,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;  
+    align-items: center;
   }
   .first-contain {
     display: flex;
@@ -457,9 +457,9 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     margin: 0.5em auto 1em;
     gap: 0.4em;
   }
-  .post .data-post.primary {    
-    box-shadow: none;   
-  }  
+  .post .data-post.primary { 
+    box-shadow: none;
+  }
   .post .img-container {
     height: 100%;
     min-height: 400px;
@@ -472,9 +472,9 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     padding: 0;
     border-radius:  0 0 16px 16px;
   }
-  .post .data-post h1, .post .data-post .p-container {    
+  .post .data-post h1, .post .data-post .p-container { 
     padding: 3% 4% 0;
-  }  
+  }
 
   /* __________________________ POST  ___________________________*/
 
@@ -484,7 +484,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     justify-content: flex-start;
     align-items: center;
     margin: 6em auto;
-  } 
+  }
   main.post-page .container-main .post-content h1 {
     font-weight: 400;
     font-size: 32px;
@@ -501,11 +501,11 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
   main.post-page .container-main .post-content .text .text-content ul li {
     padding-left: 12px;
   }
- 
+
   main.post-page .container-main .post-content .text .text-content p strong,  main.post-page .container-main .post-content .text .text-content p em {
     font-size: 14px;
   }
-  main.post-page .container-main .like-content {        
+  main.post-page .container-main .like-content {     
       margin: 0;
   }
   main.post-page .container-main .like-content .like {
@@ -521,7 +521,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
   main.post-page .container-main .like-content .like .text h3 {
       font-weight: 400;
       font-size: 35.4257px;
-      line-height: 36px;        
+      line-height: 36px;     
   }
   main.post-page .container-main .like-content .like .redes a {
     text-align: center;
@@ -530,7 +530,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
   main.post-page .container-main .like-content .like .redes a em {
       font-size: 25px;
   }
-  
+
 }
 @media only screen and (max-width: 768px) {
   .post .data-post {

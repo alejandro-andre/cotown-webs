@@ -25,7 +25,7 @@
     font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 22px;
     font-weight: 700;
-    margin: 1em 0; 
+    margin: 1em 0;
     text-align: left;
 }
 .legal .container-main p, a, ul, li, th, td {
@@ -53,12 +53,12 @@
     border-left: 1px solid var(--black);
     border-bottom: 1px solid var(--black);
 }
-.legal .container-main table thead tr th:first-child, 
+.legal .container-main table thead tr th:first-child,
 .legal .container-main table tbody tr td:first-child {
     font-weight: 700;
     border-left: none !important;
 }
-.legal .container-main table tbody tr:last-child td { 
+.legal .container-main table tbody tr:last-child td {
     border-bottom: none !important;
 }
 
@@ -84,7 +84,7 @@
     .legal .container-main p, a, ul, li {
         font-size: 20px;
         line-height: 25px;
-    }    
+    } 
 }
 
 /* MOVIL */
@@ -106,5 +106,5 @@
     .legal .container-main p, a, ul, li, th, td {
         font-size: 18px;
         line-height: 22px;
-    }    
+    } 
 }

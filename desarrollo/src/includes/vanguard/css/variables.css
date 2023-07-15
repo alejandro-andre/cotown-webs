@@ -1,4 +1,4 @@
-/* COLORS 
+/* COLORS
 -------------------------------- */
 :root {
     /* // Main color */
@@ -19,14 +19,14 @@
     --primary-bg: #ff516587;
 
     --location-label-bg: rgba(255, 81, 102, 0.20);
-    
+ 
     /* // Text color */
     --primary-text: #ffffff;
     --second-header-text: #121212;
-    --secondary-text-header: #000000;    
+    --secondary-text-header: #000000; 
     --white: #ffffff;
     --black: #000000;
-    
+ 
     /* // Secondary color */
     --grey-light: #3c434a;
     --grey-dark: #30363b;
@@ -39,7 +39,7 @@
     --yellow: #ecf166;
     --yellow-dark: #bdc152;
 
-    /* // Header border */    
+    /* // Header border */ 
     --border-header: 2px solid #D1D1D1;
 
     --h2-border: 2px 0 #FF5166, -2px 0 #FF5166, 0 2px #FF5166, 0 -2px #FF5166,
@@ -49,13 +49,13 @@
     --green-success-light: #e3f2e0;
     --green-success: #8dc881;
     --green-success-dark: #459a33;
-    --yellow-warning-light: #f8f3d8; 
-    --yellow-warning: #e2ca64; 
+    --yellow-warning-light: #f8f3d8;
+    --yellow-warning: #e2ca64;
     --yellow-warning-dark: #c9a81c;
     --red-error-light: #FF5555;
     --red-error: #FF0000;
     --red-error-dark: #CC0000;
-    
+ 
     --shadow: rgba(22, 22, 22, 0.06);
     --shadow-soft: rgba(2, 0, 2, 15%);
     --shadow-medium: rgba(8, 0, 4, 15%);
@@ -74,7 +74,7 @@
 
 
 /* SOLO VANGUARD */
-@media only screen and (min-width: 0px) { 
+@media only screen and (min-width: 0px) {
     .black-menu .locations-dropdown .locations-container .options-loc, .black-menu .locations-dropdown .locations-container .locations-label .icons-open-close {
         display: none;
     }

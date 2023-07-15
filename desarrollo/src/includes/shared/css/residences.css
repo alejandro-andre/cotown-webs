@@ -37,7 +37,7 @@
   background-color: var(--white);
   outline: none;
   font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 22px; 
+  font-size: 22px;
   margin:0;
   color: var(--grey-light);
 }
@@ -47,14 +47,14 @@
   line-height: 150%;
   color: var(--grey-light);
 }
-.search select {  
+.search select {
   padding: 12px 16px;
 }
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  /* Some browsers will not display the caret when using calc, so we put the fallback first */ 
+  /* Some browsers will not display the caret when using calc, so we put the fallback first */
   background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
   background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
 }
@@ -77,7 +77,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .residence-locations {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;  
+  justify-content: flex-start;
   margin: 5% 0 6%;
 }
 .residence-locations .location {
@@ -166,7 +166,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .residence-locations .residence-card .types .type p {
   font-size: 22px;
   font-weight: 300;
-  line-height: 130%; 
+  line-height: 130%;
   color: var(--primary);
   margin-bottom: 0;
 }
@@ -200,7 +200,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .residence-locations .residence-card .services .service .icon img {
   width: 40px;
 }
-.residence-locations .residence-card .services .service .description  {  
+.residence-locations .residence-card .services .service .description  {
   text-align: center;
 }
 .residence-locations .residence-card .services .service .description p {
@@ -224,11 +224,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 /* TABLET */
-@media only screen and (max-width: 1023.9px) {  
+@media only screen and (max-width: 1023.9px) {
   .first-contain .img-residences {
     width: 100vw;
     object-fit: cover;
-  }   
+  }
   .first-contain .img-residences img {
     width: 100vw;
     object-fit: cover;
@@ -239,23 +239,23 @@ input[type="search"]::-webkit-search-results-decoration {
   .first-contain .title-big {
     margin: 2em 1em 0
   }
-  .first-contain .title-big h1 {    
+  .first-contain .title-big h1 { 
     font-weight: 400;
     font-size: 40px;
     line-height: 100%;
   }
-  .search select, .search .search-container label {    
+  .search select, .search .search-container label { 
     font-size: 16px;
     padding: 10px 16px;
   }
- 
-  .residence-locations {    
+
+  .residence-locations { 
     width: 94%;
     margin: 0 auto 2em;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
-    align-items: flex-start;    
+    align-items: flex-start; 
   }
   .residence-locations .location {
     width: 100%;
@@ -273,15 +273,15 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-left: 0;
   }
   .residence-locations .location .title h2 {
-    transform: rotate(0deg);    
+    transform: rotate(0deg); 
     margin: 0px;
     text-align: start;
     width: 100%;
-  }  
+  }
   .residence-locations .location .title .img {
     width: 20px;
     top: -12%;
-    left: -2%;  
+    left: -2%;
   }
   .residence-locations .location .title .img.desktop {
     display: none;
@@ -290,7 +290,7 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100%;
   }
   .residence-locations .residence-card {
-    width: 100%;   
+    width: 100%;
   }
   .residence-locations .residence-card .card-title h3 {
     text-align: start;

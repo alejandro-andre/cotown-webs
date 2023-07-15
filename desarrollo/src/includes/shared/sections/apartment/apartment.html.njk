@@ -9,7 +9,7 @@
 
     <!-- First -->
     <section class="first pure-u-1">
-    {% include 'shared/sections/apartment/first.html.njk' %}   
+    {% include 'shared/sections/apartment/first.html.njk' %} 
     </section>
 
     <!-- Rooms -->
@@ -17,8 +17,8 @@
     {% include 'shared/sections/apartment/rooms.html.njk' %}
     </section>
 
-    <section class="last pure-u-1">  
-      
+    <section class="last pure-u-1">
+    
       <!-- Last -->
       <div class="last-zone pure-u-1">
         {% include 'shared/sections/apartment/last.html.njk' %}
@@ -26,8 +26,8 @@
 
       <!-- Map -->
       <section class="map"><div class="map" id="map">
-      </div></section>    
-      
+      </div></section>  
+    
     </section>
 
   </div>
@@ -40,7 +40,7 @@ new Splide( '#image-carousel', {
   type  : 'fade',
   rewind: true,
   perPage: 1,
-  pagination: true, 
+  pagination: true,
   cover: true,
 }).mount();
 
@@ -56,7 +56,7 @@ new Splide("#splideServices", {
     1024: { perPage: 3 },
     768: { perPage: 3, padding: '0.5em' },
   },
-}).mount();  
+}).mount();
 
 new Splide("#splideApartment", {
   type: 'loop',
@@ -70,7 +70,7 @@ new Splide("#splideApartment", {
     1024: { perPage: 3 },
     768: { perPage: 3, padding: '0.5em' },
   },
-}).mount();  
+}).mount();
 
 
 

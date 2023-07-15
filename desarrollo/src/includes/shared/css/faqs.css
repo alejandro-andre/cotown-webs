@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 .first-contain {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 .first-contain .title-big {
   position: absolute;
@@ -39,8 +39,8 @@
 .search .search-container label input {
   outline: none;
   font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px; 
-  margin:0; 
+  font-size: 16px;
+  margin:0;
   padding:0;
   all: unset;
 }
@@ -61,7 +61,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 1em 0 0;
 }
 .faqs-container .description.text {
-  border-bottom: 1px solid var(--grey-light);  
+  border-bottom: 1px solid var(--grey-light);
 }
 .faqs-container .description.text .expansion {
   padding: 0;
@@ -78,17 +78,17 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 30px;
   line-height: 150%;
   margin: 1em 0.2em;
-  font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;  
+  font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
   text-align: left;
 }
-.expansion .open-close-icon em {    
+.expansion .open-close-icon em { 
   font-size: 46px;
 }
 .faqs-container .description.text .expansion label[class^="tab"]{
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   font-weight: bold;
   font-size: 32px;
   margin: 0;
@@ -102,19 +102,19 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .expansion label[class^="tab"] p {
   text-decoration: underline;
-} 
+}
 .expansion label[class^="tab"]:hover{
   cursor: pointer;
 }
 
-/* RESPONSIVE 
+/* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1281px) and (max-width: 1599px) {
   .faqs-container h1 {
     font-size: 46px;
   }
-  .faqs-container .description.text .expansion h2 {    
-    font-size: 26px;   
+  .faqs-container .description.text .expansion h2 { 
+    font-size: 26px;
   }
   .faqs-container .description.text .expansion .content p, .faqs-container .description.text .expansion .content p a, .faqs-container .description.text .expansion .content ul li {
     font-size: 18px;
@@ -124,7 +124,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 /* TABLET */
-@media only screen and (max-width: 1023.9px) {  
+@media only screen and (max-width: 1023.9px) {
   .first-contain {
     display: flex;
     flex-direction: column;
@@ -134,7 +134,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .first-contain .img-faqs {
     width: 100vw;
     object-fit: cover;
-  }   
+  }
   .first-contain .img-faqs img {
     width: 100vw;
     object-fit: cover;
@@ -169,7 +169,7 @@ input[type="search"]::-webkit-search-results-decoration {
     line-height: 150%;
     margin: 0;
   }
-  .expansion .open-close-icon em {    
+  .expansion .open-close-icon em { 
     font-size: 20px;
   }
   .faqs-container .description.text .expansion .content p, .faqs-container .description.text .expansion .content p a, .faqs-container .description.text .expansion .content ul li {

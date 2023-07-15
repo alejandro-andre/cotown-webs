@@ -7,7 +7,7 @@
 
 <!-- Main -->
 <main class="location">
-  
+
   <section class="location">
     <div class="container-main">
 
@@ -65,9 +65,9 @@ var markerArray = [];
 {% for b in buildings %}
 {% if b.District.Location.Name == location.Name %}
 markerArray.push(putMarker(
-  map, 
-  {{b.Lat_lon.slice(1,-1).split(',')[0]}}, 
-  {{b.Lat_lon.slice(1,-1).split(',')[1]}}, 
+  map,
+  {{b.Lat_lon.slice(1,-1).split(',')[0]}},
+  {{b.Lat_lon.slice(1,-1).split(',')[1]}},
   document.getElementById("{{b.id}}").innerHTML
 ));
 {% endif %}
@@ -78,10 +78,10 @@ if (markerArray.length > 0) {
 }
 
 // Slider
-new Splide('#sliderFlats', { 
-  type: 'loop', 
+new Splide('#sliderFlats', {
+  type: 'loop',
   gap: '10em',
-  focus: 'center', 
+  focus: 'center',
   padding: '5rem'
 }).mount();
 

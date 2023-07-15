@@ -17,14 +17,14 @@
         <li class="splide__slide">
           <div class="slide">
             <div class="img">
-              {% svg 
+              {% svg
                  constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
                  s.Name
               %}
             </div>
           <h3 class="title">{{s | translate('Name', L)}}</h3>
           <p class="text">{{s | translate('Description', L)}}</p>
-          </div>           
+          </div>         
         </li>
         {% endfor %}
 

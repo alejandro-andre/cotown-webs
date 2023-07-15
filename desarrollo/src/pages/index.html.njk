@@ -12,7 +12,7 @@ pagination:
     data: langs
     size: 1
     alias: L
-    addAllPagesToCollections: true  
+    addAllPagesToCollections: true
 
 date: Last Modified
 changefreq: "weekly"
@@ -39,7 +39,7 @@ tags: page
 
     <!-- Pisos -->
     {% include site + '/sections/home/flats.html.njk' %}
-   
+ 
     <!-- Servicios -->
     {% include 'shared/sections/home/services.html.njk' %}
 
@@ -47,7 +47,7 @@ tags: page
     <!--?
     {% include 'shared/sections/home/cotownity.html.njk' %}
     -->
-   
+ 
     <!-- Partners -->
     {% include 'shared/sections/home/partners.html.njk' %}
 
@@ -86,7 +86,7 @@ new Splide(".splide-locations", {
     1024: { padding: '3em', height: '300px' },
     768: { perPage: 1 },
   },
-}).mount();  
+}).mount();
 
 new Splide(".splide-opinions", {
   type: 'slide',
@@ -101,6 +101,6 @@ new Splide(".splide-opinions", {
     1024: { perPage: 1 },
     768: { padding: 0 },
   },
-}).mount();  
+}).mount();
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

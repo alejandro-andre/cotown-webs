@@ -22,7 +22,7 @@
     Un consejo: si quieres ser un auténtic@ #feelinglocal, deja el brunch a un lado y pásate al tapeo por la Dreta de l’Eixample. ​
     </p>
   </div>
-     
+   
   <!-- SERVICES -->
   <section class="flat-services pure-u-23-24 pure-u-lg-11-24 ">
     <div id="splideServices" class="splide splide-services" role="group">
@@ -32,38 +32,38 @@
           <li class="splide__slide">
             <div class="slide">
               <div class="img">
-                {% svg 
+                {% svg
                    constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
                    s.Name
                 %}
               </div>
             <p class="title">{{s | translate('Name', L)}}</p>
-            </div>           
+            </div>         
           </li>
           {% endfor %}
         </ul>
       </div>
     </div>
   </section>
-  
+
   </div>
  <div class="pure-u-1 after-slide bottom">
     <div class="text-first pure-u-23-24 pure-u-lg-10-24">
       <button class="btn-text"><a>Tour virtual</a></button>
       <button class="btn-text"><a>Nuestros pisos</a></button>
-      <button class="btn-text"><a>Tu nuevo barrio</a></button>    
+      <button class="btn-text"><a>Tu nuevo barrio</a></button>  
   </div>
-     
+   
   <!--  CALENDAR -->
-  <section class="right-calendar pure-u-23-24 pure-u-lg-11-24 ">   
+  <section class="right-calendar pure-u-23-24 pure-u-lg-11-24 "> 
     <!-- CALENDAR -->
     <div class="calendar pure-u-1-1">
-      <div class="reservas_form_div pure-u-1">           
+      <div class="reservas_form_div pure-u-1">         
         <form id="reservas_form" name="form_multi" method="GET">
           <button class="date-button">
             <label class="labels">Entrada</label>
             <input type="text" id="in" onfocus="(this.type='date')" class="inputs" name="in" placeholder="02/06/2023"/>
-          </button>   
+          </button> 
           <button class="date-button">
             <label class="labels">Salida</label>
             <input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="02/09/2023"/>
@@ -72,8 +72,8 @@
       </div>
     </div>
   </section>
-  
+
   </div>
- 
+
 </section>
 

@@ -9,7 +9,7 @@
 
       {% for s in services %}
       <div class="card">
-        {% svg 
+        {% svg
            constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
            s.Name
         %}

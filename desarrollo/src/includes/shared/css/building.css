@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 .first .first-contain {
   box-shadow: 0px 20px 30px rgba(22, 22, 22, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 .first .first-contain .first-slider .splide__slide {
   height: 70vh;
@@ -44,7 +44,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.first .first-contain .after-slide.bottom {  
+.first .first-contain .after-slide.bottom {
   align-items: start;
   padding: 0 0 2em;
 }
@@ -52,7 +52,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: start;
-  align-items: center;  
+  align-items: center;
   margin: 0 0 0 4em;
   padding: 1em 0 0;
   gap: 40px;
@@ -80,7 +80,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
 }
 .first .first-contain .flat-services .splide-services .splide__list .splide__slide .slide .img {
   width: 50px;
@@ -118,7 +118,7 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   padding: 4em 0 2em;
   background-color: var(--grey-light-background);
   box-shadow: 0px 20px 30px rgba(22, 22, 22, 0.06);
@@ -150,7 +150,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
 }
 .right-data .title-favorite p {
   font-weight: 700;
@@ -234,14 +234,14 @@
 }
 .right-data input[type=checkbox]:before {	
   font-family: 'icons';
-  content: "\e906";    
+  content: "\e906"; 
 }
 .right-data input[type=checkbox]:checked:before {
 	content: "\e907";
 }
 .right-data input[type=radio]:before {	
   font-family: 'icons';
-  content: "\e928";    
+  content: "\e928"; 
 }
 .right-data input[type=radio]:checked:before {
 	content: "\e929";
@@ -276,7 +276,7 @@
 }
 
 .card-room .description.text {
-  border-bottom: 1px solid var(--grey-light);  
+  border-bottom: 1px solid var(--grey-light);
 }
 .card-room .description.text .expansion {
   padding: 0;
@@ -297,7 +297,7 @@ margin-bottom: 0.5em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
-  align-items: center;  
+  align-items: center;
   font-weight: bold;
   font-size: 32px;
   margin: 18px 0 0 30px;
@@ -313,7 +313,7 @@ margin-bottom: 0.5em;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;
   margin-bottom: 2em;
   padding: 0 auto;
 }
@@ -348,7 +348,7 @@ margin-bottom: 0.5em;
   height: 10px;
 }
 
-  
+
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
   .first .first-contain .first-slider .splide__pagination {
@@ -373,7 +373,7 @@ margin-bottom: 0.5em;
   }
   .right-data .text p {
     font-size: 16px;
-  } 
+  }
   .right-data .option p.persons {
     font-size: 22px;
   }
@@ -409,7 +409,7 @@ margin-bottom: 0.5em;
   .first .first-contain .first-slider .splide__pagination {
     bottom: 17%;
   }
-  .first .first-contain .after-slide .text-first {    
+  .first .first-contain .after-slide .text-first { 
     margin-left: 1em;
   }
   .last .last-zone .last-content {
@@ -420,7 +420,7 @@ margin-bottom: 0.5em;
 /* RESPONSIVE */
 
 @media only screen and (max-width: 1023.9px) {
-  .first .first-contain .after-slide .text-first {    
+  .first .first-contain .after-slide .text-first { 
     margin-left: 1em;
   }
   .first .first-contain .flat-services {
@@ -444,7 +444,7 @@ margin-bottom: 0.5em;
     gap: 0;
     padding: 0;
     margin: 0;
-  }  
+  }
   .rooms .all-rooms .card-room .left-carousel {
     margin-right: 0;
   }
@@ -493,7 +493,7 @@ margin-bottom: 0.5em;
   .right-data .buttons button {
     height: 46px;
   }
-  
+
   #thumbnail-carousel {
     display: none;
   }
@@ -508,12 +508,12 @@ margin-bottom: 0.5em;
     font-size: 14px;
     margin: 1em 0 2em;
   }
- 
+
 }
 
 
 /* MOVIL */
-@media only screen and (max-width: 767px) {   
+@media only screen and (max-width: 767px) {
   .first .first-contain .first-slider .splide__arrow--prev {
     left: 18%;
     top: 84%;
@@ -529,5 +529,5 @@ margin-bottom: 0.5em;
   .cotownity .container-cotownity {
       padding-left: 0!important;
   }
-  
+
 }

@@ -1,4 +1,4 @@
-/* COLORS 
+/* COLORS
 -------------------------------- */
 :root {
     /* // Main color */
@@ -17,15 +17,15 @@
     --white-background: #f4f4f4;
     --footer: #121212;
     --primary-bg: #00bfb266;
-    
+ 
     /* // Text color */
     --primary-text: #ffffff;
     --second-header-text: #ffffff;
-    --secondary-text-header: #000000;    
+    --secondary-text-header: #000000; 
     --white: #ffffff;
     --black: #000000;
 
-    
+ 
     /* // Secondary color */
     --grey-light: #3c434a;
     --grey-dark: #30363b;
@@ -36,27 +36,27 @@
     --purple: #ab92e1;
     --purple-dark: #8975b4;
     --yellow: #ecf166;
-    --yellow-dark: #bdc152;     
+    --yellow-dark: #bdc152;  
 
-    /* // Header border */    
+    /* // Header border */ 
     --border-header: 0px;
 
     --h2-border:2px 0 #00BFB2, -2px 0 #00BFB2, 0 2px #00BFB2, 0 -2px #00BFB2,
     1px 1px #00BFB2, -1px -1px #00BFB2, 1px -1px #00BFB2, -1px 1px #fff;
-    
-   
+ 
+
 
     /* // Feedback color */
     --green-success-light: #e3f2e0;
     --green-success: #8dc881;
     --green-success-dark: #459a33;
-    --yellow-warning-light: #f8f3d8; 
-    --yellow-warning: #e2ca64; 
+    --yellow-warning-light: #f8f3d8;
+    --yellow-warning: #e2ca64;
     --yellow-warning-dark: #c9a81c;
     --red-error-light: #FF5555;
     --red-error: #FF0000;
     --red-error-dark: #CC0000;
-    
+ 
     --shadow: rgba(22, 22, 22, 0.06);
     --shadow-soft: rgba(2, 0, 2, 15%);
     --shadow-medium: rgba(8, 0, 4, 15%);

@@ -1,10 +1,10 @@
-/* ABOUT PAGE 
+/* ABOUT PAGE
 -------------------------------- */
 main .container-main .first-contain.about {
     display: flex;
     flex-flow: row wrap;
     justify-content: stretch;
-    align-items: stretch;   
+    align-items: stretch;
 }
 main .container-main .first-contain.about .img {
     display: flex;
@@ -76,7 +76,7 @@ main .container-main section.members .grid .member .img-member {
     text-align: center;
 }
 main .container-main section.members .grid .member .img-member:hover .first {
-    display: none;   
+    display: none;
 }
 main .container-main section.members .grid .member .img-member .hover {
     display: none;
@@ -127,7 +127,7 @@ main .container-main section.members .button-more {
         padding: 2em 2em;
     }
     main .container-main section.members .grid .member .img-member {
-        height: 500px;  
+        height: 500px;
     }
 }
 
@@ -151,11 +151,11 @@ main .container-main section.members .button-more {
     main .container-main section.members .grid .member {
         width: 50%;
     }
-    
+ 
 }
 
 @media only screen and (max-width: 767px) {
     main .container-main section.members .grid .member .img-member {
-        height: 500px;  
+        height: 500px;
     }
 }

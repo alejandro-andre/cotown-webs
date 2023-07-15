@@ -9,7 +9,7 @@
 
     <!-- First -->
     <section class="first pure-u-1">
-    {% include 'shared/sections/shared/first.html.njk' %}   
+    {% include 'shared/sections/shared/first.html.njk' %} 
     </section>
 
     <!-- Rooms -->
@@ -25,8 +25,8 @@
     </section>
 
     <!-- Rest of info -->
-    <section class="last pure-u-1">  
-      
+    <section class="last pure-u-1">
+    
       <!-- Last -->
       <div class="last-zone pure-u-1">
         {% include 'shared/sections/shared/last.html.njk' %}
@@ -40,7 +40,7 @@
       <div class="last-services pure-u-1">
         {% include 'shared/sections/shared/services.html.njk' %}
       </div>
-      
+    
     </section>
 
   </div>
@@ -53,7 +53,7 @@ new Splide( '#image-carousel', {
   type  : 'fade',
   rewind: true,
   perPage: 1,
-  pagination: true, 
+  pagination: true,
   cover: true,
 }).mount();
 
@@ -70,7 +70,7 @@ new Splide("#splideServices", {
     1024: { perPage: 4 },
     768: { perPage: 2, padding: '0.5em' },
   },
-}).mount();  
+}).mount();
 
 // Sliders tipos de habitacion
 {% for r in rooms %}
