@@ -5,7 +5,7 @@
   <div class="contain pure-g">
 
       <!-- Logo e info -->
-      <div class="left pure-u-7-24">
+      <div class="left pure-u-2-5">
         {% include site + '/sections/common/footer-logo.html.njk' %}
         <div class="footer-info mobile">
           <div class="info">
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="right pure-u-15-24">
+      <div class="right pure-u-3-5">
 
         <!-- Links desktop -->
         <div class="footer-contain pure-g ">
@@ -46,23 +46,24 @@
             </ul>
           </div>
         </div>
-        <!-- Redes sociales -->
+
+        <!-- Redes sociales movil -->
         <div class="redes-mobile pure-u-1">
           {% for r in rrss %}
           <a href="{{r.Link}}" rel="noopener, noreferrer" target="_blank"><em class="icon-{{r.Name}}"></em></a>
           {% endfor %}
         </div>
+
         <!-- Links movil -->
         <div class="mobile-listado">
           <ul>
-            <li class="bold"><a href="{{langs[L].pages['locations'].url}}.html">{{langs[L].pages['locations'].title}}</a></li> |
-            <li class="bold"><a href="{{langs[L].pages['about'].url}}.html">{{langs[L].pages['about'].title}}</a></li> |
-            <li class="bold"><a href="{{langs[L].pages['advantages'].url}}.html">{{langs[L].pages['advantages'].title}}</a></li> |
-            <li class="bold"><a href="{{langs[L].pages['about'].url}}.html">{{langs[L].pages['about'].title}}</a></li> |
-            <li class="bold"><a href="{{langs[L].pages['faqs'].url}}.html">{{langs[L].pages['faqs'].title}}</a></li> |
-            <li class="bold"><a href="{{langs[L].pages['contact'].url}}.html">{{langs[L].pages['contact'].title}}</a></li> |
-            <li><a href="{{langs[L].pages['privacy'].url}}.html">{{langs[L].pages['privacy'].title}}</a></li> |
-            <li><a href="{{langs[L].pages['legal'].url}}.html">{{langs[L].pages['legal'].title}}</a></li> |
+            <li class="bold"><a href="{{langs[L].pages['locations'].url}}.html">{{langs[L].pages['locations'].title}}</a></li><span class="sep">| </span>            <li class="bold"><a href="{{langs[L].pages['about'].url}}.html">{{langs[L].pages['about'].title}}</a></li> | 
+            <li class="bold"><a href="{{langs[L].pages['advantages'].url}}.html">{{langs[L].pages['advantages'].title}}</a></li><span class="sep"> | </span>
+            <li class="bold"><a href="{{langs[L].pages['about'].url}}.html">{{langs[L].pages['about'].title}}</a></li><span class="sep"> | </span>
+            <li class="bold"><a href="{{langs[L].pages['faqs'].url}}.html">{{langs[L].pages['faqs'].title}}</a></li><span class="sep"> | </span>
+            <li class="bold"><a href="{{langs[L].pages['contact'].url}}.html">{{langs[L].pages['contact'].title}}</a></li><span class="sep"> | </span>
+            <li><a href="{{langs[L].pages['privacy'].url}}.html">{{langs[L].pages['privacy'].title}}</a></li><span class="sep"> | </span>
+            <li><a href="{{langs[L].pages['legal'].url}}.html">{{langs[L].pages['legal'].title}}</a></li><span class="sep"> | </span>
             <li><a href="{{langs[L].pages['data-security'].url}}.html">{{langs[L].pages['data-security'].title}}</a></li>
           </ul>
         </div>  

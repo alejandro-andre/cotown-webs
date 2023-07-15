@@ -21,7 +21,7 @@ tags: page
 ---
 <!-- Additional head content -->
 {% block head %}
-<link rel="stylesheet" href="/assets/css/home.css">
+{% set css %}{% include "shared/css/home.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->

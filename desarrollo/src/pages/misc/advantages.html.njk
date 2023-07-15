@@ -21,7 +21,7 @@ tags: page
 ---
 <!-- Additional HEAD content -->
 {% block head %}
-<link rel="stylesheet" href="/assets/css/advantages.css">
+{% set css %}{% include "shared/css/advantages.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->

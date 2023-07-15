@@ -651,7 +651,7 @@ main .container-main .first-contain .title-big p {
 }
 
  main .container-main .first-contain .title-big.home p {
-    font-size: 30px;
+    font-size: 24px;
     line-height: 36px;
     font-weight: 500;
     margin: 0 0 0.5em;
@@ -981,9 +981,6 @@ footer section.container-footer .contain .left .redes em:last-of-type {
 }
 
 /* Footer right container */
-footer section.container-footer .contain .right {
-    padding: 0 0 0 6%;
-}
 footer section.container-footer .contain .right .footer-contain ul {
     margin-bottom: 0;
     padding: 0;
@@ -996,11 +993,11 @@ footer section.container-footer .contain .right .footer-contain ul li a {
     line-height: 20px;
     color: var(--primary-text);
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
 }
 footer section.container-footer .contain .right .footer-contain ul li.bold a { 
-    font-weight: 700;
+    font-weight: 500;
 }
 footer section.container-footer .footer-info {
     padding-top: 1.5em; 
@@ -1261,7 +1258,7 @@ button.date-button input.inputs {
         font-size: 100px;
     }
     main .container-main .first-contain .title-big.home p {
-        font-size: 30px;
+        font-size: 24px;
         line-height: 36px;
         font-weight: 500;
         margin: 0 0 0.5em;
@@ -1285,13 +1282,13 @@ button.date-button input.inputs {
     }
 }
 /* DESKTOP */
-@media only screen and (min-width: 1281px) {
-.container-header.first .turquoise-line {
-    margin: 0 4em;
-}
-.container-header.second .black-line.custom-wrapper {
-    padding: 0.2em 4em;
-}
+@media only screen and (min-width: 1280px) {
+    .container-header.first .turquoise-line {
+        margin: 0 4em;
+    }
+    .container-header.second .black-line.custom-wrapper {
+        padding: 0.2em 4em;
+    }
 }
 @media only screen and (min-width: 1024px) {
     header {
@@ -1353,12 +1350,12 @@ button.date-button input.inputs {
     }
 }
 /* DESKTOP SMALL */
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
     .icons-header .pure-menu-link {
         padding: 0 0.5em;
     } 
     .container-header.second .black-line.custom-wrapper {
-        padding: 0.2em 0.5em;
+        padding: 0.2em 2em;
     }
     .black-line .pure-menu.pure-menu-horizontalul.pure-menu-list {
         gap: .5em;
@@ -1423,7 +1420,7 @@ button.date-button input.inputs {
 
     /* __________________________ FOOTER DESKTOP SMALL ___________________________*/
     footer section.container-footer {
-        padding: 3em 1em; 
+        padding: 3em 2em; 
     }
     footer section.container-footer .contain .left.pure-u-1-3 {
         width: 26%;
@@ -1475,7 +1472,7 @@ button.date-button input.inputs {
     .splide__pagination__page {
         width: 12px;
         height: 12px;
-        top: 40px;
+        top: 50px;
     }
     /* SECCIÓN HEADER */
     .container-header.first .turquoise-line {
@@ -1803,6 +1800,7 @@ button.date-button input.inputs {
     .black-line .pure-menu.pure-menu-horizontal ul li:last-of-type {
         margin: 0 1em;
         border-bottom: 0px;
+        height: 400px;
     }
     li .locations-container label.locations-label {
         display: flex;
@@ -2133,7 +2131,7 @@ button.date-button input.inputs {
     footer section.container-footer .contain .left .footer-info.mobile p {
         margin: 0.5em;
         font-weight: 600;
-        font-size: 12px;
+        font-size: 15px;
     }
     footer section.container-footer .contain .footer-info.desktop {
         display: none;
@@ -2183,6 +2181,9 @@ button.date-button input.inputs {
     footer section.container-footer .contain .left .img-logo {
         height: 69px;
     }
+    footer .sep {
+        padding: 0 5px;
+    }
 }
 /* MOBILE */
 @media only screen and (max-width: 767px) { 
@@ -2201,6 +2202,7 @@ button.date-button input.inputs {
         width: 84%;
     }
 }
+
 /* SMALL MOBILE */
 @media only screen and (max-width: 669px) {
     /* ABOUT PAGE */ 

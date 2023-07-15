@@ -21,7 +21,7 @@ tags: page
 ---
 <!-- Additional HEAD content -->
 {% block head %}
-<link rel="stylesheet" href="/assets/css/legals.css">
+{% set css %}{% include "shared/css/legals.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->

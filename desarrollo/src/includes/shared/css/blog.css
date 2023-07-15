@@ -367,7 +367,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 
 
 /* RESPONSIVE \*/
-@media only screen and (min-width: 1281px) and (max-width: 1599px) {
+@media only screen and (min-width: 1280px) and (max-width: 1599px) {
   main .container-main .first-contain .title-big .h2-big h1 {
     font-size: 76px; 
   }
@@ -377,7 +377,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     width: 48%;
   }
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1279.9px) {
   .post .data-post {
     position: absolute;
     top: 45%;

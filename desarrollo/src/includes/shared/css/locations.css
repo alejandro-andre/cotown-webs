@@ -157,7 +157,7 @@ input:focus-visible + label {
 
 /* RESPONSIVE
 -------------------------------- */
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
   .locations .container-main .all-locations .left { 
     padding: 40px 2em 2em 14px;
   }

@@ -373,7 +373,7 @@ color: var(--white);
 
 
 /* DESKTOP SMALL */
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
   .first .first-contain .first-slider .splide__pagination {
     bottom: 17%;
   }
