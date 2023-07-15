@@ -68,7 +68,7 @@ main .container-main section.container-advantages .grid {
 }
 
 main .container-main section.container-advantages .grid .promo-contain {
-    width: calc(50% - 2em);
+    width: calc(33.33% - 2em);
     margin: 1em 1em;
 }
 main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9 {
@@ -227,7 +227,7 @@ button.btn-secondary {
         font-size: 12px;
     }
     main .container-main section.container-advantages .grid .promo-contain {
-        width: calc(100% - 2em);
+        width: calc(50% - 2em);
     }
 }
 @media only screen and (max-width: 599px) {

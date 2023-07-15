@@ -19,9 +19,9 @@
 
             <!-- Filter -->
             <select id="category" class="pure-u-7-24" onchange="goTag()">
+              <option value="" disabled selected>{% literal texts, 'filtrar-categoria', L %}</option>
               <option value="">{% literal texts, 'filtrar-todas', L %}</option>
-              <option value="">{% literal texts, 'filtrar-categoria', L %}</option>
-              {% for t in tags %}
+              {% for t in posttags %}
               <option value="{{t | translate('Name', L)|ascii}}">{{t | translate('Name', L)}}</option>
               {% endfor %}
             </select>
@@ -121,6 +121,7 @@
 {% block footer %}
 {% set script %}
 function goTag(event) {
+  const select = document.getElementById("category");
   var url = "{{langs[L].folder}}/blog";
   if (select.value != '') 
     url = url  + "/" + select.value;

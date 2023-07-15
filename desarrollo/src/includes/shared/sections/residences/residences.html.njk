@@ -20,7 +20,7 @@
             <!-- Filter -->
             <select id="category" class="search-container  pure-u-7-24" onchange="goTag()">
               <option value="">{% literal texts, 'filtrar-categoria', L %}</option>
-              {% for t in tags %}
+              {% for t in posttags %}
               <option value="{{t | translate('Name', L)|ascii}}">{{t | translate('Name', L)}}</option>
               {% endfor %}
             </select>

@@ -36,7 +36,7 @@
   padding: 8px 24px;
   background-color: var(--white);
   outline: none;
-  font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
   font-size: 22px;
   margin:0;
   color: var(--grey-light);
@@ -224,7 +224,7 @@ main.post-page .container-main .post-content {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  margin: 6em auto;
+  margin: 3em auto;
 }
 main.post-page .container-main .post-content h1 {
   font-weight: 400;

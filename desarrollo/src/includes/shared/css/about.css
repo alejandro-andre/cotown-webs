@@ -39,7 +39,7 @@ main .container-main .first-contain.about .title-big h1 {
 }
 main .container-main .first-contain.about .title-big p {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 150%;
     text-align: left;
 }
@@ -94,8 +94,8 @@ main .container-main section.members .grid .member .data {
 }
 main .container-main section.members .grid .member .data p.name {
     font-weight: 700;
-    font-size: 30px;
-    line-height: 34px;
+    font-size: 26px;
+    line-height: 30px;
     text-align: center;
     margin: 0;
     width: 100%;

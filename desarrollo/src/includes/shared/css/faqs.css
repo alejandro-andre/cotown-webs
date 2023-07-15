@@ -17,6 +17,13 @@
 .first-contain .title-big h1{
   color: var(--white);
 }
+.first-contain .img-faqs {
+  width: 100vw;
+  object-fit: cover;
+}
+.first-contain .img-faqs img {
+  width: 100vw;
+}
 .search .search-container {
   position: absolute;
   bottom: 12%;
@@ -38,7 +45,7 @@
 }
 .search .search-container label input {
   outline: none;
-  font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   margin:0;
   padding:0;
@@ -78,7 +85,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 30px;
   line-height: 150%;
   margin: 1em 0.2em;
-  font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
   text-align: left;
 }
 .expansion .open-close-icon em {
@@ -121,7 +128,6 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
   .first-contain {
@@ -129,14 +135,6 @@ input[type="search"]::-webkit-search-results-decoration {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-  }
-  .first-contain .img-faqs {
-    width: 100vw;
-    object-fit: cover;
-  }
-  .first-contain .img-faqs img {
-    width: 100vw;
-    object-fit: cover;
   }
   main .container-main .first-contain .title-big {
     position: static;
@@ -166,7 +164,7 @@ input[type="search"]::-webkit-search-results-decoration {
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
-    margin: 0;
+    margin: 5px 0 10px 0;
   }
   .expansion .open-close-icon em {
     font-size: 20px;

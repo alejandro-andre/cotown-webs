@@ -1,18 +1,20 @@
 /* TIPOGRAFIA
 -------------------------------- \*/
+* {
+    font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;    
+}
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 1rem;
     font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
-p, input, label, a {
-    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+p, input, label, a, li {
+    font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
 }
 a {
     text-decoration: none;
     color: var(--black);
 }
-
 button.btn-primary a {
     color: var(--primary);
 }
@@ -57,7 +59,7 @@ mark {
 /* BOTONES
 -------------------------------- \*/
 button {
-    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
     border: 1px solid transparent;
 }
 .btn-regular {
@@ -827,6 +829,7 @@ main .container-main section.form .form-container .campo.add-file .select .selec
     left: calc(100% - 180px);
     top: 0;
     margin: 0;
+    border-radius: 10px;
 }
 
 main .container-main section.form .form-container .campo.add-file .select span#selected {
@@ -898,7 +901,6 @@ main .container-main section.banner h2 {
 .first-contact {
     background-color: var(--primary);
     height: 8em;
-
 }
 .first-contact h1 {
     color: var(--white);
@@ -1408,7 +1410,7 @@ button.date-button input.inputs {
     }
     main .container-main section.members .grid .member .data p.name {
         font-size: 28px;
-        line-height: 30px;
+        line-height: 26px;
     }
     main .container-main section.form .form-container .campo label {
         font-size: 12px;
@@ -1524,7 +1526,7 @@ button.date-button input.inputs {
         color: var(--white);
     }
     .container-header.first .left-content .banner-container .spot h1 {
-        font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+        font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -1537,7 +1539,7 @@ button.date-button input.inputs {
         width: 100%;
     }
     .container-header.first .left-content .banner-container a button.btn-primary {
-        font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+        font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -1932,7 +1934,7 @@ button.date-button input.inputs {
         width: 33%;
     }
     main .container-main section.members .grid .member .data p.name {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 24px;
     }
     main .container-main section.members .grid .member .data p.job {
@@ -1972,12 +1974,15 @@ button.date-button input.inputs {
     }
 
     /* CONTACTO TABLET Y MOBILE  ___________________________\*/
+    .first-contact {
+        height: 4.5em;
+    }
     .first-contact h1 {
         color: var(--white);
         padding: 0.2em 0.2em 0;
         font-weight: 400;
         font-size: 40px;
-        line-height: 100%;
+        line-height: 1.5em;
     }
     .contact-main h2 {
         padding: 1em 0 0 0.5em;
@@ -2009,7 +2014,7 @@ button.date-button input.inputs {
     .contact-main .img-content .contact-content .text-location p span a{
         font-weight: bold;
         text-decoration-line: underline;
-        font-size: 14px;
+        font-size: 16px;
     }
     main .container-main section.form .form-container .campo.add-file .select  {
         width: 94%;
@@ -2198,7 +2203,7 @@ button.date-button input.inputs {
         width: 92%;
     }
     main .container-main section.form .form-container .campo input, main .container-main section.form .form-container .campo input:focus-visible, main .container-main section.form .form-container .campo textarea {
-        width: 86%;
+        width: 92%;
     }
     main .container-main section.form .form-container .campo input#phone {
         width: 84%;
@@ -2209,7 +2214,7 @@ button.date-button input.inputs {
 @media only screen and (max-width: 669px) {
     /* ABOUT PAGE */
     main .container-main section.form .form-container .campo input#phone {
-        width: 80%;
+        width: 90%;
     }
 }
 
