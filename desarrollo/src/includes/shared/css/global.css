@@ -386,7 +386,7 @@ li .select-container label {
     display: flex;
     color: var(--primary-text);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     cursor: pointer;
     margin: 0;
     padding: 0.5em 1em 0.5em 0.5em;
@@ -439,7 +439,7 @@ li .select-container .options .option.selected {
     cursor: pointer;
 }
 .private-container .private p, .private-container .private em {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     color: var(--primary-text);
