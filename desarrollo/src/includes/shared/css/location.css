@@ -80,9 +80,8 @@ main .location .container-main .first-contain .video-loc .description p {
 }
 .carousel .carousel-main-list .splide__slide {
     max-width: 70vw;
-    margin-right: 6em!important;
+    margin-right: 6em !important;
 }
-
 .carousel .carousel-main-list .splide__slide .card-contain {
     background-color: var(--white-background);
 }
@@ -110,7 +109,7 @@ a {
     object-fit: cover;
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop img {
-    vertical-align: bottom;
+    border-top-left-radius: 20px;
     width: 100%;
 }
 .carousel .carousel-main-list .splide__slide h3 {
