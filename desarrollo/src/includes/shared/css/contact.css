@@ -1,0 +1,11 @@
+.office {
+    position: relative;
+    left :-150px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    z-index:-9999;
+}
+.svg_base {
+    fill:#e0e0e0 !important;
+}

@@ -21,21 +21,11 @@ tags: page
 ---
 <!-- Additional HEAD content -->
 {% block head %}
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+{% set css %}
+{% include "shared/css/contact.css" %}
+{% include "shared/css/leaflet/leaflet.css" %}
+{% endset %}<style>{{ css | cssmin | safe }}</style>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<style>
-.office {
-  position: relative;
-  left :-150px;
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
-  z-index:-9999;
-}
-.svg_base {
-  fill:#e0e0e0 !important;
-}
-</style>
 {% endblock %}
 
 <!-- Main -->
