@@ -27,6 +27,7 @@
             </select>
 
             <!-- Search -->
+            <!-- TODO
             <div class="search-container pure-u-1 pure-u-lg-2-3">
               <label class="selected-option pure-u-23-24 pure-u-lg-22-24" for="options">
                   <em class="icon-search"></em>
@@ -37,6 +38,7 @@
                   placeholder="Buscar por palabra..."/>
               </label>
             </div>
+            -->
 
           </form>
         </div>
@@ -92,8 +94,8 @@
         {% endif %}
         {% endfor %}
 
-        <!-- PAGINACIÓN -->
-        <!--
+        <!-- Pagination -->
+        <!-- TODO
         <div class="pag pure-u-23-24">
           <ul class="pagination">
             <li><a class="arrow disable" ref="#">
@@ -118,10 +120,11 @@
 
 {% block footer %}
 {% set script %}
-// Go tag page
 function goTag(event) {
-  const select = document.getElementById("category");
-  document.location.href="{{langs[L].folder}}/blog/" + select.value + ".html"
+  var url = "{{langs[L].folder}}/blog";
+  if (select.value != '') 
+    url = url  + "/" + select.value;
+  document.location.href=url + ".html";
 }
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
