@@ -51,7 +51,6 @@ main .location .container-main .first-contain .video-loc .description p {
     margin: 0;
 }
 
-
 /* CARRUSEL
 -------------------------------- */
 
@@ -223,7 +222,6 @@ button.green-button.btn-secondary {
 }
 
 
-
 .arrow-nav.splide__arrow {
     height: 4em;
     width: 4em;
@@ -277,7 +275,6 @@ button.green-button.btn-secondary {
     padding: 0.5em 0;
     margin: 0;
 }
-
 
 #map {
     margin: 6em 0;
@@ -357,7 +354,6 @@ section.necesities .grid .necesidad .p-text p {
         font-size: 30px;
     }
 }
-
 
 
 /* XL DESKTOP */

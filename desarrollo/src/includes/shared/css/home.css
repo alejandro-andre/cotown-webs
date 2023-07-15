@@ -118,7 +118,6 @@ p.subtitle {
     width: 100%;
 }
 
-
 /* BLOQUE 1 HOME
 -------------------------------- */
 main .container-main .first-contain {
@@ -586,7 +585,6 @@ main .container-main .first-contain .text p {
 }
 
 
-
 .pisos .container .img-container .img-title1,
 .pisos .container .img-container .img-title2 {
     color: var(--primary-text);
@@ -600,7 +598,6 @@ main .container-main .first-contain .text p {
     width: fit-content;
     cursor: pointer;
 }
-
 
 /* RESPONSIVE
 -------------------------------- */
@@ -774,9 +771,7 @@ main .container-main .first-contain .text p {
         font-size: 14px;
     }
 
-
     /* LOCALIZACIONES */
-
 
     /* PISOS */
     .pisos .container .img-container .img {

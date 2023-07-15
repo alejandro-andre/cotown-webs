@@ -45,7 +45,6 @@
     1px 1px #00BFB2, -1px -1px #00BFB2, 1px -1px #00BFB2, -1px 1px #fff;
  
 
-
     /* // Feedback color */
     --green-success-light: #e3f2e0;
     --green-success: #8dc881;
@@ -62,7 +61,6 @@
     --shadow-medium: rgba(8, 0, 4, 15%);
     --shadow-strong: rgba(16, 0, 8, 20%);
     /* box-shadow: 2px 3px 12px rgba(16, 0, 8, 20%); */
-
 
     /* // border radius boxes */
     --radius-1: 0px 0px;

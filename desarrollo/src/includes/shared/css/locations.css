@@ -38,7 +38,6 @@
   border-top: 1px solid var(--grey-light);
 }
 
-
 .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
 .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
 .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3) {
@@ -155,7 +154,6 @@ input:focus-visible + label {
   color: var(--black);
   text-decoration: none;
 }
-
 
 
 /* RESPONSIVE

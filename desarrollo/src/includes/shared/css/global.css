@@ -56,7 +56,6 @@ mark {
 }
 
 
-
 /* BOTONES
 -------------------------------- */
 
@@ -504,16 +503,16 @@ span.turquoise {
     min-width: fit-content;
     width: fit-content;
     font-weight: 600;
-    font-size: 25px; 
+    font-size: 22px; 
 }
 .black-line .pure-menu.pure-menu-horizontal ul li:last-of-type {
-    margin: 0 0.5em;
+    margin: 0 2em;
 }
 .black-line .pure-menu.pure-menu-horizontal ul li select.nav-select {
     color: var(--primary-text);
     text-decoration: none;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 22px;
     background-color: transparent;
     border: none;
 }
@@ -521,7 +520,7 @@ span.turquoise {
     text-decoration: none;
     color: var(--second-header-text);
     font-weight: 600;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.1em;
 }
 .black-line .pure-menu.pure-menu-horizontal ul li button.nav-select {
@@ -547,8 +546,7 @@ span.turquoise {
     color: var(--primary-text);
     text-decoration: none;
     font-weight: 600;
-    font-size: 25px;
- 
+    font-size: 22px;
 }
 .black-line .pure-menu.pure-menu-horizontal ul li button:hover + #list {
     display: block;
@@ -575,10 +573,8 @@ span.turquoise {
     content: "\e90d";
 }
 
-
 /* SELECT
 -------------------------------- */
-
 li .locations-container {
     display: block; 
     position: relative;
@@ -907,7 +903,6 @@ main .container-main section.banner h2 {
 }
 
 
-
 /* CONTACTO
 -------------------------------- */
 .first-contact {
@@ -964,7 +959,6 @@ main .container-main section.banner h2 {
     line-height: 130%;
     color: var(--black);
 }
-
 
 
 /* FOOTER
@@ -1094,7 +1088,6 @@ button.date-button input.inputs {
     background-color: transparent;
     border: none;
 }
-
 
 
 /* <!-- RESERVAS POPUP --> */
@@ -1267,15 +1260,6 @@ button.date-button input.inputs {
 
 
 
-
-
-
-
-
-
-
-
-
 /* RESPONSIVE
 -------------------------------- */
 
@@ -1394,7 +1378,7 @@ button.date-button input.inputs {
         gap: .5em;
     }
     .container-header.first .turquoise-line {
-        margin: 0 0.5em;     
+        margin: 0 2em;     
         justify-content: space-between;
         gap: 0.5em;
     }
@@ -1428,7 +1412,6 @@ button.date-button input.inputs {
     .cotownity .feeling .title-feel {
         width: 50%;
     }
-
 
     /* __________________________ OTHER PAGES ___________________________*/
 
@@ -1669,10 +1652,8 @@ button.date-button input.inputs {
     }
 
 
-
     /* HEADER SELECT
     -------------------------------- */
-
 
     /* ONLY MOBILE MENU */
 
@@ -1812,7 +1793,6 @@ button.date-button input.inputs {
     .lang-mobile .select-container-mobile .options-mobile .option-mobile.selected {
         font-weight: 700;
     }
-
 
     #menu-desplegado {
         display: flex;
@@ -2248,6 +2228,5 @@ button.date-button input.inputs {
         width: 80%;
     }
 }
-
 
 

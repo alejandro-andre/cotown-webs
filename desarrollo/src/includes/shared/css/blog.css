@@ -218,7 +218,6 @@ main .container-main .first-contain .title-big .h2-big h1 {
 
 
 
-
 /* POST
 -------------------------------- */
 
@@ -362,9 +361,6 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow:hover {
 main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
   color: var(--grey-light);
 }
-
-
-
 
 
 
