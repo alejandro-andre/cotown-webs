@@ -3,11 +3,11 @@ const baseConfig = require('./.base.js');
 module.exports = function (eleventyConfig) {
   eleventyConfig.outputDir = "sites/cotown";
   baseConfig(eleventyConfig);
-  eleventyConfig.addPassthroughCopy({"src/includes/shared/css": "assets/css"}); // remove
-  eleventyConfig.addPassthroughCopy({"src/includes/cotown/css": "assets/css"}); // remove
-  eleventyConfig.addPassthroughCopy({"src/includes/shared/js": "assets/js"});   // remove
-  eleventyConfig.addPassthroughCopy({"src/includes/cotown/js": "assets/js"});   // remove
-  eleventyConfig.addPassthroughCopy({"src/icons/cotown": "assets/icons"});      // remove
+  //eleventyConfig.addPassthroughCopy({"src/includes/shared/css": "assets/css"}); // remove
+  //eleventyConfig.addPassthroughCopy({"src/includes/cotown/css": "assets/css"}); // remove
+  //eleventyConfig.addPassthroughCopy({"src/includes/shared/js": "assets/js"});   // remove
+  //eleventyConfig.addPassthroughCopy({"src/includes/cotown/js": "assets/js"});   // remove
+  //eleventyConfig.addPassthroughCopy({"src/icons/cotown": "assets/icons"});      // remove
   eleventyConfig.addPassthroughCopy({"src/assets/shared": "assets"});
   eleventyConfig.addPassthroughCopy({"src/assets/cotown": "assets"});
   eleventyConfig.addGlobalData("site", "cotown");
