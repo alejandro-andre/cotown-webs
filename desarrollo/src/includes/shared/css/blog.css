@@ -1,6 +1,5 @@
 /* BLOG
--------------------------------- */
-
+-------------------------------- \*/
 .container-main {
   display: flex;
   flex-direction: column;
@@ -219,8 +218,7 @@ main .container-main .first-contain .title-big .h2-big h1 {
 
 
 /* POST
--------------------------------- */
-
+-------------------------------- \*/
 main.post-page .container-main .post-content {
   display: flex;
   flex-flow: row wrap;
@@ -368,8 +366,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 
 
 
-/* RESPONSIVE */
-
+/* RESPONSIVE \*/
 @media only screen and (min-width: 1281px) and (max-width: 1599px) {
   main .container-main .first-contain .title-big .h2-big h1 {
     font-size: 76px; 
@@ -472,8 +469,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     padding: 3% 4% 0;
   }
 
-  /* __________________________ POST  ___________________________*/
-
+  /* __________________________ POST  ___________________________\*/
   main.post-page .container-main .post-content {
     display: flex;
     flex-flow: row wrap;

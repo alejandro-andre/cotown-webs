@@ -1,6 +1,5 @@
 /* TIPOGRAFIA
--------------------------------- */
-
+-------------------------------- \*/
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -21,8 +20,7 @@ mark {
     background-color: var(--primary-underline)!important;
 }
 
-/* RESPONSIVE FONTS */
-
+/* RESPONSIVE FONTS \*/
 @media only screen and (min-width: 1600px) {
     h1 { font-size: 120px; font-weight: 400; }
     h2 { font-size: 78px; font-weight: 400; }
@@ -57,8 +55,7 @@ mark {
 
 
 /* BOTONES
--------------------------------- */
-
+-------------------------------- \*/
 button {
     font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
     border: 1px solid transparent;
@@ -202,8 +199,7 @@ button {
     font-size: 1em;
 }
 
-/* EXPANSION PANEL */
-
+/* EXPANSION PANEL \*/
 .expansion {
     padding: 0;
     position: relative;
@@ -284,8 +280,7 @@ button {
 }
 
 /* CSS GLOBAL
--------------------------------- */
-
+-------------------------------- \*/
 header, main, footer {
     width: 99.99%;
     min-width: 99.99%;
@@ -297,8 +292,7 @@ main {
 }
 
 /* FIRST HEADER
--------------------------------- */
-
+-------------------------------- \*/
 .container-header.first {
     color: var(--primary-text);
     background-color: var(--primary);
@@ -383,8 +377,7 @@ main {
 }
 
 /* HEADER SELECT
--------------------------------- */
-
+-------------------------------- \*/
 li .select-container {
     display: block; 
     position: relative;
@@ -454,8 +447,7 @@ li .select-container .options .option.selected {
 }
 
 /* SECOND HEADER
--------------------------------- */
-
+-------------------------------- \*/
 .container-header.second {
     background-color: var(--secondary-header);
     margin: auto;
@@ -582,7 +574,7 @@ li .locations-container {
 li .locations-container label.locations-label {
     display: flex;
     color: var(--primary-text);
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
     cursor: pointer;
     margin: 0;
@@ -590,13 +582,13 @@ li .locations-container label.locations-label {
     background-color: transparent;
 }
 li .locations-container label.locations-label .loc a { 
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.1em;
     font-weight: 600;
     padding-left:0.5em;
 }
 li .locations-container label.locations-label em {
-    font-size: 25px;
+    font-size: 22px;
     margin: 0 0 0 0.4em;
 }
 li .locations-container .options-loc {
@@ -620,7 +612,7 @@ li .locations-container .options-loc .option-loc a {
     display: flex;
     color: var(--primary-text);
     border-top: 1px solid var(--white);
-    font-size: 25px;
+    font-size: 22px;
     text-transform: capitalize;
     cursor: pointer;
     padding: 1em 0;
@@ -630,8 +622,7 @@ li .locations-container .options-loc .option-loc a:hover {
 }
 
 /* BLOQUE 1 NO HOME
--------------------------------- */
-
+-------------------------------- \*/
 main .container-main .first-contain .title-big {
     display: flex;
     flex-flow: row wrap;
@@ -671,8 +662,7 @@ main .container-main .first-contain .title-big p span.bold {
 }
 
 /* FORM
--------------------------------- */
-
+-------------------------------- \*/
 main .container-main section.form {
     padding: 2em 14%;
     margin: 4em 0 0;
@@ -962,8 +952,7 @@ main .container-main section.banner h2 {
 
 
 /* FOOTER
--------------------------------- */
-
+-------------------------------- \*/
 /* Footer left container */
 footer section.container-footer {
     color: var(--primary-text);
@@ -1029,8 +1018,7 @@ footer section.container-footer .footer-info.mobile {
 }
 
 /* SPLIDE GENERAL
--------------------------------- */
-
+-------------------------------- \*/
 .splide__arrow {
 background-color: var(--primary);
 width: 3em;
@@ -1090,8 +1078,7 @@ button.date-button input.inputs {
 }
 
 
-/* <!-- RESERVAS POPUP --> */
-
+/* <!-- RESERVAS POPUP --> \*/
 .overlay {
     position: fixed;
     top: 0;
@@ -1261,8 +1248,7 @@ button.date-button input.inputs {
 
 
 /* RESPONSIVE
--------------------------------- */
-
+-------------------------------- \*/
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
     .btn-primary.search.desktop {
@@ -1413,8 +1399,7 @@ button.date-button input.inputs {
         width: 50%;
     }
 
-    /* __________________________ OTHER PAGES ___________________________*/
-
+    /* __________________________ OTHER PAGES ___________________________\*/
     /* ABOUT PAGE */
     main .container-main section.members {
         padding: 2em 2em;
@@ -1653,10 +1638,8 @@ button.date-button input.inputs {
 
 
     /* HEADER SELECT
-    -------------------------------- */
-
-    /* ONLY MOBILE MENU */
-
+    -------------------------------- \*/
+    /* ONLY MOBILE MENU \*/
     #only-mobile-menu {
         top: 0;
         z-index: 10001;
@@ -1938,8 +1921,7 @@ button.date-button input.inputs {
     }
 
     /* __________________________ OTHER PAGES ___________________________*/
-    /* ABOUT PAGE */
-
+    /* ABOUT PAGE \*/
     main .container-main section.members {
         padding: 2em 2em;
     }
@@ -1989,8 +1971,7 @@ button.date-button input.inputs {
         font-size: 12px;
     }
 
-    /* CONTACTO TABLET Y MOBILE  ___________________________*/
-
+    /* CONTACTO TABLET Y MOBILE  ___________________________\*/
     .first-contact h1 {
         color: var(--white);
         padding: 0.2em 0.2em 0;
@@ -2205,8 +2186,7 @@ button.date-button input.inputs {
 }
 /* MOBILE */
 @media only screen and (max-width: 767px) { 
-    /* __________________________ OTHER PAGES ___________________________*/
-
+    /* __________________________ OTHER PAGES ___________________________\*/
     /* ABOUT PAGE */
     main .container-main section.members .grid .member {
         width: 50%;

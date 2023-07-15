@@ -110,8 +110,7 @@
 }
 
 
-/* ---------- ROOMS ---------- */
-
+/* ---------- ROOMS ---------- \*/
 .rooms .all-rooms {
   display: flex;
   flex-flow: column;
@@ -454,8 +453,7 @@ margin-bottom: 0.5em;
   }
 }
 
-/* RESPONSIVE */
-
+/* RESPONSIVE \*/
 @media only screen and (max-width: 1023.9px) {
   .first .first-contain .after-slide .text-first { 
     margin-left: 1em;

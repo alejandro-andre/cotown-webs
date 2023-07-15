@@ -1,6 +1,5 @@
 /* LEGAL PAGES
--------------------------------- */
-
+-------------------------------- \*/
 .legal {
     width: 100%;
     display: flex;
@@ -63,8 +62,7 @@
 }
 
 /* RESPONSIVE
--------------------------------- */
-
+-------------------------------- \*/
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
     .legal .container-main {

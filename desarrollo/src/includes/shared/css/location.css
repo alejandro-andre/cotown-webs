@@ -1,6 +1,5 @@
 /* LOCATION
--------------------------------- */
-
+-------------------------------- \*/
 main .location .container-main .first-contain {
     width: 100%;
     display: flex;
@@ -52,8 +51,7 @@ main .location .container-main .first-contain .video-loc .description p {
 }
 
 /* CARRUSEL
--------------------------------- */
-
+-------------------------------- \*/
 .pisos-slider {
     display: flex;
     flex-flow: row wrap;
@@ -437,8 +435,7 @@ section.necesities .grid .necesidad .p-text p {
 
 }
 
-/* MOBILE */
-
+/* MOBILE \*/
 @media only screen and (max-width: 1023.9px) { 
     main .location .container-main .first-contain h1 {
         font-size: 68px;
