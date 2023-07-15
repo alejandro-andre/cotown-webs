@@ -15,7 +15,7 @@
         <label for="tab1">
           <img class="img" src="/assets/img/corner.svg"></img>
           <div class="label-content">
-            <img class="icon" alt="" src="/assets/img/icono__hab_habitacion_compartida.svg"></img>
+            <img class="icon" alt="" src="/assets/img/icono__tipo_piso_compartido.svg"></img>
             <p>PISO<br>COMPARTIDO</p>
           </div>
         </label>
@@ -24,7 +24,7 @@
         <label for="tab2">
           <img class="img" src="/assets/img/corner.svg"></img>
           <div class="label-content">
-            <img class="icon" alt="" src="/assets/img/icono__hab_habitacion_compartida.svg"></img>
+            <img class="icon" alt="" src="/assets/img/icono__tipo_apartamento_privado.svg"></img>
             <p>APARTAMENTO<br>PRIVADO</p>
           </div>
         </label>
@@ -33,7 +33,7 @@
         <label for="tab3">
           <img class="img" src="/assets/img/corner.svg"></img>
           <div class="label-content">
-            <img class="icon" alt="" src="/assets/img/icono__hab_habitacion_compartida.svg"></img>
+            <img class="icon" alt="" src="/assets/img/icono__tipo_residencia_universitaria.svg"></img>
             <p>RESIDENCIA<br>UNIVERSITARIA</p>
           </div>
         </label>
@@ -74,9 +74,9 @@
   <div class="right pure-u-1 pure-u-lg-10-24">
     <div class="img">
       {% image
-          constants.SERVER + "/wopi/files/Marketing/Media/" + images['localizaciones'].id +"/Image/contents?access_token=" + token,
-          "localizaciones", "localizaciones", "",
-          [800], ""
+         constants.SERVER + "/wopi/files/Marketing/Media/" + images['localizaciones'].id +"/Image/contents?access_token=" + token,
+         "localizaciones", "localizaciones", "",
+         [800], ""
       %}
     </div>
   </div>

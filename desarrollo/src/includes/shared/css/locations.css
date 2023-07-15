@@ -1,9 +1,10 @@
-/* LOCALIZACIONES
--------------------------------- \*/
+/* LOCALIZACIONES 
+-------------------------------- */
+
 .locations  {
     width: 100%;
 }
-.locations .container-main .all-locations {
+.locations .container-main .all-locations {    
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -15,7 +16,7 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 40px 2em 2em 64px;
+  padding: 40px 2em 2em 4em;
 }
 .locations .container-main .all-locations .left .texto-container h1.title-where {
   font-size: 64px;
@@ -28,7 +29,12 @@
   justify-content: flex-end;
   align-items: flex-start;
 }
-
+.locations .container-main .all-locations .right .img {
+  object-fit: cover;
+}
+.locations .container-main .all-locations .right .img img {
+  width: 100%;
+}
 .tabset > input[type="radio"] {
   position: absolute;
   left: -200vw;
@@ -37,13 +43,14 @@
   border-top: 1px solid var(--grey-light);
 }
 
+
 .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
 .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
 .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3) {
   display: block;
 }
 
-.tabset > label:last-of-type {
+.tabset > label:last-of-type {  
   margin-right: 0%;
 }
 .tabset > label {
@@ -113,10 +120,10 @@ input:focus-visible + label {
   flex-flow: row nowrap;
   justify-content: stretch;
   align-items: flex-start;
-  width: 100%;
+  width: 100%; 
   margin: 20px 0;
 }
-.tab-panel .locations-container .location a {
+.tab-panel .locations-container .location a {   
   width: fit-content;
   margin-right: 24px;
 }
@@ -126,11 +133,11 @@ input:focus-visible + label {
   width: 170px;
   height: 170px;
   object-fit: cover;
-  object-position: center center;
+  object-position: center center;  
 }
-.tab-panel .locations-container .location .img img {
+.tab-panel .locations-container .location .img img {  
   width: 100%;
-  height: 100%;
+  height: 100%;  
 }
 .tab-panel .locations-container .location .text-content {
   width: calc(100% - 200px);
@@ -146,7 +153,7 @@ input:focus-visible + label {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
+  line-height: 150%; 
   margin: 0;
 }
 .tab-panel .locations-container .location .text-content a {
@@ -155,16 +162,17 @@ input:focus-visible + label {
 }
 
 
+
 /* RESPONSIVE
 -------------------------------- */
-@media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
-  .locations .container-main .all-locations .left {
-    padding: 40px 2em 2em 14px;
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .locations .container-main .all-locations .left {    
+    padding: 40px 2em 2em 2em;
   }
-  .locations .container-main .all-locations .location .text-content h2 {
+  .locations .container-main .all-locations .location .text-content h2 {  
     font-size: 40px;
   }
-  .locations .container-main .all-locations .location .text-content p {
+  .locations .container-main .all-locations .location .text-content p {   
     font-size: 18px;
   }
 }
@@ -180,14 +188,13 @@ input:focus-visible + label {
   }
   .locations .container-main .all-locations .right {
     display: none;
-  }
-
+  } 
   .locations .container-main .all-locations .left {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0px 1em 2em 1em;
+    padding: 0px 1em 2em 2em;
   }
   .tabset > label {
     width: 28%;
@@ -205,12 +212,9 @@ input:focus-visible + label {
     flex-flow: row nowrap;
     width: 98%;
   }
-
   .locations .container-main .all-locations .left .texto-container h1.title-where {
     font-size: 40px;
     line-height: 100%;
-  }
-  .locations .container-main .all-locations .location {
   }
   .locations .container-main .all-locations .location div.img .img-loc {
     left: 0;
@@ -224,7 +228,7 @@ input:focus-visible + label {
   }
   .locations .container-main .all-locations .location .text-content h2 {
     font-size: 32px!important;
-    line-height: 110%;
+    line-height: 110%;    
   }
   .locations .container-main .all-locations .location .text-content p {
   font-size: 14px;
