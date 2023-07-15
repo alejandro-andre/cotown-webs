@@ -1,6 +1,6 @@
 <!-- Additional HEAD content -->
 {% block head %}
-<link rel="stylesheet" href="/assets/css/blog.css">
+{% set css %}{% include "shared/css/blog.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->
@@ -12,13 +12,14 @@
         <div class="title-big pure-u-1">
           <div class="h2-big">
             <h1>BLOG</h1>
-          </div>            
+          </div>
         </div>
         <div class="search pure-u-22-24">
           <form class="search-form pure-u-1">
 
             <!-- Filter -->
             <select id="category" class="pure-u-7-24" onchange="goTag()">
+              <option value="">{% literal texts, 'filtrar-todas', L %}</option>
               <option value="">{% literal texts, 'filtrar-categoria', L %}</option>
               {% for t in tags %}
               <option value="{{t | translate('Name', L)|ascii}}">{{t | translate('Name', L)}}</option>
@@ -31,12 +32,12 @@
                   <em class="icon-search"></em>
                   <input
                   type="search"
-                  class="sinBorde"         
+                  class="sinBorde"
                   name=""
-                  placeholder="Buscar por palabra..."/>               
-              </label>          
-            </div>    
-                       
+                  placeholder="Buscar por palabra..."/>
+              </label>
+            </div>
+
           </form>
         </div>
     </section>
@@ -49,14 +50,14 @@
           <a href="{{langs[L].folder}}/{{p | translate('Slug', L) | ascii}}.html">
             <div class="img-container">
               {% if p.Featured %}
-              <div class="mark-content">                  
+              <div class="mark-content">
                 <div class="mark">
                   <div class="stars-container">
                     <em class="icon-star"></em>
                     <em class="icon-star"></em>
                     <em class="icon-star"></em>
-                  </div>                       
-                </div>                         
+                  </div>
+                </div>
               </div>
               {% endif %}
               {% image
@@ -67,31 +68,32 @@
               <div class="date">
                 <p>{{p.Publish_date|dmy}}</p>
               </div>
-            </div>          
-            <div class="data-post {% if p.Featured %}primary {% endif %}pure-u-23-24">           
+            </div>
+            <div class="data-post {% if p.Featured %}primary {% endif %}pure-u-23-24">
               <h1 class="pure-u-22-24">{{p | translate('Title', L)}}</h1>
               <div class="p-container">
-              {% for t in p.Tags %}            
-              <p>{{t.Tag | translate('Name', L)}}</p>                          
-              {% endfor %}             
+              {% for t in p.Tags %}
+              <p>{{t.Tag | translate('Name', L)}}</p>
+              {% endfor %}
               </div>
             </div>
             {% if p.featured %}
-            <div class="data-post primary pure-u-23-24">           
+            <div class="data-post primary pure-u-23-24">
               <h1 class="pure-u-22-24">{{p | translate('Title', L)}}</h1>
               <div class="p-container">
-              {% for t in p.Tags %}            
-              <p>{{t.Tag | translate('Name', L)}}</p>                          
-              {% endfor %}             
+              {% for t in p.Tags %}
+              <p>{{t.Tag | translate('Name', L)}}</p>
+              {% endfor %}
               </div>
             </div>
             {% endif %}
             </a>
-        </div>    
-        {% endif %}          
+        </div>
+        {% endif %}
         {% endfor %}
 
-         <!-- PAGINACIÓN -->      
+        <!-- PAGINACIÓN -->
+        <!--
         <div class="pag pure-u-23-24">
           <ul class="pagination">
             <li><a class="arrow disable" ref="#">
@@ -106,7 +108,9 @@
               <em class="icon-corchete-right"></em>
             </a></li>
           </ul>
-        </div>        
+        </div>
+        -->
+
     </section>
 
   </div>

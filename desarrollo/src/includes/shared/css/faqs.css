@@ -81,7 +81,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
   text-align: left;
 }
-.expansion .open-close-icon em { 
+.expansion .open-close-icon em {
   font-size: 46px;
 }
 .faqs-container .description.text .expansion label[class^="tab"]{
@@ -113,7 +113,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .faqs-container h1 {
     font-size: 46px;
   }
-  .faqs-container .description.text .expansion h2 { 
+  .faqs-container .description.text .expansion h2 {
     font-size: 26px;
   }
   .faqs-container .description.text .expansion .content p, .faqs-container .description.text .expansion .content p a, .faqs-container .description.text .expansion .content ul li {
@@ -168,7 +168,7 @@ input[type="search"]::-webkit-search-results-decoration {
     line-height: 150%;
     margin: 0;
   }
-  .expansion .open-close-icon em { 
+  .expansion .open-close-icon em {
     font-size: 20px;
   }
   .faqs-container .description.text .expansion .content p, .faqs-container .description.text .expansion .content p a, .faqs-container .description.text .expansion .content ul li {

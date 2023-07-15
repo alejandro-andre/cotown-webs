@@ -257,14 +257,14 @@
 }
 .right-data input[type=checkbox]:before {	
   font-family: 'icons';
-  content: "\e906"; 
+  content: "\e906";
 }
 .right-data input[type=checkbox]:checked:before {
 	content: "\e907";
 }
 .right-data input[type=radio]:before {	
   font-family: 'icons';
-  content: "\e928"; 
+  content: "\e928";
 }
 .right-data input[type=radio]:checked:before {
 	content: "\e929";
@@ -429,14 +429,14 @@ margin-bottom: 0.5em;
   .first .first-contain .first-slider .splide__pagination {
     bottom: 17%;
   }
-  .first .first-contain .after-slide .text-first { 
+  .first .first-contain .after-slide .text-first {
     margin-left: 1em;
   }
-  .rooms .all-rooms .title { 
+  .rooms .all-rooms .title {
     margin: 0 0.5em 2em;
     width: 100%;
   }
-  .rooms .all-rooms .title .corner { 
+  .rooms .all-rooms .title .corner {
     left: 2%;
   }
   .rooms .all-rooms .title h2 {
@@ -445,7 +445,7 @@ margin-bottom: 0.5em;
     font-size: 60px;
     left: 3%;
   }
-  .rooms .all-rooms .title.no-corner h2{ 
+  .rooms .all-rooms .title.no-corner h2{
     margin-left: 0.2em;
   }
   .last .last-zone .last-content {
@@ -455,7 +455,7 @@ margin-bottom: 0.5em;
 
 /* RESPONSIVE \*/
 @media only screen and (max-width: 1023.9px) {
-  .first .first-contain .after-slide .text-first { 
+  .first .first-contain .after-slide .text-first {
     margin-left: 1em;
   }
   .first .first-contain .flat-services {

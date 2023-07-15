@@ -10,7 +10,7 @@
     <div class="left-content pure-u-md-1-2 pure-u-1" >
       <div class="banner-container pure-u-1">
       {% for b in banners %}
-      {% if b.Page == 'home' %}   
+      {% if b.Page == 'home' %}
       <div class="spot">
         <a class="close" onclick="ocultarBannerMobile()">
           <em class="icon-close"></em>
@@ -24,7 +24,7 @@
       {% endfor %}
       </div>
     </div>
-    
+
       <!-- Cabecera
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="right-content pure-1-2">
@@ -78,7 +78,7 @@
 
           <!-- Reservar -->
           <li class="pure-menu-item">
-            <div class="booking">          
+            <div class="booking">
               <button class="btn-primary">
               <a href="#popupBooking">
               {% literal texts, 'button-reservar', L %}
@@ -102,7 +102,7 @@
     <div class="left-nav pure-u-1 pure-u-lg-6-24">
 
       <!-- Icono menú (movil) -->
-      <div class="pure-menu pure-u-1-3">   
+      <div class="pure-menu pure-u-1-3">
         <a href="#" id="menuLink" class="menu-link" type="button" onclick="mostrarMenuMobile()">
           <em class="icon-flat"></em>
         </a>
@@ -125,7 +125,7 @@
     <!-- Menu movil -->
     <div class="right-nav pure-u-1-1 pure-u-xl-16-24 pure-u-lg-18-24 pure-menu pure-menu-horizontal custom-can-transform" id="menu">
       <ul class="black-menu pure-menu-list" id="menu-desplegado">
-    
+
         <div class="only-mobile-menu pure-u-1-1" id="only-mobile-menu">
 
           <!-- Título menu -->
@@ -134,7 +134,7 @@
           </div>
 
           <!-- Logo -->
-          <div class="logo pure-u-11-24">     
+          <div class="logo pure-u-11-24">
             <a href="{{langs[L].folder}}/home.html">
               {% if siteid == 1 %}
               <img class="img-logo" alt="logo" src="/assets/img/vanguard-white.svg">
@@ -145,10 +145,10 @@
           </div>
 
           <!-- Search -->
-          <div class="menu-mobile-icons pure-u-5-24">    
+          <div class="menu-mobile-icons pure-u-5-24">
               <em class="icon-search"></em>
               <a type="button" onclick="ocultarMenuMobile()"><em class="icon-close"></em></a>
-          </div>       
+          </div>
 
         </div>
 
@@ -170,13 +170,13 @@
               {% else%}
               <label class="selected-option-mobile" for="options">
                 <span class="select-value-mobile">EN</span>
-                <em class="icon-corchete-down mobile"></em>             
+                <em class="icon-corchete-down mobile"></em>
               </label>
               <div data-toggle="collaps" class="options-mobile">
                 <a href ="{{alt.es}}"><div class="option-mobile">ES</div></a>
               </div>
               {% endif %}
-            </div>          
+            </div>
           </div>
         </div>
 
@@ -186,7 +186,7 @@
             <label class="locations-label">
                 <span class="loc"><a href="{{langs[L].folder}}/{{langs[L].pages['locations'].url}}.html">{{langs[L].pages['locations'].title}}</a></span>
                 <div class="icons-open-close">
-                  <em class="change-value icon icon-corchete-down" for="options"></em>               
+                  <em class="change-value icon icon-corchete-down" for="options"></em>
                 </div>
             </label>
             <div data-toggle="close" class="options-loc">
@@ -221,7 +221,7 @@
         <!-- Contact -->
         <li class="contact"><a href="{{langs[L].folder}}/{{langs[L].pages['contact'].url}}.html">{{langs[L].pages['contact'].title}}</a>
         </li>
- 
+
         <!-- Botón booking -->
         <li class="only-menu-mobile pure-menu-item">
           <div class="booking pure-u-1">
@@ -229,7 +229,7 @@
             <em class="icon-house"></em>
             </button>
           </div>
-       
+
           <div class="redes-mobile">
             <a href="{{globals.rrss.wh}}" rel="noopener, noreferrer" target="_blank"><em class="icon-whatsapp"></em></a>
             <a href="{{globals.rrss.fb}}" rel="noopener, noreferrer" target="_blank"><em class="icon-facebook"></em></a>
@@ -241,7 +241,7 @@
       </ul>
     </div>
 
-  </div>   
+  </div>
 </section>
 
 <!-- Reservas popup -->

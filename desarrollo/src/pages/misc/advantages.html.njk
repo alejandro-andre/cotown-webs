@@ -33,19 +33,19 @@ tags: page
         <img class="img" alt="advantage" src="/assets/img/advantages-logo.svg">
       </div>
       <div class="title-big advantages pure-u-22-24">
-        <div class="h2-big pure-u-1 pure-u-lg-5-12 pure-u-xl-7-12">    
+        <div class="h2-big pure-u-1 pure-u-lg-5-12 pure-u-xl-7-12">
           {% literal texts, 'advantages-titulo', L, true %}
         </div>
         <div class="text pure-u-1 pure-u-lg-7-12 pure-u-xl-5-12">
           {% literal texts, 'advantages-texto', L, true %}
         </div>
-      </div>  
+      </div>
     </section>
 
     <section class="banner">
       <div class="splide-banner splide" role="group">
         <div class="splide__track">
-          <ul class="splide__list">     
+          <ul class="splide__list">
             {% for b in banners %}
             {% if b.Page == 'ventajas' %}
             {% for p in (b | translate('Text', L)).split('|') %}
@@ -58,9 +58,9 @@ tags: page
             {% endfor %}
           </ul>
         </div>
-      </div>  
-    </section> 
- 
+      </div>
+    </section>
+
     <section class="container-advantages">
       <div class="grid">
         {% for a in advantages %}
@@ -78,7 +78,7 @@ tags: page
               a.Name, a.Name|slug + '-hover', "img2", [300], ""
             %}
             </div>
-          </div>                 
+          </div>
         </div>
         {% endfor %}
         <!--
@@ -91,24 +91,24 @@ tags: page
 
     <section class="form">
 
-      {% literal texts, 'advantages-si-eres-empresa', L, true %}      
+      {% literal texts, 'advantages-si-eres-empresa', L, true %}
 
-      <div class="form-container pure-g">      
+      <div class="form-container pure-g">
         <div class="campo pure-u-1 pure-u-lg-11-24">
-          <label class="label">{% literal texts, 'form-nombre', L%}</label>                
+          <label class="label">{% literal texts, 'form-nombre', L%}</label>
           <input class="input" type="name" id="name" name="name">
         </div>
         <div class="campo pure-u-1 pure-u-lg-11-24">
-          <label class="label">{% literal texts, 'form-apellidos', L%}</label>                
+          <label class="label">{% literal texts, 'form-apellidos', L%}</label>
           <input class="input" type="name" id="name" name="name">
         </div>
         <div class="campo pure-u-1 pure-u-lg-11-24">
-          <label class="label">{% literal texts, 'form-email', L%}</label>                
+          <label class="label">{% literal texts, 'form-email', L%}</label>
           <input class="input" type="email" id="email" name="email">
         </div>
         <div class="campo number pure-u-1 pure-u-lg-11-24">
             <div class="prefix">
-              <label class="label pure-u-1">{% literal texts, 'form-prefijo', L %}</label>                
+              <label class="label pure-u-1">{% literal texts, 'form-prefijo', L %}</label>
               <select class="select pure-u-1" type="select" id="code" name="code">
                 <option>+34</option>
                 <option>+34</option>
@@ -116,29 +116,29 @@ tags: page
               </select>
             </div>
               <div class="num">
-              <label class="label pure-u-1">{% literal texts, 'form-telefono', L %}</label>                
+              <label class="label pure-u-1">{% literal texts, 'form-telefono', L %}</label>
               <input class="input pure-u-1" type="phone" id="phone" name="phone">
             </div>
           </div>
         <div class="campo pure-u-1 pure-u-lg-11-24">
-          <label class="label">{% literal texts, 'form-empresa', L%}</label>                
+          <label class="label">{% literal texts, 'form-empresa', L%}</label>
           <input class="input" type="company" id="company" name="company">
         </div>
         <div class="campo pure-u-1 pure-u-lg-11-24">
-          <label class="label">{% literal texts, 'form-empresa', L%}</label>                
+          <label class="label">{% literal texts, 'form-empresa', L%}</label>
           <input class="input" type="company" id="company" name="company">
         </div>
         <div class="campo coment pure-u-1">
           <label class="label">{% literal texts, 'form-mensaje', L%}</label>
           <textarea type="textarea" id="textarea" name="textarea" rows="4" cols="50">
           </textarea>
-        </div>      
+        </div>
         <div class="text-ok">
           <p>{% literal texts, 'advantages-ok', L%}</p>
         </div>
 
         <button class="btn-secondary">{% literal texts, 'form-enviar', L%}</button>
-      
+
       </div>
 
     </section>

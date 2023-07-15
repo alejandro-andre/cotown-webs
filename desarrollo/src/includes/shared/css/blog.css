@@ -268,7 +268,7 @@ main.post-page .container-main .like-content {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  margin: 0 0 4em; 
+  margin: 0 0 4em;
 }
 main.post-page .container-main .like-content .like {
   background-color: var(--primary);
@@ -369,7 +369,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 /* RESPONSIVE \*/
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
   main .container-main .first-contain .title-big .h2-big h1 {
-    font-size: 76px; 
+    font-size: 76px;
   }
 }
 @media only screen and (min-width: 1023.9px) and (max-width: 1149px) {
@@ -450,7 +450,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     margin: 0.5em auto 1em;
     gap: 0.4em;
   }
-  .post .data-post.primary { 
+  .post .data-post.primary {
     box-shadow: none;
   }
   .post .img-container {
@@ -465,7 +465,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     padding: 0;
     border-radius:  0 0 16px 16px;
   }
-  .post .data-post h1, .post .data-post .p-container { 
+  .post .data-post h1, .post .data-post .p-container {
     padding: 3% 4% 0;
   }
 
@@ -497,7 +497,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
   main.post-page .container-main .post-content .text .text-content p strong,  main.post-page .container-main .post-content .text .text-content p em {
     font-size: 14px;
   }
-  main.post-page .container-main .like-content {     
+  main.post-page .container-main .like-content {
       margin: 0;
   }
   main.post-page .container-main .like-content .like {
@@ -513,7 +513,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
   main.post-page .container-main .like-content .like .text h3 {
       font-weight: 400;
       font-size: 35.4257px;
-      line-height: 36px;     
+      line-height: 36px;
   }
   main.post-page .container-main .like-content .like .redes a {
     text-align: center;

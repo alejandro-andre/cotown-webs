@@ -148,9 +148,9 @@ button.btn-secondary {
 -------------------------------- */
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
     main .container-main .first-contain .advantages.title-big .h2-big h1 {
-        font-size: 120px; 
+        font-size: 120px;
     }
-    main .container-main .first-contain .advantages.title-big .h2-big h1 span.h2-border {  
+    main .container-main .first-contain .advantages.title-big .h2-big h1 span.h2-border {
         font-size: 120px;
         letter-spacing: -2px;
     }
@@ -163,22 +163,22 @@ button.btn-secondary {
         max-width: 100%;
     }
     main .container-main .first-contain .advantages.title-big .h2-big h1 {
-        font-size: 80px; 
+        font-size: 80px;
     }
-    main .container-main .first-contain .advantages.title-big .h2-big h1 span.h2-border {  
+    main .container-main .first-contain .advantages.title-big .h2-big h1 span.h2-border {
         font-size: 80px;
         letter-spacing: -2px;
     }
 }
 
 @media only screen and (max-width: 1023.9px) {
-    main .container-main .first-contain .advantages.title-big {     
+    main .container-main .first-contain .advantages.title-big {
         margin: 8em auto 2em;
     }
     main .container-main .first-contain .img-right img {
         width: 30%;
     }
-    main .container-main .first-contain .advantages.title-big .h2-big h1 {    
+    main .container-main .first-contain .advantages.title-big .h2-big h1 {
         font-size: 40px;
         line-height: 100%;
         letter-spacing: -1.2px;
@@ -188,7 +188,7 @@ button.btn-secondary {
         letter-spacing: 2.4px;
     }
     main .container-main .first-contain .advantages.title-big .text p {
-        font-size: 14px;     
+        font-size: 14px;
         font-weight: 400;
         line-height: 150%;
     }
@@ -196,7 +196,7 @@ button.btn-secondary {
         padding: 1em 0;
     }
     main .container-main section.container-advantages .grid {
-        padding: 0 0.2em;     
+        padding: 0 0.2em;
     }
     main .container-main section.container-advantages .grid .promo {
         height: auto;
@@ -233,5 +233,5 @@ button.btn-secondary {
 @media only screen and (max-width: 599px) {
     main .container-main .first-contain .img-right  {
         top: 0px;
-    } 
+    }
 }

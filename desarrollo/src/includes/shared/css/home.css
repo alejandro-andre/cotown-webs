@@ -98,7 +98,7 @@ p.subtitle {
     position: relative;
     top: 0;
     left: 20%;
-    height: fit-content; 
+    height: fit-content;
     width: 80%;
     text-align: center;
     vertical-align: middle;
@@ -112,7 +112,7 @@ p.subtitle {
     width: 100%;
     object-fit: contain;
 }
-.main-header .video .video-home img { 
+.main-header .video .video-home img {
     object-fit: contain;
     width: 100%;
 }
@@ -171,11 +171,11 @@ main .container-main .first-contain .text p {
 .locations .img:hover img {
     -webkit-transform: scale(1.20);
     transform: scale(1.20);
-    -webkit-transition: transform .25s ease-in-out; 
-    -moz-transition: transform .25s ease-in-out; 
-    -ms-transition: transform .25s ease-in-out; 
-    -o-transition: transform .25s ease-in-out; 
-    transition: transform .25s ease-in-out; 
+    -webkit-transition: transform .25s ease-in-out;
+    -moz-transition: transform .25s ease-in-out;
+    -ms-transition: transform .25s ease-in-out;
+    -o-transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
 }
 
 /* PISOS
@@ -205,7 +205,7 @@ main .container-main .first-contain .text p {
     transform: scale(1.20);
     -webkit-transform: scale(1.20);
     filter: contrast(1.2);
-    transition: transform .25s ease-in-out; 
+    transition: transform .25s ease-in-out;
 }
 
 .pisos .container .img-container span {
@@ -234,12 +234,12 @@ main .container-main .first-contain .text p {
     bottom: 108px;
 }
 .pisos .container .img-container:hover > .img-title1 .subrayado,
-.pisos .container .img-container:hover > .img-title2 .subrayado { 
+.pisos .container .img-container:hover > .img-title2 .subrayado {
     width: 100%;
     -webkit-transition: width 0.25s ease-in-out;
     -moz-transition: width 0.25s ease-in-out;
     -o-transition: width 0.25s ease-in-out;
-    transition: width 0.25s ease-in-out; 
+    transition: width 0.25s ease-in-out;
 }
 
     /* SERVICIOS
@@ -258,7 +258,7 @@ main .container-main .first-contain .text p {
     text-align: center;
     padding: 2em 4em;
 }
-.servicios .servicios-container .services-cards { 
+.servicios .servicios-container .services-cards {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -285,7 +285,7 @@ main .container-main .first-contain .text p {
 }
 .servicios .servicios-container .services-cards .card p {
     margin-bottom: 0;
- 
+
 }
 .servicios .servicios-container .services-cards .card p.bold {
     font-weight: 700;
@@ -345,7 +345,7 @@ main .container-main .first-contain .text p {
     left: -4em;
 }
 .cotownity .container-cotownity .contain-bg .img-big {
-    position: relative; 
+    position: relative;
     width: 52%;
     height: 600px;
 }
@@ -383,7 +383,7 @@ main .container-main .first-contain .text p {
     justify-content: flex-end;
     align-items: center;
     gap: 2.5em;
- 
+
 }
 .cotownity .insta-fb em{
     font-size: 80px;
@@ -520,7 +520,7 @@ main .container-main .first-contain .text p {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 1em; 
+    padding-top: 1em;
 }
 
 .opinions .slide .title-info {
@@ -560,7 +560,7 @@ main .container-main .first-contain .text p {
     margin: 0;
 }
 .opinions .slide .opinion ul.stars li em.icon-star.no-active {
-    color: var(--grey-light); 
+    color: var(--grey-light);
 }
 .opinions .slide p.text {
     font-size: 16px;
@@ -583,10 +583,10 @@ main .container-main .first-contain .text p {
 .pisos .container .img-container .img-title2 {
     color: var(--primary-text);
     font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 400;     
+    font-weight: 400;
     position: absolute;
     margin: 0 1em 0 0.3em;
-    font-size: 40px; 
+    font-size: 40px;
     line-height: 46px;
     text-align: left;
     width: fit-content;
@@ -603,23 +603,23 @@ main .container-main .first-contain .text p {
     .main-header .left .basic-searcher label {
         font-size: 18px;
     }
-    .main-header .left .basic-searcher select {    
+    .main-header .left .basic-searcher select {
         font-size: 16px;
     }
     .locations h3 {
         font-size: 78px;
     }
     .pisos .container .img-container .img-title1,
-    .pisos .container .img-container .img-title2 {    
-        font-size: 78px;    
+    .pisos .container .img-container .img-title2 {
+        font-size: 78px;
     }
-    
+
     .pisos .container .img-container .img-title1 .subrayado {
         bottom: 174px;
     }
     .pisos .container .img-container .img-title2 .subrayado {
         bottom: 104px;
-    } 
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1599px) {
@@ -627,14 +627,14 @@ main .container-main .first-contain .text p {
         font-size: 22px;
     }
     .pisos .container .img-container .img-title1,
-    .pisos .container .img-container .img-title2 {    
-        font-size: 60px;    
+    .pisos .container .img-container .img-title2 {
+        font-size: 60px;
     }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
-    .main-header .left {     
-        padding: 2em;     
+    .main-header .left {
+        padding: 2em;
     }
     .main-header .left .text-container.desktop {
     padding-right: 2em;
@@ -645,7 +645,7 @@ main .container-main .first-contain .text p {
     }
     .main-header .left .basic-searcher select {
         height: 32px;
-        margin-bottom: 0.1em;     
+        margin-bottom: 0.1em;
     }
     .main-header .left .button-search {
         margin-top: 0.2em;
@@ -659,7 +659,7 @@ main .container-main .first-contain .text p {
     .main-header .left .button-search button.search.mobile {
         display: none;
     }
- 
+
 }
 
 /* TABLET */
@@ -722,14 +722,14 @@ main .container-main .first-contain .text p {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
     }
     .main-header .left .button-search button.search.mobile em {
         display: none;
     }
 
     .main-header .left .text-container.desktop {
-        display: none; 
+        display: none;
     }
     .main-header .video .text-container.mobile {
         position: absolute;

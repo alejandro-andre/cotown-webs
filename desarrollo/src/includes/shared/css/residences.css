@@ -236,23 +236,23 @@ input[type="search"]::-webkit-search-results-decoration {
   .first-contain .title-big {
     margin: 2em 1em 0
   }
-  .first-contain .title-big h1 { 
+  .first-contain .title-big h1 {
     font-weight: 400;
     font-size: 40px;
     line-height: 100%;
   }
-  .search select, .search .search-container label { 
+  .search select, .search .search-container label {
     font-size: 16px;
     padding: 10px 16px;
   }
 
-  .residence-locations { 
+  .residence-locations {
     width: 94%;
     margin: 0 auto 2em;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
-    align-items: flex-start; 
+    align-items: flex-start;
   }
   .residence-locations .location {
     width: 100%;
@@ -270,7 +270,7 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-left: 0;
   }
   .residence-locations .location .title h2 {
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
     margin: 0px;
     text-align: start;
     width: 100%;
