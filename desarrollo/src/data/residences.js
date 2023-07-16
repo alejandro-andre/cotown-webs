@@ -12,7 +12,7 @@ module.exports = async (config) => {
         Buildings: BuildingListViaDistrict_id ( 
           joinType: INNER
           where: { 
-            Building_type_id: { EQ: 33 } 
+            Building_type_id: { NE: 33 } 
             Segment_id: { EQ: $id }
           }
         ) {

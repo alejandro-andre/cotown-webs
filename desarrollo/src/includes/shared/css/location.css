@@ -22,10 +22,12 @@ main .location .container-main .first-contain .video-loc {
 main .location .container-main .first-contain .video-loc .video .img {
     width: 100%;
     object-fit: cover;
+    object-position: center center;
 }
 main .location .container-main .first-contain .video-loc .video .img img {
     width: 100%;
     object-fit: cover;
+    object-position: center center;
 }
 main .location .container-main .first-contain .video-loc .description {
     width: 50%;
