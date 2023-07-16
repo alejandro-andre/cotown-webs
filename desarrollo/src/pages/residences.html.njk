@@ -1,5 +1,5 @@
 ---
-name: datasecurity
+name: residences
 eleventyComputed:
     title: "{{langs[L].pages[name].title}}"
     alt:
@@ -21,12 +21,34 @@ tags: page
 ---
 <!-- Additional HEAD content -->
 {% block head %}
-{% set css %}{% include "shared/css/legals.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% set css %}{% include "shared/css/residences.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->
-<main class="legal">
+<main class="locations">
   <div class="container-main">
-    {% literal texts, 'legal-seguridad-y-datos', L, true %}
+
+    <!-- List of locations -->
+    {% include 'shared/sections/residences/residences.html.njk' %}
+
   </div>
 </main>
+
+{% block footer %}
+{% set script %}
+// Slider
+new Splide(".splide-services", {
+  type: 'loop',
+  autoHeight: true,
+  focus: 0,
+  perPage: 3,
+  perMove: 1,
+  padding: '10em',
+  gap: '10em',
+  breakpoints: {
+    1024: { perPage: 2 },
+    768: { perPage: 1, padding: 0 },
+  },
+}).mount();
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

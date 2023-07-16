@@ -2,19 +2,17 @@
     "folder": "/es",
     "locale": "es_ES",
     "pages": {
-        "index":         { "url": "home",                 "title": "Inicio",                 "description": "" },
-        "locations":     { "url": "localizaciones",       "title": "Localizaciones",         "description": "" },
-        "about":         { "url": "conocenos",            "title": "Conócenos",              "description": "" },
-        "advantages":    { "url": "ventajas",             "title": "Ventajas",               "description": "" },
-        "faqs":          { "url": "preguntas-frecuentes", "title": "FAQs",                   "description": "" },
-        "blog":          { "url": "blog",                 "title": "Blog",                   "description": "" },
-        "contact":       { "url": "contacto",             "title": "Contacto",               "description": "" },
-        "privacy":       { "url": "politica-privacidad",  "title": "Política de privacidad", "description": "" },
-        "legal":         { "url": "aviso-legal",          "title": "Aviso legal",            "description": "" },
-        "data-security": { "url": "seguridad-datos",      "title": "Seguridad y datos",      "description": "" },
-        
-        "building":      { "url": "building",             "title": "building",               "description": "" },
-        "residence":     { "url": "residence",            "title": "residence",              "description": "" },
-        "flat":          { "url": "flat",                 "title": "flat",                   "description": "" }
+        "index":          { "url": "home",                  "title": "Inicio",                 "description": "" },
+        "locationsrooms": { "url": "pisos-compartidos",     "title": "Localizaciones",         "description": "" },
+        "locationsflats": { "url": "apartamentos-privados", "title": "Localizaciones",         "description": "" },
+        "residences":     { "url": "residencias",           "title": "Residencias",            "description": "" },
+        "about":          { "url": "conocenos",             "title": "Conócenos",              "description": "" },
+        "advantages":     { "url": "ventajas",              "title": "Ventajas",               "description": "" },
+        "faqs":           { "url": "preguntas-frecuentes",  "title": "FAQs",                   "description": "" },
+        "blog":           { "url": "blog",                  "title": "Blog",                   "description": "" },
+        "contact":        { "url": "contacto",              "title": "Contacto",               "description": "" },
+        "privacy":        { "url": "politica-privacidad",   "title": "Política de privacidad", "description": "" },
+        "legal":          { "url": "aviso-legal",           "title": "Aviso legal",            "description": "" },
+        "datasecurity":  { "url": "seguridad-datos",       "title": "Seguridad y datos",      "description": "" }
     }
 }

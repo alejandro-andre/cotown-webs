@@ -1,5 +1,5 @@
 ---
-name: locations
+name: locationsflats
 eleventyComputed:
     title: "{{langs[L].pages[name].title}}"
     alt:
@@ -33,22 +33,3 @@ tags: page
 
   </div>
 </main>
-
-{% block footer %}
-{% set script %}
-// Slider
-new Splide(".splide-services", {
-  type: 'loop',
-  autoHeight: true,
-  focus: 0,
-  perPage: 3,
-  perMove: 1,
-  padding: '10em',
-  gap: '10em',
-  breakpoints: {
-    1024: { perPage: 2 },
-    768: { perPage: 1, padding: 0 },
-  },
-}).mount();
-{% endset %}<script>{{ script | jsmin | safe }}</script>
-{% endblock %}

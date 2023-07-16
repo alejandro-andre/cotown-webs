@@ -9,7 +9,7 @@
 
     <!-- First -->
     <section class="first pure-u-1">
-    {% include 'shared/sections/shared/first.html.njk' %}
+    {% include 'shared/sections/rooms/first.html.njk' %}
     </section>
 
     <!-- Rooms -->
@@ -17,10 +17,10 @@
       <section class="all-rooms pure-u-1">
         {% set type = 'I' %}
         {% set typetitle = 'HABITACIONES INDIVIDUALES' %}
-        {% include 'shared/sections/shared/rooms.html.njk' %}
+        {% include 'shared/sections/rooms/rooms.html.njk' %}
         {% set type = 'D' %}
         {% set typetitle = 'HABITACIONES COMPARTIDAS' %}
-        {% include 'shared/sections/shared/rooms.html.njk' %}
+        {% include 'shared/sections/rooms/rooms.html.njk' %}
       </section>
     </section>
 
@@ -29,7 +29,7 @@
 
       <!-- Last -->
       <div class="last-zone pure-u-1">
-        {% include 'shared/sections/shared/last.html.njk' %}
+        {% include 'shared/sections/rooms/last.html.njk' %}
       </div>
 
       <!-- Map -->
@@ -38,7 +38,7 @@
 
       <!-- Services -->
       <div class="last-services pure-u-1">
-        {% include 'shared/sections/shared/services.html.njk' %}
+        {% include 'shared/sections/rooms/services.html.njk' %}
       </div>
 
     </section>

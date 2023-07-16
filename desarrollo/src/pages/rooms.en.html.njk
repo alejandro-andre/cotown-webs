@@ -1,0 +1,23 @@
+---
+name: building
+eleventyComputed:
+    L: "en"
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{building.Name | ascii}}.html"
+      en: "{{langs.en.folder}}/{{building.Name | ascii}}.html"
+    description: "{{building | translate('Name',L)|ascii}}"
+    permalink: "{{langs[L].folder}}/{{building.Name | ascii}}-rooms.html"
+layout: shared/layouts/base.html
+pagination:
+    data: buildings
+    size: 1
+    alias: building
+    addAllPagesToCollections: true
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+{% include 'shared/sections/rooms/main.html.njk' %}

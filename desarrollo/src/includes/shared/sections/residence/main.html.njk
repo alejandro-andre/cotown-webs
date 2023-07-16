@@ -1,6 +1,6 @@
 <!-- Additional HEAD content -->
 {% block head %}
-<link rel="stylesheet" href="/assets/css/residence.css">
+{% set css %}{% include "shared/css/residences.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->

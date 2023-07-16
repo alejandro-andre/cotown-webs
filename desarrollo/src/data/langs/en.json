@@ -2,19 +2,17 @@
     "folder": "",
     "locale": "en_US",
     "pages": {
-        "index":         { "url": "home",          "title": "Home",             "description": "" },
-        "locations":     { "url": "locations",     "title": "Locations",        "description": "" },
-        "about":         { "url": "about-us",      "title": "About us",         "description": "" },
-        "advantages":    { "url": "advantages",    "title": "Advantages",       "description": "" },
-        "faqs":          { "url": "faqs",          "title": "FAQs",             "description": "" },
-        "blog":          { "url": "blog",          "title": "Blog",             "description": "" },
-        "contact":       { "url": "contact",       "title": "Contact",          "description": "" },
-        "privacy":       { "url": "privacy",       "title": "Privacy policies", "description": "" },
-        "legal":         { "url": "aviso-legal",   "title": "Legal",            "description": "" },
-        "data-security": { "url": "data-security", "title": "Data security",    "description": "" },
-        
-        "building":      { "url": "building",             "title": "building",               "description": "" },
-        "residence":     { "url": "residence",            "title": "residence",              "description": "" },
-        "flat":          { "url": "flat",                 "title": "flat",                   "description": "" }
+        "index":          { "url": "home",               "title": "Home",              "description": "" },
+        "locationsrooms": { "url": "shared-flats",       "title": "Locations",         "description": "" },
+        "locationsflats": { "url": "private-apartments", "title": "Locations",         "description": "" },
+        "residences":     { "url": "residences",         "title": "residences",        "description": "" },
+        "about":          { "url": "about-us",           "title": "About us",          "description": "" },
+        "advantages":     { "url": "advantages",         "title": "Advantages",        "description": "" },
+        "faqs":           { "url": "faqs",               "title": "FAQs",              "description": "" },
+        "blog":           { "url": "blog",               "title": "Blog",              "description": "" },
+        "contact":        { "url": "contact",            "title": "Contact",           "description": "" },
+        "privacy":        { "url": "privacy",            "title": "Privacy policies",  "description": "" },
+        "legal":          { "url": "aviso-legal",        "title": "Legal",             "description": "" },
+        "datasecurity":  { "url": "datasecurity",      "title": "Data security",     "description": "" }
     }
 }

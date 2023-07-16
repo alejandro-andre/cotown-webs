@@ -7,7 +7,7 @@ eleventyComputed:
       es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
       en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
     description: "{{building | translate('Name',L)|ascii}}"
-    permalink: "{{langs[L].folder}}/{{building.Name | ascii}}.html"
+    permalink: "{{langs[L].folder}}/{{building.Name | ascii}}-rooms.html"
 layout: shared/layouts/base.html
 pagination:
     data: buildings
@@ -20,4 +20,4 @@ changefreq: "weekly"
 priority: "1.0"
 tags: page
 ---
-{% include 'shared/sections/shared/shared.html.njk' %}
+{% include 'shared/sections/rooms/main.html.njk' %}

@@ -43,6 +43,6 @@ module.exports = async (config) => {
       }
     }
   }`;
-  const data = await gql(QUERY, config, 'building');
+  const data = await gql(QUERY, config, 'buildings');
   return data.data;
 };

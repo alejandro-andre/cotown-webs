@@ -1,5 +1,5 @@
 ---
-name: datasecurity
+name: locationsrooms
 eleventyComputed:
     title: "{{langs[L].pages[name].title}}"
     alt:
@@ -21,12 +21,15 @@ tags: page
 ---
 <!-- Additional HEAD content -->
 {% block head %}
-{% set css %}{% include "shared/css/legals.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% set css %}{% include "shared/css/locations.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->
-<main class="legal">
+<main class="locations">
   <div class="container-main">
-    {% literal texts, 'legal-seguridad-y-datos', L, true %}
+
+    <!-- List of locations -->
+    {% include 'shared/sections/locations/locations.html.njk' %}
+
   </div>
 </main>
