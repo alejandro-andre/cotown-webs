@@ -19,9 +19,11 @@ changefreq: "weekly"
 priority: "1.0"
 tags: page
 ---
+{% if siteid == 1%}
+
 <!-- Additional HEAD content -->
 {% block head %}
-{% set css %}{% include "shared/css/residences.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% set css %}{% include "vanguard/css/residences.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->
@@ -29,7 +31,7 @@ tags: page
   <div class="container-main">
 
     <!-- List of locations -->
-    {% include 'shared/sections/residences/residences.html.njk' %}
+    {% include 'vanguard/sections/residences/residences.html.njk' %}
 
   </div>
 </main>
@@ -52,3 +54,5 @@ new Splide(".splide-services", {
 }).mount();
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
+
+{% endif%}

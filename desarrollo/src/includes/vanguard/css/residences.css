@@ -9,6 +9,7 @@
   margin: 0 0 2em;
 }
 .first-contain .img-residences {
+  max-height: 480px;
   object-fit: cover;
   object-position: center center;
 }
@@ -20,7 +21,7 @@
 }
 .search .search-container {
   position: absolute;
-    bottom: 12%;
+    bottom: 25%;
     left: 20%;
     width: 60%;
 }
@@ -49,6 +50,7 @@
 }
 .search select {
   padding: 12px 16px;
+  border-radius: 16px;
 }
 select {
   -webkit-appearance: none;
@@ -85,41 +87,35 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 2em;
 }
 .residence-locations .location .title {
-  width: 32%;
   height: 250px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-left: 35%;
+  margin-left: 25%;
   padding-left: 1em;
 }
 .residence-locations .location .title h2 {
   transform: rotate(-90deg);
-  margin: 0 0 0 2%;
+  text-align: right;
+  position: absolute;
+  width: 400px;
+  top: 185px;
+  left: -160px;
 }
-
 .residence-locations .location .title .img {
   width: 38px;
   position: absolute;
   left: -8px;
   top: 0px;
 }
-.residence-locations .residence-cards {
-  width: 82%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2%;
-}
 .residence-locations .residence-card {
-  width: 48%;
   object-fit: cover;
   object-position: center center;
   border-radius: 25px 0 0 0;
   overflow: hidden;
+  padding-right: 10px;
 }
 
 .residence-locations .residence-card .img {
@@ -148,13 +144,12 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 1.28px;
+  text-transform: uppercase;
 }
-
 .residence-locations .residence-card .types {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
   margin-bottom: 1em;
 }
 .residence-locations .residence-card .types .type {
@@ -164,19 +159,22 @@ input[type="search"]::-webkit-search-results-decoration {
   align-items: flex-start;
 }
 .residence-locations .residence-card .types .type p {
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 130%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 110%;
   color: var(--primary);
   margin-bottom: 0;
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
 }
 .residence-locations .residence-card .types .type p.price {
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 124%;
+  line-height: 110%;
   letter-spacing: -0.6px;
   color: var(--black);
   margin: 0;
+  text-transform: none;
 }
 .residence-locations .residence-card .services {
   display: flex;
@@ -193,32 +191,32 @@ input[type="search"]::-webkit-search-results-decoration {
   align-items: center;
   width: 23%;
 }
-
 .residence-locations .residence-card .services .service .icon {
   text-align: center;
 }
-.residence-locations .residence-card .services .service .icon img {
+.residence-locations .residence-card .services .service .icon svg {
   width: 40px;
 }
 .residence-locations .residence-card .services .service .description  {
   text-align: center;
 }
 .residence-locations .residence-card .services .service .description p {
-  font-size: 14.842px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 18.552px;
 }
 
-
-
-
+@media only screen and (min-width: 1600px) {
+  .residence-locations .location .title h2 {
+    top: 180px;
+    left: -150px;
+  }
+}
 
 @media only screen and (min-width: 1024px) {
   .residence-locations .location .title .img.mobile {
     display: none;
   }
 }
-
 
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
@@ -245,7 +243,6 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 16px;
     padding: 10px 16px;
   }
-
   .residence-locations {
     width: 94%;
     margin: 0 auto 2em;
@@ -270,8 +267,9 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-left: 0;
   }
   .residence-locations .location .title h2 {
+    position: initial;
     transform: rotate(0deg);
-    margin: 0px;
+    margin: 0;
     text-align: start;
     width: 100%;
   }
