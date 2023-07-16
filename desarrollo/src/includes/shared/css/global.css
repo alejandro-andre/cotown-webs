@@ -24,7 +24,7 @@ mark {
 
 /* RESPONSIVE FONTS \*/
 @media only screen and (min-width: 1600px) {
-    h1 { font-size: 120px; font-weight: 400; }
+    /*h1 { font-size: 120px; font-weight: 400; }*/
     h2 { font-size: 78px; font-weight: 400; }
     h3 { font-size: 50px; line-height: 1.3; }
     h4 { font-size: 36px; line-height: 1.3; }
@@ -323,6 +323,9 @@ main {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1em;
+}
+.container-header.first .turquoise-line .left-content .banner-container a {
+    padding-top:3px;
 }
 .container-header.first .left-content .spot {
     display: flex;
@@ -843,6 +846,7 @@ main .container-main section.form .form-container .campo .select input.selected 
     opacity: 0;
 }
 section.form .form-container .text-ok p {
+    display: none;
     color: var(--green-success);
     font-size: 16px;
     font-style: italic;
@@ -1413,7 +1417,7 @@ button.date-button input.inputs {
         line-height: 26px;
     }
     main .container-main section.form .form-container .campo label {
-        font-size: 12px;
+        font-size: 16px;
     }
     main .container-main section.form .form-container .campo.number .num input {
         width: 85%;

@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 2em;
 }
 .first-contain {
   display: flex;
@@ -14,7 +14,7 @@
   align-items: center;
 }
 .search {
-  margin: 0 2% 3em;
+  margin: 0 0 1.5em;
 }
 .search .search-form {
   display: flex;
@@ -85,7 +85,6 @@ input[type="search"]::-webkit-search-results-decoration {
   justify-content: flex-start;
   align-items: flex-start;
   margin: 0 0 2em;
-  gap: 2em;
 }
 .post {
   position: relative;
@@ -93,11 +92,6 @@ input[type="search"]::-webkit-search-results-decoration {
   height: fit-content;
   background-color: var(--white);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 1em 0;
   overflow: hidden;
   background-color: transparent;
 }
@@ -215,8 +209,6 @@ main .container-main .first-contain .title-big .h2-big h1 {
 
 }
 
-
-
 /* POST
 -------------------------------- \*/
 main.post-page .container-main .post-content {
@@ -237,7 +229,6 @@ main.post-page .container-main .post-content img {
   width: 100%;
   margin-bottom: 2em;
 }
-
 main.post-page .container-main .post-content .text .text-content h2, main.post-page .container-main .post-content .text .text-content h3 {
   font-size: 64px;
   font-weight: 400;
@@ -304,7 +295,6 @@ main.post-page .container-main .like-content .like .redes {
   justify-content: center;
   align-items: center;
 }
-
 main.post-page .container-main .like-content .like .redes a {
 width: 25%;
 }
@@ -312,11 +302,9 @@ main.post-page .container-main .like-content .like .redes a em {
   color: var(--white);
   font-size: 34px;
 }
-
 main.blog .container-main .posts .pag {
   margin: 0 0 2em;
 }
-
 main.blog .container-main .posts .pag ul.pagination {
   display: flex;
   flex-flow: row wrap;
@@ -325,11 +313,9 @@ main.blog .container-main .posts .pag ul.pagination {
   padding: 0;
   margin: 0;
 }
-
 main.blog .container-main .posts .pag ul.pagination li {
   display: inline;
 }
-
 main.blog .container-main .posts .pag ul.pagination li a {
   color: var(--primary);
   background-color: var(--primary-light);
@@ -360,21 +346,10 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
   color: var(--grey-light);
 }
 
-
-
-
-
-
-
 /* RESPONSIVE \*/
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
   main .container-main .first-contain .title-big .h2-big h1 {
     font-size: 76px;
-  }
-}
-@media only screen and (min-width: 1023.9px) and (max-width: 1149px) {
-  .post {
-    width: 48%;
   }
 }
 @media only screen and (max-width: 1279.9px) {
@@ -400,6 +375,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin: 0 1em;
   }
   .first-contain {
     display: flex;

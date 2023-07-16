@@ -9,38 +9,39 @@
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="left-content pure-u-md-1-2 pure-u-1" >
       <div class="banner-container pure-u-1">
-      {% for b in banners %}
-      {% if b.Page == 'home' %}
-      <div class="spot">
-        <a class="close" onclick="ocultarBannerMobile()">
-          <em class="icon-close"></em>
+        {% for b in banners %}
+        {% if b.Page == 'home' %}
+        <div class="spot">
+          <a class="close" onclick="ocultarBannerMobile()">
+            <em class="icon-close"></em>
+          </a>
+          <h1>{{b | translate('Text', L)}}</h1>
+        </div>
+        <a style="padding-top:3px;" href="{{langs[L].folder}}/{{b | translate('Link', L)}}">
+          <button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button>
         </a>
-        <h1>{{b | translate('Text', L)}}</h1>
-      </div>
-      <a style="padding-top:3px;" href="{{langs[L].folder}}/{{b | translate('Link', L)}}">
-        <button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button>
-      </a>
-      {% endif %}
-      {% endfor %}
+        {% endif %}
+        {% endfor %}
       </div>
     </div>
 
-      <!-- Cabecera
-      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Cabecera
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="right-content pure-1-2">
       <div class="pure-menu pure-menu-horizontal">
         <ul class="pure-menu-list">
 
           <li class="icons-header pure-menu-item">
-            <!-- TODO: Buscador -->
+            <!-- Buscador -->
+            <!-- TODO
             <a href="#" class="pure-menu-link"><em class="icon-search"></em></a>
+            -->
             <!-- Whatsapp -->
             {% for r in rrss %}
             {% if r.Name == 'whatsapp' %}
             <a href="{{r.Link}}" class="pure-menu-link"><em class="icon-whatsapp"></em></a>
             {% endif %}
             {% endfor %}
-
           </li>
 
           <!-- Idiomas -->
@@ -68,25 +69,29 @@
 
           <!-- Area privada -->
           <li class="pure-menu-item private-container">
+            <!-- TODO
             <button class="private">
               <em class="icon-log-in"></em>
               <a href="/customer">
                 <p class="private-area">{% literal texts, 'button-area-privada', L %}</p>
               </a>
             </button>
+            -->
           </li>
 
           <!-- Reservar -->
           <li class="pure-menu-item">
             <div class="booking">
+              <!-- TODO
               <button class="btn-primary">
               <a href="#popupBooking">
               {% literal texts, 'button-reservar', L %}
               </a>
-              </button></button>
+              </button>
+              -->
             </div>
           </li>
-
+          
         </ul>
       </div>
     </div>
@@ -113,11 +118,11 @@
 
       <!-- Botón reservar (movil) -->
       <div class="booking pure-u-1-3">
+        <!-- TODO
         <button class="btn-primary">
-          <a href="#popupBooking">
-          {% literal texts, 'button-reservar', L %}
-          </a>
+          <a href="#popupBooking">{% literal texts, 'button-reservar', L %}</a>
         </button>
+        -->
       </div>
 
     </div>
@@ -146,8 +151,10 @@
 
           <!-- Search -->
           <div class="menu-mobile-icons pure-u-5-24">
-              <em class="icon-search"></em>
-              <a type="button" onclick="ocultarMenuMobile()"><em class="icon-close"></em></a>
+            <!-- TODO
+            <em class="icon-search"></em>
+            -->
+            <a type="button" onclick="ocultarMenuMobile()"><em class="icon-close"></em></a>
           </div>
 
         </div>
@@ -155,7 +162,9 @@
         <div class="only-mobile-private pure-u-1-1">
           <div class="area">
             <span><em class="icon-user"></em></span>
+            <a href="/customer">
             <p>{% literal texts, 'button-area-privada', L %}</p>
+            </a>
           </div>
           <div class="lang-mobile">
             <div class="select-container-mobile">
@@ -224,11 +233,14 @@
 
         <!-- Botón booking -->
         <li class="only-menu-mobile pure-menu-item">
+
+          <!-- TODO
           <div class="booking pure-u-1">
             <button class="btn-secondary">{% literal texts, 'button-nuevo-hogar', L %}
             <em class="icon-house"></em>
             </button>
           </div>
+          -->
 
           <div class="redes-mobile">
             <a href="{{globals.rrss.wh}}" rel="noopener, noreferrer" target="_blank"><em class="icon-whatsapp"></em></a>
@@ -236,6 +248,7 @@
             <a href="{{globals.rrss.in}}" rel="noopener, noreferrer" target="_blank"><em class="icon-linkedin"></em></a>
             <a href="{{globals.rrss.tk}}" rel="noopener, noreferrer" target="_blank"><em class="icon-tiktok"></em></a>
           </div>
+
         </li>
 
       </ul>
@@ -245,6 +258,8 @@
 </section>
 
 <!-- Reservas popup -->
-{% include 'shared/sections/common/booking.html.njk' %}
+<!-- TODO
+[% include 'shared/sections/common/booking.html.njk' %]
+-->
 
 </header>

@@ -50,7 +50,6 @@ optionListMobile.forEach((option) => {
     })
 })
 
-
 // Menu locations
 const choosedOption = document.querySelector('.change-value')
 const Value = document.querySelector('.chang-value')
@@ -74,6 +73,7 @@ option.forEach((option) => {
     })
 })   
 
+// Menu mobile
 function mostrarMenuMobile() { 
     document.getElementById('menu-desplegado').style.position = 'absolute';
     document.getElementById('only-mobile-menu').style.position = 'fixed';

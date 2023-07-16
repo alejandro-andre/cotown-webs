@@ -30,18 +30,18 @@ tags: page
 
 <!-- Main -->
 <main class="contact">
-  <div class="container-main pure-u-1">
+  <div class="container-main">
 
-    <section class="first-contact pure-u-1">
+    <section class="first-contact">
       <h1>{% literal texts, 'contact-titulo', L %}</h1>
     </section>
 
-    <section class="contact-main pure-u-1">
+    <section class="contact-main">
 
       <h2>{% literal texts, 'contact-oficinas', L %}</h2>
 
       {% for o in offices %}
-      <div class="img-content pure-u-1">
+      <div class="img-content">
 
         <div class="img-city pure-u-1-8">
           <div class="office">
@@ -52,9 +52,9 @@ tags: page
           </div>
         </div>
 
-        <div class="contact-content pure-u-23-24 pure-u-lg-5-6">
+        <div class="contact-content pure-u-1 pure-u-lg-5-6">
 
-          <div class="text-location pure-u-1 pure-u-lg-15-24">
+          <div class="text-location pure-u-1 pure-u-lg-14-24">
             <h3>{{o.Location}}</h3>
             <p>{{o.Address}}</p>
             <p>
@@ -67,7 +67,7 @@ tags: page
             </p>
           </div>
 
-          <div class="pure-u-1 pure-u-lg-8-24">
+          <div class="pure-u-1 pure-u-lg-10-24">
             <div class="pure-u-1" style="width:99%;height:320px;" id="map-{{o.id}}"></div>
           </div>
 
