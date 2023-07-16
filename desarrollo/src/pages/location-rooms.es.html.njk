@@ -1,0 +1,23 @@
+---
+name: rooms
+eleventyComputed:
+    L: "es"
+    title: "{{langs[L].pages[name].title}} - {{location | translate('Name', 'es') | ascii}}"
+    alt:
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}-{{location | translate('Name', 'es') | ascii}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}-{{location | translate('Name', 'es') | ascii}}.html"
+    description: "{{location | translate('Description', L)}}"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{location | translate('Name', L) | ascii}}.html"
+layout: shared/layouts/base.html
+pagination:
+    data: locations
+    size: 1
+    alias: location
+    addAllPagesToCollections: true
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+{% include 'shared/sections/location/main.html.njk' %}

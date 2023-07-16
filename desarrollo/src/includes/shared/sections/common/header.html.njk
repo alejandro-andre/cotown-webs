@@ -1,20 +1,45 @@
 <header>
 
-<!-- Header
+<!-- Mobile first header
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<section class="container-header first pure-g" id="first-line">
+{% set flag = true %}
+{% for b in banners %}
+{% if flag and b.Page == 'home' %}
+{% set flag = false %}
+<section class="container-header mobile-only first pure-g" id="first-line">
   <div class="turquoise-line pure-u-1-2 pure-u-lg-1" >
-
-      <!-- Banner
-      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="left-content pure-u-md-1-2 pure-u-1" >
       <div class="banner-container pure-u-1">
-        {% for b in banners %}
-        {% if b.Page == 'home' %}
         <div class="spot">
           <a class="close" onclick="ocultarBannerMobile()">
             <em class="icon-close"></em>
           </a>
+          <h1>{{b | translate('Text', L)}}</h1>
+        </div>
+        <a style="padding-top:3px;" href="{{langs[L].folder}}/{{b | translate('Link', L)}}">
+          <button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+
+<!-- Desktop first header
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section class="container-header desktop-only first pure-g"º>
+  <div class="turquoise-line pure-u-1-2 pure-u-lg-1" >
+
+    <!-- Banner
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="left-content pure-u-md-1-2 pure-u-1" >
+      <div class="banner-container pure-u-1">
+        {% set flag = true %}
+        {% for b in banners %}
+        {% if flag and b.Page == 'home' %}
+        {% set flag = false %}
+        <div class="spot">
           <h1>{{b | translate('Text', L)}}</h1>
         </div>
         <a style="padding-top:3px;" href="{{langs[L].folder}}/{{b | translate('Link', L)}}">
@@ -160,12 +185,14 @@
         </div>
 
         <div class="only-mobile-private pure-u-1-1">
+
           <div class="area">
             <span><em class="icon-user"></em></span>
             <a href="/customer">
             <p>{% literal texts, 'button-area-privada', L %}</p>
             </a>
           </div>
+
           <div class="lang-mobile">
             <div class="select-container-mobile">
               {% if L == 'es' %}
@@ -193,7 +220,7 @@
         <li class="locations-dropdown pure-menu-item">
           <div class="locations-container">
             <label class="locations-label">
-                <span class="loc"><a href="{{langs[L].folder}}/{{langs[L].pages['locationsrooms'].url}}.html">{{langs[L].pages['locationsrooms'].title}}</a></span>
+                <span class="loc"><a href="{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html">{{langs[L].pages['rooms'].title}}</a></span>
                 <div class="icons-open-close">
                   <em class="change-value icon icon-corchete-down" for="options"></em>
                 </div>

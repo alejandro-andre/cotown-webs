@@ -22,7 +22,7 @@ mark {
     background-color: var(--primary-underline)!important;
 }
 
-/* RESPONSIVE FONTS \*/
+/* RESPONSIVE FONTS */
 @media only screen and (min-width: 1600px) {
     /*h1 { font-size: 120px; font-weight: 400; }*/
     h2 { font-size: 78px; font-weight: 400; }
@@ -54,7 +54,6 @@ mark {
     p, input, label, a {font-size: 12px; }
     a { text-decoration: none; }
 }
-
 
 /* BOTONES
 -------------------------------- \*/
@@ -309,6 +308,12 @@ main {
     margin: 0 4em;
     height: 57px;
     gap: 2em;
+}
+.container-header.first.desktop-only { display: none; }
+.container-header.first.mobile-only { display: flex; }
+@media only screen and (min-width: 1024px) {
+    .container-header.first.desktop-only { display: flex; }
+    .container-header.first.mobile-only { display: none; }
 }
 .container-header.first .turquoise-line .left-content {
     display: flex;

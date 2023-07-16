@@ -86,5 +86,4 @@ function ocultarMenuMobile() {
 
 function ocultarBannerMobile() {
     document.getElementById('first-line').style.display = 'none';
-    
 }

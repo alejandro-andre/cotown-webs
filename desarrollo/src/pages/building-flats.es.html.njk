@@ -1,13 +1,13 @@
 ---
-name: building
+name: flats
 eleventyComputed:
     L: "es"
-    title: "{{langs[L].pages[name].title}}"
+    title: "{{langs[L].pages[name].title}}-{{building.Name}}"
     alt:
-      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
-      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
+      es: "{{langs.es.folder}}/{{langs[L].pages[name].url}}-{{building.Name | ascii}}.html"
+      en: "{{langs.en.folder}}/{{langs[L].pages[name].url}}-{{building.Name | ascii}}.html"
     description: "{{building | translate('Name',L)|ascii}}"
-    permalink: "{{langs[L].folder}}/{{building.Name | ascii}}-apartment.html"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{building.Name | ascii}}.html"
 layout: shared/layouts/base.html
 pagination:
     data: buildings

@@ -65,7 +65,7 @@
 
                 <!-- Photo -->
                 <div class="ratio desktop">
-                  <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
+                  <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html">
                     {% image
                         constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
                         b.Name, b.Name, "card-img-top",
@@ -105,7 +105,7 @@
                       <!-- Habitacion-compartida -->
                       {% if minD < 9999 %}
                       <div class="room-type">
-                        <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html#D">
+                        <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html#D">
                         <img src="/assets/img/icono__hab_habitacion_compartida.svg">
                         <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
                         <p>{% literal texts, 'price-desde', L %} {{minD}}€/{% literal texts, 'price-mes', L %}</p>
@@ -116,7 +116,7 @@
                       <!-- Habitacion-individual -->
                       {% if minI < 9999 %}
                       <div class="room-type">
-                        <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html#I">
+                        <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html#I">
                         <img src="/assets/img/icono__hab_habitacion_individual.svg">
                         <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
                         <p>{% literal texts, 'price-desde', L %} {{minI}}€/{% literal texts, 'price-mes', L %}</p>
@@ -200,7 +200,7 @@
       <div class="piso-main pure-u-1">
 
         <!-- Photo -->
-        <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
+        <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html">
         <div class="img pure-u-1">
           {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
@@ -212,7 +212,7 @@
 
         <div class="piso pure-u-1">
 
-          <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
+          <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html">
             <h3>{{b.Name}}</h3>
           </a>
 
