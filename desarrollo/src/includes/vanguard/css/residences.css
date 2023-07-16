@@ -142,14 +142,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .residence-locations .residence-card .desde {
   border-bottom: 1px solid var(--grey-light);
 }
- {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 150%;
-  letter-spacing: 1.28px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
 .residence-locations .residence-card .types .type {
   padding: 5px;
 }
@@ -219,12 +211,14 @@ input[type="search"]::-webkit-search-results-decoration {
     border-radius: 0px 0px 150px 0px;
   }
   .first-contain .img-residences {
-    width: 100vw;
+    width: 100%;
+    max-height: 400px;
     object-fit: cover;
   }
   .first-contain .img-residences img {
-    width: 100vw;
+    width: 100%;
     object-fit: cover;
+    object-position: center center;
   }
  .first-contain .title-big {
       margin: 2em auto 2em;

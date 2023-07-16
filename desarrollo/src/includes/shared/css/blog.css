@@ -124,7 +124,7 @@ input[type="search"]::-webkit-search-results-decoration {
   top: -42px;
   right: 13px;
   width: 18px;
-  height: 100px;
+  height: 115px;
   padding: 1em 0.2em;
   display: flex;
   flex-flow: row wrap;
@@ -172,8 +172,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .post .data-post.primary {
   background-color: var(--primary);
 }
-main .container-main .first-contain .title-big .h2-big h1 {
-  font-size: 120px;
+main .container-main .first-contain {
+  margin: 0;
+}
+main .container-main .first-contain .h1-big {
+  margin-top: 1em;
+}
+main .container-main .first-contain .h1-big h1 {
+  font-size: 76px;
   font-weight: 400;
   line-height: 100%;
   letter-spacing: -1.2px;
@@ -347,11 +353,6 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 }
 
 /* RESPONSIVE \*/
-@media only screen and (min-width: 1280px) and (max-width: 1599px) {
-  main .container-main .first-contain .title-big .h2-big h1 {
-    font-size: 76px;
-  }
-}
 @media only screen and (max-width: 1279.9px) {
   .post .data-post {
     position: absolute;
@@ -384,11 +385,10 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     align-items: flex-start;
     padding-left: 1em;
   }
-  main .container-main .first-contain .title-big {
-    margin: 1em auto 0;
-
+  main .container-main .first-contain {
+    margin: 0;
   }
-  main .container-main .first-contain .title-big .h2-big h1 {
+  main .container-main .first-contain .h1-big h1 {
     font-size: 40px;
     line-height: 100%;
   }
