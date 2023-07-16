@@ -90,9 +90,11 @@
         {% for r in rooms %}
         {% if r.id == b.id %}
         {% for pt in r.Place_types %}
-        <div class="type pure-u-1-4">
-          <p>{{place_types[pt.Code] | translate('Name', L)}}</p>
-          <p class="price">{{pt.Flat_types[0].Rent_long}}€/{% literal texts, 'price-mes', L %}</p>
+        <div class="pure-u-1-4">
+          <div class="type">
+            <p>{{place_types[pt.Code] | translate('Name', L)}}</p>
+            <p class="price">{{pt.Flat_types[0].Rent_long}}€/{% literal texts, 'price-mes', L %}</p>
+          </div>
         </div>
         {% endfor %}
         {% endif %}
