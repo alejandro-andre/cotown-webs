@@ -142,31 +142,23 @@ input[type="search"]::-webkit-search-results-decoration {
 .residence-locations .residence-card .desde {
   border-bottom: 1px solid var(--grey-light);
 }
-.residence-locations .residence-card .desde p {
+ {
   font-size: 16px;
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 1.28px;
+  margin-bottom: 5px;
   text-transform: uppercase;
 }
-.residence-locations .residence-card .types {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 5px;
-  margin-bottom: 1em;
-}
 .residence-locations .residence-card .types .type {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  padding: 5px;
 }
 .residence-locations .residence-card .types .type p {
   font-size: 16px;
-  font-weight: 400;
-  line-height: 110%;
+  font-weight: 500;
+  line-height: 120%;
   color: var(--primary);
-  margin-bottom: 0;
+  margin-bottom: 10px;
   letter-spacing: -0.6px;
   text-transform: uppercase;
 }
@@ -176,7 +168,6 @@ input[type="search"]::-webkit-search-results-decoration {
   line-height: 110%;
   letter-spacing: -0.6px;
   color: var(--black);
-  margin: 0;
   text-transform: none;
 }
 .residence-locations .residence-card .services {
@@ -185,7 +176,7 @@ input[type="search"]::-webkit-search-results-decoration {
   justify-content: space-between;
   align-items: flex-start;
   gap: 2%;
-  margin-bottom: 4em;
+  margin: 2em 0 4em 0;
 }
 .residence-locations .residence-card .services .service {
   display: flex;
@@ -202,10 +193,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .residence-locations .residence-card .services .service .description  {
   text-align: center;
-}
-.residence-locations .residence-card .services .service .description p {
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 @media only screen and (min-width: 1600px) {
@@ -223,6 +212,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
+  main .container-main .first-contain .title-big {
+    margin: 0;
+  }
+  .first-contain {
+    border-radius: 0px 0px 150px 0px;
+  }
   .first-contain .img-residences {
     width: 100vw;
     object-fit: cover;
