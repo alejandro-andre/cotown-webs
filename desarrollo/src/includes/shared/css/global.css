@@ -748,8 +748,8 @@ main .container-main section.form select {
 -moz-appearance: none;
 appearance: none;
 /* Some browsers will not display the caret when using calc, so we put the fallback first */
-background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
-background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+background: url("/assets/img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
+background: url("/assets/img/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
 }
 /*For IE*/
 select::-ms-expand {
@@ -1198,8 +1198,8 @@ button.date-button input.inputs {
     -moz-appearance: none;
     appearance: none;
     /* Some browsers will not display the caret when using calc, so we put the fallback first */
-    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
-    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 30px) !important; /* Better placement regardless of input width */
+    background: url("/assets/img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
+    background: url("/assets/img/br_down.png") white no-repeat calc(100% - 30px) !important; /* Better placement regardless of input width */
 }
 .popup .content-booking section .city-selector .city-icons {
     width: 100%;
