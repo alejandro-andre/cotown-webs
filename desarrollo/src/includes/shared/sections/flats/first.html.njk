@@ -23,11 +23,13 @@
     </p>
   </div>
 
-  <!-- SERVICES -->
   <section class="flat-services pure-u-23-24 pure-u-lg-11-24 ">
+
+    <!-- Services -->
     <div id="splideServices" class="splide splide-services" role="group">
       <div class="splide__track">
         <ul class="splide__list">
+
           {% for s in services %}
           <li class="splide__slide">
             <div class="slide">
@@ -41,6 +43,7 @@
             </div>
           </li>
           {% endfor %}
+          
         </ul>
       </div>
     </div>

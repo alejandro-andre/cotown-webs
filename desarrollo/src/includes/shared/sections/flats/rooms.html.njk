@@ -1,3 +1,17 @@
+{% set flag = true %}
+{% for r in rooms %}
+{% if r.id == building.id %}
+{% for p in r.Place_types %}
+{% if p.Code[0] == type %}
+
+{% if flag %}
+{% set flag = false %}
+<div class="title pure-u-1 pure-u-lg-21-24">
+  <h2>{{typetitle}}</h2>
+</div>
+{% endif %}
+
+<anchor class="anchor" id="{{type}}"></anchor> 
 <section class="all-rooms pure-u-1">
     <section class="card-room pure-u-1 pure-u-lg-22-24">
     <!-- LEFT -->
@@ -102,6 +116,7 @@
     </div>
   </section>
 </section>
-
-
-
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}

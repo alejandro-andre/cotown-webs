@@ -1,27 +1,20 @@
 <!-- Additional HEAD content -->
 {% block head %}
-{% set css %}{% include "shared/css/rooms.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% set css %}{% include "shared/css/flats.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->
-<main class="flat pure-u-1">
+<main class="apartment pure-u-1">
   <div class="container-main pure-u-1">
 
     <!-- First -->
     <section class="first pure-u-1">
-    {% include 'shared/sections/rooms/first.html.njk' %}
+    {% include 'shared/sections/flats/first.html.njk' %}
     </section>
 
     <!-- Rooms -->
     <section class="rooms pure-u-1">
-      <section class="all-rooms pure-u-1">
-        {% set type = 'I' %}
-        {% set typetitle = 'HABITACIONES INDIVIDUALES' %}
-        {% include 'shared/sections/rooms/rooms.html.njk' %}
-        {% set type = 'D' %}
-        {% set typetitle = 'HABITACIONES COMPARTIDAS' %}
-        {% include 'shared/sections/rooms/rooms.html.njk' %}
-      </section>
+    {% include 'shared/sections/flats/rooms.html.njk' %}
     </section>
 
     <!-- Rest of info -->
@@ -29,17 +22,12 @@
 
       <!-- Last -->
       <div class="last-zone pure-u-1">
-        {% include 'shared/sections/rooms/last.html.njk' %}
+        {% include 'shared/sections/flats/last.html.njk' %}
       </div>
 
       <!-- Map -->
       <section class="map"><div class="map" id="map">
       </div></section>
-
-      <!-- Services -->
-      <div class="last-services pure-u-1">
-        {% include 'shared/sections/rooms/services.html.njk' %}
-      </div>
 
     </section>
 
