@@ -38,7 +38,7 @@
     <div class="splide" id="sliderFlats" aria-label="Slider">
       <div class="splide__track">
 
-        <!-- Silider arrows -->
+        <!-- Slider arrows -->
         <div class="splide__arrows arrows">
           <button type="button" class="arrow-nav splide__arrow splide__arrow--prev"
             type="button"
@@ -58,7 +58,7 @@
         <ul class="splide__list carousel-main-list">
 
           {% for b in buildings %}
-          {% if location.id == b.District.Location.id %}
+          {% if location.id == b.District.Location.id and b.Building_type_id < 3 %}
           <li class="splide__slide main-slide">
             <div class="card-contain">
               <div class="card shadow desktop">
@@ -131,7 +131,9 @@
                       <div class="room-type">
                         <img src="/assets/img/icono__hab_apartamento_privado.svg">
                         <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
-                        <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                        <a href="{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name|ascii}}.html">
+                          <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                        </a>
                       </div>
 
                     </div>
@@ -196,7 +198,7 @@
   <div class="pisos mobile pure-u-1">
     <div class="piso-contain pure-u-1">
       {% for b in buildings %}
-      {% if location.id == b.District.Location.id %}
+      {% if location.id == b.District.Location.id and b.Building_type_id < 3 %}
       <div class="piso-main pure-u-1">
 
         <!-- Photo -->
@@ -238,30 +240,31 @@
 
             <!-- Habitacion individual -->
             {% if minI < 9999 %}
-            <div class="type pure-u-22-24">
-              <div class="img-container pure-u-2-24">
+            <div class="type pure-u-22-24" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html#I'">
+              <div class="img-container pure-u-3-24">
                 <img src="/assets/img/icono__hab_habitacion_individual.svg">
               </div>
               <div class="h4-container pure-u-12-24">
                 <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
               </div>
-              <div class="p-container pure-u-8-24">
+              <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
                 <p>{{minI}}€/{% literal texts, 'price-mes', L %}</p>
               </div>
             </div>
+            </a>
             {% endif %}
 
             <!-- Habitacion compartida -->
             {% if minI < 9999 %}
-            <div class="type pure-u-22-24">
-              <div class="img-container pure-u-2-24">
+            <div class="type pure-u-22-24" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html#D'">
+              <div class="img-container pure-u-3-24">
                 <img src="/assets/img/icono__hab_habitacion_compartida.svg">
               </div>
               <div class="h4-container pure-u-12-24">
                 <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
               </div>
-              <div class="p-container pure-u-8-24">
+              <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
                 <p>{{minD}}€/{% literal texts, 'price-mes', L %}</p>
               </div>
@@ -270,14 +273,16 @@
 
             <!-- Apartamento privado -->
             <div class="type pure-u-22-24">
-              <div class="img-container pure-u-2-24">
+              <div class="img-container pure-u-3-24">
                 <img src="/assets/img/icono__hab_apartamento_privado.svg">
               </div>
               <div class="h4-container pure-u-12-24">
                 <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
               </div>
-              <div class="button-container pure-u-8-24">
-               <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+              <div class="button-container pure-u-7-24">
+                <a href="{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name|ascii}}.html">
+                  <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                </a>
               </div>
             </div>
 
@@ -323,7 +328,7 @@ new Splide('#sliderFlats', {
   padding: '6rem'
 }).mount();
 {% for b in buildings %}
-{% if location.id == b.District.Location.id %}
+{% if location.id == b.District.Location.id and b.Building_type_id < 3 %}
 new Splide('#sliderMini{{b.id}}', { type: 'loop', gap: '16px', pagination: false, perMove: 1, perPage: 9 }).mount();
 new Splide('#sliderMiniMobile{{b.id}}', { type: 'loop', gap: '16px', arrows: false, pagination: false, perMove: 1, perPage: 6 }).mount();
 {% endif %}

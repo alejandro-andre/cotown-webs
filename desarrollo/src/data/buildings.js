@@ -5,7 +5,10 @@ module.exports = async (config) => {
   query data ($id: Int) {
     data: Building_BuildingList ( 
       orderBy: [{ attribute: Name }]
-      where: { Segment_id: { EQ: $id } } 
+      where: { 
+        Segment_id: { EQ: $id } 
+        Building_type_id: { LE: 3 } 
+      } 
     ) {
       id
       Code
@@ -21,6 +24,11 @@ module.exports = async (config) => {
           id
           Name
         }
+      }
+      ResourceListViaBuilding_id {
+        id
+        Code
+        Sale_type
       }
       Services: Building_serviceListViaBuilding_id {
         Service: Building_service_typeViaService_id {

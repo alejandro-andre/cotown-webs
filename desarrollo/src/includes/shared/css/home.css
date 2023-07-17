@@ -234,8 +234,8 @@ main .container-main .first-contain .text p {
 .pisos .container .img-container .img-title2 .subrayado {
     bottom: 108px;
 }
-.pisos .container .img-container:hover > .img-title1 .subrayado,
-.pisos .container .img-container:hover > .img-title2 .subrayado {
+.pisos .container .img-container:hover a > .img-title1 .subrayado,    
+.pisos .container .img-container:hover a > .img-title2 .subrayado {
     width: 100%;
     -webkit-transition: width 0.25s ease-in-out;
     -moz-transition: width 0.25s ease-in-out;
@@ -243,7 +243,7 @@ main .container-main .first-contain .text p {
     transition: width 0.25s ease-in-out;
 }
 
-    /* SERVICIOS
+/* SERVICIOS
 -------------------------------- \*/
 .servicios {
     margin: 3em 0 4em;
@@ -614,7 +614,6 @@ main .container-main .first-contain .text p {
     .pisos .container .img-container .img-title2 {
         font-size: 78px;
     }
-
     .pisos .container .img-container .img-title1 .subrayado {
         bottom: 174px;
     }
