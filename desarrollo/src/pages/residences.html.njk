@@ -19,8 +19,6 @@ changefreq: "weekly"
 priority: "1.0"
 tags: page
 ---
-{% if siteid == 1%}
-
 <!-- Additional HEAD content -->
 {% block head %}
 {% set css %}{% include "vanguard/css/residences.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
@@ -35,8 +33,3 @@ tags: page
 
   </div>
 </main>
-
-{% block footer %}
-{% endblock %}
-
-{% endif%}

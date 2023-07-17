@@ -14,6 +14,7 @@ module.exports = async (config) => {
       Lat_lon
       Description
       Description_en
+      Building_type_id
       District: DistrictViaDistrict_id {
         Name
         Location: LocationViaLocation_id {
