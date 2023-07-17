@@ -1,6 +1,6 @@
 <!-- Additional HEAD content -->
 {% block head %}
-{% set css %}{% include "vanguard/css/residences.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% set css %}{% include "vanguard/css/residence.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->
@@ -15,7 +15,12 @@
     <!-- Rooms -->
     <section class="rooms pure-u-1">
       <section class="all-rooms pure-u-1">
-    {% include 'vanguard/sections/residence/rooms.html.njk' %}
+        {% set type = 'I' %}
+        {% set typetitle = 'HABITACIONES INDIVIDUALES' %}
+        {% include 'vanguard/sections/residence/rooms.html.njk' %}
+        {% set type = 'D' %}
+        {% set typetitle = 'HABITACIONES COMPARTIDAS' %}
+        {% include 'vanguard/sections/residence/rooms.html.njk' %}
       </section>
     </section>
 
