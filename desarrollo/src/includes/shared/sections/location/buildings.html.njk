@@ -280,9 +280,11 @@
                 <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
               </div>
               <div class="button-container pure-u-7-24">
-                <a href="{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name|ascii}}.html">
-                  <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
-                </a>
+                <button 
+                  class="btn-secondary green-button" 
+                  onclick="location.href='{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name|ascii}}.html'">
+                {% literal texts, 'price-mas', L %}
+                </button>
               </div>
             </div>
 
