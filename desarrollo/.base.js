@@ -36,6 +36,8 @@ module.exports = (eleventyConfig) => {
   
   // Markdown to HTML filter
   eleventyConfig.addFilter("markdown", (value) => {
+    if (value == null)
+      return '';
     let options = {
       html: true,
       breaks: true,
@@ -43,7 +45,7 @@ module.exports = (eleventyConfig) => {
     };
     const md = new MarkdownIt(options);
     md.use(MarkdownItAttrs);
-    return md.render(value);
+    return md.render(value.replace(/"/g, '\u2018'));
   });
 
   // Text to URL filter

@@ -1,77 +1,94 @@
-<section class="first-contain building pure-u-1">
+<section class="first-contain pure-u-1">
+
+  <!-- Photo carousel -->
   <section id="image-carousel" class="splide first-slider pure-u-1" aria-label="Beautiful Images">
     <div class="splide__track">
       <ul class="splide__list">
+        {% for i in building.Photos %}
         <li class="splide__slide">
-          <img src="/assets/img/pisos/napoles-slider.png">
+          {% image
+            constants.SERVER + "/wopi/files/Marketing/Media_building/" + i.id +"/Image/contents?access_token=" + token,
+            i.Name, i.Name|slug, "",
+            [1200], ""
+          %}
         </li>
-        <li class="splide__slide">
-          <img src="/assets/img/cotownity-big.png">
-        </li>
-        <li class="splide__slide">
-          <img src="/assets/img/apartm.png">
-        </li>
+        {% endfor %}
       </ul>
     </div>
   </section>
+
   <div class="pure-u-1 after-slide">
-    <div class="text-first pure-u-23-24 pure-u-lg-10-24">
-    <p>
-    ¿Hay algo más barcelonés y mítico que la Sagrada Família? Ahora imagina vivir a tan sólo 5 minutos andando de semejante monumento. Nàpols 206 es el lugar perfecto tanto para callejear por las calles más interesantes de toda la ciudad como para ser todo un/a Bill Gates petándolo en tu negocio/trabajo desde casa.
-    Disfrutarás de un pisazo con zonas comunes dignas de un “House Tour” de revista y habitaciones totalmente equipadas para que tus jornadas laborales se conviertan en una zona de confort y relax.
-    Un consejo: si quieres ser un auténtic@ #feelinglocal, deja el brunch a un lado y pásate al tapeo por la Dreta de l’Eixample. ​
-    </p>
-  </div>
 
-  <!-- SERVICES -->
-  <section class="flat-services pure-u-23-24 pure-u-lg-11-24 ">
-    <div id="splideServices" class="splide splide-services" role="group">
-      <div class="splide__track">
-        <ul class="splide__list">
-          {% for s in services %}
-          <li class="splide__slide">
-            <div class="slide">
-              <div class="img">
-                {% svg
-                   constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
-                   s.Name
-                %}
-              </div>
-            <p class="title">{{s | translate('Name', L)}}</p>
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+    <!-- Description -->
+    <div class="text-first pure-u-23-24 pure-u-lg-12-24">
+    {{building|translate('Description', L)|markdown|safe}}
     </div>
-  </section>
 
+    <!-- Services -->
+    <section class="flat-services pure-u-23-24 pure-u-lg-9-24">
+      <div id="splideServices" class="splide splide-services" role="group">
+        <div class="splide__track">
+          <ul class="splide__list">
+
+            {% for s in services %}
+              {% if loop.first %}
+              <li class="splide__slide">
+              <div class="slide">
+              {% endif %}
+                <div class="img">
+                  {% svg
+                    constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
+                    s.Name
+                  %}
+                </div>
+                <p class="title">{{s | translate('Name', L)}}</p>
+              {% if loop.last %}
+              </div>
+              </li>
+              {% else %}
+              {% if loop.index % 2 == 0%}
+              </div>
+              </li>
+              <li class="splide__slide">
+              <div class="slide">
+              {% endif %}
+              {% endif %}
+            {% endfor %}
+
+          </ul>
+        </div>
+      </div>
+    </section>
+  
   </div>
- <div class="pure-u-1 after-slide bottom">
+
+  <div class="pure-u-1 after-slide bottom">
+
     <div class="text-first pure-u-23-24 pure-u-lg-10-24">
       <button class="btn-text"><a>Tour virtual</a></button>
       <button class="btn-text"><a>Nuestros pisos</a></button>
       <button class="btn-text"><a>Tu nuevo barrio</a></button>
-  </div>
-
-  <!--  CALENDAR -->
-  <section class="right-calendar pure-u-23-24 pure-u-lg-11-24 ">
-    <!-- CALENDAR -->
-    <div class="calendar pure-u-1-1">
-      <div class="reservas_form_div pure-u-1">
-        <form id="reservas_form" name="form_multi" method="GET">
-          <button class="date-button">
-            <label class="labels">Entrada</label>
-            <input type="text" id="in" onfocus="(this.type='date')" class="inputs" name="in" placeholder="02/06/2023"/>
-          </button>
-          <button class="date-button">
-            <label class="labels">Salida</label>
-            <input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="02/09/2023"/>
-          </button>
-        </form>
-      </div>
     </div>
-  </section>
+
+    <!-- Calendar -->
+    <!-- TODO
+    <section class="right-calendar pure-u-23-24 pure-u-lg-11-24 ">
+      <div class="calendar pure-u-1-1">
+        <div class="reservas_form_div pure-u-1">
+          <form id="reservas_form" name="form_multi" method="GET">
+            <button class="date-button">
+              <label class="labels">Entrada</label>
+              <input type="text" id="in" onfocus="(this.type='date')" class="inputs" name="in" placeholder="02/06/2023"/>
+            </button>
+            <button class="date-button">
+              <label class="labels">Salida</label>
+              <input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="02/09/2023"/>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    -->
 
   </div>
 

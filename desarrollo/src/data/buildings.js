@@ -7,7 +7,7 @@ module.exports = async (config) => {
       orderBy: [{ attribute: Name }]
       where: { 
         Segment_id: { EQ: $id } 
-        Building_type_id: { LE: 3 } 
+        Building_type_id: { LE: 99 } 
       } 
     ) {
       id
@@ -20,8 +20,17 @@ module.exports = async (config) => {
       Building_type_id
       District: DistrictViaDistrict_id {
         Name
+        Description
+        Description_en
         Location: LocationViaLocation_id {
           id
+          Name
+        }
+        Photos: Media_districtListViaDistrict_id (
+          orderBy: [{ attribute: Order }]
+        ) {
+          id
+          Order
           Name
         }
       }

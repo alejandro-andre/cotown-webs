@@ -67,6 +67,7 @@
     <div class="residence-card">
 
       <!-- Photo -->
+      <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
       <div class="img">
         {% image
            constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
@@ -74,10 +75,13 @@
            [800], ""
         %}
       </div>
+      </a>
 
       <!-- Title -->
       <div class="card-title">
-        <h3>{{b.Name}}</h3>
+        <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
+          <h3>{{b.Name}}</h3>
+        </a>
       </div>
 
       <!-- Price -->

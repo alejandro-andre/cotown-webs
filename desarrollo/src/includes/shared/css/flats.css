@@ -350,6 +350,7 @@ color: var(--white);
 }
 .last h2 span {
   color: var(--white);
+  font-family: inherit;
 }
 .last .left .text p {
   font-weight: 500;
