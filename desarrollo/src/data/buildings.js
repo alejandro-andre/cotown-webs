@@ -34,7 +34,7 @@ module.exports = async (config) => {
           Name
         }
       }
-      ResourceListViaBuilding_id {
+      Resources: ResourceListViaBuilding_id {
         id
         Code
         Sale_type

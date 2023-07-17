@@ -62,7 +62,6 @@ main .container-main section.members .grid .member {
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
-    margin: 1em 0;
 }
 main .container-main section.members .grid .member .img-member {
     width: 100%;
@@ -71,7 +70,6 @@ main .container-main section.members .grid .member .img-member {
     justify-content: flex-start;
     align-items: center;
     padding: 5%;
-    height: 700px;
     text-align: center;
 }
 main .container-main section.members .grid .member .img-member:hover .first {

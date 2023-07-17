@@ -43,6 +43,23 @@
            <div class="locations-container pure-u-1">
 
               {% for l in locations %}
+
+                <!-- Look for matching type resources -->
+                {% set show = false %}
+                {% for b in buildings %}
+                {% if l.id == b.District.Location.id and b.Building_type_id < 3 %}
+                  {% for r in b.Resources %}
+                  {% if name == 'rooms' and (r.Sale_type == 'plazas' or r.Sale_type == 'ambos') %}
+                    {% set show = true %}
+                  {% endif %}
+                  {% if name == 'flats' and (r.Sale_type == 'completo' or r.Sale_type == 'ambos') %}
+                    {% set show = true %}
+                  {% endif %}
+                  {% endfor %}
+                {% endif %}
+                {% endfor %}
+
+              {% if show %}
               <div class="location pure-u-1">
                 <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | ascii}}.html" class="pure-u-1 pure-u-lg-1-3">
                 <div class="img pure-u-1">
@@ -60,6 +77,8 @@
                   <p class="body1">{{l | translate('Description', L)}}</p>
                 </div>
               </div>
+              {% endif %}
+
               {% endfor %}
 
             </div>

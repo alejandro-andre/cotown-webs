@@ -87,7 +87,7 @@
 
                       {% set minI = 9999 %}
                       {% set minD = 9999 %}
-                      {% for r in rooms %}
+                      {% for r in prices %}
                       {% if r.id == b.id %}
                         {% for p in r.Place_types %}
                         {% for f in p.Flat_types %}
@@ -220,7 +220,7 @@
 
           {% set minI = 9999 %}
           {% set minD = 9999 %}
-          {% for r in rooms %}
+          {% for r in prices %}
           {% if r.id == b.id %}
             {% for p in r.Place_types %}
             {% for f in p.Flat_types %}

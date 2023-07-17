@@ -34,7 +34,7 @@
     {% if b.District.Location.Name == location.Name %}
 
     {% set min = 9999 %}
-    {% for r in rooms %}
+    {% for r in prices %}
     {% if r.id == b.id %}
       {% for p in r.Place_types %}
       {% for f in p.Flat_types %}
