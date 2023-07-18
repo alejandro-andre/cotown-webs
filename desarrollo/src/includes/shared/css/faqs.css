@@ -23,6 +23,7 @@
 }
 .first-contain .img-faqs img {
   width: 100vw;
+  max-height: 400px;
 }
 .search .search-container {
   position: absolute;

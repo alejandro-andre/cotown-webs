@@ -92,14 +92,14 @@ main .container-main section.members .grid .member .data {
 }
 main .container-main section.members .grid .member .data p.name {
     font-weight: 700;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 30px;
     text-align: center;
     margin: 0;
     width: 100%;
 }
 main .container-main section.members .grid .member .data p.job {
-    font-size: 22px;
+    font-size: 16px;
     line-height: 28px;
     text-align: center;
     margin: 0;
