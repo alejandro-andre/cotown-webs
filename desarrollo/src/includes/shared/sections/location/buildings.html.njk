@@ -137,7 +137,7 @@
 
                   <!-- Internal slider -->
                   <div class="carousel-mini">
-                    <div class="splide mini" id="sliderMini{{b.id}}" aria-label="SliderMini">
+                    <div class="splide mini" id="sliderMini_{{b.id}}" aria-label="SliderMini_{{b.id}}">
                       <div class="splide__track">
 
                         <!-- Arrows -->
@@ -285,7 +285,7 @@
 
           <!-- Amenities -->
           <div class="services-list">
-            <div class="splide mini" id="sliderMiniMobile{{b.id}}" aria-label="SliderMini">
+            <div class="splide mini" id="sliderMiniMobile_{{b.id}}" aria-label="SliderMiniMobile_{{b.id}}">
               <div class="splide__track">
                 <ul class="splide__list list-mini">
                   {% for s in b.Services %}
@@ -322,8 +322,10 @@ new Splide('#sliderFlats', {
   padding: '6rem'
 }).mount();
 {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
-new Splide('#sliderMini{{b.id}}', { type: 'loop', gap: '16px', pagination: false, perMove: 1, perPage: 9 }).mount();
-new Splide('#sliderMiniMobile{{b.id}}', { type: 'loop', gap: '16px', arrows: false, pagination: false, perMove: 1, perPage: 6 }).mount();
+new Splide('#sliderMini_{{b.id}}', { type: 'loop', gap: '16px', pagination: false, perMove: 1, perPage: 9 }).mount();
+{% endfor %}
+{% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+new Splide('#sliderMiniMobile_{{b.id}}', { type: 'loop', gap: '16px', arrows: false, pagination: false, perMove: 1, perPage: 6 }).mount();
 {% endfor %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
