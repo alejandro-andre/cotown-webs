@@ -137,7 +137,8 @@ input:focus-visible + label {
 }
 .tab-panel .locations-container .location .img img {  
   width: 100%;
-  height: 100%;  
+  height: 100%;
+  object-fit: cover;
 }
 .tab-panel .locations-container .location .text-content {
   width: calc(100% - 200px);

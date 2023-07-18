@@ -880,13 +880,13 @@ main .container-main section.form .form-container button.btn-secondary {
 .iconos-chat div {
     background-color: var(--primary);
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 .iconos-chat div em {
     color: var(--primary-text);
@@ -902,8 +902,8 @@ main .container-main section.form .form-container button.btn-secondary {
     color: var(--primary);
 }
 .efecto_pulser img {
-    background: #2bbdbd;
-    color: #2bbdbd;
+    background: #00AE99;
+    color: #00AE99;
     filter: invert(100%);
 }
 
