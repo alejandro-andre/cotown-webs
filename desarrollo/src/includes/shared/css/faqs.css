@@ -142,7 +142,7 @@ input[type="search"]::-webkit-search-results-decoration {
     text-align: left;
     margin: 2em 1em 0
   }
-  main .container-main .first-contain .title-big .h2-big h1 {
+  main .container-main .first-contain .title-big .h1-big h1 {
     color: var(--black);
     font-weight: 400;
     font-size: 40px;

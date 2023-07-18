@@ -18,13 +18,13 @@ main .container-main .first-contain .advantages.title-big {
     align-items: flex-start;
     margin: 16em auto 2em;
 }
-main .container-main .first-contain .advantages.title-big .h2-big {
+main .container-main .first-contain .advantages.title-big .h1-big {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
-main .container-main .first-contain .advantages.title-big .h2-big h1 {
+main .container-main .first-contain .advantages.title-big .h1-big h1 {
     font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 165px;
     font-weight: 400;
@@ -32,7 +32,7 @@ main .container-main .first-contain .advantages.title-big .h2-big h1 {
     letter-spacing: -3.31px;
     text-transform: uppercase;
 }
-main .container-main .first-contain .advantages.title-big .h2-big h1 span.h2-border {
+main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
     font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     color: var(--primary-text);
     text-shadow: var(--h2-border);
@@ -147,10 +147,10 @@ button.btn-secondary {
 /* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
-    main .container-main .first-contain .advantages.title-big .h2-big h1 {
+    main .container-main .first-contain .advantages.title-big .h1-big h1 {
         font-size: 120px;
     }
-    main .container-main .first-contain .advantages.title-big .h2-big h1 span.h2-border {
+    main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
         font-size: 120px;
         letter-spacing: -2px;
     }
@@ -162,10 +162,10 @@ button.btn-secondary {
     main .container-main section.container-advantages .grid {
         max-width: 100%;
     }
-    main .container-main .first-contain .advantages.title-big .h2-big h1 {
+    main .container-main .first-contain .advantages.title-big .h1-big h1 {
         font-size: 80px;
     }
-    main .container-main .first-contain .advantages.title-big .h2-big h1 span.h2-border {
+    main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
         font-size: 80px;
         letter-spacing: -2px;
     }
@@ -178,12 +178,12 @@ button.btn-secondary {
     main .container-main .first-contain .img-right img {
         width: 30%;
     }
-    main .container-main .first-contain .advantages.title-big .h2-big h1 {
+    main .container-main .first-contain .advantages.title-big .h1-big h1 {
         font-size: 40px;
         line-height: 100%;
         letter-spacing: -1.2px;
     }
-    main .container-main .first-contain .advantages.title-big .h2-big h1 span.h2-border {
+    main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
         font-size: 40px;
         letter-spacing: 2.4px;
     }

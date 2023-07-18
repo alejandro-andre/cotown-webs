@@ -340,7 +340,7 @@ main {
 }
 .container-header.first .left-content .spot h1 {
     color: var(--primary-text);
-    font-size: 35px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: 40px;
@@ -640,17 +640,17 @@ main .container-main .first-contain .title-big {
     align-items: center;
     margin: 6em auto 2em;
 }
-main .container-main .first-contain .title-big .h2-big {
+main .container-main .first-contain .title-big .h1-big {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
-main .container-main .first-contain .title-big .h2-big h1 {
+main .container-main .first-contain .title-big .h1-big h1 {
     width: 100%;
     font-weight: 400;
     line-height: 95%;
-    font-size: 78px;
+    font-size: 96px;
 }
 main .container-main .first-contain .title-big p {
     font-size: 30px;
@@ -661,8 +661,8 @@ main .container-main .first-contain .title-big p {
 }
 
  main .container-main .first-contain .title-big.home p {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 30px;
     font-weight: 500;
     margin: 0 0 0.5em;
     text-align: left;
@@ -1278,7 +1278,7 @@ button.date-button input.inputs {
     .btn-primary.search.desktop {
         font-size: 20px;
     }
-    main .container-main .first-contain .title-big .h2-big h1 {
+    main .container-main .first-contain .title-big .h1-big h1 {
         width: 100%;
         font-weight: 400;
         line-height: 95%;
@@ -1487,7 +1487,7 @@ button.date-button input.inputs {
     h1.h1-logo {
         font-size: 38px;
     }
-    main .container-main .first-contain .title-big .h2-big h1 {
+    main .container-main .first-contain .title-big .h1-big h1 {
         font-size: 60px;
     }
     h2 {
@@ -1979,7 +1979,7 @@ button.date-button input.inputs {
         left: calc(100% - 186px)!important;
         font-size: 12px!important;
     }
-    main .container-main .first-contain .title-big .h2-big, main .container-main .first-contain .title-big .h2-border {
+    main .container-main .first-contain .title-big .h1-big, main .container-main .first-contain .title-big .h2-border {
         text-align: start;
     }
     main .container-main section.form .form-container .campo.number .num input {
