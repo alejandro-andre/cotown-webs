@@ -866,7 +866,7 @@ main .container-main section.form .form-container button.btn-secondary {
 
 /* ICONOS CHAT */
 .iconos-chat {
-    padding: 0.5em 9em 0.5em 0;
+    padding: 0.5em 8em 0.9em 0;
     text-align: right;
     position: fixed;
     bottom: 0;
@@ -886,7 +886,6 @@ main .container-main section.form .form-container button.btn-secondary {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 6px;
 }
 .iconos-chat div em {
     color: var(--primary-text);

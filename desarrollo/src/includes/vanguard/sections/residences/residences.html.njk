@@ -84,11 +84,16 @@
       <div class="types">
         {% for r in prices  | find('id', 'eq', b.id) %}
         {% for pt in r.Place_types %}
-        <div class="pure-u-1-4">
+        <div class="pure-u-8-24 pure-u-lg-4-24">
           <div class="type">
             <p>{{place_types[pt.Code] | translate('Name', L)}}</p>
             <p class="price">{{pt.Flat_types[0].Rent_long}}€/{% literal texts, 'price-mes', L %}</p>
           </div>
+        </div>
+        {% endfor %}
+        {% for i in range(r.Place_types, 5) -%}
+        <div class="pure-u-8-24 pure-u-lg-4-24">
+          &nbsp;
         </div>
         {% endfor %}
         {% endfor %}
@@ -98,7 +103,7 @@
       <div class="services">
         {% for s in b.Services %}
         {% if loop.index < 9 %}
-        <div class="service">
+        <div class="service pure-u-1-4 pure-u-lg-3-24">
           <div class="icon">
           {% svg
             constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Service.Images[0].id +"/Icon/contents?access_token=" + token,
