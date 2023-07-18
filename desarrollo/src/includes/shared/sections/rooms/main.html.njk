@@ -67,8 +67,7 @@ new Splide("#splideServices", {
 }).mount();
 
 // Sliders tipos de habitacion
-{% for r in prices %}
-{% if r.id == building.id %}
+{% for r in prices | find('id', 'eq', building.id) %}
 {% for p in r.Place_types %}
 var main{{p.Code}} = new Splide( '#main-carousel-{{p.Code}}', {
   type: 'fade',
@@ -96,7 +95,6 @@ main{{p.Code}}.sync(thumbnails{{p.Code}});
 main{{p.Code}}.mount();
 thumbnails{{p.Code}}.mount();
 {% endfor %}
-{% endif %}
 {% endfor %}
 
 // Slider barrio

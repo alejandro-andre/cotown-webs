@@ -2,10 +2,8 @@
 
 <!-- Mobile first header
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-{% set flag = true %}
-{% for b in banners %}
-{% if flag and b.Page == 'home' %}
-{% set flag = false %}
+{% set b = banners | find('Page', 'eq', 'home') | first %}
+{% if b | length > 0 %}
 <section class="container-header mobile-only first pure-g" id="first-line">
   <div class="turquoise-line pure-u-1-2 pure-u-lg-1" >
     <div class="left-content pure-u-md-1-2 pure-u-1" >
@@ -24,7 +22,6 @@
   </div>
 </section>
 {% endif %}
-{% endfor %}
 
 <!-- Desktop first header
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -35,10 +32,8 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="left-content pure-u-md-1-2 pure-u-1" >
       <div class="banner-container pure-u-1">
-        {% set flag = true %}
-        {% for b in banners %}
-        {% if flag and b.Page == 'home' %}
-        {% set flag = false %}
+        {% set b = banners | find('Page', 'eq', 'home') | first %}
+        {% if b | length > 0 %}
         <div class="spot">
           <h1>{{b | translate('Text', L)}}</h1>
         </div>
@@ -46,7 +41,6 @@
           <button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button>
         </a>
         {% endif %}
-        {% endfor %}
       </div>
     </div>
 
@@ -62,10 +56,8 @@
             <a href="#" class="pure-menu-link"><em class="icon-search"></em></a>
             -->
             <!-- Whatsapp -->
-            {% for r in rrss %}
-            {% if r.Name == 'whatsapp' %}
+            {% for r in rrss | find ('Name', 'eq', 'whatsapp') %}
             <a href="{{r.Link}}" class="pure-menu-link"><em class="icon-whatsapp"></em></a>
-            {% endif %}
             {% endfor %}
           </li>
 
@@ -80,7 +72,7 @@
               <div data-toggle="collapsed" class="options">
                 <a href="{{alt.en}}"><div class="option">English (EN)</div></a>
               </div>
-              {% else%}
+              {% else %}
               <label class="selected-option" for="options">
                 <em class="icon-corchete-down"></em>
                 <span class="select-value">English (EN)</span>
@@ -166,7 +158,7 @@
           <!-- Logo -->
           <div class="logo pure-u-11-24">
             <a href="{{langs[L].folder}}/home.html">
-              {% if siteid == 1 %}
+              {% if site == 'vanguard' %}
               <img class="img-logo" alt="logo" src="/assets/img/vanguard-white.svg">
               {% else %}
               <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>

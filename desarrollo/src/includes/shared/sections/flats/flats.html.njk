@@ -1,11 +1,10 @@
-{% set flag = true %}
-{% for r in prices %}
-{% if r.id == building.id %}
+{% set show = true %}
+{% for r in prices | find('id', 'eq', building.id)%}
 {% for p in r.Place_types %}
 {% if p.Code[0] == type %}
 
-{% if flag %}
-{% set flag = false %}
+{% if show %}
+{% set show = false %}
 <div class="title pure-u-1 pure-u-lg-21-24">
   <h2>{{typetitle}}</h2>
 </div>
@@ -118,5 +117,4 @@
 </section>
 {% endif %}
 {% endfor %}
-{% endif %}
 {% endfor %}

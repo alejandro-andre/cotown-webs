@@ -30,20 +30,17 @@
     <div class="map" id="map"></div>
 
     <!-- Popups -->
-    {% for b in buildings-%}
-    {% if b.District.Location.Name == location.Name %}
+    {% for b in buildings | find('District.Location.id', 'eq', location.id) -%}
 
     {% set min = 9999 %}
-    {% for r in prices %}
-    {% if r.id == b.id %}
-      {% for p in r.Place_types %}
-      {% for f in p.Flat_types %}
-        {% if min > f.Rent_long %}
-          {% set min = f.Rent_long %}
-        {% endif %}
-      {% endfor %}
-      {% endfor %}
-    {% endif %}
+    {% for r in prices | find('id', 'eq', b.id) %}
+    {% for p in r.Place_types %}
+    {% for f in p.Flat_types %}
+      {% if min > f.Rent_long %}
+        {% set min = f.Rent_long %}
+      {% endif %}
+    {% endfor %}
+    {% endfor %}
     {% endfor %}
 
     <div id="{{b.id}}" style="display: none;">
@@ -60,7 +57,6 @@
         </div>
       </div>
     </div>
-    {% endif %}
     {% endfor %}
 
   </section>
@@ -79,15 +75,13 @@
 // Map
 var map = createMap("map", 41.3933, 2.1377, 16);
 var markerArray = [];
-{% for b in buildings %}
-{% if b.District.Location.Name == location.Name %}
+{% for b in buildings | find('District.Location.id', 'eq', location.id) %}
 markerArray.push(putMarker(
   map,
   {{b.Lat_lon.slice(1,-1).split(',')[0]}},
   {{b.Lat_lon.slice(1,-1).split(',')[1]}},
   document.getElementById("{{b.id}}").innerHTML
 ));
-{% endif %}
 {% endfor %}
 if (markerArray.length > 0) {
   var group = L.featureGroup(markerArray).addTo(map);

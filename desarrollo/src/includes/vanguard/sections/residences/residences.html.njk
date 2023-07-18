@@ -24,13 +24,8 @@
           <option value="" disabled selected>{% literal texts, 'filtrar-ciudad', L %}</option>
           <option value="">{% literal texts, 'filtrar-todas', L %}</option>
           {% for l in locations %}
-            {% set show = false %}
-            {% for b in buildings %}
-              {% if l.id == b.District.Location.id and b.Building_type_id == 3 %}
-                {% set show = true %}
-              {% endif %}
-            {% endfor %}
-            {% if show %}
+            {% set b = buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) %}
+            {% if b | length > 0 %}
             <option value="{{l | translate('Name', L)|ascii}}">{{l | translate('Name', L)}}</option>
             {% endif %}
           {% endfor %}
@@ -43,13 +38,8 @@
 
 <!-- Content -->
 {% for l in locations %}
-  {% set show = false %}
-  {% for b in buildings %}
-    {% if l.id == b.District.Location.id and b.Building_type_id == 3 %}
-      {% set show = true %}
-    {% endif %}
-  {% endfor %}
-  {% if show %}
+{% set b = buildings  | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) %}
+{% if b | length > 0 %}
 <section class="residence-locations pure-u-1">
 
   <div class="pure-u-1 pure-u-3-24 location">
@@ -61,8 +51,7 @@
   </div>
 
   <div class="pure-u-1 pure-u-lg-21-24">
-  {% for b in buildings %}
-    {% if l.id == b.District.Location.id and b.Building_type_id == 3 %}
+  {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) %}
   <div class="pure-u-1 pure-u-lg-1-2">
     <div class="residence-card">
 
@@ -91,8 +80,7 @@
 
       <!-- Types -->
       <div class="types">
-        {% for r in prices %}
-        {% if r.id == b.id %}
+        {% for r in prices  | find('id', 'eq', b.id) %}
         {% for pt in r.Place_types %}
         <div class="pure-u-1-4">
           <div class="type">
@@ -101,7 +89,6 @@
           </div>
         </div>
         {% endfor %}
-        {% endif %}
         {% endfor %}
       </div>
 
@@ -124,7 +111,6 @@
 
     </div>
   </div>
-    {% endif %}
   {% endfor %}
   </div>
 

@@ -46,15 +46,13 @@ tags: page
       <div class="splide-banner splide" role="group">
         <div class="splide__track">
           <ul class="splide__list">
-            {% for b in banners %}
-            {% if b.Page == 'ventajas' %}
+            {% for b in banners | find('Page', 'eq', 'ventajas') %}
             {% for p in (b | translate('Text', L)).split('|') %}
             <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
             {% endfor %}
             {% for p in (b | translate('Text', L)).split('|') %}
             <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
             {% endfor %}
-            {% endif %}
             {% endfor %}
           </ul>
         </div>

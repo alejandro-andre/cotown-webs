@@ -57,8 +57,7 @@
         <!-- Slider -->
         <ul class="splide__list carousel-main-list">
 
-          {% for b in buildings %}
-          {% if location.id == b.District.Location.id and b.Building_type_id < 3 %}
+          {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
           <li class="splide__slide main-slide">
             <div class="card-contain">
               <div class="card shadow desktop">
@@ -87,19 +86,17 @@
 
                       {% set minI = 9999 %}
                       {% set minD = 9999 %}
-                      {% for r in prices %}
-                      {% if r.id == b.id %}
-                        {% for p in r.Place_types %}
-                        {% for f in p.Flat_types %}
-                          {% if p.Code[0] == 'I' and minI > f.Rent_long %}
-                            {% set minI = f.Rent_long %}
-                          {% endif %}
-                          {% if p.Code[0] == 'D' and minD > f.Rent_long %}
-                            {% set minD = f.Rent_long %}
-                          {% endif %}
-                        {% endfor %}
-                        {% endfor %}
-                      {% endif %}
+                      {% for r in prices | find('id', 'eq', b.id) %}
+                      {% for p in r.Place_types %}
+                      {% for f in p.Flat_types %}
+                        {% if p.Code[0] == 'I' and minI > f.Rent_long %}
+                          {% set minI = f.Rent_long %}
+                        {% endif %}
+                        {% if p.Code[0] == 'D' and minD > f.Rent_long %}
+                          {% set minD = f.Rent_long %}
+                        {% endif %}
+                      {% endfor %}
+                      {% endfor %}
                       {% endfor %}
 
                       <!-- Habitacion-compartida -->
@@ -185,7 +182,6 @@
               </div>
             </div>
           </li>
-          {% endif %}
           {% endfor %}
 
         </ul>
@@ -197,8 +193,7 @@
   <!-- Mobile: column -->
   <div class="pisos mobile pure-u-1">
     <div class="piso-contain pure-u-1">
-      {% for b in buildings %}
-      {% if location.id == b.District.Location.id and b.Building_type_id < 3 %}
+      {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
       <div class="piso-main pure-u-1">
 
         <!-- Photo -->
@@ -220,19 +215,17 @@
 
           {% set minI = 9999 %}
           {% set minD = 9999 %}
-          {% for r in prices %}
-          {% if r.id == b.id %}
-            {% for p in r.Place_types %}
-            {% for f in p.Flat_types %}
-              {% if p.Code[0] == 'I' and minI > f.Rent_long %}
-                {% set minI = f.Rent_long %}
-              {% endif %}
-              {% if p.Code[0] == 'D' and minD > f.Rent_long %}
-                {% set minD = f.Rent_long %}
-              {% endif %}
-            {% endfor %}
-            {% endfor %}
-          {% endif %}
+          {% for r in prices | find('id', 'eq', b.id) %}
+          {% for p in r.Place_types %}
+          {% for f in p.Flat_types %}
+            {% if p.Code[0] == 'I' and minI > f.Rent_long %}
+              {% set minI = f.Rent_long %}
+            {% endif %}
+            {% if p.Code[0] == 'D' and minD > f.Rent_long %}
+              {% set minD = f.Rent_long %}
+            {% endif %}
+          {% endfor %}
+          {% endfor %}
           {% endfor %}
 
           <!-- Place types -->
@@ -312,7 +305,6 @@
         </div>
 
       </div>
-      {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -329,11 +321,9 @@ new Splide('#sliderFlats', {
   focus: 'center',
   padding: '6rem'
 }).mount();
-{% for b in buildings %}
-{% if location.id == b.District.Location.id and b.Building_type_id < 3 %}
+{% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
 new Splide('#sliderMini{{b.id}}', { type: 'loop', gap: '16px', pagination: false, perMove: 1, perPage: 9 }).mount();
 new Splide('#sliderMiniMobile{{b.id}}', { type: 'loop', gap: '16px', arrows: false, pagination: false, perMove: 1, perPage: 6 }).mount();
-{% endif %}
 {% endfor %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

@@ -20,6 +20,39 @@ module.exports = (eleventyConfig) => {
     return str;
   }
   
+  // Find filter
+  eleventyConfig.addFilter("find", function (arr=[], key="", cond="eq", value) {
+
+    function find(json, field, cond, value) {
+
+      const fields = field.split('.');
+      const last = fields.pop();
+
+      for (let i = 0; i < fields.length; i++) {
+        const curr = fields[i];
+        if (json.hasOwnProperty(curr)) {
+          json = json[curr];
+        } else {
+          return false;
+        }
+      }
+
+      if (json.hasOwnProperty(last)) {
+        switch (cond) {
+          case 'gt': return json[last] > value;
+          case 'lt': return json[last] < value;
+          default: return json[last] === value;
+        }
+      } else {
+        return false;
+      }
+
+    }
+    
+    result = arr?.filter(e => find(e, key, cond, value))
+    return result;
+  });
+  
   // Clean up filter
   eleventyConfig.addFilter("cleanup", function(text) {
     return text.replace(/[\x00-\x1F]/g, " ").replace("  ", " ");

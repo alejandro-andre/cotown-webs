@@ -46,17 +46,12 @@
 
                 <!-- Look for matching type resources -->
                 {% set show = false %}
-                {% for b in buildings %}
-                {% if l.id == b.District.Location.id and b.Building_type_id < 3 %}
-                  {% for r in b.Resources %}
-                  {% if name == 'rooms' and (r.Sale_type == 'plazas' or r.Sale_type == 'ambos') %}
-                    {% set show = true %}
-                  {% endif %}
-                  {% if name == 'flats' and (r.Sale_type == 'completo' or r.Sale_type == 'ambos') %}
-                    {% set show = true %}
-                  {% endif %}
-                  {% endfor %}
-                {% endif %}
+                {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
+                  {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+                  {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+                  {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
+                  {% if name == 'rooms' and (ra > 0 or rp > 0) %}{% set show = true %}{% endif %}
+                  {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set show = true %}{% endif %}
                 {% endfor %}
 
               {% if show %}
