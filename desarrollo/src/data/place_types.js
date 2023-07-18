@@ -2,14 +2,18 @@ module.exports = async (config) => {
 
   const gql = require('./graphql');
   const QUERY = `
-  {
+  query data ($id: Int) {
     data: Resource_Resource_place_typeList {
       id
       Code
       Name
       Name_en
-      Description
-      Description_en
+      Texts: Resource_place_textListViaPlace_type_id ( 
+        where: { Segment_id: { EQ: $id } }
+      ) {
+        Description
+        Description_en
+      }
     }
   }`;
   const data = await gql(QUERY, config, 'place_types');
@@ -19,8 +23,7 @@ module.exports = async (config) => {
     Code: o.Code, 
     Name: o.Name, 
     Name_en: o.Name_en, 
-    Description: o.Description, 
-    Description_en: o.Description_en 
+    Texts: o.Texts
   } });
   return(json); 
 };

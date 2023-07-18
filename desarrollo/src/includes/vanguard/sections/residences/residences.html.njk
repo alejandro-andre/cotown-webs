@@ -17,6 +17,7 @@
   </div>
 
   <!-- Filter -->
+  <!-- TODO
   <div class="search pure-u-22-24">
     <form>
       <form class="search-form pure-u-1">
@@ -33,6 +34,7 @@
       </form>
     </form>
   </div>
+  -->
 
 </section>
 
@@ -52,7 +54,7 @@
 
   <div class="pure-u-1 pure-u-lg-21-24">
   {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) %}
-  <div class="pure-u-1 pure-u-lg-1-2">
+  <div class="pure-u-1">
     <div class="residence-card">
 
       <!-- Photo -->
@@ -95,7 +97,7 @@
       <!-- Services -->
       <div class="services">
         {% for s in b.Services %}
-        {% if loop.index < 5 %}
+        {% if loop.index < 9 %}
         <div class="service">
           <div class="icon">
           {% svg

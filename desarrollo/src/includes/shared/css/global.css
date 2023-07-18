@@ -880,16 +880,31 @@ main .container-main section.form .form-container button.btn-secondary {
 .iconos-chat div {
     background-color: var(--primary);
     border-radius: 50%;
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
 }
 .iconos-chat div em {
     color: var(--primary-text);
     font-size: 32px;
+}
+
+/* BOT CSS override */
+#butonImgWidgetClose {
+    filter: invert(100%);
+}
+.efecto_pulser { 
+    background: var(--primary);
+    color: var(--primary);
+}
+.efecto_pulser img {
+    background: #2bbdbd;
+    color: #2bbdbd;
+    filter: invert(100%);
 }
 
 /* MARQUEE */

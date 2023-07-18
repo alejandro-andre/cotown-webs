@@ -9,7 +9,12 @@
   margin: 0 0 2em;
 }
 .first-contain .img-residences {
-  max-height: 480px;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center center;
+}
+.first-contain .img-residences img {
+  width: 100%;
   object-fit: cover;
   object-position: center center;
 }
@@ -116,7 +121,7 @@ input[type="search"]::-webkit-search-results-decoration {
   object-position: center center;
   border-radius: 25px 0 0 0;
   overflow: hidden;
-  padding-right: 10px;
+  padding-right: 32px;
 }
 
 .residence-locations .residence-card .img {
@@ -214,11 +219,6 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
-  }
-  .first-contain .img-residences img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center center;
   }
  .first-contain .title-big {
       margin: 2em auto 2em;

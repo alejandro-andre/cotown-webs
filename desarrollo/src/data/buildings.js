@@ -17,6 +17,10 @@ module.exports = async (config) => {
       Lat_lon
       Description
       Description_en
+      Details
+      Details_en
+      Details_private
+      Details_private_en
       Segment_id
       Building_type_id
       District: DistrictViaDistrict_id {

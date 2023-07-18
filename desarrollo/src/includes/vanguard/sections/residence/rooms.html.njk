@@ -55,7 +55,7 @@
 
     <!-- Title -->
     <div class="title-favorite pure-u-1">
-      <p>{{place_types[p.Code] | translate('Name', L)}}</p>
+      <p>{{place_types[p.Code].Texts[0] | translate('Name', L)}}</p>
       <!--
       <em class="icon-heart"></em>
       -->
@@ -63,7 +63,7 @@
 
     <!-- Description -->
     <div class="text pure-u-1">
-      <p>{{place_types[p.Code] | translate('Description', L)}}</p>
+      <p>{{place_types[p.Code].Texts[0] | translate('Description', L)}}</p>
     </div>
 
     <!--
