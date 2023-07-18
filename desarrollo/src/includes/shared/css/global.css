@@ -645,6 +645,7 @@ main .container-main .first-contain .title-big .h1-big {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-top: 16px;
 }
 main .container-main .first-contain .title-big .h1-big h1 {
     width: 100%;
