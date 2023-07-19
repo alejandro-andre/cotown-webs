@@ -1,7 +1,7 @@
 const baseConfig = require('./.base.js');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.outputDir = "sites/cotown";
+  eleventyConfig.outputDir = "../../sites/cotown";
   baseConfig(eleventyConfig);
   eleventyConfig.addPassthroughCopy({"src/includes/shared/css": "assets/css"});
   eleventyConfig.addPassthroughCopy({"src/includes/cotown/css": "assets/css"});
