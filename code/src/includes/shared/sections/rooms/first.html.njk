@@ -21,7 +21,12 @@
 
     <!-- Description -->
     <div class="text-first pure-u-23-24 pure-u-lg-12-24">
-    {{ building | translate('Description', L) | markdown | safe }}
+    {{ name }}
+    {% if name == 'rooms' %}
+    {{ building | translate('Details', L) | markdown | safe }}
+    {% else %}
+    {{ building | translate('Details_private', L) | markdown | safe }}
+    {% endif %}
     </div>
 
     <!-- Services -->

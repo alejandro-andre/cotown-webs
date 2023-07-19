@@ -4,8 +4,8 @@ eleventyComputed:
     L: "en"
     title: "{{langs[L].pages[name].title}} | {{building.Name}}"
     alt:
-      es: "{{langs.es.folder}}/{{langs[L].pages[name].url}}-{{building.Name | ascii}}.html"
-      en: "{{langs.en.folder}}/{{langs[L].pages[name].url}}-{{building.Name | ascii}}.html"
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}-{{building.Name | ascii}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}-{{building.Name | ascii}}.html"
     description: "{{building | translate('Name',L)|ascii}}"
     permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{building.Name | ascii}}.html"
 layout: shared/layouts/base.html
