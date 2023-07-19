@@ -327,6 +327,19 @@ section.necesities .grid .necesidad .p-text p {
     margin: 0;
 }
 
+.photos {
+    margin-top: 2em;
+    background: linear-gradient(
+        to bottom, 
+        white 50%, /* Cambia este valor por el color que desees */
+        var(--primary) 50%
+    );
+}
+.photos img {
+    width: 340px;
+}
+
+
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
     main .container-main .first-contain .title-big.home p {
