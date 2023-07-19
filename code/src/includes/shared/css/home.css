@@ -358,16 +358,17 @@ main .container-main .first-contain .text p {
     color: var(--primary);
 }
 .cotownity .feeling {
-    position: absolute;
-    bottom: 6em;
+    position: relative;
+    bottom: 175px;
+    width: 100%
 }
 .cotownity .feeling .title-feel {
     background-color: var(--primary);
     color: var(--primary-text);
-    padding: 0 0.5em 0 2em;
+    padding: 14px 25px 10px 0;
     width: 90%;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 36px;
     text-align: right;
 }
 
