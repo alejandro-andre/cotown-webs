@@ -14,11 +14,10 @@ module.exports = async (config) => {
       Description_en
       Details
       Details_en
-      Image: Media_locationListViaLocation_id (
-        where: { Image_type: { EQ: principal } }
-      ) {
+      Images: Media_locationListViaLocation_id {
         id
         Name
+        Image_type
       }
     }
   }`;

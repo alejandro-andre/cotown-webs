@@ -1,0 +1,16 @@
+{{location|dump}}
+<section class="photos">
+
+  <div class="carousel splide" role="group">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for f in location.Images %}
+        <li class="splide__slide">
+          {{f|dump}}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+</section>

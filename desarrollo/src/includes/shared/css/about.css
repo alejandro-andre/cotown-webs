@@ -12,7 +12,7 @@ main .container-main .first-contain.about .img {
     justify-content: flex-start;
     align-items: center;
     position: absolute;
-    top: 320px;
+    top: 300px;
     left: 0;
     z-index: 2;
 }

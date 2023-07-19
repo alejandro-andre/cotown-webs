@@ -286,7 +286,7 @@
   cursor: pointer;
   margin-top: 1em;
 }
-.right-data .buttons button.btn-secondary, .right-data .buttons button.btn-primary {
+.right-data .buttons button.btn-secondary,  {
   width: 100%;
   height: 60px;
   justify-content: center;

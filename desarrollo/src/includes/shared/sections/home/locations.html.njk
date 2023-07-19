@@ -11,10 +11,10 @@
       <ul class="splide__list">
         {% for l in locations %}
         <li class="splide__slide">
-          <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
+          <a href="{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}-{{l | translate('Name', L) | ascii}}.html">
           <div class="img">
             {% image
-              constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Image[0].id +"/Image/contents?access_token=" + token,
+              constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Images[0].id +"/Image/contents?access_token=" + token,
               l.Name, l.Name|slug, "",
               [800], ""
             %}

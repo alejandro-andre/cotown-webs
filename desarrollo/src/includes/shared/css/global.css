@@ -895,7 +895,7 @@ main .container-main section.form .form-container button.btn-secondary {
 
 /* BOT CSS override */
 #butonImgWidgetClose {
-    filter: invert(100%);
+    filter: saturate(1.5) invert(1);
 }
 .efecto_pulser { 
     background: var(--primary);
@@ -904,7 +904,7 @@ main .container-main section.form .form-container button.btn-secondary {
 .efecto_pulser img {
     background: #00AE99;
     color: #00AE99;
-    filter: invert(100%);
+    filter: saturate(1.5) invert(1);
 }
 
 /* MARQUEE */
@@ -985,7 +985,7 @@ main .container-main section.banner h2 {
 footer section.container-footer {
     color: var(--primary-text);
     background-color: var(--footer);
-    padding: 3em 4em;
+    padding: 3em 4em 5em;
 }
 footer .container-footer .contain {
     border-bottom: 1px solid #3c434ab3;
@@ -1045,22 +1045,21 @@ footer section.container-footer .footer-info.mobile {
 /* SPLIDE GENERAL
 -------------------------------- \*/
 .splide__arrow {
-background-color: var(--primary);
-width: 3em;
-height: 3em;
+    width: 3em;
+    height: 3em;
 }
 .splide__arrow svg {
-fill: var(--white);
+    fill: var(--black);
 }
 .splide__pagination__page {
-background-color: #ccc;
-width: 16px;
-height: 16px;
-top: 50px;
+    background-color: #ccc;
+    width: 16px;
+    height: 16px;
+    top: 50px;
 }
 .splide__pagination__page.is-active {
-background-color: var(--primary);
-transform: scale(1);
+    background-color: var(--primary);
+    transform: scale(1);
 }
 
 /* RESERVAS GLOBAL STYLE */
