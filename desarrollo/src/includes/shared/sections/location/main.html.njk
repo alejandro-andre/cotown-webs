@@ -61,11 +61,11 @@
 
   </section>
 
-  <!-- Services -->
-  {% include 'shared/sections/location/services.html.njk' %}
-
   <!-- Photos -->
   {% include 'shared/sections/location/photos.html.njk' %}
+
+  <!-- Services -->
+  {% include 'shared/sections/location/services.html.njk' %}
 
 </main>
 
@@ -90,5 +90,20 @@ if (markerArray.length > 0) {
   var group = L.featureGroup(markerArray).addTo(map);
   map.fitBounds(group.getBounds());
 }
+
+// Slider
+new Splide(".splide-gallery", {
+  type: 'slide',
+  focus: 0,
+  height: 340,
+  perPage: 4,
+  perMove: 1,
+  padding: { left: '10em' },
+  gap: '50px',
+  breakpoints: {
+    1024: { perPage: 3 },
+    768: { perPage: 2, padding: 0 },
+  },
+}).mount();
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
