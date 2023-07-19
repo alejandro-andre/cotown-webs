@@ -187,8 +187,8 @@ module.exports = (eleventyConfig) => {
       let metadata = await Image(src, {
         widths: widths,
         formats: ["webp", "jpeg"],
-        urlPath: "/img/",
-        outputDir: eleventyConfig.outputDir + "/img/",
+        urlPath: "/assets/img/",
+        outputDir: eleventyConfig.outputDir + "/assets/img/",
         cacheOptions: { removeUrlQueryParams: true },
         filenameFormat: function (id, src, width, format, options) {
           return `${slugify(name)}-${width}.${format}`;

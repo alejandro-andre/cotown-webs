@@ -1,6 +1,6 @@
 .cache
+package-lock.json
 sites
-www
 node_modules
 sync.ffs_db
 facultades
