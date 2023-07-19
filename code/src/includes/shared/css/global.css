@@ -877,6 +877,7 @@ main .container-main section.form .form-container button.btn-secondary {
     justify-content: flex-end;
     align-items: center;
     gap: 4em;
+    z-index: 9999;
 }
 .iconos-chat div {
     background-color: var(--primary);

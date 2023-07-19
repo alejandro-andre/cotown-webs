@@ -44,9 +44,7 @@ tags: page
     {% include 'shared/sections/home/services.html.njk' %}
 
     <!-- Cotownity -->
-    <!--?
     {% include 'shared/sections/home/cotownity.html.njk' %}
-    -->
 
     <!-- Partners -->
     {% include 'shared/sections/home/partners.html.njk' %}
@@ -103,4 +101,5 @@ new Splide(".splide-opinions", {
   },
 }).mount();
 {% endset %}<script>{{ script | jsmin | safe }}</script>
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 {% endblock %}
