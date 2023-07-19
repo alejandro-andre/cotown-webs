@@ -13,11 +13,15 @@
         <li class="splide__slide">
           <a href="{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}-{{l | translate('Name', L) | ascii}}.html">
           <div class="img">
+            {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+            {% if loop.index == 1 %}
             {% image
-              constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Images[0].id +"/Image/contents?access_token=" + token,
+              constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
               l.Name, l.Name|slug, "",
               [800], ""
             %}
+            {% endif %}
+            {% endfor %}
             <h3 class="img-title">{{l.Name}}</h3>
           </div>
           </a>

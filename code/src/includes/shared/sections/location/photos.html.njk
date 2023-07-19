@@ -5,11 +5,13 @@
       <ul class="splide__list">
         {% for f in location.Images | find('Image_type', 'eq', 'galeria') %}
         <li class="splide__slide">
+          <div class="img">
           {% image
             constants.SERVER + "/wopi/files/Marketing/Media_location/" + f.id +"/Image/contents?access_token=" + token,
-            f.Name, f.Name|slug, "",
+            f.Name, location.Name+f.id|slug, "",
             [400], ""
           %}
+          </div>
         </li>
         {% endfor %}
       </ul>

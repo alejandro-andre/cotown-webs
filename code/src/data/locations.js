@@ -2,7 +2,7 @@ module.exports = async (config) => {
 
   const gql = require('./graphql');
   const QUERY = `
-  query data { 
+  query data ($id: Int) {
     data: Geo_LocationList (
       orderBy: [{ attribute: Name }]
       where: { Published: { EQ: true } }
@@ -14,8 +14,13 @@ module.exports = async (config) => {
       Description_en
       Details
       Details_en
-      Images: Media_locationListViaLocation_id {
+      Images: Media_locationListViaLocation_id (
+        joinType: INNER
+        orderBy: [{ attribute: Order }]
+        where: { Segment_id: { EQ: $id } }
+      ) {
         id
+        Order
         Name
         Image_type
       }

@@ -58,11 +58,16 @@
               <div class="location pure-u-1">
                 <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | ascii}}.html" class="pure-u-1 pure-u-lg-1-3">
                 <div class="img pure-u-1">
+                {{l.Images | find ('Image_type', 'eq', 'principal') | dump}}
+                {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+                {% if loop.index == 1 %}
                 {% image
-                  constants.SERVER + "/wopi/files/Marketing/Media_location/" + l.Images[0].id +"/Image/contents?access_token=" + token,
+                  constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
                   l.Name, l.Name|slug, "img-loc",
                   [800], ""
                 %}
+                {% endif %}
+                {% endfor %}
                 </div>
                 </a>
                 <div class="text-content pure-u-1 pure-u-lg-2-3">

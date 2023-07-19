@@ -94,16 +94,10 @@ if (markerArray.length > 0) {
 // Slider
 new Splide(".splide-gallery", {
   type: 'slide',
-  focus: 0,
-  height: 340,
-  perPage: 4,
-  perMove: 1,
-  padding: { left: '10em' },
-  gap: '50px',
-  breakpoints: {
-    1024: { perPage: 3 },
-    768: { perPage: 2, padding: 0 },
-  },
+  fixedWidth: '320px',
+  fixedHeight: '180px',
+  gap: '15px',
+  padding: { left: '20vw', right: '10vw' },
 }).mount();
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
