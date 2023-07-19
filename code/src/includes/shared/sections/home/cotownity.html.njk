@@ -7,7 +7,11 @@
       <div class="left">
         <div class="coral">
           <h2>{% literal texts, 'home-cotownity-titulo', L %}</h2>
-          <img alt="Community" src="/assets/img/cotownity.png">
+          {% image
+           constants.SERVER + "/wopi/files/Marketing/Media/" + images['cotownity'].id +"/Image/contents?access_token=" + token,
+           "community", "community", "",
+           [500], ""
+          %}
           <div class="last-contain">
             <div class="insta-fb">
               <em class="icon-instagram"></em>
