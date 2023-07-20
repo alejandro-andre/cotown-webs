@@ -3,7 +3,9 @@ module.exports = async (config) => {
   const gql = require('./graphql');
   const QUERY = `
   query data ($id: Int) {
-    data: Resource_Resource_place_typeList {
+    data: Resource_Resource_place_typeList (
+      where: { id: { LT: 300 } }
+    ) {
       id
       Code
       Name
