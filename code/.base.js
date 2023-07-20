@@ -159,7 +159,7 @@ module.exports = (eleventyConfig) => {
       }
     } catch (err) {
       console.log(`Missing text (${lang}) [${id}]`);
-      return `<span style="color:red;">[text missing ${lang}: ${id}]</span>`
+      return `<span style='color:red;'>[text missing ${lang}: ${id}]</span>`
     }
   });
 
@@ -210,7 +210,7 @@ module.exports = (eleventyConfig) => {
     } catch (err) {
       console.log(err);
       console.log(`Mising image ${name} ${src}`);
-      return `<span style="color:red;">[image missing ${name}]</span>`;
+      return `<span style='color:red;'>[image missing ${name}]</span>`;
     }
 	});
 };

@@ -30,6 +30,9 @@ function post(event) {
 
   // Post data
   formData = new FormData(event.target);
+  const file = document.getElementById('file')
+  if (file)
+    formData.append('file', file.files[0]);
   xhr.open('POST', "https://back.cotown.com/api/v1/form", true);
   xhr.send(formData);
 }
