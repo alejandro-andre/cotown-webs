@@ -1,0 +1,175 @@
+---
+name: book
+eleventyComputed:
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+layout: shared/layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<!-- Additional HEAD content -->
+{% block head %}
+{% set css %}{% include "shared/css/contact.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% endblock %}
+
+<!-- Main -->
+<main class="contact">
+  <div class="container-main">
+
+    <section class="first-contact">
+      <h1>{% literal texts, 'book-titulo', L %}</h1>
+    </section>
+
+    <section class="form">
+
+      <h2 class="title">
+        {% literal texts, 'book-texto', L %}
+      </h2>
+
+      <form id="form" onsubmit="post(event)">
+
+      <div class="form-container pure-g">
+
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
+          <label class="label">{% literal texts, 'form-nombre', L %}</label>
+          <input class="input" type="name" id="firstName" name="firstName" required>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
+          <label class="label">{% literal texts, 'form-apellidos', L %}</label>
+          <input class="input" type="name" id="lastName" name="lastName" required>
+          </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
+          <label class="label">{% literal texts, 'form-email', L %}</label>
+          <input class="input" type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
+          <label class="label">{% literal texts, 'form-telefono', L %}</label>
+          <input class="input" type="text" id="phone" name="phone" required>
+          </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
+          <label class="label">{% literal texts, 'form-nacionalidad', L %}</label>
+          <select class="select" type="select" id="3" name="3" required>
+            <option value="" disabled selected>{% literal texts, 'form-nacionalidad', L %}</option>
+            {% if L == 'es' %}
+            {% for c in countries | sort(false, false, 'Name') %}
+              <option value="{{c.Name}}">{{c.Name}}</option>
+            {% endfor %}
+            {% else %}
+            {% for c in countries | sort(false, false, 'Name_en') %}
+              <option value="{{c.Name_en}}">{{c.Name_en}}</option>
+            {% endfor %}
+            {% endif %}
+          </select>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
+          <label class="label">{% literal texts, 'form-edad', L %}</label>
+          <select class="select" type="select" id="1" name="1" required>
+            <option value="" disabled selected>{% literal texts, 'form-edad', L %}</option>
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="+44">+44</option>
+          </select>
+          </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
+          <label class="label">{% literal texts, 'form-desde', L %}</label>
+          <input class="input" type="date" id="96" name="96" required>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
+          <label class="label">{% literal texts, 'form-hasta', L %}</label>
+          <input class="input" type="date" id="97" name="97" required>
+          </div>
+        </div>
+
+        <div class="pure-u-1">
+          <div class="campo checkbox">
+            <input id="accept" name="accept" type="checkbox" required/>
+            <label for="accept" class="pure-checkbox">{% literal texts, 'form-rgpd', L, true %}
+            </label>
+          </div>
+        </div>
+
+        <div id="div-ok" class="pure-u-1">
+          <div class="text-ok">
+            {% literal texts, 'book-ok', L, true %}
+          </div>
+        </div>
+
+        <div id="div-send" class="pure-u-1">
+          <input type="hidden" id="listid" name="listid" value="25"/>
+          <button class="btn-secondary">{% literal texts, 'form-enviar', L %}</button>
+        </div>
+
+      </div>
+
+      </form>
+
+    </section>
+
+  </div>
+</main>
+
+{% block footer %}
+{% set script %}
+// Post contact
+function post(event) {
+  
+  // Prevent default submit
+  event.preventDefault();
+
+  // Request
+  var xhr = new XMLHttpRequest();
+
+  // Error, remove spinner
+  xhr.onerror = function() {
+  }
+
+  // Ok, remove spinner, show ok message
+  xhr.onload = function() {
+    if (xhr.status == 200) {
+      alert('ok');
+      document.getElementById('div-ok').style.display = 'block';
+      document.getElementById('div-send').style.display = 'none';
+    } else {
+      document.getElementById('div-ok').style.display = 'block';
+      document.getElementById('div-send').style.display = 'none';
+    };
+  }
+
+  // Post data
+  formData = new FormData(event.target);
+  xhr.open('POST', "https://back.cotown.com/api/v1/form", true);
+  xhr.send(formData);
+}
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

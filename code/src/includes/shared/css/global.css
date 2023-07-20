@@ -676,7 +676,6 @@ main .container-main .first-contain .title-big p span.bold {
 -------------------------------- \*/
 main .container-main section.form {
     padding: 2em 14%;
-    margin: 4em 0 0;
     background-color: var(--primary-background);
 }
 main .container-main section.form h2.title {
@@ -695,81 +694,73 @@ main .container-main section.form .form-container {
     align-items: center;
 }
 main .container-main section.form .form-container .campo {
-    padding: 0 0 1em;
+    padding: 1em 1em 1em 0;
 }
 
 main .container-main section.form .form-container .campo label {
     display: block;
-    width: 90%;
+    width: 100%;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    padding: 0 0.5em;
+    margin-bottom: 5px;
 }
 main .container-main section.form .form-container .campo input {
-    height: 40px;
-    width: 90%;
+    width: 100%;
+    padding: 8px 16px;
+    box-sizing: border-box;
 }
 main .container-main section.form .form-container .campo input,
 main .container-main section.form .form-container .campo select,
 main .container-main section.form .form-container .campo textarea  {
-    margin-top: 6px;
-    margin-bottom: 0.5em;
     color: var(--black);
+    height: 52px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 22px;
 }
-main .container-main section.form .form-container .campo.number {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-main .container-main section.form .form-container .campo.number .prefix {
-    width: 100px;
-}
-main .container-main section.form .form-container .campo.number .num {
-    width: calc(100% - 112px);
-}
-main .container-main section.form .form-container .campo.number .num input {
-    width: 87%;
-}
-main .container-main section.form .form-container .campo.coment input {
-    width: 95%;
+main .container-main section.form .form-container .campo select {
+    height: 52px;
+    line-height: 150%;
+    padding-left: 16px;
+    color: var(--grey-dark);
 }
 main .container-main section.form .form-container .campo textarea {
-    width: 95%;
+    width: 100%;
     border: 1.5px solid #d1d1d1;
     border-radius: 8px;
-    padding: 8px 16px;
     outline-offset: 0;
     outline: -webkit-focus-ring-color auto 0;
     font-size: 20px;
 }
 main .container-main section.form select {
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-/* Some browsers will not display the caret when using calc, so we put the fallback first */
-background: url("/assets/img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
-background: url("/assets/img/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("/assets/img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
+    background: url("/assets/img/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
 }
+main .container-main section.form .checkbox {
+    display: flex;
+    align-items: flex-start;
+}
+main .container-main section.form .checkbox input {
+    width: 24px !important;
+    height: 24px !important;
+    padding: 0 2em 1em 0;
+    margin-right: 10px;
+}
+
 /*For IE*/
 select::-ms-expand {
     display: none;
 }
-main .container-main section.form .form-container .campo select {
-    height: 60px;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 150%;
-    color: var(--grey-light);
-}
 main .container-main section.form .form-container .campo select,
 main .container-main section.form .form-container .campo input,
 main .container-main section.form .form-container .campo input:focus-visible {
-    font-size: 20px;
+    font-size: 18px;
     border: 1.5px solid #D1D1D1;
     border-radius: 8px;
-    padding: 8px 16px;
     outline-offset: 0;
     outline: -webkit-focus-ring-color auto 0px;
 }
@@ -851,8 +842,10 @@ main .container-main section.form .form-container .campo .select input.selected 
     width: 100%;
     opacity: 0;
 }
+section.form .form-container .text-ok span,
 section.form .form-container .text-ok p {
     display: none;
+    padding-top: 1em;
     color: var(--green-success);
     font-size: 16px;
     font-style: italic;
@@ -920,7 +913,6 @@ main .container-main section.banner h2 {
     margin-bottom: 0;
 }
 
-
 /* CONTACTO
 -------------------------------- */
 .first-contact {
@@ -941,7 +933,6 @@ main .container-main section.banner h2 {
     font-size: 46px;
     line-height: 100%;
 }
-
 .contact-main .img-content {
     border-bottom: 1px solid var(--grey-light);
     padding: 2em 0;
@@ -978,7 +969,6 @@ main .container-main section.banner h2 {
     line-height: 130%;
     color: var(--black);
 }
-
 
 /* FOOTER
 -------------------------------- \*/
@@ -1071,7 +1061,6 @@ footer section.container-footer .footer-info.mobile {
     align-items: flex-start;
     margin-top: 0.8em;	
 }
-
 button.date-button {
     display: flex;
     flex-flow: row wrap;
@@ -1091,7 +1080,6 @@ button.date-button label.labels {
     line-height: 16px;
     text-align: left;
 }
-
 button.date-button input.inputs {	
     height: 16px;
     text-align: left;
@@ -1101,7 +1089,6 @@ button.date-button input.inputs {
     background-color: transparent;
     border: none;
 }
-
 
 /* <!-- RESERVAS POPUP --> \*/
 .overlay {
@@ -1113,27 +1100,26 @@ button.date-button input.inputs {
     background-color: var(--white-background);
     visibility: hidden;
     opacity: 0;
-  }
-  .overlay:target {
+}
+.overlay:target {
     visibility: visible;
     opacity: 1;
     z-index: 1000000;
-  }
-
-  .popup {
+}
+.popup {
     margin: 0 auto;
     padding: 20px;
     background: #fff;
     width: 98%;
     height: 96%;
     position: relative;
-  }
-  .popup h2 {
+}
+.popup h2 {
     margin-top: 0;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
-  }
-  .popup .close {
+}
+.popup .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -1142,11 +1128,11 @@ button.date-button input.inputs {
     font-weight: bold;
     text-decoration: none;
     color: var(--black);
-  }
-  .popup .close:hover {
+}
+.popup .close:hover {
     color: var(--primary);
-  }
-  .popup .content-booking {
+}
+.popup .content-booking {
     max-height: 100%;
     max-width: 98%;
     margin: 2em auto;
@@ -1157,19 +1143,19 @@ button.date-button input.inputs {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-  }
-  .popup .content-booking::-webkit-scrollbar {
+}
+.popup .content-booking::-webkit-scrollbar {
     display: none;
-  }
-  .popup .content-booking section {
+}
+.popup .content-booking section {
     width: 100%;
     text-align: center;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-  }
-  .popup .content-booking section.results {
+}
+.popup .content-booking section.results {
     text-align: center;
     display: flex;
     flex-flow: row wrap;
@@ -1256,22 +1242,6 @@ button.date-button input.inputs {
     order:2;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* RESPONSIVE
 -------------------------------- \*/
 /* XL DESKTOP */
@@ -1291,9 +1261,6 @@ button.date-button input.inputs {
         font-weight: 500;
         margin: 0 0 0.5em;
         text-align: left;
-    }
-    .first-contact h1 {
-        font-size: 120px;
     }
     .contact-main h2 {
         font-size: 64px;
@@ -1436,9 +1403,6 @@ button.date-button input.inputs {
         font-size: 28px;
         line-height: 26px;
     }
-    main .container-main section.form .form-container .campo label {
-        font-size: 16px;
-    }
     main .container-main section.form .form-container .campo.number .num input {
         width: 85%;
     }
@@ -1496,12 +1460,14 @@ button.date-button input.inputs {
         margin: auto;
         text-align: center;
     }
+
     /* SPLIDER GENERAL*/
     .splide__pagination__page {
         width: 12px;
         height: 12px;
         top: 50px;
     }
+
     /* SECCIÓN HEADER */
     .container-header.first .turquoise-line {
         width: 100%;
@@ -1616,7 +1582,6 @@ button.date-button input.inputs {
         justify-content: center;
         align-items: center;
     }
-
     .container-header .black-line .left-nav .logo .mobile .img-logo {
         height: 42px;
         margin: auto 0;
@@ -1661,7 +1626,6 @@ button.date-button input.inputs {
         font-size: 24px;
     }
 
-
     /* HEADER SELECT
     -------------------------------- \*/
     /* ONLY MOBILE MENU \*/
@@ -1696,7 +1660,6 @@ button.date-button input.inputs {
     .only-mobile-menu .logo .img-logo {
         height: 42px;
     }
-
     .only-mobile-menu .menu-mobile-icons {
         display: flex;
         flex-flow: row wrap;
@@ -1745,7 +1708,6 @@ button.date-button input.inputs {
         color: var(--primary-text);
         font-size: 14px;
     }
-
     .only-mobile-private .area p {
         margin: 0 0.2em;
            font-weight: 700;
@@ -1801,7 +1763,6 @@ button.date-button input.inputs {
     .lang-mobile .select-container-mobile .options-mobile .option-mobile.selected {
         font-weight: 700;
     }
-
     #menu-desplegado {
         display: flex;
         flex-flow: column;
@@ -1837,7 +1798,6 @@ button.date-button input.inputs {
         align-items: center;
         padding: 0;
     }
-
     li .locations-container label.locations-label .loc {
         color: var(--black);
         font-size: 22px;
@@ -1983,18 +1943,11 @@ button.date-button input.inputs {
     main .container-main .first-contain .title-big .h1-big, main .container-main .first-contain .title-big .h2-border {
         text-align: start;
     }
-    main .container-main section.form .form-container .campo.number .num input {
-        width: 89%;
-    }
     main .container-main section.form .form-container .campo select,
     main .container-main section.form .form-container .campo input,
     main .container-main section.form .form-container .campo input:focus-visible,
     main .container-main section.form .form-container .campo textarea  {
         font-size: 16px;
-    }
-
-    main .container-main section.form .form-container .campo label {
-        font-size: 12px;
     }
 
     /* CONTACTO TABLET Y MOBILE  ___________________________\*/
@@ -2043,14 +1996,6 @@ button.date-button input.inputs {
     main .container-main section.form .form-container .campo.add-file .select  {
         width: 94%;
     }
-    main .container-main section.form .form-container .campo select {
-        font-size: 20px;
-        padding: 8px 8px;
-    }
-    main .container-main section.form .form-container .campo textarea {
-        width: 90%;
-    }
-
     main .container-main section.form .form-container button.btn-secondary {
         font-size: 16px;
     }
@@ -2216,29 +2161,11 @@ button.date-button input.inputs {
         padding: 0 5px;
     }
 }
+
 /* MOBILE */
 @media only screen and (max-width: 767px) {
-    /* __________________________ OTHER PAGES ___________________________\*/
-    /* ABOUT PAGE */
     main .container-main section.members .grid .member {
         width: 50%;
-    }
-    main .container-main section.form .form-container .campo.add-file .select  {
-        width: 92%;
-    }
-    main .container-main section.form .form-container .campo input, main .container-main section.form .form-container .campo input:focus-visible, main .container-main section.form .form-container .campo textarea {
-        width: 92%;
-    }
-    main .container-main section.form .form-container .campo input#phone {
-        width: 84%;
-    }
-}
-
-/* SMALL MOBILE */
-@media only screen and (max-width: 669px) {
-    /* ABOUT PAGE */
-    main .container-main section.form .form-container .campo input#phone {
-        width: 90%;
     }
 }
 
