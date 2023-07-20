@@ -3,8 +3,8 @@
     "locale": "es_ES",
     "pages": {
         "index":          { "url": "home",                  "title": "Inicio",                 "description": "" },
-        "rooms": { "url": "pisos-compartidos",     "title": "Localizaciones",         "description": "" },
-        "flats": { "url": "apartamentos-privados", "title": "Localizaciones",         "description": "" },
+        "rooms":          { "url": "pisos-compartidos",     "title": "Localizaciones",         "description": "" },
+        "flats":          { "url": "apartamentos-privados", "title": "Localizaciones",         "description": "" },
         "residences":     { "url": "residencias",           "title": "Residencias",            "description": "" },
         "about":          { "url": "conocenos",             "title": "Conócenos",              "description": "" },
         "advantages":     { "url": "ventajas",              "title": "Ventajas",               "description": "" },
@@ -13,6 +13,7 @@
         "contact":        { "url": "contacto",              "title": "Contacto",               "description": "" },
         "privacy":        { "url": "politica-privacidad",   "title": "Política de privacidad", "description": "" },
         "legal":          { "url": "aviso-legal",           "title": "Aviso legal",            "description": "" },
-        "datasecurity":  { "url": "seguridad-datos",       "title": "Seguridad y datos",      "description": "" }
+        "datasecurity":   { "url": "seguridad-datos",       "title": "Seguridad y datos",      "description": "" },
+        "book":           { "url": "book-now",              "title": "Book now",               "description": "" }
     }
 }

@@ -13,6 +13,7 @@
         "contact":        { "url": "contact",            "title": "Contact",           "description": "" },
         "privacy":        { "url": "privacy",            "title": "Privacy policies",  "description": "" },
         "legal":          { "url": "aviso-legal",        "title": "Legal",             "description": "" },
-        "datasecurity":  { "url": "datasecurity",        "title": "Data security",     "description": "" }
+        "datasecurity":   { "url": "datasecurity",       "title": "Data security",     "description": "" },
+        "book":           { "url": "book-now",           "title": "Book now",          "description": "" }
     }
 }

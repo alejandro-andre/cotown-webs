@@ -79,9 +79,9 @@
 <script src="/assets/js/splide.min.js"></script>
 <script src="/assets/js/splide-extension-auto-scroll.min.js"></script>
 
-<!-- Bot
+<!-- Tags
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<script client-url="https://cotown.botslovers.com" src="https://cotown.botslovers.com/theme/widget/js/loadwidget.js?v=2.0.0" defer></script>
+{% set script %}{% literal texts, 'tag-other', L %}{% endset %}<script>{{ script | jsmin | safe }}
 
 <!-- Cookies
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
