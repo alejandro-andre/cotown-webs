@@ -90,40 +90,42 @@ tags: page
         </div>
       </section>
 
-      <section class="form row">
+      <section class="form">
 
         {% literal texts, 'about-unete', L, true %}
 
+        <form id="form" onsubmit="post(event)">
         <div class="form-container pure-g">
 
-          <div class="campo pure-u-1 pure-u-lg-11-24">
+          <div class="pure-u-1 pure-u-md-1-2">
+            <div class="campo">
             <label class="label">{% literal texts, 'form-nombre', L %}</label>
-            <input class="input" type="name" id="name" name="name">
+            <input class="input" type="name" id="firstName" name="firstName" placeholder="{% literal texts, 'form-nombre', L %}" required>
+            </div>
           </div>
-
-          <div class="campo pure-u-1 pure-u-lg-11-24">
+          <div class="pure-u-1 pure-u-md-1-2">
+            <div class="campo">
             <label class="label">{% literal texts, 'form-apellidos', L %}</label>
-            <input class="input" type="name" id="name" name="name">
+            <input class="input" type="name" id="lastName" name="lastName" placeholder="{% literal texts, 'form-apellidos', L %}" required>
+            </div>
           </div>
 
-          <div class="campo pure-u-1 pure-u-lg-11-24">
+          <div class="pure-u-1 pure-u-md-1-2">
+            <div class="campo">
             <label class="label">{% literal texts, 'form-email', L %}</label>
-            <input class="input" type="email" id="email" name="email">
+            <input class="input" type="email" id="email" name="email" placeholder="{% literal texts, 'form-email', L %}" required>
+            </div>
+          </div>
+          <div class="pure-u-1 pure-u-md-1-2">
+            <div class="campo">
+            <label class="label">{% literal texts, 'form-telefono', L %}</label>
+            <input class="input" type="text" id="phone" name="phone" placeholder="{% literal texts, 'form-telefono', L %}">
+            </div>
           </div>
 
-          <div class="campo number pure-u-1 pure-u-lg-11-24">
-            <div class="prefix">
-              <label class="label pure-u-1">{% literal texts, 'form-prefijo', L %}</label>
-              <select class="select pure-u-1" type="select" id="code" name="code">
-                <option>+34</option>
-                <option>+34</option>
-                <option>+34</option>
-              </select>
-            </div>
-              <div class="num">
-              <label class="label pure-u-1">{% literal texts, 'form-telefono', L %}</label>
-              <input class="input pure-u-1" type="phone" id="phone" name="phone">
-            </div>
+          <div class="campo coment pure-u-1">
+            <label class="label">{% literal texts, 'form-mensaje', L %}</label>
+            <textarea type="textarea" id="181" name="181" rows="5" cols="40"></textarea>
           </div>
 
           <div class="campo add-file">
@@ -153,10 +155,31 @@ tags: page
             </div>
           </div>
 
-          <button class="btn-secondary">{% literal texts, 'form-enviar-solicitud', L %}</button>
+          <div class="pure-u-1">
+            <div class="campo checkbox">
+              <input id="accept" name="accept" type="checkbox" required/>
+              <label for="accept" class="pure-checkbox">{% literal texts, 'form-rgpd', L %}
+              </label>
+            </div>
+          </div>
+
+          <div id="div-ok" class="text-ok pure-u-1">
+            {% literal texts, 'contact-ok', L, true %}
+          </div>
+
+          <div id="div-send" class="pure-u-1">
+            <input type="hidden" id="listid" name="listid" value="31"/>
+            <button class="btn-secondary">{% literal texts, 'form-enviar', L %}</button>
+            <div id="overlay">
+              <div id="spinner"></div>
+            </div>
+          </div>
 
         </div>
+        </form>
+
       </section>
+
     </div>
 
   </div>
@@ -177,5 +200,6 @@ new Splide('.splide-banner', {
   pauseOnFocus: false,
   autoScroll: { speed: 1 }
 }).mount( window.splide.Extensions );
+{% include "shared/js/ac.js" %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

@@ -711,27 +711,30 @@ main .container-main section.form .form-container .campo input {
     box-sizing: border-box;
 }
 main .container-main section.form .form-container .campo input,
-main .container-main section.form .form-container .campo select,
-main .container-main section.form .form-container .campo textarea  {
+main .container-main section.form .form-container .campo select  {
     color: var(--black);
     height: 52px;
     width: 100%;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 18px;
+    padding: 8px 16px;
+}
+main .container-main section.form .form-container .campo textarea {
+    color: var(--black);
+    width: 97%;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 1.5px solid #d1d1d1;
+    border-radius: 8px;
+    outline-offset: 0;
+    outline: -webkit-focus-ring-color auto 0;
 }
 main .container-main section.form .form-container .campo select {
     height: 52px;
     line-height: 150%;
     padding-left: 16px;
     color: var(--grey-dark);
-}
-main .container-main section.form .form-container .campo textarea {
-    width: 100%;
-    border: 1.5px solid #d1d1d1;
-    border-radius: 8px;
-    outline-offset: 0;
-    outline: -webkit-focus-ring-color auto 0;
-    font-size: 20px;
 }
 main .container-main section.form select {
     -webkit-appearance: none;
@@ -780,7 +783,6 @@ main .container-main section.form .form-container .campo.add-file {
 
 main .container-main section.form .form-container .campo.add-file .select  {
     display: block;
-    width: 98%;
     position: relative;
     height: 54px;
     background-color: var(--white);
@@ -791,11 +793,9 @@ main .container-main section.form .form-container .campo.add-file .select  {
     padding: 0;
 }
 main .container-main section.form .form-container .campo.add-file .select .selected  {
-    width: 99%;
     position: relative;
     display: block;
     height: 54px;
-    top: -6px;
 }
 main .container-main section.form .form-container .campo.add-file .select label[for="selected"] {
     font-size: 14px;
@@ -826,7 +826,7 @@ main .container-main section.form .form-container .campo.add-file .select .selec
     width: 150px;
     text-align: center;
     position: absolute;
-    left: calc(100% - 180px);
+    left: calc(100% - 190px);
     top: 0;
     margin: 0;
     border-radius: 10px;
@@ -1405,12 +1405,6 @@ button.date-button input.inputs {
         font-size: 28px;
         line-height: 26px;
     }
-    main .container-main section.form .form-container .campo.number .num input {
-        width: 85%;
-    }
-    main .container-main section.form .form-container .campo input, main .container-main section.form .form-container .campo input:focus-visible, main .container-main section.form .form-container .campo textarea {
-        font-size: 18px;
-    }
 
     /* __________________________ FOOTER DESKTOP SMALL ___________________________*/
     footer section.container-footer {
@@ -1950,6 +1944,9 @@ button.date-button input.inputs {
     main .container-main section.form .form-container .campo textarea  {
         font-size: 16px;
     }
+    main .container-main section.form .form-container .campo textarea {
+        width: 94%;
+    }
 
     /* CONTACTO TABLET Y MOBILE  ___________________________\*/
     .first-contact {
@@ -1993,9 +1990,6 @@ button.date-button input.inputs {
         font-weight: bold;
         text-decoration-line: underline;
         font-size: 16px;
-    }
-    main .container-main section.form .form-container .campo.add-file .select  {
-        width: 94%;
     }
     main .container-main section.form .form-container button.btn-secondary {
         font-size: 16px;

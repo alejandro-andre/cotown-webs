@@ -14,6 +14,7 @@
         "privacy":        { "url": "politica-privacidad",   "title": "Política de privacidad", "description": "" },
         "legal":          { "url": "aviso-legal",           "title": "Aviso legal",            "description": "" },
         "datasecurity":   { "url": "seguridad-datos",       "title": "Seguridad y datos",      "description": "" },
-        "book":           { "url": "book-now",              "title": "Book now",               "description": "" }
+        "book":           { "url": "reservar",              "title": "Reservar",               "description": "" },
+        "visit":          { "url": "agendar-visita",        "title": "Agendar visita",         "description": "" }
     }
 }

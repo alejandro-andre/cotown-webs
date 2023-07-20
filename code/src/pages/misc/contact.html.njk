@@ -82,39 +82,66 @@ tags: page
       <h2 class="title">
         {% literal texts, 'contact-contactanos', L %}
       </h2>
-
+      
+      <form id="form" onsubmit="post(event)">
       <div class="form-container pure-g">
-        <div class="campo pure-u-1 pure-u-lg-1-2">
+
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
           <label class="label">{% literal texts, 'form-nombre', L %}</label>
-          <input class="input" type="name" id="name" name="name">
+          <input class="input" type="name" id="firstName" name="firstName" placeholder="{% literal texts, 'form-nombre', L %}" required>
+          </div>
         </div>
-        <div class="campo pure-u-1 pure-u-lg-1-2">
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
           <label class="label">{% literal texts, 'form-apellidos', L %}</label>
-          <input class="input" type="name" id="name" name="name">
+          <input class="input" type="name" id="lastName" name="lastName" placeholder="{% literal texts, 'form-apellidos', L %}" required>
+          </div>
         </div>
-        <div class="campo pure-u-1 pure-u-lg-1-2">
+
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
           <label class="label">{% literal texts, 'form-email', L %}</label>
-          <input class="input" type="email" id="email" name="email">
+          <input class="input" type="email" id="email" name="email" placeholder="{% literal texts, 'form-email', L %}" required>
+          </div>
         </div>
-        <div class="campo pure-u-1 pure-u-lg-1-2">
-          <label class="label">{% literal texts, 'form-empresa', L %}</label>
-          <input class="input" type="company" id="company" name="company">
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
+          <label class="label">{% literal texts, 'form-telefono', L %}</label>
+          <input class="input" type="text" id="phone" name="phone" placeholder="{% literal texts, 'form-telefono', L %}">
+          </div>
         </div>
+
         <div class="campo coment pure-u-1">
           <label class="label">{% literal texts, 'form-mensaje', L %}</label>
-          <textarea type="textarea" id="textarea" name="textarea" rows="4" cols="50">
-          </textarea>
+          <textarea type="textarea" id="181" name="181" rows="5" cols="40"></textarea>
         </div>
 
-        <div class="text-ok">
+        <div class="pure-u-1">
+          <div class="campo checkbox">
+            <input id="accept" name="accept" type="checkbox" required/>
+            <label for="accept" class="pure-checkbox">{% literal texts, 'form-rgpd', L %}
+            </label>
+          </div>
+        </div>
+
+        <div id="div-ok" class="text-ok pure-u-1">
           {% literal texts, 'contact-ok', L, true %}
         </div>
 
-        <button class="btn-secondary">{% literal texts, 'form-enviar', L %}</button>
+        <div id="div-send" class="pure-u-1">
+          <input type="hidden" id="listid" name="listid" value="29"/>
+          <button class="btn-secondary">{% literal texts, 'form-enviar', L %}</button>
+          <div id="overlay">
+            <div id="spinner"></div>
+          </div>
+        </div>
 
       </div>
+      </form>
 
     </section>
+
   </div>
 </main>
 
@@ -128,5 +155,6 @@ ln = {{o.Lat_lon.slice(1,-1).split(',')[1]}};
 mp = createMap("map-{{o.id}}", lt, ln, 13);
 putMarker(mp, lt, ln);
 {%-endfor %}
+{% include "shared/js/ac.js" %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
