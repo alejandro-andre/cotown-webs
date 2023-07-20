@@ -143,11 +143,11 @@ tags: page
         </div>
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
-          <label class="label">{% literal texts, 'form-tipo-plaza', L %}</label>
+          <label class="label">{% literal texts, 'form-tipologia', L %}</label>
           <select class="select" type="select" id="99" name="99" required>
-            <option value="" disabled selected>{% literal texts, 'form-tipo-plaza', L %}</option>
+            <option value="" disabled selected>{% literal texts, 'form-tipologia', L %}</option>
             {% for k, v in place_types %}
-            <option value="{{v | translate('Name', L)}}">{{v | translate('Name', L)}}</option>
+            <option value="{{v | translate('Name', L)}}">{{v.Code}} - {{v | translate('Name', L)}}</option>
             {% endfor %}
           </select>
           </div>
@@ -156,7 +156,7 @@ tags: page
         <div class="pure-u-1">
           <div class="campo checkbox">
             <input id="accept" name="accept" type="checkbox" required/>
-            <label for="accept" class="pure-checkbox">{% literal texts, 'form-rgpd', L, true %}
+            <label for="accept" class="pure-checkbox">{% literal texts, 'form-rgpd', L %}
             </label>
           </div>
         </div>
@@ -177,7 +177,6 @@ tags: page
       </form>
 
     </section>
-
   </div>
 </main>
 
