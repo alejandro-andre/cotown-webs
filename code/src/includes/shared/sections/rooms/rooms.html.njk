@@ -99,10 +99,10 @@
 
       <!-- Extra -->
       <div class="extra">
-        {% set show = false %}
+        {% set eshow = false %}
         {% for a in amenities | find('id', 'eq', building.id) | find('Place_type', 'eq', p.Code) %}
-        {% if not show %}
-        {% set show = true %}
+        {% if not eshow %}
+        {% set eshow = true %}
         <div class="title">
           <p>Servicios extra</p>
         </div>

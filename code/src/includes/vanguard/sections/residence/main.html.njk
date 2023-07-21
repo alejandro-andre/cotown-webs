@@ -15,12 +15,15 @@
     <!-- Rooms -->
     <section class="rooms pure-u-1">
       <section class="all-rooms pure-u-1">
+
         {% set type = 'I' %}
-        {% set typetitle = 'HABITACIONES INDIVIDUALES' %}
-        {% include 'vanguard/sections/residence/rooms.html.njk' %}
+        {% set typetitle %}{% literal texts, 'rooms-individuales', L %}{% endset %}
+        {% include 'shared/sections/rooms/rooms.html.njk' %}
+
         {% set type = 'D' %}
-        {% set typetitle = 'HABITACIONES COMPARTIDAS' %}
-        {% include 'vanguard/sections/residence/rooms.html.njk' %}
+        {% set typetitle %}{% literal texts, 'rooms-compartidas', L %}{% endset %}
+        {% include 'shared/sections/rooms/rooms.html.njk' %}
+
       </section>
     </section>
 

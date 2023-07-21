@@ -73,7 +73,7 @@ module.exports = (eleventyConfig) => {
       return '';
     let options = {
       html: true,
-      breaks: true,
+      breaks: false,
       linkify: true
     };
     const md = new MarkdownIt(options);
