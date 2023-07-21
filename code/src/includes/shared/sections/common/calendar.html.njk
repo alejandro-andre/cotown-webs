@@ -1,0 +1,300 @@
+{% block head %}
+{% set css %}{% include "shared/css/calendar.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% endblock %}
+
+{% if L == 'es' %}
+{% set days = ['L','M','X','J','V','S','D'] %}
+{% else %}
+{% set days = ['Mo','Tu','We','Th','Fr','Sa','Su'] %}
+{% endif %}
+
+<div id="calendar" class="calendar-modal">
+	<div class="calendar-modal-content">
+
+    <div class="calendar-container">
+    <section class="dates-selector">
+      
+      <div class="mobile">
+        <div class="close" onclick="close_calendar();">
+          <em class="icon-close"></em>
+        </div>
+        <div class="clean-dates">
+          <a onclick="empty();">{% literal texts, 'cal-borrar-fechas', L %}</a>
+        </div>
+      </div>
+      
+      <div class="selector-header">
+
+        <div class="left">
+          <h2>{% literal texts, 'cal-seleccionar-fechas', L %}</h2>
+          <p>{% literal texts, 'cal-estancia-minima', L %}</p>
+        </div>        
+
+        <div class="right">
+          <div class="calendar">
+            <div class="reservas_form_div">           
+              <form id="reservas_form" name="form_multi" method="GET">
+                <button class="date-button">
+                <label class="labels">{% literal texts, 'dates-entrada', L %}</label>
+                <input type="text" id="in" class="inputs" name="in"/>
+                </button>   
+                <button class="date-button">
+                <label class="labels">{% literal texts, 'dates-salida', L %}</label>
+                <input type="text" id="out" class="inputs" name="out"/>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="selector-main">
+
+        <div class="left">
+
+          <table id="daysleft" summary="a calendar">
+            <thead class="mobile">
+              <tr>
+                {% for d in days %}
+                <th scope="col">{{d}}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <caption>
+              <div class="calendar-header">
+                <a class="icon-left" rel="prev" onclick="back();">
+                  <em class="icon-corchete-left"></em>
+                </a>
+                <p id="monthleft"></p>
+              </div>
+            </caption>
+            <thead class="desktop">
+              <tr>
+                {% for d in days %}
+                <th scope="col">{{d}}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+          <!-- TODO
+          <div class="no-dates">
+            <p>¿No encuentras lo que buscas?</p>
+            <a>Avísame cuando tengas disponibilidad</a>
+          </div>
+          -->
+          
+        </div>
+        
+        <div class="right">
+
+          <table id="daysright" summary="a calendar">
+            <caption>
+              <div class="calendar-header">						
+                <p id="monthright"></p>
+                <a class="icon-right" rel="next" onclick="forward();">
+                  <em class="icon-corchete-right"></em>
+                </a>
+              </div>
+            </caption>
+            <thead class="desktop">
+              <tr>
+                {% for d in days %}
+                <th scope="col">{{d}}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+          <div class="buttons">
+            <a onclick="empty();">{% literal texts, 'cal-borrar-fechas', L %}</a>
+            <button id="ok" class="btn-secondary" onclick="close_calendar();">{% literal texts, 'cal-cerrar', L %}</button>
+          </div>
+
+          <!-- TODO
+          <div class="sticky-mobile">
+            <div class="left">
+              <p>¿No encuentras lo que buscas?</p>
+              <a>Avísame cuando tengas disponibilidad</a>
+            </div>
+            <div class="right">
+              <button class="btn-primary">Aplicar</button>
+            </div>
+          </div>
+          -->
+
+        </div>
+      
+      </div>
+
+    </section>
+    </div>
+
+	</div>
+</div>
+
+{% block footer %}
+<script>
+function internal_date(yy, mm, dd) {
+  return yy + '-' + mm.toString().padStart(2, '0') + '-' + dd.toString().padStart(2, '0');
+}
+
+function format_date(str) {
+  if (idioma == 'es-ES')
+    return str.slice(8,10) + '/' + str.slice(5,7) + '/' + str.slice(0,4);
+  return str.slice(5,7) + '/' + str.slice(8,10) + '/' + str.slice(0,4);
+}
+
+// Nombre del mes, en el idioma deseado
+function month(mes) {
+  var d = new Date(1965, mes);
+  var text = d.toLocaleString(idioma, { month: 'long' });
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+// Pinta los dias de un mes
+function pm(cal, yy, mm) {
+
+  // Tabla
+  var c = document.querySelector('#days' + cal + ' tbody');
+  c.innerHTML = '';
+
+  // Nombre del mes
+  var name = document.querySelector('#month' + cal);
+  name.textContent = month(mm, 'es-ES') + ' ' + yy;
+
+  // Rango de días
+  var ud = new Date(yy, mm + 1, 0).getDate(); // Obtiene el último día del mes
+  var pd = new Date(yy, mm, 1).getDay();      // Obtiene el primer día del mes
+  pd = (pd === 0 ? 7 : pd) - 1;               // Ajusta el primer día de la semana a Lunes
+
+  // Crea la cuadrícula del calendario
+  var dd = 1;
+  for (var y = 0; y < 6; y++) {
+    var rowHTML = document.createElement('tr');
+    for (var x = 0; x < 7; x++) {
+      var colHTML = document.createElement('td');
+      if (y === 0 && x < pd || dd > ud) {
+        colHTML.textContent = '';
+      } else {
+        colHTML.textContent = dd;
+        colHTML.id = internal_date(yy, mm + 1, dd);
+        if (colHTML.id > itoday) {
+          colHTML.classList.add('hover');
+          colHTML.addEventListener('click', select);
+          if (colHTML.id == fin.dataset.id || colHTML.id == fout.dataset.id) {
+            colHTML.classList.add('selected');
+          }
+          if (colHTML.id > fin.dataset.id && colHTML.id < fout.dataset.id) {
+            colHTML.classList.add('inside-selected');
+          }
+        }
+        dd++;
+      }
+      rowHTML.appendChild(colHTML);
+    }
+    c.appendChild(rowHTML);
+  }
+}
+
+// Pinta ambos meses
+function cal(date) {
+  yy = Math.floor(date / 12);
+  mm = date % 12
+  pm('left', yy, mm)
+
+  yy = Math.floor((date + 1) / 12);
+  mm = (date + 1) % 12
+  pm('right', yy, mm)
+}
+
+// Mes anterior
+function back() {
+  if (ftoday > fnow) {
+    ftoday -= 1;
+    cal(ftoday);
+  }
+}
+
+// Mes posterior
+function forward() {
+  ftoday += 1;
+  cal(ftoday);
+}
+
+// Borrar fechas
+function empty() {
+  fin.value = '';
+  fout.value = '';
+  fin.dataset.id = undefined;
+  fout.dataset.id = undefined;
+  ftoday = fnow
+  cal(ftoday);
+  return true;
+}
+
+// Selecciona fecha
+function select(event) {
+  event.preventDefault();
+  date = event.target.id;
+  if (!flag || date < fin.dataset.id) {
+    fin.dataset.id = event.target.id;
+    fout.dataset.id = event.target.id;
+    fin.value = format_date(event.target.id);
+    document.getElementById("ok").innerHTML = "{% literal texts, 'cal-cerrar', L %}";
+    fout.value = '';
+    flag = true;
+  } else {
+    fout.dataset.id = event.target.id;
+    fout.value = format_date(event.target.id);
+    document.getElementById("ok").innerHTML = "{% literal texts, 'cal-seleccionar', L %}";
+    flag = false;
+  }
+  cal(ftoday);
+  return true;
+}
+
+function open_calendar(field) {
+  result = document.getElementById(field);
+  calendar = document.getElementById("calendar")
+  calendar.style.display = "block";
+}
+
+function close_calendar(event) {
+  result.value = fin.value + ' - ' + fout.value;
+  localStorage.setItem('dates', result.value);
+  localStorage.setItem('checkin', fin.dataset.id);
+  localStorage.setItem('checkout', fout.dataset.id);
+  calendar.style.display = "none";
+}
+
+calendar = null;
+
+// Today
+fnow   = new Date().getFullYear() * 12 + new Date().getMonth();
+itoday = internal_date(new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDay())
+ftoday = fnow
+
+// Params
+{% if L == 'es' %}
+idioma = 'es-ES';
+{% else %}
+idioma = 'en-US';
+{% endif %}
+fdesde = undefined;
+fhasta = undefined;
+result = undefined;
+flag = false;
+
+// Fields
+const fin = document.getElementById('in');
+const fout =  document.getElementById('out');
+
+cal(ftoday);
+</script>
+{% endblock %}

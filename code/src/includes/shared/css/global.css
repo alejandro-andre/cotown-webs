@@ -21,6 +21,20 @@ button.btn-primary a {
 mark {
     background-color: var(--primary-underline)!important;
 }
+select option:disabled {
+    color: var(--grey-light);
+}
+/*
+::placeholder {
+    color: var(--grey-light);
+}
+:-ms-input-placeholder {
+    color: var(--grey-light);
+}
+::-ms-input-placeholder {
+    color: var(--grey-light);
+}
+*/
 
 /* RESPONSIVE FONTS */
 @media only screen and (min-width: 1600px) {

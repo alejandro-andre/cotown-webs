@@ -87,7 +87,7 @@ tags: page
             {% endfor %}
             {% else %}
             {% for c in countries | sort(false, false, 'Name_en') %}
-              <option value="{{c.Name_en}}">{{c.Name_en}}</option>
+              <option value="{{c.Name}}">{{c.Name_en}}</option>
             {% endfor %}
             {% endif %}
           </select>
@@ -113,7 +113,7 @@ tags: page
           <select class="select" type="select" id="98" name="98" required>
             <option value="" disabled selected>{% literal texts, 'form-motivo', L %}</option>
             {% for r in reasons %}
-              <option value="{{r | translate('Name', L)}}">{{r | translate('Name', L)}}</option>
+              <option value="{{r.Name}}">{{r | translate('Name', L)}}</option>
             {% endfor %}
           </select>
           </div>
@@ -124,7 +124,7 @@ tags: page
           <select class="select" type="select" id="101" name="101" required onchange="buildings();">
             <option value="" disabled selected>{% literal texts, 'form-ciudad', L %}</option>
             {% for l in locations %}
-              <option value="{{l | translate('Name', L)}}">{{l | translate('Name', L)}}</option>
+              <option value="{{l.Name}}">{{l | translate('Name', L)}}</option>
             {% endfor %}
           </select>
           </div>
@@ -144,7 +144,7 @@ tags: page
           <select class="select" type="select" id="99" name="99" required>
             <option value="" disabled selected>{% literal texts, 'form-tipologia', L %}</option>
             {% for k, v in place_types %}
-            <option value="{{v | translate('Name', L)}}">{{v | translate('Name', L)}}</option>
+            <option value="{{v.Code}}">{{v | translate('Name', L)}}</option>
             {% endfor %}
           </select>
           </div>
@@ -180,10 +180,19 @@ tags: page
 
 {% block footer %}
 {% set script %}
+console.log(localStorage.getItem('city'))
+console.log(localStorage.getItem('type'))
+console.log(localStorage.getItem('dates'))
+console.log(localStorage.getItem('checkin'))
+console.log(localStorage.getItem('checkout'))
+document.getElementById('101').value = localStorage.getItem('city') || '';
+document.getElementById('96').value = localStorage.getItem('checkin') || '';
+document.getElementById('97').value = localStorage.getItem('checkout') || '';
+
 // Buildings list
 var opts = [
 {% for b in buildings-%}
-{city:'{{b.District.Location|translate('Name',L)}}',building:'{{b.Name}}'},
+{city:'{{b.District.Location.Name}}',building:'{{b.Name}}'},
 {% endfor-%}
 ];
 function buildings(event) {

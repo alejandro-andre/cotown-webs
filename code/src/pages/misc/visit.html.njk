@@ -71,7 +71,7 @@ tags: page
           <select class="select" type="select" id="101" name="101" required onchange="buildings();">
             <option value="" disabled selected>{% literal texts, 'form-ciudad', L %}</option>
             {% for l in locations %}
-              <option value="{{l | translate('Name', L)}}">{{l | translate('Name', L)}}</option>
+              <option value="{{l.Name}}">{{l | translate('Name', L)}}</option>
             {% endfor %}
           </select>
           </div>
@@ -125,7 +125,7 @@ tags: page
 // Buildings list
 var opts = [
 {% for b in buildings-%}
-{city:'{{b.District.Location|translate('Name',L)}}',building:'{{b.Name}}'},
+{city:'{{b.District.Location.Name}}',building:'{{b.Name}}'},
 {% endfor-%}
 ];
 function buildings(event) {
