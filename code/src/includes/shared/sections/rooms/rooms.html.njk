@@ -81,13 +81,13 @@
       <!-- Share -->
       <div class="share">
         <div class="title">
-            <p>Quiero compartir piso con:</p>
+            <p>{% literal texts, 'rooms-quiero-compartir', L %}:</p>
         </div>
         {% for f in p.Flat_types %}
         <div class="sharing">
           <div class="left">
-            <label for="checkbox-radio-option" class="pure-radio">
-                <input type="radio" id="checkbox-radio-option" name="optionsRadios" value="option"/>{{flat_types[f.Code] | translate('Name', L)}}
+            <label for="radio" class="pure-radio">
+                <input type="radio" id="radio" name="radio" value="{{p.Code}}"/>{{flat_types[f.Code] | translate('Name', L)}}
             </label>
           </div>
           <div class="right">
@@ -110,7 +110,7 @@
         <div class="extras">
           <div class="left">
             <label for="default-remember" class="pure-checkbox">
-              <input type="checkbox" id="default-Kitchenette" value="option"/>
+              <input type="checkbox" id="default-Kitchenette" value="{{a.Name}}"/>
               {{a | translate('Name', L)}}
             </label>
           </div>
@@ -125,8 +125,12 @@
     </form>
 
     <div class="buttons pure-u-1">
-      <button class="btn-secondary">Reservar</button>
-      <button class="btn-primary">Agendar Visita</button>
+      <a href="{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
+        <button class="btn-secondary">{% literal texts, 'button-reservar', L %}</button>
+      </a>
+        <a href="{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html">
+      <button class="btn-primary">{% literal texts, 'button-visita', L %}</button>
+      </a>
     </div>
 
   </div>
@@ -134,13 +138,13 @@
   <!-- TEXT EXPANSION -->
   <div class="description text pure-u-23-24">
       <div class="expansion pure-u-1">
-        <p>Información adicional</p>
+        <p>{% literal texts, 'informacion-adicional-titulo', L %}</p>
         <input type="checkbox" class="tab pure-u-1-2" id="tab1" tabindex="0"/>
         <label name="tab" for="tab1" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
           <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
         </label>
         <div class="content pure-u-1">
-          <p>Se deberá abonar en único pago, una fianza de 900€ o el equivalente a una mensualidad si la renta supera los 900€. Este depósito será devuelto en un plazo máximo de 30 días posterior a la fecha de salida siempre y cuando no haya habido ningún desperfecto en el apartamento. ​Se deberán abonar en un único pago, 375€ en calidad de gastos de gestión de contrato. ​Si necesitas más información acerca de las condiciones de reserva, puedes hacerlo mediante este enlace</p>
+          <p>{% literal texts, 'informacion-adicional-texto', L %}</p>
         </div>
       </div>
   </div>

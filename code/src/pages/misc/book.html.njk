@@ -133,7 +133,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-edificio', L %}</label>
-          <select class="select" type="select" id="100" name="100" required>
+          <select class="select" type="select" id="100" name="100" onchange="localStorage.setItem('building', this.value);" required>
             <option value="" disabled selected>{% literal texts, 'form-edificio', L %}</option>
           </select>
           </div>
@@ -180,15 +180,6 @@ tags: page
 
 {% block footer %}
 {% set script %}
-console.log(localStorage.getItem('city'))
-console.log(localStorage.getItem('type'))
-console.log(localStorage.getItem('dates'))
-console.log(localStorage.getItem('checkin'))
-console.log(localStorage.getItem('checkout'))
-document.getElementById('101').value = localStorage.getItem('city') || '';
-document.getElementById('96').value = localStorage.getItem('checkin') || '';
-document.getElementById('97').value = localStorage.getItem('checkout') || '';
-
 // Buildings list
 var opts = [
 {% for b in buildings-%}
@@ -196,9 +187,15 @@ var opts = [
 {% endfor-%}
 ];
 function buildings(event) {
-  city = document.getElementById("101").value;
+  // Empty list
   list = document.getElementById("100");
   list.innerHTML = "";
+
+  // Get city
+  city = document.getElementById("101").value;
+  localStorage.setItem('city', city);
+
+  // Fill building listid
   for (var i = 0; i < opts.length; i++) {
     if (opts[i].city == '' || opts[i].city == city) {
       var opt = document.createElement("option");
@@ -211,6 +208,13 @@ function buildings(event) {
     }
   }
 }
+
+// Load
+document.getElementById('96').value  = localStorage.getItem('checkin');
+document.getElementById('97').value  = localStorage.getItem('checkout');
+document.getElementById('101').value = localStorage.getItem('city');
+buildings(null);
+document.getElementById('100').value = localStorage.getItem('building');
 {% include "shared/js/ac.js" %}
 {% endset %}<script>{{ script | safe }}</script>
 {% endblock %}

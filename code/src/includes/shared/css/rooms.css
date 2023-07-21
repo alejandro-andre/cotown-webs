@@ -260,10 +260,15 @@
   cursor: pointer;
   margin-top: 1em;
 }
-.right-data .buttons button.btn-secondary, .right-data .buttons button.btn-primary {
+.right-data .buttons a {
+  width: 100%;
+}
+.right-data .buttons button.btn-secondary, 
+.right-data .buttons button.btn-primary {
   width: 100%;
   height: 50px;
   justify-content: center;
+  text-transform: none;
 }
 
 .card-room .description.text {
