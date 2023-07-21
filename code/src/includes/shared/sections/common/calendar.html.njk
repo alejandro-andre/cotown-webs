@@ -254,6 +254,7 @@ function select(event) {
     fout.value = format_date(event.target.id);
     document.getElementById("ok").innerHTML = "{% literal texts, 'cal-seleccionar', L %}";
     flag = false;
+    close_calendar()
   }
   cal(ftoday);
   return true;
@@ -266,6 +267,7 @@ function open_calendar(field) {
 }
 
 function close_calendar(event) {
+  if (fout.value == '') fin.value = '';
   result.value = fin.value + ' - ' + fout.value;
   localStorage.setItem('dates', result.value);
   localStorage.setItem('checkin', fin.dataset.id);
@@ -277,7 +279,7 @@ calendar = null;
 
 // Today
 fnow   = new Date().getFullYear() * 12 + new Date().getMonth();
-itoday = internal_date(new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDay())
+itoday = internal_date(new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate())
 ftoday = fnow
 
 // Params
@@ -295,6 +297,6 @@ flag = false;
 const fin = document.getElementById('in');
 const fout =  document.getElementById('out');
 
-cal(ftoday);
+empty(ftoday);
 </script>
 {% endblock %}

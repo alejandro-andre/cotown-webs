@@ -332,8 +332,6 @@ button.date-button input:visited  {
     .calendar-container .dates-selector .mobile .close .icon-close {
         font-size: 20px;
     } 
-    .calendar-container .dates-selector .mobile .clean-dates {
-    }
     .calendar-container .dates-selector .mobile .clean-dates a {
         color: var(--black);
         font-size: 16px;
@@ -360,6 +358,10 @@ button.date-button input:visited  {
     .calendar-container .dates-selector .selector-header .reservas_form_div {
         width: fit-content;
     }
+    .calendar-container .dates-selector .selector-header .right {
+        display: none;
+    }
+
     #reservas_form {
         width: fit-conent;
         display: flex;
@@ -376,9 +378,6 @@ button.date-button input:visited  {
         width: fit-content;
         border: 0px solid var(--grey-light);
         padding: 10px 0;       
-    }
-    button.date-button label.labels {
-        display: none;
     }
     button.date-button input.inputs {	 
         width: fit-content;   

@@ -77,9 +77,10 @@
 
 {% block footer %}
 {% set script %}
-document.getElementById('type').value = localStorage.getItem('type') || '';
-document.getElementById('city').value = localStorage.getItem('city') || '';
-document.getElementById('dates').value = localStorage.getItem('dates') || '';
+document.getElementById('type').value  = localStorage.getItem('type');
+document.getElementById('city').value  = localStorage.getItem('city');
+document.getElementById('dates').value = localStorage.getItem('dates');
+document.getElementById('in').value    = localStorage.getItem('checkin');
+document.getElementById('out').value   = localStorage.getItem('checkout');
 {% endset %}<script>{{ script | safe }}</script>
 {% endblock %}
-
