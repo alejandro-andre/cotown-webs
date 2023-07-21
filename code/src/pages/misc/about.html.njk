@@ -34,7 +34,8 @@ tags: page
         <div class="img pure-u-1 pure-u-lg-10-24">
           {% image
             constants.SERVER + "/wopi/files/Marketing/Media/" + images['conocenos'].id +"/Image/contents?access_token=" + token,
-            title, title, "card-img-top", [500], ""
+            title, title, "card-img-top", [512, 768, 1024], 
+            "(max-width: 512px) 512px, (max-width: 768px) 768px, (max-width: 1023px) 1024px, (max-width: 1279px) 512px, 768px"
           %}
         </div>
 
