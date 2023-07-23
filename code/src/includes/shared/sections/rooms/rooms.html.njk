@@ -87,7 +87,8 @@
         <div class="sharing">
           <div class="left">
             <label for="radio" class="pure-radio">
-                <input type="radio" id="radio" name="radio" value="{{p.Code}}"/>{{flat_types[f.Code] | translate('Name', L)}}
+              <input type="radio" id="radio-{{p.Code}}" name="radio-{{p.Code}}" value="{{p.Code}}"{% if loop.index == 1%} checked{% endif %}/>
+              {{flat_types[f.Code] | translate('Name', L)}}
             </label>
           </div>
           <div class="right">
@@ -109,8 +110,8 @@
         {% endif %}
         <div class="extras">
           <div class="left">
-            <label for="default-remember" class="pure-checkbox">
-              <input type="checkbox" id="default-Kitchenette" value="{{a.Name}}"/>
+            <label for="extra_{{a.Name}}" class="pure-checkbox">
+              <input type="checkbox" id="extra_{{a.Name}}" name="extra_{{a.Name}}" value="{{a.Name}}"/>
               {{a | translate('Name', L)}}
             </label>
           </div>
@@ -125,17 +126,13 @@
     </form>
 
     <div class="buttons pure-u-1">
-      <a href="{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
-        <button class="btn-secondary">{% literal texts, 'button-reservar', L %}</button>
-      </a>
-        <a href="{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html">
-      <button class="btn-primary">{% literal texts, 'button-visita', L %}</button>
-      </a>
+      <button class="btn-secondary" onclick="go_book('{{p.Code}}');">{% literal texts, 'button-reservar', L %}</button>
+      <button class="btn-primary" onclick="go_visit('{{p.Code}}');">{% literal texts, 'button-visita', L %}</button>
     </div>
 
   </div>
 
-  <!-- TEXT EXPANSION -->
+  <!-- Expansion -->
   <div class="description text pure-u-23-24">
       <div class="expansion pure-u-1">
         <p>{% literal texts, 'informacion-adicional-titulo', L %}</p>
@@ -153,3 +150,20 @@
 {% endif %}
 {% endfor %}
 {% endfor %}
+
+{% block footer %}
+{% set script %}
+function go_book(id) {
+  localStorage.setItem('city', '{{building.District.Location.Name}}');
+  localStorage.setItem('building', '{{building.Name}}');
+  localStorage.setItem('type', id);
+  location.href = "{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
+}
+function go_visit(id) {
+  localStorage.setItem('city', '{{building.District.Location.Name}}');
+  localStorage.setItem('building', '{{building.Name}}');
+  localStorage.setItem('type', id);
+  location.href = "{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html";
+}
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

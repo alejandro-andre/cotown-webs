@@ -106,7 +106,6 @@ tags: page
           <input class="input" type="date" id="97" name="97" required>
           </div>
         </div>
-
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-motivo', L %}</label>
@@ -118,6 +117,7 @@ tags: page
           </select>
           </div>
         </div>
+
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-ciudad', L %}</label>
@@ -129,7 +129,6 @@ tags: page
           </select>
           </div>
         </div>
-
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-edificio', L %}</label>
@@ -138,6 +137,7 @@ tags: page
           </select>
           </div>
         </div>
+
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-tipologia', L %}</label>
@@ -149,6 +149,29 @@ tags: page
           </select>
           </div>
         </div>
+        <div class="pure-u-1 pure-u-md-1-4">
+          <div class="campo">
+          <label class="label">{% literal texts, 'form-presupuesto', L %}</label>
+          <select class="select" type="select" id="95-min" name="95-min" onchange="budget();" required>
+            <option value="400" selected>400 €/{% literal texts, 'price-mes', L %}</option>
+            {% for i in range(500, 1300, 100) -%}
+            <option value="{{i}}">{{i}} €/{% literal texts, 'price-mes', L %}</option>
+            {% endfor %}
+          </select>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-4">
+          <div class="campo">
+          <label class="label">&nbsp;</label>
+          <select class="select" type="select" id="95-max" name="95-max" onchange="budget();" required>
+            {% for i in range(400, 1200, 100) -%}
+            <option value="{{i}}">{{i}} €/{% literal texts, 'price-mes', L %}</option>
+            {% endfor %}
+            <option value="1300" selected>1300 €/{% literal texts, 'price-mes', L %}</option>
+          </select>
+          </div>
+        </div>
+        <input type="hidden" id="95" name="95" value="400 - 1300">
 
         <div class="pure-u-1">
           <div class="campo checkbox">
@@ -186,6 +209,8 @@ var opts = [
 {city:'{{b.District.Location.Name}}',building:'{{b.Name}}'},
 {% endfor-%}
 ];
+
+// Populate buildings select
 function buildings(event) {
   // Empty list
   list = document.getElementById("100");
@@ -209,12 +234,24 @@ function buildings(event) {
   }
 }
 
+// Budget change
+function budget() {
+  min = parseInt(document.getElementById('95-min').value);
+  max = parseInt(document.getElementById('95-max').value);
+  if (min > max) {
+    min = max;
+    document.getElementById('95-min').value = min;
+  }
+  document.getElementById('95').value = min + ' - ' + max;
+}
+
 // Load
 document.getElementById('96').value  = localStorage.getItem('checkin');
 document.getElementById('97').value  = localStorage.getItem('checkout');
 document.getElementById('101').value = localStorage.getItem('city');
 buildings(null);
 document.getElementById('100').value = localStorage.getItem('building');
+document.getElementById('99').value = localStorage.getItem('type');
 {% include "shared/js/ac.js" %}
 {% endset %}<script>{{ script | safe }}</script>
 {% endblock %}

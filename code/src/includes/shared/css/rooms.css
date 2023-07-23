@@ -358,14 +358,20 @@ margin-bottom: 0.5em;
 }
 .tour-modal-content {
   position: relative;
-  background-color: #fefefe;
-  margin: 15% auto;
+  background-color: rgb(0,0,0);;
+  margin: auto;
+  top: 15%;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  width: 90%;
+  max-width: 800px;
+}
+.tour-modal-content iframe {
+  width: 100%;
+  min-height: 480px;
 }
 .tour-modal-content .close {
   text-align: right;
+  color: white;
   margin: -10px 0 5px 0;
 }
 
