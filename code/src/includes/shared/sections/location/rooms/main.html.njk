@@ -33,7 +33,7 @@
     {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
 
     {% set min = 9999 %}
-    {% for r in prices | find('id', 'eq', b.id) %}
+    {% for r in rooms | find('id', 'eq', b.id) %}
     {% for p in r.Place_types %}
     {% for f in p.Flat_types %}
       {% if min > f.Rent_long %}

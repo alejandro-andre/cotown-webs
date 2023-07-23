@@ -70,7 +70,7 @@ new Splide("#splideServices", {
 }).mount();
 
 // Sliders tipos de habitacion
-{% for r in prices | find('id', 'eq', building.id) %}
+{% for r in rooms | find('id', 'eq', building.id) %}
 {% for p in r.Place_types %}
 var main{{p.Code}} = new Splide( '#main-carousel-{{p.Code}}', {
   type: 'fade',

@@ -82,7 +82,7 @@
 
       <!-- Types -->
       <div class="types">
-        {% for r in prices  | find('id', 'eq', b.id) %}
+        {% for r in rooms  | find('id', 'eq', b.id) %}
         {% for pt in r.Place_types %}
         <div class="pure-u-8-24 pure-u-lg-4-24">
           <div class="type">
@@ -107,7 +107,7 @@
           <div class="icon">
           {% svg
             constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Service.Images[0].id +"/Icon/contents?access_token=" + token,
-            s.Name
+            s.Service.Name
           %}
           </div>
           <div class="description">{{s.Service|translate('Name', L)}}</div>

@@ -1,5 +1,5 @@
 module.exports = async (config) => {
   const sql = require('./sql');
-  const data = await sql('/prices/' + config.year, 'prices');
+  const data = await sql('/flats/' + config.year, 'flats');
   return data;
 };
