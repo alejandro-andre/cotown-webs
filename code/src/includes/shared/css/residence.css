@@ -285,12 +285,16 @@
   cursor: pointer;
   margin-top: 1em;
 }
-.right-data .buttons button.btn-secondary,  {
+.right-data .buttons a {
   width: 100%;
-  height: 60px;
-  justify-content: center;
 }
-
+.right-data .buttons button.btn-secondary, 
+.right-data .buttons button.btn-primary {
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  text-transform: none;
+}
 .card-room .description.text {
   border-bottom: 1px solid var(--grey-light);
 }
@@ -325,13 +329,13 @@ margin-bottom: 0.5em;
   line-height: 150%;
   margin: 0 0 2em;
 }
-
 .last {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 2em;
+  padding: 0 auto;
 }
 .last .last-zone {
   display: flex;

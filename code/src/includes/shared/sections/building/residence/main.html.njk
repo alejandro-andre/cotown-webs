@@ -17,12 +17,12 @@
       <section class="all-rooms pure-u-1">
 
         {% set type = 'I' %}
-        {% set typetitle %}{% literal texts, 'rooms-individuales', L %}{% endset %}
-        {% include 'shared/sections/building/rooms/rooms.html.njk' %}
+        {% set typetitle = texts['rooms-individuales'][L] %}
+        {% include 'shared/sections/building/residence/rooms.html.njk' %}
 
         {% set type = 'D' %}
-        {% set typetitle %}{% literal texts, 'rooms-compartidas', L %}{% endset %}
-        {% include 'shared/sections/building/rooms/rooms.html.njk' %}
+        {% set typetitle = texts['rooms-compartidas'][L] %}
+        {% include 'shared/sections/building/residence/rooms.html.njk' %}
 
       </section>
     </section>
