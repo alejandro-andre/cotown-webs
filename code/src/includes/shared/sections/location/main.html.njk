@@ -30,7 +30,7 @@
     <div class="map" id="map"></div>
 
     <!-- Popups -->
-    {% for b in buildings | find('District.Location.id', 'eq', location.id) -%}
+    {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
 
     {% set min = 9999 %}
     {% for r in prices | find('id', 'eq', b.id) %}
@@ -72,7 +72,6 @@
 <!-- Scripts -->
 {% block footer %}
 {% set script %}
-
 {% include "shared/js/map.js" %}
 
 // Map
