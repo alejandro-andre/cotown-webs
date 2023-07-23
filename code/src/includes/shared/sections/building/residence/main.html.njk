@@ -1,6 +1,6 @@
 <!-- Additional HEAD content -->
 {% block head %}
-{% set css %}{% include "vanguard/css/residence.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% set css %}{% include "shared/css/residence.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->
@@ -9,7 +9,7 @@
 
     <!-- First -->
     <section class="first pure-u-1">
-    {% include 'vanguard/sections/residence/first.html.njk' %}
+    {% include 'shared/sections/building/first.html.njk' %}
     </section>
 
     <!-- Rooms -->
@@ -18,11 +18,11 @@
 
         {% set type = 'I' %}
         {% set typetitle %}{% literal texts, 'rooms-individuales', L %}{% endset %}
-        {% include 'shared/sections/rooms/rooms.html.njk' %}
+        {% include 'shared/sections/building/rooms/rooms.html.njk' %}
 
         {% set type = 'D' %}
         {% set typetitle %}{% literal texts, 'rooms-compartidas', L %}{% endset %}
-        {% include 'shared/sections/rooms/rooms.html.njk' %}
+        {% include 'shared/sections/building/rooms/rooms.html.njk' %}
 
       </section>
     </section>
@@ -32,7 +32,7 @@
 
       <!-- Last -->
       <div class="last-zone pure-u-1">
-        {% include 'vanguard/sections/residence/last.html.njk' %}
+        {% include 'shared/sections/building/last.html.njk' %}
       </div>
 
       <!-- Map -->

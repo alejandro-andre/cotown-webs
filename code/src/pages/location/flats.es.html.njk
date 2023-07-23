@@ -1,7 +1,7 @@
 ---
 name: flats
 eleventyComputed:
-    L: "en"
+    L: "es"
     title: "{{langs[L].pages[name].title}} - {{location | translate('Name', 'es') | ascii}}"
     alt:
       es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}-{{location | translate('Name', 'es') | ascii}}.html"
@@ -20,4 +20,4 @@ changefreq: "weekly"
 priority: "1.0"
 tags: page
 ---
-{% include 'shared/sections/location/main.html.njk' %}
+{% include 'shared/sections/location/flats/main.html.njk' %}

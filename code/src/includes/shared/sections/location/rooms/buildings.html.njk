@@ -1,0 +1,331 @@
+<section class="pisos-slider pure-u-1">
+
+  <div class="h2-container pure-u-22-24">
+
+    <!-- Title -->
+    <h2>{% literal texts, 'location-nuestros-pisos-en', L %} {{ location | translate ('Name', L) | safe }}</h2>
+
+    <!-- See map button (mobile) -->
+    <a href="#mapanchor">
+    <button class="button-map-mobile pure-u-5-24">
+      <img src="/assets/img/icono__serv_mapa.svg">
+      <p>{% literal texts, 'location-ver-mapa', L %}</p>
+    </button>
+    </a>
+    
+    <!-- Dates -->
+    <!-- TODO - Fechas
+    <div class="calendar pure-u-1">
+      <div class="reservas_form_div pure-u-1 pure-u-lg-1-2">
+        <form id="reservas_form" name="form_multi" method="GET">
+          <button class="date-button">
+            <label class="labels">{% literal texts, 'dates-entrada', L %}</label>
+            <input type="text" id="in" onfocus="(this.type='date')" class="inputs" name="in" placeholder="02/06/2023"/>
+          </button>
+          <button class="date-button">
+            <label class="labels">{% literal texts, 'dates-salida', L %}</label>
+            <input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="02/09/2023"/>
+          </button>
+        </form>
+      </div>
+    </div>
+    -->
+
+  </div>
+
+  <!-- Desktop: slider -->
+  <div class="carousel desktop">
+    <div class="splide" id="sliderFlats" aria-label="Slider">
+      <div class="splide__track">
+
+        <!-- Slider arrows -->
+        <div class="splide__arrows arrows">
+          <button type="button" class="arrow-nav splide__arrow splide__arrow--prev"
+            type="button"
+            aria-label="Previous slide"
+            aria-controls="splide01-track">
+            <i class="icon-corchete-left"></i>
+          </button>
+          <button type="button" class="arrow-nav splide__arrow splide__arrow--next"
+            type="button"
+            aria-label="Next slide"
+            aria-controls="splide01-track">
+            <i class="icon-corchete-right"></i>
+          </button>
+        </div>
+
+        <!-- Slider -->
+        <ul class="splide__list carousel-main-list">
+
+          {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+          <li class="splide__slide main-slide">
+            <div class="card-contain">
+              <div class="card shadow desktop">
+
+                <!-- Photo -->
+                <div class="ratio desktop">
+                  <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html">
+                    {% image
+                        constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
+                        b.Name, b.Name, "card-img-top",
+                        [800], ""
+                    %}
+                    <h3>{{b.Name}}</h3>
+                  </a>
+                </div>
+
+                <div class="card-body d-flex flex-column">
+
+                    <!-- Name -->
+                    <div class="flex-grow-1">
+                      <p>{{ b | translate ('Description', L) | safe }}</p>
+                    </div>
+
+                    <!-- Place types -->
+                    <div class="types">
+
+                      {% set minI = 9999 %}
+                      {% set minD = 9999 %}
+                      {% for r in prices | find('id', 'eq', b.id) %}
+                      {% for p in r.Place_types %}
+                      {% for f in p.Flat_types %}
+                        {% if p.Code[0] == 'I' and minI > f.Rent_long %}
+                          {% set minI = f.Rent_long %}
+                        {% endif %}
+                        {% if p.Code[0] == 'D' and minD > f.Rent_long %}
+                          {% set minD = f.Rent_long %}
+                        {% endif %}
+                      {% endfor %}
+                      {% endfor %}
+                      {% endfor %}
+
+                      <!-- Habitacion-compartida -->
+                      {% if minD < 9999 %}
+                      <div class="room-type">
+                        <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html#D">
+                        <img src="/assets/img/icono__hab_habitacion_compartida.svg">
+                        <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
+                        <p>{% literal texts, 'price-desde', L %} {{minD}}€/{% literal texts, 'price-mes', L %}</p>
+                        </a>
+                      </div>
+                      {% endif %}
+
+                      <!-- Habitacion-individual -->
+                      {% if minI < 9999 %}
+                      <div class="room-type">
+                        <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html#I">
+                        <img src="/assets/img/icono__hab_habitacion_individual.svg">
+                        <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
+                        <p>{% literal texts, 'price-desde', L %} {{minI}}€/{% literal texts, 'price-mes', L %}</p>
+                        <!-- TODO - Quedan N
+                        <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>
+                        -->
+                        </a>
+                      </div>
+                      {% endif %}
+
+                      <!-- Apartamento-privado -->
+                      <div class="room-type">
+                        <img src="/assets/img/icono__hab_apartamento_privado.svg">
+                        <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
+                        <a href="{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name|ascii}}.html">
+                          <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                        </a>
+                      </div>
+
+                    </div>
+
+                  <!-- Internal slider -->
+                  <div class="carousel-mini">
+                    <div class="splide mini" id="sliderMini_{{b.id}}" aria-label="SliderMini_{{b.id}}">
+                      <div class="splide__track">
+
+                        <!-- Arrows -->
+                        <div class="splide__arrows arrows-mini">
+                          <button type="button" class="arrow-mini splide__arrow splide__arrow--prev"
+                              type="button"
+                              aria-label="Previous slide"
+                              aria-controls="splide01-track">
+                              <em class="icon-corchete-left"></em>
+                          </button>
+                          <button type="button" class="arrow-mini splide__arrow splide__arrow--next"
+                              type="button"
+                              aria-label="Next slide"
+                              aria-controls="splide01-track">
+                              <em class="icon-corchete-right"></em>
+                          </button>
+                        </div>
+
+                        <!-- Slider -->
+                        <ul class="splide__list list-mini">
+                          {% for s in b.Services %}
+                          <li class="splide__slide">
+                            <div class="card shadow">
+                              <div class="ratio carousel-ratio">
+                                {% svg
+                                  constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Service.Images[0].id +"/Icon/contents?access_token=" + token,
+                                  s.Name
+                                %}
+                                <p>{{s.Service|translate('Name', L)}}</p>
+                              </div>
+                            </div>
+                          </li>
+                          {% endfor %}
+                        </ul>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile: column -->
+  <div class="pisos mobile pure-u-1">
+    <div class="piso-contain pure-u-1">
+      {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+      <div class="piso-main pure-u-1">
+
+        <!-- Photo -->
+        <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html">
+        <div class="img pure-u-1">
+          {% image
+              constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
+              b.Name, b.Name, "card-img-top",
+              [800], ""
+          %}
+        </div>
+        </a>
+
+        <div class="piso pure-u-1">
+
+          <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html">
+            <h3>{{b.Name}}</h3>
+          </a>
+
+          {% set minI = 9999 %}
+          {% set minD = 9999 %}
+          {% for r in prices | find('id', 'eq', b.id) %}
+          {% for p in r.Place_types %}
+          {% for f in p.Flat_types %}
+            {% if p.Code[0] == 'I' and minI > f.Rent_long %}
+              {% set minI = f.Rent_long %}
+            {% endif %}
+            {% if p.Code[0] == 'D' and minD > f.Rent_long %}
+              {% set minD = f.Rent_long %}
+            {% endif %}
+          {% endfor %}
+          {% endfor %}
+          {% endfor %}
+
+          <!-- Place types -->
+          <div class="options pure-u-1">
+
+            <!-- Habitacion individual -->
+            {% if minI < 9999 %}
+            <div class="type pure-u-22-24" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html#I'">
+              <div class="img-container pure-u-3-24">
+                <img src="/assets/img/icono__hab_habitacion_individual.svg">
+              </div>
+              <div class="h4-container pure-u-12-24">
+                <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
+              </div>
+              <div class="p-container pure-u-7-24">
+                <span>{% literal texts, 'price-desde', L %}<span>
+                <p>{{minI}}€/{% literal texts, 'price-mes', L %}</p>
+              </div>
+            </div>
+            </a>
+            {% endif %}
+
+            <!-- Habitacion compartida -->
+            {% if minI < 9999 %}
+            <div class="type pure-u-22-24" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name|ascii}}.html#D'">
+              <div class="img-container pure-u-3-24">
+                <img src="/assets/img/icono__hab_habitacion_compartida.svg">
+              </div>
+              <div class="h4-container pure-u-12-24">
+                <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
+              </div>
+              <div class="p-container pure-u-7-24">
+                <span>{% literal texts, 'price-desde', L %}<span>
+                <p>{{minD}}€/{% literal texts, 'price-mes', L %}</p>
+              </div>
+            </div>
+            {% endif %}
+
+            <!-- Apartamento privado -->
+            <div class="type pure-u-22-24">
+              <div class="img-container pure-u-3-24">
+                <img src="/assets/img/icono__hab_apartamento_privado.svg">
+              </div>
+              <div class="h4-container pure-u-12-24">
+                <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
+              </div>
+              <div class="button-container pure-u-7-24">
+                <button 
+                  class="btn-secondary green-button" 
+                  onclick="location.href='{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name|ascii}}.html'">
+                {% literal texts, 'price-mas', L %}
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Amenities -->
+          <div class="services-list">
+            <div class="splide mini" id="sliderMiniMobile_{{b.id}}" aria-label="SliderMiniMobile_{{b.id}}">
+              <div class="splide__track">
+                <ul class="splide__list list-mini">
+                  {% for s in b.Services %}
+                  <li class="splide__slide">
+                    {% svg
+                      constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Service.Images[0].id +"/Icon/contents?access_token=" + token,
+                      s.Name
+                    %}
+                    <p>{{s.Service|translate('Name', L)}}</p>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</section>
+
+<!-- Sliders -->
+{% block footer %}
+{% set script %}
+// Sliders
+new Splide('#sliderFlats', {
+  type: 'loop',
+  gap: '50px',
+  focus: 'center',
+  padding: '6rem'
+}).mount();
+{% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+new Splide('#sliderMini_{{b.id}}', { type: 'loop', gap: '16px', pagination: false, perMove: 1, perPage: 9 }).mount();
+{% endfor %}
+{% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+new Splide('#sliderMiniMobile_{{b.id}}', { type: 'loop', gap: '16px', arrows: false, pagination: false, perMove: 1, perPage: 6 }).mount();
+{% endfor %}
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

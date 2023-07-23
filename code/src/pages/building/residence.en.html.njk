@@ -1,7 +1,7 @@
 ---
 name: residences
 eleventyComputed:
-    L: "es"
+    L: "en"
     title: "{{building.Name}}"
     alt:
       es: "{{langs.es.folder}}/{{building.Name | ascii}}.html"
@@ -20,4 +20,4 @@ changefreq: "weekly"
 priority: "1.0"
 tags: page
 ---
-{% include 'vanguard/sections/residence/main.html.njk' %}
+{% include 'shared/sections/building/residence/main.html.njk' %}
