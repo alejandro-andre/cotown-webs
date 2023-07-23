@@ -69,13 +69,21 @@
   <div class="pure-u-1 after-slide bottom">
 
     <div class="text-first pure-u-23-24 pure-u-lg-10-24">
-      <button class="btn-text"><a>Tour virtual</a></button>
-      <button class="btn-text"><a>Nuestros pisos</a></button>
-      <button class="btn-text"><a>Tu nuevo barrio</a></button>
+      {% if building.Tour %}
+      <button class="btn-text">
+        <a href="#" onclick="open_tour()">{% literal texts, 'rooms-tour-virtual', L %}</a>
+        </button>
+      {% endif %}
+      <button class="btn-text">
+        <a>{% literal texts, 'rooms-nuestros-pisos', L %}</a>
+      </button>
+      <button class="btn-text">
+        <a href="#barrio">{% literal texts, 'rooms-tu-barrio', L %}</a>
+      </button>
     </div>
 
     <!-- Calendar -->
-    <!-- TODO
+    <!-- TODO - Fechas
     <section class="right-calendar pure-u-23-24 pure-u-lg-11-24 ">
       <div class="calendar pure-u-1">
         <div class="reservas_form_div pure-u-1">
@@ -98,3 +106,24 @@
 
 </section>
 
+<div id="tour" class="tour-modal">
+	<div class="tour-modal-content">
+    <div class="close" onclick="close_tour();">
+      <em class="icon-close"></em>
+    </div>
+    <iframe id="tourframe" width="100%" height="480" frameborder="0"  allowfullscreen="allowfullscreen">
+    </iframe>
+  </div>
+</div>
+
+{% block footer %}
+{% set script %}
+function open_tour() {
+  document.getElementById("tourframe").src="{{building.Tour}}" 
+  document.getElementById("tour").style.display = "block";
+}
+function close_tour() {
+  document.getElementById("tour").style.display = "none";
+}
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

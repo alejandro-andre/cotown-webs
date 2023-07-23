@@ -21,6 +21,8 @@ module.exports = async (config) => {
       Details_en
       Details_private
       Details_private_en
+      Tour
+      Tour_private
       Segment_id
       Building_type_id
       District: DistrictViaDistrict_id {

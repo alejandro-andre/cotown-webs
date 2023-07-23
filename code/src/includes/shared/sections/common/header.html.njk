@@ -61,7 +61,7 @@
 
           <li class="icons-header pure-menu-item">
             <!-- Buscador -->
-            <!-- TODO
+            <!-- TODO - Buscador
             <a href="#" class="pure-menu-link"><em class="icon-search"></em></a>
             -->
             <!-- Whatsapp -->
@@ -95,7 +95,7 @@
 
           <!-- Area privada -->
           <li class="pure-menu-item private-container">
-            <!-- TODO
+            <!-- TODO - Área privada
             <button class="private">
               <em class="icon-log-in"></em>
               <a href="/customer">
@@ -142,11 +142,11 @@
 
       <!-- Botón reservar (movil) -->
       <div class="booking pure-u-1-3">
-        <!-- TODO
         <button class="btn-primary">
-          <a href="#popupBooking">{% literal texts, 'button-reservar', L %}</a>
+          <a href="{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
+            {% literal texts, 'button-reservar', L %}
+          </a>
         </button>
-        -->
       </div>
 
     </div>
@@ -175,7 +175,7 @@
 
           <!-- Search -->
           <div class="menu-mobile-icons pure-u-5-24">
-            <!-- TODO
+            <!-- TODO - Buscador (móvil)
             <em class="icon-search"></em>
             -->
             <a type="button" onclick="ocultarMenuMobile()"><em class="icon-close"></em></a>
@@ -260,7 +260,7 @@
         <!-- Botón booking -->
         <li class="only-menu-mobile pure-menu-item">
 
-          <!-- TODO
+          <!-- TODO - Tu nuevo hogar
           <div class="booking pure-u-1">
             <button class="btn-secondary">{% literal texts, 'button-nuevo-hogar', L %}
             <em class="icon-house"></em>
@@ -284,7 +284,7 @@
 </section>
 
 <!-- Reservas popup -->
-<!-- TODO
+<!-- TODO - Popup reservas
 [% include 'shared/sections/common/booking.html.njk' %]
 -->
 
