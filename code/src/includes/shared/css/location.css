@@ -106,12 +106,14 @@ a {
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop {
     position: relative;
-    max-height: 360px;
+    height: 360px;
     object-fit: cover;
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop img {
     border-top-left-radius: 20px;
     width: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 .carousel .carousel-main-list .splide__slide h3 {
     font-size: 78px;
