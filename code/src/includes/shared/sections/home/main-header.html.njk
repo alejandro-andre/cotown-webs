@@ -84,5 +84,5 @@ document.getElementById('city').value  = localStorage.getItem('city');
 document.getElementById('dates').value = localStorage.getItem('dates');
 document.getElementById('in').value    = localStorage.getItem('checkin');
 document.getElementById('out').value   = localStorage.getItem('checkout');
-{% endset %}<script>{{ script | safe }}</script>
+{% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
