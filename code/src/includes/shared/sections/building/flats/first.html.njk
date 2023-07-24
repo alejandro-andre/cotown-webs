@@ -21,11 +21,7 @@
 
     <!-- Description -->
     <div class="text-first pure-u-23-24 pure-u-lg-12-24">
-    {% if name == 'rooms' %}
-    {{ building | translate('Details', L) | markdown | safe }}
-    {% else %}
     {{ building | translate('Details_private', L) | markdown | safe }}
-    {% endif %}
     </div>
 
     <!-- Services -->
@@ -69,13 +65,15 @@
   <div class="pure-u-1 after-slide bottom">
 
     <div class="text-first pure-u-23-24 pure-u-lg-10-24">
-      {% if building.Tour %}
+      {% if building.Tour_private %}
       <button class="btn-text">
         <a href="#" onclick="open_tour()">{% literal texts, 'rooms-tour-virtual', L %}</a>
         </button>
       {% endif %}
       <button class="btn-text">
-        <a>{% literal texts, 'rooms-nuestros-pisos', L %}</a>
+        <a href="{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
+          {% literal texts, 'button-reservar', L %}
+        </a>
       </button>
       <button class="btn-text">
         <a href="#barrio">{% literal texts, 'rooms-tu-barrio', L %}</a>
@@ -119,7 +117,7 @@
 {% block footer %}
 {% set script %}
 function open_tour() {
-  document.getElementById("tourframe").src="{{building.Tour}}" 
+  document.getElementById("tourframe").src="{{building.Tour_private}}" 
   document.getElementById("tour").style.display = "block";
 }
 function close_tour() {

@@ -19,7 +19,7 @@
     <section id="main-carousel-{{p.Code}}" class="splide rooms-carousel" aria-label="Gallery">
       <div class="splide__track">
         <ul class="splide__list">
-          {% for rp in room_photos | find('Building.id', 'eq', building.id) | find('Place_type.Code', 'eq', p.Code) %}
+          {% for rp in photos | find('Building.id', 'eq', building.id) | find('Place_type.Code', 'eq', p.Code) %}
           <li class="splide__slide">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
@@ -35,7 +35,7 @@
     <section id="thumbnail-carousel-{{p.Code}}" class="splide" aria-label="Thumbnails">
       <div class="splide__track">
         <ul class="splide__list">
-          {% for rp in room_photos | find('Building.id', 'eq', building.id) | find('Place_type.Code', 'eq', p.Code) %}
+          {% for rp in photos | find('Building.id', 'eq', building.id) | find('Place_type.Code', 'eq', p.Code) %}
           <li class="splide__slide">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,

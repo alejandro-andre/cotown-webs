@@ -107,7 +107,7 @@
 
 
 /* ---------- ROOMS ---------- \*/
-.rooms .all-rooms {
+.apartments .all-rooms {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -117,7 +117,7 @@
   box-shadow: 0px 20px 30px rgba(22, 22, 22, 0.06);
 }
 
-.rooms .all-rooms .card-room {
+.apartments .all-rooms .card-room {
   display: flex;
   flex-flow: row wrap;
   justify-content: stretch;
@@ -125,7 +125,7 @@
   padding: 1em 0;
   margin: 0 auto 2em;
 }
-.rooms .all-rooms .card-room .left-carousel {
+.apartments .all-rooms .card-room .left-carousel {
   margin-right: 4em;
 }
 .left-carousel #main-carousel .splide__pagination {
@@ -152,7 +152,7 @@
   color: var(--white);
 }
 .right-data .title-favorite em {
-  font-size: 28px;
+  font-size: 18px;
   cursor: pointer;
   color: var(--white);
 }
@@ -190,7 +190,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 .right-data .apartment-services .splide-services .splide__list .splide__slide .slide p {
   font-size: 14.842px;
@@ -212,7 +211,6 @@
 .right-data .apartment-services .splide-services .splide__arrow svg {
   fill: var(--black);
 }
-
 .right-data .share .sharing label input {
   margin: 0 0.4em;
   font-size: 24px;
@@ -250,7 +248,6 @@
 .right-data input[type=radio]:checked:before {
 	content: "\e929";
 }
-
 .right-data .extra {
   border-top: 1px solid var(--grey-light);
   margin-top: 2em;
@@ -261,7 +258,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .right-data .buttons {
   display: flex;
   flex-flow:  column;
@@ -271,10 +267,15 @@
   cursor: pointer;
   margin-top: 1em;
 }
-.right-data .buttons button.btn-secondary, .right-data .buttons button.btn-primary {
+.right-data .buttons a {
+  width: 100%;
+}
+.right-data .buttons button.btn-secondary,
+.right-data .buttons button.btn-primary {
   width: 100%;
   height: 50px;
   justify-content: center;
+  text-transform: none;
 }
 .buttons button.btn-primary {
   color: var(--white);
@@ -322,7 +323,6 @@ color: var(--white);
   margin: 0 0 2em;
   color: var(--white);
 }
-
 .last {
   display: flex;
   flex-flow: row wrap;
@@ -388,17 +388,17 @@ color: var(--white);
   .first .first-contain .flat-services {
     text-align: center;
     padding: 1em;
-}
-  .rooms {
+  }
+  .apartments {
     padding: 0;
   }
-  .rooms .all-rooms .title h2 {
+  .apartments .all-rooms .title h2 {
     margin-bottom: 1em;
     font-weight: 400;
     font-size: 40px;
     line-height: 100%;
   }
-  .rooms .all-rooms .card-room{
+  .apartments .all-rooms .card-room{
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -407,7 +407,7 @@ color: var(--white);
     padding: 0;
     margin: 0;
   }
-  .rooms .all-rooms .card-room .left-carousel {
+  .apartments .all-rooms .card-room .left-carousel {
     margin-right: 0;
   }
   .first .first-contain .first-slider .splide__arrow--prev {
@@ -427,12 +427,11 @@ color: var(--white);
     justify-content: space-between;
     align-items: center;
   }
-  .rooms .all-rooms .card-room .right-data .title-favorite p {
+  .apartments .all-rooms .card-room .right-data .title-favorite p {
     font-weight: 700;
     font-size: 18px;
     line-height: 130%;
   }
-
   .right-data .option p.persons {
     font-weight: 400;
     font-size: 12px;
@@ -459,11 +458,9 @@ color: var(--white);
   .right-data .title-favorite em {
     font-size: 18px;
   }
-
   #thumbnail-carousel {
     display: none;
   }
-
   .last h2 {
     text-align: left;
   }

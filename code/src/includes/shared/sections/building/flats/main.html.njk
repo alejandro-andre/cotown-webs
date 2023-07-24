@@ -9,7 +9,7 @@
 
     <!-- First -->
     <section class="first pure-u-1">
-    {% include 'shared/sections/building/first.html.njk' %}
+    {% include 'shared/sections/building/flats/first.html.njk' %}
     </section>
 
     <!-- Rooms -->
@@ -61,9 +61,9 @@ new Splide("#splideServices", {
   },
 }).mount();
 
-// Sliders tipos de habitacion
-{% for r in rooms | find('id', 'eq', building.id) %}
-{% for p in r.Place_types %}
+// Sliders tipos de piso
+{% for r in flats | find('id', 'eq', building.id) %}
+{% for p in r.Flat_types %}
 var main{{p.Code}} = new Splide( '#main-carousel-{{p.Code}}', {
   type: 'fade',
   rewind: true,

@@ -30,14 +30,14 @@ module.exports = (eleventyConfig) => {
 
       for (let i = 0; i < fields.length; i++) {
         const curr = fields[i];
-        if (json.hasOwnProperty(curr)) {
+        if (json && json.hasOwnProperty(curr)) {
           json = json[curr];
         } else {
           return false;
         }
       }
 
-      if (json.hasOwnProperty(last)) {
+      if (json && json.hasOwnProperty(last)) {
         switch (cond) {
           case 'gt': return json[last] > value;
           case 'lt': return json[last] < value;

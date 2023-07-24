@@ -14,6 +14,9 @@ module.exports = async (config) => {
         id
         Name
       }
+      Flat_type: Resource_flat_typeViaFlat_type_id {
+        Code
+      }
       Place_type: Resource_place_typeViaPlace_type_id {
         Code
       }
