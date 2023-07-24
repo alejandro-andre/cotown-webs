@@ -211,7 +211,7 @@ var room_types = [
 {% for b in buildings-%}
 {% set r = rooms | find('id', 'eq', b.id) | first-%}
 {% for p in r.Place_types-%}
-{building:'{{b.Name}}',code:'{{p.Code}}',name:'{{place_types[p.Code] | translate('Name', L)}}'},
+{building:'{{b.Name}}',code:'{{place_types[p.Code].Name}}'}',name:'{{place_types[p.Code] | translate('Name', L)}}'},
 {% endfor-%}
 {% endfor-%}
 ];
