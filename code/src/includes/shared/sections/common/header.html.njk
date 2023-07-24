@@ -229,7 +229,7 @@
             <div data-toggle="close" class="options-loc">
                 {% for l in locations %}
                 <div class="option-loc">
-                  <a href="{{langs[L].folder}}/{{l | translate('Name', L) | ascii}}.html">
+                  <a href="{{langs[L].folder}}/{{l | translate('Name', L) | slugify}}.html">
                   <em class="icon-map-point"></em>
                     {{l | translate('Name', L)}}
                   </a>

@@ -44,10 +44,10 @@
     {% endfor %}
 
     <div id="{{b.id}}" style="display: none;">
-      <div class="mappopup" onclick="location.href='{{langs[L].folder}}/{{b.Name|ascii}}.html';">
+      <div class="mappopup" onclick="location.href='{{langs[L].folder}}/{{b.Name | slugify}}.html';">
         {% image
           constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
-          b.Name, b.Name, "",
+          b.Name, b.Name + '_' + b.Photos[0].id | slugify, "",
           [200], ""
         %}
         <div class="info">

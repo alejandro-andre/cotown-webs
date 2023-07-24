@@ -8,7 +8,7 @@
           <div class="img">
           {% image
             constants.SERVER + "/wopi/files/Marketing/Media_location/" + f.id +"/Image/contents?access_token=" + token,
-            f.Name, location.Name+f.id|slug, "",
+            f.Name, location.Name + '_' + f.id | slugify, "",
             [400], ""
           %}
           </div>

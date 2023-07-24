@@ -13,7 +13,7 @@
       </div>
       {% image
         constants.SERVER + "/wopi/files/Marketing/Post/" + post.id +"/Image/contents?access_token=" + token,
-        post.Title, post.Title, "img-loc",
+        post.Title, post.Slug | slugify, "img-loc",
         [800], ""
       %}
       <div class="text pure-u-1 pure-u-18-24">

@@ -34,7 +34,8 @@ tags: page
         <div class="img pure-u-1 pure-u-lg-10-24">
           {% image
             constants.SERVER + "/wopi/files/Marketing/Media/" + images['conocenos'].id +"/Image/contents?access_token=" + token,
-            title, title, "card-img-top", [512, 768, 1024], 
+            title, title, "card-img-top", 
+            [512, 768, 1024], 
             "(max-width: 512px) 512px, (max-width: 768px) 768px, (max-width: 1023px) 1024px, (max-width: 1279px) 512px, 768px"
           %}
         </div>
@@ -71,13 +72,13 @@ tags: page
               <div class="first">
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token,
-                t.Name, t.Name|slug, "img-grid", [300], ""
+                t.Name, t.Name + '_' + t.id | slugify, "img-grid", [300], ""
               %}
               </div>
               <div class="hover">
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Second_image/contents?access_token=" + token,
-                t.Name, (t.Name+' hover')|slug, "img-grid", [300], ""
+                t.Name, t.Name + '_' + t.id + '_hover' | slugify, "img-grid", [300], ""
               %}
               </div>
               <div class="data">

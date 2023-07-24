@@ -4,10 +4,10 @@ eleventyComputed:
     L: "en"
     title: "{{post | translate('Title', L)}}"
     alt:
-      es: "{{langs.es.folder}}/{{post | translate('Slug', 'es') | ascii}}.html"
-      en: "{{langs.en.folder}}/{{post | translate('Slug', 'en') | ascii}}.html"
+      es: "{{langs.es.folder}}/{{post | translate('Slug', 'es') | slugify}}.html"
+      en: "{{langs.en.folder}}/{{post | translate('Slug', 'en') | slugify}}.html"
     description: "{{post | translate('Title', L)}}"
-    permalink: "{{langs[L].folder}}/{{post | translate('Slug', L) | ascii}}.html"
+    permalink: "{{langs[L].folder}}/{{post | translate('Slug', L) | slugify}}.html"
 layout: shared/layouts/base.html
 pagination:
     data: posts

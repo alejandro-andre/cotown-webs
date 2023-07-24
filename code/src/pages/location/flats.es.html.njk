@@ -2,12 +2,12 @@
 name: flats
 eleventyComputed:
     L: "es"
-    title: "{{langs[L].pages[name].title}} - {{location | translate('Name', 'es') | ascii}}"
+    title: "{{langs[L].pages[name].title}} - {{location | translate('Name', 'es') | slugify}}"
     alt:
-      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}-{{location | translate('Name', 'es') | ascii}}.html"
-      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}-{{location | translate('Name', 'es') | ascii}}.html"
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}-{{location | translate('Name', 'es') | slugify}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}-{{location | translate('Name', 'es') | slugify}}.html"
     description: "{{location | translate('Description', L)}}"
-    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{location | translate('Name', L) | ascii}}.html"
+    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{location | translate('Name', L) | slugify}}.html"
 layout: shared/layouts/base.html
 pagination:
     data: locations

@@ -5,7 +5,8 @@
   <div class="img-residences pure-u-1">
     {% image
       constants.SERVER + "/wopi/files/Marketing/Media/" + images['residencias'].id +"/Image/contents?access_token=" + token,
-      "", "", "img-faqs", [auto], ""
+      "residencias", "residencias", "img-faqs", 
+      [auto], ""
     %}
   </div>
 
@@ -27,7 +28,7 @@
           {% for l in locations %}
             {% set b = buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) %}
             {% if b | length > 0 %}
-            <option value="{{l | translate('Name', L)|ascii}}">{{l | translate('Name', L)}}</option>
+            <option value="{{l | translate('Name', L) | slugify}}">{{l | translate('Name', L)}}</option>
             {% endif %}
           {% endfor %}
         </select>
@@ -58,11 +59,11 @@
     <div class="residence-card">
 
       <!-- Photo -->
-      <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
+      <a href="{{langs[L].folder}}/{{b.Name | slugify}}.html">
       <div class="img">
         {% image
            constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
-           b.Name, b.Name, "",
+           b.Name, b.Name + '_' + b.Photos[0].id | slugify, "",
            [800], ""
         %}
       </div>
@@ -70,7 +71,7 @@
 
       <!-- Title -->
       <div class="card-title">
-        <a href="{{langs[L].folder}}/{{b.Name|ascii}}.html">
+        <a href="{{langs[L].folder}}/{{b.Name | slugify}}.html">
           <h3>{{b.Name}}</h3>
         </a>
       </div>
