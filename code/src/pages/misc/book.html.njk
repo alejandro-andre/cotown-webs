@@ -121,7 +121,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-ciudad', L %}</label>
-          <select class="select" type="select" id="101" name="101" required onchange="get_buildings();">
+          <select class="select" type="select" id="101" name="101" required onchange="get_buildings(this.value);">
             <option value="" disabled selected>{% literal texts, 'form-ciudad', L %}</option>
             {% for l in locations %}
             {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
@@ -134,7 +134,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-edificio', L %}</label>
-          <select class="select" type="select" id="100" name="100" onchange="get_types();" required>
+          <select class="select" type="select" id="100" name="100" onchange="get_types(this.value);" required>
             <option value="" disabled selected>{% literal texts, 'form-edificio', L %}</option>
           </select>
           </div>
@@ -152,7 +152,7 @@ tags: page
           <label class="label">{% literal texts, 'form-presupuesto', L %}</label>
           <select class="select" type="select" id="95-min" name="95-min" onchange="budget();" required>
             <option value="400" selected>400 €/{% literal texts, 'price-mes', L %}</option>
-            {% for i in range(400, 1300, 100) -%}
+            {% for i in range(400, 2200, 100) -%}
             <option value="{{i}}"{% if i == 600 %} selected{% endif %}>{{i}} €/{% literal texts, 'price-mes', L %}</option>
             {% endfor %}
           </select>
@@ -162,7 +162,7 @@ tags: page
           <div class="campo">
           <label class="label">&nbsp;</label>
           <select class="select" type="select" id="95-max" name="95-max" onchange="budget();" required>
-            {% for i in range(400, 1300, 100) -%}
+            {% for i in range(400, 2200, 100) -%}
             <option value="{{i}}"{% if i == 900 %} selected{% endif %}>{{i}} €/{% literal texts, 'price-mes', L %}</option>
             {% endfor %}
           </select>
@@ -212,25 +212,29 @@ var room_types = [
 {% for b in buildings-%}
 {% set r = rooms | find('id', 'eq', b.id) | first-%}
 {% for p in r.Place_types-%}
-{building:'{{b.Name}}',code:'{{place_types[p.Code].Name}}',name:'{{place_types[p.Code] | translate('Name', L)}}'},
+{building:'{{b.Name}}',code:'{{place_types[p.Code].Code}}',name:'{{place_types[p.Code] | translate('Name', L)}}'},
+{% endfor-%}
+{% set r = flats | find('id', 'eq', b.id) | first-%}
+{% for p in r.Flat_types-%}
+{building:'{{b.Name}}',code:'{{flat_types[p.Code].Code}}',name:'{{flat_types[p.Code] | translate('Name', L)}}'},
 {% endfor-%}
 {% endfor-%}
 ];
 
 // Populate buildings select
-function get_buildings(event) {
+function get_buildings(value) {
 
   // Empty list
   list = document.getElementById("100");
   list.innerHTML = "";
 
   // Get city
-  city = document.getElementById("101").value;
-  localStorage.setItem('city', city);
+  if (value)
+    localStorage.setItem('city', value);
 
   // Fill building listid
   for (var i = 0; i < buildings.length; i++) {
-    if (buildings[i].city == city) {
+    if (buildings[i].city == value) {
       var opt = document.createElement("option");
       opt.value = buildings[i].building;
       opt.text = buildings[i].building;
@@ -244,21 +248,21 @@ function get_buildings(event) {
 }
 
 // Populate typology select
-function get_types(event) {
+function get_types(value) {
 
   // Empty list
   list = document.getElementById("99");
   list.innerHTML = "";
 
   // Get building
-  building = document.getElementById("100").value;
-  localStorage.setItem('building', building);
+  if (value)
+    localStorage.setItem('building', value);
 
   // Fill typology listid
   for (var i = 0; i < room_types.length; i++) {
-    if (room_types[i].building == building) {
+    if (room_types[i].building == value) {
       var opt = document.createElement("option");
-      opt.value = room_types[i].name;
+      opt.value = room_types[i].code;
       opt.text = room_types[i].name;
       list.add(opt);
     }
@@ -280,9 +284,9 @@ function budget() {
 document.getElementById('96').value  = localStorage.getItem('checkin');
 document.getElementById('97').value  = localStorage.getItem('checkout');
 document.getElementById('101').value = localStorage.getItem('city');
-get_buildings(null);
+get_buildings(localStorage.getItem('city')); 
 document.getElementById('100').value = localStorage.getItem('building');
-get_types(null);
+get_types(localStorage.getItem('building'));
 document.getElementById('99').value = localStorage.getItem('type');
 {% include "shared/js/ac.js" %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>

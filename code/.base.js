@@ -7,7 +7,11 @@ const { minify } = require("terser");
 
 module.exports = (eleventyConfig) => {
 
-  console.log(eleventyConfig.outputDir);
+  // School year
+  var year = new Date().getFullYear();
+  if (new Date().getMonth() >= 8)
+    year += 1;
+  eleventyConfig.addGlobalData("year", year);
 
   // String to slug
   function slugify(str) {
