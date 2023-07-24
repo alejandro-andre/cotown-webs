@@ -152,8 +152,8 @@ tags: page
           <label class="label">{% literal texts, 'form-presupuesto', L %}</label>
           <select class="select" type="select" id="95-min" name="95-min" onchange="budget();" required>
             <option value="400" selected>400 €/{% literal texts, 'price-mes', L %}</option>
-            {% for i in range(500, 1300, 100) -%}
-            <option value="{{i}}">{{i}} €/{% literal texts, 'price-mes', L %}</option>
+            {% for i in range(400, 1300, 100) -%}
+            <option value="{{i}}"{% if i == 600 %} selected{% endif %}>{{i}} €/{% literal texts, 'price-mes', L %}</option>
             {% endfor %}
           </select>
           </div>
@@ -162,10 +162,9 @@ tags: page
           <div class="campo">
           <label class="label">&nbsp;</label>
           <select class="select" type="select" id="95-max" name="95-max" onchange="budget();" required>
-            {% for i in range(400, 1200, 100) -%}
-            <option value="{{i}}">{{i}} €/{% literal texts, 'price-mes', L %}</option>
+            {% for i in range(400, 1300, 100) -%}
+            <option value="{{i}}"{% if i == 900 %} selected{% endif %}>{{i}} €/{% literal texts, 'price-mes', L %}</option>
             {% endfor %}
-            <option value="1300" selected>1300 €/{% literal texts, 'price-mes', L %}</option>
           </select>
           </div>
         </div>
