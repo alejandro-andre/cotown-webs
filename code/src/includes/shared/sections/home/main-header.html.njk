@@ -13,7 +13,9 @@
       <select id="city" name="city" class="pure-u-1" onchange="localStorage.setItem('city', this.value);" required>
         <option value="" disabled selected>{% literal texts, 'home-bienvenido-donde', L %}</option>
         {% for l in locations %}
+        {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
         <option>{{ l | translate('Name', L)}}</option>
+        {% endif %}
         {% endfor %}
       </select>
 
