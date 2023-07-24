@@ -4,15 +4,15 @@ eleventyComputed:
     L: "en"
     title: "{{langs[L].pages[name].title}}"
     alt:
-      es: "{{langs.es.folder}}/blog/{{tag | translate('Name', 'es') | ascii}}.html"
-      en: "{{langs.en.folder}}/blog/{{tag | translate('Name', 'en') | ascii}}.html"
-    description: "{{langs[L].pages[name].description}} | {{tag | translate('Name', L) | ascii}}"
-    permalink: "{{langs[L].folder}}/blog/{{tag | translate('Name', L) | ascii}}.html"
+      es: "{{langs.es.folder}}/blog/{{posttag | translate('Name', 'es') | ascii}}.html"
+      en: "{{langs.en.folder}}/blog/{{posttag | translate('Name', 'en') | ascii}}.html"
+    description: "{{langs[L].pages[name].description}} | {{posttag | translate('Name', L) | ascii}}"
+    permalink: "{{langs[L].folder}}/blog/{{posttag | translate('Name', L) | ascii}}.html"
 layout: shared/layouts/base.html
 pagination:
-    data: tags
+    data: posttags
     size: 1
-    alias: tag
+    alias: posttag
     addAllPagesToCollections: true
 
 date: Last Modified

@@ -11,6 +11,6 @@ module.exports = async (config) => {
       Name_en
     }
   }`;
-  const data = await gql(QUERY, config, 'tags');
+  const data = await gql(QUERY, config, 'posttags');
   return data.data;
 };
