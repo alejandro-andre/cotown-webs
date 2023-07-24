@@ -121,7 +121,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-ciudad', L %}</label>
-          <select class="select" type="select" id="101" name="101" required onchange="buildings();">
+          <select class="select" type="select" id="101" name="101" required onchange="get_buildings();">
             <option value="" disabled selected>{% literal texts, 'form-ciudad', L %}</option>
             {% for l in locations %}
               <option value="{{l.Name}}">{{l | translate('Name', L)}}</option>
@@ -132,7 +132,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-edificio', L %}</label>
-          <select class="select" type="select" id="100" name="100" onchange="localStorage.setItem('building', this.value);" required>
+          <select class="select" type="select" id="100" name="100" onchange="get_types();" required>
             <option value="" disabled selected>{% literal texts, 'form-edificio', L %}</option>
           </select>
           </div>
@@ -142,10 +142,6 @@ tags: page
           <div class="campo">
           <label class="label">{% literal texts, 'form-tipologia', L %}</label>
           <select class="select" type="select" id="99" name="99" required>
-            <option value="" disabled selected>{% literal texts, 'form-tipologia', L %}</option>
-            {% for k, v in place_types %}
-            <option value="{{v.Code}}">{{v | translate('Name', L)}}</option>
-            {% endfor %}
           </select>
           </div>
         </div>
@@ -204,14 +200,25 @@ tags: page
 {% block footer %}
 {% set script %}
 // Buildings list
-var opts = [
+var buildings = [
 {% for b in buildings-%}
 {city:'{{b.District.Location.Name}}',building:'{{b.Name}}'},
 {% endfor-%}
 ];
 
+// Room types list
+var room_types = [
+{% for b in buildings-%}
+{% set r = rooms | find('id', 'eq', b.id) | first-%}
+{% for p in r.Place_types-%}
+{building:'{{b.Name}}',code:'{{p.Code}}',name:'{{place_types[p.Code] | translate('Name', L)}}'},
+{% endfor-%}
+{% endfor-%}
+];
+
 // Populate buildings select
-function buildings(event) {
+function get_buildings(event) {
+
   // Empty list
   list = document.getElementById("100");
   list.innerHTML = "";
@@ -221,14 +228,37 @@ function buildings(event) {
   localStorage.setItem('city', city);
 
   // Fill building listid
-  for (var i = 0; i < opts.length; i++) {
-    if (opts[i].city == '' || opts[i].city == city) {
+  for (var i = 0; i < buildings.length; i++) {
+    if (buildings[i].city == city) {
       var opt = document.createElement("option");
-      opt.value = opts[i].building;
-      opt.text = opts[i].building;
-      if (opts[i].city == '') {
-        opts.disabled = true;
+      opt.value = buildings[i].building;
+      opt.text = buildings[i].building;
+      if (buildings[i].city == '') {
+        buildings.disabled = true;
       }
+      list.add(opt);
+    }
+  }
+  get_types(null);
+}
+
+// Populate typology select
+function get_types(event) {
+
+  // Empty list
+  list = document.getElementById("99");
+  list.innerHTML = "";
+
+  // Get building
+  building = document.getElementById("100").value;
+  localStorage.setItem('building', building);
+
+  // Fill typology listid
+  for (var i = 0; i < room_types.length; i++) {
+    if (room_types[i].building == building) {
+      var opt = document.createElement("option");
+      opt.value = room_types[i].name;
+      opt.text = room_types[i].name;
       list.add(opt);
     }
   }
@@ -249,8 +279,9 @@ function budget() {
 document.getElementById('96').value  = localStorage.getItem('checkin');
 document.getElementById('97').value  = localStorage.getItem('checkout');
 document.getElementById('101').value = localStorage.getItem('city');
-buildings(null);
+get_buildings(null);
 document.getElementById('100').value = localStorage.getItem('building');
+get_types(null);
 document.getElementById('99').value = localStorage.getItem('type');
 {% include "shared/js/ac.js" %}
 {% endset %}<script>{{ script | safe }}</script>
