@@ -1,44 +1,39 @@
 {% set show = true %}
 {% for r in flats | find('id', 'eq', building.id) %}
+{% for p in r.Flat_types %}
 <section class="card-room pure-u-1 pure-u-lg-22-24">
 
   <!-- LEFT -->
   <div class="left-carousel pure-u-1 pure-u-lg-11-24">
 
-    <section id="main-carousel" class="splide rooms-carousel" aria-label="Gallery">
+    <section id="main-carousel-{{p.Code}}" class="splide rooms-carousel" aria-label="Gallery">
       <div class="splide__track">
         <ul class="splide__list">
+          {% for rp in room_photos | find('Building.id', 'eq', building.id) | find('Place_type.Code', 'eq', p.Code) %}
           <li class="splide__slide">
-            <img src="/assets/img/cotownity-big.png" alt="">
+            {% image
+              constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
+              rp.Name, rp.Name|ascii, "",
+              [500], ""
+            %}
           </li>
-          <li class="splide__slide">
-            <img src="/assets/img/cotownity-big.png" alt="">
-          </li>
-          <li class="splide__slide">
-            <img src="/assets/img/cotownity-big.png" alt="">
-          </li>
-          <li class="splide__slide">
-            <img src="/assets/img/cotownity-big.png" alt="">
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </section>
 
-    <section id="thumbnail-carousel" class="splide" aria-label="Thumbnails">
+    <section id="thumbnail-carousel-{{p.Code}}" class="splide" aria-label="Thumbnails">
       <div class="splide__track">
         <ul class="splide__list">
+          {% for rp in room_photos | find('Building.id', 'eq', building.id) | find('Place_type.Code', 'eq', p.Code) %}
           <li class="splide__slide">
-            <img src="/assets/img/cotownity-big.png" alt="">
+            {% image
+              constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
+              rp.Name, rp.Name|ascii, "",
+              [300], ""
+            %}
           </li>
-          <li class="splide__slide">
-            <img src="/assets/img/cotownity-big.png" alt="">
-          </li>
-          <li class="splide__slide">
-            <img src="/assets/img/cotownity-big.png" alt="">
-          </li>
-          <li class="splide__slide">
-            <img src="/assets/img/cotownity-big.png" alt="">
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </section>
@@ -48,30 +43,28 @@
   <!-- RIGHT -->
   <div class="right-data pure-u-11-12 pure-u-lg-11-24">
 
+    <!-- Title -->
     <div class="title-favorite pure-u-1">
-      <p class="pure-u-7-8">Apartamento privado</p>
-      <em class="icon-heart pure-u-1-8"></em>
+      <p>{{flat_types[p.Code] | translate('Name', L)}}</p>
+      <!--
+      <em class="icon-heart"></em>
+      -->
     </div>
 
+    <!-- Description -->
     <div class="text pure-u-1">
-      <p>Dicen que “el buen perfume se vende en frasco pequeño” y en este caso es 100% verdad. Esta tipología de habitación no tiene nada que envidiar a las demás ya que posee todo lo necesario para poder dormir, teletrabajar o impulsar el mejor negocio de la historia.<br>
-      Escritorio, espacio de almacenaje, cama individual y el espacio suficiente como para crear tu propia república independiente.</p>
+      <p>{{flat_types[p.Code].Texts[0] | translate('Description', L)}}</p>
     </div>
 
     <div class="option pure-u-1">
       <p class="persons">
-      Apartamento Privado
+      <p>{{flat_types[p.Code].Texts[0] | translate('Description', L)}}</p>
       </p>
       <p class="bold">
       {% literal texts, 'price-desde', L %} 740€/{% literal texts, 'price-mes', L %}
       </p>
     </div>
 
-    <form class="pure-form">
-    <fieldset>
-    </fieldset>
-    </form>
-    
     <section class="apartment-services pure-u-1">
       <div id="splideApartment" class="splide splide-services" role="group">
         <div class="splide__track">
@@ -95,25 +88,35 @@
     </section>
 
     <div class="buttons pure-u-1">
-      <button class="btn-secondary">Reservar</button>
-      <button class="btn-primary">Agendar Visita</button>
+      <button class="btn-secondary" onclick="go_book('{{p.Code}}');">{% literal texts, 'button-reservar', L %}</button>
+      <button class="btn-primary" onclick="go_visit('{{p.Code}}');">{% literal texts, 'button-visita', L %}</button>
     </div>
 
   </div>
 
-  <!-- TEXT EXPANSION -->
+  <!-- Expansion -->
   <div class="description text pure-u-23-24">
-    <div class="expansion pure-u-1">
-      <p>Información adicional</p>
-      <input type="checkbox" class="tab pure-u-1-2" id="tab1" tabindex="0"/>
-      <label name="tab" for="tab1" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
-        <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
-      </label>
-      <div class="content pure-u-1">
-        <p>Se deberá abonar en único pago, una fianza de 900€ o el equivalente a una mensualidad si la renta supera los 900€. Este depósito será devuelto en un plazo máximo de 30 días posterior a la fecha de salida siempre y cuando no haya habido ningún desperfecto en el apartamento. ​Se deberán abonar en un único pago, 375€ en calidad de gastos de gestión de contrato. ​Si necesitas más información acerca de las condiciones de reserva, puedes hacerlo mediante este enlace</p>
+      <div class="expansion pure-u-1">
+        <p>{% literal texts, 'informacion-adicional-titulo', L %}</p>
+        <input type="checkbox" class="tab pure-u-1-2" id="tab1" tabindex="0"/>
+        <label name="tab" for="tab1" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
+          <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+        </label>
+        <div class="content pure-u-1">
+          <p>{% literal texts, 'informacion-adicional-texto', L %}</p>
+        </div>
       </div>
-    </div>
   </div>
 
 </section>
 {% endfor %}
+{% endfor %}
+
+{% block footer %}
+{% set script %}
+function go_book(id) {
+}
+function go_visit(id) {
+}
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

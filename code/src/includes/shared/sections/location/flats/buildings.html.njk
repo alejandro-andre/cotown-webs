@@ -95,8 +95,7 @@
                     {% endfor %}
                     {% endfor %}
 
-                    ¡¡¡FLAT!!!
-
+                    <p>{% literal texts, 'price-desde', L %} {{min}}€/{% literal texts, 'price-mes', L %}</p>
                   </div>
 
                   <!-- Internal slider -->
@@ -288,10 +287,14 @@ new Splide('#sliderFlats', {
   padding: '6rem'
 }).mount();
 {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+{% if flats | find('id', 'eq', b.id) | length > 0 %}
 new Splide('#sliderMini_{{b.id}}', { type: 'loop', gap: '16px', pagination: false, perMove: 1, perPage: 9 }).mount();
+{% endif %}
 {% endfor %}
 {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+{% if flats | find('id', 'eq', b.id) | length > 0 %}
 new Splide('#sliderMiniMobile_{{b.id}}', { type: 'loop', gap: '16px', arrows: false, pagination: false, perMove: 1, perPage: 6 }).mount();
+{% endif %}
 {% endfor %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
