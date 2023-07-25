@@ -193,7 +193,10 @@ module.exports = (eleventyConfig) => {
         formats: ["webp", "jpeg"],
         urlPath: "/assets/img/",
         outputDir: eleventyConfig.outputDir + "/assets/img/",
-        cacheOptions: { removeUrlQueryParams: true },
+        cacheOptions: { 
+          duration: "1h",
+          removeUrlQueryParams: true,
+        },
         filenameFormat: function (id, src, width, format, options) {
           return `${slugify(name)}-${width}.${format}`;
         }
