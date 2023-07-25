@@ -145,7 +145,7 @@ input:focus-visible + label {
 }
 .tab-panel .locations-container .location .text-content h2 {
   font-weight: 400;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 124%;
   letter-spacing: -0.6px;
   margin: 0;
