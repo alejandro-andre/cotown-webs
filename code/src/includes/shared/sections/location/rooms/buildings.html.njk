@@ -196,6 +196,7 @@
   <div class="pisos mobile pure-u-1">
     <div class="piso-contain pure-u-1">
       {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+      {% set photo = b.Photos | find ('Image_type', 'eq', 'habitacion') | first %}
       <div class="piso-main pure-u-1">
 
         <!-- Photo -->

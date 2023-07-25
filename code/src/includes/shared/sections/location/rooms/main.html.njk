@@ -44,11 +44,12 @@
     {% endfor %}
     {% endfor %}
 
+    {% if min < 9999 %}
     <div id="{{b.id}}" style="display: none;">
       <div class="mappopup" onclick="location.href='{{langs[L].folder}}/{{b.Name | slugify}}.html';">
         {% image
           constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id  +"/Image/contents?access_token=" + token,
-          .id b.Name, b.Name + '_' + photo.id | slugify, "",
+          b.Name, b.Name + '_' + photo.id | slugify, "",
           [200], ""
         %}
         <div class="info">
@@ -58,6 +59,7 @@
         </div>
       </div>
     </div>
+    {% endif %}
     {% endfor %}
 
   </section>
