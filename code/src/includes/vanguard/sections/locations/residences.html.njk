@@ -88,7 +88,7 @@
         <div class="pure-u-8-24 pure-u-lg-4-24">
           <div class="type">
             <p>{{place_types[pt.Code] | translate('Name', L)}}</p>
-            <p class="price">{{pt.Flat_types[0].Rent_long}}€/{% literal texts, 'price-mes', L %}</p>
+            <p class="price">{{pt.Flat_subtypes[0].Rent_long}}€/{% literal texts, 'price-mes', L %}</p>
           </div>
         </div>
         {% endfor %}

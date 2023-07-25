@@ -1,6 +1,6 @@
 {% set show = true %}
 {% for r in flats | find('id', 'eq', building.id) %}
-{% for p in r.Flat_types %}
+{% for p in r.Flat_subtypes %}
 <section class="card-room pure-u-1 pure-u-lg-22-24">
 
   <!-- LEFT -->
@@ -9,7 +9,7 @@
     <section id="main-carousel-{{p.Code}}" class="splide rooms-carousel" aria-label="Gallery">
       <div class="splide__track">
         <ul class="splide__list">
-          {% for rp in photos | find('Building.id', 'eq', building.id) | find('Flat_type.Code', 'eq', p.Code) %}
+          {% for rp in photos | find('Building.id', 'eq', building.id) | find('Flat_subtype.Code', 'eq', p.Code) %}
           <li class="splide__slide">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
@@ -25,7 +25,7 @@
     <section id="thumbnail-carousel-{{p.Code}}" class="splide" aria-label="Thumbnails">
       <div class="splide__track">
         <ul class="splide__list">
-          {% for rp in photos | find('Building.id', 'eq', building.id) | find('Flat_type.Code', 'eq', p.Code) %}
+          {% for rp in photos | find('Building.id', 'eq', building.id) | find('Flat_subtype.Code', 'eq', p.Code) %}
           <li class="splide__slide">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
@@ -45,7 +45,7 @@
 
     <!-- Title -->
     <div class="title-favorite pure-u-1">
-      <p>{{flat_types[p.Code] | translate('Name', L)}}</p>
+      <p>{{flat_subtypes[p.Code] | translate('Name', L)}}</p>
       <!--
       <em class="icon-heart"></em>
       -->
@@ -53,12 +53,12 @@
 
     <!-- Description -->
     <div class="text pure-u-1">
-      <p>{{flat_types[p.Code].Texts[0] | translate('Description', L)}}</p>
+      <p>{{flat_subtypes[p.Code].Texts[0] | translate('Description', L)}}</p>
     </div>
 
     <div class="option pure-u-1">
       <p class="persons">
-        {{flat_types[p.Code].Texts[0] | translate('Description', L)}}
+        {{flat_subtypes[p.Code].Texts[0] | translate('Description', L)}}
       </p>
       <p class="bold">
         {% literal texts, 'price-desde', L %} 740€/{% literal texts, 'price-mes', L %}

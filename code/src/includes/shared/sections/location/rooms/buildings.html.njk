@@ -88,7 +88,7 @@
                     {% set minD = 9999 %}
                     {% for r in rooms | find('id', 'eq', b.id) %}
                     {% for p in r.Place_types %}
-                    {% for f in p.Flat_types %}
+                    {% for f in p.Flat_subtypes %}
                       {% if p.Code[0] == 'I' and minI > f.Rent_long %}
                         {% set minI = f.Rent_long %}
                       {% endif %}
@@ -217,7 +217,7 @@
           {% set minD = 9999 %}
           {% for r in rooms | find('id', 'eq', b.id) %}
           {% for p in r.Place_types %}
-          {% for f in p.Flat_types %}
+          {% for f in p.Flat_subtypes %}
             {% if p.Code[0] == 'I' and minI > f.Rent_long %}
               {% set minI = f.Rent_long %}
             {% endif %}

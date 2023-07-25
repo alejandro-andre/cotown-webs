@@ -66,7 +66,7 @@
       <p>{{place_types[p.Code].Texts[0] | translate('Description', L)}}</p>
     </div>
     <div class="share">
-      {% for f in p.Flat_types %}
+      {% for f in p.Flat_subtypes %}
       <div class="sharing">
         <div class="right">
           <p>{% literal texts, 'price-desde', L %} {{f.Rent_long}}€/{% literal texts, 'price-mes', L %}</p>
