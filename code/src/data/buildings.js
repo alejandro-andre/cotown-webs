@@ -17,6 +17,8 @@ module.exports = async (config) => {
       Lat_lon
       Description
       Description_en
+      Description_private
+      Description_private_en
       Details
       Details_en
       Details_private
