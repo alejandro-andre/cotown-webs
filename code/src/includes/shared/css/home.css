@@ -706,13 +706,16 @@ main .container-main .first-contain .text p {
         bottom: 86px;
     }
     .opinions .text-container {
-        padding: 0;
+        padding: 1em 0 0;
     }
     .cotownity {
         display: none;
     }
     .cotownity-mobile {
         display: block;
+    }
+    .splide-opinions.splide {
+        margin-top: 1em;
     }
     
 }
