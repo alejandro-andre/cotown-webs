@@ -170,7 +170,7 @@ module.exports = (eleventyConfig) => {
   // SVG inline shortcode
   eleventyConfig.addNunjucksAsyncShortcode('svg', async (src, name) => {
     // Get metadata
-    //console.log(`Retrieving svg ${name}`);
+    console.log(`Retrieving svg ${name}`);
     try {
       let metadata = await Image(src, {
         formats: ['svg'],

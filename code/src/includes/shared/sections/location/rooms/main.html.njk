@@ -44,8 +44,8 @@
     {% endfor %}
     {% endfor %}
 
-    {% if min < 9999 %}
-    <div id="{{b.id}}" style="display: none;">
+    {% if rooms | find('id', 'eq', b.id) | length > 0 %}
+    <div id="marker_{{b.id}}" style="display: none;">
       <div class="mappopup" onclick="location.href='{{langs[L].folder}}/{{b.Name | slugify}}.html';">
         {% image
           constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id  +"/Image/contents?access_token=" + token,
@@ -81,12 +81,14 @@
 var map = createMap("map", 41.3933, 2.1377, 16);
 var markerArray = [];
 {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+{% if rooms | find('id', 'eq', b.id) | length > 0 %}
 markerArray.push(putMarker(
   map,
   {{b.Lat_lon.slice(1,-1).split(',')[0]}},
   {{b.Lat_lon.slice(1,-1).split(',')[1]}},
-  document.getElementById("{{b.id}}").innerHTML
+  document.getElementById("marker_{{b.id}}").innerHTML
 ));
+{% endif %}
 {% endfor %}
 if (markerArray.length > 0) {
   var group = L.featureGroup(markerArray).addTo(map);
