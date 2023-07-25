@@ -61,8 +61,8 @@ def upload(folder, wildcard):
         if item[field]:
 
           # Skip already loaded
-          #if item[field]['width'] and item[field]['width'] > 10:
-          #  continue
+          if item[field]['width'] and item[field]['width'] > 160:
+            continue
 
           try:
             # File info
