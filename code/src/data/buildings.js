@@ -37,6 +37,7 @@ module.exports = async (config) => {
           orderBy: [{ attribute: Order }]
         ) {
           id
+          Image_type
           Order
           Name
         }
