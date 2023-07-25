@@ -3,12 +3,18 @@ module.exports = async (config) => {
   const gql = require('./graphql');
   const QUERY = `
   query data ($id: Int) {
-    data: Resource_Resource_flat_typeList {
+    data: Resource_Resource_flat_subtypeList {
       id
       Code
       Name
       Name_en
-      Texts: Resource_flat_textListViaFlat_type_id ( 
+      Amenities: Resource_flat_amenityListViaFlat_subtype_id {
+        Resource_amenity_typeViaAmenity_type_id {
+          Name
+          Name_en
+        }
+     }
+      Texts: Resource_flat_textListViaFlat_subtype_id ( 
         where: { Segment_id: { EQ: $id } }
       ) {
         Description
@@ -16,13 +22,14 @@ module.exports = async (config) => {
       }
     }
   }`;
-  const data = await gql(QUERY, config, 'flat_types');
+  const data = await gql(QUERY, config, 'flat_subtypes');
   const json = {};
   data.data.forEach(o => { json[o.Code] = { 
     id: o.id, 
     Code: o.Code, 
     Name: o.Name, 
     Name_en: o.Name_en,
+    Amenities: o.Amenities,
     Texts: o.Texts
   } });
   return(json); 

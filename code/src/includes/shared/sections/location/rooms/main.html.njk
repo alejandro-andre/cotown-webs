@@ -35,7 +35,7 @@
     {% set min = 9999 %}
     {% for r in rooms | find('id', 'eq', b.id) %}
     {% for p in r.Place_types %}
-    {% for f in p.Flat_types %}
+    {% for f in p.Flat_subtypes %}
       {% if min > f.Rent_long %}
         {% set min = f.Rent_long %}
       {% endif %}

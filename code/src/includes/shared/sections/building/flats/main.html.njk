@@ -63,7 +63,7 @@ new Splide("#splideServices", {
 
 // Sliders tipos de piso
 {% for r in flats | find('id', 'eq', building.id) %}
-{% for p in r.Flat_types %}
+{% for p in r.Flat_subtypes %}
 var main{{p.Code}} = new Splide( '#main-carousel-{{p.Code}}', {
   type: 'fade',
   rewind: true,
