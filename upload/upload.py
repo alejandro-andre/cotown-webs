@@ -20,8 +20,8 @@ import sys
 # Constants
 # ##################################################
 
+#SERVER = 'experis.flows.ninja'
 SERVER = 'core.cotown.com'
-SERVER = 'experis.flows.ninja'
 USER   = 'modelsadmin'
 PASS   = 'Ciber$2022'
 
