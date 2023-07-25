@@ -72,7 +72,7 @@ new Splide("#splideServices", {
 // Sliders tipos de habitacion
 {% for r in rooms | find('id', 'eq', building.id) %}
 {% for p in r.Place_types %}
-var main{{p.Code}} = new Splide( '#main-carousel-{{p.Code}}', {
+var main_{{p.id}} = new Splide( '#main-carousel-{{p.Code}}', {
   type: 'fade',
   rewind: true,
   pagination: true,
@@ -86,7 +86,7 @@ var main{{p.Code}} = new Splide( '#main-carousel-{{p.Code}}', {
     },
   },
 });
-var thumbnails{{p.Code}} = new Splide('#thumbnail-carousel-{{p.Code}}', {
+var thumbnails_{{p.id}} = new Splide('#thumbnail-carousel-{{p.Code}}', {
   fixedWidth: 240,
   fixedHeight: 180,
   rewind: true,
@@ -94,9 +94,9 @@ var thumbnails{{p.Code}} = new Splide('#thumbnail-carousel-{{p.Code}}', {
   arrows: false,
   isNavigation: true,
 });
-main{{p.Code}}.sync(thumbnails{{p.Code}});
-main{{p.Code}}.mount();
-thumbnails{{p.Code}}.mount();
+main_{{p.id}}.sync(thumbnails_{{p.id}});
+main_{{p.id}}.mount();
+thumbnails_{{p.id}}.mount();
 {% endfor %}
 {% endfor %}
 

@@ -58,14 +58,13 @@
         <ul class="splide__list carousel-main-list">
 
           {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+          {% set photo = b.Photos | find ('Image_type', 'eq', 'habitacion') | first %}
+
           <li class="splide__slide main-slide">
             <div class="card-contain">
               <div class="card shadow desktop">
 
                 <!-- Photo -->
-                {% set photo = b.Photos | find ('Image_type', 'eq', 'piso') | first %}
-                {{photo|dump}}
-                {{photo|log}}
                 <div class="ratio desktop">
                   <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
                     {% image
@@ -91,7 +90,7 @@
                     {% set minD = 9999 %}
                     {% for r in rooms | find('id', 'eq', b.id) %}
                     {% for p in r.Place_types %}
-                    {% for f in p.Flat_subtypes %}
+                    {% for f in p.Flat_types %}
                       {% if p.Code[0] == 'I' and minI > f.Rent_long %}
                         {% set minI = f.Rent_long %}
                       {% endif %}
