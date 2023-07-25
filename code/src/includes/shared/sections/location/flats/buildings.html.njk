@@ -65,11 +65,12 @@
               <div class="card shadow desktop">
 
                 <!-- Photo -->
+                {% set photo = b.Photos | find ('Image_type', 'eq', 'piso') | first %}
                 <div class="ratio desktop">
                   <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
                     {% image
-                        constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
-                        b.Name, b.Name + '_' + b.Photos[0].id | slugify, "card-img-top",
+                        constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
+                        b.Name, b.Name + '_' + photo.id | slugify, "card-img-top",
                         [800], ""
                     %}
                     <h3>{{b.Name}}</h3>
@@ -165,8 +166,8 @@
         <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
         <div class="img pure-u-1">
           {% image
-              constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
-              b.Name, b.Name + '_' + b.Photos[0].id | slugify, "card-img-top",
+              constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
+              b.Name, b.Name + '_' + photo.id | slugify, "card-img-top",
               [800], ""
           %}
         </div>
