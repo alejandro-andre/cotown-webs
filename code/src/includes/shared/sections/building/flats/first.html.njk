@@ -4,11 +4,11 @@
   <section id="image-carousel" class="splide first-slider pure-u-1" aria-label="Beautiful Images">
     <div class="splide__track">
       <ul class="splide__list">
-        {% for i in building.Photos %}
+        {% for i in building.Photos | find('Image_type', 'eq', 'piso') %}
         <li class="splide__slide">
           {% image
             constants.SERVER + "/wopi/files/Marketing/Media_building/" + i.id +"/Image/contents?access_token=" + token,
-            i.Name, i.Name + '_' + i.id | slugify, "",
+            building.Name, building.Name + '_' + i.id | slugify, "",
             [1200], ""
           %}
         </li>
