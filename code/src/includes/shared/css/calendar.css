@@ -144,7 +144,7 @@ button.date-button input:visited  {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
 }
 .calendar-container .dates-selector .selector-main .left table .calendar-header p {
     color: var(--secondary-black);   
@@ -272,7 +272,7 @@ button.date-button input:visited  {
     font-size: 22px;
     line-height: 22px;
     font-weight: 700;
-    text-decoration: 1px underline;
+    border-bottom: 1px solid black;
     margin: 0 0 0 2em;
     cursor: pointer;
 }
@@ -327,7 +327,7 @@ button.date-button input:visited  {
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 1em 2%;
+        padding: 0 2% 1em;
     }
     .calendar-container .dates-selector .mobile .close .icon-close {
         font-size: 20px;
@@ -347,7 +347,7 @@ button.date-button input:visited  {
     }
     .calendar-container .dates-selector .selector-header .left h2 {
         text-align: left;
-        font-size: 40px;
+        font-size: 34px;
         font-weight: 400;
         line-height: 100%;
         letter-spacing: -1.2px;
@@ -361,7 +361,12 @@ button.date-button input:visited  {
     .calendar-container .dates-selector .selector-header .right {
         display: none;
     }
-
+    .calendar-modal-content {
+        margin: 1% auto auto auto;
+        width: 96vw;
+        max-width: 96vw;
+        padding: 8px;
+    }
     #reservas_form {
         width: fit-conent;
         display: flex;
@@ -401,28 +406,51 @@ button.date-button input:visited  {
         justify-content: space-between;
         align-items: flex-start;
     }
+    .calendar-container .dates-selector .selector-main .right table .calendar-header,
     .calendar-container .dates-selector .selector-main table .calendar-header {
         justify-content: flex-start;
         flex-flow: row wrap;
+        align-items: center;
+    }  
+    .calendar-container .dates-selector .selector-main .left table .calendar-header a {
+        color: var(--secondary-black);
+        text-decoration: none;
+        font-size: 26px;
+        width: fit-content;
+        text-align: start;
+        padding: 0;
     }
-    /* .calendar-container .dates-selector .selector-main table .calendar-header .icon-left,
-    .calendar-container .dates-selector .selector-main table .calendar-header .icon-right  {
-        display: none;
-    } */
-    .calendar-container .dates-selector .selector-main .left table .calendar-header p,
-    .calendar-container .dates-selector .selector-main .right table .calendar-header p {
-        width: 100%;
-        text-align: left;
-        font-size: 25px;
+    .calendar-container .dates-selector .selector-main .left table .calendar-header p {
+        width: calc(96% - 120px);
+        text-align: center;
+        font-size: 22px;
         font-weight: 500;
         line-height: 140%;
+    }
+    .calendar-container .dates-selector .selector-main .right table .calendar-header a {
+        color: var(--secondary-black);
+        text-decoration: none;
+        font-size: 26px;       
+        width: fit-content;
+        text-align: start;
+        padding: 0;
+    }
+    .calendar-container .dates-selector .selector-main .right table .calendar-header p {
+        width: calc(96% - 60px);
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 140%;
+    }
+   
+    .calendar-container .dates-selector .selector-main .right table .calendar-header p {
+        padding-left: 4%;
     }
     .calendar-container .dates-selector .selector-main table thead.mobile {
         display: table-caption;
         width: 100%;
-        padding: 0 0 20px;
+        padding: 1em 0 10px;
     }
-
     .calendar-container .dates-selector .selector-main table thead.mobile tr {
         width: 100%;
         display: flex;
@@ -436,7 +464,8 @@ button.date-button input:visited  {
     .calendar-container .dates-selector .selector-main table tbody tr td {
         font-size: 12px;
         font-weight: 300;
-        line-height: 15px;
+        line-height: 12px;
+        padding: 6px;
     }
     .calendar-container .dates-selector .selector-main table thead.desktop {
         display: none;
