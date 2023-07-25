@@ -31,6 +31,7 @@
 
     <!-- Popups -->
     {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+    {% set photo = b.Photos | find ('Image_type', 'eq', 'piso') | first %}
 
     {% set min = 9999 %}
     {% for r in flats | find('id', 'eq', b.id) %}
@@ -44,8 +45,8 @@
     <div id="{{b.id}}" style="display: none;">
       <div class="mappopup" onclick="location.href='{{langs[L].folder}}/{{b.Name | slugify}}.html';">
         {% image
-          constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
-          b.Name, b.Name + '_' + b.Photos[0].id | slugify, "",
+          constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id  +"/Image/contents?access_token=" + token,
+          b.Name, b.Name + '_' + photo.id | slugify, "",
           [200], ""
         %}
         <div class="info">
