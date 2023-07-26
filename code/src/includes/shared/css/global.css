@@ -1325,6 +1325,51 @@ button.date-button input.inputs {
         font-size: 30px;
     }
 }
+
+.banner-residences {
+    margin: 0;
+    background-color: var(--primary);
+}
+.banner-residences .contain {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-light);
+    text-align: center;
+    margin: 0 0 4rem;
+    padding: 2rem 0;
+}
+
+.banner-residences .contain .title h2  {
+    width: 40%;
+    margin: auto;
+    line-height: 100%;
+}
+.banner-residences .contain .text p  {
+    width: 60%;
+    margin: 1em auto 1em;
+}
+.banner-residences .contain .text p {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 150%;
+}
+.banner-residences .contain .booking {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+.banner-residences .contain .booking button.btn-secondary {
+    position: absolute;
+    top: 16px;
+}
+.banner-residences .contain .booking button.btn-secondary em {
+    margin-left: 8px;
+}
+
 /* DESKTOP */
 @media only screen and (min-width: 1280px) {
     .container-header.first .turquoise-line {
@@ -2123,6 +2168,21 @@ button.date-button input.inputs {
         padding: 1.5em 0;
     }
 
+    .banner-residences .contain .title h2, .banner-residences .contain .text p  {
+        width: 80%;       
+    }
+    .banner-residences .contain .title h2 {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 110%;     
+    }
+   .banner-residences .contain .text p  {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;     
+    }
+
+
     /* FOOTER TABLET Y MOBILE  ___________________________*/
     footer section.container-footer {
         padding: 2em;
@@ -2203,7 +2263,6 @@ button.date-button input.inputs {
         padding: 0 5px;
     }
 }
-
 /* MOBILE */
 @media only screen and (max-width: 767px) {
     main .container-main section.members .grid .member {
