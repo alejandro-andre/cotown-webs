@@ -1,7 +1,4 @@
-<section class="first-contain">
-
-  <h1>{{location | translate('Name', L)}}</h1>
-
+<section class="first-contain"> 
   <div id="video" class="video-loc">
 
     <div class="video featured-bg-image">
@@ -12,8 +9,9 @@
         <source type="video/mp4" src="/assets/video/{{location.Name | slugify}}.mp4">
       </video>
     </div>
-
-    <div class="description text">
+    <div class="text-container">
+      <h1>{{location | translate('Name', L)}}</h1>
+      <div class="description text">
         <p>{{location | translate('Description', L)}}</p>
         <div class="expansion">
           <input type="checkbox" class="tab" id="tab1" tabindex="0"/>
@@ -26,7 +24,11 @@
             <p class="less"><span class="less">{% literal texts, 'location-leer-menos', L %}</span></p>
           </label>
         </div>
+      </div>
     </div>
+   
+
+    
 
   </div>
 
