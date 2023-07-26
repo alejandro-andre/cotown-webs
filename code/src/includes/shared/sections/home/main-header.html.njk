@@ -10,7 +10,7 @@
     <div class="basic-searcher pure-u-1">
 
       <label class="label">{% literal texts, 'home-bienvenido-donde', L %}:</label>
-      <select id="city" name="city" class="pure-u-1" onchange="localStorage.setItem('city', this.value);" required>
+      <select id="city" name="city" class="pure-u-1" onchange="get_types(this.value);" required>
         <option value="" disabled selected>{% literal texts, 'home-bienvenido-donde', L %}</option>
         {% for l in locations %}
         {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
@@ -43,7 +43,7 @@
     </div>
 
     <div class="button-search">
-      <a href="{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
+      <a href="#" onclick="go();">
       <button class="btn-primary search desktop"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
       <button class="btn-secondary search mobile"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
       </a>
@@ -79,44 +79,74 @@
 
 {% block footer %}
 {% set script %}
-// Types select
+// Types
 const types = [
-  {type:'Piso compartido',value:'{{texts["home-pisazos-piso"][L]}} {{texts["home-pisazos-compartido"][L]}}'},
-  {type:'Apartamento privado',value:'{{texts["home-pisazos-apartamento"][L]}} {{texts["home-pisazos-privado"][L]}}'},
-  {type:'Residencia universitaria',value:'{{texts["home-pisazos-residencia"][L]}} {{texts["home-pisazos-universitaria"][L]}}'}
+{% for l in locations-%}
+{% set rs = false-%}
+{% set pc = false-%}
+{% set ap = false-%}
+{% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 4)-%}
+  {% if b.Building_type_id == 3-%}
+    {% set rs = true-%}
+  {% else-%}
+    {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length > 0-%}
+    {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length > 0-%}
+    {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length > 0-%}
+    {% if ra > 0 or rp > 0 %}{% set pc = true %}{% endif-%}
+    {% if ra > 0 or rc > 0 %}{% set ap = true %}{% endif-%}
+  {% endif-%}
+{% endfor-%}
+{% if pc %}{ 
+  city:'{{l | translate('Name', L)}}', 
+  type:'Piso compartido',
+  link: '{{langs[L].folder}}/{{langs[L].pages.rooms.url}}-{{l | translate("Name", L) | slugify}}.html',
+  value:'{{texts["home-pisazos-piso"][L]}} {{texts["home-pisazos-compartido"][L]}}'
+},{% endif-%}
+{% if ap %}{
+  city:'{{l | translate('Name', L)}}', 
+  type:'Apartamento privado',
+  link: '{{langs[L].folder}}/{{langs[L].pages.flats.url}}-{{l | translate("Name", L) | slugify}}.html',
+  value:'{{texts["home-pisazos-apartamento"][L]}} {{texts["home-pisazos-privado"][L]}}'
+},{% endif-%}
+{% if rs %}{
+  city:'{{l | translate('Name', L)}}', 
+  type:'Residencia universitaria',
+  link: '{{langs[L].folder}}/{{langs[L].pages.residences.url | slugify}}.html',
+  value:'{{texts["home-pisazos-residencia"][L]}} {{texts["home-pisazos-universitaria"][L]}}'
+},{% endif-%}
+{% endfor-%}
 ];
 
-// Populate types select
+// Link
+function go() {
+  list = document.getElementById("type");
+  if (list) location.href = list.value;
+}
+
+// Populate 
 function get_types(value) {
 
   // Empty list
   list = document.getElementById("type");
   list.innerHTML = "";
 
-  // First opt
-  var opt = document.createElement("option");
-  opt.text = "{{texts['home-bienvenido-tipo'][L]}}";
-  opt.disabled = true;
-  opt.value = "";
-  list.add(opt);
-
   // Get city
-  if (value)
-    localStorage.setItem('city', value);
+  if (!value) return;
+  localStorage.setItem('city', value);
 
   // Fill building listid
   for (var i = 0; i < types.length; i++) {
     if (types[i].city == value) {
       var opt = document.createElement("option");
-      opt.value = buildings[i].building;
-      opt.text = buildings[i].building;
+      opt.value = types[i].link;
+      opt.text = types[i].type;
       list.add(opt);
     }
   }
 }
 
 document.getElementById('city').value  = localStorage.getItem('city');
-get_types();
+get_types(localStorage.getItem('city'));
 document.getElementById('type').value  = localStorage.getItem('type');
 document.getElementById('dates').value = localStorage.getItem('dates');
 document.getElementById('in').value    = localStorage.getItem('checkin');

@@ -13,8 +13,13 @@ module.exports = async (config) => {
           id
           Name
           Name_en
+          Icons: Media_amenityListViaAmenity_type_id (
+            where: { Segment_id: { EQ: $id } }
+          ) {
+            id
+          }
         }
-     }
+      }
       Texts: Resource_flat_textListViaFlat_subtype_id ( 
         where: { Segment_id: { EQ: $id } }
       ) {
