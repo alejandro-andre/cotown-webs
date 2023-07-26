@@ -13,12 +13,12 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 {% for b in banners | find('Page', 'eq', 'home') %}
 {% if loop.index == 1 and b | length > 0 %}
-<section class="container-header mobile-only first pure-g" id="first-line">
+<section class="container-header mobile-only first pure-g hidden" id="banner_{{b.id}}">
   <div class="turquoise-line pure-u-1-2 pure-u-lg-1" >
     <div class="left-content pure-u-md-1-2 pure-u-1" >
       <div class="banner-container pure-u-1">
         <div class="spot">
-          <a class="close" onclick="ocultarBannerMobile()">
+          <a class="close" onclick="ocultarBannerMobile('banner_{{b.id}}')">
             <em class="icon-close"></em>
           </a>
           <h1>{{b | translate('Text', L)}}</h1>

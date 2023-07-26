@@ -232,7 +232,7 @@ input:focus-visible + label {
     line-height: 110%;    
   }
   .locations .container-main .all-locations .location .text-content p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 150%;
   }
 }

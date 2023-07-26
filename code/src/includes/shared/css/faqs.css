@@ -163,7 +163,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .faqs-container .description.text .expansion h2 {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 150%;
     margin: 5px 0 10px 0;
   }
@@ -171,6 +171,6 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 20px;
   }
   .faqs-container .description.text .expansion .content p, .faqs-container .description.text .expansion .content p a, .faqs-container .description.text .expansion .content ul li {
-    font-size: 12px;
+    font-size: 14px;
   }
 }

@@ -434,7 +434,7 @@ button.date-button input:visited  {
         width: 14.25%;
     }
     .calendar-container .dates-selector .selector-main table tbody tr td {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 300;
         line-height: 12px;
         padding: 6px;
@@ -468,14 +468,14 @@ button.date-button input:visited  {
     }
     .calendar-container .dates-selector .selector-main .right .sticky-mobile p {        
         margin: 1em 0 0.5em 2em;
-        font-size: 12px;       
+        font-size: 14px;       
         font-weight: 400;
         line-height: 20px;
         margin: 0;
     }
     .calendar-container .dates-selector .selector-main .right .sticky-mobile a {
         color: var(--primary);
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 20px;
         text-decoration-line: underline;
@@ -491,7 +491,7 @@ button.date-button input:visited  {
     .calendar-container .dates-selector .selector-main .right .sticky-mobile .right button.btn-primary {
         color: var(--primary);
         border: 1px solid var(--primary);
-        font-size: 15px;
+        font-size: 16px;
     }
 
 }

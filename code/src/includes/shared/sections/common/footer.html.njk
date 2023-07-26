@@ -98,7 +98,22 @@
 
 </footer>
 
-<!-- JS -->
-{% set script %}{% include "shared/js/common.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
-
-
+<!-- JS / Banner -->
+{% set script %}
+{% include "shared/js/common.js" %}
+{% for b in banners | find('Page', 'eq', 'home') %}
+{% if loop.index == 1 and b | length > 0 %}
+// Banner
+window.onload = function() {
+  const item = "banner_{{b.id}}"
+  if (localStorage.getItem('banner') != item)
+    document.getElementById(item).classList.remove("hidden");
+}
+{% endif %}
+{% endfor %}
+function ocultarBannerMobile(item) {
+    document.getElementById(item).style.display = 'none';
+    document.getElementById(item).classList.add('hidden');
+    localStorage.setItem('banner', item);
+}
+{% endset %}<script>{{ script | jsmin | safe }}</script>

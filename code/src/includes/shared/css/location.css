@@ -224,7 +224,7 @@ h4 {
 button.green-button.btn-secondary {
     display: inline-flex;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 150%;
     padding: 6px 16px;
 }
@@ -413,10 +413,10 @@ section.necesities .grid .necesidad .p-text p {
         font-size: 16px;
     }
     .room-type .text-green p {
-        font-size: 13px;
+        font-size: 14px;
     }
     button.green-button.btn-secondary {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -496,7 +496,7 @@ section.necesities .grid .necesidad .p-text p {
     }
   
     main .location .container-main .first-contain .video-loc .text-container .description p {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 150%;
         margin: 0;
         padding: 0 2em;
@@ -525,7 +525,7 @@ section.necesities .grid .necesidad .p-text p {
         padding-left: 1em;
     }
     main .location .container-main .first-contain .video-loc .text-container .description p.more, main .location .container-main .first-contain .video-loc .text-container .description p.less {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 150%;
         margin: 0;
         padding: 0;
@@ -559,7 +559,7 @@ section.necesities .grid .necesidad .p-text p {
     }
     .pisos-slider .h2-container .button-map-mobile p {
         font-weight: 400;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 19px;
         margin:0
     }
@@ -645,13 +645,13 @@ section.necesities .grid .necesidad .p-text p {
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container span {
         font-weight: 400;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 150%;
         text-align: right;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container p {
         font-weight: 700;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 150%;
         margin: 0;
         text-align: right;
@@ -706,7 +706,7 @@ section.necesities .grid .necesidad .p-text p {
     }
     section.necesities .contain .text p {
         width: 100%;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 150%;
     }
     section.necesities .grid {
@@ -742,7 +742,7 @@ section.necesities .grid .necesidad .p-text p {
         margin: 0;
     }
     section.necesities .grid .necesidad .p-text p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
 }

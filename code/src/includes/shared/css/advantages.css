@@ -188,7 +188,7 @@ button.btn-secondary {
         letter-spacing: 2.4px;
     }
     main .container-main .first-contain .advantages.title-big .text p {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 150%;
     }
@@ -224,7 +224,7 @@ button.btn-secondary {
         font-size: 36px;
     }
     main .container-main section.container-advantages .grid .promo .promo-contain .promo-text {
-        font-size: 12px;
+        font-size: 14px;
     }
     main .container-main section.container-advantages .grid .promo-contain {
         width: calc(50% - 2em);

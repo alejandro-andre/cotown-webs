@@ -188,7 +188,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .residence-locations .residence-card .services .service .description  {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -285,7 +285,7 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 11px;
   }
   .residence-locations .residence-card .types .type p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .residence-locations .residence-card .types .type p.price {
     font-size: 17px;

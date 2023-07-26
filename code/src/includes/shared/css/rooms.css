@@ -155,7 +155,7 @@
 }
 .right-data .text p {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 150%;
 }
 .right-data .option {
@@ -462,7 +462,7 @@ margin-bottom: 0.5em;
   }
   .right-data .option p.persons {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 150%;
     text-transform: uppercase;
   }
@@ -475,10 +475,10 @@ margin-bottom: 0.5em;
     justify-content: space-between;
   }
   .card-room .description.text .expansion p {
-  font-size: 14px;
+  font-size: 16spx;
   }
   .card-room .description.text .expansion .content p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .right-data .buttons button {
     height: 46px;
@@ -497,7 +497,7 @@ margin-bottom: 0.5em;
   }
   .last .left .text p {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     margin: 1em 0 2em;
   }
 

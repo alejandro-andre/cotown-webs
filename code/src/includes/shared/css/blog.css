@@ -144,7 +144,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .post .mark .icon-star {
   color: var(--white);
-  font-size: 14px;
+  font-size: 16px;
 }
 .post .date {
   position: absolute;
@@ -402,7 +402,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     padding: 8px 14px;
   }
   .search .search-container label input {
-    font-size: 14px;
+    font-size: 16px;
   }
   .search .search-container label em.icon-search {
     font-size: 22px;
@@ -464,14 +464,14 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
     font-size: 25px;
   }
   main.post-page .container-main .post-content .text .text-content p, main.post-page .container-main .post-content .text .text-content ul li, main.post-page .container-main .post-content .text .text-content ol li {
-    font-size: 14px;
+    font-size: 16px;
   }
   main.post-page .container-main .post-content .text .text-content ul li {
     padding-left: 12px;
   }
 
   main.post-page .container-main .post-content .text .text-content p strong,  main.post-page .container-main .post-content .text .text-content p em {
-    font-size: 14px;
+    font-size: 16px;
   }
   main.post-page .container-main .like-content {
       margin: 0;

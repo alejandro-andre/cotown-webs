@@ -78,12 +78,7 @@ function mostrarMenuMobile() {
     document.getElementById('menu-desplegado').style.position = 'absolute';
     document.getElementById('only-mobile-menu').style.position = 'fixed';
 }
-
 function ocultarMenuMobile() {
     document.getElementById('menu-desplegado').style.position = 'static';
     document.getElementById('only-mobile-menu').style.position = 'static';
-}
-
-function ocultarBannerMobile() {
-    document.getElementById('first-line').style.display = 'none';
 }
