@@ -447,8 +447,10 @@ section.necesities .grid .necesidad .p-text p {
         font-size: 76px;
         top: 0;
     }
+    main .location .container-main .first-contain .video-loc .text-container .description {
+        width: 48%;
+    }
     main .location .container-main .first-contain .video-loc .text-container .description p {
-        width: 40%;
         font-size: 20px;
     }
     .pisos-slider .h2-container h2 {
