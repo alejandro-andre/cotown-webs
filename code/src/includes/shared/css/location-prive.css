@@ -57,6 +57,10 @@ main .location .container-main .first-contain .video-loc .description p {
 
 /* CARRUSEL
 -------------------------------- \*/
+section.location {
+    padding: 0 0 6em;
+    background-color: var(--primary);
+}
 .pisos-slider {
     display: flex;
     flex-flow: row wrap;
@@ -90,12 +94,14 @@ main .location .container-main .first-contain .video-loc .description p {
 .carousel .carousel-main-list .splide__slide {
     max-width: 70vw;
     margin-right: 6em !important;
+    border-radius: 24px;
 }
 .carousel .carousel-main-list .splide__slide .card-contain {
-    background-color: var(--white-background);
+    background-color: var(--primary-dark);
+    border-radius: 24px;
 }
 .carousel .carousel-main-list .splide__slide .card-contain .types {
-    background-color: var(--white-background);
+    background-color: var(--primary-dark);
 }
 .carousel .carousel-main-list  .splide__slid .card.desktop {
     width: 70vw;
@@ -105,17 +111,18 @@ main .location .container-main .first-contain .video-loc .description p {
     align-items: center;
     cursor: pointer;
     text-decoration:none;
-    color: var(--black);
+    color: var(--white);
 }
 a {
     cursor: pointer;
     text-decoration:none;
-    color: var(--black);
+    color: var(--white);
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop {
     position: relative;
     height: 360px;
     object-fit: cover;
+    border-radius: 24px;
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop img {
     border-top-left-radius: 20px;
@@ -138,11 +145,12 @@ a {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 0 0 1em;
     margin: 0;
     position: relative;
     z-index: 1000;
-    background-color: var(--white-background);
+    background-color: var(--primary-dark);
+    border-radius: 0 0 24px 24px;
 }
 .carousel .carousel-main-list .card .card-body a {
     width: 100%;
@@ -235,7 +243,7 @@ button.green-button.btn-secondary {
 .arrow-nav.splide__arrow {
     height: 4em;
     width: 4em;
-    background-color: var(--grey-background);
+    background-color: var(--white);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .arrow-nav.splide__arrow.splide__arrow--prev {
@@ -285,8 +293,17 @@ button.green-button.btn-secondary {
     margin: 0;
 }
 
+.splide__pagination__page.is-active {
+    background-color: var(--white);
+    transform: scale(1);
+}
+
+
+section.map {
+    background-color: var(--primary);
+}
 #map {
-    margin: 6em 0;
+    margin: 0;
 }
 
 section.necesities {
@@ -294,8 +311,9 @@ section.necesities {
     flex-flow: row wrap;
     justify-content: center;
     align-items: stretch;
-    padding: 0 4em;
-    margin: 4em 0 6em;
+    padding: 4em 4em 6em;
+    background-color: var(--primary);
+    color: var(--white);
 }
 section.necesities .contain {
     display: flex;
@@ -304,12 +322,14 @@ section.necesities .contain {
 section.necesities .contain .title h2 {
     width: 60%;
     padding: 0 0 0 2em;
+    color: var(--white);
 }
 section.necesities .contain .text p {
     font-weight: 300;
     font-size: 22px;
     line-height: 150%;
     width: 80%;
+    color: var(--white);
 }
 section.necesities .grid {
     display: flex;
@@ -328,6 +348,7 @@ section.necesities .grid .necesidad .p-title p {
     font-size: 24px;
     line-height: 150%;
     margin: 0 0 1em;
+    color: var(--white);
 }
 
 section.necesities .grid .necesidad .p-text p {
@@ -335,14 +356,15 @@ section.necesities .grid .necesidad .p-text p {
     font-size: 18px;
     line-height: 150%;
     margin: 0;
+    color: var(--white);
 }
 
 .photos {
     padding: 3em 0 5em 0;
     background: linear-gradient(
         to bottom, 
-        white 50%,
-        var(--primary) 50%
+        var(--primary) 50%,
+        var(--primary-dark) 50%
     );
 }
 .photos img {
@@ -556,8 +578,8 @@ section.necesities .grid .necesidad .p-text p {
     }
     .pisos.mobile .piso-contain {
         margin: 1em 0 2em;
-        background-color: var(--grey-light-background);
-        border: 1px solid var(--grey-light);
+        background-color: var(--primary-dark);
+        border: 1px solid var(--primary-dark);
         box-shadow: 0px 20px 30px rgba(22, 22, 22, 0.06);
         padding: 0 0 1em;
     }
@@ -594,7 +616,7 @@ section.necesities .grid .necesidad .p-text p {
         align-items: center;
         width: 40px;
         height: 40px;
-        background-color: var(--white-background);
+        background-color: var(--primary-dark);
         border-radius: 5px;
         object-fit: cover;
         object-position: center center;
@@ -680,8 +702,7 @@ section.necesities .grid .necesidad .p-text p {
     section.necesities {
         justify-content: flex-start;
         align-items: center;
-        padding: 0 1em;
-        margin: 2em 0;
+        padding: 2em 1em;
     }
     section.necesities .contain .title h2 {
         width: 100%;
@@ -712,8 +733,8 @@ section.necesities .grid .necesidad .p-text p {
         align-items: center;
         gap: 4px;
         border-radius: 4px;
-        border: 1px solid var(--background-primary);
-        background: var(--white-background);
+        border: 0px solid var(--background-primary);
+        background-color: var(--primary-dark);
         box-shadow: 0px 2px 3px 0px var(--shadow);
         text-align: center;
     }
