@@ -79,8 +79,45 @@
 
 {% block footer %}
 {% set script %}
-document.getElementById('type').value  = localStorage.getItem('type');
+// Types select
+const types = [
+  {type:'Piso compartido',value:'{{texts["home-pisazos-piso"][L]}} {{texts["home-pisazos-compartido"][L]}}'},
+  {type:'Apartamento privado',value:'{{texts["home-pisazos-apartamento"][L]}} {{texts["home-pisazos-privado"][L]}}'},
+  {type:'Residencia universitaria',value:'{{texts["home-pisazos-residencia"][L]}} {{texts["home-pisazos-universitaria"][L]}}'}
+];
+
+// Populate types select
+function get_types(value) {
+
+  // Empty list
+  list = document.getElementById("type");
+  list.innerHTML = "";
+
+  // First opt
+  var opt = document.createElement("option");
+  opt.text = "{{texts['home-bienvenido-tipo'][L]}}";
+  opt.disabled = true;
+  opt.value = "";
+  list.add(opt);
+
+  // Get city
+  if (value)
+    localStorage.setItem('city', value);
+
+  // Fill building listid
+  for (var i = 0; i < types.length; i++) {
+    if (types[i].city == value) {
+      var opt = document.createElement("option");
+      opt.value = buildings[i].building;
+      opt.text = buildings[i].building;
+      list.add(opt);
+    }
+  }
+}
+
 document.getElementById('city').value  = localStorage.getItem('city');
+get_types();
+document.getElementById('type').value  = localStorage.getItem('type');
 document.getElementById('dates').value = localStorage.getItem('dates');
 document.getElementById('in').value    = localStorage.getItem('checkin');
 document.getElementById('out').value   = localStorage.getItem('checkout');
