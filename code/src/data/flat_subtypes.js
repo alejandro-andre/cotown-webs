@@ -9,7 +9,8 @@ module.exports = async (config) => {
       Name
       Name_en
       Amenities: Resource_flat_amenityListViaFlat_subtype_id {
-        Resource_amenity_typeViaAmenity_type_id {
+        Amenity: Resource_amenity_typeViaAmenity_type_id {
+          id
           Name
           Name_en
         }
