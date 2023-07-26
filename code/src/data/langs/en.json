@@ -3,8 +3,8 @@
     "locale": "en_US",
     "pages": {
         "index":          { "url": "home",               "title": "Home",              "description": "" },
-        "rooms": { "url": "shared-flats",       "title": "Locations",         "description": "" },
-        "flats": { "url": "private-apartments", "title": "Locations",         "description": "" },
+        "rooms":          { "url": "shared-flats",       "title": "Locations",         "description": "" },
+        "flats":          { "url": "private-apartments", "title": "Locations",         "description": "" },
         "residences":     { "url": "residences",         "title": "residences",        "description": "" },
         "about":          { "url": "about-us",           "title": "About us",          "description": "" },
         "advantages":     { "url": "advantages",         "title": "Advantages",        "description": "" },

@@ -69,7 +69,7 @@
                   <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
                     {% image
                         constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
-                        b.Name, b.Name + '_' + photo.id | slugify, "card-img-top",
+                        b.Name, b.Name + '-' + photo.id | slugify, "card-img-top",
                         [800], ""
                     %}
                     <h3>{{b.Name}}</h3>
@@ -209,7 +209,7 @@
         <div class="img pure-u-1">
           {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
-              b.Name, b.Name + '_' + photo.id | slugify, "card-img-top",
+              b.Name, b.Name + '-' + photo.id | slugify, "card-img-top",
               [800], ""
           %}
         </div>

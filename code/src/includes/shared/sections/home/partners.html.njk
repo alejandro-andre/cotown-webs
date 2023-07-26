@@ -13,7 +13,7 @@
         <li class="img splide__slide">
           {% image
             constants.SERVER + "/wopi/files/Marketing/Partner/" + p.id +"/Image/contents?access_token=" + token,
-            p.Name, p.Name + '_' + p.id | slugify, "",
+            p.Name, p.Name + '-' + p.id | slugify, "",
             [300], ""
           %}
         </li>

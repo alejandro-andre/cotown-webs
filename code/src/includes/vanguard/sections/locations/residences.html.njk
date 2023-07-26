@@ -63,7 +63,7 @@
       <div class="img">
         {% image
            constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
-           b.Name, b.Name + '_' + b.Photos[0].id | slugify, "",
+           b.Name, b.Name + '-' + b.Photos[0].id | slugify, "",
            [800], ""
         %}
       </div>
