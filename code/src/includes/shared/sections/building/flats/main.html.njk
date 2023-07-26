@@ -89,6 +89,19 @@ var thumbnails_{{p.id}} = new Splide('#thumbnail-carousel-{{p.Code}}', {
 main_{{p.id}}.sync(thumbnails_{{p.id}});
 main_{{p.id}}.mount();
 thumbnails_{{p.id}}.mount();
+
+new Splide('#amenities-carousel-{{p.Code}}', {
+  type: 'slide',
+  autoHeight: true,
+  focus: 0,
+  perPage: 4,
+  perMove: 1,
+  gap: '1em',
+  pagination: false,
+  breakpoints: {
+    767: { perPage: 3, padding: '0.5em' },
+  },
+}).mount();
 {% endfor %}
 {% endfor %}
 
