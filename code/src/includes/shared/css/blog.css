@@ -236,7 +236,7 @@ main.post-page .container-main .post-content img {
   margin-bottom: 2em;
 }
 main.post-page .container-main .post-content .text .text-content h2, main.post-page .container-main .post-content .text .text-content h3 {
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 400;
   line-height: 110%;
   text-align: left;
@@ -285,7 +285,7 @@ main.post-page .container-main .like-content .like .text {
 }
 main.post-page .container-main .like-content .like .text h3 {
   font-weight: 400;
-  font-size: 64px;
+  font-size: 32px;
   line-height: 100%;
   color: var(--white);
   margin: 0;

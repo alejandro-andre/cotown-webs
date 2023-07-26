@@ -1365,6 +1365,7 @@ button.date-button input.inputs {
 }
 .banner-residences .contain .booking button.btn-secondary {
     position: absolute;
+    height: 44px;
     top: 16px;
 }
 .banner-residences .contain .booking button.btn-secondary em {

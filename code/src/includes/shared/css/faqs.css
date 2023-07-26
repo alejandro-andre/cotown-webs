@@ -82,7 +82,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .faqs-container .description.text .expansion h2 {
   width: 90%;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 30px;
   line-height: 150%;
   margin: 1em 0.2em;
@@ -162,7 +162,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin: 1em 0 0;
   }
   .faqs-container .description.text .expansion h2 {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     margin: 5px 0 10px 0;
