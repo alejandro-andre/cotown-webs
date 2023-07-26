@@ -8,17 +8,8 @@ main .location .container-main .first-contain {
     align-items: center;
     background-color: var(--primary);
 }
-main .location .container-main .first-contain h1 {
-    color: var(--white);
-    width: 100%;
-    text-align: center;
-    font-size: 120px;
-    line-height: 1em;
-    padding: 0.2em 0 0;
-}
 main .location .container-main .first-contain .video-loc {
-    width: 100%;
-    position: relative;
+    width: 100%;    
     min-height: fit-content;
 }
 main .location .container-main .first-contain .video-loc .video .img {
@@ -31,23 +22,41 @@ main .location .container-main .first-contain .video-loc .video .img img {
     object-fit: cover;
     object-position: center center;
 }
-main .location .container-main .first-contain .video-loc .description {
+main .location .container-main .first-contain .video-loc .text-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    top: -100px;
+    left: 70px;
+}
+main .location .container-main .first-contain .video-loc .text-container h1 {
+    color: var(--primary);
+    width: fit-content;
+    font-size: 120px;
+    line-height: 1em;
+    padding: 0.2em 0 0;
+    order: 2;
+    position: relative;
+    top: -2rem;
+    margin-left: 2rem;
+}
+main .location .container-main .first-contain .video-loc .text-container .description {
     width: 50%;
     min-height: fit-content;
     background-color: var(--primary);
     color: var(--white);
-    position: relative;
-    top: -100px;
-    left: 100px;
     padding: 1.5em 3.5em 1.5em 2em;
+    order: 1;
 }
-main .location .container-main .first-contain .video-loc .description .text {
+main .location .container-main .first-contain .video-loc .text-container .description .text {
     font-size: 30px;
     line-height: 150%;
     font-weight: 500;
     margin: 0;
 }
-main .location .container-main .first-contain .video-loc .description p {
+main .location .container-main .first-contain .video-loc .text-container .description p {
     font-size: 24px;
     line-height: 150%;
     font-weight: 500;
@@ -403,8 +412,6 @@ section.necesities .grid .necesidad .p-text p {
         font-size: 30px;
     }
 }
-
-
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
     main .location .container-main .first-contain h1 {
@@ -435,20 +442,19 @@ section.necesities .grid .necesidad .p-text p {
         font-size: 14px;
     }
 }
-
 @media only screen and (min-width: 1024px) and (max-width: 1400px){
-
-    main .location .container-main .first-contain h1 {
+    main .location .container-main .first-contain .video-loc .text-container h1 {
         font-size: 76px;
+        top: 0;
     }
-    main .location .container-main .first-contain .video-loc .description p {
+    main .location .container-main .first-contain .video-loc .text-container .description {
+        width: 48%;
+    }
+    main .location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 20px;
     }
     .pisos-slider .h2-container h2 {
         font-size: 46px;
-    }
-    section.necesities {
-        padding: 0 4em;
     }
     section.necesities .grid.pure-u-lg-3-4 {
         padding: 0 1em;
@@ -468,7 +474,6 @@ section.necesities .grid .necesidad .p-text p {
     }
 
 }
-
 @media only screen and (min-width: 1024px) {
     .pisos.mobile {
         display: none;
@@ -485,23 +490,28 @@ section.necesities .grid .necesidad .p-text p {
     }
 
 }
-
 /* MOBILE \*/
 @media only screen and (max-width: 1023.9px) {
-    main .location .container-main .first-contain h1 {
+    main .location .container-main .first-contain .video-loc .text-container {
+        top: -85px;
+        left: 0;
+    }
+    main .location .container-main .first-contain .video-loc .text-container h1 {
         font-size: 68px;
         line-height: 100%;
         margin:0.2em 0;
-    }
-    main .location .container-main .first-contain .video-loc .description {
-        width: 100%;
-        min-height: fit-content;
-        background-color: var(--white);
+        width: 100%;       
+        order: 1;
+        margin-left: 2rem;
         top: 0;
-        left: 0;
-        padding: 1em 0;
     }
-    main .location .container-main .first-contain .video-loc .description p {
+    main .location .container-main .first-contain .video-loc .text-container .description {
+        width: 100%;
+        order: 2;
+        padding: 0;
+    }
+  
+    main .location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 14px;
         line-height: 150%;
         margin: 0;
@@ -530,7 +540,7 @@ section.necesities .grid .necesidad .p-text p {
         margin-right: 0;
         padding-left: 1em;
     }
-    main .location .container-main .first-contain .video-loc .description p.more, main .location .container-main .first-contain .video-loc .description p.less {
+    main .location .container-main .first-contain .video-loc .text-container .description p.more, main .location .container-main .first-contain .video-loc .text-container .description p.less {
         font-size: 14px;
         line-height: 150%;
         margin: 0;
@@ -748,7 +758,7 @@ section.necesities .grid .necesidad .p-text p {
     }
     section.necesities .grid .necesidad .p-text p {
         font-size: 12px;
-    }
+    }   
 
 }
 @media only screen and (max-width: 768px) {
