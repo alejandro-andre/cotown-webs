@@ -43,7 +43,7 @@
     </div>
 
     <div class="button-search">
-      <a href="{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
+      <a href="#" onclick="go();">
       <button class="btn-primary search desktop"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
       <button class="btn-secondary search mobile"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
       </a>
@@ -96,11 +96,32 @@ const types = [
     {% if ra > 0 or rc > 0 %}{% set ap = true %}{% endif-%}
   {% endif-%}
 {% endfor-%}
-{% if pc %}{city:'{{l | translate('Name', L)}}', type:'Piso compartido',value:'{{texts["home-pisazos-piso"][L]}} {{texts["home-pisazos-compartido"][L]}}'},{% endif-%}
-{% if ap %}{city:'{{l | translate('Name', L)}}', type:'Apartamento privado',value:'{{texts["home-pisazos-apartamento"][L]}} {{texts["home-pisazos-privado"][L]}}'},{% endif-%}
-{% if rs %}{city:'{{l | translate('Name', L)}}', type:'Residencia universitaria',value:'{{texts["home-pisazos-residencia"][L]}} {{texts["home-pisazos-universitaria"][L]}}'},{% endif-%}
+{% if pc %}{ 
+  city:'{{l | translate('Name', L)}}', 
+  type:'Piso compartido',
+  link: '{{langs[L].folder}}/{{langs[L].pages.rooms.url}}-{{l | translate("Name", L) | slugify}}.html',
+  value:'{{texts["home-pisazos-piso"][L]}} {{texts["home-pisazos-compartido"][L]}}'
+},{% endif-%}
+{% if ap %}{
+  city:'{{l | translate('Name', L)}}', 
+  type:'Apartamento privado',
+  link: '{{langs[L].folder}}/{{langs[L].pages.flats.url}}-{{l | translate("Name", L) | slugify}}.html',
+  value:'{{texts["home-pisazos-apartamento"][L]}} {{texts["home-pisazos-privado"][L]}}'
+},{% endif-%}
+{% if rs %}{
+  city:'{{l | translate('Name', L)}}', 
+  type:'Residencia universitaria',
+  link: '{{langs[L].folder}}/{{langs[L].pages.residences.url | slugify}}.html',
+  value:'{{texts["home-pisazos-residencia"][L]}} {{texts["home-pisazos-universitaria"][L]}}'
+},{% endif-%}
 {% endfor-%}
 ];
+
+// Link
+function go() {
+  list = document.getElementById("type");
+  if (list) location.href = list.value;
+}
 
 // Populate 
 function get_types(value) {
@@ -108,14 +129,6 @@ function get_types(value) {
   // Empty list
   list = document.getElementById("type");
   list.innerHTML = "";
-
-  // First opt
-  //?var opt = document.createElement("option");
-  //?opt.text = "{{texts['home-bienvenido-tipo'][L]}}";
-  //?opt.disabled = true;
-  //?opt.value = "";
-  //?list.add(opt);
-  //?list.value = opt.value;
 
   // Get city
   if (!value) return;
@@ -125,7 +138,7 @@ function get_types(value) {
   for (var i = 0; i < types.length; i++) {
     if (types[i].city == value) {
       var opt = document.createElement("option");
-      opt.value = types[i].type;
+      opt.value = types[i].link;
       opt.text = types[i].type;
       list.add(opt);
     }
