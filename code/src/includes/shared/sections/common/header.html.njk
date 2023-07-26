@@ -11,8 +11,8 @@
 
 <!-- Mobile first header
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-{% set b = banners | find('Page', 'eq', 'home') | first %}
-{% if b | length > 0 %}
+{% for b in banners | find('Page', 'eq', 'home') %}
+{% if loop.index == 1 and b | length > 0 %}
 <section class="container-header mobile-only first pure-g" id="first-line">
   <div class="turquoise-line pure-u-1-2 pure-u-lg-1" >
     <div class="left-content pure-u-md-1-2 pure-u-1" >
@@ -31,6 +31,7 @@
   </div>
 </section>
 {% endif %}
+{% endfor %}
 
 <!-- Desktop first header
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -41,8 +42,8 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="left-content pure-u-md-14-24 pure-u-1" >
       <div class="banner-container pure-u-1">
-        {% set b = banners | find('Page', 'eq', 'home') | first %}
-        {% if b | length > 0 %}
+        {% for b in banners | find('Page', 'eq', 'home') %}
+        {% if loop.index == 1 and b | length > 0 %}
         <div class="spot">
           <h1>{{b | translate('Text', L)}}</h1>
         </div>
@@ -50,6 +51,7 @@
           <button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button>
         </a>
         {% endif %}
+        {% endfor %}
       </div>
     </div>
 

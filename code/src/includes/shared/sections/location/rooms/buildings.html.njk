@@ -58,8 +58,8 @@
         <ul class="splide__list carousel-main-list">
 
           {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
-          {% set photo = b.Photos | find ('Image_type', 'eq', 'habitacion') | first %}
-
+          {% for photo in b.Photos | find ('Image_type', 'eq', 'habitacion') %}
+          {% if loop.index == 1%}
           <li class="splide__slide main-slide">
             <div class="card-contain">
               <div class="card shadow desktop">
@@ -67,11 +67,13 @@
                 <!-- Photo -->
                 <div class="ratio desktop">
                   <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
+                    {% if photo %}
                     {% image
                         constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
                         b.Name, b.Name + '_' + photo.id | slugify, "card-img-top",
                         [800], ""
                     %}
+                    {% endif %}
                     <h3>{{b.Name}}</h3>
                   </a>
                 </div>
@@ -184,6 +186,8 @@
               </div>
             </div>
           </li>
+          {% endif %}
+          {% endfor %}
           {% endfor %}
 
         </ul>
@@ -196,17 +200,20 @@
   <div class="pisos mobile pure-u-1">
     <div class="piso-contain pure-u-1">
       {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
-      {% set photo = b.Photos | find ('Image_type', 'eq', 'habitacion') | first %}
+      {% for photo in b.Photos | find ('Image_type', 'eq', 'habitacion') %}
+      {% if loop.index == 1 %}
       <div class="piso-main pure-u-1">
 
         <!-- Photo -->
         <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
         <div class="img pure-u-1">
+          {% if photo %}
           {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
               b.Name, b.Name + '_' + photo.id | slugify, "card-img-top",
               [800], ""
           %}
+          {% endif %}
         </div>
         </a>
 
@@ -308,6 +315,8 @@
         </div>
 
       </div>
+      {% endif %}
+      {% endfor %}
       {% endfor %}
     </div>
   </div>

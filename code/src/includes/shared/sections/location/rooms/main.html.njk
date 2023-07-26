@@ -31,7 +31,8 @@
 
     <!-- Popups -->
     {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
-    {% set photo = b.Photos | find ('Image_type', 'eq', 'habitacion') | first %}
+    {% for photo in b.Photos | find ('Image_type', 'eq', 'habitacion') %}
+    {% if loop.index == 1 %}
 
     {% set min = 9999 %}
     {% for r in rooms | find('id', 'eq', b.id) %}
@@ -47,11 +48,13 @@
     {% if rooms | find('id', 'eq', b.id) | length > 0 %}
     <div id="marker_{{b.id}}" style="display: none;">
       <div class="mappopup" onclick="location.href='{{langs[L].folder}}/{{b.Name | slugify}}.html';">
+        {% if photo %}
         {% image
           constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id  +"/Image/contents?access_token=" + token,
           b.Name, b.Name + '_' + photo.id | slugify, "",
           [200], ""
         %}
+        {% endif %}
         <div class="info">
           <div class="address">{{b.Name}}</div>
           <div class="from">{% literal texts, 'price-desde', L %}</div>
@@ -60,6 +63,9 @@
       </div>
     </div>
     {% endif %}
+    
+    {% endif %}
+    {% endfor %}
     {% endfor %}
 
   </section>

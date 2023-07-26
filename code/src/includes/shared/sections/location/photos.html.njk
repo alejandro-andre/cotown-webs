@@ -3,7 +3,7 @@
   <div class="splide splide-gallery" role="group">
     <div class="splide__track">
       <ul class="splide__list">
-        {% for f in location.Images | find('id', 'eq', location.id) | find('Image_type', 'eq', 'galeria') %}
+        {% for f in location.Images | find('Image_type', 'eq', 'galeria') %}
         <li class="splide__slide">
           <div class="img">
           {% image

@@ -9,10 +9,13 @@
         {% include site + '/sections/common/footer-logo.html.njk' %}
         <div class="footer-info mobile">
           <div class="info">
-            {% set o = offices | first %}
+            {% for o in offices %}
+            {% if loop.index == 1 %}
             <p>{{o.Address}}</p>
             <p>{{o.Phones}}</p>
             <p>{{o.Email}}</p>
+            {% endif %}
+            {% endfor %}
           </div>
         </div>
       </div>

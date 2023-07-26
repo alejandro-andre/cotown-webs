@@ -59,7 +59,8 @@
 
           {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
           {% if flats | find('id', 'eq', b.id) | length > 0 %}
-          {% set photo = b.Photos | find ('Image_type', 'eq', 'piso') | first %}
+          {% for photo in b.Photos | find ('Image_type', 'eq', 'piso') %}
+          {% if loop.index == 1 %}
 
           <li class="splide__slide main-slide">
             <div class="card-contain">
@@ -149,6 +150,8 @@
 
           {% endif %}
           {% endfor %}
+          {% endif %}
+          {% endfor %}
 
         </ul>
 
@@ -161,7 +164,8 @@
     <div class="piso-contain pure-u-1">
       {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
       {% if flats | find('id', 'eq', b.id) | length > 0 %}
-      {% set photo = b.Photos | find ('Image_type', 'eq', 'piso') | first %}
+      {% for photo in b.Photos | find ('Image_type', 'eq', 'piso') %}
+      {% if loop.index == 1 %}
       <div class="piso-main pure-u-1">
 
         <!-- Photo -->
@@ -273,6 +277,8 @@
         </div>
 
       </div>
+      {% endif %}
+      {% endfor %}
       {% endif %}
       {% endfor %}
     </div>
