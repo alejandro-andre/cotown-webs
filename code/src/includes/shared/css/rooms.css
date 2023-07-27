@@ -439,6 +439,9 @@ margin-bottom: 0.5em;
 
 /* RESPONSIVE \*/
 @media only screen and (max-width: 1023.9px) {
+  .first .first-contain .first-slider .title-button h1 { 
+    font-size: 96px;
+  }
   .first .first-contain .after-slide .text-first {
     margin-left: 2em;
   }

@@ -160,6 +160,7 @@ a {
     z-index: 1000;
     background-color: var(--primary-dark);
     border-radius: 0 0 24px 24px;
+    min-height: 280px;
 }
 .carousel .carousel-main-list .card .card-body a {
     width: 100%;
@@ -180,7 +181,7 @@ a {
 }
 .flex-grow-1 p {
     font-size: 18px;
-    min-height: 40px;
+    min-height: 20px;
     overflow: hidden;
 }
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type {
@@ -320,20 +321,17 @@ button.green-button.btn-secondary {
 }
 .carousel .carousel-main-list .card .card-body .price p {
     font-size: 15px;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 164%;
     letter-spacing: -.15px;
     margin-right: 10px;
 }
 .carousel .carousel-main-list .card .card-body .price h5 {
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 100%;
     letter-spacing: -0.6px;
 }
-
-
-
 section.map {
     background-color: var(--primary);
 }

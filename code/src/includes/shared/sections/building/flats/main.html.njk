@@ -91,12 +91,11 @@ main_{{p.id}}.mount();
 thumbnails_{{p.id}}.mount();
 
 new Splide('#amenities-carousel-{{p.Code}}', {
-  type: 'slide',
+  type: 'loop',
   autoHeight: true,
-  focus: 0,
   perPage: 4,
   perMove: 1,
-  gap: '1em',
+  gap: '5px',
   pagination: false,
   breakpoints: {
     767: { perPage: 3, padding: '0.5em' },
