@@ -57,11 +57,17 @@
     </div>
 
     <div class="option pure-u-1">
-      <p class="persons">
+      <p class="bold">
         {{flat_subtypes[p.Code].Texts[0] | translate('Description', L)}}
       </p>
       <p class="bold">
-        {% literal texts, 'price-desde', L %} 740€/{% literal texts, 'price-mes', L %}
+        {% for f in flats | find('id', 'eq', building.id) %}
+        {% for t in f.Flat_subtypes | find('Code', 'eq', p.Code) %}
+        {% if loop.index == 1 %}
+        {% literal texts, 'price-desde', L %} {{t.Rent_long}} €/{% literal texts, 'price-mes', L %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
       </p>
     </div> 
     
@@ -71,7 +77,7 @@
           <ul class="splide__list">
             {% for s in flat_subtypes[p.Code].Amenities %}
             <li class="splide__slide">
-              <div class="slide ">
+              <div class="slide">
                 <div class="img">                
                   {% svg
                     constants.SERVER + "/wopi/files/Marketing/Media_amenity/" + s.Amenity.Icons[0].id +"/Icon/contents?access_token=" + token,
@@ -89,7 +95,7 @@
 
     <div class="buttons pure-u-1">
       <button class="btn-secondary" onclick="go_book('{{p.Code}}');">{% literal texts, 'button-reservar', L %}</button>
-      <button class="btn-primary" onclick="go_visit('{{p.Code}}');">{% literal texts, 'button-visita', L %}</button>
+      <button class="btn-primary" onclick="go_visit();">{% literal texts, 'button-visita', L %}</button>
     </div>
 
   </div>
@@ -120,10 +126,9 @@ function go_book(id) {
   localStorage.setItem('type', id);
   location.href = "{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
 }
-function go_visit(id) {
+function go_visit() {
   localStorage.setItem('city', '{{building.District.Location.Name}}');
   localStorage.setItem('building', '{{building.Name}}');
-  localStorage.setItem('type', id);
   location.href = "{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html";
 }
 {% endset %}<script>{{ script | jsmin | safe }}</script>

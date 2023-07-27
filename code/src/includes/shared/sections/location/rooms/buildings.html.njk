@@ -109,7 +109,7 @@
                       <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I">
                       <img src="/assets/img/icono__hab_habitacion_individual.svg">
                       <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
-                      <p>{% literal texts, 'price-desde', L %} {{minI}}€/{% literal texts, 'price-mes', L %}</p>
+                      <p>{% literal texts, 'price-desde', L %} {{minI}} €/{% literal texts, 'price-mes', L %}</p>
                       <!-- TODO - Quedan N
                       <div class="text-green"><p>SOLO QUEDAN 2 HABITACIONES</p></div>
                       -->
@@ -123,7 +123,7 @@
                       <a href="{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D">
                       <img src="/assets/img/icono__hab_habitacion_compartida.svg">
                       <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
-                      <p>{% literal texts, 'price-desde', L %} {{minD}}€/{% literal texts, 'price-mes', L %}</p>
+                      <p>{% literal texts, 'price-desde', L %} {{minD}} €/{% literal texts, 'price-mes', L %}</p>
                       </a>
                     </div>
                     {% endif %}
@@ -258,7 +258,7 @@
               </div>
               <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minI}}€/{% literal texts, 'price-mes', L %}</p>
+                <p>{{minI}} €/{% literal texts, 'price-mes', L %}</p>
               </div>
             </div>
             </a>
@@ -275,7 +275,7 @@
               </div>
               <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minD}}€/{% literal texts, 'price-mes', L %}</p>
+                <p>{{minD}} €/{% literal texts, 'price-mes', L %}</p>
               </div>
             </div>
             {% endif %}

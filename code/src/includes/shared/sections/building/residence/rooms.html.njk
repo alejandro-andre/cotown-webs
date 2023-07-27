@@ -69,7 +69,7 @@
       {% for f in p.Flat_types %}
       <div class="sharing">
         <div class="right">
-          <p>{% literal texts, 'price-desde', L %} {{f.Rent_long}}€/{% literal texts, 'price-mes', L %}</p>
+          <p>{% literal texts, 'price-desde', L %} {{f.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
         </div>
       </div>
       {% endfor %}
@@ -91,7 +91,7 @@
 
     <div class="buttons pure-u-1">
       <button class="btn-secondary" onclick="go_book('{{p.Code}}');">{% literal texts, 'button-reservar', L %}</button>
-      <button class="btn-primary" onclick="go_visit('{{p.Code}}');">{% literal texts, 'button-visita', L %}</button>
+      <button class="btn-primary" onclick="go_visit('{{building.Name}}');">{% literal texts, 'button-visita', L %}</button>
     </div>
 
   </div>
@@ -125,8 +125,7 @@ function go_book(id) {
 }
 function go_visit(id) {
   localStorage.setItem('city', '{{building.District.Location.Name}}');
-  localStorage.setItem('building', '{{building.Name}}');
-  localStorage.setItem('type', id);
+  localStorage.setItem('building', id);
   location.href = "{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html";
 }
 {% endset %}<script>{{ script | jsmin | safe }}</script>

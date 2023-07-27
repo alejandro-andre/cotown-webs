@@ -197,7 +197,12 @@
 }
 .right-data .option p {
   margin: 0;
+  padding: 1em 0;
   color: var(--white);
+}
+.right-data .option .bold {
+  font-weight: 700;
+  font-size: 18px;
 }
 .right-data .apartment-services {
   text-align: center;
@@ -227,13 +232,13 @@
   color: var(--white);
 }
 .right-data .apartment-services .splide-services .splide__list .splide__slide .slide .img {
-    width: 36px;
+  width: 48px;
 }
 .right-data .apartment-services .splide-services .splide__list .splide__slide .slide svg .svg_base { 
   fill:#fff !important;
 }
 .right-data .apartment-services .splide-services .splide__list .splide__slide .slide svg .svg_accent {
-   fill:#fff!important; 
+   fill:#333 !important; 
 }
 .right-data .apartment-services .splide-services .splide__arrow {
   background-color: var(--white);
@@ -374,7 +379,7 @@ color: var(--white);
 }
 .last h2 {
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--footer);
 }
 .last h2 span {
   color: var(--white);

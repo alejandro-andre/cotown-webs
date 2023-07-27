@@ -813,10 +813,10 @@ section.necesities .grid .necesidad .p-text p {
         padding: 0;
     }
     section.necesities .grid .necesidad .img svg .svg_base { 
-        fill:#fff !important;
+        fill:#ffffff !important;
      }
     section.necesities .grid .necesidad .img svg .svg_accent {
-         fill:#ff5166!important; 
+         fill:#343434 !important; 
     }
     section.necesities .grid .necesidad .p-title p {
         font-size: 15px;

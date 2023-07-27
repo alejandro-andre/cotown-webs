@@ -68,7 +68,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-ciudad', L %}</label>
-          <select class="select" type="select" id="101" name="101" required onchange="buildings();">
+          <select class="select" type="select" id="101" name="101" required onchange="get_buildings();">
             <option value="" disabled selected>{% literal texts, 'form-ciudad', L %}</option>
             {% for l in locations %}
               <option value="{{l.Name}}">{{l | translate('Name', L)}}</option>
@@ -123,27 +123,43 @@ tags: page
 {% block footer %}
 {% set script %}
 // Buildings list
-var opts = [
-{% for b in buildings-%}
+var buildings = [
+{% for b in buildings | find('Building_type_id', 'lt', 4)-%}
 {city:'{{b.District.Location.Name}}',building:'{{b.Name}}'},
 {% endfor-%}
 ];
-function buildings(event) {
-  city = document.getElementById("101").value;
+
+// Populate buildings select
+function get_buildings(value) {
+
+  // Empty list
   list = document.getElementById("100");
   list.innerHTML = "";
-  for (var i = 0; i < opts.length; i++) {
-    if (opts[i].city == '' || opts[i].city == city) {
+
+  // Get city
+  if (value)
+    localStorage.setItem('city', value);
+  else
+    value = document.getElementById('101').value
+
+  // Fill building listid
+  for (var i = 0; i < buildings.length; i++) {
+    if (buildings[i].city == value) {
       var opt = document.createElement("option");
-      opt.value = opts[i].building;
-      opt.text = opts[i].building;
-      if (opts[i].city == '') {
-        opts.disabled = true;
+      opt.value = buildings[i].building;
+      opt.text = buildings[i].building;
+      if (buildings[i].city == '') {
+        buildings.disabled = true;
       }
       list.add(opt);
     }
   }
 }
+
+// Load
+document.getElementById('101').value = localStorage.getItem('city');
+get_buildings(null);
+document.getElementById('100').value = localStorage.getItem('building');
 {% include "shared/js/ac.js" %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

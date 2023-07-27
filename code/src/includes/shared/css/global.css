@@ -1058,6 +1058,7 @@ footer section.container-footer .footer-info.mobile {
 .splide__arrow {
     width: 3em;
     height: 3em;
+    opacity: 0.6;
 }
 .splide__arrow svg {
     fill: var(--black);
