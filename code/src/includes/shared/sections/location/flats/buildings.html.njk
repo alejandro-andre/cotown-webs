@@ -144,6 +144,12 @@
                     </div>
                   </div>
 
+                  <!-- DESDE -->
+                  <div class="price">
+                    <p>desde</p>
+                    <h5>XXX€/mes</h5>
+                  </div>
+
                 </div>
 
               </div>
@@ -240,24 +246,26 @@
 
             <!-- Apartamento privado -->
             <div class="type pure-u-22-24">
-              <div class="img-container pure-u-3-24">
-                <img src="/assets/img/icono__hab_apartamento_privado.svg">
-              </div>
-              <div class="h4-container pure-u-12-24">
-                <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
-              </div>
-              <div class="button-container pure-u-7-24">
-                <button 
-                  class="btn-secondary green-button" 
-                  onclick="location.href='{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html'">
-                {% literal texts, 'price-mas', L %}
-                </button>
+              <div class="left">
+                <div class="img-container">
+                  <img src="/assets/img/icono__hab_apartamento_privado_primary.svg">
+                </div>
+                <div class="h4-container">
+                  <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
+                </div>
+              </div>              
+              <div class="button-container">
+                <!-- DESDE -->
+                <div class="price">
+                  <p>desde</p>
+                  <h5>XXX€/mes</h5>
+                </div>               
               </div>
             </div>
 
           </div>
 
-          <!-- Amenities -->
+          <!-- Amenities -->          
           <div class="services-list">
             <div class="splide mini" id="sliderMiniMobile_{{b.id}}" aria-label="SliderMiniMobile_{{b.id}}">
               <div class="splide__track">
