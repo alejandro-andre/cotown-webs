@@ -2,6 +2,10 @@
 
   <!-- Photo carousel -->
   <section id="image-carousel" class="splide first-slider pure-u-1" aria-label="Beautiful Images">
+    <div class="title-button">
+      <h1>PISO PRIVADO</h1>
+      <button class="btn-secondary">Tour Virtual</button>
+    </div>
     <div class="splide__track">
       <ul class="splide__list">
         {% for i in building.Photos | find('Image_type', 'eq', 'piso') %}
