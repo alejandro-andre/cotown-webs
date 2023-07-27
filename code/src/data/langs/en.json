@@ -1,20 +1,91 @@
-{ 
-    "folder": "",
-    "locale": "en_US",
-    "pages": {
-        "index":          { "url": "home",               "title": "Home",              "description": "" },
-        "rooms":          { "url": "shared-flats",       "title": "Locations",         "description": "" },
-        "flats":          { "url": "private-apartments", "title": "Locations",         "description": "" },
-        "residences":     { "url": "residences",         "title": "residences",        "description": "" },
-        "about":          { "url": "about-us",           "title": "About us",          "description": "" },
-        "advantages":     { "url": "advantages",         "title": "Advantages",        "description": "" },
-        "faqs":           { "url": "faqs",               "title": "FAQs",              "description": "" },
-        "blog":           { "url": "blog",               "title": "Blog",              "description": "" },
-        "contact":        { "url": "contact",            "title": "Contact",           "description": "" },
-        "privacy":        { "url": "privacy",            "title": "Privacy policies",  "description": "" },
-        "legal":          { "url": "aviso-legal",        "title": "Legal",             "description": "" },
-        "datasecurity":   { "url": "datasecurity",       "title": "Data security",     "description": "" },
-        "book":           { "url": "book-now",           "title": "Book now",          "description": "" },
-        "visit":          { "url": "schedule-visit",     "title": "Schedule visit",    "description": "" }
+{
+  "folder": "",
+  "locale": "en_US",
+  "pages": {
+
+    "index": {
+      "url": "home",
+      "text": "",
+      "title": "Vanguard Student Housing - Where everything begins",
+      "description": "Come experience the authentic coliving for university students."
+    },
+    "rooms": {
+      "url": "shared-flats",
+      "text": "Locations",
+      "title": "Stay in our shared apartments in the best areas",
+      "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
+    },
+    "flats": {
+      "url": "private-apartments",
+      "text": "Locations",
+      "title": "Live your way with our full apartments in the best areas ",
+      "description": "Choose how, when, and in what way you want to live with a stunning apartment all to yourself in the most cosmopolitan and cool city."
+    },
+    "residences": {
+      "url": "residences",
+      "text": "Residences",
+      "title": "Enjoy the university experience in our student accommodations",
+      "description": "Live one of the best times of your life to the fullest. We take care of everything else."
+    },
+    "about": {
+      "url": "about-us",
+      "text": "About us",
+      "title": "Meet our amazing team!",
+      "description": "Would you like to join the Vanguard Student Housing team or find out who's behind all this? Welcome!"
+    },
+    "advantages": {
+      "url": "advantages",
+      "text": "Advantages",
+      "title": "Collaborate with Vanguard Student Housing.",
+      "description": "If you want to become our partner, you just have to say it."
+    },
+    "faqs": {
+      "url": "faqs",
+      "text": "FAQs",
+      "title": "FAQ's Vanguard Student Housing",
+      "description": "Do you have any questions about your reservation or stay? Find the answer here."
+    },
+    "blog": {
+      "url": "blog",
+      "text": "Blog",
+      "title": "Stay informed about everything that happens at Vanguard Student Housing.",
+      "description": "All the latest news and curiosities from the university world await you in this blog."
+    },
+    "contact": {
+      "url": "contact",
+      "text": "Contact",
+      "title": "Contact us",
+      "description": "Our team will be delighted to assist you."
+    },
+    "privacy": {
+      "url": "privacy",
+      "text": "Privacy policies",
+      "title": "Privacy policies",
+      "description": "Privacy policies"
+    },
+    "legal": {
+      "url": "aviso-legal",
+      "text": "Legal",
+      "title": "Legal",
+      "description": "Legal"
+    },
+    "datasecurity": {
+      "url": "datasecurity",
+      "text": "Data security",
+      "title": "Data security",
+      "description": "Data security"
+    },
+    "book": {
+      "url": "book-now",
+      "text": "Book now!",
+      "title": "Book now!",
+      "description": "Stay with us and experience university life like you've never experienced it before."
+    },
+    "visit": {
+      "url": "schedule-visit",
+      "text": "Schedule visit",
+      "title": "Do you want to visit our apartments?",
+      "description": "Fill out the form and discover the university coliving of your dreams.Fill out the form and discover the university coliving of your dreams."
     }
+  }
 }
