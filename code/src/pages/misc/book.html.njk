@@ -202,14 +202,14 @@ tags: page
 {% set script %}
 // Buildings list
 var buildings = [
-{% for b in buildings-%}
+{% for b in buildings | find('Building_type_id', 'lt', 4)-%}
 {city:'{{b.District.Location.Name}}',building:'{{b.Name}}'},
 {% endfor-%}
 ];
 
 // Room types list
 var room_types = [
-{% for b in buildings-%}
+{% for b in buildings | find('Building_type_id', 'lt', 4)-%}
 {% set r = rooms | find('id', 'eq', b.id) | first-%}
 {% for p in r.Place_types-%}
 {building:'{{b.Name}}',code:'{{place_types[p.Code].Code}}',name:'{{place_types[p.Code] | translate('Name', L)}}'},
@@ -231,6 +231,8 @@ function get_buildings(value) {
   // Get city
   if (value)
     localStorage.setItem('city', value);
+  else
+    value = document.getElementById('101').value
 
   // Fill building listid
   for (var i = 0; i < buildings.length; i++) {
@@ -245,6 +247,7 @@ function get_buildings(value) {
     }
   }
   get_types(null);
+
 }
 
 // Populate typology select
@@ -257,6 +260,8 @@ function get_types(value) {
   // Get building
   if (value)
     localStorage.setItem('building', value);
+  else
+    value = document.getElementById('100').value;
 
   // Fill typology listid
   for (var i = 0; i < room_types.length; i++) {
@@ -284,9 +289,9 @@ function budget() {
 document.getElementById('96').value  = localStorage.getItem('checkin');
 document.getElementById('97').value  = localStorage.getItem('checkout');
 document.getElementById('101').value = localStorage.getItem('city');
-get_buildings(localStorage.getItem('city')); 
+get_buildings(null);
 document.getElementById('100').value = localStorage.getItem('building');
-get_types(localStorage.getItem('building'));
+get_types(null);
 document.getElementById('99').value = localStorage.getItem('type');
 {% include "shared/js/ac.js" %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>

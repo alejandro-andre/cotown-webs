@@ -180,6 +180,7 @@ input[type="search"]::-webkit-search-results-decoration {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  min-height: 90px;
 }
  .icon {
   text-align: center;
@@ -292,6 +293,6 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 17px;
   }
   .residence-locations .residence-card .services .service .description {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
