@@ -291,6 +291,25 @@ button.green-button.btn-secondary {
     margin: 0;
 }
 
+.carousel .carousel-main-list .card .card-body .price {    
+    width: 90%;
+    padding: 1rem 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-top: 1px solid var(--grey-light);
+}
+.carousel .carousel-main-list .card .card-body .price button.btn-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 1.28px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+
+
 #map {
     margin: 6em 0;
 }

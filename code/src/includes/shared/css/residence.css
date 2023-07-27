@@ -243,8 +243,14 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background: var(--white-background);
   border-radius: 4px;
+}
+.right-data .share .sharing .right {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 .right-data .share .sharing label, .right-data .extra .extras label  {
   font-weight: 500;
@@ -340,7 +346,11 @@ font-size: 20px;
 line-height: 150%;
 margin-bottom: 0.5em;
 }
-.card-room .description.text .expansion label[class^="tab"]{
+.card-room .desktop.description.text .expansion p {
+  margin-right: 20px;
+}
+
+.card-room .description.text .expansion label[class^="tab-mobile"]{
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
@@ -395,6 +405,87 @@ margin-bottom: 0.5em;
   width: 10px;
   height: 10px;
 }
+
+/* MÁS INFO MOBILE */
+.mobile.description label input {
+  margin: 0 0.4em;
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+}
+.mobile.description.share .sharing p, .mobile.description .extra .extras p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+}
+.mobile.description .extra .extras label input {
+  margin: 0.1em 0.4em 0;
+  font-size: 24px;
+}
+.mobile.descriptioninput[type=checkbox], .mobile.description input[type=checkbox]:focus, .mobile.description input[type=radio], .mobile.description input[type=radio]:focus {
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	-o-appearance:none;
+	outline: none;
+	content: none;
+  cursor: pointer;
+}
+.mobile.description input[type=checkbox]:before {	
+  font-family: 'icons';
+  content: "";
+}
+.mobile.description  input[type=checkbox]:checked:before {
+	content: "";
+}
+.mobile.description  input[type=radio]:before {	
+  font-family: 'icons';
+  content: "";
+}
+.desktop.description input[type=radio]:checked:before {
+	content: "";
+}
+
+/* MÁS INFO DESKTOP */
+.desktop.description label input {
+  margin: 0 0.4em;
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+}
+.desktop.description .share .sharing p, .desktop.description .extra .extras p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+}
+.desktop.description .extra .extras label input {
+  margin: 0.1em 0.4em 0;
+  font-size: 24px;
+}
+.desktop.description input[type=checkbox], .desktop.description input[type=checkbox]:focus, .desktop.description input[type=radio], .desktop.description input[type=radio]:focus {
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	-o-appearance:none;
+	outline: none;
+	content: none;
+  cursor: pointer;
+}
+.desktop.description input[type=checkbox]:before {	
+  font-family: 'icons';
+  content: "";
+}
+.desktop.description input[type=checkbox]:checked:before {
+	content: "";
+}
+.desktop.description input[type=radio]:before {	
+  font-family: 'icons';
+  content: "";
+}
+.desktop.description input[type=radio]:checked:before {
+	content: "";
+}
+
+
+
 
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
@@ -480,7 +571,12 @@ margin-bottom: 0.5em;
   }
 }
 
-/* RESPONSIVE \*/
+/* RESPONSIVE */
+@media only screen and (min-width: 1024px) {
+  .card-room .description.mobile.text {
+    display: none;
+  }
+}
 @media only screen and (max-width: 1023.9px) {
   .first .first-contain .after-slide .text-first {
     margin-left: 2em;
@@ -574,14 +670,27 @@ margin-bottom: 0.5em;
     font-size: 16px;
     line-height: 140%;
   }
+  .card-room .description.desktop.text {
+    display: none;
+  }
+  .expansion label[class^=tab] {    
+    width: fit-content;    
+  }
   .card-room .description.text .expansion {
     justify-content: space-between;
   }
   .card-room .description.text .expansion p {
   font-size: 16px;
+  font-weight: 800;
+  }
+  .card-room .description.text {
+    border-top: 1px solid var(--grey-light);
   }
   .card-room .description.text .expansion .content p {
     font-size: 16px;
+  }
+  .right-data .buttons  {
+    margin-bottom: 2em;
   }
   .right-data .buttons button {
     height: 46px;

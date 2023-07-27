@@ -229,8 +229,11 @@
 .right-data .apartment-services .splide-services .splide__list .splide__slide .slide .img {
     width: 36px;
 }
-.right-data .apartment-services .splide-services .splide__list .splide__slide .slide .img svg {
-  color: var(--white);
+.right-data .apartment-services .splide-services .splide__list .splide__slide .slide svg .svg_base { 
+  fill:#fff !important;
+}
+.right-data .apartment-services .splide-services .splide__list .splide__slide .slide svg .svg_accent {
+   fill:#fff!important; 
 }
 .right-data .apartment-services .splide-services .splide__arrow {
   background-color: var(--white);

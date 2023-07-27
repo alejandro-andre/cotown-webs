@@ -75,6 +75,20 @@
       {% endfor %}
     </div>
 
+    <!-- Expansion MOBILE -->
+    <div class="mobile description text pure-u-23-24">
+      <div class="expansion pure-u-1">
+        <p>{% literal texts, 'informacion-adicional-titulo', L %}</p>
+        <input type="checkbox" class="tab-mobile pure-u-1-2" id="tab1" tabindex="0"/>
+        <label name="tab" for="tab1" tabindex="-1" class="tab_lab" role="tab">
+          <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+        </label>
+        <div class="content pure-u-1">
+          <p>{% literal texts, 'informacion-adicional-texto', L %}</p>
+        </div>
+      </div>
+    </div>
+
     <div class="buttons pure-u-1">
       <button class="btn-secondary" onclick="go_book('{{p.Code}}');">{% literal texts, 'button-reservar', L %}</button>
       <button class="btn-primary" onclick="go_visit('{{p.Code}}');">{% literal texts, 'button-visita', L %}</button>
@@ -83,17 +97,17 @@
   </div>
 
   <!-- Expansion -->
-  <div class="description text pure-u-23-24">
-      <div class="expansion pure-u-1">
-        <p>{% literal texts, 'informacion-adicional-titulo', L %}</p>
-        <input type="checkbox" class="tab pure-u-1-2" id="tab1" tabindex="0"/>
-        <label name="tab" for="tab1" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
-          <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
-        </label>
-        <div class="content pure-u-1">
-          <p>{% literal texts, 'informacion-adicional-texto', L %}</p>
-        </div>
+  <div class="desktop description text pure-u-23-24">
+    <div class="expansion pure-u-1">
+      <p>{% literal texts, 'informacion-adicional-titulo', L %}</p>
+      <input type="checkbox" class="tab pure-u-1-2" id="tab1-desktop" tabindex="0"/>
+      <label name="tab" for="tab1-desktop" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
+        <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+      </label>
+      <div class="content pure-u-1">
+        <p>{% literal texts, 'informacion-adicional-texto', L %}</p>
       </div>
+    </div>
   </div>
 
 </section>
