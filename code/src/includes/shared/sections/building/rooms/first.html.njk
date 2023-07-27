@@ -3,8 +3,12 @@
   <!-- Photo carousel -->
   <section id="image-carousel" class="splide first-slider pure-u-1" aria-label="Beautiful Images">
     <div class="title-button">
-      <h1>Apartamento COMPARTIDO</h1>
-      <button class="btn-secondary">Tour Virtual</button>
+      <h1>{{building.Name}}</h1>
+      {% if building.Tour %}
+      <button class="btn-secondary" onclick="open_tour()">
+        {% literal texts, 'rooms-tour-virtual', L %}
+      </button>
+      {% endif %}
     </div>    
     <div class="splide__track">
       <ul class="splide__list">
@@ -72,7 +76,7 @@
       {% if building.Tour %}
       <button class="btn-text">
         <a href="#" onclick="open_tour()">{% literal texts, 'rooms-tour-virtual', L %}</a>
-        </button>
+      </button>
       {% endif %}
       {% if flats | find('id', 'eq', building.id) | length > 0 %}
       <button class="btn-text">
