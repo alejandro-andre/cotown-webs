@@ -11,13 +11,13 @@
     },
     "rooms": {
       "url": "pisos-compartidos",
-      "text": "Pisos Compartidos",
+      "text": "Localizaciones",
       "title": "Alójate en nuestros pisos compartidos en las mejores zonas de ",
       "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
     },
     "flats": {
       "url": "apartamentos-privados",
-      "text": "Apartamentos privados",
+      "text": "Localizaciones",
       "title": "Vive a tu manera con nuestros pisos completos en las mejores zonas de Barcelona",
       "description": "Elige cómo, cuándo y de qué manera quieres vivir con un pisazo para ti sol@ en la ciudad más cosmopolita y molona."
     },
