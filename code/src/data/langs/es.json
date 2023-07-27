@@ -1,20 +1,77 @@
-{ 
-    "folder": "/es",
-    "locale": "es_ES",
-    "pages": {
-        "index":          { "url": "home",                  "title": "Inicio",                 "description": "" },
-        "rooms":          { "url": "pisos-compartidos",     "title": "Localizaciones",         "description": "" },
-        "flats":          { "url": "apartamentos-privados", "title": "Localizaciones",         "description": "" },
-        "residences":     { "url": "residencias",           "title": "Residencias",            "description": "" },
-        "about":          { "url": "conocenos",             "title": "Conócenos",              "description": "" },
-        "advantages":     { "url": "ventajas",              "title": "Ventajas",               "description": "" },
-        "faqs":           { "url": "preguntas-frecuentes",  "title": "FAQs",                   "description": "" },
-        "blog":           { "url": "blog",                  "title": "Blog",                   "description": "" },
-        "contact":        { "url": "contacto",              "title": "Contacto",               "description": "" },
-        "privacy":        { "url": "politica-privacidad",   "title": "Política de privacidad", "description": "" },
-        "legal":          { "url": "aviso-legal",           "title": "Aviso legal",            "description": "" },
-        "datasecurity":   { "url": "seguridad-datos",       "title": "Seguridad y datos",      "description": "" },
-        "book":           { "url": "reservar",              "title": "Reservar",               "description": "" },
-        "visit":          { "url": "agendar-visita",        "title": "Agendar visita",         "description": "" }
+{
+  "folder": "/es",
+  "locale": "es_ES",
+  "pages": {
+    
+    "index": {
+      "url": "home",
+      "title": "Vanguard Student Housing- El lugar donde todo comienza",
+      "description": "Ven a vivir la el auténtico coliving para estudiantes universitar@s"
+    },
+    "rooms": {
+      "url": "pisos-compartidos",
+      "title": "",
+      "description": ""
+    },
+    "flats": {
+      "url": "apartamentos-privados",
+      "title": "",
+      "description": ""
+    },
+    "residences": {
+      "url": "residencias",
+      "title": "",
+      "description": ""
+    },
+    "about": {
+      "url": "conocenos",
+      "title": "¡Conoce a nuestro equipazo!",
+      "description": "¿Quieres formar parte del team de Vanguard Student Housing o saber quien hay detrás de todo esto? ¡Bienvenid@!"
+    },
+    "advantages": {
+      "url": "ventajas",
+      "title": "Colabora con Vanguard Student Housing",
+      "description": "Si quieres convertirte en nuestro partner, tan solo tienes que decirlo. "
+    },
+    "faqs": {
+      "url": "preguntas-frecuentes",
+      "title": "Preguntas frecuentes Vanguard Student Housing ",
+      "description": "¿Tienes alguna duda sobre tu reserva o estancia? Encuentra la respuesta aquí."
+    },
+    "blog": {
+      "url": "blog",
+      "title": "Entérate de todo lo que pasa en Vanguard Student Housing",
+      "description": "Todas las novedades y curiosidades del mundo universitario te esperan en este blog"
+    },
+    "contact": {
+      "url": "contacto",
+      "title": "Contacta con nosotr@s",
+      "description": "Nuestro equipo estará encantad@ de atenderte"
+    },
+    "privacy": {
+      "url": "politica-privacidad",
+      "title": "Política de privacidad",
+      "description": "Política de privacidad"
+    },
+    "legal": {
+      "url": "aviso-legal",
+      "title": "Aviso legal",
+      "description": "Aviso legal"
+    },
+    "datasecurity": {
+      "url": "seguridad-datos",
+      "title": "Seguridad y datos",
+      "description": "Seguridad y datos"
+    },
+    "book": {
+      "url": "reservar",
+      "title": "¡Reserva ahora!",
+      "description": "Alójate con nosotros y vive la experiencia universitaria como nunca la hayas vivido."
+    },
+    "visit": {
+      "url": "agendar-visita",
+      "title": "¿Quieres visitar nuestros pisos?",
+      "description": "Rellena el formulario y conoce el coliving universitario de tus sueños."
     }
+  }
 }
