@@ -239,14 +239,10 @@ button.green-button.btn-secondary {
     line-height: 150%;
     padding: 6px 16px;
 }
-/* .carousel .carousel-main-list .main-slide.splide__slide.is-prev, .carousel .carousel-main-list .main-slide.splide__slide.is-next {
-    width: 30vw!important;
-} */
+
 .carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain, .carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain {
     opacity: 0.5;
     filter: brightness(0.4);
-    /* height: 70%;
-    margin: 25% 0; */
 }
 
 .arrow-nav.splide__arrow {
@@ -306,6 +302,36 @@ button.green-button.btn-secondary {
     background-color: var(--white);
     transform: scale(1);
 }
+.carousel .carousel-main-list .card .card-body .carousel-mini li svg .svg_base { 
+    fill:#fff !important;
+ }
+.carousel .carousel-main-list .card .card-body .carousel-mini li svg .svg_accent {
+     fill:#ff5166!important; 
+}
+
+.carousel .carousel-main-list .card .card-body .price {    
+    width: 90%;
+    padding: 1rem 0 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-top: 1px solid var(--primary);
+}
+.carousel .carousel-main-list .card .card-body .price p {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 164%;
+    letter-spacing: -.15px;
+    margin-right: 10px;
+}
+.carousel .carousel-main-list .card .card-body .price h5 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: -0.6px;
+}
+
 
 
 section.map {
@@ -351,6 +377,12 @@ section.necesities .grid .necesidad img,
 section.necesities .grid .necesidad .img svg {
     width: 75px;
     padding: 1em 0 .5em;
+}
+section.necesities .grid .necesidad .img svg .svg_base { 
+    fill:#fff !important;
+ }
+section.necesities .grid .necesidad .img svg .svg_accent {
+     fill:#fff!important; 
 }
 section.necesities .grid .necesidad .p-title p {
     font-weight: 700;
@@ -616,8 +648,9 @@ section.necesities .grid .necesidad .p-text p {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         padding: 0.5em 1em;
+        height: 100px;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .img-container {
         display: flex;
@@ -626,15 +659,22 @@ section.necesities .grid .necesidad .p-text p {
         align-items: center;
         width: 40px;
         height: 40px;
-        background-color: var(--primary-dark);
+        background-color: var(--white);
         border-radius: 5px;
         object-fit: cover;
         object-position: center center;
         text-align: center;
         padding: 0.2em;
     }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .left {
+        width: 60%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .img-container img {
-        width: 25px;
+        width: 30px;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container {
         display: flex;
@@ -642,14 +682,15 @@ section.necesities .grid .necesidad .p-text p {
         justify-content: flex-start;
         align-items: center;
         margin: auto 0;
+        width: calc(100% - 48px);
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
-        font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 11px;
         font-weight: 400;
-        font-size: 20;
         line-height: 150%;
-        letter-spacing: 0.08em;
-        width: 50%;
+        letter-spacing: 0.88px;
+        text-transform: uppercase;
+        width: 25%;
         padding-left: 1em;
         margin: 0.1em 0 0;
     }
@@ -675,8 +716,22 @@ section.necesities .grid .necesidad .p-text p {
     .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container {
         display: flex;
         flex-flow: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-end;
+        text-align: end;
+        width: fit-content;
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container .price p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 0;
+    }
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container .price h5 {
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 150%;
+        letter-spacing: 0.14px;
     }
 
     .piso ul.services-list {
@@ -701,8 +756,15 @@ section.necesities .grid .necesidad .p-text p {
         width: 20px;
     }
     .piso .services-list li svg {
-        width: 20px;
+        width: 20px;        
     }
+    .piso .services-list li svg .svg_base { 
+        fill:#fff !important;
+     }
+    .piso .services-list li svg .svg_accent {
+         fill:#ff5166!important; 
+    }
+
     .piso .services-list li p {
         font-weight: 400;
         font-size: 10px;
@@ -752,12 +814,20 @@ section.necesities .grid .necesidad .p-text p {
         width: 50px;
         padding: 0;
     }
+    section.necesities .grid .necesidad .img svg .svg_base { 
+        fill:#fff !important;
+     }
+    section.necesities .grid .necesidad .img svg .svg_accent {
+         fill:#ff5166!important; 
+    }
     section.necesities .grid .necesidad .p-title p {
-        font-size: 16px;
+        font-size: 15px;
         margin: 0;
     }
     section.necesities .grid .necesidad .p-text p {
-        font-size: 14px;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 150%;
     }   
 
 }

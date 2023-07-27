@@ -22,7 +22,7 @@
       </div>
     </section>
 
-    <section id="thumbnail-carousel-{{p.Code}}" class="splide" aria-label="Thumbnails">
+    <section id="thumbnail-carousel-{{p.Code}}" class="splide" aria-label="Thumbnails">    
       <div class="splide__track">
         <ul class="splide__list">
           {% for rp in photos | find('Building.id', 'eq', building.id) | find('Flat_subtype.Code', 'eq', p.Code) %}
@@ -63,21 +63,16 @@
       <p class="bold">
         {% literal texts, 'price-desde', L %} 740€/{% literal texts, 'price-mes', L %}
       </p>
-    </div>
-
-    <!-- Amenities -->
-    <style>
-      .svg_base { fill:#f0f0f0 !important; }
-      .svg_accent { fill:#343434 !important; }
-    </style>
+    </div> 
+    
     <section class="apartment-services pure-u-1">
       <div id="amenities-carousel-{{p.Code}}" class="splide splide-services" role="group">
         <div class="splide__track">
           <ul class="splide__list">
             {% for s in flat_subtypes[p.Code].Amenities %}
             <li class="splide__slide">
-              <div class="slide">
-                <div class="img">
+              <div class="slide ">
+                <div class="img">                
                   {% svg
                     constants.SERVER + "/wopi/files/Marketing/Media_amenity/" + s.Amenity.Icons[0].id +"/Icon/contents?access_token=" + token,
                     s.Amenity.Name
