@@ -1,3 +1,11 @@
+// Get tags
+function gettag(name) {
+  let params = (new URL(document.location)).searchParams;
+  let value = params.get(name);
+    if (value != null)
+        return name + ':' + value + ';';
+    return ''
+}
 
 // Post contact
 function post(event) {
@@ -30,6 +38,13 @@ function post(event) {
 
   // Post data
   formData = new FormData(event.target);
+
+  // SEM
+  formData.append('gclid', gettag('gclid'));
+  formData.append('utm_campaign', gettag('utm_campaign'));
+  formData.append('utm_medium', gettag('utm_medium'));
+  formData.append('utm_source', gettag('utm_source'));
+
   const file = document.getElementById('file')
   if (file)
     formData.append('file', file.files[0]);
