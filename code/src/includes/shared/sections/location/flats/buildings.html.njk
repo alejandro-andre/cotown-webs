@@ -130,7 +130,7 @@
                   </div>
 
                   <!-- DESDE -->
-                  {% set min = 9999 %}
+                  {% set min = 99999 %}
                   {% for r in flats | find('id', 'eq', b.id) %}
                   {% for f in r.Flat_subtypes %}
                     {% if min > f.Rent_long %}
@@ -138,7 +138,7 @@
                     {% endif %}
                   {% endfor %}
                   {% endfor %}
-                  {% if min < 9999 %}
+                  {% if min < 99999 %}
                   <div class="price">
                     <p>{% literal texts, 'price-desde', L %}</p>
                     <h5>{{min}} €/{% literal texts, 'price-mes', L %}</h5>
@@ -188,8 +188,8 @@
             <h3>{{b.Name}}</h3>
           </a>
 
-          {% set minI = 9999 %}
-          {% set minD = 9999 %}
+          {% set minI = 99999 %}
+          {% set minD = 99999 %}
           {% for r in rooms | find('id', 'eq', b.id) %}
           {% for p in r.Place_types %}
           {% for f in p.Flat_subtypes %}
@@ -207,7 +207,7 @@
           <div class="options pure-u-1">
 
             <!-- Habitacion individual -->
-            {% if minI < 9999 %}
+            {% if minI < 99999 %}
             <div class="type pure-u-22-24" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I'">
               <div class="img-container pure-u-3-24">
                 <img src="/assets/img/icono__hab_habitacion_individual.svg">
@@ -224,7 +224,7 @@
             {% endif %}
 
             <!-- Habitacion compartida -->
-            {% if minI < 9999 %}
+            {% if minI < 99999 %}
             <div class="type pure-u-22-24" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D'">
               <div class="img-container pure-u-3-24">
                 <img src="/assets/img/icono__hab_habitacion_compartida.svg">
