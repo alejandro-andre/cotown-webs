@@ -82,7 +82,7 @@ def upload(folder, wildcard):
               data = BytesIO(image)
               data.seek(0)
               thumbnail = base64.b64encode(data.read()).decode('utf-8')
-              mimetype = 'image/png'
+              #mimetype = 'image/png'
 
             # Raster image
             elif 'image/' in mimetype:
