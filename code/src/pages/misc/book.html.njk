@@ -97,13 +97,13 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
           <div class="campo">
           <label class="label">{% literal texts, 'form-desde', L %}</label>
-          <input class="input" type="date" id="96" name="96" required>
+          <input class="input" type="date" id="96" name="96" required oninput="validate();">
           </div>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
           <div class="campo">
           <label class="label">{% literal texts, 'form-hasta', L %}</label>
-          <input class="input" type="date" id="97" name="97" required>
+          <input class="input" type="date" id="97" name="97" required oninput="validate();">
           </div>
         </div>
         <div class="pure-u-1 pure-u-md-1-2">
@@ -284,6 +284,31 @@ function budget() {
   }
   document.getElementById('95').value = min + ' - ' + max;
 }
+
+// Numero de meses entre dos fechas
+function months(fin, fout) {
+  f1 = new Date(fin);
+  f2 = new Date(fout);
+  f2.setDate(f2.getDate() + 1)
+  const meses = (f2.getFullYear() - f1.getFullYear()) * 12 + (f2.getMonth() - f1.getMonth());
+  if (meses < 1 || meses > 11) return false;
+  if (meses == 1 && f2.getDate() < f1.getDate()) return false;
+  if (meses == 11 && f2.getDate() > f1.getDate()) return false;
+  return true;
+}
+
+// Post
+function validate() {
+  fin = document.getElementById('96');
+  fout = document.getElementById('97');
+  if (!months(fin.value, fout.value)) {
+    console.log(fin);
+    console.log(fout);
+    fin.setCustomValidity("{{texts['cal-error'][L]}}");
+  } else {
+    fin.setCustomValidity("");
+  }
+};
 
 // Load
 document.getElementById('96').value  = localStorage.getItem('checkin');
