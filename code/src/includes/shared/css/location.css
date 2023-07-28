@@ -68,6 +68,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    padding-bottom: 4em;
 }
 .pisos-slider .h2-container {
     display: flex;
@@ -557,6 +558,7 @@ section.necesities .grid .necesidad .p-text p {
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
+        padding-bottom: 0;
     }
     .pisos-slider .h2-container {
         display: flex;
