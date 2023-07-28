@@ -266,7 +266,7 @@
             {% endif %}
 
             <!-- Habitacion compartida -->
-            {% if minI < 9999 %}
+            {% if minD < 9999 %}
             <div class="type pure-u-22-24" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D'">
               <div class="img-container pure-u-3-24">
                 <img src="/assets/img/icono__hab_habitacion_compartida.svg">
@@ -334,7 +334,7 @@
 {% set script %}
 // Sliders
 new Splide('#sliderFlats', {
-  type: 'slide',
+  type: '{%if b.District.Location.id==2%}slide{%else%}loop{%endif%}',
   gap: '50px',
   focus: 'center',
   padding: '6rem'
