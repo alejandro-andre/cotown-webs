@@ -38,18 +38,18 @@
         <div class="splide__track">
           <ul class="splide__list">
 
-            {% for s in services %}
+            {% for s in building.Services %} 
               {% if loop.first %}
               <li class="splide__slide">
               <div class="slide">
               {% endif %}
                 <div class="img">
                   {% svg
-                    constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
-                    s.Name
+                    constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Service.Images[0].id +"/Icon/contents?access_token=" + token,
+                    s.Service.Name
                   %}
                 </div>
-                <p class="title">{{s | translate('Name', L)}}</p>
+                <p class="title">{{s.Service | translate('Name', L)}}</p>
               {% if loop.last %}
               </div>
               </li>
