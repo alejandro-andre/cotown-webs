@@ -334,7 +334,7 @@
 {% set script %}
 // Sliders
 new Splide('#sliderFlats', {
-  type: '{%if b.District.Location.id==2%}slide{%else%}loop{%endif%}',
+  type: '{%if location.id==2%}slide{%else%}loop{%endif%}',
   gap: '50px',
   focus: 'center',
   padding: '6rem'
