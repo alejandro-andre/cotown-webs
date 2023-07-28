@@ -1,6 +1,4 @@
 module.exports = async (config) => {
-  //const sql = require('./sql');
-  //const data = await sql('/flats/' + config.year, 'flats');
-  const data = [{"id": 1, "Flat_subtypes": [{"Code": "APT2-1", "Rent_long": 2038, "Rent_medium": 2155, "Rent_short": 2368, "Qty": 1}]}, {"id": 4, "Flat_subtypes": [{"Code": "APT2-1", "Rent_long": 2245, "Rent_medium": 2374, "Rent_short": 2610, "Qty": 1}, {"Code": "APT3-1", "Rent_long": 2588, "Rent_medium": 2734, "Rent_short": 3002, "Qty": 1}]}, {"id": 6, "Flat_subtypes": [{"Code": "APT1-1", "Rent_long": 1750, "Rent_medium": 1851, "Rent_short": 2035, "Qty": 1}, {"Code": "APT2-1", "Rent_long": 1943, "Rent_medium": 2053, "Rent_short": 2256, "Qty": 1}]}, {"id": 8, "Flat_subtypes": [{"Code": "APT1-1", "Rent_long": 1976, "Rent_medium": 2090, "Rent_short": 2299, "Qty": 1}, {"Code": "APT3-1", "Rent_long": 2353, "Rent_medium": 2485, "Rent_short": 2727, "Qty": 11}]}, {"id": 15, "Flat_subtypes": [{"Code": "APT2-1", "Rent_long": 2300, "Rent_medium": 2432, "Rent_short": 2674, "Qty": 4}, {"Code": "APT3-1", "Rent_long": 2650, "Rent_medium": 2800, "Rent_short": 3075, "Qty": 3}]}, {"id": 16, "Flat_subtypes": [{"Code": "APT1-1", "Rent_long": 1736, "Rent_medium": 1837, "Rent_short": 2021, "Qty": 1}, {"Code": "APT2-1", "Rent_long": 1951, "Rent_medium": 2064, "Rent_short": 2272, "Qty": 1}]}, {"id": 17, "Flat_subtypes": [{"Code": "APT2-1", "Rent_long": 1604, "Rent_medium": 1697, "Rent_short": 1867, "Qty": 3}, {"Code": "APT2-2T", "Rent_long": 1604, "Rent_medium": 1697, "Rent_short": 1867, "Qty": 1}, {"Code": "APT3-1", "Rent_long": 2052, "Rent_medium": 2171, "Rent_short": 2390, "Qty": 4}]}];
-  return data;
+  const sql = require('./sql');
+  const data = await sql('/flats/' + config.year, 'flats');
 };
