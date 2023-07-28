@@ -53,12 +53,12 @@
 
     <!-- Description -->
     <div class="text pure-u-1">
-      <p>{{flat_subtypes[p.Code].Texts[0] | translate('Description', L)}}</p>
+      <p>{{flat_subtypes[p.Code] | translate('Description', L)}}</p>
     </div>
 
     <div class="option pure-u-1">
       <p class="bold">
-        {{flat_subtypes[p.Code].Texts[0] | translate('Description', L)}}
+        {{flat_subtypes[p.Code] | translate('Description', L)}}
       </p>
       <p class="bold">
         {% for f in flats | find('id', 'eq', building.id) %}

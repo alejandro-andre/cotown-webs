@@ -8,6 +8,8 @@ module.exports = async (config) => {
       Code
       Name
       Name_en
+      Description
+      Description_en
       Amenities: Resource_flat_amenityListViaFlat_subtype_id {
         Amenity: Resource_amenity_typeViaAmenity_type_id {
           id
@@ -20,12 +22,6 @@ module.exports = async (config) => {
           }
         }
       }
-      Texts: Resource_flat_textListViaFlat_subtype_id ( 
-        where: { Segment_id: { EQ: $id } }
-      ) {
-        Description
-        Description_en
-      }
     }
   }`;
   const data = await gql(QUERY, config, 'flat_subtypes');
@@ -35,8 +31,9 @@ module.exports = async (config) => {
     Code: o.Code, 
     Name: o.Name, 
     Name_en: o.Name_en,
-    Amenities: o.Amenities,
-    Texts: o.Texts
+    Description: o.Description, 
+    Description_en: o.Description_en,
+    Amenities: o.Amenities
   } });
   return(json); 
 };
