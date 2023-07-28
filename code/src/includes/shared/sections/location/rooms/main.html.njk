@@ -107,5 +107,20 @@ new Splide(".splide-gallery", {
   gap: '15px',
   padding: { left: '20vw', right: '10vw' },
 }).mount();
+
+// Sliders
+new Splide('#sliderFlats', {
+  type: '{%if location.id==2%}slide{%else%}loop{%endif%}',
+  gap: '50px',
+  focus: 'center',
+  padding: '6rem'
+}).mount();
+{% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+new Splide('#sliderMini_{{b.id}}', { type: 'loop', gap: '16px', pagination: false, perMove: 1, perPage: 9 }).mount();
+{% endfor %}
+{% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+new Splide('#sliderMiniMobile_{{b.id}}', { type: 'loop', gap: '16px', arrows: false, pagination: false, perMove: 1, perPage: 3 }).mount();
+{% endfor %}
+
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

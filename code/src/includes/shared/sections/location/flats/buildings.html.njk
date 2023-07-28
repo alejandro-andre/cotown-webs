@@ -288,26 +288,3 @@
   </div>
 
 </section>
-
-<!-- Sliders -->
-{% block footer %}
-{% set script %}
-// Sliders
-new Splide('#sliderFlats', {
-  type: 'loop',
-  gap: '50px',
-  focus: 'center',
-  padding: '6rem'
-}).mount();
-{% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
-{% if flats | find('id', 'eq', b.id) | length > 0 %}
-new Splide('#sliderMini_{{b.id}}', { type: 'loop', pagination: false, perMove: 1, perPage: 7 }).mount();
-{% endif %}
-{% endfor %}
-{% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
-{% if flats | find('id', 'eq', b.id) | length > 0 %}
-new Splide('#sliderMiniMobile_{{b.id}}', { type: 'loop', gap: '16px', arrows: false, pagination: false, perMove: 1, perPage: 4 }).mount();
-{% endif %}
-{% endfor %}
-{% endset %}<script>{{ script | jsmin | safe }}</script>
-{% endblock %}

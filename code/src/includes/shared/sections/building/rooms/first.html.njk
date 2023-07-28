@@ -123,15 +123,3 @@
     </iframe>
   </div>
 </div>
-
-{% block footer %}
-{% set script %}
-function open_tour() {
-  document.getElementById("tourframe").src="{{building.Tour}}" 
-  document.getElementById("tour").style.display = "block";
-}
-function close_tour() {
-  document.getElementById("tour").style.display = "none";
-}
-{% endset %}<script>{{ script | jsmin | safe }}</script>
-{% endblock %}

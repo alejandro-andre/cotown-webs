@@ -90,6 +90,7 @@ main_{{p.id}}.sync(thumbnails_{{p.id}});
 main_{{p.id}}.mount();
 thumbnails_{{p.id}}.mount();
 
+// Slider amenities
 new Splide('#amenities-carousel-{{p.Code}}', {
   type: 'loop',
   autoHeight: true,
@@ -130,5 +131,27 @@ var thumbnails = new Splide('#thumbnail-gallery', {
 main.sync(thumbnails);
 main.mount();
 thumbnails.mount();
+
+// Tour
+function open_tour() {
+  document.getElementById("tourframe").src="{{building.Tour_private}}" 
+  document.getElementById("tour").style.display = "block";
+}
+function close_tour() {
+  document.getElementById("tour").style.display = "none";
+}
+
+// Buttons
+function go_book(id) {
+  localStorage.setItem('city', '{{building.District.Location.Name}}');
+  localStorage.setItem('building', '{{building.Name}}');
+  localStorage.setItem('type', id);
+  location.href = "{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
+}
+function go_visit() {
+  localStorage.setItem('city', '{{building.District.Location.Name}}');
+  localStorage.setItem('building', '{{building.Name}}');
+  location.href = "{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html";
+}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
