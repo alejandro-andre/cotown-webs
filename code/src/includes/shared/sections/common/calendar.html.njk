@@ -36,11 +36,11 @@
               <form id="reservas_form" name="form_multi" method="GET">
                 <button class="date-button">
                 <label class="labels">{% literal texts, 'dates-entrada', L %}</label>
-                <input type="text" id="in" class="inputs" name="in"/>
+                <input type="text" id="in" class="inputs" name="in" disabled/>
                 </button>   
                 <button class="date-button">
                 <label class="labels">{% literal texts, 'dates-salida', L %}</label>
-                <input type="text" id="out" class="inputs" name="out"/>
+                <input type="text" id="out" class="inputs" name="out" disabled/>
                 </button>
               </form>
             </div>
@@ -86,8 +86,8 @@
             <a>Avísame cuando tengas disponibilidad</a>
           </div>
           -->
-          <div class="no-dates">
-            Error: Mínimo 1 mes - Maximo 11 meses
+          <div id="calerror" class="error">
+            {% literal texts, 'cal-error', L %}
           </div>
 
         </div>
@@ -143,142 +143,172 @@
 
 {% block footer %}
 <script>
-function internal_date(yy, mm, dd) {
-  return yy + '-' + mm.toString().padStart(2, '0') + '-' + dd.toString().padStart(2, '0');
+// Numero de meses entre dos fechas
+function months(fin, fout) {
+    f1 = new Date(fin);
+    f2 = new Date(fout);
+    f2.setDate(f2.getDate() + 1)
+    const meses = (f2.getFullYear() - f1.getFullYear()) * 12 + (f2.getMonth() - f1.getMonth());
+    if (meses < 1 || meses > 11) return false;
+    if (meses == 1 && f2.getDate() < f1.getDate()) return false;
+    if (meses == 11 && f2.getDate() > f1.getDate()) return false;
+    return true;
 }
 
+// Formato de fecha interno
+function internal_date(yy, mm, dd) {
+    return yy + '-' + mm.toString().padStart(2, '0') + '-' + dd.toString().padStart(2, '0');
+}
+
+// Formato de fecha visualizacion
 function format_date(str) {
-  if (idioma == 'es-ES')
-    return str.slice(8,10) + '/' + str.slice(5,7) + '/' + str.slice(0,4);
-  return str.slice(5,7) + '/' + str.slice(8,10) + '/' + str.slice(0,4);
+    if (idioma == 'es-ES')
+        return str.slice(8,10) + '/' + str.slice(5,7) + '/' + str.slice(0,4);
+    return str.slice(5,7) + '/' + str.slice(8,10) + '/' + str.slice(0,4);
 }
 
 // Nombre del mes, en el idioma deseado
 function month(mes) {
-  var d = new Date(1965, mes);
-  var text = d.toLocaleString(idioma, { month: 'long' });
-  return text.charAt(0).toUpperCase() + text.slice(1);
+    var d = new Date(1965, mes);
+    var text = d.toLocaleString(idioma, { month: 'long' });
+    return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 // Pinta los dias de un mes
 function pm(cal, yy, mm) {
 
-  // Tabla
-  var c = document.querySelector('#days' + cal + ' tbody');
-  c.innerHTML = '';
+    // Tabla
+    var c = document.querySelector('#days' + cal + ' tbody');
+    c.innerHTML = '';
 
-  // Nombre del mes
-  var name = document.querySelector('#month' + cal);
-  name.textContent = month(mm, 'es-ES') + ' ' + yy;
+    // Nombre del mes
+    var name = document.querySelector('#month' + cal);
+    name.textContent = month(mm, 'es-ES') + ' ' + yy;
 
-  // Rango de días
-  var ud = new Date(yy, mm + 1, 0).getDate(); // Obtiene el último día del mes
-  var pd = new Date(yy, mm, 1).getDay();      // Obtiene el primer día del mes
-  pd = (pd === 0 ? 7 : pd) - 1;               // Ajusta el primer día de la semana a Lunes
+    // Rango de días
+    var ud = new Date(yy, mm + 1, 0).getDate(); // Obtiene el último día del mes
+    var pd = new Date(yy, mm, 1).getDay();      // Obtiene el primer día del mes
+    pd = (pd === 0 ? 7 : pd) - 1;               // Ajusta el primer día de la semana a Lunes
 
-  // Crea la cuadrícula del calendario
-  var dd = 1;
-  for (var y = 0; y < 6; y++) {
-    var rowHTML = document.createElement('tr');
-    for (var x = 0; x < 7; x++) {
-      var colHTML = document.createElement('td');
-      if (y === 0 && x < pd || dd > ud) {
-        colHTML.textContent = '';
-      } else {
-        colHTML.textContent = dd;
-        colHTML.id = internal_date(yy, mm + 1, dd);
-        if (colHTML.id > itoday) {
-          colHTML.classList.add('hover');
-          colHTML.addEventListener('click', select);
-          if (colHTML.id == fin.dataset.id || colHTML.id == fout.dataset.id) {
-            colHTML.classList.add('selected');
-          }
-          if (colHTML.id > fin.dataset.id && colHTML.id < fout.dataset.id) {
-            colHTML.classList.add('inside-selected');
-          }
+    // Crea la cuadrícula del calendario
+    var dd = 1;
+    for (var y = 0; y < 6; y++) {
+        var rowHTML = document.createElement('tr');
+        for (var x = 0; x < 7; x++) {
+        var colHTML = document.createElement('td');
+        if (y === 0 && x < pd || dd > ud) {
+            colHTML.textContent = '';
+        } else {
+            colHTML.textContent = dd;
+            colHTML.id = internal_date(yy, mm + 1, dd);
+            if (colHTML.id > itoday) {
+            colHTML.classList.add('hover');
+            colHTML.addEventListener('click', select);
+            if (colHTML.id == fin.dataset.id || colHTML.id == fout.dataset.id) {
+                colHTML.classList.add('selected');
+            }
+            if (colHTML.id > fin.dataset.id && colHTML.id < fout.dataset.id) {
+                colHTML.classList.add('inside-selected');
+            }
+            }
+            dd++;
         }
-        dd++;
-      }
-      rowHTML.appendChild(colHTML);
+        rowHTML.appendChild(colHTML);
+        }
+        c.appendChild(rowHTML);
     }
-    c.appendChild(rowHTML);
-  }
 }
 
 // Pinta ambos meses
 function cal(date) {
-  yy = Math.floor(date / 12);
-  mm = date % 12
-  pm('left', yy, mm)
+    yy = Math.floor(date / 12);
+    mm = date % 12
+    pm('left', yy, mm)
 
-  yy = Math.floor((date + 1) / 12);
-  mm = (date + 1) % 12
-  pm('right', yy, mm)
-}
+    yy = Math.floor((date + 1) / 12);
+    mm = (date + 1) % 12
+    pm('right', yy, mm)
+    }
 
-// Mes anterior
-function back() {
-  if (ftoday > fnow) {
-    ftoday -= 1;
-    cal(ftoday);
-  }
+    // Mes anterior
+    function back() {
+    if (ftoday > fnow) {
+        ftoday -= 1;
+        cal(ftoday);
+    }
 }
 
 // Mes posterior
 function forward() {
-  ftoday += 1;
-  cal(ftoday);
+    ftoday += 1;
+    cal(ftoday);
 }
 
 // Borrar fechas
 function empty() {
-  fin.value = '';
-  fout.value = '';
-  fin.dataset.id = undefined;
-  fout.dataset.id = undefined;
-  ftoday = fnow
-  cal(ftoday);
-  return true;
+    fin.value = '';
+    fout.value = '';
+    fin.dataset.id = undefined;
+    fout.dataset.id = undefined;
+    ftoday = fnow
+    document.getElementById("calerror").style.display = "none";
+    cal(ftoday);
+    return true;
 }
 
 // Selecciona fecha
 function select(event) {
-  event.preventDefault();
-  date = event.target.id;
-  if (!flag || date < fin.dataset.id) {
-    fin.dataset.id = event.target.id;
-    fout.dataset.id = event.target.id;
-    fin.value = format_date(event.target.id);
-    document.getElementById("ok").innerHTML = "{% literal texts, 'cal-cerrar', L %}";
-    fout.value = '';
-    flag = true;
-  } else {
-    fout.dataset.id = event.target.id;
-    fout.value = format_date(event.target.id);
-    document.getElementById("ok").innerHTML = "{% literal texts, 'cal-seleccionar', L %}";
-    flag = false;
-    close_calendar()
-  }
-  cal(ftoday);
-  return true;
+    event.preventDefault();
+    date = event.target.id;
+    if (!flag || date < fin.dataset.id) {
+        document.getElementById("calerror").style.display = "none";
+        fin.dataset.id = event.target.id;
+        fout.dataset.id = event.target.id;
+        fin.value = format_date(event.target.id);
+        document.getElementById("ok").innerHTML = "{% literal texts, 'cal-cerrar', L %}";
+        fout.value = '';
+        flag = true;
+    } else {
+        fout.dataset.id = event.target.id;
+        fout.value = format_date(event.target.id);
+        document.getElementById("ok").innerHTML = "{% literal texts, 'cal-seleccionar', L %}";
+        flag = false;
+        close_calendar()
+    }
+    cal(ftoday);
+    return true;
 }
 
+// Abre el calendario
 function open_calendar(field) {
   result = document.getElementById(field);
-  calendar = document.getElementById("calendar")
   calendar.style.display = "block";
 }
 
+// Valida y cierra el calendario
 function close_calendar(event) {
-  if (fout.value == '') fin.value = '';
-  result.value = fin.value + ' - ' + fout.value;
+  console.log(event);
+  localStorage.removeItem("dates");
+  localStorage.removeItem("checkin");
+  localStorage.removeItem("checkout");
+  if (fout.value == '') {
+    fin.value = '';
+    result.value = fin.value + ' - ' + fout.value
+    document.getElementById("calerror").style.display = "none";
+  }
+  if (!months(fin.dataset.id, fout.dataset.id)) {
+    document.getElementById("calerror").style.display = "flex";
+    return;
+  }
+  result.value = fin.value + ' - ' + fout.value
   localStorage.setItem('dates', result.value);
   localStorage.setItem('checkin', fin.dataset.id);
   localStorage.setItem('checkout', fout.dataset.id);
   calendar.style.display = "none";
 }
 
-calendar = null;
+// Calendar
+calendar = document.getElementById("calendar");
 
 // Today
 fnow   = new Date().getFullYear() * 12 + new Date().getMonth();
@@ -286,20 +316,17 @@ itoday = internal_date(new Date().getFullYear(), new Date().getMonth() + 1, new 
 ftoday = fnow
 
 // Params
-{% if L == 'es' %}
-idioma = 'es-ES';
-{% else %}
-idioma = 'en-US';
-{% endif %}
-fdesde = undefined;
-fhasta = undefined;
-result = undefined;
+{% if L == 'es' %}idioma = 'es-ES{% else %}idioma = 'en-US';{% endif %}
+fdesde = '';
+fhasta = '';
+result = '';
 flag = false;
 
 // Fields
 const fin = document.getElementById('in');
 const fout =  document.getElementById('out');
 
+// Start calendar
 empty(ftoday);
 </script>
 {% endblock %}

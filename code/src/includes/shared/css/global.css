@@ -2281,6 +2281,11 @@ button.date-button input.inputs {
     margin-top: -280px;
     padding-top: 280px;
 }
+.error {
+    display: none;
+    color:red;
+    font-weight: 400;
+}
 #overlay {
     display: none;
     position: fixed;
