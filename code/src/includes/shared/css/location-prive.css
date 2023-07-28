@@ -683,7 +683,7 @@ section.necesities .grid .necesidad .p-text p {
         width: calc(100% - 48px);
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 400;
         line-height: 150%;
         letter-spacing: 0.88px;
