@@ -141,7 +141,7 @@ input:focus-visible + label {
   object-fit: cover;
 }
 .tab-panel .locations-container .location .text-content {
-  width: calc(100% - 200px);
+  width: calc(100% - 100px);
 }
 .tab-panel .locations-container .location .text-content h2 {
   font-weight: 400;

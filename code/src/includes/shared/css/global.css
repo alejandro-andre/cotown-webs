@@ -2223,20 +2223,15 @@ button.date-button input.inputs {
     footer section.container-footer .contain .right .footer-contain {
         display: none;
     }
-    footer section.container-footer .contain .right .mobile-listado ul li {
-        display: inline;
-        font-weight: 300;
-        cursor: pointer;
-    }
-    footer section.container-footer .contain .right .mobile-listado ul li a {
+    footer section.container-footer .contain .right .mobile-listado a {
         line-height: 25px;
         color: var(--primary-text);
         text-decoration: none;
         font-weight: 300;
         font-size: 16px;
     }
-    footer section.container-footer  .contain .right .mobile-listado ul {
-        padding: 0;
+    footer section.container-footer  .contain .right .mobile-listado {
+        margin: 1em 0;
     }
     footer section.container-footer .contain .right, footer section.container-footer .footer-info, footer section.container-footer .footer-info .redes, footer section.container-footer .footer-info .info-desktopp, footer section.container-footer .footer-info .redes em {
         width: 100%;

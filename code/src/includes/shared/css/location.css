@@ -578,7 +578,7 @@ section.necesities .grid .necesidad .p-text p {
     }
     .pisos-slider .h2-container .button-map-mobile p {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 19px;
         margin:0
     }
@@ -613,7 +613,7 @@ section.necesities .grid .necesidad .p-text p {
         flex-flow: column;
         justify-content: stretch;
         align-items: flex-start;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type {
         display: flex;
@@ -649,7 +649,7 @@ section.necesities .grid .necesidad .p-text p {
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
         font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
         font-weight: 400;
-        font-size: 20;
+        font-size: 14px;
         line-height: 150%;
         letter-spacing: 0.08em;
         width: 50%;
@@ -680,8 +680,8 @@ section.necesities .grid .necesidad .p-text p {
         flex-flow: column;
         justify-content: center;
         align-items: flex-end;
+        margin: 10px 0 0 0;
     }
-
     .piso ul.services-list {
         display: flex;
         flex-flow: row;
@@ -704,11 +704,11 @@ section.necesities .grid .necesidad .p-text p {
         width: 20px;
     }
     .piso .services-list li svg {
-        width: 20px;
+        width: 40px;
     }
     .piso .services-list li p {
         font-weight: 400;
-        font-size: 10px;
+        font-size: 14px;
         line-height: 130%;
         text-align: center;
     }
@@ -782,7 +782,7 @@ section.necesities .grid .necesidad .p-text p {
     height: 600px;
 }
 .map a {
-    font-size: 10px;
+    font-size: 12px;
 }
 .map .leaflet-popup-content-wrapper {
     text-align: left !important;

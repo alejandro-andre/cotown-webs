@@ -45,7 +45,8 @@ p.subtitle {
     margin-top: 1em;
 }
 .main-header .left .basic-searcher label {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 150%;
 }
 .main-header .left .basic-searcher select {
@@ -530,7 +531,8 @@ main .container-main .first-contain .text p {
         line-height: 80px;
     }
     .main-header .left .basic-searcher label {
-        font-size: 18px;
+        font-size: 22px;
+        font-weight: 600;
     }
     .main-header .left .basic-searcher select {
         font-size: 16px;
@@ -626,7 +628,8 @@ main .container-main .first-contain .text p {
         height: 0;
     }
     .main-header .left .basic-searcher label {
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: 600;
     }
     .main-header .left .basic-searcher select {
         font-size: 16px;
