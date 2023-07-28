@@ -172,7 +172,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     color: var(--grey-light);
 }
 .tabset .tab-panels .tab-panel .left form h3 {
-    font-family: "Open Sans", "Bebas Neue", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 26px;
     font-weight: 600;
     line-height: 124%;
