@@ -14,6 +14,7 @@ module.exports = async (config) => {
     ) {
       id
       Link
+      Link_en
       Page
       Published
       Text
