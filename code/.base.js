@@ -4,6 +4,7 @@ const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
 const HtmlMin = require("html-minifier");
 const { minify } = require("terser");
+require('./logger');
 
 module.exports = (eleventyConfig) => {
 
