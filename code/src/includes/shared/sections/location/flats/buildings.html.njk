@@ -250,11 +250,23 @@
                 </div>
               </div>              
               <div class="button-container">
+
                 <!-- DESDE -->
+                {% set min = 99999 %}
+                {% for r in flats | find('id', 'eq', b.id) %}
+                {% for f in r.Flat_subtypes %}
+                  {% if min > f.Rent_long %}
+                    {% set min = f.Rent_long %}
+                  {% endif %}
+                {% endfor %}
+                {% endfor %}
+                {% if min < 99999 %}
                 <div class="price">
-                  <p>desde</p>
-                  <h5>XXX €/mes</h5>
-                </div>               
+                  <p>{% literal texts, 'price-desde', L %}</p>
+                  <h5>{{min}} €/{% literal texts, 'price-mes', L %}</h5>
+                </div>
+                {% endif %}
+
               </div>
             </div>
 
