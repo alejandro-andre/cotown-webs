@@ -5,6 +5,14 @@ const Image = require("@11ty/eleventy-img");
 const HtmlMin = require("html-minifier");
 const { minify } = require("terser");
 
+const originalLog = console.log;
+console.log = function() {
+  const date = new Date().toISOString();
+  const args = Array.from(arguments);
+  args.unshift(date);
+  originalLog.apply(this, args);
+}
+
 module.exports = (eleventyConfig) => {
 
   // School year

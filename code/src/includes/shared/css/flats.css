@@ -300,7 +300,7 @@
   align-items: center;
   gap: 1.5em;
   cursor: pointer;
-  margin-top: 1em;
+  margin: 1em 0 2em 0;
 }
 .right-data .buttons a {
   width: 100%;
