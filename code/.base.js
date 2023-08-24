@@ -203,7 +203,7 @@ module.exports = (eleventyConfig) => {
         urlPath: "/assets/img/",
         outputDir: eleventyConfig.outputDir + "/assets/img/",
         cacheOptions: { 
-          duration: "1d",
+          duration: "1h",
           removeUrlQueryParams: true,
         },
         filenameFormat: function (id, src, width, format, options) {
