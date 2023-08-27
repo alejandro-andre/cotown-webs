@@ -1,3 +1,2 @@
 #!/bin/bash
-COMMAND=${COMMAND:-"config/publish.sh vanguard"}
-exec "$COMMAND"
+tail -f /dev/null
