@@ -1,5 +1,6 @@
 #!/bin/bash
 cd /home/cotown/www/webs
 git pull
-docker start web
+#docker restart web
+docker exec web bash config/publish.sh vanguard
 docker logs -f web
