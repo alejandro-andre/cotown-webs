@@ -1,0 +1,1 @@
+npx @11ty/eleventy --config=config/.$1.js
