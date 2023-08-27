@@ -3,4 +3,4 @@ WORKDIR /app
 ADD package.json /app
 ADD start.sh /app
 RUN npm i
-CMD ["/bin/bash", "./start.sh"]
+CMD ["tail", "-f", "/dev/null"]
