@@ -1,7 +1,7 @@
 const baseConfig = require('./.base.js');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.outputDir = "sites/vanguard";
+  eleventyConfig.outputDir = "sites/vanguard-publish";
   baseConfig(eleventyConfig);
   eleventyConfig.addPassthroughCopy({"src/includes/shared/css": "assets/css"});   // remove
   eleventyConfig.addPassthroughCopy({"src/includes/vanguard/css": "assets/css"}); // remove
@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       includes: "includes",
       data: "data",
-      output: "sites/vanguard"
+      output: eleventyConfig.outputDir
     }
   };
 };

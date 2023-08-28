@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       includes: "includes",
       data: "data",
-      output: "sites/vanguard-draft"
+      output: eleventyConfig.outputDir
     }
   };
 };
