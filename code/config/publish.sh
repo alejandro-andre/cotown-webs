@@ -1,2 +1,6 @@
+#!/bin/bash
 npx @11ty/eleventy --config=config/.$1.js
-rsync -av --checksum /app/sites/$1-publish/ /app/sites/$1/
+rsync -rcni /app/sites/$1-publish/ /app/sites/$1/ | cut -d" " -f2 | while read -r line; do
+  echo /app/sites/$1-publish/$line
+  rsync -ai /app/sites/$1-publish/$line /app/sites/$1/$line
+done
