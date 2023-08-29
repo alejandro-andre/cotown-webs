@@ -76,7 +76,7 @@
           <li class="lang pure-menu-item">
             <div class="select-container">
               {% if L == 'es' %}
-              <label class="selected-option" for="options">
+              <label class="selected-option">
                 <em class="icon-corchete-down"></em>
                 <span class="select-value">Español (ES)</span>
               </label>
@@ -84,7 +84,7 @@
                 <a href="{{alt.en}}"><div class="option">English (EN)</div></a>
               </div>
               {% else %}
-              <label class="selected-option" for="options">
+              <label class="selected-option">
                 <em class="icon-corchete-down"></em>
                 <span class="select-value">English (EN)</span>
               </label>
@@ -195,7 +195,7 @@
           <div class="lang-mobile">
             <div class="select-container-mobile">
               {% if L == 'es' %}
-              <label class="selected-option-mobile" for="options">
+              <label class="selected-option-mobile">
                 <span class="select-value-mobile">ES</span>
                 <em class="icon-corchete-down mobile"></em>
               </label>
@@ -203,7 +203,7 @@
                 <a href="{{alt.en}}"><div class="option-mobile">EN</div></a>
               </div>
               {% else%}
-              <label class="selected-option-mobile" for="options">
+              <label class="selected-option-mobile">
                 <span class="select-value-mobile">EN</span>
                 <em class="icon-corchete-down mobile"></em>
               </label>
@@ -221,7 +221,7 @@
             <label class="locations-label">
                 <span class="loc"><a href="{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html">{{langs[L].pages['rooms'].text}}</a></span>
                 <div class="icons-open-close">
-                  <em class="change-value icon icon-corchete-down" for="options"></em>
+                  <em class="change-value icon icon-corchete-down"></em>
                 </div>
             </label>
             <div data-toggle="close" class="options-loc">

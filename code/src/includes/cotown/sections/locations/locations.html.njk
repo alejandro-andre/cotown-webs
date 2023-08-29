@@ -12,16 +12,16 @@
       <div class="tabset">
 
         <!-- Tabs -->
-        <input type="radio" name="tabset" id="tab1" aria-controls="rooms"{%if name=='rooms'%} checked{%endif%}>
-        <label for="tab1" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html'">
+        <input type="radio" name="tabset" id="tab_shared" aria-controls="rooms"{%if name=='rooms'%} checked{%endif%}>
+        <label for="tab_shared" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html'">
           <img class="img" src="/assets/img/corner.svg"></img>
           <div class="label-content">
             <img class="icon" alt="" src="/assets/img/icono__tipo_piso_compartido.svg"></img>
             <p>{% literal texts, 'home-pisazos-piso', L %}<br>{% literal texts, 'home-pisazos-compartido', L %}</p>
           </div>
         </label>
-        <input type="radio" name="tabset" id="tab2" aria-controls="flats"{%if name=='flats'%} checked{%endif%}>
-        <label for="tab2" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages.flats.url}}.html'">
+        <input type="radio" name="tabset" id="tab_private" aria-controls="flats"{%if name=='flats'%} checked{%endif%}>
+        <label for="tab_private" onclick="location.href='{{langs[L].folder}}/{{langs[L].pages.flats.url}}.html'">
           <img class="img" src="/assets/img/corner.svg"></img>
           <div class="label-content">
             <img class="icon" alt="" src="/assets/img/icono__tipo_apartamento_privado.svg"></img>
