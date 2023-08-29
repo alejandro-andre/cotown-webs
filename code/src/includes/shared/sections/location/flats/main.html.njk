@@ -107,12 +107,6 @@ new Splide(".splide-gallery", {
 }).mount();
 
 // Sliders
-new Splide('#sliderFlats', {
-  type: 'loop',
-  gap: '50px',
-  focus: 'center',
-  padding: '6rem'
-}).mount();
 {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
 {% if flats | find('id', 'eq', b.id) | length > 0 %}
 new Splide('#sliderMini_{{b.id}}', { type: 'loop', pagination: false, perMove: 1, perPage: 7 }).mount();
@@ -123,6 +117,12 @@ new Splide('#sliderMini_{{b.id}}', { type: 'loop', pagination: false, perMove: 1
 new Splide('#sliderMiniMobile_{{b.id}}', { type: 'loop', gap: '16px', arrows: false, pagination: false, perMove: 1, perPage: 4 }).mount();
 {% endif %}
 {% endfor %}
+new Splide('#sliderFlats', {
+  type: 'loop',
+  gap: '50px',
+  focus: 'center',
+  padding: '6rem'
+}).mount();
 
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
