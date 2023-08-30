@@ -21,10 +21,12 @@
 
       <label class="label">{% literal texts, 'home-bienvenido-tipo', L %}:</label>
       <select id="type" name="type" class="pure-u-1" onchange="localStorage.setItem('type', this.value);" required>
+        <!--REMOVE
         <option value="" disabled selected>{% literal texts, 'home-bienvenido-tipo', L %}</option>
         <option value="Piso compartido">{% literal texts, 'home-pisazos-piso', L %} {% literal texts, 'home-pisazos-compartido', L %}</option>
         <option value="Apartamento privado">{% literal texts, 'home-pisazos-apartamento', L %} {% literal texts, 'home-pisazos-privado', L %}</option>
         <option value="Residencia">{% literal texts, 'home-pisazos-residencia', L %} {% literal texts, 'home-pisazos-universitaria', L %}</option>
+        -->
       </select>
 
       <div class="calendar pure-u-1">
@@ -63,7 +65,7 @@
           [1280], ""
       %}
       <!-- Video -->
-      <!--
+      <!--REMOVE
       <video playsinline="true" width="100%" style="object-fit: cover;" autoplay="true" muted="true" loop="true" preload="auto" controls="1">
         Sorry, your browser doesn't support embedded videos.
         <source type="video/mp4" src="...">
@@ -139,7 +141,7 @@ function get_types(value) {
     if (types[i].city == value) {
       var opt = document.createElement("option");
       opt.value = types[i].link;
-      opt.text = types[i].type;
+      opt.text = types[i].value;
       list.add(opt);
     }
   }
