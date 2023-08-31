@@ -9,8 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"src/assets/shared": eleventyConfig.root + "/assets"});
   eleventyConfig.addPassthroughCopy({"src/assets/vanguard": eleventyConfig.root + "/assets"});
   eleventyConfig.addGlobalData("root", eleventyConfig.root);
+  eleventyConfig.addGlobalData("site", "cotown");
   eleventyConfig.addGlobalData("siteid", 2);
-  eleventyConfig.addGlobalData("root", root);
   return {
     created: new Date(),
     passthroughFileCopy: true,
