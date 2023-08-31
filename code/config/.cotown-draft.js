@@ -2,7 +2,7 @@ const baseConfig = require('./.base.js');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.root = "/cotown-draft";
-  eleventyConfig.outputDir = "sites/cotown-draft" + eleventyConfig.root;
+  eleventyConfig.outputDir = "sites/cotown-draft";
   baseConfig(eleventyConfig);
   eleventyConfig.addPassthroughCopy({"src/includes/shared/css": eleventyConfig.root + "/assets/css"});   // remove
   eleventyConfig.addPassthroughCopy({"src/includes/vanguard/css": eleventyConfig.root + "/assets/css"}); // remove
