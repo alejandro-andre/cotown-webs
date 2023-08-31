@@ -47,9 +47,9 @@
 
   <div class="pure-u-1 pure-u-3-24 location">
     <div class="title">
-      <img class="img mobile" src="/assets/img/corner.svg"></img>
+      <img class="img mobile" src="{{root}}/assets/img/corner.svg"></img>
       <h2>{{l | translate('Name', L)}}</h2>
-      <img class="img desktop" src="/assets/img/corner.svg"></img>
+      <img class="img desktop" src="{{root}}/assets/img/corner.svg"></img>
     </div>
   </div>
 
@@ -59,7 +59,7 @@
     <div class="residence-card">
 
       <!-- Photo -->
-      <a href="{{langs[L].folder}}/{{b.Name | slugify}}.html">
+      <a href="{{root}}{{langs[L].folder}}/{{b.Name | slugify}}.html">
       <div class="img">
         {% image
            constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
@@ -71,7 +71,7 @@
 
       <!-- Title -->
       <div class="card-title">
-        <a href="{{langs[L].folder}}/{{b.Name | slugify}}.html">
+        <a href="{{root}}{{langs[L].folder}}/{{b.Name | slugify}}.html">
           <h3>{{b.Name}}</h3>
         </a>
       </div>

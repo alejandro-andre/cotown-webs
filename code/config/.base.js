@@ -200,8 +200,8 @@ module.exports = (eleventyConfig) => {
       let metadata = await Image(src, {
         widths: widths,
         formats: ["webp", "jpeg"],
-        urlPath: "/assets/img/",
-        outputDir: eleventyConfig.outputDir + "/assets/img/",
+        urlPath: eleventyConfig.root + "/assets/img/",
+        outputDir: eleventyConfig.outputDir + eleventyConfig.root + "/assets/img/",
         cacheOptions: { 
           duration: "1h",
           removeUrlQueryParams: true,

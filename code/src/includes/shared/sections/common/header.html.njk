@@ -23,7 +23,7 @@
           </a>
           <h1>{{b | translate('Text', L)}}</h1>
         </div>
-        <a style="padding-top:3px;" href="{{langs[L].folder}}/{{b | translate('Link', L)}}">
+        <a style="padding-top:3px;" href="{{root}}{{langs[L].folder}}/{{b | translate('Link', L)}}">
           <button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button>
         </a>
       </div>
@@ -47,7 +47,7 @@
         <div class="spot">
           <h1>{{b | translate('Text', L)}}</h1>
         </div>
-        <a style="padding-top:3px;" href="{{langs[L].folder}}/{{b | translate('Link', L)}}">
+        <a style="padding-top:3px;" href="{{root}}{{langs[L].folder}}/{{b | translate('Link', L)}}">
           <button class="btn-primary">{% literal texts, 'button-descubrir', L %}</button>
         </a>
         {% endif %}
@@ -109,7 +109,7 @@
           <li class="pure-menu-item">
             <div class="booking">
               <button class="btn-primary">
-              <a href="{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
+              <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
               {% literal texts, 'button-reservar', L %}
               </a>
               </button>
@@ -143,7 +143,7 @@
       <!-- Botón reservar (movil) -->
       <div class="booking pure-u-1-3">
         <button class="btn-primary">
-          <a href="{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
+          <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
             {% literal texts, 'button-reservar', L %}
           </a>
         </button>
@@ -164,9 +164,9 @@
 
           <!-- Logo -->
           <div class="logo pure-u-11-24">
-            <a href="{{langs[L].folder}}/">
+            <a href="{{root}}{{langs[L].folder}}/">
               {% if site == 'vanguard' %}
-              <img class="img-logo" alt="logo" src="/assets/img/vanguard-white.svg">
+              <img class="img-logo" alt="logo" src="{{root}}/assets/img/vanguard-white.svg">
               {% else %}
               <h1><span class="turquoise">C</span>OTOWN<span class="turquoise">.</span></h1>
               {% endif %}
@@ -219,7 +219,7 @@
         <li class="locations-dropdown pure-menu-item">
           <div class="locations-container">
             <label class="locations-label">
-                <span class="loc"><a href="{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html">{{langs[L].pages['rooms'].text}}</a></span>
+                <span class="loc"><a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html">{{langs[L].pages['rooms'].text}}</a></span>
                 <div class="icons-open-close">
                   <em class="change-value icon icon-corchete-down"></em>
                 </div>
@@ -227,7 +227,7 @@
             <div data-toggle="close" class="options-loc">
                 {% for l in locations %}
                 <div class="option-loc">
-                  <a href="{{langs[L].folder}}/{{l | translate('Name', L) | slugify}}.html">
+                  <a href="{{root}}{{langs[L].folder}}/{{l | translate('Name', L) | slugify}}.html">
                   <em class="icon-map-point"></em>
                     {{l | translate('Name', L)}}
                   </a>
@@ -238,23 +238,23 @@
         </li>
 
         <!-- About -->
-        <li class="about"><a href="{{langs[L].folder}}/{{langs[L].pages['about'].url}}.html">{{langs[L].pages['about'].text}}</a>
+        <li class="about"><a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['about'].url}}.html">{{langs[L].pages['about'].text}}</a>
         </li>
 
         <!-- Advantages -->
-        <li class="advantages"><a href="{{langs[L].folder}}/{{langs[L].pages['advantages'].url}}.html">{{langs[L].pages['advantages'].text}}</a>
+        <li class="advantages"><a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['advantages'].url}}.html">{{langs[L].pages['advantages'].text}}</a>
         </li>
 
         <!-- Faqs -->
-        <li class="faqs"><a href="{{langs[L].folder}}/{{langs[L].pages['faqs'].url}}.html">{{langs[L].pages['faqs'].text}}</a>
+        <li class="faqs"><a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['faqs'].url}}.html">{{langs[L].pages['faqs'].text}}</a>
         </li>
 
         <!-- Blog -->
-        <li class="blog"><a href="{{langs[L].folder}}/{{langs[L].pages['blog'].url}}.html">{{langs[L].pages['blog'].text}}</a>
+        <li class="blog"><a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['blog'].url}}.html">{{langs[L].pages['blog'].text}}</a>
         </li>
 
         <!-- Contact -->
-        <li class="contact"><a href="{{langs[L].folder}}/{{langs[L].pages['contact'].url}}.html">{{langs[L].pages['contact'].text}}</a>
+        <li class="contact"><a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['contact'].url}}.html">{{langs[L].pages['contact'].text}}</a>
         </li>
 
         <!-- Botón booking -->

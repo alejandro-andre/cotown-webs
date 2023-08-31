@@ -7,7 +7,7 @@ eleventyComputed:
       es: "{{langs.es.folder}}/blog/{{posttag | translate('Name', 'es') | slugify}}.html"
       en: "{{langs.en.folder}}/blog/{{posttag | translate('Name', 'en') | slugify}}.html"
     description: "{{langs[L].pages[name].description}} | {{posttag | translate('Name', L) | slugify}}"
-    permalink: "{{langs[L].folder}}/blog/{{posttag | translate('Name', L) | slugify}}.html"
+    permalink: "{{root}}{{langs[L].folder}}/blog/{{posttag | translate('Name', L) | slugify}}.html"
 layout: shared/layouts/base.html
 pagination:
     data: posttags

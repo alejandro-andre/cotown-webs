@@ -101,19 +101,19 @@ const types = [
 {% if pc %}{ 
   city:'{{l | translate('Name', L)}}', 
   type:'Piso compartido',
-  link: '{{langs[L].folder}}/{{langs[L].pages.rooms.url}}-{{l | translate("Name", L) | slugify}}.html',
+  link: '{{root}}{{langs[L].folder}}/{{langs[L].pages.rooms.url}}-{{l | translate("Name", L) | slugify}}.html',
   value:'{{texts["home-pisazos-piso"][L]}} {{texts["home-pisazos-compartido"][L]}}'
 },{% endif-%}
 {% if ap %}{
   city:'{{l | translate('Name', L)}}', 
   type:'Apartamento privado',
-  link: '{{langs[L].folder}}/{{langs[L].pages.flats.url}}-{{l | translate("Name", L) | slugify}}.html',
+  link: '{{root}}{{langs[L].folder}}/{{langs[L].pages.flats.url}}-{{l | translate("Name", L) | slugify}}.html',
   value:'{{texts["home-pisazos-apartamento"][L]}} {{texts["home-pisazos-privado"][L]}}'
 },{% endif-%}
 {% if rs %}{
   city:'{{l | translate('Name', L)}}', 
   type:'Residencia universitaria',
-  link: '{{langs[L].folder}}/{{langs[L].pages.residences.url | slugify}}.html',
+  link: '{{root}}{{langs[L].folder}}/{{langs[L].pages.residences.url | slugify}}.html',
   value:'{{texts["home-pisazos-residencia"][L]}} {{texts["home-pisazos-universitaria"][L]}}'
 },{% endif-%}
 {% endfor-%}

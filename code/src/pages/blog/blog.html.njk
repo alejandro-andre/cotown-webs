@@ -8,7 +8,7 @@ eleventyComputed:
       es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
       en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
     description: "{{langs[L].pages[name].description}}"
-    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+    permalink: "{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
 layout: shared/layouts/base.html
 pagination:
     data: langs

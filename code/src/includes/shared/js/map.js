@@ -33,7 +33,7 @@ function putMarker(map, lat, lon, popup) {
   });
 
   // Crea el marcador
-  var icon = new LeafIcon({ iconUrl: '/assets/img/icono__otros_ubicacion_mapa.svg' })
+  var icon = new LeafIcon({ iconUrl: '{{root}}/assets/img/icono__otros_ubicacion_mapa.svg' })
   var marker = L.marker([lat, lon], {icon: icon}).addTo(map);
   if (popup) {
     marker.bindPopup(popup); 

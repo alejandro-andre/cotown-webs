@@ -3,10 +3,10 @@ name: index
 eleventyComputed:
     title: "{{langs[L].pages[name].title}}"
     alt:
-      es: "{{langs.es.folder}}/"
-      en: "{{langs.en.folder}}/"
+      es: "{{root}}{{langs.es.folder}}/"
+      en: "{{root}}{{langs.en.folder}}/"
     description: "{{langs[L].pages[name].description}}"
-    permalink: "{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+    permalink: "{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
 layout: shared/layouts/base.html
 pagination:
     data: langs

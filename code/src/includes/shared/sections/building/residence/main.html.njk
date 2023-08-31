@@ -141,12 +141,12 @@ function go_book(id) {
   localStorage.setItem('city', '{{building.District.Location.Name}}');
   localStorage.setItem('building', '{{building.Name}}');
   localStorage.setItem('type', id);
-  location.href = "{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
+  location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
 }
 function go_visit(id) {
   localStorage.setItem('city', '{{building.District.Location.Name}}');
   localStorage.setItem('building', id);
-  location.href = "{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html";
+  location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html";
 }
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

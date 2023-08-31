@@ -7,7 +7,7 @@
   <div class="pure-g container">
 
     <div class="pure-u-lg-1-2 pure-u-1 img-container">
-      <a href="{{langs[L].folder}}/{{langs[L].pages['flats'].url}}.html">
+      <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}.html">
       <div class="img">
         {% image
            constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
@@ -27,7 +27,7 @@
     </div>
 
     <div class="pure-u-lg-1-2 pure-u-1 img-container">
-      <a href="{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html">
+      <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html">
       <div class="img last">
         {% image
            constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'].id +"/Image/contents?access_token=" + token,

@@ -1,15 +1,16 @@
 const baseConfig = require('./.base.js');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.outputDir = "sites/cotown-draft";
+  eleventyConfig.root = "/cotown-draft";
+  eleventyConfig.outputDir = "sites/cotown-draft" + root;
   baseConfig(eleventyConfig);
-  eleventyConfig.addPassthroughCopy({"src/includes/shared/css": "assets/css"});
-  eleventyConfig.addPassthroughCopy({"src/includes/cotown/css": "assets/css"});
-  eleventyConfig.addPassthroughCopy({"src/assets/shared": "assets"});
-  eleventyConfig.addPassthroughCopy({"src/assets/cotown": "assets"});
-  eleventyConfig.addGlobalData("site", "cotown");
+  eleventyConfig.addPassthroughCopy({"src/includes/shared/css": eleventyConfig.root + "/assets/css"});   // remove
+  eleventyConfig.addPassthroughCopy({"src/includes/vanguard/css": eleventyConfig.root + "/assets/css"}); // remove
+  eleventyConfig.addPassthroughCopy({"src/assets/shared": eleventyConfig.root + "/assets"});
+  eleventyConfig.addPassthroughCopy({"src/assets/vanguard": eleventyConfig.root + "/assets"});
+  eleventyConfig.addGlobalData("root", eleventyConfig.root);
   eleventyConfig.addGlobalData("siteid", 2);
-  eleventyConfig.addGlobalData("root", "/");
+  eleventyConfig.addGlobalData("root", root);
   return {
     created: new Date(),
     passthroughFileCopy: true,

@@ -13,9 +13,9 @@
         {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
         <li class="splide__slide">
           {% if l.Name != 'Valencia' %}
-          <a href="{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}-{{l | translate('Name', L) | slugify}}.html">
+          <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}-{{l | translate('Name', L) | slugify}}.html">
           {% else %}
-          <a href="{{langs[L].folder}}/facultades-2.html">
+          <a href="{{root}}{{langs[L].folder}}/facultades-2.html">
           {% endif %}
           <div class="img">
             {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}

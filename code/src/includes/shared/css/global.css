@@ -758,8 +758,8 @@ main .container-main section.form select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url("/assets/img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
-    background: url("/assets/img/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+    background: url("..//img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
+    background: url("..//img/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
 }
 main .container-main section.form .checkbox {
     display: flex;
@@ -1220,8 +1220,8 @@ button.date-button input.inputs {
     -moz-appearance: none;
     appearance: none;
     /* Some browsers will not display the caret when using calc, so we put the fallback first */
-    background: url("/assets/img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
-    background: url("/assets/img/br_down.png") white no-repeat calc(100% - 30px) !important; /* Better placement regardless of input width */
+    background: url("..//img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
+    background: url("..//img/br_down.png") white no-repeat calc(100% - 30px) !important; /* Better placement regardless of input width */
 }
 .popup .content-booking section .city-selector .city-icons {
     width: 100%;
