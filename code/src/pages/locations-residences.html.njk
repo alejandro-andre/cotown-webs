@@ -20,6 +20,7 @@ priority: "1.0"
 tags: page
 ---
 <!-- Additional HEAD content -->
+{% if site == "vanguard" %}
 {% block head %}
 {% set css %}{% include "shared/css/residences.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
@@ -32,4 +33,4 @@ tags: page
     {% include site + '/sections/locations/residences.html.njk' %}
 
   </div>
-</main>
+</main>{% endif %}
