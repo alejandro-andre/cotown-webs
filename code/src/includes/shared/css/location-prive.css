@@ -57,7 +57,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     margin: 0;
 }
 main .location .container-main .first-contain .video-loc .text-container .description p {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 150%;
     font-weight: 500;
     margin: 0;
@@ -452,7 +452,7 @@ section.necesities .grid .necesidad .p-text p {
         font-size: 170px;
     }
     main .location .container-main .first-contain .video-loc .description p {
-        font-size: 30px;
+        font-size: 24px;
     }
     section.necesities .grid .necesidad .p-title p {
         font-size: 30px;
@@ -485,7 +485,7 @@ section.necesities .grid .necesidad .p-text p {
         width: 48%;
     }
     main .location .container-main .first-contain .video-loc .text-container .description p {
-        font-size: 20px;
+        font-size: 18px;
     }
     .pisos-slider .h2-container h2 {
         font-size: 46px;

@@ -57,14 +57,18 @@ tags: page
           <div class="text-location pure-u-1 pure-u-lg-14-24">
             <h3>{{o.Location}}</h3>
             <p>{{o.Address}}</p>
+            {% if o.Email != '' %}
             <p>
               <em class="icon-envelope"></em>
               <span><a href="mailto:{{o.Email}}" target="_blank">{{o.Email}}</a></span>
             </p>
+            {% endif %}
+            {% if o.Phone != '' %}
             <p>
               <em class="icon-call"></em>
               <span><a href="tel:{{o.Phone}}" target="_blank">{{o.Phone}}</a></span>
             </p>
+            {% endif %}
           </div>
 
           <div class="pure-u-1 pure-u-lg-10-24">
