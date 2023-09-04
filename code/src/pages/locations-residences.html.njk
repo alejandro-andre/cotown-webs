@@ -21,7 +21,7 @@ tags: page
 ---
 <!-- Additional HEAD content -->
 {% block head %}
-{% set css %}{% include "shared/css/residences.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% set css %}{% include "vanguard/css/residences.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% endblock %}
 
 <!-- Main -->
@@ -29,7 +29,7 @@ tags: page
   <div class="container-main">
 
     <!-- List of locations -->
-    {% include site + '/sections/locations/residences.html.njk' %}
+    {% include 'vanguard/sections/locations/residences.html.njk' %}
 
   </div>
 </main>
