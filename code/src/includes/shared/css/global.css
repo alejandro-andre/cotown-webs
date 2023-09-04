@@ -492,6 +492,7 @@ li .select-container .options .option.selected {
     line-height: 1;
 }
 span.turquoise {
+    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     color: var(--primary);
 }
 .icon-list {
