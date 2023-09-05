@@ -1,15 +1,24 @@
 /* LOCATION
 -------------------------------- \*/
+
 main .location .container-main .first-contain {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 main .location .container-main .first-contain .video-loc {
     width: 100%;    
     min-height: fit-content;
+    opacity: 0.8;
+}
+main .location .container-main .first-contain .video-loc .opacity {
+    width: 100%;    
+    min-height: 100%;
+    position: absolute;
+    background-color: var(--black-op);
 }
 main .location .container-main .first-contain .video-loc .video .img {
     width: 100%;
@@ -26,14 +35,14 @@ main .location .container-main .first-contain .video-loc .text-container {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    position: relative;
-    top: -100px;
+    position: absolute;
+    top: 100px;
     left: 70px;
 }
 main .location .container-main .first-contain .video-loc .text-container h1 {
     color: var(--white);
     width: fit-content;
-    font-size: 120px;
+    font-size: 100px;
     line-height: 1em;
     padding: 0.2em 0 0;
     order: 2;
@@ -44,9 +53,10 @@ main .location .container-main .first-contain .video-loc .text-container h1 {
 main .location .container-main .first-contain .video-loc .text-container .description {
     width: 50%;
     min-height: fit-content;
-    background-color: var(--white);
+    background-color: var(--white-bg-op2);
     padding: 1.5em 3.5em 1.5em 2em;
     order: 1;
+    border-radius: 0 12px;
 }
 main .location .container-main .first-contain .video-loc .text-container .description .text {
     font-size: 30px;
@@ -55,7 +65,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     margin: 0;
 }
 main .location .container-main .first-contain .video-loc .text-container .description p {
-    font-size: 20x;
+    font-size: 14px;
     line-height: 150%;
     font-weight: 500;
     margin: 0;
@@ -68,7 +78,16 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4em;
+    padding-bottom: 4em;    
+    background-color: var(--white-bg-op1);
+    position: relative;
+    top: -20em;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px){
+    .pisos-slider {
+        top: -10em;
+    }
+    
 }
 .pisos-slider .h2-container {
     display: flex;
@@ -81,6 +100,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     width: 50%;
     margin: 0;
     text-transform: uppercase;
+    padding: 1rem 0 0;
 }
 .pisos-slider .h2-container h2 span {
     font-weight: 200!important;
@@ -90,10 +110,11 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     max-width: 99vw;
     height: auto;
 }
+
 .carousel .carousel-main-list .splide__slide {
     max-width: 70vw;
     margin-right: 6em !important;
-    border-radius: 24px;
+    border-radius: 24px;   
 }
 .carousel .carousel-main-list .splide__slide .card-contain {
     background-color: var(--white-background);
@@ -256,18 +277,40 @@ button.green-button.btn-secondary {
 }
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .carousel-mini {
     position: relative;
-    width: 60vw;
+    width: 64vw;
 }
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .carousel-mini .card {
-    width: 150px;
+    width: 140px;
+}
+.carousel-mini {
+    position: relative;
+    z-index: 10;
 }
 .splide.mini {
     padding: 10px;
     visibility: visible;
 }
+.carousel-mini .splide__arrow--prev {
+    left: 0;
+    position: absolute;
+    top: 36%;
+    background: var(--primary);
+    opacity: 0.75;
+}
+.carousel-mini .splide__arrow--next {
+    right: 0;
+    position: absolute;
+    top: 36%;
+    background: var(--primary);
+    opacity: 0.75;
+}
 .carousel-mini .splide__list {
     position: relative;
     padding: 0 1em !important;
+}
+.carousel-mini .list-mini .splide__slide {
+    margin-left: 3em!important;
+    margin-right: 3em!important;
 }
 .carousel-mini .splide__slide.is-prev, .carousel-mini .splide__slide.is-next {
     opacity: 1;
@@ -313,9 +356,8 @@ button.green-button.btn-secondary {
     text-transform: uppercase;
 }
 
-
 #map {
-    margin: 6em 0;
+    margin: 0 0 6em;
 }
 
 section.necesities {
@@ -453,7 +495,7 @@ section.necesities .grid .necesidad .p-text p {
         width: 48%;
     }
     main .location .container-main .first-contain .video-loc .text-container .description p {
-        font-size: 18px;
+        font-size: 14px;
     }
     .pisos-slider .h2-container h2 {
         font-size: 46px;
@@ -785,6 +827,12 @@ section.necesities .grid .necesidad .p-text p {
 .map {
     width: 100%;
     height: 600px;
+    margin: -12em 0 0;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px){
+    .map {        
+        margin: -8em 0 0;
+    }
 }
 .map a {
     font-size: 12px;

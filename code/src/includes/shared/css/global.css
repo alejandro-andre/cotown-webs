@@ -305,7 +305,7 @@ header, main, footer {
     display: block;
 }
 main {
-    margin-top: 145px;
+    margin-top: 114px;
     overflow: hidden;
 }
 
@@ -1382,7 +1382,7 @@ button.date-button input.inputs {
         margin: 0 4em;
     }
     .container-header.second .black-line.custom-wrapper {
-        padding: 0.2em 4em;
+        padding: 0.2em 4em 0;
     }
 }
 @media only screen and (min-width: 1024px) {
@@ -1401,7 +1401,6 @@ button.date-button input.inputs {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 80px;
         top: 48px;
     }
     .left-nav .pure-menu {
@@ -1652,7 +1651,7 @@ button.date-button input.inputs {
         background-color: var(--secondary-black);
         -webkit-font-smoothing: antialiased;
         width: 100%;
-        height: 66px;
+        height: 57px;
         overflow: hidden;
         -webkit-transition: height 0.5s;
         -moz-transition: height 0.5s;
@@ -1664,7 +1663,7 @@ button.date-button input.inputs {
         height: 14em;
     }
     .container-header.second .black-line .left-nav {
-        height: 66px;
+        height: 57px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -1696,7 +1695,7 @@ button.date-button input.inputs {
     }
     .container-header.second .black-line .left-nav .logo {
         text-align: center;
-        height: 66px;
+        height: 57px;
     }
     .container-header.second .black-line .left-nav .lang {
         margin-right: 0;
@@ -1726,7 +1725,7 @@ button.date-button input.inputs {
     #only-mobile-menu {
         top: 0;
         z-index: 10001;
-        height: 66px;
+        height: 57px;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -1777,7 +1776,7 @@ button.date-button input.inputs {
         align-items: center;
         background-color: var(--white);
         color: var(--black);
-        margin-top: 66px;
+        margin-top: 57px;
     }
     .only-mobile-private .area {
         display: flex;
