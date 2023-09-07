@@ -20,12 +20,24 @@ main .location .container-main .first-contain .video-loc .opacity {
     position: absolute;
     background-color: var(--black-op);
 }
-main .location .container-main .first-contain .video-loc .video .img {
+main .location .container-main .first-contain .video-loc .video {
     width: 100%;
-    object-fit: cover;
-    object-position: center center;
+    height: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
 }
-main .location .container-main .first-contain .video-loc .video .img img {
+main .location .container-main .first-contain .video-loc .video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+main .location .container-main .first-contain .video-loc .video img {
     width: 100%;
     object-fit: cover;
     object-position: center center;
@@ -58,17 +70,11 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     order: 1;
     border-radius: 0 12px;
 }
-main .location .container-main .first-contain .video-loc .text-container .description .text {
-    font-size: 30px;
-    line-height: 150%;
-    font-weight: 500;
-    margin: 0;
-}
 main .location .container-main .first-contain .video-loc .text-container .description p {
-    font-size: 14px;
-    line-height: 150%;
+    font-size: 18px;
     font-weight: 500;
-    margin: 0;
+    line-height: 150%;
+    margin: 0 0 5px 0;
 }
 
 /* CARRUSEL
@@ -78,16 +84,9 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4em;    
     background-color: var(--white-bg-op1);
+    padding-bottom: 4em;    
     position: relative;
-    top: -20em;
-}
-@media only screen and (min-width: 1024px) and (max-width: 1280px){
-    .pisos-slider {
-        top: -10em;
-    }
-    
 }
 .pisos-slider .h2-container {
     display: flex;
@@ -110,11 +109,10 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     max-width: 99vw;
     height: auto;
 }
-
 .carousel .carousel-main-list .splide__slide {
     max-width: 70vw;
     margin-right: 6em !important;
-    border-radius: 24px;   
+    border-radius: 24px;
 }
 .carousel .carousel-main-list .splide__slide .card-contain {
     background-color: var(--white-background);
@@ -171,6 +169,7 @@ a {
     z-index: 1000;
     background-color: var(--primary-light);
     border-radius: 0 0 24px 24px;
+    min-height: 280px;
 }
 .carousel .carousel-main-list .card .card-body a {
     width: 100%;
@@ -250,16 +249,10 @@ button.green-button.btn-secondary {
     line-height: 150%;
     padding: 6px 16px;
 }
-/* .carousel .carousel-main-list .main-slide.splide__slide.is-prev, .carousel .carousel-main-list .main-slide.splide__slide.is-next {
-    width: 30vw!important;
-} */
 .carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain, .carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain {
     opacity: 0.5;
     filter: brightness(0.4);
-    /* height: 70%;
-    margin: 25% 0; */
 }
-
 .arrow-nav.splide__arrow {
     height: 4em;
     width: 4em;
@@ -495,7 +488,7 @@ section.necesities .grid .necesidad .p-text p {
         width: 48%;
     }
     main .location .container-main .first-contain .video-loc .text-container .description p {
-        font-size: 14px;
+        font-size: 18px;
     }
     .pisos-slider .h2-container h2 {
         font-size: 46px;
@@ -542,8 +535,9 @@ section.necesities .grid .necesidad .p-text p {
 /* MOBILE \*/
 @media only screen and (max-width: 1023.9px) {
     main .location .container-main .first-contain .video-loc .text-container {
-        top: -85px;
+        top: -20px;
         left: 0;
+        margin: 10px;
     }
     main .location .container-main .first-contain .video-loc .text-container h1 {
         font-size: 68px;
@@ -551,20 +545,20 @@ section.necesities .grid .necesidad .p-text p {
         margin:0.2em 0;
         width: 100%;       
         order: 1;
-        margin-left: 2rem;
+        margin-left: 1rem;
         top: 0;
     }
     main .location .container-main .first-contain .video-loc .text-container .description {
         width: 100%;
         order: 2;
-        padding: 0;
+        padding: 1em;
     }
   
     main .location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 16px;
         line-height: 150%;
         margin: 0;
-        padding: 0 2em;
+        padding: 0;
     }
     .expansion {
         padding: 0;
@@ -827,12 +821,6 @@ section.necesities .grid .necesidad .p-text p {
 .map {
     width: 100%;
     height: 600px;
-    margin: -12em 0 0;
-}
-@media only screen and (min-width: 1024px) and (max-width: 1280px){
-    .map {        
-        margin: -8em 0 0;
-    }
 }
 .map a {
     font-size: 12px;

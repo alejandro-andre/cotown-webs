@@ -481,6 +481,9 @@ li .select-container .options .option.selected {
     margin: auto;
     padding: 0;
 }
+.logo {
+    margin: 2px 0 -2px 0;
+}
 .logo a {
     text-decoration: none;
 }
