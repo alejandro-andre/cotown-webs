@@ -72,6 +72,11 @@ new Splide("#splideServices", {
 // Sliders tipos de habitacion
 {% for r in rooms | find('id', 'eq', building.id) %}
 {% for p in r.Place_types %}
+new Splide('#big-{{p.Code}}', { 
+  type: 'loop', 
+  height: '90vh',
+  arrows: true 
+}).mount();
 var main_{{p.id}} = new Splide( '#main-carousel-{{p.Code}}', {
   type: 'fade',
   rewind: true,
