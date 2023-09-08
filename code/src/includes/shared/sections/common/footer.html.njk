@@ -103,10 +103,10 @@
 
 <!-- JS / UTM -->
 // UTM
-const urlParams = new URLSearchParams(window.location.search);
-const utmSource = urlParams.get('utm_source');
-const utmCampaign = urlParams.get('utm_campaign');
-const utmMedium = urlParams.get('utm_medium');
+var urlParams = new URLSearchParams(window.location.search);
+var utmSource = urlParams.get('utm_source');
+var utmCampaign = urlParams.get('utm_campaign');
+var utmMedium = urlParams.get('utm_medium');
 if (!utmSource && !utmCampaign && !utmMedium) {
   if (!document.referrer) {
     utmMedium='direct';
