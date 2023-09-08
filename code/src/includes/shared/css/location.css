@@ -1,22 +1,43 @@
 /* LOCATION
 -------------------------------- \*/
+
 main .location .container-main .first-contain {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 main .location .container-main .first-contain .video-loc {
     width: 100%;    
     min-height: fit-content;
+    opacity: 0.8;
 }
-main .location .container-main .first-contain .video-loc .video .img {
+main .location .container-main .first-contain .video-loc .opacity {
+    width: 100%;    
+    min-height: 100%;
+    position: absolute;
+    background-color: var(--black-op);
+}
+main .location .container-main .first-contain .video-loc .video {
     width: 100%;
-    object-fit: cover;
-    object-position: center center;
+    height: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
 }
-main .location .container-main .first-contain .video-loc .video .img img {
+main .location .container-main .first-contain .video-loc .video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+main .location .container-main .first-contain .video-loc .video img {
     width: 100%;
     object-fit: cover;
     object-position: center center;
@@ -26,14 +47,14 @@ main .location .container-main .first-contain .video-loc .text-container {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    position: relative;
-    top: -100px;
+    position: absolute;
+    top: 100px;
     left: 70px;
 }
 main .location .container-main .first-contain .video-loc .text-container h1 {
     color: var(--white);
     width: fit-content;
-    font-size: 120px;
+    font-size: 100px;
     line-height: 1em;
     padding: 0.2em 0 0;
     order: 2;
@@ -44,21 +65,16 @@ main .location .container-main .first-contain .video-loc .text-container h1 {
 main .location .container-main .first-contain .video-loc .text-container .description {
     width: 50%;
     min-height: fit-content;
-    background-color: var(--white);
+    background-color: var(--white-bg-op2);
     padding: 1.5em 3.5em 1.5em 2em;
     order: 1;
-}
-main .location .container-main .first-contain .video-loc .text-container .description .text {
-    font-size: 30px;
-    line-height: 150%;
-    font-weight: 500;
-    margin: 0;
+    border-radius: 0 12px;
 }
 main .location .container-main .first-contain .video-loc .text-container .description p {
-    font-size: 20x;
-    line-height: 150%;
+    font-size: 18px;
     font-weight: 500;
-    margin: 0;
+    line-height: 150%;
+    margin: 0 0 5px 0;
 }
 
 /* CARRUSEL
@@ -68,7 +84,9 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4em;
+    background-color: var(--white-bg-op1);
+    padding-bottom: 4em;    
+    position: relative;
 }
 .pisos-slider .h2-container {
     display: flex;
@@ -81,6 +99,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     width: 50%;
     margin: 0;
     text-transform: uppercase;
+    padding: 1rem 0 0;
 }
 .pisos-slider .h2-container h2 span {
     font-weight: 200!important;
@@ -150,6 +169,7 @@ a {
     z-index: 1000;
     background-color: var(--primary-light);
     border-radius: 0 0 24px 24px;
+    min-height: 280px;
 }
 .carousel .carousel-main-list .card .card-body a {
     width: 100%;
@@ -229,16 +249,10 @@ button.green-button.btn-secondary {
     line-height: 150%;
     padding: 6px 16px;
 }
-/* .carousel .carousel-main-list .main-slide.splide__slide.is-prev, .carousel .carousel-main-list .main-slide.splide__slide.is-next {
-    width: 30vw!important;
-} */
 .carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain, .carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain {
     opacity: 0.5;
     filter: brightness(0.4);
-    /* height: 70%;
-    margin: 25% 0; */
 }
-
 .arrow-nav.splide__arrow {
     height: 4em;
     width: 4em;
@@ -256,18 +270,40 @@ button.green-button.btn-secondary {
 }
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .carousel-mini {
     position: relative;
-    width: 60vw;
+    width: 99%;
 }
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .carousel-mini .card {
-    width: 150px;
+    width: 140px;
+}
+.carousel-mini {
+    position: relative;
+    z-index: 10;
 }
 .splide.mini {
     padding: 10px;
     visibility: visible;
 }
+.carousel-mini .splide__arrow--prev {
+    left: 0;
+    position: absolute;
+    top: 36%;
+    background: var(--primary);
+    opacity: 0.75;
+}
+.carousel-mini .splide__arrow--next {
+    right: 0;
+    position: absolute;
+    top: 36%;
+    background: var(--primary);
+    opacity: 0.75;
+}
 .carousel-mini .splide__list {
     position: relative;
     padding: 0 1em !important;
+}
+.carousel-mini .list-mini .splide__slide {
+    margin-left: 3em!important;
+    margin-right: 3em!important;
 }
 .carousel-mini .splide__slide.is-prev, .carousel-mini .splide__slide.is-next {
     opacity: 1;
@@ -313,9 +349,8 @@ button.green-button.btn-secondary {
     text-transform: uppercase;
 }
 
-
 #map {
-    margin: 6em 0;
+    margin: 0 0 6em;
 }
 
 section.necesities {
@@ -418,7 +453,7 @@ section.necesities .grid .necesidad .p-text p {
         font-size: 170px;
     }
     main .location .container-main .first-contain .video-loc .description p {
-        font-size: 24px;
+        font-size: 22px;
     }
     section.necesities .grid .necesidad .p-title p {
         font-size: 30px;
@@ -475,7 +510,7 @@ section.necesities .grid .necesidad .p-text p {
     }
 
     .carousel .carousel-main-list .splide__slide h3 {
-        font-size: 46px;
+        font-size: 64px;
     }
 
 }
@@ -500,8 +535,9 @@ section.necesities .grid .necesidad .p-text p {
 /* MOBILE \*/
 @media only screen and (max-width: 1023.9px) {
     main .location .container-main .first-contain .video-loc .text-container {
-        top: -85px;
+        top: -20px;
         left: 0;
+        margin: 10px;
     }
     main .location .container-main .first-contain .video-loc .text-container h1 {
         font-size: 68px;
@@ -509,20 +545,20 @@ section.necesities .grid .necesidad .p-text p {
         margin:0.2em 0;
         width: 100%;       
         order: 1;
-        margin-left: 2rem;
+        margin-left: 1rem;
         top: 0;
     }
     main .location .container-main .first-contain .video-loc .text-container .description {
         width: 100%;
         order: 2;
-        padding: 0;
+        padding: 1em;
     }
   
     main .location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 16px;
         line-height: 150%;
         margin: 0;
-        padding: 0 2em;
+        padding: 0;
     }
     .expansion {
         padding: 0;
