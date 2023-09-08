@@ -1405,7 +1405,7 @@ button.date-button input.inputs {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        top: 48px;
+        height: 60px;
     }
     .left-nav .pure-menu {
         display: none;
