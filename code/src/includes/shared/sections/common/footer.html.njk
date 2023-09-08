@@ -96,9 +96,37 @@
 
 </footer>
 
-<!-- JS / Banner -->
 {% set script %}
+
+<!-- JS / Common -->
 {% include "shared/js/common.js" %}
+
+<!-- JS / UTM -->
+// UTM
+const urlParams = new URLSearchParams(window.location.search);
+const utmSource = urlParams.get('utm_source');
+const utmCampaign = urlParams.get('utm_campaign');
+const utmMedium = urlParams.get('utm_medium');
+if (!utmSource && utmCampaign && utmMedium) {
+  if (!document.referrer) {
+    utmMedium='direct';
+  } else if (document.referrer.includes('google')) {
+    utmMedium='organic'
+    utmSource='google';
+  } else if (document.referrer.includes('bing')) {
+    utmMedium='organic'
+    utmSource='bing';
+  } else {
+    utmMedium='referral'
+    utmSource=document.referrer;
+  };
+}
+sessionStorage.setItem('utm_source', utmSource);
+sessionStorage.setItem('utm_campaign', utmCampaign);
+sessionStorage.setItem('utm_medium', utmMedium);
+console.log(`utm_source: ${utmSource}, utm_campaign: ${utmCampaign}, utm_medium: ${utmMedium}`);
+
+<!-- JS / Banner -->
 {% for b in banners | find('Page', 'eq', 'home') %}
 {% if loop.index == 1 and b | length > 0 %}
 // Banner
