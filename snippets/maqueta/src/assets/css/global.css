@@ -713,6 +713,7 @@ footer section.container-footer .footer-info .info {
         align-items: center;
         padding: 0.2em 4em;
         width: 100%;
+        height: 60px;
     }
     .black-line .booking, .black-line .lang, .black-line .black-line em.icon-Piso {
         display: none;
