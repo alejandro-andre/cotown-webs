@@ -57,7 +57,7 @@ tags: page
           <div class="text-location pure-u-1 pure-u-lg-14-24">
             <h3>{{o.Location}}</h3>
             <p>{{o.Address}}</p>
-            {% if o.Email != '' %}
+            {% if o.Email %}
             <p>
               <em class="icon-envelope"></em>
               <span><a href="mailto:{{o.Email}}" target="_blank">{{o.Email}}</a></span>
