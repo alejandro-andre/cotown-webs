@@ -53,14 +53,13 @@ main .location .container-main .first-contain .video-loc .text-container {
 }
 main .location .container-main .first-contain .video-loc .text-container h2 {
     color: var(--white);
+    background-color: blue;
     width: fit-content;
     font-size: 100px;
     line-height: 1em;
     padding: 0.2em 0 0;
     order: 2;
-    position: relative;
-    bottom: 2rem;
-    margin-left: 2rem;
+    position: relative;    
 }
 main .location .container-main .first-contain .video-loc .text-container .description {
     width: 50%;
