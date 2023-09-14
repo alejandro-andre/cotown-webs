@@ -72,6 +72,8 @@ module.exports = (eleventyConfig) => {
   
   // Translation filter
   eleventyConfig.addFilter("translate", function(item, key, lang) {
+    if (item == null)
+      return '';
     if (lang === 'en') {
       return item[key + '_en'] || item[key];
     } else {
