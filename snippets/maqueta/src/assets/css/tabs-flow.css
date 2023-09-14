@@ -907,7 +907,8 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     background-color: var(--grey-dark);
     color: var(--white);
     z-index: 2;
-    padding-left: 4%;
+    padding: 12px 2%;
+    width: 96% ;
     }
     .tabset .tab-panels .tab-panel .left form .background em {
         margin: 14px 12px;
@@ -985,7 +986,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         display: none;
     }
     .tabset label.label .label-mobile {
-        width: 90%;
+        width: 96%;
         margin-left: 0;
         display: flex;
         flex-flow: row wrap;
@@ -1289,7 +1290,18 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     .tabset .tab-panels .tab-panel .right.tab3 .resume p, .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit p, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates p, .tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume p {
         font-size: 11px;
     }
-
-
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text p {
+        font-size: 12px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text em {
+        font-size: 10px;
+        margin-right: 4px;
+    }
+    .tabset .tab-panel .right.tab3 .resume p.advise {
+        line-height: 14px;
+    }
+    .tabset > label {
+        border: 0px solid var(--grey-dark);
+    }
 
 }
