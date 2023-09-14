@@ -8,17 +8,18 @@
         Sorry, your browser doesn't support embedded videos.
         <source type="video/mp4" src="{{root}}/assets/video/{{location.Name | slugify}}.mp4">
       </video>
+      <div class="img only-mobile pure-u-1">
+        <img class="img-logo" alt="logo" src="{{root}}/assets/img/barcelona.png">      
+      </div>
     </div>
     <div class="text-container">
       <div class="description text">        
-        <h3>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR</h3>
+        <h3>Barcelona speaks for itself</h3>
         <p>{{location | translate('Description', L)}}</p>
         <br>
         <p>{{location | translate('Details', L)}}</p>
       </div>
       <h2>{{location | translate('Name', L)}}</h2>
     </div>
-
   </div>
-
 </section>
