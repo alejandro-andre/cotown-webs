@@ -53,7 +53,7 @@
     </div>
   </div>
 
-  <div class="pure-u-1 pure-u-lg-21-24">
+  <div class="pure-u-1 pure-u-lg-1-2">
   {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) %}
   <div class="pure-u-1">
     <div class="residence-card">
@@ -87,7 +87,7 @@
       <div class="types">
         {% for r in rooms  | find('id', 'eq', b.id) %}
         {% for pt in r.Place_types %}
-        <div class="pure-u-8-24 pure-u-lg-4-24">
+        <div class="pure-u-1-3 pure-u-md-1-4">
           <div class="type">
             <p>{{place_types[pt.Code] | translate('Name', L)}}</p>
             <p class="price">{{pt.Flat_types[0].Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
@@ -95,7 +95,7 @@
         </div>
         {% endfor %}
         {% for i in range(r.Place_types, 5) -%}
-        <div class="pure-u-8-24 pure-u-lg-4-24">
+        <div class="pure-u-1-3 pure-u-md-1-4">
           &nbsp;
         </div>
         {% endfor %}
@@ -106,7 +106,7 @@
       <div class="services">
         {% for s in b.Services %}
         {% if loop.index < 9 %}
-        <div class="service pure-u-1-4 pure-u-lg-3-24">
+        <div class="service pure-u-7-24 pure-u-md-5-24">
           <div class="icon">
           {% svg
             constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Service.Images[0].id +"/Icon/contents?access_token=" + token,

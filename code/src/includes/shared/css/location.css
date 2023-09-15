@@ -19,6 +19,7 @@ main .location .container-main .first-contain .video-loc .opacity {
     min-height: 100%;
     position: absolute;
     background-color: var(--black-op);
+    z-index: 0;
 }
 main .location .container-main .first-contain .video-loc .video {
     width: 100%;
@@ -45,24 +46,22 @@ main .location .container-main .first-contain .video-loc .video img {
 main .location .container-main .first-contain .video-loc .text-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
     position: absolute;
-    bottom: 11em;
     left: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 main .location .container-main .first-contain .video-loc .text-container h2 {
     color: var(--white);
-    width: fit-content;
+    width: 100%;
     font-size: 78px;
     line-height: 1em;
-    padding: 0.2em 0 0;
-    order: 2;
-    position: relative;    
-    right: 0;
-    top: 2.5em;
+    padding: 0.2em 1em 0 0;
+    text-align: end;    
 }
 main .location .container-main .first-contain .video-loc .text-container h3 {
     color: var(--white);
@@ -70,17 +69,14 @@ main .location .container-main .first-contain .video-loc .text-container h3 {
     font-size: 48px;
     line-height: 1em;
     padding: 0.2em 0 0;
-    order: 2;
     position: relative;    
     left: 0;
     top: 0;
 }
 main .location .container-main .first-contain .video-loc .text-container .description {
-    width: 70%;
+    width: 100%;
     min-height: fit-content;
-    /* background-color: var(--white-bg-op2);*/
-    padding: 2em 2em 2em 2em;
-    order: 1;
+    padding: 2em 10% 2em 2em;
     border-radius: 0 12px;
 }
 main .location .container-main .first-contain .video-loc .text-container .description p {
@@ -497,7 +493,6 @@ section.necesities .grid .necesidad .p-text p {
 
     main .location .container-main .first-contain .video-loc .text-container h2 {
         font-size: 76px;
-        top: 0;
     }
     main .location .container-main .first-contain .video-loc .text-container .description {
         width: 100%;
@@ -506,8 +501,6 @@ section.necesities .grid .necesidad .p-text p {
         font-size: 18px;
     }
     main .location .container-main .first-contain .video-loc .text-container {        
-        top: 0;
-        bottom: 0;
     }
 
 
@@ -572,7 +565,6 @@ section.necesities .grid .necesidad .p-text p {
         height: 430px;
     }
     main .location .container-main .first-contain .video-loc .text-container {
-        top: -20px;
         left: 0;
         margin: 10px 0 0 10px;
         width: calc(100% - 20px);
@@ -580,17 +572,15 @@ section.necesities .grid .necesidad .p-text p {
         align-items: flex-end;
     }    
     main .location .container-main .first-contain .video-loc .text-container h2 {
-        font-size: 64px;
+        font-size: 58px;
         padding: 0;
         position: relative;
         right: 20px;
-        top: 0;
         margin: 0;
     }   
     main .location .container-main .first-contain .video-loc .text-container .description {
         width: 100%;
-        order: 2;
-        padding: 1em 0;
+        padding: 0;
     }
     main .location .container-main .first-contain .video-loc .text-container h3 {
         font-size: 36px;
