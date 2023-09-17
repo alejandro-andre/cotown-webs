@@ -40,10 +40,9 @@ function post(event) {
   formData = new FormData(event.target);
 
   // SEM
-  formData.append('gclid', gettag('gclid'));
-  formData.append('utm_campaign', gettag('utm_campaign'));
-  formData.append('utm_medium', gettag('utm_medium'));
-  formData.append('utm_source', gettag('utm_source'));
+  formData.append('168', sessionStorage.getItem('utm_campaign'));
+  formData.append('169', sessionStorage.getItem('utm_medium'));
+  formData.append('159', sessionStorage.getItem('utm_source'));
 
   const file = document.getElementById('file')
   if (file)
