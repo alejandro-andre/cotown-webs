@@ -108,7 +108,7 @@ var utmSource = urlParams.get('utm_source');
 var utmCampaign = urlParams.get('utm_campaign');
 var utmMedium = urlParams.get('utm_medium');
 if (!utmSource && !utmCampaign && !utmMedium) {
-  if (!document.referrer) {
+  if (!document.referrer || document.referrer.includes('{{globals.url}}')) {
     utmMedium='direct';
   } else if (document.referrer.includes('google')) {
     utmMedium='organic'
