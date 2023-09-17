@@ -102,28 +102,41 @@
 {% include "shared/js/common.js" %}
 
 <!-- JS / UTM -->
-// UTM
-var urlParams = new URLSearchParams(window.location.search);
-var utmSource = urlParams.get('utm_source');
-var utmCampaign = urlParams.get('utm_campaign');
-var utmMedium = urlParams.get('utm_medium');
-if (!utmSource && !utmCampaign && !utmMedium) {
-  if (!document.referrer || document.referrer.includes('{{globals.url}}')) {
-    utmMedium='direct';
-  } else if (document.referrer.includes('google')) {
-    utmMedium='organic'
-    utmSource='google';
-  } else if (document.referrer.includes('bing')) {
-    utmMedium='organic'
-    utmSource='bing';
-  } else {
-    utmMedium='referral'
-    utmSource=document.referrer;
-  };
+// Coming from somewhere
+if (!document.referrer.includes('{{globals.url}}')) {
+
+  // Get UTM from querystring
+  var urlParams = new URLSearchParams(window.location.search);
+  var utmSource = urlParams.get('utm_source');
+  var utmCampaign = urlParams.get('utm_campaign');
+  var utmMedium = urlParams.get('utm_medium');
+
+  // Generate UTM if not passed
+  if (!utmSource && !utmCampaign && !utmMedium) {
+    if (!document.referrer) {
+      utmMedium='direct';
+    } else if (document.referrer.includes('google')) {
+      utmMedium='organic'
+      utmSource='google';
+    } else if (document.referrer.includes('bing')) {
+      utmMedium='organic'
+      utmSource='bing';
+    } else {
+      utmMedium='referral'
+      utmSource=document.referrer;
+    };
+  }
+
+  // Save
+  sessionStorage.setItem('utm_source', utmSource);
+  sessionStorage.setItem('utm_campaign', utmCampaign);
+  sessionStorage.setItem('utm_medium', utmMedium);
 }
-sessionStorage.setItem('utm_source', utmSource);
-sessionStorage.setItem('utm_campaign', utmCampaign);
-sessionStorage.setItem('utm_medium', utmMedium);
+
+// Debug
+utmSource   = sessionStorage.getItem('utm_source');
+utmCampaign = sessionStorage.getItem('utm_campaign');
+utmMedium   = sessionStorage.getItem('utm_medium');
 console.log(`utm_source: ${utmSource}, utm_campaign: ${utmCampaign}, utm_medium: ${utmMedium}`);
 
 <!-- JS / Banner -->
