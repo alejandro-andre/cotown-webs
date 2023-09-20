@@ -146,6 +146,9 @@ input[type="search"]::-webkit-search-results-decoration {
 .residence-locations .residence-card .desde {
   border-bottom: 1px solid var(--grey-light);
 }
+.residence-locations .residence-card .types {
+  gap: 1%;
+}
 .residence-locations .residence-card .types .type {
   padding: 5px;
 }
@@ -170,9 +173,9 @@ input[type="search"]::-webkit-search-results-decoration {
 .residence-locations .residence-card .services {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
-  gap: 2%;
+  gap: 5%;
   margin: 2em 0 4em 0;
 }
 .residence-locations .residence-card .services .service {
@@ -286,6 +289,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .residence-locations .residence-card .desde p {
     font-size: 14px;
   }
+
   .residence-locations .residence-card .types .type p {
     font-size: 16px;
   }

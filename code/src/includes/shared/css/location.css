@@ -19,6 +19,7 @@ main .location .container-main .first-contain .video-loc .opacity {
     min-height: 100%;
     position: absolute;
     background-color: var(--black-op);
+    z-index: 0;
 }
 main .location .container-main .first-contain .video-loc .video {
     width: 100%;
@@ -45,29 +46,37 @@ main .location .container-main .first-contain .video-loc .video img {
 main .location .container-main .first-contain .video-loc .text-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: flex-end;
     position: absolute;
-    top: 100px;
-    left: 70px;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
-main .location .container-main .first-contain .video-loc .text-container h1 {
+main .location .container-main .first-contain .video-loc .text-container h2 {
+    color: var(--white);
+    width: 100%;
+    font-size: 78px;
+    line-height: 1em;
+    padding: 0.2em 1em 0 0;
+    text-align: end;    
+}
+main .location .container-main .first-contain .video-loc .text-container h3 {
     color: var(--white);
     width: fit-content;
-    font-size: 100px;
+    font-size: 48px;
     line-height: 1em;
     padding: 0.2em 0 0;
-    order: 2;
-    position: relative;
-    top: -2rem;
-    margin-left: 2rem;
+    position: relative;    
+    left: 0;
+    top: 0;
 }
 main .location .container-main .first-contain .video-loc .text-container .description {
-    width: 50%;
+    width: 100%;
     min-height: fit-content;
-    background-color: var(--white-bg-op2);
-    padding: 1.5em 3.5em 1.5em 2em;
-    order: 1;
+    padding: 2em 10% 2em 2em;
     border-radius: 0 12px;
 }
 main .location .container-main .first-contain .video-loc .text-container .description p {
@@ -75,6 +84,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     font-weight: 500;
     line-height: 150%;
     margin: 0 0 5px 0;
+    color: var(--white);
 }
 
 /* CARRUSEL
@@ -445,11 +455,6 @@ section.necesities .grid .necesidad .p-text p {
     .contact-main .img-content .contact-content .text-location p span a {
         font-size: 30px;
     }
-}
-
-
-/* XL DESKTOP */
-@media only screen and (min-width: 1600px) {
     main .location .container-main .first-contain h1 {
         font-size: 170px;
     }
@@ -481,16 +486,15 @@ section.necesities .grid .necesidad .p-text p {
 
 @media only screen and (min-width: 1024px) and (max-width: 1400px){
 
-    main .location .container-main .first-contain .video-loc .text-container h1 {
+    main .location .container-main .first-contain .video-loc .text-container h2 {
         font-size: 76px;
-        top: 0;
     }
     main .location .container-main .first-contain .video-loc .text-container .description {
-        width: 48%;
+        width: 100%;
     }
     main .location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 18px;
-    }
+    }    
     .pisos-slider .h2-container h2 {
         font-size: 46px;
     }
@@ -517,6 +521,9 @@ section.necesities .grid .necesidad .p-text p {
 }
 
 @media only screen and (min-width: 1024px) {
+    main .location .container-main .first-contain .video-loc .video img.only-mobile {
+        display: none;
+    }
     .pisos.mobile {
         display: none;
     }
@@ -535,29 +542,44 @@ section.necesities .grid .necesidad .p-text p {
 
 /* MOBILE \*/
 @media only screen and (max-width: 1023.9px) {
+    main .location .container-main .first-contain .video-loc .video {
+        height: 430px;
+        max-height: 430px;        
+    }
+    main .location .container-main .first-contain .video-loc .video video {
+        display: none;
+    }
+    main .location .container-main .first-contain .video-loc .video .img.only-mobile img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+        height: 430px;
+    }
     main .location .container-main .first-contain .video-loc .text-container {
-        top: -20px;
         left: 0;
-        margin: 10px;
-    }
-    main .location .container-main .first-contain .video-loc .text-container h1 {
-        font-size: 68px;
-        line-height: 100%;
-        margin:0.2em 0;
-        width: 100%;       
-        order: 1;
-        margin-left: 1rem;
-        top: 0;
-    }
+        margin: 10px 0 0 10px;
+        width: calc(100% - 20px);
+        justify-content: flex-end;
+        align-items: flex-end;
+    }    
+    main .location .container-main .first-contain .video-loc .text-container h2 {
+        font-size: 58px;
+        padding: 0;
+        position: relative;
+        right: 20px;
+        margin: 0;
+    }   
     main .location .container-main .first-contain .video-loc .text-container .description {
         width: 100%;
-        order: 2;
-        padding: 1em;
+        padding: 0;
     }
-  
+    main .location .container-main .first-contain .video-loc .text-container h3 {
+        font-size: 36px;
+    }
+
     main .location .container-main .first-contain .video-loc .text-container .description p {
-        font-size: 16px;
-        line-height: 150%;
+        font-size: 15px;
+        line-height: 130%;   
         margin: 0;
         padding: 0;
     }
