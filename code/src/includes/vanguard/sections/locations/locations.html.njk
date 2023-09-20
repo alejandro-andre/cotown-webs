@@ -44,15 +44,15 @@
 
               {% for l in locations %}
 
-                <!-- Look for matching type resources -->
-                {% set show = false %}
-                {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
-                  {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
-                  {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
-                  {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
-                  {% if name == 'rooms' and (ra > 0 or rp > 0) %}{% set show = true %}{% endif %}
-                  {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set show = true %}{% endif %}
-                {% endfor %}
+              <!-- Look for matching type resources -->
+              {% set show = false %}
+              {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
+                {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+                {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+                {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
+                {% if name == 'rooms' and (ra > 0 or rp > 0) %}{% set show = true %}{% endif %}
+                {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set show = true %}{% endif %}
+              {% endfor %}
 
               {% if show %}
               <div class="location pure-u-1">
@@ -62,7 +62,7 @@
                 {% if loop.index == 1 %}
                 {% image
                   constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
-                  l.Name, l.Name | slugify, "img-loc",
+                  l.Name, l.Name + '-' + i.id | slugify, "img-loc",
                   [800], ""
                 %}
                 {% endif %}

@@ -7,7 +7,8 @@ module.exports = async (config) => {
       orderBy: [{ attribute: Name }]
       where: { 
         Segment_id: { EQ: $id } 
-        Building_type_id: { LE: 99 } 
+        Building_type_id: { LE: 3 } 
+        Active: { EQ: true }
       } 
     ) {
       id
