@@ -109,7 +109,8 @@
           <li class="pure-menu-item">
             <div class="booking">
               <button class="btn-primary">
-              <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html">
+              <!-- <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html"> -->
+              <a href="#booking-overlay">
               {% literal texts, 'button-reservar', L %}
               </a>
               </button>
@@ -287,8 +288,6 @@
 </section>
 
 <!-- Reservas popup -->
-<!-- TODO - Popup reservas
-[% include 'shared/sections/common/booking.html.njk' %]
--->
+{% include 'shared/sections/common/booking.html.njk' %}
 
 </header>

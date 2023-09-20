@@ -52,7 +52,9 @@ module.exports = (eleventyConfig) => {
       if (json && json.hasOwnProperty(last)) {
         switch (cond) {
           case 'gt': return json[last] > value;
+          case 'ge': return json[last] >= value;
           case 'lt': return json[last] < value;
+          case 'le': return json[last] <= value;
           default: return json[last] === value;
         }
       } else {
