@@ -455,11 +455,6 @@ section.necesities .grid .necesidad .p-text p {
     .contact-main .img-content .contact-content .text-location p span a {
         font-size: 30px;
     }
-}
-
-
-/* XL DESKTOP */
-@media only screen and (min-width: 1600px) {
     main .location .container-main .first-contain h1 {
         font-size: 170px;
     }
@@ -499,11 +494,7 @@ section.necesities .grid .necesidad .p-text p {
     }
     main .location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 18px;
-    }
-    main .location .container-main .first-contain .video-loc .text-container {        
-    }
-
-
+    }    
     .pisos-slider .h2-container h2 {
         font-size: 46px;
     }
