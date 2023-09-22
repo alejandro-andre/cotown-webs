@@ -1,0 +1,274 @@
+    <!-- Reservas -->
+   ---
+name: booking
+eleventyComputed:
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+layout: shared/layouts/base.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<!-- Additional HEAD content -->
+{% block head %}
+{% set css %}{% include "shared/css/contact.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
+{% endblock %}
+
+
+<!-- Main -->
+<main class="content-booking">
+
+    <section>
+      <h2>
+        {% literal texts, 'home-donde', L %}
+      </h2>
+      <div class="city-selector">
+        <!--
+        <select class="select" type="select" id="city-select" name="city-select">
+          <option>{% literal texts, 'home-donde-seleccionar', L %}</option>
+          {% for l in locations %}
+          <option>{{ l | translate('Name', L)}}</option>
+          {% endfor %}
+        </select>
+        -->
+        <div class="city-icons">
+
+        <!-- Look for matching type resources -->
+        {% for l in locations %}
+        {% if buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'le', 3) | length > 0 %}
+          <div class="city">
+            <div class="content-selector">
+              {% for f in l.Images | find('Image_type', 'eq', 'icono') %}
+              {% image
+                constants.SERVER + "/wopi/files/Marketing/Media_location/" + f.id +"/Image/contents?access_token=" + token,
+                l.Name, l.Name + '-' + f.id | slugify, "img",
+                [400], ""
+              %}
+              {% endfor %}
+              <p>{{l | translate('Name', L)}}</p>
+            </div>
+          </div>
+        {% endif %}
+        {% endfor%}
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>
+        ¿Qué estás buscando?
+      </h2>
+      <div class="city-selector">
+        <div class="city-icons">
+            <div class="city">
+            <div class="content-selector">
+              <img class="img" alt="city" src="{{root}}/assets/img/icono__tipo_piso_compartido.svg">
+              <p>PISO COMPARTIDO</p>
+            </div>
+          </div>
+          <div class="city">
+            <div class="content-selector">
+              <img class="img" alt="city" src="{{root}}/assets/img/icono__tipo_apartamento_privado.svg">
+              <p>APARTAMENTO PRIVADO</p>
+            </div>
+          </div>
+          <div class="city">
+            <div class="content-selector">
+              <img class="img" alt="city" src="{{root}}/assets/img/icono__tipo_residencia_universitaria.svg">
+              <p>RESIDENCIA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>
+        ¿Qué tipo de habitación?
+      </h2>
+      <div class="city-selector">
+        <div class="city-icons">
+          <div class="city">
+            <div class="content-selector">
+              <img class="img" alt="city" src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
+              <p>HABITACIÓN INDIVIDUAL</p>
+            </div>
+          </div>
+          <div class="city">
+            <div class="content-selector">
+              <img class="img" alt="city" src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
+              <p>HABITACIÓN COMPARTIDA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>
+        ¿Cuándo?
+      </h2>
+        <!-- CALENDAR -->
+      <div class="calendar pure-u-1">
+        <div class="reservas_form_div pure-u-1 pure-u-lg-1-2">
+          <form id="reservas_form" name="form_multi" method="GET">
+            <button class="date-button">
+              <label class="labels">Entrada</label>
+              <input type="text" id="in" onfocus="(this.type='date')" class="inputs" name="in" placeholder="dd/mm/aaaa"/>
+            </button>
+            <button class="date-button">
+              <label class="labels">Salida</label>
+              <input type="text" id="out" onfocus="(this.type='date')" class="inputs" name="out" placeholder="dd/mm/aaaa"/>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="results">
+      <button class="btn-secondary">
+          Ver Resultados
+      </button>
+    </section>
+
+  </div>
+       
+</main>
+       
+
+{% block footer %}
+{% set script %}
+// Buildings list
+var buildings = [
+{% for b in buildings | find('Building_type_id', 'lt', 4)-%}
+{city:'{{b.District.Location.Name}}',building:'{{b.Name}}'},
+{% endfor-%}
+];
+
+
+// Room types list
+var room_types = [
+{% for b in buildings | find('Building_type_id', 'lt', 4)-%}
+{% set r = rooms | find('id', 'eq', b.id) | first-%}
+{% for p in r.Place_types-%}
+{building:'{{b.Name}}',code:'{{place_types[p.Code].Code}}',name:'{{place_types[p.Code] | translate('Name', L)}}'},
+{% endfor-%}
+{% set r = flats | find('id', 'eq', b.id) | first-%}
+{% for p in r.Flat_subtypes-%}
+{building:'{{b.Name}}',code:'{{flat_subtypes[p.Code].Code}}',name:'{{flat_subtypes[p.Code] | translate('Name', L)}}'},
+{% endfor-%}
+{% endfor-%}
+];
+
+// Populate buildings select
+function get_buildings(value) {
+
+  // Empty list
+  list = document.getElementById("100");
+  list.innerHTML = "";
+
+  // Get city
+  if (value)
+    localStorage.setItem('city', value);
+  else
+    value = document.getElementById('101').value
+
+  // Fill building listid
+  for (var i = 0; i < buildings.length; i++) {
+    if (buildings[i].city == value) {
+      var opt = document.createElement("option");
+      opt.value = buildings[i].building;
+      opt.text = buildings[i].building;
+      if (buildings[i].city == '') {
+        buildings.disabled = true;
+      }
+      list.add(opt);
+    }
+  }
+  get_types(null);
+
+}
+
+// Populate typology select
+function get_types(value) {
+
+  // Empty list
+  list = document.getElementById("99");
+  list.innerHTML = "";
+
+  // Get building
+  if (value)
+    localStorage.setItem('building', value);
+  else
+    value = document.getElementById('100').value;
+
+  // Fill typology listid
+  for (var i = 0; i < room_types.length; i++) {
+    if (room_types[i].building == value) {
+      var opt = document.createElement("option");
+      opt.value = room_types[i].code;
+      opt.text = room_types[i].name;
+      list.add(opt);
+    }
+  }
+}
+
+// Budget change
+function budget() {
+  min = parseInt(document.getElementById('95-min').value);
+  max = parseInt(document.getElementById('95-max').value);
+  if (min > max) {
+    min = max;
+    document.getElementById('95-min').value = min;
+  }
+  document.getElementById('95').value = min + ' - ' + max;
+}
+
+// Numero de meses entre dos fechas
+function months(fin, fout) {
+  f1 = new Date(fin);
+  f2 = new Date(fout);
+  f2.setDate(f2.getDate() + 1)
+  const meses = (f2.getFullYear() - f1.getFullYear()) * 12 + (f2.getMonth() - f1.getMonth());
+  if (meses < 1 || meses > 11) return false;
+  if (meses == 1 && f2.getDate() < f1.getDate()) return false;
+  if (meses == 11 && f2.getDate() > f1.getDate()) return false;
+  return true;
+}
+
+// Post
+function validate() {
+  fin = document.getElementById('96');
+  fout = document.getElementById('97');
+  if (!months(fin.value, fout.value)) {
+    console.log(fin);
+    console.log(fout);
+    fin.setCustomValidity("{{texts['cal-error'][L]}}");
+  } else {
+    fin.setCustomValidity("");
+  }
+};
+
+// Load
+document.getElementById('96').value  = localStorage.getItem('checkin');
+document.getElementById('97').value  = localStorage.getItem('checkout');
+document.getElementById('101').value = localStorage.getItem('city');
+get_buildings(null);
+document.getElementById('100').value = localStorage.getItem('building');
+get_types(null);
+document.getElementById('99').value = localStorage.getItem('type');
+{% include "shared/js/ac.js" %}
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}
