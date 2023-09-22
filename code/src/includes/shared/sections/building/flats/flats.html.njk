@@ -74,7 +74,7 @@
 
     <!-- Description -->
     <div class="text pure-u-1">
-      <p>{{flat_subtypes[p.Code] | translate('Description', L)}}</p>
+    {{ flat_subtypes[p.Code] | translate('Description', L) | markdown | safe }}
     </div>
 
     <div class="option pure-u-1">

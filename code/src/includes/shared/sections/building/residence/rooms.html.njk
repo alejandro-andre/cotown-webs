@@ -1,3 +1,6 @@
+{{type}}
+{{rooms|dump}}
+
 {% set show = true %}
 {% for r in rooms | find('id', 'eq', building.id) %}
 {% for p in r.Place_types %}
@@ -83,7 +86,7 @@
 
     <!-- Description -->
     <div class="text pure-u-1">
-      <p>{{place_types[p.Code].Texts[0] | translate('Description', L)}}</p>
+    {{ place_types[p.Code].Texts[0] | translate('Description', L) | markdown | safe }}</p>
     </div>
     <div class="share">
       {% for f in p.Flat_types %}
