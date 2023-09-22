@@ -1,6 +1,3 @@
-{{type}}
-{{rooms|dump}}
-
 {% set show = true %}
 {% for r in rooms | find('id', 'eq', building.id) %}
 {% for p in r.Place_types %}
