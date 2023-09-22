@@ -83,7 +83,7 @@
 
     <!-- Description -->
     <div class="text pure-u-1">
-      <p>{{place_types[p.Code].Texts[0] | translate('Description', L)}}</p>
+    {{ place_types[p.Code].Texts[0] | translate('Description', L) | markdown | safe }}
     </div>
 
     <form class="pure-form">
