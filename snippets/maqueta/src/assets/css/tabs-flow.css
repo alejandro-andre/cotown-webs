@@ -298,276 +298,12 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.tabset {
-width: 100%;
-background-color: var(--grey-dark);
-margin: 1em 0;
-}
-.tabset label.label {    
-margin-left: 4%;
-height: 20px;
-}
-.tabset label.label .label-mobile{
-    display: none;
-}
-
-.tabset > input[type="radio"] {
-position: absolute;
-left: -200vw;
-}
-.tabset .tab-panel {
-display: none;
-}
-.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
-.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
-.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
-.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
-.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
-.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
-display: block;
-}
-.tabset > label {
-width: 19%;
-position: relative;
-display: inline-block;
-font-size: 16px;
-font-weight: 700;
-line-height: 140%;
-letter-spacing: -0.15px;
-height: 20px;
-border: 1px solid var(--grey-dark);
-margin: 0;
-color: var(--white);
-padding: 16px 0 16px 1em;
-}
-input:focus-visible + label {
-outline: 0px solid transparent;
-}
-.tabset > label:hover,
-.tabset > input:focus + label,
-.tabset > input:checked + label {
-color: var(--grey-dark);
-background-color: var(--white);
-}
-.tabset > label:hover::after,
-.tabset > input:focus + label::after,
-.tabset > input:checked + label::after {
-background: transparent;
-}
-.tab-panel {
-padding: 30px 0;
-}
-.tabset .tab-panels .tab-panel .panel-container{
-width: 92%;
-padding: 30px 4%;
-display: flex;
-flex-flow: row wrap;
-justify-content: space-between;
-align-items: flex-start;
-}
-.tabset .tab-panels .tab-panel .left {
-width: 52%;
-}
-.tabset .tab-panels .tab-panel .left h2 {
-width: 100%;
-font-size: 64px;
-font-weight: 400;
-line-height: 100%;
-letter-spacing: -1.92px;
-}
-.tabset .tab-panels .tab-panel .left form {
-    width: 100%;
-}
-.tabset .tab-panels .tab-panel .left form select {
-width: 70%;
-font-size: 18px;
-font-weight: 400;
-line-height: 150%;
-color: var(--grey-light);
-border: 1px solid var(--grey-light);
-border-radius: 6px;
-padding: 16px 24px;
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; 
-background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; 
-}
-/*For IE*/
-.tabset .tab-panels .tab-panel .left form select::-ms-expand {
-    display: none;
-}
-   
-
-.tabset .tab-panels .tab-panel .left form select option {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 150%;
-    color: var(--grey-light);
-}
-.tabset .tab-panels .tab-panel .left form h3 {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 124%;
-    text-transform: none;
-    margin: 1em 0;
-}
-.tabset .tab-panels .tab-panel .left form .background {
-    width: 70%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: var(--primary-light);
-    border-radius: 8px;
-    margin: 0 0 10px;
-}
-.tabset .tab-panels .tab-panel .left form .background em {
-    margin: 24px 12px 24px 24px;
-    width: 32px;
-}
-.tabset .tab-panels .tab-panel .left form .background input[type=radio] {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    left: 5%;
-    width: 30%;
-    height: 32px;
-}
-.tabset .tab-panels .tab-panel .left form .background label {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 150%;
-}
-.tabset .tab-panels .tab-panel .left form .background em.checkmark {
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    border: 2px solid var(--grey-dark);
-}
-.tabset .tab-panels .tab-panel .left form .background:hover input~em.checkmark {
-    border: 4px solid var(--primary);
-    height: 14px;
-    width: 14px;
-}  
-.tabset .tab-panels .tab-panel .left form .background input:checked~em.checkmark {
-    height: 14px;
-    width: 14px;
-    border: 4px solid var(--primary);
-}
-
-.tabset .tab-panels .tab-panel .left form .background em:after {
-    top: 9px;
-}
-.tabset .tab-panels .tab-panel .left form .inputs-container {
-    width: 90%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 8px;
-    margin: 0 0 10px;
-    gap: 14px;
-}
-.tabset .tab-panels .tab-panel .left form .inputs-container .dates {
-    width: 48%;
-}
-.tabset .tab-panels .tab-panel .left form .inputs-container .dates label {
-    width: 100%;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%
-}
-.tabset .tab-panels .tab-panel .left form .inputs-container .dates input {
-    width: 84%;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 150%;
-    color: var(--grey-light);
-    border: 1px solid var(--grey-light);
-    border-radius: 6px;
-    padding: 8px 24px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
-    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
-}
-
-.tabset .tab-panels .tab-panel .left form .next {
-    width: 90%;
-}
-.tabset .tab-panels .tab-panel .left form .next button {
-    width: 100%;
-    justify-content: center;
-    margin: 2em 0;
-    padding-top: 28px;
-    padding-bottom: 28px;
-    font-size: 28px;
-}
-
-
-.tabset .tab-panels .tab-panel .right {
-    width: 38%;
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.tabset .tab-panels .tab-panel .right .img-big {
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    object-fit: contain;
-}
-.tabset .tab-panels .tab-panel .right .img-big img {
-    width: 100%;    
-}
 /* SEGUNDA TAB */
 /* LEFT */
-.tabset .tab-panels .tab-panel .left.tab2 {
+.main-booking .main-contain .panel-container .left.tab2 {
     width: 60%;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description {
+.main-booking .main-contain .panel-container .left.tab2 .description {
     width: 100%;
     position: relative;
     display: flex;
@@ -577,20 +313,20 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     object-fit: contain;
     padding: 0 0 0 80px;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .img {
+.main-booking .main-contain .panel-container .left.tab2 .description .img {
     max-width: 280px;
     position: absolute;
     left: 0;
     flex-shrink: 0;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .img img.mini {
+.main-booking .main-contain .panel-container .left.tab2 .description .img img.mini {
     align-self: center;
     vertical-align: middle;
     max-width: 280px;
     height: 200px;
     padding: 20px 0;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container {
     width: 60%;
     background-color: var(--primary-light);
     padding: 2em 1em 1em 196px;
@@ -599,48 +335,48 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     justify-content: flex-start;
     align-items: flex-start;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc {   
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc {   
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: stretch;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .desc {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .desc {
     width: 60%;
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.44px;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .price {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .price {
     font-size: 30px;
     font-weight: 700;
     line-height: 70%;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .price span {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .price span {
     font-size: 16px;
     font-weight: 400;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.second p {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.second p {
     width: 60%;
     font-size: 22px;
     font-weight: 400;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third {
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third button {
     position: absolute;
     right: 0;
     top: -6px;
     font-size: 16px;
     letter-spacing: -0.15px;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button em {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third button em {
     font-size: 18px;
     margin-left: 16px;
 }
@@ -731,10 +467,10 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     display: block;
 }
 /* RIGHT */
-.tabset .tab-panels .tab-panel .right.tab2 {
+.main-booking .main-contain .panel-container .right.tab2 {
     width: 38%;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume {
+.main-booking .main-contain .panel-container .right.tab2 .resume {
     width: 80%;
     display: flex;
     padding: 24px 36px 40px 36px;
@@ -745,7 +481,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     background: var(--background-pure-white, #FFF);
     box-shadow: 0px 20px 30px 0px rgba(22, 22, 22, 0.06);
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume h3 {
+.main-booking .main-contain .panel-container .right.tab2 .resume h3 {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 26px;
     font-weight: 700;
@@ -754,14 +490,14 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     text-transform: none;
     margin: 0;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume p {
+.main-booking .main-contain .panel-container .right.tab2 .resume p {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     text-transform: uppercase;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -770,7 +506,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     padding: 0 0 0.5rem;
     border-bottom: var(--border-bottom);
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .dates {
+.main-booking .main-contain .panel-container .right.tab2 .resume .dates {
     width: 100%;
     display: flex;
     flex-flow: column;
@@ -778,7 +514,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     align-items: flex-start;
     gap: 1rem;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit p,  .tabset .tab-panels .tab-panel .right.tab2 .resume .dates p {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit p,  .main-booking .main-contain .panel-container .right.tab2 .resume .dates p {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
@@ -786,27 +522,27 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     letter-spacing: 1.28px;
     text-transform: uppercase;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab2 .resume .dates h4  {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit h4, .main-booking .main-contain .panel-container .right.tab2 .resume .dates h4  {
     margin: 0;
     font-size: 20px;
     font-weight: 700;
     line-height: 124%;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit button.btn-text {
     background-color: transparent;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text p {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit button.btn-text p {
     font-size: 16px;
     font-weight: 700;
     line-height: 150%; /* 33px */
     letter-spacing: -0.44px;
     text-decoration: underline;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text em {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit button.btn-text em {
     font-size: 14px;
     margin-right: 4px;
 }
@@ -815,41 +551,42 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
 
 
 
+
 /* TERCERA TAB */
 
 /* LEFT */
-.tabset .tab-panels .tab-panel .left.tab3 h2 {
+.main-booking .main-contain .panel-container .left.tab3 h2 {
     font-size: 64px;
     font-weight: 400;
     text-transform: uppercase;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form {
+.main-booking .main-contain .panel-container .left.tab3 form {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form h3 {
+.main-booking .main-contain .panel-container .left.tab3 form h3 {
     font-size: 26px;
     font-weight: 700;
     text-transform: none;
     margin: 0 0 16px;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form p {
+.main-booking .main-contain .panel-container .left.tab3 form p {
     font-size: 20px;    
     font-weight: 400;
     line-height: 150%;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .campo {
+.main-booking .main-contain .panel-container .left.tab3 form .campo {
     width: 100%;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .campo label.label {
+.main-booking .main-contain .panel-container .left.tab3 form .campo label.label {
     font-size: 14px;
     font-weight: 800;
     margin-left: 0
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .campo input.input {
+.main-booking .main-contain .panel-container .left.tab3 form .campo input.input {
     width: 90%;
     font-size: 18px;
     font-weight: 400;
@@ -860,48 +597,51 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     padding: 14px 24px;
     margin-bottom: 30px;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .campo.psw input.input {
+.main-booking .main-contain .panel-container .left.tab3 form .campo.psw input.input {
     margin-bottom: 10px;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form p.advise {
+.main-booking .main-contain .panel-container .left.tab3 form p.advise {
     font-size: 16px;    
     font-weight: 400;
     line-height: 150%;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data1 {
+.main-booking .main-contain .panel-container .left.tab3 form .data1 {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data1 .campo  {
+.main-booking .main-contain .panel-container .left.tab3 form .data1 .campo  {
     width: 46%;    
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data2 {
+.main-booking .main-contain .panel-container .left.tab3 form .data2 {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code {
+.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code {
     width: 22%;    
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code label {
+.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code label {
     font-size: 14px;
     font-weight: 800;
     margin-left: 0; 
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code select {
+.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code select {
     width: 100%;
     line-height: 124%;    
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.phone {
+.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.phone {
     width: 72%;   
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .campo .dates input {
-    width: 42%;  
+.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.phone input.input {
+    width: 60%;   
+}
+.main-booking .main-contain .panel-container .left.tab3 form .campo .dates input {
+    width: 44%;  
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
@@ -916,17 +656,17 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
     background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo  {
+.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo  {
     width: 50%;    
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo.motive  {
+.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo.motive  {
     width: 100%;    
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo select {
+.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo select {
     width: 100%;
     margin-bottom: 30px;
 }
-.tabset .tab-panels .tab-panel .left form .book button {
+.main-booking .main-contain .panel-container .left form .book button {
     width: 100%;
     justify-content: center;
     margin: 0 0 2em;
@@ -936,10 +676,10 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
 }
 
 /* RIGHT */
-.tabset .tab-panels .tab-panel .right.tab3 {
+.main-booking .main-contain .panel-container .right.tab3 {
     width: 38%;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume h3 {
+.main-booking .main-contain .panel-container .right.tab3 .resume h3 {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 26px;
     font-weight: 700;
@@ -948,7 +688,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     text-transform: none;
     margin: 0;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume {
+.main-booking .main-contain .panel-container .right.tab3 .resume {
     display: flex;
     padding: 24px 36px 40px 36px;
     flex-direction: column;
@@ -958,14 +698,14 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     background: var(--background-pure-white, #FFF);
     box-shadow: 0px 20px 30px 0px rgba(22, 22, 22, 0.06);
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume p {
+.main-booking .main-contain .panel-container .right.tab3 .resume p {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     text-transform: uppercase;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -974,7 +714,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     padding: 0 0 0.5rem;
     border-bottom: var(--border-bottom);
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .dates {
+.main-booking .main-contain .panel-container .right.tab3 .resume .dates {
     width: 100%;
     display: flex;
     flex-flow: column;
@@ -982,7 +722,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     align-items: flex-start;
     gap: 1rem;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit p,  .tabset .tab-panels .tab-panel .right.tab3 .resume .dates p, .tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume p {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit p,  .main-booking .main-contain .panel-container .right.tab3 .resume .dates p, .main-booking .main-contain .panel-container .right.tab3 .resume .type-resume p {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
@@ -990,34 +730,34 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     letter-spacing: 1.28px;
     text-transform: uppercase;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4 {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit h4, .main-booking .main-contain .panel-container .right.tab3 .resume .dates h4 {
     margin: 0;
     font-size: 20px;
     font-weight: 700;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .dates .in h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates .out h4 {
+.main-booking .main-contain .panel-container .right.tab3 .resume .dates .in h4, .main-booking .main-contain .panel-container .right.tab3 .resume .dates .out h4 {
     margin: 0.5rem 0 0;
     
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text {
     background-color: transparent;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text p {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text p {
     font-size: 16px;
     font-weight: 700;
     line-height: 150%; /* 33px */
     letter-spacing: -0.44px;
     text-decoration: underline;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text em {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text em {
     font-size: 14px;
     margin-right: 4px;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume {
+.main-booking .main-contain .panel-container .right.tab3 .resume .type-resume {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -1034,7 +774,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     font-weight: 700;
     line-height: 124%;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown {
+.main-booking .main-contain .panel-container .right.tab3 .resume .breakdown {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -1044,16 +784,16 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     border-bottom: var(--border-bottom);
     padding: 0 0 1rem;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown p {
+.main-booking .main-contain .panel-container .right.tab3 .resume .breakdown p {
     text-transform: none!important;
 }
-.tabset .tab-panel .right.tab3 .resume .breakdown h4 {
+.main-booking .main-contain .panel-container .right.tab3 .resume .breakdown h4 {
     margin: 0 0 0.5rem;
     font-size: 20px;
     font-weight: 700;
     line-height: 124%;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown .prices, .tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown .total {
+.main-booking .main-contain .panel-container .right.tab3 .resume .breakdown .prices, .main-booking .main-contain .panel-container .right.tab3 .resume .breakdown .total {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -1065,20 +805,21 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     font-weight: 700;
     line-height: 124%;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .renta {
+.main-booking .main-contain .panel-container .right.tab3 .resume .renta {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
-.tabset .tab-panel .right.tab3 .resume p.advise {
+.main-booking .main-contain .panel-container .right.tab3 .resume p.advise {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
     color: var(--grey-advise);
     text-transform: none!important;
 }
+
 
 
 
