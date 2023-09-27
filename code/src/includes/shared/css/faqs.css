@@ -46,7 +46,7 @@
 }
 .search .search-container label input {
   outline: none;
-  font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+  font-family: var(--text-font);
   font-size: 16px;
   margin:0;
   padding:0;
@@ -86,7 +86,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 30px;
   line-height: 150%;
   margin: 1em 0.2em;
-  font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+  font-family: var(--text-font);
   text-align: left;
 }
 .expansion .open-close-icon em {

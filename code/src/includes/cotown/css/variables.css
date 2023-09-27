@@ -1,6 +1,10 @@
 /* COLORS
 -------------------------------- */
 :root {
+    /* // Fonts */
+    --title-font: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    --text-font: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+
     /* // Main color */
     --primary: #00bfb2;
     --primary-regular: #00998b;
@@ -24,7 +28,6 @@
     --secondary-text-header: #000000;
     --white: #ffffff;
     --black: #000000;
-
 
     /* // Secondary color */
     --grey-light: #3c434a;

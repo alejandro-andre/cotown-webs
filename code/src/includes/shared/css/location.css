@@ -712,7 +712,7 @@ section.necesities .grid .necesidad .p-text p {
         margin: auto 0;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
-        font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+        font-family: var(--text-font);
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;

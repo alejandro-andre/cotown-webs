@@ -25,7 +25,7 @@ main .container-main .first-contain .advantages.title-big .h1-big {
     align-items: flex-start;
 }
 main .container-main .first-contain .advantages.title-big .h1-big h1 {
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--title-font);
     font-size: 165px;
     font-weight: 400;
     line-height: 95%;
@@ -33,7 +33,7 @@ main .container-main .first-contain .advantages.title-big .h1-big h1 {
     text-transform: uppercase;
 }
 main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--title-font);
     color: var(--primary-text);
     text-shadow: var(--h2-border);
     font-weight: 400;
