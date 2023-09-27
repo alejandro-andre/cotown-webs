@@ -67,8 +67,22 @@ main .location .container-main .first-contain .video-loc .text-container h2 {
 main .location .container-main .first-contain .video-loc .text-container h3 {
     color: var(--white);
     width: fit-content;
-    font-size: 32px;
-    line-height: 1em;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2em;
+    padding: 0.2em 0 0;
+    position: relative;    
+    left: 0;
+    top: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+main .location .container-main .first-contain .video-loc .text-container h4 {
+    color: var(--white);
+    width: fit-content;
+    font-size: 28px;
+    font-weight: 300;
+    text-transform: none;
+    line-height: 1.2em;
     padding: 0.2em 0 0;
     position: relative;    
     left: 0;
@@ -76,7 +90,7 @@ main .location .container-main .first-contain .video-loc .text-container h3 {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
 main .location .container-main .first-contain .video-loc .text-container .description {
-    width: 100%;
+    width: 60%;
     min-height: fit-content;
     padding: 2em 10% 2em 2em;
     border-radius: 0 12px;
