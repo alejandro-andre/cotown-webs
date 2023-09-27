@@ -12,7 +12,7 @@ main .location .container-main .first-contain {
 main .location .container-main .first-contain .video-loc {
     width: 100%;    
     min-height: fit-content;
-    opacity: 0.8;
+    opacity: 0.95;
 }
 main .location .container-main .first-contain .video-loc .opacity {
     width: 100%;    
