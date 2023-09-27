@@ -1,20 +1,7 @@
-.popup h2 {
+section > h2 {
     margin-top: 0;
     color: #333;
 }
-/* .popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--black);
-}
-.popup .close:hover {
-    color: var(--primary);
-} */
 .content-booking {
     background: #fff;
     max-height: 100%;
@@ -278,29 +265,29 @@ align-items: center;
     line-height: 150%; 
 }
 .main-booking .main-contain .panel-container .left h2 {
-width: 100%;
-font-size: 64px;
-font-weight: 400;
-line-height: 100%;
-letter-spacing: -1.92px;
+    width: 100%;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -1.92px;
 }
 .main-booking .main-contain .panel-container .left form {
     width: 100%;
 }
-.main-booking .main-contain .panel-container .left form select {
-width: 100%;
-font-size: 18px;
-font-weight: 400;
-line-height: 150%;
-color: var(--grey-light);
-border: 1px solid var(--grey-light);
-border-radius: 6px;
-padding: 16px 24px;
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; 
-background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; 
+.main-booking .main-contain .panel-container .left form select.select1 {
+    width: 80%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--grey-light);
+    border: 1px solid var(--grey-light);
+    border-radius: 6px;
+    padding: 16px 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; 
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; 
 }
 
 .main-booking .main-contain .panel-container .left form select option {
@@ -318,7 +305,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     margin: 1em 0;
 }
 .main-booking .main-contain .panel-container .left form .background {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -365,26 +352,31 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     top: 9px;
 }
 .main-booking .main-contain .panel-container .left form .inputs-container {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
     margin: 0 0 10px;
-    gap: 14px;
 }
 .main-booking .main-contain .panel-container .left form .inputs-container .dates {
-    width: 48%;
+    width: 100%;
 }
-.main-booking .main-contain .panel-container .left form .inputs-container .dates label {
+.main-booking .main-contain .panel-container .left form .inputs-container .dates .date-button {
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+}
+.main-booking .main-contain .panel-container .left form .inputs-container .dates .date-button label {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
-    line-height: 150%
+    line-height: 150%;
+    text-align: start;
 }
-.main-booking .main-contain .panel-container .left form .inputs-container .dates input {
-    width: 84%;
+.main-booking .main-contain .panel-container .left form .inputs-container .dates .date-button input {
+    width: -webkit-fill-available;
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
@@ -400,7 +392,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
 }
 
 .main-booking .main-contain .panel-container .left form .next {
-    width: 90%;
+    width: -webkit-fill-available;
 }
 
 .main-booking .main-contain .panel-container .left form .next button {
@@ -499,6 +491,76 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     font-size: 22px;
     font-weight: 400;
 }
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices {
+    width: 100%;   
+}
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .share, .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .extra {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 1rem;
+}
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .share .sharing, .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .extra .extras {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 0 0.5rem;
+}
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .share .sharing .partners label, .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .extra .extras .data label {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+.sharing label input {
+    margin: 0 0.4em;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+  }
+.extras label input {
+    margin: 0.1em 0.4em 0;
+    font-size: 24px;
+}
+ .sharing p, .extras p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+  }
+  .sharing .extra .extras label input {
+    margin: 0 0.4em;
+    font-size: 24px;
+  }
+  .prices input[type=checkbox], .prices input[type=checkbox]:focus, .prices input[type=radio], .prices input[type=radio]:focus {
+      -moz-appearance:none;
+      -webkit-appearance:none;
+      -o-appearance:none;
+      outline: none;
+      content: none;
+    cursor: pointer;
+  }
+  .prices input[type=checkbox]:before {	
+    font-family: 'icons';
+    content: "\e906";
+  }
+  .prices input[type=checkbox]:checked:before {
+      content: "\e907";
+  }
+  .prices input[type=radio]:before {	
+    font-family: 'icons';
+    content: "\e928";
+  }
+  .prices input[type=radio]:checked:before {
+      content: "\e929";
+  }
+
+
+
 .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third {
     display: flex;
     flex-flow: row;
@@ -517,6 +579,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     font-size: 18px;
     margin-left: 16px;
 }
+
 /* EXPANSION PANEL */
 .expansion {
     padding: 0;
@@ -1131,7 +1194,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         margin-bottom: 0;
     }    
     .main-booking .main-contain .panel-container .left form select {
-        width: 100%;    
+        width: -webkit-fill-available;
         font-size: 14px;        
         padding: 8px 12px;
     }
@@ -1231,14 +1294,15 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     .main-booking .main-contain .panel-container .left form .inputs-container .dates {
         width: 100%;
     }
+    .main-booking .main-contain .panel-container .left form .inputs-container .dates .date-button {
+        width:  -webkit-fill-available;
+        padding: 0;
+    } 
     .main-booking .main-contain .panel-container .left form .inputs-container .dates label {
         display: none;
     }
     .main-booking .main-contain .panel-container .left form .inputs-container .dates input {
-        width: 96%;
-    }
-    .main-booking .main-contain .panel-container .left form .inputs-container .dates:last-of-type {
-        display: none;
+        width: -webkit-fill-available;;
     }
     .main-booking .main-contain .panel-container .left form .next {
         width: 100%;
@@ -1321,7 +1385,6 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         flex-flow: column;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 1rem;
     }
     .main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit p,  .main-booking .main-contain .panel-container .right.tab2 .resume .dates p {
         font-size: 11px;
@@ -1454,8 +1517,8 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         flex-flow: column;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 1rem;
     }
+     
     .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit p,  .main-booking .main-contain .panel-container .right.tab3 .resume .dates p {
         margin: 0;
         font-size: 16px;
