@@ -1,6 +1,6 @@
 /* GENERAL
 -------------------------------- */
-h1 { font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;}
+h1 { font-family: var(--title-font);
 h2.title {
     text-align: center;
 }
@@ -229,7 +229,7 @@ main .container-main .first-contain .text p {
     position: relative;
     display: inline-block;
     text-shadow: 0px 7px 14px rgba(0, 0, 0, 0.15);
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--title-font);
 }
 .pisos .container .img-container .img-title1 span {
     top: -178px; 
@@ -512,7 +512,7 @@ main .container-main .first-contain .text p {
 .pisos .container .img-container .img-title1,
 .pisos .container .img-container .img-title2 {
     color: var(--primary-text);
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--title-font);
     font-weight: 400;
     position: absolute;
     margin: 0 1em 0 0.3em;

@@ -309,8 +309,8 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     line-height: 150%;
     color: var(--grey-light);
 }
-.main-booking .main-contain .panel-container .left form h3 {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+.tabset .tab-panels .tab-panel .left form h3 {
+    font-family: var(--text-font);
     font-size: 26px;
     font-weight: 600;
     line-height: 124%;
