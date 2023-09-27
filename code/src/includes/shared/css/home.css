@@ -1,6 +1,8 @@
 /* GENERAL
 -------------------------------- */
-h1 { font-family: var(--title-font);
+h1 { 
+    font-family: var(--title-font); 
+}
 h2.title {
     text-align: center;
 }
