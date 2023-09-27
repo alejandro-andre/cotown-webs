@@ -1007,13 +1007,26 @@ footer .container-footer .contain {
     padding: 0 0 2em;
     align-content: space-between;
 }
-footer section.container-footer .contain .left .footer-logo {
-    width: 100%;
+footer section.container-footer .contain .left .footer-logo .logo-container {
+    padding-top: 30px;
+    width: fit-content;
+    text-align: center;
 }
-footer section.container-footer .contain .left .footer-logo img {
-    /* width: 100%; */
-    max-width: 374px;
-    margin: 0 0 1rem;
+footer section.container-footer .contain .left .footer-logo .logo-container .group {
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+footer section.container-footer .contain .left .footer-logo .logo-container .group img {
+    width: 260px;
+}
+footer section.container-footer .contain .left .footer-logo .logo-container .brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer section.container-footer .contain .left .footer-logo .logo-container .brands img {
+    padding: 20px 20px;
+    width: 110px;
 }
 footer section.container-footer .contain .left .redes em {
     margin-right: 2.3rem;
@@ -2200,9 +2213,9 @@ button.date-button input.inputs {
         padding: 0;
         border-bottom: none;
     }
-    footer section.container-footer .contain .left .footer-logo img {
-        width: 100%;
-        max-width: 197px;
+    footer section.container-footer .contain .left .footer-logo {
+        display: flex;
+        justify-content: center;
     }
     footer section.container-footer .contain .left  {
         width: 100%;
