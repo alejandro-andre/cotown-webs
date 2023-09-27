@@ -1116,7 +1116,7 @@ button.date-button input.inputs {
 }
 
 /* <!-- RESERVAS POPUP --> \*/
-.overlay {
+.booking-overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1126,7 +1126,7 @@ button.date-button input.inputs {
     visibility: hidden;
     opacity: 0;
 }
-.overlay:target {
+.booking-overlay:target {
     visibility: visible;
     opacity: 1;
     z-index: 1000000;

@@ -52,7 +52,9 @@ module.exports = (eleventyConfig) => {
       if (json && json.hasOwnProperty(last)) {
         switch (cond) {
           case 'gt': return json[last] > value;
+          case 'ge': return json[last] >= value;
           case 'lt': return json[last] < value;
+          case 'le': return json[last] <= value;
           default: return json[last] === value;
         }
       } else {
@@ -72,6 +74,8 @@ module.exports = (eleventyConfig) => {
   
   // Translation filter
   eleventyConfig.addFilter("translate", function(item, key, lang) {
+    if (item == null)
+      return '';
     if (lang === 'en') {
       return item[key + '_en'] || item[key];
     } else {

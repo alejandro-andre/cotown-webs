@@ -1,5 +1,5 @@
     <!-- Reservas popup -->
-    <div id="popupBooking" class="overlay">
+    <div id="booking-overlay" class="booking-overlay">
       <div class="popup">
 
         <a class="close" href="#">
@@ -13,37 +13,34 @@
               {% literal texts, 'home-donde', L %}
             </h2>
             <div class="city-selector">
+              <!--
               <select class="select" type="select" id="city-select" name="city-select">
                 <option>{% literal texts, 'home-donde-seleccionar', L %}</option>
                 {% for l in locations %}
                 <option>{{ l | translate('Name', L)}}</option>
                 {% endfor %}
               </select>
+              -->
               <div class="city-icons">
+
+              <!-- Look for matching type resources -->
+              {% for l in locations %}
+              {% if buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'le', 3) | length > 0 %}
                 <div class="city">
                   <div class="content-selector">
-                    <img class="img" alt="city" src="{{root}}/assets/img/icono__ciudad_barcelona.svg">
-                    <p>BARCELONA</p>
+                    {% for f in l.Images | find('Image_type', 'eq', 'icono') %}
+                    {% image
+                      constants.SERVER + "/wopi/files/Marketing/Media_location/" + f.id +"/Image/contents?access_token=" + token,
+                      l.Name, l.Name + '-' + f.id | slugify, "img",
+                      [400], ""
+                    %}
+                    {% endfor %}
+                    <p>{{l | translate('Name', L)}}</p>
                   </div>
                 </div>
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="{{root}}/assets/img/icono__ciudad_valencia.svg">
-                    <p>VALENCIA</p>
-                  </div>
-                </div>
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="{{root}}/assets/img/icono__ciudad_bilbao.svg">
-                    <p>BILBAO</p>
-                  </div>
-                </div>
-                <div class="city">
-                  <div class="content-selector">
-                    <img class="img" alt="city" src="{{root}}/assets/img/icono__ciudad_madrid.svg">
-                    <p>MADRID</p>
-                  </div>
-                </div>
+              {% endif %}
+              {% endfor%}
+
               </div>
             </div>
           </section>

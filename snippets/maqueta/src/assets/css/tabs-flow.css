@@ -75,7 +75,8 @@ height: 20px;
     display: none;
 }
 .tab-panels {
-background-color: var(--white);
+    background-color: var(--white);
+    width: 100%;
 }
 .tabset > input[type="radio"] {
 position: absolute;
@@ -97,7 +98,7 @@ width: 19%;
 position: relative;
 display: inline-block;
 font-size: 16px;
-font-weight: 800;
+font-weight: 700;
 line-height: 140%;
 letter-spacing: -0.15px;
 height: 20px;
@@ -176,7 +177,6 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     font-size: 26px;
     font-weight: 600;
     line-height: 124%;
-    letter-spacing: -0.6px;
     text-transform: none;
     margin: 1em 0;
 }
@@ -293,16 +293,12 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
 .tabset .tab-panels .tab-panel .right .img-big img {
     width: 100%;    
 }
-
 /* SEGUNDA TAB */
-
+/* LEFT */
 .tabset .tab-panels .tab-panel .left.tab2 {
-    width: 70%;
+    width: 60%;
 }
-.tabset .tab-panels .tab-panel .right.tab2 {
-    width: 28%;
-}
-.tabset .tab-panels .tab-panel .left .description {
+.tabset .tab-panels .tab-panel .left.tab2 .description {
     width: 100%;
     position: relative;
     display: flex;
@@ -310,60 +306,83 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     justify-content: flex-start;
     align-items: flex-start;
     object-fit: contain;
+    padding: 0 0 0 80px;
 }
-.tabset .tab-panels .tab-panel .left .description .img {
-    width: 20%;
-    top: 3em;
-    position: relative;
+.tabset .tab-panels .tab-panel .left.tab2 .description .img {
+    max-width: 280px;
+    position: absolute;
+    left: 0;
+    flex-shrink: 0;
 }
-
-.tabset .tab-panels .tab-panel .left .description .img img {
-    width: 280px;
+.tabset .tab-panels .tab-panel .left.tab2 .description .img img.mini {
+    align-self: center;
+    vertical-align: middle;
+    max-width: 280px;
+    height: 200px;
+    padding: 20px 0;
 }
-.tabset .tab-panels .tab-panel .left .description .desc-container {
-    width: 80%;
+.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container {
+    width: 60%;
     background-color: var(--primary-light);
-    padding: 2em 1em 1em 10em;
+    padding: 2em 1em 1em 196px;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.tabset .tab-panels .tab-panel .left .description .desc-container .secc {   
+.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc {   
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: stretch;
 }
-.tabset .tab-panels .tab-panel .left .description .desc-container .secc.third {
+.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .desc {
+    width: 60%;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.44px;
+}
+.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .price {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 70%;
+}
+.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .price span {
+    font-size: 16px;
+    font-weight: 400;
+}
+.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.second p {
+    width: 60%;
+    font-size: 22px;
+    font-weight: 400;
+}
+.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third {
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
 }
-.tabset .tab-panels .tab-panel .left .description .desc-container .secc.third button {
+.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button {
     position: absolute;
     right: 0;
-    top: -12px;
+    top: -6px;
     font-size: 16px;
     letter-spacing: -0.15px;
 }
-.tabset .tab-panels .tab-panel .left .description .desc-container .secc.third button em {
+.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button em {
     font-size: 18px;
     margin-left: 16px;
 }
-
 /* EXPANSION PANEL */
-
 .expansion {
     padding: 0;
     position: relative;
     height: fit-content;
     width: 100%;
 }
-.content{
+.content {
     height: auto;
     max-height: 0;
     max-width: 100%;
@@ -372,6 +391,11 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     overflow: hidden;
     transform: translateY(20px);
     transition: all 180ms ease-in-out 0ms; 
+}
+.content p {
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
 }
 .expansion input[class^="expan"]:checked ~ .content {
     max-height: 360px;
@@ -415,10 +439,12 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     width: 220px;
     font-size: 18px;
     line-height: 20px;
+    font-weight: 500;
 }
 .expansion label.tab_lab  p {
     text-decoration: underline;
-    margin: 0 0 1em;
+    margin: 0;
+    line-height: 24.376px;
 } 
 .expansion label[class^="expan"]:hover{
     cursor: pointer;
@@ -435,22 +461,441 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
 .expansion input[class^="expan"]:checked ~ label p.less {
     display: block;
 }
+/* RIGHT */
+.tabset .tab-panels .tab-panel .right.tab2 {
+    width: 38%;
+}
+.tabset .tab-panels .tab-panel .right.tab2 .resume {
+    width: 80%;
+    display: flex;
+    padding: 24px 36px 40px 36px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border: 1.5px solid var(--secondary-01-grisclaro, #D1D1D1);
+    background: var(--background-pure-white, #FFF);
+    box-shadow: 0px 20px 30px 0px rgba(22, 22, 22, 0.06);
+}
+.tabset .tab-panels .tab-panel .right.tab2 .resume h3 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 124%;
+    letter-spacing: -0.6px;
+    text-transform: none;
+    margin: 0;
+}
+.tabset .tab-panels .tab-panel .right.tab2 .resume p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0.5rem;
+    border-bottom: var(--border-bottom);
+}
+.tabset .tab-panels .tab-panel .right.tab2 .resume .dates {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit p,  .tabset .tab-panels .tab-panel .right.tab2 .resume .dates p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 1.28px;
+    text-transform: uppercase;
+}
+.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab2 .resume .dates h4  {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 124%;
+}
+.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text {
+    background-color: transparent;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%; /* 33px */
+    letter-spacing: -0.44px;
+    text-decoration: underline;
+}
+.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text em {
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+
+
+
+
+/* TERCERA TAB */
+
+/* LEFT */
+.tabset .tab-panels .tab-panel .left.tab3 h2 {
+    font-size: 64px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form h3 {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: none;
+    margin: 0 0 16px;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form p {
+    font-size: 20px;    
+    font-weight: 400;
+    line-height: 150%;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .campo {
+    width: 100%;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .campo label.label {
+    font-size: 14px;
+    font-weight: 800;
+    margin-left: 0
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .campo input.input {
+    width: 90%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--grey-light);
+    border: 1px solid var(--grey-light);
+    border-radius: 6px;
+    padding: 14px 24px;
+    margin-bottom: 30px;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .campo.psw input.input {
+    margin-bottom: 10px;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form p.advise {
+    font-size: 16px;    
+    font-weight: 400;
+    line-height: 150%;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .data1 {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .data1 .campo  {
+    width: 46%;    
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .data2 {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code {
+    width: 22%;    
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code label {
+    font-size: 14px;
+    font-weight: 800;
+    margin-left: 0; 
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code select {
+    width: 100%;
+    line-height: 124%;    
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.phone {
+    width: 72%;   
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .campo .dates input {
+    width: 42%;  
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--grey-light);
+    border: 1px solid var(--grey-light);
+    border-radius: 6px;
+    padding: 14px 24px;
+    margin-bottom: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo  {
+    width: 50%;    
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo.motive  {
+    width: 100%;    
+}
+.tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo select {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.tabset .tab-panels .tab-panel .left form .book button {
+    width: 100%;
+    justify-content: center;
+    margin: 0 0 2em;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    font-size: 28px;
+}
+
+/* RIGHT */
+.tabset .tab-panels .tab-panel .right.tab3 {
+    width: 38%;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume h3 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 124%;
+    letter-spacing: -0.6px;
+    text-transform: none;
+    margin: 0;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume {
+    display: flex;
+    padding: 24px 36px 40px 36px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border: 1.5px solid var(--secondary-01-grisclaro, #D1D1D1);
+    background: var(--background-pure-white, #FFF);
+    box-shadow: 0px 20px 30px 0px rgba(22, 22, 22, 0.06);
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0.5rem;
+    border-bottom: var(--border-bottom);
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .dates {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit p,  .tabset .tab-panels .tab-panel .right.tab3 .resume .dates p, .tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 1.28px;
+    text-transform: uppercase;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .dates .in h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates .out h4 {
+    margin: 0.5rem 0 0;
+    
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text {
+    background-color: transparent;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%; /* 33px */
+    letter-spacing: -0.44px;
+    text-decoration: underline;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text em {
+    font-size: 14px;
+    margin-right: 4px;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: start;
+    padding: 1rem 0;
+    border-top: var(--border-bottom);
+    border-bottom: var(--border-bottom);
+}
+.tabset .tab-panel .right.tab3 .resume .type-resume h4 {
+    width: 60%;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 124%;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: var(--border-bottom);
+    padding: 0 0 1rem;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown p {
+    text-transform: none!important;
+}
+.tabset .tab-panel .right.tab3 .resume .breakdown h4 {
+    margin: 0 0 0.5rem;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 124%;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown .prices, .tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown .total {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.tabset .tab-panel .right.tab3 .resume .breakdown .total p {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 124%;
+}
+.tabset .tab-panels .tab-panel .right.tab3 .resume .renta {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.tabset .tab-panel .right.tab3 .resume p.advise {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--grey-advise);
+    text-transform: none!important;
+}
+
+
 
 
 /* RESPONSIVE */
-@media only screen and (min-width: 1024px) {
-   
+@media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
+    .tabset label.label {
+        margin-left: 3%;
+    }
+    .tabset > label {              
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 0 12px 1em;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container {
+        padding: 1.5em 1em 1em 134px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .img img.mini {
+        height: 160px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .desc {
+        width: 70%;
+        font-size: 20px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.second p {
+        width: 70%;
+        font-size: 20px;
+    }
+    .expansion label.tab_lab {
+        width: 180px;
+        font-size: 14px;
+    }
+    .expansion .open-close-icon em::before {
+        font-size: 22px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume {
+        padding: 24px 24px 30px 24px;
+    }    
+    .tabset .tab-panels .tab-panel .right.tab3 .resume h3 {
+        font-size: 22px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4, .tabset .tab-panels .tab-panel .right.tab3 .resume h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4, .tabset .tab-panel .right.tab3 .resume .breakdown .total p {
+        font-size: 18px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume p, .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit p, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates p, .tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume p {
+        letter-spacing: -0.2px;
+    }
 }
 
 /* MOBILE */
-@media only screen and (max-width: 1023.9px) {
-
-    .tabset .tab-panels .tab-panel .left form select {
+@media only screen and (max-width: 1023.9px) {    
+    .tab-panel {
+        padding: 1% 0;
         width: 100%;
+    }   
+    .tabset .tab-panels .tab-panel .left {
+        width: 100%;
+    }
+    .tabset .tab-panels .tab-panel .panel-container {
+        width: calc(100% - 60px);
+        padding: 50px 30px 0;
+    }
+    .tabset .tab-panels .tab-panel .left form .background label {
+        width: 80%;
+        font-size: 14px;
+        margin-bottom: 0;
+    }    
+    .tabset .tab-panels .tab-panel .left form select {
+        width: 100%;    
+        font-size: 14px;        
+        padding: 8px 12px;
     }
     .tabset .tab-panels .tab-panel .left h2 {
         text-align: left;
         margin-top: 0.6em;
+        font-size: 32px!important;
+    }
+    .tabset .tab-panels .tab-panel .left form h3 {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+    .tabset .tab-panels .tab-panel .left form label.label1 {
+        display: none;
+    }
+    .tabset .tab-panels .tab-panel .left form select.select1 {
+        margin-top: 20px;
     }
     .tabset > label {
         width: 100%;
@@ -462,10 +907,77 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     background-color: var(--grey-dark);
     color: var(--white);
     z-index: 2;
-    padding-left: 4%;
+    padding: 12px 2%;
+    width: 96% ;
     }
-    .tabset .tab-panels .tab-panel .left {
+    .tabset .tab-panels .tab-panel .left form .background em {
+        margin: 14px 12px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 {
         width: 100%;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description {
+        width: 100%;
+        padding: 1rem 0;
+        flex-flow: row wrap;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .img {
+        max-height: 300px;
+        height: auto;
+        min-height: 280px;
+        width: 100%;
+        max-width: 100%;
+        position: static;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .img img.mini {
+        max-height: 300px;
+        height: auto;
+        min-height: 280px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        object-fit: cover;
+        object-position: 0 0;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container {
+        width: 100%;
+        padding: 1rem;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .desc {
+        width: 70%;
+        font-size: 17px;
+        line-height: 20px;
+        margin-bottom: 6px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first p {
+        margin-bottom: 0;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .price {
+        font-size: 25px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .price span {
+        font-size: 14px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.second p {
+        font-size: 14px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button {
+        font-size: 15px;
+        top: -12px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button.btn-secondary {
+        height: 40px;
+    }  
+    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button em {
+        display: none;
+    }
+    .expansion label.tab_lab {
+        width: 180px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .expansion .open-close-icon em::before {
+        font-size: 18px;
     }
     .tabset label.label {
         margin-left: 0;        
@@ -474,7 +986,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         display: none;
     }
     .tabset label.label .label-mobile {
-        width: 90%;
+        width: 96%;
         margin-left: 0;
         display: flex;
         flex-flow: row wrap;
@@ -485,8 +997,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         display: block;
         font-size: 28px;
         margin-top: -4px
-    }
-    
+    }    
     .tabset label.label .label-mobile em.icon-close {        
         display: block;
         font-size: 16px;
@@ -506,7 +1017,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         display: none;
     }
     .tabset .tab-panels .tab-panel .left form .inputs-container .dates input {
-        width: 100%;
+        width: 96%;
     }
     .tabset .tab-panels .tab-panel .left form .inputs-container .dates:last-of-type {
         display: none;
@@ -514,14 +1025,17 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     .tabset .tab-panels .tab-panel .left form .next {
         width: 100%;
     }
-
+    .tabset .tab-panels .tab-panel .left form .next button {
+        font-size: 14px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
     .tabset .tab-panels .tab-panel .left.tab2 {
         width: 100%;
     }
     .tabset .tab-panels .tab-panel .right.tab2 {
         width: 100%;
     }
-
     .tabset .tab-panels .tab-panel .left .description {
         width: 100%;
         flex-flow: row wrap;      
@@ -532,8 +1046,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         height: 200px;
         object-fit: cover;
         overflow: hidden;
-    }
-    
+    }    
     .tabset .tab-panels .tab-panel .left .description .img img {
         width: 100%;
     }
@@ -556,6 +1069,239 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         justify-content: flex-end;
         align-items: flex-end;
         position: relative;
+    }
+
+    /* RIGHT */
+    .tabset .tab-panels .tab-panel .right.tab2 {
+        width: 100%;
+        margin-top: 10px;
+        border-top: var(--border-header);
+        padding-top: 20px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab2 .resume {
+        width: 100%;
+        padding: 1rem;
+    }
+    .tabset .tab-panels .tab-panel .right.tab2 .resume h3 {
+        font-size: 17px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab2 .resume p {
+        font-size: 11px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 0.5rem;
+        border-bottom: var(--border-bottom);
+    }
+    .tabset .tab-panels .tab-panel .right.tab2 .resume .dates {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit p,  .tabset .tab-panels .tab-panel .right.tab2 .resume .dates p {
+        font-size: 11px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab2 .resume .dates h4  {
+        font-size: 14px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text p {
+        font-size: 12px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text em {
+        font-size: 10px;
+        margin-right: 4px;
+    }
+
+    /* TERCERA TAB */
+
+    /* LEFT */
+    .tabset .tab-panels .tab-panel .left.tab3 { 
+        width: 100%;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 h2 {
+        font-size: 32px!important;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form h3 {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form p {
+        font-size: 14px;    
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .campo {
+        width: 100%;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .campo label.label {
+        font-size: 12px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .campo input.input {
+        width: 96%;
+        font-size: 14px; 
+        padding: 10px 12px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .campo.psw input.input {
+        margin-bottom: 10px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form p.advise {
+        font-size: 12px;    
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .next button {
+        font-size: 14px;
+        padding: 16px 26px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form h3.record {
+        border-top: 1px solid var(--grey-light);
+        padding: 1rem 0 0
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .data1 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .data1 .campo  {
+        width: 100%;    
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .data2 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code {
+        width: 22%;    
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code label {
+        font-size: 12px;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code select {
+        width: 100%;
+    }
+
+    .tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.phone {
+        width: 72%;   
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .campo .dates input {
+        width: 42%;  
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+        color: var(--grey-light);
+        border: 1px solid var(--grey-light);
+        border-radius: 6px;
+        padding: 14px 24px;
+        margin-bottom: 30px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo  {
+        width: 50%;    
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo.motive  {
+        width: 100%;    
+    }
+    .tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo select {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .tabset .tab-panels .tab-panel .left form .book button {
+        font-size: 14px;
+        padding: 16px 26px;
+        margin: 0;
+    }
+
+    /* RIGHT */
+    
+    .tabset .tab-panels .tab-panel .right.tab3 {
+        width: 100%;
+        margin-top: 10px;
+        border-top: var(--border-header);
+        padding-top: 20px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume {
+        width: 100%;
+        padding: 1rem;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume h3 {
+        font-size: 17px;        
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume p {       
+        font-size: 11px;        
+    } 
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .dates {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit p,  .tabset .tab-panels .tab-panel .right.tab3 .resume .dates p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 1.28px;
+        text-transform: uppercase;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4  {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 124%;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text {
+        background-color: transparent;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 150%; /* 33px */
+        letter-spacing: -0.44px;
+        text-decoration: underline;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text em {
+        font-size: 14px;
+        margin-right: 4px;
+    }
+
+    .tabset .tab-panels .tab-panel .right.tab3 .resume h3 {
+        font-size: 17px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4, .tabset .tab-panels .tab-panel .right.tab3 .resume h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4, .tabset .tab-panel .right.tab3 .resume .breakdown .total p {
+        font-size: 14px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume p, .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit p, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates p, .tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume p {
+        font-size: 11px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text p {
+        font-size: 12px;
+    }
+    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text em {
+        font-size: 10px;
+        margin-right: 4px;
+    }
+    .tabset .tab-panel .right.tab3 .resume p.advise {
+        line-height: 14px;
+    }
+    .tabset > label {
+        border: 0px solid var(--grey-dark);
     }
 
 }

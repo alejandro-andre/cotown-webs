@@ -276,6 +276,7 @@ legend {
   margin-bottom: .5rem;
   font-weight: 600; }
 fieldset {
+  width: 100%;
   padding: 0;
   border-width: 0; }
 input[type="checkbox"],
