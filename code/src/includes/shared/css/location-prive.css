@@ -79,7 +79,7 @@ main .location .container-main .first-contain .video-loc .text-container h3 {
 main .location .container-main .first-contain .video-loc .text-container h4 {
     color: var(--white);
     width: fit-content;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 300;
     text-transform: none;
     line-height: 1.2em;
@@ -594,7 +594,7 @@ section.necesities .grid .necesidad .p-text p {
     }    
     main .location .container-main .first-contain .video-loc .text-container h2 {
         font-size: 58px;
-        padding: 0;
+        padding: 8px;
         position: relative;
         right: 20px;
         margin: 0;
@@ -604,7 +604,7 @@ section.necesities .grid .necesidad .p-text p {
         padding: 0;
     }
     main .location .container-main .first-contain .video-loc .text-container h3 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     main .location .container-main .first-contain .video-loc .text-container .description p {
