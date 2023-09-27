@@ -1,15 +1,15 @@
 /* TIPOGRAFIA
 -------------------------------- \*/
 * {
-    font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;    
+    font-family: var(--text-font);
 }
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--title-font);
 }
 p, input, label, a, li {
-    font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--text-font);
 }
 a {
     text-decoration: none;
@@ -72,7 +72,7 @@ select option:disabled {
 /* BOTONES
 -------------------------------- \*/
 button {
-    font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--text-font);
     border: 1px solid transparent;
 }
 .btn-regular {
@@ -495,7 +495,7 @@ li .select-container .options .option.selected {
     line-height: 1;
 }
 span.turquoise {
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--title-font);
     color: var(--primary);
 }
 .icon-list {
@@ -1142,7 +1142,7 @@ button.date-button input.inputs {
 .popup h2 {
     margin-top: 0;
     color: #333;
-    font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--text-font);
 }
 .popup .close {
     position: absolute;
@@ -1613,7 +1613,7 @@ button.date-button input.inputs {
         color: var(--white);
     }
     .container-header.first .left-content .banner-container .spot h1 {
-        font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+        font-family: var(--text-font);
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -1626,7 +1626,7 @@ button.date-button input.inputs {
         width: 100%;
     }
     .container-header.first .left-content .banner-container a button.btn-primary {
-        font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+        font-family: var(--text-font);
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
