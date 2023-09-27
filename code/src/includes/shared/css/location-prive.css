@@ -67,12 +67,13 @@ main .location .container-main .first-contain .video-loc .text-container h2 {
 main .location .container-main .first-contain .video-loc .text-container h3 {
     color: var(--white);
     width: fit-content;
-    font-size: 48px;
+    font-size: 32px;
     line-height: 1em;
     padding: 0.2em 0 0;
     position: relative;    
     left: 0;
     top: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
 main .location .container-main .first-contain .video-loc .text-container .description {
     width: 100%;
@@ -589,7 +590,7 @@ section.necesities .grid .necesidad .p-text p {
         padding: 0;
     }
     main .location .container-main .first-contain .video-loc .text-container h3 {
-        font-size: 36px;
+        font-size: 24px;
     }
 
     main .location .container-main .first-contain .video-loc .text-container .description p {
