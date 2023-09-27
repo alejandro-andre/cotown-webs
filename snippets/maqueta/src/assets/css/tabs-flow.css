@@ -61,9 +61,6 @@ section > h2 {
     color: var(--grey-light);
     margin-top: 1em;
     margin-bottom: 0.5em;
-    color: var(--black);
-}
-.content-booking section .city-selector select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -109,7 +106,57 @@ section > h2 {
 }
 .content-booking section .city-selector .city-icons .city p {
     order:2;
+    margin: 0;
 }
+
+
+/* RESERVAS GLOBAL STYLE */
+.content-booking section  .calendar {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content-booking section  .calendar .reservas_form {
+    width: 300px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0.2em auto 1em;	
+}
+.content-booking section  .calendar .reservas_form button.date-button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: -webkit-fill-available;
+    background-color: #fcfcfc;
+    border: 1.5px solid var(--grey-light);
+	box-sizing: border-box;
+    border-radius: 6px;
+    padding: 10px 0 10px 10px;
+}
+.content-booking section .calendar .reservas_form button.date-button label.labels {
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+}
+.content-booking section  .calendar .reservas_form button.date-button input.inputs {	
+    height: 16px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: transparent;
+    border: none;
+}
+
+
 
 
 
@@ -1094,6 +1141,95 @@ align-items: center;
 
 /* MOBILE */
 @media only screen and (max-width: 1023.9px) {
+        
+    .content-booking {
+        width: 100%;       
+    }
+    .content-booking section {
+        width: 98%;
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .content-booking section h2 {
+        width: -webkit-fill-available;
+        font-size: 24px;
+        text-align: start;
+    }
+    .content-booking section .city-selector {
+        width: -webkit-fill-available;
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .content-booking section .city-selector select {
+        width: -webkit-fill-available;
+        font-size: 16px;
+        height: 56px;
+    }
+    .content-booking section .city-selector .city-icons {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1em 0 0;
+    }
+    .content-booking section .city-selector .city-icons .city {
+        width: 100%;
+    }
+    .content-booking section .city-selector .city-icons .city .content-selector{
+        width: -webkit-fill-available;
+        margin: 0;
+        padding: 8px 20px;
+        flex-flow: row wrap;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+        border-radius: 8px;
+        border: 1px solid var(--grey-light);
+        background: var(--white-background);
+        box-shadow: 0px 20px 30px 0px rgba(22, 22, 22, 0.06);
+    }
+    .content-booking section .city-selector .city-icons .city .content-selector:hover,
+    .content-booking section .city-selector .city-icons .city .content-selector:active,
+    .content-booking section .city-selector .city-icons .city .content-selector:focus-visible,
+    .content-booking section .city-selector .city-icons .city .content-selector:focus-visible   {
+        transform: scale(1);
+        background-color: var(--primary-bg);
+        border-radius: 8px;
+    }
+    .content-booking section .city-selector .city-icons .city img {
+        order:2;
+        width: 40px;
+    }
+    .content-booking section .city-selector .city-icons .city p {
+        order:1;
+    }
+    .content-booking section.results button.btn-secondary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 1.5em 0;
+    }
+
+    .content-booking  section .calendar .reservas_form {
+        width: -webkit-fill-available;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0.2em auto 1em;	
+    }
+
+
+
+
     .tabs-container {
         margin: 0;
         padding: 0;
