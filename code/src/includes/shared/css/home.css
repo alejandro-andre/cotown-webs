@@ -324,13 +324,16 @@ main .container-main .first-contain .text p {
     position: relative;
 }
 .cotownity .container-cotownity .coral {
-    padding: 1em 0 1em 2em;
+    height: 100%;
+    padding: 0 0 0 2em;
     background: var(--background-light-coral, #FFF5F7);
 }
 .cotownity .container-cotownity .left {
+    height: 100%;
     padding-left: 6em;
 }
 .cotownity .container-cotownity .left h2 {
+    padding: 1em 0;
     font-size: 48px;
     line-height: 40px;
 }
@@ -374,7 +377,7 @@ main .container-main .first-contain .text p {
 }
 .cotownity .feeling {
     position: relative;
-    bottom: 175px;
+    bottom: 240px;
     width: 100%
 }
 .cotownity .feeling .title-feel {
