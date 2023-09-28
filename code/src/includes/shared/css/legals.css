@@ -21,14 +21,14 @@
     margin: 1.5em 0 1em;
 }
 .legal .container-main h2 {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--text-font);
     font-size: 22px;
     font-weight: 700;
     margin: 1em 0;
     text-align: left;
 }
 .legal .container-main p, a, ul, li, th, td {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--text-font);
     font-weight: 400;
     font-size: 22px;
     line-height: 27px;

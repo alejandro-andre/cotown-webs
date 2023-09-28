@@ -2,10 +2,7 @@
   <div id="video" class="video-loc">
   <div class="text-container">
     <div class="description text">        
-      <h3>Barcelona speaks for itself</h3>
-      <p>{{location | translate('Description', L)}}</p>
-      <br>
-      <p>{{location | translate('Details', L)}}</p>
+      {{location | translate('Details', L) | markdown | safe }}
     </div>
     <h2>{{location | translate('Name', L)}}</h2>
   </div>
@@ -18,7 +15,16 @@
         <source type="video/mp4" src="{{root}}/assets/video/{{location.Name | slugify}}.mp4">
       </video>
       <div class="img only-mobile pure-u-1">
-        <img class="img-logo" alt="logo" src="{{root}}/assets/img/barcelona.png">      
+        {% for i in location.Images | find ('Image_type', 'eq', 'principal') %}
+        {% if loop.index == 1 %}
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
+          location.Name, location.Name + '-' + i.id | slugify, "img-loc",
+          [600], ""
+        %}
+        {% endif %}
+        {% endfor %}
+
       </div>
     </div>    
   </div>

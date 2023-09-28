@@ -1,15 +1,15 @@
 /* TIPOGRAFIA
 -------------------------------- \*/
 * {
-    font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;    
+    font-family: var(--text-font);
 }
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--title-font);
 }
 p, input, label, a, li {
-    font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--text-font);
 }
 a {
     text-decoration: none;
@@ -72,7 +72,7 @@ select option:disabled {
 /* BOTONES
 -------------------------------- \*/
 button {
-    font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--text-font);
     border: 1px solid transparent;
 }
 .btn-regular {
@@ -495,7 +495,7 @@ li .select-container .options .option.selected {
     line-height: 1;
 }
 span.turquoise {
-    font-family: "Bebas Neue", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--title-font);
     color: var(--primary);
 }
 .icon-list {
@@ -1007,13 +1007,26 @@ footer .container-footer .contain {
     padding: 0 0 2em;
     align-content: space-between;
 }
-footer section.container-footer .contain .left .footer-logo {
-    width: 100%;
+footer section.container-footer .contain .left .footer-logo .logo-container {
+    padding-top: 30px;
+    width: fit-content;
+    text-align: center;
 }
-footer section.container-footer .contain .left .footer-logo img {
-    /* width: 100%; */
-    max-width: 374px;
-    margin: 0 0 1rem;
+footer section.container-footer .contain .left .footer-logo .logo-container .group {
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+footer section.container-footer .contain .left .footer-logo .logo-container .group img {
+    width: 260px;
+}
+footer section.container-footer .contain .left .footer-logo .logo-container .brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer section.container-footer .contain .left .footer-logo .logo-container .brands img {
+    padding: 20px 20px;
+    width: 110px;
 }
 footer section.container-footer .contain .left .redes em {
     margin-right: 2.3rem;
@@ -1142,6 +1155,7 @@ button.date-button input.inputs {
 .popup h2 {
     margin-top: 0;
     color: #333;
+    font-family: var(--text-font);
 }
 /* .popup .close {
     position: absolute;
@@ -1611,7 +1625,7 @@ button.date-button input.inputs {
         color: var(--white);
     }
     .container-header.first .left-content .banner-container .spot h1 {
-        font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+        font-family: var(--text-font);
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -1624,7 +1638,7 @@ button.date-button input.inputs {
         width: 100%;
     }
     .container-header.first .left-content .banner-container a button.btn-primary {
-        font-family: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
+        font-family: var(--text-font);
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -2199,9 +2213,9 @@ button.date-button input.inputs {
         padding: 0;
         border-bottom: none;
     }
-    footer section.container-footer .contain .left .footer-logo img {
-        width: 100%;
-        max-width: 197px;
+    footer section.container-footer .contain .left .footer-logo {
+        display: flex;
+        justify-content: center;
     }
     footer section.container-footer .contain .left  {
         width: 100%;

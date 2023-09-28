@@ -12,7 +12,7 @@ main .location .container-main .first-contain {
 main .location .container-main .first-contain .video-loc {
     width: 100%;    
     min-height: fit-content;
-    opacity: 0.8;
+    opacity: 0.95;
 }
 main .location .container-main .first-contain .video-loc .opacity {
     width: 100%;    
@@ -66,15 +66,30 @@ main .location .container-main .first-contain .video-loc .text-container h2 {
 main .location .container-main .first-contain .video-loc .text-container h3 {
     color: var(--white);
     width: fit-content;
-    font-size: 48px;
-    line-height: 1em;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2em;
     padding: 0.2em 0 0;
     position: relative;    
     left: 0;
     top: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+main .location .container-main .first-contain .video-loc .text-container h4 {
+    color: var(--white);
+    width: fit-content;
+    font-size: 22px;
+    font-weight: 300;
+    text-transform: none;
+    line-height: 1.2em;
+    padding: 0.2em 0 0;
+    position: relative;    
+    left: 0;
+    top: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
 main .location .container-main .first-contain .video-loc .text-container .description {
-    width: 100%;
+    width: 60%;
     min-height: fit-content;
     padding: 2em 10% 2em 2em;
     border-radius: 0 12px;
@@ -564,7 +579,7 @@ section.necesities .grid .necesidad .p-text p {
     }    
     main .location .container-main .first-contain .video-loc .text-container h2 {
         font-size: 58px;
-        padding: 0;
+        padding: 8px;
         position: relative;
         right: 20px;
         margin: 0;
@@ -574,7 +589,7 @@ section.necesities .grid .necesidad .p-text p {
         padding: 0;
     }
     main .location .container-main .first-contain .video-loc .text-container h3 {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     main .location .container-main .first-contain .video-loc .text-container .description p {
@@ -711,7 +726,7 @@ section.necesities .grid .necesidad .p-text p {
         margin: auto 0;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
-        font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+        font-family: var(--text-font);
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
