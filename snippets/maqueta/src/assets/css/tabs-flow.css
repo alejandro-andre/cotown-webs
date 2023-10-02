@@ -1,3 +1,164 @@
+section > h2 {
+    margin-top: 0;
+    color: #333;
+}
+.content-booking {
+    background: #fff;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-booking::-webkit-scrollbar {
+    display: none;
+}
+.content-booking section {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-booking section.results {
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0 4em;
+}
+.content-booking section h2 {
+    width: 100%;
+    font-size: 64px;
+    line-height: 110%;
+    text-align: center;
+    margin-top: 1em;
+}
+.content-booking section .city-selector {
+    width: 98%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.content-booking section .city-selector select {
+    width: 50%;
+    border: 1.5px solid #d1d1d1;
+    border-radius: 12px;
+    padding: 4px 24px;
+    outline-offset: 0;
+    outline: -webkit-focus-ring-color auto 0;
+    height: 100px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: var(--grey-light);
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Some browsers will not display the caret when using calc, so we put the fallback first */
+    background: url("..//img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
+    background: url("..//img/br_down.png") white no-repeat calc(100% - 30px) !important; /* Better placement regardless of input width */
+}
+.content-booking section .city-selector .city-icons {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.content-booking section .city-selector .city-icons .city {
+    width: 24%;
+}
+.content-booking section .city-selector .city-icons .city .content-selector{
+    width: 60%;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+.content-booking section .city-selector .city-icons .city .content-selector:hover,
+.content-booking section .city-selector .city-icons .city .content-selector:active,
+.content-booking section .city-selector .city-icons .city .content-selector:focus-visible,
+.content-booking section .city-selector .city-icons .city .content-selector:focus-visible {
+    transform: scale(1.1);
+    background-color: var(--primary-bg);
+    border-radius: 16px;
+}
+.content-booking section .city-selector .city-icons .city img {
+    order:1;
+}
+.content-booking section .city-selector .city-icons .city p {
+    order:2;
+    margin: 0;
+}
+
+
+/* RESERVAS GLOBAL STYLE */
+.content-booking section  .calendar {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content-booking section  .calendar .reservas_form {
+    width: 300px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0.2em auto 1em;	
+}
+.content-booking section  .calendar .reservas_form button.date-button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: -webkit-fill-available;
+    background-color: #fcfcfc;
+    border: 1.5px solid var(--grey-light);
+	box-sizing: border-box;
+    border-radius: 6px;
+    padding: 10px 0 10px 10px;
+}
+.content-booking section .calendar .reservas_form button.date-button label.labels {
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+}
+.content-booking section  .calendar .reservas_form button.date-button input.inputs {	
+    height: 16px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: transparent;
+    border: none;
+}
+
+
+
+
+
 .tabs-container {
 width: 100%;
 margin: 0.5em 0;
@@ -62,126 +223,135 @@ align-items: flex-start;
 justify-content: flex-end;
 align-items: center;
 }
-.tabset {
-width: 100%;
-background-color: var(--grey-dark);
-margin: 1em 0;
+.tabs-container .nav-booking {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--grey-dark);
+    margin: 0 auto;
 }
-.tabset label.label {    
-margin-left: 4%;
-height: 20px;
+.tabs-container .nav-booking ul.pure-menu-list {
+    width: 92%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 0;
+    list-style: none;
 }
-.tabset label.label .label-mobile{
+.tabs-container .nav-booking ul.pure-menu-list li {
+    width: 25%;
+    display: inline;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -0.15px;
+    margin: 0;
+    cursor: pointer;
+}
+.tabs-container .nav-booking ul.pure-menu-list li.checked {
+    background-color: var(--white);
+    color: var(--grey-dark);
+}
+.tabs-container .nav-booking ul.pure-menu-list li label.label {
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -0.15px;
+    height: 20px;
+    border: 1px solid var(--grey-dark);
+    margin: 0;
+    color: var(--white);
+    padding: 16px 0 16px 1em;
+}
+.tabs-container .nav-booking ul.pure-menu-list li label.label a {    
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -0.15px;
+    text-decoration: none;
+}
+.tabs-container .nav-booking ul.pure-menu-list li.checked label.label a {
+    color: var(--grey-dark);
+}
+.tabs-container .nav-booking ul.pure-menu-list li label.label a .label-mobile {
     display: none;
 }
-.tab-panels {
+
+/** MAIN **/
+
+.tab-panels, .main-booking {
     background-color: var(--white);
     width: 100%;
+    padding: 30px 0;
 }
-.tabset > input[type="radio"] {
-position: absolute;
-left: -200vw;
+
+.main-booking .main-contain .panel-container {
+    width: 92%;
+    padding: 30px 4%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
-.tabset .tab-panel {
-display: none;
+.main-booking .main-contain .panel-container .left {
+    width: 52%;
 }
-.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
-.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
-.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
-.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
-.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
-.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
-display: block;
+.main-booking .main-contain .panel-container .left .error-message p {
+    color: var(--red-error-light);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%; 
 }
-.tabset > label {
-width: 19%;
-position: relative;
-display: inline-block;
-font-size: 16px;
-font-weight: 700;
-line-height: 140%;
-letter-spacing: -0.15px;
-height: 20px;
-border: 1px solid var(--grey-dark);
-margin: 0;
-color: var(--white);
-padding: 16px 0 16px 1em;
+.main-booking .main-contain .panel-container .left h2 {
+    width: 100%;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -1.92px;
 }
-input:focus-visible + label {
-outline: 0px solid transparent;
-}
-.tabset > label:hover,
-.tabset > input:focus + label,
-.tabset > input:checked + label {
-color: var(--grey-dark);
-background-color: var(--white);
-}
-.tabset > label:hover::after,
-.tabset > input:focus + label::after,
-.tabset > input:checked + label::after {
-background: transparent;
-}
-.tab-panel {
-padding: 30px 0;
-}
-.tabset .tab-panels .tab-panel .panel-container{
-width: 92%;
-padding: 30px 4%;
-display: flex;
-flex-flow: row wrap;
-justify-content: space-between;
-align-items: flex-start;
-}
-.tabset .tab-panels .tab-panel .left {
-width: 52%;
-}
-.tabset .tab-panels .tab-panel .left h2 {
-width: 100%;
-font-size: 64px;
-font-weight: 400;
-line-height: 100%;
-letter-spacing: -1.92px;
-}
-.tabset .tab-panels .tab-panel .left form {
+.main-booking .main-contain .panel-container .left form {
     width: 100%;
 }
-.tabset .tab-panels .tab-panel .left form select {
-width: 70%;
-font-size: 18px;
-font-weight: 400;
-line-height: 150%;
-color: var(--grey-light);
-border: 1px solid var(--grey-light);
-border-radius: 6px;
-padding: 16px 24px;
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; 
-background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; 
+.main-booking .main-contain .panel-container .left form select.select1 {
+    width: 80%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--grey-light);
+    border: 1px solid var(--grey-light);
+    border-radius: 6px;
+    padding: 16px 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; 
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; 
 }
-/*For IE*/
-.tabset .tab-panels .tab-panel .left form select::-ms-expand {
-    display: none;
-}
-   
 
-.tabset .tab-panels .tab-panel .left form select option {
+.main-booking .main-contain .panel-container .left form select option {
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
     color: var(--grey-light);
 }
-.tabset .tab-panels .tab-panel .left form h3 {
-    font-family: var(--text-font);
+.main-booking .main-contain .panel-container .left form h3 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 26px;
     font-weight: 600;
     line-height: 124%;
     text-transform: none;
     margin: 1em 0;
 }
-.tabset .tab-panels .tab-panel .left form .background {
-    width: 70%;
+.main-booking .main-contain .panel-container .left form .background {
+    width: 80%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -190,11 +360,11 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     border-radius: 8px;
     margin: 0 0 10px;
 }
-.tabset .tab-panels .tab-panel .left form .background em {
+.main-booking .main-contain .panel-container .left form .background em {
     margin: 24px 12px 24px 24px;
     width: 32px;
 }
-.tabset .tab-panels .tab-panel .left form .background input[type=radio] {
+.main-booking .main-contain .panel-container .left form .background input[type=radio] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -202,52 +372,57 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     width: 30%;
     height: 32px;
 }
-.tabset .tab-panels .tab-panel .left form .background label {
+.main-booking .main-contain .panel-container .left form .background label {
     font-size: 22px;
     font-weight: 400;
     line-height: 150%;
 }
-.tabset .tab-panels .tab-panel .left form .background em.checkmark {
+.main-booking .main-contain .panel-container .left form .background em.checkmark {
     height: 18px;
     width: 18px;
     border-radius: 50%;
     border: 2px solid var(--grey-dark);
 }
-.tabset .tab-panels .tab-panel .left form .background:hover input~em.checkmark {
-    border: 4px solid var(--primary);
-    height: 14px;
-    width: 14px;
+.main-booking .main-contain .panel-container .left form .background:hover input~em.checkmark {
+    height: 10px;
+    width: 10px;
+    border: 6px solid var(--primary);
 }  
-.tabset .tab-panels .tab-panel .left form .background input:checked~em.checkmark {
-    height: 14px;
-    width: 14px;
-    border: 4px solid var(--primary);
+.main-booking .main-contain .panel-container .left form .background input:checked~em.checkmark {
+    height: 10px;
+    width: 10px;
+    border: 6px solid var(--primary);
 }
 
-.tabset .tab-panels .tab-panel .left form .background em:after {
+.main-booking .main-contain .panel-container .left form .background em:after {
     top: 9px;
 }
-.tabset .tab-panels .tab-panel .left form .inputs-container {
-    width: 90%;
+.main-booking .main-contain .panel-container .left form .inputs-container {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
     margin: 0 0 10px;
-    gap: 14px;
 }
-.tabset .tab-panels .tab-panel .left form .inputs-container .dates {
-    width: 48%;
+.main-booking .main-contain .panel-container .left form .inputs-container .dates {
+    width: 100%;
 }
-.tabset .tab-panels .tab-panel .left form .inputs-container .dates label {
+.main-booking .main-contain .panel-container .left form .inputs-container .dates .date-button {
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+}
+.main-booking .main-contain .panel-container .left form .inputs-container .dates .date-button label {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
-    line-height: 150%
+    line-height: 150%;
+    text-align: start;
 }
-.tabset .tab-panels .tab-panel .left form .inputs-container .dates input {
-    width: 84%;
+.main-booking .main-contain .panel-container .left form .inputs-container .dates .date-button input {
+    width: -webkit-fill-available;
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
@@ -262,10 +437,11 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
 }
 
-.tabset .tab-panels .tab-panel .left form .next {
-    width: 90%;
+.main-booking .main-contain .panel-container .left form .next {
+    width: -webkit-fill-available;
 }
-.tabset .tab-panels .tab-panel .left form .next button {
+
+.main-booking .main-contain .panel-container .left form .next button {
     width: 100%;
     justify-content: center;
     margin: 2em 0;
@@ -273,16 +449,14 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     padding-bottom: 28px;
     font-size: 28px;
 }
-
-
-.tabset .tab-panels .tab-panel .right {
+.main-booking .main-contain .panel-container .right {
     width: 38%;
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.tabset .tab-panels .tab-panel .right .img-big {
+.main-booking .main-contain .panel-container .right .img-big {
     width: 100%;
     display: flex;
     flex-flow: row;
@@ -290,15 +464,20 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     align-items: flex-start;
     object-fit: contain;
 }
-.tabset .tab-panels .tab-panel .right .img-big img {
+.main-booking .main-contain .panel-container .right .img-big img {
     width: 100%;    
 }
+
+
+
+
+
 /* SEGUNDA TAB */
 /* LEFT */
-.tabset .tab-panels .tab-panel .left.tab2 {
+.main-booking .main-contain .panel-container .left.tab2 {
     width: 60%;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description {
+.main-booking .main-contain .panel-container .left.tab2 .description {
     width: 100%;
     position: relative;
     display: flex;
@@ -308,20 +487,20 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     object-fit: contain;
     padding: 0 0 0 80px;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .img {
+.main-booking .main-contain .panel-container .left.tab2 .description .img {
     max-width: 280px;
     position: absolute;
     left: 0;
     flex-shrink: 0;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .img img.mini {
+.main-booking .main-contain .panel-container .left.tab2 .description .img img.mini {
     align-self: center;
     vertical-align: middle;
     max-width: 280px;
     height: 200px;
     padding: 20px 0;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container {
     width: 60%;
     background-color: var(--primary-light);
     padding: 2em 1em 1em 196px;
@@ -330,51 +509,122 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     justify-content: flex-start;
     align-items: flex-start;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc {   
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc {   
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: stretch;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .desc {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .desc {
     width: 60%;
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.44px;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .price {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .price {
     font-size: 30px;
     font-weight: 700;
     line-height: 70%;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .price span {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .price span {
     font-size: 16px;
     font-weight: 400;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.second p {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.second p {
     width: 60%;
     font-size: 22px;
     font-weight: 400;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices {
+    width: 100%;   
+}
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .share, .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .extra {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 1rem;
+}
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .share .sharing, .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .extra .extras {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 0 0.5rem;
+}
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .share .sharing .partners label, .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .extra .extras .data label {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+.sharing label input {
+    margin: 0 0.4em;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+  }
+.extras label input {
+    margin: 0.1em 0.4em 0;
+    font-size: 24px;
+}
+ .sharing p, .extras p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+  }
+  .sharing .extra .extras label input {
+    margin: 0 0.4em;
+    font-size: 24px;
+  }
+  .prices input[type=checkbox], .prices input[type=checkbox]:focus, .prices input[type=radio], .prices input[type=radio]:focus {
+      -moz-appearance:none;
+      -webkit-appearance:none;
+      -o-appearance:none;
+      outline: none;
+      content: none;
+    cursor: pointer;
+  }
+  .prices input[type=checkbox]:before {	
+    font-family: 'icons';
+    content: "\e906";
+  }
+  .prices input[type=checkbox]:checked:before {
+      content: "\e907";
+  }
+  .prices input[type=radio]:before {	
+    font-family: 'icons';
+    content: "\e928";
+  }
+  .prices input[type=radio]:checked:before {
+      content: "\e929";
+  }
+
+
+
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third {
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third button {
     position: absolute;
     right: 0;
     top: -6px;
     font-size: 16px;
     letter-spacing: -0.15px;
 }
-.tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button em {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third button em {
     font-size: 18px;
     margin-left: 16px;
 }
+
 /* EXPANSION PANEL */
 .expansion {
     padding: 0;
@@ -462,10 +712,10 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     display: block;
 }
 /* RIGHT */
-.tabset .tab-panels .tab-panel .right.tab2 {
+.main-booking .main-contain .panel-container .right.tab2 {
     width: 38%;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume {
+.main-booking .main-contain .panel-container .right.tab2 .resume {
     width: 80%;
     display: flex;
     padding: 24px 36px 40px 36px;
@@ -476,7 +726,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     background: var(--background-pure-white, #FFF);
     box-shadow: 0px 20px 30px 0px rgba(22, 22, 22, 0.06);
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume h3 {
+.main-booking .main-contain .panel-container .right.tab2 .resume h3 {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 26px;
     font-weight: 700;
@@ -485,14 +735,14 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     text-transform: none;
     margin: 0;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume p {
+.main-booking .main-contain .panel-container .right.tab2 .resume p {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     text-transform: uppercase;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -501,7 +751,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     padding: 0 0 0.5rem;
     border-bottom: var(--border-bottom);
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .dates {
+.main-booking .main-contain .panel-container .right.tab2 .resume .dates {
     width: 100%;
     display: flex;
     flex-flow: column;
@@ -509,7 +759,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     align-items: flex-start;
     gap: 1rem;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit p,  .tabset .tab-panels .tab-panel .right.tab2 .resume .dates p {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit p,  .main-booking .main-contain .panel-container .right.tab2 .resume .dates p {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
@@ -517,27 +767,27 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     letter-spacing: 1.28px;
     text-transform: uppercase;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab2 .resume .dates h4  {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit h4, .main-booking .main-contain .panel-container .right.tab2 .resume .dates h4  {
     margin: 0;
     font-size: 20px;
     font-weight: 700;
     line-height: 124%;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit button.btn-text {
     background-color: transparent;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text p {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit button.btn-text p {
     font-size: 16px;
     font-weight: 700;
     line-height: 150%; /* 33px */
     letter-spacing: -0.44px;
     text-decoration: underline;
 }
-.tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text em {
+.main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit button.btn-text em {
     font-size: 14px;
     margin-right: 4px;
 }
@@ -546,41 +796,45 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
 
 
 
+
 /* TERCERA TAB */
 
 /* LEFT */
-.tabset .tab-panels .tab-panel .left.tab3 h2 {
+.main-booking .main-contain .panel-container .left.tab3 h2 {
     font-size: 64px;
     font-weight: 400;
     text-transform: uppercase;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form {
+.main-booking .main-contain .panel-container .left.tab3 form {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form h3 {
+.main-booking .main-contain .panel-container .left.tab3 form h3 {
     font-size: 26px;
     font-weight: 700;
     text-transform: none;
     margin: 0 0 16px;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form p {
+.main-booking .main-contain .panel-container .left.tab3 form p {
     font-size: 20px;    
     font-weight: 400;
     line-height: 150%;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .campo {
+
+
+
+.main-booking .main-contain .panel-container .left.tab3 form .campo {
     width: 100%;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .campo label.label {
+.main-booking .main-contain .panel-container .left.tab3 form .campo label.label {
     font-size: 14px;
     font-weight: 800;
     margin-left: 0
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .campo input.input {
+.main-booking .main-contain .panel-container .left.tab3 form .campo input.input {
     width: 90%;
     font-size: 18px;
     font-weight: 400;
@@ -591,48 +845,53 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     padding: 14px 24px;
     margin-bottom: 30px;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .campo.psw input.input {
+.main-booking .main-contain .panel-container .left.tab3 form .campo.psw input.input {
     margin-bottom: 10px;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form p.advise {
+.main-booking .main-contain .panel-container .left.tab3 form p.advise {
     font-size: 16px;    
     font-weight: 400;
     line-height: 150%;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data1 {
+
+.main-booking .main-contain .panel-container .left.tab3 form .data1 {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data1 .campo  {
+.main-booking .main-contain .panel-container .left.tab3 form .data1 .campo  {
     width: 46%;    
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data2 {
+.main-booking .main-contain .panel-container .left.tab3 form .data2 {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code {
+.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code {
     width: 22%;    
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code label {
+.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code label {
     font-size: 14px;
     font-weight: 800;
     margin-left: 0; 
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code select {
+.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code select {
     width: 100%;
-    line-height: 124%;    
+    line-height: 124%;
+    padding: 16.5px 24px;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.phone {
+.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.phone {
     width: 72%;   
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .campo .dates input {
-    width: 42%;  
+.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.phone input.input {
+    width: 60%;   
+}
+.main-booking .main-contain .panel-container .left.tab3 form .campo .dates input {
+    width: 44%;  
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
@@ -647,17 +906,17 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
     background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo  {
+.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo  {
     width: 50%;    
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo.motive  {
+.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo.motive  {
     width: 100%;    
 }
-.tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo select {
+.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo select {
     width: 100%;
     margin-bottom: 30px;
 }
-.tabset .tab-panels .tab-panel .left form .book button {
+.main-booking .main-contain .panel-container .left form .book button {
     width: 100%;
     justify-content: center;
     margin: 0 0 2em;
@@ -666,11 +925,27 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     font-size: 28px;
 }
 
+.main-booking .main-contain .panel-container .left.tab3 form  .campo select {     
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--grey-light);
+    border: 1px solid var(--grey-light);
+    border-radius: 6px;
+    padding: 14px 24px;
+    margin-bottom: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
+}
+
 /* RIGHT */
-.tabset .tab-panels .tab-panel .right.tab3 {
+.main-booking .main-contain .panel-container .right.tab3 {
     width: 38%;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume h3 {
+.main-booking .main-contain .panel-container .right.tab3 .resume h3 {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 26px;
     font-weight: 700;
@@ -679,7 +954,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     text-transform: none;
     margin: 0;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume {
+.main-booking .main-contain .panel-container .right.tab3 .resume {
     display: flex;
     padding: 24px 36px 40px 36px;
     flex-direction: column;
@@ -689,14 +964,14 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     background: var(--background-pure-white, #FFF);
     box-shadow: 0px 20px 30px 0px rgba(22, 22, 22, 0.06);
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume p {
+.main-booking .main-contain .panel-container .right.tab3 .resume p {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     text-transform: uppercase;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -705,7 +980,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     padding: 0 0 0.5rem;
     border-bottom: var(--border-bottom);
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .dates {
+.main-booking .main-contain .panel-container .right.tab3 .resume .dates {
     width: 100%;
     display: flex;
     flex-flow: column;
@@ -713,7 +988,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     align-items: flex-start;
     gap: 1rem;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit p,  .tabset .tab-panels .tab-panel .right.tab3 .resume .dates p, .tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume p {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit p,  .main-booking .main-contain .panel-container .right.tab3 .resume .dates p, .main-booking .main-contain .panel-container .right.tab3 .resume .type-resume p {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
@@ -721,34 +996,34 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     letter-spacing: 1.28px;
     text-transform: uppercase;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4 {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit h4, .main-booking .main-contain .panel-container .right.tab3 .resume .dates h4 {
     margin: 0;
     font-size: 20px;
     font-weight: 700;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .dates .in h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates .out h4 {
+.main-booking .main-contain .panel-container .right.tab3 .resume .dates .in h4, .main-booking .main-contain .panel-container .right.tab3 .resume .dates .out h4 {
     margin: 0.5rem 0 0;
     
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text {
     background-color: transparent;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text p {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text p {
     font-size: 16px;
     font-weight: 700;
     line-height: 150%; /* 33px */
     letter-spacing: -0.44px;
     text-decoration: underline;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text em {
+.main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text em {
     font-size: 14px;
     margin-right: 4px;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume {
+.main-booking .main-contain .panel-container .right.tab3 .resume .type-resume {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -758,14 +1033,14 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     border-top: var(--border-bottom);
     border-bottom: var(--border-bottom);
 }
-.tabset .tab-panel .right.tab3 .resume .type-resume h4 {
+.main-booking .main-contain .panel-container .right.tab3 .resume .type-resume h4 {
     width: 60%;
     margin: 0;
     font-size: 20px;
     font-weight: 700;
     line-height: 124%;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown {
+.main-booking .main-contain .panel-container .right.tab3 .resume .breakdown {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -775,35 +1050,35 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     border-bottom: var(--border-bottom);
     padding: 0 0 1rem;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown p {
+.main-booking .main-contain .panel-container .right.tab3 .resume .breakdown p {
     text-transform: none!important;
 }
-.tabset .tab-panel .right.tab3 .resume .breakdown h4 {
+.main-booking .main-contain .panel-container .right.tab3 .resume .breakdown h4 {
     margin: 0 0 0.5rem;
     font-size: 20px;
     font-weight: 700;
     line-height: 124%;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown .prices, .tabset .tab-panels .tab-panel .right.tab3 .resume .breakdown .total {
+.main-booking .main-contain .panel-container .right.tab3 .resume .breakdown .prices, .main-booking .main-contain .panel-container .right.tab3 .resume .breakdown .total {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
-.tabset .tab-panel .right.tab3 .resume .breakdown .total p {
+.main-booking .main-contain .panel-container .right.tab3 .resume .breakdown .total p {
     font-size: 20px;
     font-weight: 700;
     line-height: 124%;
 }
-.tabset .tab-panels .tab-panel .right.tab3 .resume .renta {
+.main-booking .main-contain .panel-container .right.tab3 .resume .renta {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
-.tabset .tab-panel .right.tab3 .resume p.advise {
+.main-booking .main-contain .panel-container .right.tab3 .resume p.advise {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -814,27 +1089,31 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
 
 
 
+
+
+
+
 /* RESPONSIVE */
 @media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
-    .tabset label.label {
-        margin-left: 3%;
+    .tabs-container .nav-booking ul.pure-menu-list {
+        width: 100%;
     }
-    .tabset > label {              
+    .tabs-container .nav-booking ul.pure-menu-list li {              
         font-size: 14px;
         font-weight: 600;
-        padding: 12px 0 12px 1em;
+        padding: 0;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container {
         padding: 1.5em 1em 1em 134px;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .img img.mini {
+    .main-booking .main-contain .panel-container .left.tab2 .description .img img.mini {
         height: 160px;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .desc {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .desc {
         width: 70%;
         font-size: 20px;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.second p {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.second p {
         width: 70%;
         font-size: 20px;
     }
@@ -845,83 +1124,263 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     .expansion .open-close-icon em::before {
         font-size: 22px;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume {
+    .main-booking .main-contain .panel-container .right.tab3 .resume {
         padding: 24px 24px 30px 24px;
     }    
-    .tabset .tab-panels .tab-panel .right.tab3 .resume h3 {
+    .main-booking .main-contain .panel-container .right.tab3 .resume h3 {
         font-size: 22px;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4, .tabset .tab-panels .tab-panel .right.tab3 .resume h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4, .tabset .tab-panel .right.tab3 .resume .breakdown .total p {
+    .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit h4, .main-booking .main-contain .panel-container .right.tab3 .resume .dates h4, .main-booking .main-contain .panel-container .right.tab3 .resume h4, .main-booking .main-contain .panel-container .right.tab3 .resume .dates h4, .main-booking .main-contain .panel-container .right.tab3 .resume .breakdown .total p {
         font-size: 18px;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume p, .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit p, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates p, .tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume p {
+    .main-booking .main-contain .panel-container .right.tab3 .resume p, .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit p, .main-booking .main-contain .panel-container .right.tab3 .resume .dates p, .main-booking .main-contain .panel-container .right.tab3 .resume .type-resume p {
         letter-spacing: -0.2px;
     }
 }
 
 /* MOBILE */
-@media only screen and (max-width: 1023.9px) {    
-    .tab-panel {
+@media only screen and (max-width: 1023.9px) {
+        
+    .content-booking {
+        width: 100%;       
+    }
+    .content-booking section {
+        width: 98%;
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .content-booking section h2 {
+        width: -webkit-fill-available;
+        font-size: 24px;
+        text-align: start;
+    }
+    .content-booking section .city-selector {
+        width: -webkit-fill-available;
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .content-booking section .city-selector select {
+        width: -webkit-fill-available;
+        font-size: 16px;
+        height: 56px;
+    }
+    .content-booking section .city-selector .city-icons {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1em 0 0;
+    }
+    .content-booking section .city-selector .city-icons .city {
+        width: 100%;
+    }
+    .content-booking section .city-selector .city-icons .city .content-selector{
+        width: -webkit-fill-available;
+        margin: 0;
+        padding: 8px 20px;
+        flex-flow: row wrap;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+        border-radius: 8px;
+        border: 1px solid var(--grey-light);
+        background: var(--white-background);
+        box-shadow: 0px 20px 30px 0px rgba(22, 22, 22, 0.06);
+    }
+    .content-booking section .city-selector .city-icons .city .content-selector:hover,
+    .content-booking section .city-selector .city-icons .city .content-selector:active,
+    .content-booking section .city-selector .city-icons .city .content-selector:focus-visible,
+    .content-booking section .city-selector .city-icons .city .content-selector:focus-visible   {
+        transform: scale(1);
+        background-color: var(--primary-bg);
+        border-radius: 8px;
+    }
+    .content-booking section .city-selector .city-icons .city img {
+        order:2;
+        width: 40px;
+    }
+    .content-booking section .city-selector .city-icons .city p {
+        order:1;
+    }
+    .content-booking section.results button.btn-secondary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 1.5em 0;
+    }
+
+    .content-booking  section .calendar .reservas_form {
+        width: -webkit-fill-available;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0.2em auto 1em;	
+    }
+
+
+
+
+    .tabs-container {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+    }
+    .tabs-container .header-tabs {
+        z-index: 0;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .tabs-container .nav-booking {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+    }
+
+    .tabs-container .nav-booking ul.pure-menu-list {
+        width: 98%;
+        height: 48px;
+        padding: 10px 0 10px;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        position: relative;
+    }
+    .tabs-container .nav-booking ul.pure-menu-list li {
+        background-color: var(--grey-dark);
+        color: var(--white);
+        z-index: 1;
+        padding: 0;
+        width: 100%; 
+        color: var(--white);
+        visibility: hidden;
+        position: absolute;
+    }
+    .tabs-container .nav-booking ul.pure-menu-list li.checked {
+        visibility: visible;
+        color: var(--white);
+        background-color: var(--grey-dark);
+        z-index: 2;
+    }
+    .tabs-container .nav-booking ul.pure-menu-list li label.label {
+        width: 94%;        
+        padding: 0 2%;
+        border: 0;
+    }
+
+    .tabs-container .nav-booking ul.pure-menu-list li label.label a {    
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: -0.15px;
+        text-decoration: none;
+    }
+
+    .tabs-container .nav-booking ul.pure-menu-list li.checked label.label a {
+        color: var(--white);
+    }
+    .tabs-container .nav-booking ul.pure-menu-list li label.label a span {
+        display: none;
+    }
+
+    .tabs-container .nav-booking ul.pure-menu-list li label.label a .label-mobile {
+        display: flex;
+        width: 100%;
+    }
+
+    .tabs-container .nav-booking ul.pure-menu-list li label.label .label-mobile {
+        width: 94%;
+        margin-left: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .tabs-container .nav-booking ul.pure-menu-list li label.label .label-mobile em.icon-corchete-left {        
+        display: block;
+        font-size: 28px;
+        margin-top: -4px
+    }    
+    .tabs-container .nav-booking ul.pure-menu-list li label.label .label-mobile em.icon-close {        
+        display: block;
+        font-size: 16px;
+    }
+    
+    .main-booking .main-contain {
         padding: 1% 0;
         width: 100%;
-    }   
-    .tabset .tab-panels .tab-panel .left {
+    }
+    .main-booking .main-contain .panel-container {
+        width: 94%;
+        padding: 0 2% 30px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .main-booking .main-contain .panel-container .left .error-message p {
+        font-size: 14px;
+        letter-spacing: 0.14px; 
+    }
+
+    .main-booking .main-contain .panel-container .left {
         width: 100%;
     }
-    .tabset .tab-panels .tab-panel .panel-container {
-        width: calc(100% - 60px);
-        padding: 50px 30px 0;
-    }
-    .tabset .tab-panels .tab-panel .left form .background label {
+    
+  
+    .main-booking .main-contain .panel-container .left form .background label {
         width: 80%;
         font-size: 14px;
         margin-bottom: 0;
     }    
-    .tabset .tab-panels .tab-panel .left form select {
-        width: 100%;    
+    .main-booking .main-contain .panel-container .left form select {
+        width: -webkit-fill-available;
         font-size: 14px;        
         padding: 8px 12px;
     }
-    .tabset .tab-panels .tab-panel .left h2 {
+    .main-booking .main-contain .panel-container .left h2 {
         text-align: left;
         margin-top: 0.6em;
         font-size: 32px!important;
     }
-    .tabset .tab-panels .tab-panel .left form h3 {
+    .main-booking .main-contain .panel-container .left form h3 {
         font-size: 17px;
         margin-top: 20px;
     }
-    .tabset .tab-panels .tab-panel .left form label.label1 {
+    .main-booking .main-contain .panel-container .left form label.label1 {
         display: none;
     }
-    .tabset .tab-panels .tab-panel .left form select.select1 {
+    .main-booking .main-contain .panel-container .left form select.select1 {
         margin-top: 20px;
     }
-    .tabset > label {
-        width: 100%;
-        padding: 16px 0 16px;
-        position: absolute;
-        z-index: 1;      
-    }    
-    .tabset > input:checked + label {
-    background-color: var(--grey-dark);
-    color: var(--white);
-    z-index: 2;
-    padding: 12px 2%;
-    width: 96% ;
-    }
-    .tabset .tab-panels .tab-panel .left form .background em {
+    
+    .main-booking .main-contain .panel-container .left form .background em {
         margin: 14px 12px;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 {
+    .main-booking .main-contain .panel-container .left.tab2 {
         width: 100%;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description {
+    .main-booking .main-contain .panel-container .left.tab2 .description {
         width: 100%;
         padding: 1rem 0;
         flex-flow: row wrap;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .img {
+    .main-booking .main-contain .panel-container .left.tab2 .description .img {
         max-height: 300px;
         height: auto;
         min-height: 280px;
@@ -929,7 +1388,7 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         max-width: 100%;
         position: static;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .img img.mini {
+    .main-booking .main-contain .panel-container .left.tab2 .description .img img.mini {
         max-height: 300px;
         height: auto;
         min-height: 280px;
@@ -939,36 +1398,36 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         object-fit: cover;
         object-position: 0 0;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container {
         width: 100%;
         padding: 1rem;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .desc {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .desc {
         width: 70%;
         font-size: 17px;
         line-height: 20px;
         margin-bottom: 6px;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first p {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first p {
         margin-bottom: 0;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .price {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .price {
         font-size: 25px;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.first .price span {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .price span {
         font-size: 14px;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.second p {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.second p {
         font-size: 14px;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third button {
         font-size: 15px;
         top: -12px;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button.btn-secondary {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third button.btn-secondary {
         height: 40px;
     }  
-    .tabset .tab-panels .tab-panel .left.tab2 .description .desc-container .secc.third button em {
+    .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third button em {
         display: none;
     }
     .expansion label.tab_lab {
@@ -979,91 +1438,69 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     .expansion .open-close-icon em::before {
         font-size: 18px;
     }
-    .tabset label.label {
-        margin-left: 0;        
-    }
-    .tabset label.label span{
-        display: none;
-    }
-    .tabset label.label .label-mobile {
-        width: 96%;
-        margin-left: 0;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    .tabset label.label .label-mobile em.icon-corchete-left {        
-        display: block;
-        font-size: 28px;
-        margin-top: -4px
-    }    
-    .tabset label.label .label-mobile em.icon-close {        
-        display: block;
-        font-size: 16px;
-    }
-    .tabset .tab-panels .tab-panel .right {
+    .main-booking .main-contain .panel-container .right {
         width: 100%;
     }
-    .tabset .tab-panels .tab-panel .left form .background {
+    .main-booking .main-contain .panel-container .left form .background {
         width: 100%;
         background-color: transparent;
         border: 1px solid var(--grey-light);
     }
-    .tabset .tab-panels .tab-panel .left form .inputs-container .dates {
+    .main-booking .main-contain .panel-container .left form .inputs-container .dates {
         width: 100%;
     }
-    .tabset .tab-panels .tab-panel .left form .inputs-container .dates label {
+    .main-booking .main-contain .panel-container .left form .inputs-container .dates .date-button {
+        width:  -webkit-fill-available;
+        padding: 0;
+    } 
+    .main-booking .main-contain .panel-container .left form .inputs-container .dates label {
         display: none;
     }
-    .tabset .tab-panels .tab-panel .left form .inputs-container .dates input {
-        width: 96%;
+    .main-booking .main-contain .panel-container .left form .inputs-container .dates input {
+        width: -webkit-fill-available;;
     }
-    .tabset .tab-panels .tab-panel .left form .inputs-container .dates:last-of-type {
-        display: none;
-    }
-    .tabset .tab-panels .tab-panel .left form .next {
+    .main-booking .main-contain .panel-container .left form .next {
         width: 100%;
     }
-    .tabset .tab-panels .tab-panel .left form .next button {
+    .main-booking .main-contain .panel-container .left form .next button {
         font-size: 14px;
         padding-top: 22px;
         padding-bottom: 22px;
     }
-    .tabset .tab-panels .tab-panel .left.tab2 {
+    .main-booking .main-contain .panel-container .left.tab2 {
         width: 100%;
     }
-    .tabset .tab-panels .tab-panel .right.tab2 {
+    .main-booking .main-contain .panel-container .right.tab2 {
         width: 100%;
     }
-    .tabset .tab-panels .tab-panel .left .description {
+    .main-booking .main-contain .panel-container .left .description {
         width: 100%;
         flex-flow: row wrap;      
     }
-    .tabset .tab-panels .tab-panel .left .description .img {
+    .main-booking .main-contain .panel-container .left .description .img {
         width: 100%;
         top: 0;
         height: 200px;
         object-fit: cover;
         overflow: hidden;
     }    
-    .tabset .tab-panels .tab-panel .left .description .img img {
+    .main-booking .main-contain .panel-container .left .description .img img {
         width: 100%;
     }
-    .tabset .tab-panels .tab-panel .left .description .desc-container {
+    .main-booking .main-contain .panel-container .left .description .desc-container {
         width: 100%;
         background-color: var(--primary-light);
         border-radius: 0 0 16px 16px;
         padding: 1em;
     }
-    .tabset .tab-panels .tab-panel .left .description .desc-container .secc {   
+    .main-booking .main-contain .panel-container .left .description .desc-container .secc {   
         width: 100%;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: stretch;
     }
-    .tabset .tab-panels .tab-panel .left .description .desc-container .secc.third {
+    .main-booking .main-contain .panel-container .left .description .desc-container .secc.third {
         display: flex;
         flex-flow: row;
         justify-content: flex-end;
@@ -1072,23 +1509,23 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     }
 
     /* RIGHT */
-    .tabset .tab-panels .tab-panel .right.tab2 {
+    .main-booking .main-contain .panel-container .right.tab2 {
         width: 100%;
         margin-top: 10px;
         border-top: var(--border-header);
         padding-top: 20px;
     }
-    .tabset .tab-panels .tab-panel .right.tab2 .resume {
+    .main-booking .main-contain .panel-container .right.tab2 .resume {
         width: 100%;
         padding: 1rem;
     }
-    .tabset .tab-panels .tab-panel .right.tab2 .resume h3 {
+    .main-booking .main-contain .panel-container .right.tab2 .resume h3 {
         font-size: 17px;
     }
-    .tabset .tab-panels .tab-panel .right.tab2 .resume p {
+    .main-booking .main-contain .panel-container .right.tab2 .resume p {
         font-size: 11px;
     }
-    .tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit {
+    .main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit {
         width: 100%;
         display: flex;
         flex-flow: row wrap;
@@ -1097,24 +1534,23 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         padding: 0 0 0.5rem;
         border-bottom: var(--border-bottom);
     }
-    .tabset .tab-panels .tab-panel .right.tab2 .resume .dates {
+    .main-booking .main-contain .panel-container .right.tab2 .resume .dates {
         width: 100%;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 1rem;
     }
-    .tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit p,  .tabset .tab-panels .tab-panel .right.tab2 .resume .dates p {
+    .main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit p,  .main-booking .main-contain .panel-container .right.tab2 .resume .dates p {
         font-size: 11px;
     }
-    .tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab2 .resume .dates h4  {
+    .main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit h4, .main-booking .main-contain .panel-container .right.tab2 .resume .dates h4  {
         font-size: 14px;
     }
-    .tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text p {
+    .main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit button.btn-text p {
         font-size: 12px;
     }
-    .tabset .tab-panels .tab-panel .right.tab2 .resume .resume-edit button.btn-text em {
+    .main-booking .main-contain .panel-container .right.tab2 .resume .resume-edit button.btn-text em {
         font-size: 10px;
         margin-right: 4px;
     }
@@ -1122,101 +1558,91 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
     /* TERCERA TAB */
 
     /* LEFT */
-    .tabset .tab-panels .tab-panel .left.tab3 { 
+    .main-booking .main-contain .panel-container .left.tab3 { 
         width: 100%;
     }
-    .tabset .tab-panels .tab-panel .left.tab3 h2 {
+    .main-booking .main-contain .panel-container .left.tab3 h2 {
         font-size: 32px!important;
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form h3 {
+    .main-booking .main-contain .panel-container .left.tab3 form h3 {
         font-size: 17px;
         margin-top: 20px;
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form p {
+    .main-booking .main-contain .panel-container .left.tab3 form p {
         font-size: 14px;    
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .campo {
+    .main-booking .main-contain .panel-container .left.tab3 form .campo {
         width: 100%;
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .campo label.label {
+    .main-booking .main-contain .panel-container .left.tab3 form .campo label.label, .main-booking .main-contain .panel-container .left.tab3 form .data3 .campo label, .main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code label,.main-booking .main-contain .panel-container .left.tab3 form .campo .dates label {
         font-size: 12px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 150%;
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .campo input.input {
-        width: 96%;
+    .main-booking .main-contain .panel-container .left.tab3 form .campo input.input {
+        width: 94%;
         font-size: 14px; 
         padding: 10px 12px;
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .campo.psw input.input {
+    .main-booking .main-contain .panel-container .left.tab3 form .campo.psw input.input {
         margin-bottom: 10px;
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form p.advise {
+    .main-booking .main-contain .panel-container .left.tab3 form p.advise {
         font-size: 12px;    
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .next button {
+    .main-booking .main-contain .panel-container .left.tab3 form .next button {
         font-size: 14px;
         padding: 16px 26px;
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form h3.record {
+    .main-booking .main-contain .panel-container .left.tab3 form h3.record {
         border-top: 1px solid var(--grey-light);
         padding: 1rem 0 0
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .data1 {
+    .main-booking .main-contain .panel-container .left.tab3 form .data1 {
         width: 100%;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-start;
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .data1 .campo  {
+    .main-booking .main-contain .panel-container .left.tab3 form .data1 .campo  {
         width: 100%;    
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .data2 {
+ 
+    .main-booking .main-contain .panel-container .left.tab3 form .data2 {
         width: 100%;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-start;
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code {
+    .main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code {
         width: 22%;    
-    }
-    .tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code label {
-        font-size: 12px;
-    }
-    .tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.code select {
+    }   
+    .main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code select {
         width: 100%;
+        padding: 12px;
     }
-
-    .tabset .tab-panels .tab-panel .left.tab3 form .data2 .campo.phone {
-        width: 72%;   
+    .main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.phone input.input {
+        width: 90%;   
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .campo .dates input {
-        width: 42%;  
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 150%;
-        color: var(--grey-light);
-        border: 1px solid var(--grey-light);
-        border-radius: 6px;
-        padding: 14px 24px;
-        margin-bottom: 30px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
-        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
+    .main-booking .main-contain .panel-container .left.tab3 form .campo .dates input {
+        width: 94%;  
+        font-size: 16px;        
+        padding: 12px;       
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo  {
-        width: 50%;    
-    }
-    .tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo.motive  {
+    .main-booking .main-contain .panel-container .left.tab3 form .data3 .campo  {
         width: 100%;    
     }
-    .tabset .tab-panels .tab-panel .left.tab3 form .data3 .campo select {
-        width: 100%;
-        margin-bottom: 30px;
+    .main-booking .main-contain .panel-container .left.tab3 form .data3 .campo.motive  {
+        width: 100%;    
     }
-    .tabset .tab-panels .tab-panel .left form .book button {
+    .main-booking .main-contain .panel-container .left.tab3 form .data3 .campo select {
+        font-size: 16px;        
+        padding: 12px;
+    }
+    .main-booking .main-contain .panel-container .left form .book button {
         font-size: 14px;
         padding: 16px 26px;
         margin: 0;
@@ -1224,31 +1650,31 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
 
     /* RIGHT */
     
-    .tabset .tab-panels .tab-panel .right.tab3 {
+    .main-booking .main-contain .panel-container .right.tab3 {
         width: 100%;
         margin-top: 10px;
         border-top: var(--border-header);
         padding-top: 20px;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume {
+    .main-booking .main-contain .panel-container .right.tab3 .resume {
         width: 100%;
         padding: 1rem;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume h3 {
+    .main-booking .main-contain .panel-container .right.tab3 .resume h3 {
         font-size: 17px;        
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume p {       
+    .main-booking .main-contain .panel-container .right.tab3 .resume p {       
         font-size: 11px;        
     } 
-    .tabset .tab-panels .tab-panel .right.tab3 .resume .dates {
+    .main-booking .main-contain .panel-container .right.tab3 .resume .dates {
         width: 100%;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 1rem;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit p,  .tabset .tab-panels .tab-panel .right.tab3 .resume .dates p {
+     
+    .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit p,  .main-booking .main-contain .panel-container .right.tab3 .resume .dates p {
         margin: 0;
         font-size: 16px;
         font-weight: 500;
@@ -1256,52 +1682,49 @@ background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/1
         letter-spacing: 1.28px;
         text-transform: uppercase;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4  {
+    .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit h4, .main-booking .main-contain .panel-container .right.tab3 .resume .dates h4  {
         margin: 0;
         font-size: 22px;
         font-weight: 700;
         line-height: 124%;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text {
+    .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text {
         background-color: transparent;
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
         align-items: center;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text p {
+    .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text p {
         font-size: 16px;
         font-weight: 700;
         line-height: 150%; /* 33px */
         letter-spacing: -0.44px;
         text-decoration: underline;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text em {
+    .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text em {
         font-size: 14px;
         margin-right: 4px;
     }
 
-    .tabset .tab-panels .tab-panel .right.tab3 .resume h3 {
+    .main-booking .main-contain .panel-container .right.tab3 .resume h3 {
         font-size: 17px;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4, .tabset .tab-panels .tab-panel .right.tab3 .resume h4, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates h4, .tabset .tab-panel .right.tab3 .resume .breakdown .total p {
+    .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit h4, .main-booking .main-contain .panel-container .right.tab3 .resume .dates h4, .main-booking .main-contain .panel-container .right.tab3 .resume h4, .main-booking .main-contain .panel-container .right.tab3 .resume .dates h4, .main-booking .main-contain .panel-container .right.tab3 .resume .type-resume h4, .main-booking .main-contain .panel-container .right.tab3 .resume .breakdown .total p, .main-booking .main-contain .panel-container .right.tab3 .resume .breakdown h4 {
         font-size: 14px;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume p, .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit p, .tabset .tab-panels .tab-panel .right.tab3 .resume .dates p, .tabset .tab-panels .tab-panel .right.tab3 .resume .type-resume p {
+    .main-booking .main-contain .panel-container .right.tab3 .resume p, .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit p, .main-booking .main-contain .panel-container .right.tab3 .resume .dates p, .main-booking .main-contain .panel-container .right.tab3 .resume .type-resume p {
         font-size: 11px;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text p {
+    .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text p {
         font-size: 12px;
     }
-    .tabset .tab-panels .tab-panel .right.tab3 .resume .resume-edit button.btn-text em {
+    .main-booking .main-contain .panel-container .right.tab3 .resume .resume-edit button.btn-text em {
         font-size: 10px;
         margin-right: 4px;
     }
-    .tabset .tab-panel .right.tab3 .resume p.advise {
+    .main-booking .main-contain .panel-container .right.tab3 .resume p.advise {
+        font-size: 10px;
         line-height: 14px;
     }
-    .tabset > label {
-        border: 0px solid var(--grey-dark);
-    }
-
 }

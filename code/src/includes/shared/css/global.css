@@ -1129,7 +1129,7 @@ button.date-button input.inputs {
 }
 
 /* <!-- RESERVAS POPUP --> \*/
-.booking-overlay {
+/* .booking-overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1151,13 +1151,13 @@ button.date-button input.inputs {
     width: 98%;
     height: 96%;
     position: relative;
-}
+} */
 .popup h2 {
     margin-top: 0;
     color: #333;
     font-family: var(--text-font);
 }
-.popup .close {
+/* .popup .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -1169,23 +1169,22 @@ button.date-button input.inputs {
 }
 .popup .close:hover {
     color: var(--primary);
-}
-.popup .content-booking {
+} */
+.content-booking {
+    background: #fff;
     max-height: 100%;
-    max-width: 98%;
-    margin: 2em auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    max-width: 100%;
+    margin: 0;
     text-align: center;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
-.popup .content-booking::-webkit-scrollbar {
+.content-booking::-webkit-scrollbar {
     display: none;
 }
-.popup .content-booking section {
+.content-booking section {
     width: 100%;
     text-align: center;
     display: flex;
@@ -1193,7 +1192,7 @@ button.date-button input.inputs {
     justify-content: space-between;
     align-items: center;
 }
-.popup .content-booking section.results {
+.content-booking section.results {
     text-align: center;
     display: flex;
     flex-flow: row wrap;
@@ -1201,14 +1200,14 @@ button.date-button input.inputs {
     align-items: center;
     margin: 2em 0 4em;
 }
-.popup .content-booking section h2 {
+.content-booking section h2 {
     width: 100%;
     font-size: 64px;
     line-height: 110%;
     text-align: center;
     margin-top: 1em;
 }
-.popup .content-booking section .city-selector {
+.content-booking section .city-selector {
     width: 98%;
     text-align: center;
     display: flex;
@@ -1216,7 +1215,7 @@ button.date-button input.inputs {
     justify-content: center;
     align-items: center;
 }
-.popup .content-booking section .city-selector select {
+.content-booking section .city-selector select {
     width: 50%;
     border: 1.5px solid #d1d1d1;
     border-radius: 12px;
@@ -1232,7 +1231,7 @@ button.date-button input.inputs {
     margin-bottom: 0.5em;
     color: var(--black);
 }
-.popup .content-booking section .city-selector select {
+.content-booking section .city-selector select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1240,7 +1239,7 @@ button.date-button input.inputs {
     background: url("..//img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
     background: url("..//img/br_down.png") white no-repeat calc(100% - 30px) !important; /* Better placement regardless of input width */
 }
-.popup .content-booking section .city-selector .city-icons {
+.content-booking section .city-selector .city-icons {
     width: 100%;
     text-align: center;
     display: flex;
@@ -1250,10 +1249,10 @@ button.date-button input.inputs {
     margin-top: 4em;
     gap: 1em;
 }
-.popup .content-booking section .city-selector .city-icons .city {
+.content-booking section .city-selector .city-icons .city {
     width: 24%;
 }
-.popup .content-booking section .city-selector .city-icons .city .content-selector{
+.content-booking section .city-selector .city-icons .city .content-selector{
     width: 60%;
     margin: 0 auto;
     padding: 2em;
@@ -1265,18 +1264,18 @@ button.date-button input.inputs {
     cursor: pointer;
     transition: all .4s ease-in-out;
 }
-.popup .content-booking section .city-selector .city-icons .city .content-selector:hover,
-.popup .content-booking section .city-selector .city-icons .city .content-selector:active,
-.popup .content-booking section .city-selector .city-icons .city .content-selector:focus-visible,
-.popup .content-booking section .city-selector .city-icons .city .content-selector:focus-visible {
+.content-booking section .city-selector .city-icons .city .content-selector:hover,
+.content-booking section .city-selector .city-icons .city .content-selector:active,
+.content-booking section .city-selector .city-icons .city .content-selector:focus-visible,
+.content-booking section .city-selector .city-icons .city .content-selector:focus-visible {
     transform: scale(1.1);
     background-color: var(--primary-bg);
     border-radius: 16px;
 }
-.popup .content-booking section .city-selector .city-icons .city img {
+.content-booking section .city-selector .city-icons .city img {
     order:1;
 }
-.popup .content-booking section .city-selector .city-icons .city p {
+.content-booking section .city-selector .city-icons .city p {
     order:2;
 }
 
@@ -2116,35 +2115,35 @@ button.date-button input.inputs {
     .popup .close {
         font-size: 20px;
     }
-    .popup .content-booking section {
+    .content-booking section {
         text-align: center;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
     }
-    .popup .content-booking {
+    .content-booking {
         margin: 0 auto;
     }
-    .popup .content-booking section h2 {
+    .content-booking section h2 {
         width: 100%;
         font-size: 24px;
         text-align: start;
         margin-top: 2em;
     }
-    .popup .content-booking section .city-selector {
+    .content-booking section .city-selector {
         text-align: center;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
     }
-    .popup .content-booking section .city-selector select {
+    .content-booking section .city-selector select {
         width: 100%;
         font-size: 16px;
         height: 56px;
     }
-    .popup .content-booking section .city-selector .city-icons {
+    .content-booking section .city-selector .city-icons {
         width: 98%;
         text-align: center;
         display: flex;
@@ -2153,10 +2152,10 @@ button.date-button input.inputs {
         align-items: center;
         margin: 1em 0 0;
     }
-    .popup .content-booking section .city-selector .city-icons .city {
+    .content-booking section .city-selector .city-icons .city {
         width: 100%;
     }
-    .popup .content-booking section .city-selector .city-icons .city .content-selector{
+    .content-booking section .city-selector .city-icons .city .content-selector{
         width: 90%;
         margin: 0;
         padding: 8px 20px;
@@ -2168,22 +2167,22 @@ button.date-button input.inputs {
         background: var(--white-background);
         box-shadow: 0px 20px 30px 0px rgba(22, 22, 22, 0.06);
     }
-    .popup .content-booking section .city-selector .city-icons .city .content-selector:hover,
-    .popup .content-booking section .city-selector .city-icons .city .content-selector:active,
-    .popup .content-booking section .city-selector .city-icons .city .content-selector:focus-visible,
-    .popup .content-booking section .city-selector .city-icons .city .content-selector:focus-visible   {
+    .content-booking section .city-selector .city-icons .city .content-selector:hover,
+    .content-booking section .city-selector .city-icons .city .content-selector:active,
+    .content-booking section .city-selector .city-icons .city .content-selector:focus-visible,
+    .content-booking section .city-selector .city-icons .city .content-selector:focus-visible   {
         transform: scale(1);
         background-color: var(--primary-bg);
         border-radius: 8px;
     }
-    .popup .content-booking section .city-selector .city-icons .city img {
+    .content-booking section .city-selector .city-icons .city img {
         order:2;
         width: 40px;
     }
-    .popup .content-booking section .city-selector .city-icons .city p {
+    .content-booking section .city-selector .city-icons .city p {
         order:1;
     }
-    .popup .content-booking section.results button.btn-secondary {
+    .content-booking section.results button.btn-secondary {
         width: 100%;
         text-align: center;
         justify-content: center;
