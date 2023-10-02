@@ -67,6 +67,11 @@
     /* // border radius boxes */
     --radius-1: 0px 0px;
     --radius-2: 0px;
+
+
+     /* BACKGROUN EN BANNER NUESTROS PISAZOS */
+     --banner-bg1: rgb(0,96,89);
+     --banner-bg2: linear-gradient(90deg, rgba(0,96,89,1) 0%, rgba(0,191,178,1) 67%, rgba(0,115,107,1) 100%);     
 }
 
 /* SVG Fill colours */

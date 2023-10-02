@@ -121,8 +121,8 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     justify-content: space-between;
     align-items: center;
     border-radius: 0px 120px 0px 0px;
-    background: rgb(80,28,36);
-    background: linear-gradient(90deg, rgba(80,28,36,1) 0%, rgba(255,81,102,1) 67%, rgba(180,57,70,1) 100%);
+    background: var(--banner-bg1);
+    background: var(--banner-bg2);
     padding: 20px 100px;
     margin: 40px 0;
 }
