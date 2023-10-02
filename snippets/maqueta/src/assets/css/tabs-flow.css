@@ -75,7 +75,6 @@ section > h2 {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 4em;
     gap: 1em;
 }
 .content-booking section .city-selector .city-icons .city {
