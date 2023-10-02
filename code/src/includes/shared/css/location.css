@@ -127,6 +127,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     margin: 40px 0;
 }
 .pisos-slider .h2-container h2 {
+    font-size: 64px;
     text-align: start;
     width: 30%;
     margin: 0;

@@ -72,7 +72,7 @@
 
   <div class="pure-u-1 after-slide bottom">
 
-    <div class="text-first pure-u-23-24 pure-u-lg-10-24">
+    <div class="text-first pure-u-23-24 pure-u-lg-12-24">
       {% if building.Tour %}
       <button class="btn-text">
         <a href="#" onclick="open_tour()">{% literal texts, 'rooms-tour-virtual', L %}</a>
@@ -82,6 +82,24 @@
         <a href="#barrio">{% literal texts, 'rooms-tu-barrio', L %}</a>
       </button>
     </div>
+
+    <!-- Dates -->
+    <section class="right-calendar pure-u-23-24 pure-u-lg-9-24">
+      <div class="calendar pure-u-1">
+        <div class="reservas pure-u-1">
+          <div class="button-calendar">
+            <p class="label">
+              Fechas
+            </p>
+            <p class="dates">
+              dd/mm/aaaa-dd/mm/aaaa
+            </p>
+          </div>        
+        </div>
+      </div>
+    </section>
+
+
 
     <!-- Calendar -->
     <!-- TODO - Fechas
