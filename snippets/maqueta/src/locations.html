@@ -223,6 +223,104 @@
     </footer>
     <!-- End Document
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+ <!-- Locations list expansion -->
+ <section class="locations-list pure-u-1">
+  <div class="locations-container pure-u-1">
+    {% for l in locations %}
+    <!-- Look for matching type resources -->
+    {% set show = false %}
+    {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
+      {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+      {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+      {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
+      {% if name == 'rooms' and (ra > 0 or rp > 0) %}{% set show = true %}{% endif %}
+      {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set show = true %}{% endif %}
+    {% endfor %}
+    {% if show %}
+      <div class="location pure-u-1">
+        <div class="img-text row pure-u-1">
+          <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html" class="pure-u-1 pure-u-lg-1-3">
+            <div class="img pure-u-1">
+            {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+            {% if loop.index == 1 %}
+            {% image
+              constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
+              l.Name, l.Name + '-' + i.id | slugify, "img-loc",
+              [800], ""
+            %}
+            {% endif %}
+            {% endfor %}  
+            </div>       
+          </a>
+          <div class="text-content pure-u-1 pure-u-lg-2-3">
+            <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+              <h2 class="location-title">{{l | translate('Name', L)}}</h2>
+            </a>
+            <p class="text-expansion">{{l | translate('Description', L)}}</p>
+          </div>
+        </div>
+        <div class="expansion pure-u-1">          
+          <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
+          <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
+            <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+          </label>
+          <div class="content pure-u-1">
+            <div class="type-list pure-u-1">
+              <button for="tab_shared" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html'">
+                <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+                <div class="label-content">
+                  <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_piso_compartido.svg"></img>
+                  <p>{% literal texts, 'home-pisazos-piso', L %}<br>{% literal texts, 'home-pisazos-compartido', L %}</p>
+                </div>
+              </button>                
+              <button for="tab_private" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages.flats.url}}.html'">
+                <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+                <div class="label-content">
+                  <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_apartamento_privado.svg"></img>
+                  <p>{% literal texts, 'home-pisazos-apartamento', L %}<br>{% literal texts, 'home-pisazos-privado', L %}</p>
+                </div>
+              </button>
+              <button for="tab_residence" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages['residences'].url}}.html'">
+                <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+                <div class="label-content">
+                  <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_residencia_universitaria.svg"></img>
+                  <p>{% literal texts, 'home-pisazos-residencia', L %}<br>{% literal texts, 'home-pisazos-universitaria', L %}</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>        
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>
     
