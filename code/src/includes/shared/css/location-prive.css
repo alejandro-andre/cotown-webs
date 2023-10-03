@@ -62,7 +62,7 @@ main .location .container-main .first-contain .video-loc .text-container h2 {
     font-size: 78px;
     line-height: 1em;
     padding: 0.2em 1em 0 0;
-    text-align: end; 
+    text-align: end;
 }
 main .location .container-main .first-contain .video-loc .text-container h3 {
     color: var(--white);
@@ -107,16 +107,16 @@ main .location .container-main .first-contain .video-loc .text-container .descri
 -------------------------------- \*/
 section.location {
     padding: 0;
-    background-color: var(--primary);
+    background-color: var(--prive-bg);
 }
 .pisos-slider {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary);
+    background-color: var(--prive-bg);
     color: var(--white);
-    padding-bottom: 4em;
+    padding: 2em 0 4em;
     position: relative;
 }
 .pisos-slider .h2-container {
@@ -126,17 +126,24 @@ section.location {
     align-items: center;
 }
 .pisos-slider .h2-container h2 {
+    font-size: 64px;
     text-align: center;
     width: 50%;
     margin: 0;
     text-transform: uppercase;
-    padding: 1rem 0 0;
+    padding: 1rem 0;
     color: var(--white);
 }
 .pisos-slider .h2-container h2 span {
     font-weight: 200!important;
     color: var(--white);
 }
+
+.pisos-slider .h2-container .calendar {
+    display: none;        
+}
+
+
 .carousel {
     position: relative;
     max-width: 99vw;
@@ -176,7 +183,7 @@ a {
     border-radius: 24px;
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop img {
-    border-top-left-radius: 20px;
+    border-top-left-radius: var(-left-top);
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -351,7 +358,7 @@ button.green-button.btn-secondary {
     fill:#fff !important;
  }
 .carousel .carousel-main-list .card .card-body .carousel-mini li svg .svg_accent {
-     fill:#ff5166!important; 
+     fill:var(--primary)!important; 
 }
 
 .carousel .carousel-main-list .card .card-body .price {    
@@ -377,7 +384,7 @@ button.green-button.btn-secondary {
     letter-spacing: -0.6px;
 }
 section.map {
-    background-color: var(--primary);
+    background-color: var(--prive-bg);
 }
 #map {
     margin: 0;
@@ -389,16 +396,15 @@ section.necesities {
     justify-content: center;
     align-items: stretch;
     padding: 4em 4em 6em;
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--prive-bg);
+    color: var(--white);    
 }
 section.necesities .contain {
     display: flex;
     flex-flow: row wrap;
 }
 section.necesities .contain .title h2 {
-    width: 60%;
-    padding: 0 0 0 2em;
+    width: 100%;
     color: var(--white);
 }
 section.necesities .contain .text p {
@@ -413,7 +419,6 @@ section.necesities .grid {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 0 0 10em;
 }
 section.necesities .grid .necesidad img,
 section.necesities .grid .necesidad .img svg {
@@ -421,10 +426,13 @@ section.necesities .grid .necesidad .img svg {
     padding: 1em 0 .5em;
 }
 section.necesities .grid .necesidad .img svg .svg_base { 
-    fill:#fff !important;
- }
+    fill:#fff!important;
+}
+section.necesities .grid .necesidad .img svg .st4 { 
+    fill:#fff!important;
+} 
 section.necesities .grid .necesidad .img svg .svg_accent {
-     fill:#fff!important; 
+     fill: var(--primary)!important; 
 }
 section.necesities .grid .necesidad .p-title p {
     font-weight: 700;
@@ -528,16 +536,13 @@ section.necesities .grid .necesidad .p-text p {
     .pisos-slider .h2-container h2 {
         font-size: 46px;
     }
-    section.necesities {
-        padding: 0 4em;
-    }
-    section.necesities .grid.pure-u-lg-3-4 {
+    /* section.necesities .grid.pure-u-lg-3-4 {
         padding: 0 1em;
-        width: 90%;
+    } */
+    section.necesities .contain {
+        width: 100%;
     }
     section.necesities .contain .title h2 {
-        width: 86%;
-        padding: 0;
         font-size: 46px;
     }
     section.necesities .contain .text p {
@@ -557,18 +562,12 @@ section.necesities .grid .necesidad .p-text p {
     .pisos.mobile {
         display: none;
     }
-    .pisos-slider .h2-container .button-map-mobile {
+    .pisos-slider .h2-container .map-button {
         display: none;
-    }
-    .calendar {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        margin: 2em 0 4em;
-    }
-
+    }  
+   
 }
+
 
 /* MOBILE \*/
 @media only screen and (max-width: 1023.9px) {
@@ -650,7 +649,7 @@ section.necesities .grid .necesidad .p-text p {
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
-        padding-bottom: 0;
+        padding: 0 0 4em;
     }
     .pisos-slider .h2-container {
         display: flex;
@@ -674,7 +673,8 @@ section.necesities .grid .necesidad .p-text p {
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
-        margin:0
+        margin:0;
+        color: var(--white);
     }
     .carousel.desktop {
         display: none;
@@ -823,9 +823,12 @@ section.necesities .grid .necesidad .p-text p {
     }
     .piso .services-list li svg .svg_base { 
         fill:#fff !important;
-     }
+    }
+    .piso .services-list li svg .st4 { 
+        fill:#fff!important;
+    } 
     .piso .services-list li svg .svg_accent {
-         fill:#343434 !important; 
+         fill: var(--primary) !important; 
     }
 
     .piso .services-list li p {
@@ -840,8 +843,6 @@ section.necesities .grid .necesidad .p-text p {
         padding: 2em 1em;
     }
     section.necesities .contain .title h2 {
-        width: 100%;
-        padding: 0;
         font-size: 32px;
     }
     section.necesities .contain .text p {
@@ -881,7 +882,7 @@ section.necesities .grid .necesidad .p-text p {
         fill:#ffffff !important;
      }
     section.necesities .grid .necesidad .img svg .svg_accent {
-         fill:#343434 !important; 
+         fill: var(--primary) !important; 
     }
     section.necesities .grid .necesidad .p-title p {
         font-size: 15px;
@@ -895,6 +896,9 @@ section.necesities .grid .necesidad .p-text p {
 
 }
 @media only screen and (max-width: 768px) {
+    .pisos-slider .h2-container h2 {
+        font-size: 30px;
+    }
     section.necesities .grid {
         justify-content: flex-start;
     }
@@ -902,7 +906,7 @@ section.necesities .grid .necesidad .p-text p {
         width: calc(50% - 20px);
         height: 200px;
         padding: 5px;
-    }
+    }    
 }
 
 /* MAP */

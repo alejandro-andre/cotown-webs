@@ -1,86 +1,130 @@
  <section class="all-locations pure-u-1">
-  <div class="left pure-u-1 pure-u-lg-12-24">
 
+  <div class="left pure-u-1">
     <!-- Title -->
-    <div class="texto-container pure-u-1 ">
+    <div class="texto-container pure-u-1">
       <h1 class="title-where">
         {% literal texts, 'home-localizaciones-titulo', L %}
       </h1>
     </div>
 
-    <div class="tabs-container pure-u-1">
-      <div class="tabset">
+    <section class="locations-list cotown pure-u-1 pure-u-lg-5-6">
+      <div class="locations-container pure-u-1">
 
-        <!-- Tabs -->
-        <input type="radio" name="tabset" id="tab_shared" aria-controls="rooms"{%if name=='rooms'%} checked{%endif%}>
-        <label for="tab_shared" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html'">
-          <img class="img" src="{{root}}/assets/img/corner.svg"></img>
-          <div class="label-content">
-            <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_piso_compartido.svg"></img>
-            <p>{% literal texts, 'home-pisazos-piso', L %}<br>{% literal texts, 'home-pisazos-compartido', L %}</p>
-          </div>
-        </label>
-        <input type="radio" name="tabset" id="tab_private" aria-controls="flats"{%if name=='flats'%} checked{%endif%}>
-        <label for="tab_private" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages.flats.url}}.html'">
-          <img class="img" src="{{root}}/assets/img/corner.svg"></img>
-          <div class="label-content">
-            <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_apartamento_privado.svg"></img>
-            <p>{% literal texts, 'home-pisazos-apartamento', L %}<br>{% literal texts, 'home-pisazos-privado', L %}</p>
-          </div>
-        </label>
+        {% for l in locations %}
 
-        <!-- Content -->
-        <div class="tab-panels">
-          <section class="tab-panel">
-           <div class="locations-container pure-u-1">
+        <!-- Look for matching type resources -->
+        {% set show = false %}
+        {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
+          {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+          {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+          {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
+          {% if name == 'rooms' and (ra > 0 or rp > 0) %}{% set show = true %}{% endif %}
+          {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set show = true %}{% endif %}
+        {% endfor %}
 
-              {% for l in locations %}
-
-              <!-- Look for matching type resources -->
-              {% set show = false %}
-              {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
-                {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
-                {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
-                {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
-                {% if name == 'rooms' and (ra > 0 or rp > 0) %}{% set show = true %}{% endif %}
-                {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set show = true %}{% endif %}
-              {% endfor %}
-
-              {% if show %}
-              <div class="location pure-u-1">
-                <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html" class="pure-u-1 pure-u-lg-1-3">
-                <div class="img pure-u-1">
-                {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
-                {% if loop.index == 1 %}
-                {% image
-                  constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
-                  l.Name, l.Name + '-' + i.id | slugify, "img-loc",
-                  [800], ""
-                %}
-                {% endif %}
-                {% endfor %}
-                </div>
-                </a>
-                <div class="text-content pure-u-1 pure-u-lg-2-3">
-                  <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
-                    <h2 class="location-title">{{l | translate('Name', L)}}</h2>
-                  </a>
-                  <p class="body1">{{l | translate('Description', L)}}</p>
-                </div>
-              </div>
-              {% endif %}
-
-              {% endfor %}
-
+        {% if show %}
+        <div class="location cotown pure-u-1">
+          <div class="img-text pure-u-1">
+            <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html" class="img-cont pure-u-1 pure-u-lg-1-3">
+            <div class="img pure-u-1">
+            {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+            {% if loop.index == 1 %}
+            {% image
+              constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
+              l.Name, l.Name + '-' + i.id | slugify, "img-loc",
+              [800], ""
+            %}
+            {% endif %}
+            {% endfor %}
             </div>
-          </section>
+            </a>
+            <div class="text-content pure-u-1 pure-u-lg-2-3">
+              <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+                <h2 class="location-title">{{l | translate('Name', L)}}</h2>
+              </a>
+              <p class="body1">{{l | translate('Description', L)}}</p>
+            </div>
+          </div>
         </div>
+        {% endif %}
+
+        {% endfor %}
 
       </div>
-    </div>
-  </div>
+    </section>
+    <!--
+      <div class="tabs-container pure-u-1">
+        <div class="tabset">
+          Tabs 
+          <input type="radio" name="tabset" id="tab_shared" aria-controls="rooms"{%if name=='rooms'%} checked{%endif%}>
+          <label for="tab_shared" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html'">
+            <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+            <div class="label-content">
+              <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_piso_compartido.svg"></img>
+              <p>{% literal texts, 'home-pisazos-piso', L %}<br>{% literal texts, 'home-pisazos-compartido', L %}</p>
+            </div>
+          </label>
+          <input type="radio" name="tabset" id="tab_private" aria-controls="flats"{%if name=='flats'%} checked{%endif%}>
+          <label for="tab_private" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages.flats.url}}.html'">
+            <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+            <div class="label-content">
+              <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_apartamento_privado.svg"></img>
+              <p>{% literal texts, 'home-pisazos-apartamento', L %}<br>{% literal texts, 'home-pisazos-privado', L %}</p>
+            </div>
+          </label>
 
-  <!-- Right photo -->
+          Content
+          <div class="tab-panels">
+            <section class="tab-panel">
+            <div class="locations-container pure-u-1">
+
+                {% for l in locations %}
+
+                Look for matching type resources
+                {% set show = false %}
+                {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
+                  {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+                  {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+                  {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
+                  {% if name == 'rooms' and (ra > 0 or rp > 0) %}{% set show = true %}{% endif %}
+                  {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set show = true %}{% endif %}
+                {% endfor %}
+
+                {% if show %}
+                <div class="location pure-u-1">
+                  <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html" class="pure-u-1 pure-u-lg-1-3">
+                  <div class="img pure-u-1">
+                  {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+                  {% if loop.index == 1 %}
+                  {% image
+                    constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
+                    l.Name, l.Name + '-' + i.id | slugify, "img-loc",
+                    [800], ""
+                  %}
+                  {% endif %}
+                  {% endfor %}
+                  </div>
+                  </a>
+                  <div class="text-content pure-u-1 pure-u-lg-2-3">
+                    <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+                      <h2 class="location-title">{{l | translate('Name', L)}}</h2>
+                    </a>
+                    <p class="body1">{{l | translate('Description', L)}}</p>
+                  </div>
+                </div>
+                {% endif %}
+
+                {% endfor %}
+
+              </div>
+            </section>
+          </div>
+        </div>
+    </div>
+    -->
+  </div>
+  <!-- Right photo
   <div class="right pure-u-1 pure-u-lg-10-24">
     <div class="img">
       {% image
@@ -90,5 +134,6 @@
       %}
     </div>
   </div>
+   -->
 
 </section>
