@@ -42,13 +42,37 @@
                 </div>
                 <div class="text-content pure-u-17-24 pure-u-lg-2-3">
                   <h2 class="location-title">{{l | translate('Name', L)}}</h2>
-                  <p class="body1">{{l | translate('Description', L)}}</p>
+                  <p class="body1">{{l.Texts[0] | translate('Description', L)}}</p>
                 </div>
+              </div> 
+            </div>
+            <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
+            <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1" role="tab">
+            </label>
+            <div class="content pure-u-1">
+              <div class="type-list pure-u-1">
+                <a class="primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+                  <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+                  <div class="label-content">
+                    <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_piso_compartido.svg"></img>
+                    <p>{% literal texts, 'home-pisazos-piso', L %}<br>{% literal texts, 'home-pisazos-compartido', L %}</p>
+                  </div>
+                </a>                
+                <a class="button-primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+                  <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+                  <div class="label-content">
+                    <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_apartamento_privado.svg"></img>
+                    <p>{% literal texts, 'home-pisazos-apartamento', L %}<br>{% literal texts, 'home-pisazos-privado', L %}</p>
+                  </div>
+                </a>
+                <a class="button-primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+                  <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+                  <div class="label-content">
+                    <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_residencia_universitaria.svg"></img>
+                    <p>{% literal texts, 'home-pisazos-residencia', L %}<br>{% literal texts, 'home-pisazos-universitaria', L %}</p>
+                  </div>
+                </a>
               </div>
-              {% endif %}
-
-              {% endfor %}
-
             </div>
           </div>
         {% endif %}
