@@ -65,7 +65,7 @@
                   <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
                     <h2 class="location-title">{{l | translate('Name', L)}}</h2>
                   </a>
-                  <p class="body1">{{l | translate('Description', L)}}</p>
+                  <p class="body1">{{l.Texts[0] | translate('Description', L)}}</p>
                 </div>
               </div>
               {% endif %}
