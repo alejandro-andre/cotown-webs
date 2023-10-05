@@ -75,12 +75,6 @@ tags: page
                 t.Name, t.Name + '-' + t.id | slugify, "img-grid", [300], ""
               %}
               </div>
-              <div class="hover">
-              {% image
-                constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Second_image/contents?access_token=" + token,
-                t.Name, t.Name + '-' + t.id + '_hover' | slugify, "img-grid", [300], ""
-              %}
-              </div>
               <div class="data">
                 <p class="name">{{t.Name}}</p>
                 <p class="job">{{t | translate('Position', L)}}</p>

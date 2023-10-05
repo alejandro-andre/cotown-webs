@@ -70,6 +70,7 @@ main .container-main section.members .grid .member .img-member {
     padding: 5%;
     text-align: center;
 }
+/*
 main .container-main section.members .grid .member .img-member:hover .first {
     display: none;
 }
@@ -79,6 +80,7 @@ main .container-main section.members .grid .member .img-member .hover {
 main .container-main section.members .grid .member .img-member:hover .hover {
     display: block;
 }
+*/
 main .container-main section.members .grid .member .img-grid {
     width: 100%;
 }

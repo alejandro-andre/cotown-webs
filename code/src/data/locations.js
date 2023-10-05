@@ -10,10 +10,15 @@ module.exports = async (config) => {
       id
       Name
       Name_en
-      Description
-      Description_en
-      Details
-      Details_en
+      Texts: Location_textListViaLocation_id (
+        joinType: INNER
+        where: { Segment_id: { EQ: $id } }
+      ) {
+          Description
+          Description_en
+          Details
+          Details_en
+      }
       Images: Media_locationListViaLocation_id (
         joinType: INNER
         orderBy: [{ attribute: Order }]
