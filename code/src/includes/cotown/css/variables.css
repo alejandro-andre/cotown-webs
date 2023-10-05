@@ -22,12 +22,21 @@
     --footer: #121212;
     --primary-bg: #00bfb266;
 
+    /* PRIVE */
+    --prive-bg: #121212;
+
+    /* Locations boxes hover */
+    --location-label-bg: rgba(37, 186, 209, 0.2);
+
+
     /* // Text color */
     --primary-text: #ffffff;
     --second-header-text: #ffffff;
     --secondary-text-header: #000000;
     --white: #ffffff;
     --black: #000000;
+    --black-op: #0000004a;
+
 
     /* // Secondary color */
     --grey-light: #3c434a;
@@ -64,9 +73,21 @@
     --shadow-medium: rgba(8, 0, 4, 15%);
     --shadow-strong: rgba(16, 0, 8, 20%);
     /* box-shadow: 2px 3px 12px rgba(16, 0, 8, 20%); \*/
+
+
     /* // border radius boxes */
     --radius-1: 0px 0px;
     --radius-2: 0px;
+    --left-top: 0px;
+    --slider-cards: 0;
+
+     /* BACKGROUN EN BANNER NUESTROS PISAZOS */
+     --banner-bg1: rgb(0,96,89);
+     --banner-bg2: linear-gradient(90deg, rgba(0,96,89,1) 0%, rgba(0,191,178,1) 67%, rgba(0,115,107,1) 100%);    
+     
+     /* POSICIONES EN LOCATIONS */
+     --align-title: center;
+
 }
 
 /* SVG Fill colours */

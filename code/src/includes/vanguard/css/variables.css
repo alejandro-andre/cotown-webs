@@ -24,7 +24,14 @@
     --footer: #121212;
     --primary-bg: #ff516587;
 
+
+    /* PRIVE */
+    --prive-bg: #c14256;
+
+    /* Locations boxes hover */
     --location-label-bg: rgba(255, 81, 102, 0.20);
+
+
 
     /* // Text color */
     --primary-text: #ffffff;
@@ -71,6 +78,16 @@
     /* // border radius boxes */
     --radius-1: 0px 0px 48px 0px;
     --radius-2: 0px 12px;
+    --left-top: 24px;
+    --slider-cards: 0 0 24px 24px;
+
+    /* BACKGROUN EN BANNER NUESTROS PISAZOS */
+    --banner-bg1: rgb(80,28,36);
+    --banner-bg2: linear-gradient(90deg, rgba(80,28,36,1) 0%, rgba(255,81,102,1) 67%, rgba(180,57,70,1) 100%);
+
+    /* POSICIONES EN LOCATIONS */
+    --align-title: flex-start;
+
 }
 
 /* SVG Fill colours */
@@ -84,4 +101,5 @@
         display: none;
     }
 }
+
 
