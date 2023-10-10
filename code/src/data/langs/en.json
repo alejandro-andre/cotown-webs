@@ -9,6 +9,12 @@
       "title": "Vanguard Student Housing - Where everything begins",
       "description": "Come experience the authentic coliving for university students."
     },
+    "locations": {
+      "url": "locations",
+      "text": "Locations",
+      "title": "...",
+      "description": "..."
+    },
     "rooms": {
       "url": "shared-flats",
       "text": "Locations",
