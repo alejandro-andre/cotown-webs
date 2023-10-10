@@ -21,6 +21,7 @@
     "markdown-it-attrs": "^4.1.6",
     "node-fetch": "^2.6.1",
     "nunjucks": "^3.2.4",
-    "terser": "^5.16.4"
+    "terser": "^5.16.4",
+    "uncss": "^0.17.3"
   }
 }

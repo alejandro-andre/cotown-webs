@@ -1,9 +1,13 @@
 <!-- Additional HEAD content -->
 {% block head %}
+<!--
 {% set css %}
 {% include "shared/css/location-prive.css" %}
-{% include "shared/css/leaflet/leaflet.css" %}
+{% include "shared/css/leaflet.css" %}
 {% endset %}<style>{{ css | cssmin | safe }}</style>
+-->
+<link rel="stylesheet" href="/assets/css/location-prive.css">
+<link rel="stylesheet" href="/assets/css/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 {% endblock %}
 
