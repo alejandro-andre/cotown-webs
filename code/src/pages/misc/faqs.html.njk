@@ -21,11 +21,8 @@ tags: page
 ---
 <!-- Additional HEAD content -->
 {% block head %}
-{% set css %}{% include "shared/css/faqs.css" %}
-.highlight {
-  background-color: green;
-}
-{% endset %}<style>{{ css | cssmin | safe }}</style>
+<!--{% set css %}{% include "shared/css/faqs.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>-->
+<link rel="stylesheet" href="/assets/css/faqs.css">
 {% endblock %}
 
 <!-- Main -->
