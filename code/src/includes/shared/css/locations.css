@@ -29,9 +29,7 @@
 
 /* SOLO COTOWN */
 
-.locations .container-main .all-locations .left .locations-list {
 
-}
 .locations .container-main .all-locations .left .locations-list .locations-container  .location.cotown {
   position: relative;
   display: flex;
@@ -95,7 +93,7 @@
 
 /* SOLO VANGUARD */
 
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion {
+.locations .container-main .all-locations .left .locations-list .locations-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: stretch;
@@ -104,44 +102,49 @@
   margin: 0 0 20px;
   position: relative;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location {
+.locations .container-main .all-locations .left .locations-list .locations-container .location {
   position: relative;
   display: flex;
   flex-flow: row wrap;
-  justify-content: stretch;
-  align-items: flex-start;
-  width: 100%; 
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--grey-light);
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .img-text {
+.locations .container-main .all-locations .left .locations-list .locations-container:last-child {
+  border-bottom: 0px;
+}
+.locations .container-main .all-locations .left .locations-list .locations-container .location .img-text {
   display: flex;
   flex-flow: row nowrap;
   justify-content: stretch;
   align-items: flex-start;
-  width: 100%; 
   margin: 0;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .img-text .img-cont {   
+.locations .container-main .all-locations .left .locations-list .locations-container .location .img-text .img-cont {   
   width: fit-content;
   margin-right: 24px;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .img-text .img-cont .img {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .img-text .img-cont .img {
   border-radius: var(--radius-2);
   overflow: hidden;
-  width: 170px;
-  height: 170px;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
   object-position: center center;  
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .img img {  
+.locations .container-main .all-locations .left .locations-list .locations-container .location .img img {  
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .text-content {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .text-content {
   width: 100%;
   padding-top: 20px;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .text-content h2 {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .text-content h2 {
   font-weight: 400;
   font-size: 40px;
   line-height: 124%;
@@ -149,7 +152,7 @@
   margin: 0;
   text-align: start;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .text-content p {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .text-content p {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -157,62 +160,19 @@
   margin: 0;
   padding-right: 20px;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .text-content a {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .text-content a {
   color: var(--black);
   text-decoration: none;
 }
-.loc-expansion input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 0;
-  margin: 0;
-  padding: 0;
-}
-.loc-expansion input[class^=tab] {
-  width: 100%;
-  height: 200px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion label[class^="tab"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  margin: 0;
-  cursor: pointer;
-}
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion label[class^="tab"]:hover{
-  cursor: pointer;
-}
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content {
-  height: auto;
-  max-height: 0;
-  max-width: 100%;
-  position: relative;
-  top: -20px;
-  overflow: hidden;
-  transform: translateY(20px);
-  transition: all 180ms ease-in-out 0s;
-}
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion input[class^=tab]:checked~.content {
-  max-height: 500px;
-  height: fit-content;
-  transition: all .2s ease-in-out 0s;
-}
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list {
+
+.locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: flex-start;
-  border-bottom: 1px solid var(--grey-light);
-  margin: 20px 0;
-  padding: 0 0 20px;
   gap: 4%;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a {
   position: relative;
   display: inline-block;
   padding: 0;
@@ -224,21 +184,21 @@
   max-height: 156px;
   height: auto;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a:last-child {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a:last-child {
   margin-right: 20px;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a:checked, .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a:hover {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a:checked, .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a:hover {
   outline: 2px solid var(--primary);
   background-color: var(--location-label-bg);
   color: var(--black);
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a img.img {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a img.img {
   position: absolute;
   top: -1px;
   left: -1px;
   width: 24px;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a .label-content {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a .label-content {
   position: relative;
   display: flex;
   flex-flow: column;
@@ -248,28 +208,16 @@
   font-weight: 600;
   margin-top: 16px;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a .label-content img.icon {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a .label-content img.icon {
   width: 60px;
 }
-.locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a .label-content p {
+.locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a .label-content p {
   font-size: 16px;
   text-align: center;
   margin: 0 0 16px;
 }
-/* IMAGEN RIGHT */
-.locations .container-main .all-locations .right {
-  display: flex;
-  flex-flow: row wrap;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-.locations .container-main .all-locations .right .img {
-  object-fit: cover;
-}
-.locations .container-main .all-locations .right .img img {
-  width: 100%;
-}
+
+
 
 
 /* RESPONSIVE
@@ -278,26 +226,22 @@
   .locations .container-main .all-locations .left {    
     padding: 40px 2em 2em 2em;
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .text-content h2 {  
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content h2 {  
     font-size: 40px;
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .text-content p {   
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content p {   
     font-size: 18px;
   }
 }
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
-  .locations {
-    margin-top: 2em;
-  }
+
   .locations .container-main .all-locations {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0;
   }
-  .locations .container-main .all-locations .right {
-    display: none;
-  } 
+
   .locations .container-main .all-locations .left {
     display: flex;
     flex-flow: row wrap;
@@ -309,55 +253,66 @@
   .locations .container-main .all-locations .left .texto-container h1.title-where {
     font-size: 40px;
     line-height: 100%;
+    margin: 0 0 0 1em;
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .img-text .img-cont .img {
-    left: 0;
-    width: 100%;
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .img-text {
+    margin-bottom: 1rem;
   }
-
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .text-content h2 {
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .img-text .img-cont .img {
+    width: 180px;
+    height: 180px;
+  }
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content h2 {
     font-size: 32px!important;
     line-height: 110%;    
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .text-content p {
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content p {
   font-size: 16px;
   line-height: 150%;
-  } 
+  }
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8%;
+  }
+
 }
 
 /* MOVIL*/
 @media only screen and (max-width: 767px) {
 
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .img-text .img-cont .img {    
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .img-text .img-cont .img {    
     width: 120px;
     height: 120px;
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .text-content h2 {
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content h2 {
     font-size: 17px;
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .location .text-content p {
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content p {
     font-size: 12px;
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a img.img {
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a img.img {
     width: 14px;
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a .label-content {
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a .label-content {
     margin-top: 12px;
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a .label-content img.icon {
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a .label-content img.icon {
     width: 46px;
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a .label-content p {
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a .label-content p {
     font-size: 10px;
     margin: 0 0 12px;
   } 
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a {    
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a {    
     max-width: 110px;
     max-height: 110px;
     min-width: 96px;
     min-height: 96px;
   }
-  .locations .container-main .all-locations .left .locations-list .locations-container .loc-expansion .content .type-list a:hover {    
+  .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a:hover {    
     min-width: 92px;
     min-height: 92px;
   }

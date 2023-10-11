@@ -1,5 +1,5 @@
 <section class="all-locations pure-u-1">
-  <div class="left pure-u-1 pure-u-lg-12-24">
+  <div class="left pure-u-1">
   
     <!-- Title -->
     <div class="texto-container pure-u-1 ">
@@ -8,7 +8,6 @@
       </h1>
     </div>
 
-    <!-- Locations list expansion -->
     <section class="locations-list pure-u-1">
       <div class="locations-container pure-u-1">
 
@@ -24,73 +23,60 @@
           {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set show = true %}{% endif %}
         {% endfor %}
         {% if show %}
-          <div class="loc-expansion pure-u-1">
-            <div class="location pure-u-1">
-              <div class="img-text pure-u-1">
-                <div class="pure-u-7-24 pure-u-lg-1-3 img-cont">
-                  <div class="img pure-u-1">
-                    {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
-                    {% if loop.index == 1 %}
-                    {% image
-                      constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
-                      l.Name, l.Name + '-' + i.id | slugify, "img-loc",
-                      [800], ""
-                    %}
-                    {% endif %}
-                    {% endfor %}
-                  </div>
-                </div>
-                <div class="text-content pure-u-17-24 pure-u-lg-2-3">
-                  <h2 class="location-title">{{l | translate('Name', L)}}</h2>
-                  <p class="body1">{{l.Texts[0] | translate('Description', L)}}</p>
-                </div>
-              </div> 
-            </div>
-            <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
-            <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1" role="tab">
-            </label>
-            <div class="content pure-u-1">
-              <div class="type-list pure-u-1">
-                <a class="primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
-                  <img class="img" src="{{root}}/assets/img/corner.svg"></img>
-                  <div class="label-content">
-                    <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_piso_compartido.svg"></img>
-                    <p>{% literal texts, 'home-pisazos-piso', L %}<br>{% literal texts, 'home-pisazos-compartido', L %}</p>
-                  </div>
-                </a>                
-                <a class="button-primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
-                  <img class="img" src="{{root}}/assets/img/corner.svg"></img>
-                  <div class="label-content">
-                    <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_apartamento_privado.svg"></img>
-                    <p>{% literal texts, 'home-pisazos-apartamento', L %}<br>{% literal texts, 'home-pisazos-privado', L %}</p>
-                  </div>
-                </a>
-                <a class="button-primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
-                  <img class="img" src="{{root}}/assets/img/corner.svg"></img>
-                  <div class="label-content">
-                    <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_residencia_universitaria.svg"></img>
-                    <p>{% literal texts, 'home-pisazos-residencia', L %}<br>{% literal texts, 'home-pisazos-universitaria', L %}</p>
-                  </div>
-                </a>
+        <div class="location pure-u-1">
+          <div class="img-text pure-u-1 pure-u-lg-7-12">
+            <div class="img-cont pure-u-7-24 pure-u-lg-1-3">
+              <div class="img pure-u-1">
+                {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+                {% if loop.index == 1 %}
+                {% image
+                  constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
+                  l.Name, l.Name + '-' + i.id | slugify, "img-loc",
+                  [800], ""
+                %}
+                {% endif %}
+                {% endfor %}
               </div>
             </div>
+            <div class="text-content pure-u-1 pure-u-lg-11-24">
+              <h2 class="location-title">{{l | translate('Name', L)}}</h2>
+              <p class="body1">{{l.Texts[0] | translate('Description', L)}}</p>
+            </div>
           </div>
+          <div class="right pure-u-1 pure-u-lg-5-12">         
+            
+            <div class="type-list pure-u-1">
+              <a class="primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+                <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+                <div class="label-content">
+                  <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_piso_compartido.svg"></img>
+                  <p>{% literal texts, 'home-pisazos-piso', L %}<br>{% literal texts, 'home-pisazos-compartido', L %}</p>
+                </div>
+              </a>                
+              <a class="button-primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+                <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+                <div class="label-content">
+                  <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_apartamento_privado.svg"></img>
+                  <p>{% literal texts, 'home-pisazos-apartamento', L %}<br>{% literal texts, 'home-pisazos-privado', L %}</p>
+                </div>
+              </a>
+              <a class="button-primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+                <img class="img" src="{{root}}/assets/img/corner.svg"></img>
+                <div class="label-content">
+                  <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_residencia_universitaria.svg"></img>
+                  <p>{% literal texts, 'home-pisazos-residencia', L %}<br>{% literal texts, 'home-pisazos-universitaria', L %}</p>
+                </div>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+       
+          
         {% endif %}
         {% endfor %}
       </div>
-    </section> 
-   
-  </div>
-
-  <!-- Right photo -->
-  <div class="right pure-u-1 pure-u-lg-10-24">
-    <div class="img">
-      {% image
-         constants.SERVER + "/wopi/files/Marketing/Media/" + images['localizaciones'].id +"/Image/contents?access_token=" + token,
-         "localizaciones", "localizaciones", "",
-         [800], ""
-      %}
-    </div>
+    </section>    
   </div>
 
 </section>
