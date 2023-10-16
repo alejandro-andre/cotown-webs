@@ -14,7 +14,19 @@
         {% for l in locations %}
         <div class="location pure-u-1">
 
+          {% set rooms = false %}
+          {% set flats = false %}
+          {% set residences = buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) | length > 0 %}
+          {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
+            {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+            {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+            {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
+            {% if ra > 0 or rp > 0 %}{% set rooms = true %}{% endif %}
+            {% if ra > 0 or rc > 0 %}{% set flats = true %}{% endif %}
+          {% endfor %}
+
           <!-- Location -->
+          {% if rooms or flats or residences %}
           <div class="img-text pure-u-1 pure-u-lg-7-12">
             <div class="img-cont pure-u-7-24 pure-u-lg-1-3">
               <div class="img pure-u-1">
@@ -36,20 +48,11 @@
           </div>
 
           <!-- Typologies -->
-          {% set rooms = false %}
-          {% set flats = false %}
-          {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
-            {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
-            {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
-            {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
-            {% if name == 'rooms' and (ra > 0 or rp > 0) %}{% set rooms = true %}{% endif %}
-            {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set flats = true %}{% endif %}
-          {% endfor %}
           <div class="right pure-u-1 pure-u-lg-5-12">         
             <div class="type-list pure-u-1">
 
               {% if rooms %}
-              <a class="primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+              <a class="primary" href="{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}-{{l | translate('Name', L) | slugify}}.html">
                 <img class="img" src="{{root}}/assets/img/corner.svg"></img>
                 <div class="label-content">
                   <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_piso_compartido.svg"></img>
@@ -59,7 +62,7 @@
               {% endif %}
               
               {% if flats %}
-              <a class="button-primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+              <a class="button-primary" href="{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{l | translate('Name', L) | slugify}}.html">
                 <img class="img" src="{{root}}/assets/img/corner.svg"></img>
                 <div class="label-content">
                   <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_apartamento_privado.svg"></img>
@@ -68,8 +71,8 @@
               </a>
               {% endif %}
 
-              {% if buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) | length > 0 %}
-              <a class="button-primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
+              {% if residences %}
+              <a class="button-primary" href="{{root}}{{langs[L].folder}}/{{langs[L].pages['residences'].url}}.html">
                 <img class="img" src="{{root}}/assets/img/corner.svg"></img>
                 <div class="label-content">
                   <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_residencia_universitaria.svg"></img>
@@ -82,6 +85,7 @@
           </div>
 
         </div>
+        {% endif %}
         {% endfor %}
 
       </div>
@@ -100,7 +104,7 @@
     cb.checked = false;
   });
 
-// Desmarca todo
+// Desmarca
   var context = document.querySelector(".locations-container");
   var instance = new Mark(context);
   instance.unmark();
@@ -113,8 +117,6 @@
         input.querySelector('.tab').checked = true;
     },
   });
-  
-
 
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
