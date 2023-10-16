@@ -12,10 +12,10 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<!-- Mobile Specific Metas
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 	<!-- FONT
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -25,32 +25,29 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	
 
 	<!-- CSS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="stylesheet" href="./../assets/css/normalize.css">
-	<link rel="stylesheet" href="./../assets/css/styles.css">
-	<link rel="stylesheet" href="./../assets/css/buttons.css">
-	<link rel="stylesheet" href="./../assets/css/variables.css">
-	<link rel="stylesheet" href="./../assets/css/global.css">
-	<link rel="stylesheet" href="./../assets/css/tabs-flow.css">
-
+	<link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/variables.css">
 
 	<!-- ICONS -->
-	<link rel="stylesheet" href="./../assets/icons/style.css">
-	<link rel="stylesheet" href="./../assets/icons/style.scss">
-	<link rel="stylesheet" href="./../assets/icons/variables.scss">
-	
+	<link rel="stylesheet" href="./icons/style.css">
+
+
 	<!-- IMAGES -->
 
 	<!-- Favicon
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="icon" type="image/png" href="./../favicon.png">
+	<link rel="icon" type="image/png" href="./icon/favicon.png">
+
 	
 	<!-- JS -->
 	<script defer src="./../assets/js/app.js" ></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
+
 <body>
 	<div class="tabs-container">
 		<div class="header-tabs">
@@ -76,7 +73,7 @@
 		</div>
 		<div class="nav-booking  pure-u-1">
 			<ul class="black-nav pure-menu-list">
-				<li class="pure-menu-item">              
+				<li class="pure-menu-item checked">              
 					<label class="label">
 						<a href="tabs-flow.html">
 							<span>1. Ubicación y fechas</span>
@@ -112,7 +109,7 @@
 						</a>		
 					</label>
 				</li>
-				<li class="pure-menu-item checked">
+				<li class="pure-menu-item">
 					<label class="label">
 						<a href="tabs-flow-4.html">
 							<span>4. Confirmación</span>
@@ -127,11 +124,78 @@
 			</ul>
 		</div>
 		<div class="main-booking">
-			<div id="section3" class="main-contain">
-				<div class="panel-container">				
-					<h2>cuarto panel</h2>
-					<p><strong>Overall Impression:</strong> A dark, strong, malty German lager beer that emphasizes the malty-rich and somewhat toasty qualities of continental malts without being sweet in the finish.</p>
-					<p><strong>History:</strong> Originated in the Northern German city of Einbeck, which was a brewing center and popular exporter in the days of the Hanseatic League (14th to 17th century). Recreated in Munich starting in the 17th century. The name “bock” is based on a corruption of the name “Einbeck” in the Bavarian dialect, and was thus only used after the beer came to Munich. “Bock” also means “Ram” in German, and is often used in logos and advertisements.</p>
+			<div id="section1" class="main-contain">
+				<div class="panel-container">
+					<div class="left">
+						<div class="error-message">
+							<p>Vaya, parece que no tenemos alojamiento disponible con los criterios seleccionados... ¿Quieres probar de nuevo?</p>
+						</div>
+						<h2>¿Dónde quieres vivir?</h2>
+						<form class="pure-form pure-u-1">
+							<fieldset>	
+								<label class="label1">Selecciona una ubicación</label>					
+								<select class="pure-u-1-1 select1">
+									<option>Barcelona</option>
+									<option>Apartamento privado</option>
+									<option>Residencia universitaria</option>
+									<option>Piso compartido</option>
+								</select>
+								<h3>¿Qué tipo de piso estás buscando?</h3>
+								<div class="background">
+									<input name="piso compartido" type="radio" value="compartido" >
+									<em class="checkmark"></em>
+									<label class="labels">Piso Compartido</label>
+								</div>
+								<div class="background">
+									<input name="apartamento privado" type="radio" value="privado">
+									<em class="checkmark"></em>
+									<label class="labels">Apartamento Privado</label>
+								</div>
+								<h3>¿En qué tipo de habitación?</h3>
+								<div class="background">
+									<input name="Habitación Individual" type="radio" value="individual">
+									<em class="checkmark"></em>
+									<label class="labels">Habitación Individual</label>
+								</div>
+								<div class="background">
+									<input name="Habitación Compartida" type="radio" value="compartida">
+									<em class="checkmark"></em>
+									<label class="labels">Habitación Compartida</label>
+								</div>								
+								<h3>¿En qué tipo de habitación?</h3>
+								<div class="background">
+									<input name="Habitación Individual" type="radio" value="individual">
+									<em class="checkmark"></em>
+									<label class="labels">Habitación Individual</label>
+								</div>
+								<div class="background">
+									<input name="Habitación Compartida" type="radio" value="compartida">
+									<em class="checkmark"></em>
+									<label class="labels">Habitación Compartida</label>
+								</div>
+								<h3>¿En qué fechas?</h3>
+								<div class="inputs-container">
+									
+									<div class="dates">
+										<button class="date-button">
+											<label>Fecha de entrada</label>	
+											<input type="text" id="in" onfocus="" class="inputs" name="in" placeholder="dd/mm/aaaa"/>
+										</button>
+									</div>									
+								</div>
+								<section class="next">
+									<button class="btn-secondary">
+										Continuar
+									</button>
+								</section>
+							</fieldset>
+						</form>						
+					</div>
+					<div class="right">
+						<div class="img-big">
+							<img class="big" alt="cotownity-big" src="./assets/img/cotownity-big.png">
+						</div>
+					</div>					
 				</div>
 			</div>
 		</div>
