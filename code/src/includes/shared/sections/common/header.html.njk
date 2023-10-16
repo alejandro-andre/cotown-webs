@@ -63,7 +63,7 @@
 
           <li class="icons-header pure-menu-item">
             <!-- Buscador -->
-            <!-- TODO - Buscador
+            <!-- TODO: - Buscador
             <a href="#" class="pure-menu-link"><em class="icon-search"></em></a>
             -->
             <!-- Whatsapp -->
@@ -175,7 +175,7 @@
 
           <!-- Search -->
           <div class="menu-mobile-icons pure-u-5-24">
-            <!-- TODO - Buscador (móvil)
+            <!-- TODO: - Buscador (móvil)
             <em class="icon-search"></em>
             -->
             <a type="button" onclick="ocultarMenuMobile()"><em class="icon-close"></em></a>
@@ -219,24 +219,8 @@
         <li class="locations-dropdown pure-menu-item">
           <div class="locations-container">
             <label class="locations-label">
-                <span class="loc"><a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}.html">{{langs[L].pages['rooms'].text}}</a></span>
-                <div class="icons-open-close">
-                  <em class="change-value icon icon-corchete-down"></em>
-                </div>
+              <span class="loc"><a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['locations'].url}}.html">{{langs[L].pages['locations'].text}}</a></span>
             </label>
-            <div data-toggle="close" class="options-loc"> 
-                {% for l in locations %}
-                <!-- Check if location has buildings -->
-                {% if buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) | length > 0 %}
-                <div class="option-loc">
-                  <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages.rooms.url}}-{{l | translate('Name', L) | slugify}}.html">
-                  <em class="icon-map-point"></em>
-                    {{l | translate('Name', L)}}
-                  </a>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
           </div>
         </li>
 
@@ -263,7 +247,7 @@
         <!-- Botón booking -->
         <li class="only-menu-mobile pure-menu-item">
 
-          <!-- TODO - Tu nuevo hogar
+          <!-- TODO: - Tu nuevo hogar
           <div class="booking pure-u-1">
             <button class="btn-secondary">{% literal texts, 'button-nuevo-hogar', L %}
             <em class="icon-house"></em>
