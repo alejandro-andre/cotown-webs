@@ -12,18 +12,9 @@
       <div class="locations-container pure-u-1">
 
         {% for l in locations %}
-
-        <!-- Look for matching type resources -->
-        {% set show = false %}
-        {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
-          {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
-          {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
-          {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
-          {% if name == 'rooms' and (ra > 0 or rp > 0) %}{% set show = true %}{% endif %}
-          {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set show = true %}{% endif %}
-        {% endfor %}
-        {% if show %}
         <div class="location pure-u-1">
+
+          <!-- Location -->
           <div class="img-text pure-u-1 pure-u-lg-7-12">
             <div class="img-cont pure-u-7-24 pure-u-lg-1-3">
               <div class="img pure-u-1">
@@ -43,16 +34,31 @@
               <p class="body1">{{l.Texts[0] | translate('Description', L)}}</p>
             </div>
           </div>
+
+          <!-- Typologies -->
+          {% set rooms = false %}
+          {% set flats = false %}
+          {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
+            {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+            {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+            {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
+            {% if name == 'rooms' and (ra > 0 or rp > 0) %}{% set rooms = true %}{% endif %}
+            {% if name == 'flats' and (ra > 0 or rc > 0) %}{% set flats = true %}{% endif %}
+          {% endfor %}
           <div class="right pure-u-1 pure-u-lg-5-12">         
-            
             <div class="type-list pure-u-1">
+
+              {% if rooms %}
               <a class="primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
                 <img class="img" src="{{root}}/assets/img/corner.svg"></img>
                 <div class="label-content">
                   <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_piso_compartido.svg"></img>
                   <p>{% literal texts, 'home-pisazos-piso', L %}<br>{% literal texts, 'home-pisazos-compartido', L %}</p>
                 </div>
-              </a>                
+              </a>
+              {% endif %}
+              
+              {% if flats %}
               <a class="button-primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
                 <img class="img" src="{{root}}/assets/img/corner.svg"></img>
                 <div class="label-content">
@@ -60,6 +66,9 @@
                   <p>{% literal texts, 'home-pisazos-apartamento', L %}<br>{% literal texts, 'home-pisazos-privado', L %}</p>
                 </div>
               </a>
+              {% endif %}
+
+              {% if buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) | length > 0 %}
               <a class="button-primary" onclick="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{l | translate('Name', L) | slugify}}.html">
                 <img class="img" src="{{root}}/assets/img/corner.svg"></img>
                 <div class="label-content">
@@ -67,14 +76,14 @@
                   <p>{% literal texts, 'home-pisazos-residencia', L %}<br>{% literal texts, 'home-pisazos-universitaria', L %}</p>
                 </div>
               </a>
+              {% endif %}
+  
             </div>
-            
           </div>
+
         </div>
-       
-          
-        {% endif %}
         {% endfor %}
+
       </div>
     </section>    
   </div>
