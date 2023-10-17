@@ -28,18 +28,6 @@ main .location .container-main .first-contain .video-loc .video {
     overflow: hidden;
     position: relative;
     z-index: -1;
-}
-main .location .container-main .first-contain .video-loc .video video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-main .location .container-main .first-contain .video-loc .video img {
-    width: 100%;
     object-fit: cover;
     object-position: center center;
 }
@@ -556,9 +544,6 @@ section.necesities .grid .necesidad .p-text p {
 }
 
 @media only screen and (min-width: 1024px) {
-    main .location .container-main .first-contain .video-loc .video img.only-mobile {
-        display: none;
-    }
     .pisos.mobile {
         display: none;
     }
@@ -574,15 +559,6 @@ section.necesities .grid .necesidad .p-text p {
     main .location .container-main .first-contain .video-loc .video {
         height: 430px;
         max-height: 430px;        
-    }
-    main .location .container-main .first-contain .video-loc .video video {
-        display: none;
-    }
-    main .location .container-main .first-contain .video-loc .video .img.only-mobile img {
-        width: 100%;
-        object-fit: cover;
-        object-position: center center;
-        height: 430px;
     }
     main .location .container-main .first-contain .video-loc .text-container {
         left: 0;
