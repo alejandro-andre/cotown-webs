@@ -12,13 +12,13 @@
     "locations": {
       "url": "localizaciones",
       "text": "Localizaciones",
-      "title": "...",
-      "description": "..."
+      "title": "Alójate en nuestros pisos compartidos o vive a tu manera con nuestros pisos completos en las mejores zonas",
+      "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
     },
     "rooms": {
       "url": "pisos-compartidos",
       "text": "Localizaciones",
-      "title": "Alójate en nuestros pisos compartidos en las mejores zonas de ",
+      "title": "Alójate en nuestros pisos compartidos en las mejores zonas",
       "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
     },
     "flats": {
