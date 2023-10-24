@@ -115,7 +115,7 @@ main .container-main section.container-advantages .grid .promo-contain .over.ar-
     top: 0px;
     left: 0px;
     object-fit: cover;
-    opacity: .8;
+    opacity: 1.0;
 }
 
 main .container-main section.container-advantages .grid.show {

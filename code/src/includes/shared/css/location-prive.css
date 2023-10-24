@@ -104,10 +104,11 @@ section.location {
     align-items: center;
     background-color: var(--prive-bg);
     color: var(--white);
-    padding: 2em 0 4em;
+    padding-bottom: 4em;
     position: relative;
 }
 .pisos-slider .h2-container {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -119,7 +120,7 @@ section.location {
     width: 50%;
     margin: 0;
     text-transform: uppercase;
-    padding: 1rem 0;
+    padding: 1rem 0 0;
     color: var(--white);
 }
 .pisos-slider .h2-container h2 span {

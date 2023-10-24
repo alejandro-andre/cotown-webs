@@ -98,7 +98,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     justify-content: center;
     align-items: center;
     background-color: var(--white-bg-op1);
-    padding: 2em 0 4em;
+    padding-bottom: 4em;
     position: relative;
     
 }
@@ -106,21 +106,16 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    border-radius: 0px 120px 0px 0px;
-    background: var(--banner-bg1);
-    background: var(--banner-bg2);
-    padding: 20px 100px;
-    margin: 40px 0;
 }
 .pisos-slider .h2-container h2 {
     font-size: 64px;
-    text-align: start;
+    text-align: center;
     width: 40%;
     margin: 0;
     text-transform: uppercase;
-    color: var(--white);
+    padding: 1rem 0 0;
 }
 .pisos-slider .h2-container h2 span {
     font-weight: 200!important;
