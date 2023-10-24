@@ -1,176 +1,212 @@
 .container-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
+
 .first-contain {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
+
 .first-contain .title-big {
-  position: absolute;
+	position: absolute;
 }
-.first-contain .title-big h1{
-  color: var(--white);
+
+.first-contain .title-big h1 {
+	color: var(--white);
 }
+
 .first-contain .img-faqs {
-  width: 100vw;
-  object-fit: cover;
+	width: 100vw;
+	object-fit: cover;
 }
+
 .first-contain .img-faqs img {
-  width: 100vw;
-  max-height: 400px;
+	width: 100vw;
+	max-height: 400px;
 }
+
 .search .search-container {
-  position: absolute;
-  bottom: 12%;
-  left: 28%;
+	position: absolute;
+	bottom: 12%;
+	left: 28%;
 }
+
 .search .search-container label {
-  border: 1px solid var(--grey-light);
-  box-shadow: 0px 2.93014px 5.86028px rgba(0, 0, 0, 0.15);
-  border-radius: 6px;
-  padding: 12px 24px;
-  background-color: var(--white);
+	border: 1px solid var(--grey-light);
+	box-shadow: 0px 2.93014px 5.86028px rgba(0, 0, 0, 0.15);
+	border-radius: 6px;
+	padding: 12px 24px;
+	background-color: var(--white);
 }
+
 .search .search-container label em {
-  width: 32px;
-  color: var(--primary);
+	width: 32px;
+	color: var(--primary);
 }
+
 .search .search-container label input.sinBorde {
-  border: 0;
+	border: 0;
 }
+
 .search .search-container label input {
-  outline: none;
-  font-family: var(--text-font);
-  font-size: 16px;
-  margin:0;
-  padding:0;
-  all: unset;
+	outline: none;
+	font-family: var(--text-font);
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	all: unset;
 }
+
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-    display: none;
+	display: none;
 }
 
 .faqs-container {
-  margin: 2em 0 6em;
+	margin: 2em 0 6em;
 }
+
 .faqs-container h1 {
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 100%;
-  margin: 1em 0 0;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 100%;
+	margin: 1em 0 0;
 }
+
 .faqs-container .description.text {
-  border-bottom: 1px solid var(--grey-light);
+	border-bottom: 1px solid var(--grey-light);
 }
+
 .faqs-container .description.text .expansion {
-  padding: 0;
-  position: relative;
-  height: fit-content;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+	padding: 0;
+	position: relative;
+	height: fit-content;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
 }
+
 .faqs-container .description.text .expansion h2 {
-  width: 90%;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 150%;
-  margin: 1em 0.2em;
-  font-family: var(--text-font);
-  text-align: left;
+	width: 90%;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 150%;
+	margin: 1em 0.2em;
+	font-family: var(--text-font);
+	text-align: left;
 }
+
 .expansion .open-close-icon em {
-  font-size: 46px;
+	font-size: 46px;
 }
-.faqs-container .description.text .expansion label[class^="tab"]{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 32px;
-  margin: 0;
-  width: 5%;
+
+.faqs-container .description.text .expansion label[class^="tab"] {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: 32px;
+	margin: 0;
+	width: 5%;
 }
-.faqs-container .description.text .expansion .content p, .faqs-container .description.text .expansion .content p a, .faqs-container .description.text .expansion .content ul li {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 150%;
-  color: var(--black)
+
+.faqs-container .description.text .expansion .content p,
+.faqs-container .description.text .expansion .content p a,
+.faqs-container .description.text .expansion .content ul li {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 150%;
+	color: var(--black)
 }
+
 .expansion label[class^="tab"] p {
-  text-decoration: underline;
+	text-decoration: underline;
 }
-.expansion label[class^="tab"]:hover{
-  cursor: pointer;
+
+.expansion label[class^="tab"]:hover {
+	cursor: pointer;
 }
 
 /* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
-  .faqs-container h1 {
-    font-size: 46px;
-  }
-  .faqs-container .description.text .expansion h2 {
-    font-size: 26px;
-  }
-  .faqs-container .description.text .expansion .content p, .faqs-container .description.text .expansion .content p a, .faqs-container .description.text .expansion .content ul li {
-    font-size: 18px;
-  }
+	.faqs-container h1 {
+		font-size: 46px;
+	}
+
+	.faqs-container .description.text .expansion h2 {
+		font-size: 26px;
+	}
+
+	.faqs-container .description.text .expansion .content p,
+	.faqs-container .description.text .expansion .content p a,
+	.faqs-container .description.text .expansion .content ul li {
+		font-size: 18px;
+	}
 }
 
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
-  .first-contain {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  main .container-main .first-contain .title-big {
-    position: static;
-    text-align: left;
-    margin: 2em 1em 0
-  }
-  main .container-main .first-contain .title-big .h1-big h1 {
-    color: var(--black);
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 100%;
-  }
-  .search .search-container {
-    position: static;
-    margin: 0 0em 0 1em;
-  }
-  .faqs-container {
-    margin: 0 1em 2em;
-  }
-  .faqs-container h1 {
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 110%;
-    margin: 1em 0 0;
-  }
-  .faqs-container .description.text .expansion h2 {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    margin: 5px 0 10px 0;
-  }
-  .expansion .open-close-icon em {
-    font-size: 20px;
-  }
-  .faqs-container .description.text .expansion .content p, .faqs-container .description.text .expansion .content p a, .faqs-container .description.text .expansion .content ul li {
-    font-size: 14px;
-  }
+	.first-contain {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	main .container-main .first-contain .title-big {
+		position: static;
+		text-align: left;
+		margin: 2em 1em 0
+	}
+
+	main .container-main .first-contain .title-big .h1-big h1 {
+		color: var(--black);
+		font-weight: 400;
+		font-size: 40px;
+		line-height: 100%;
+	}
+
+	.search .search-container {
+		position: static;
+		margin: 0 0em 0 1em;
+	}
+
+	.faqs-container {
+		margin: 0 1em 2em;
+	}
+
+	.faqs-container h1 {
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 110%;
+		margin: 1em 0 0;
+	}
+
+	.faqs-container .description.text .expansion h2 {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 150%;
+		margin: 5px 0 10px 0;
+	}
+
+	.expansion .open-close-icon em {
+		font-size: 20px;
+	}
+
+	.faqs-container .description.text .expansion .content p,
+	.faqs-container .description.text .expansion .content p a,
+	.faqs-container .description.text .expansion .content ul li {
+		font-size: 14px;
+	}
 }

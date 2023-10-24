@@ -1,511 +1,603 @@
 /* BLOG
 -------------------------------- \*/
 .container-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 2em;
 }
+
 .first-contain {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
 }
+
 .search {
-  margin: 0 0 1.5em;
+	margin: 0 0 1.5em;
 }
+
 .search .search-form {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0;
-  gap: 2em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0;
+	gap: 2em;
 }
+
 .search select,
 .search .search-container label {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-  border: 1px solid var(--grey-light);
-  box-shadow: 0px 2.93014px 5.86028px rgba(0, 0, 0, 0.15);
-  border-radius: 6px;
-  padding: 8px 24px;
-  background-color: var(--white);
-  outline: none;
-  font-family: var(--text-font);
-  font-size: 22px;
-  margin:0;
-  color: var(--grey-light);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	border: 1px solid var(--grey-light);
+	box-shadow: 0px 2.93014px 5.86028px rgba(0, 0, 0, 0.15);
+	border-radius: 6px;
+	padding: 8px 24px;
+	background-color: var(--white);
+	outline: none;
+	font-family: var(--text-font);
+	font-size: 22px;
+	margin: 0;
+	color: var(--grey-light);
 }
+
 .search .search-container label input {
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 150%;
-  color: var(--grey-light);
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 150%;
+	color: var(--grey-light);
 }
+
 .search select {
-  padding: 12px 16px;
+	padding: 12px 16px;
 }
+
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* Some browsers will not display the caret when using calc, so we put the fallback first */
-  background: url("..//img/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
-  background: url("..//img/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/* Some browsers will not display the caret when using calc, so we put the fallback first */
+	background: url("..//img/br_down.png") white no-repeat 98.5% !important;
+	/* !important used for overriding all other customisations */
+	background: url("..//img/br_down.png") white no-repeat calc(100% - 10px) !important;
+	/* Better placement regardless of input width */
 }
+
 /*For IE*/
-select::-ms-expand { display: none; }
-.search .search-container label input, .search .search-container label input:focus-visible {
-  border: 0;
-  padding: 0;
-  outline-offset: 0;
-  outline: -webkit-focus-ring-color auto 0px;
+select::-ms-expand {
+	display: none;
+}
+
+.search .search-container label input,
+.search .search-container label input:focus-visible {
+	border: 0;
+	padding: 0;
+	outline-offset: 0;
+	outline: -webkit-focus-ring-color auto 0px;
 }
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-    display: none;
+	display: none;
 }
+
 .search .search-container label em.icon-search {
-  font-size: 32px;
-  color: var(--primary);
-  margin-right: 20px;
+	font-size: 32px;
+	color: var(--primary);
+	margin-right: 20px;
 }
 
 .posts {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 0 0 2em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 0 0 2em;
 }
+
 .post {
-  position: relative;
-  min-height: 380px;
-  height: fit-content;
-  background-color: var(--white);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  background-color: transparent;
+	position: relative;
+	min-height: 380px;
+	height: fit-content;
+	background-color: var(--white);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+	background-color: transparent;
 }
+
 .post a {
-  width: 100%;
-  cursor: pointer;
-  color: var(--black);
+	width: 100%;
+	cursor: pointer;
+	color: var(--black);
 }
+
 .post .img-container {
-  position: relative;
-  width: 100%;
-  height: fit-content;
-  min-height: 260px;
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	min-height: 260px;
 }
+
 .post img {
-  width: 100%;
-  object-fit: cover;
+	width: 100%;
+	object-fit: cover;
 }
+
 .post .mark-content {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  align-items: center;
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	align-items: center;
 }
+
 .post .mark {
-  position: absolute;
-  z-index: 200;
-  top: -42px;
-  right: 13px;
-  width: 18px;
-  height: 115px;
-  padding: 1em 0.2em;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  background:var(--primary);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  -moz-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+	position: absolute;
+	z-index: 200;
+	top: -42px;
+	right: 13px;
+	width: 18px;
+	height: 115px;
+	padding: 1em 0.2em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	background: var(--primary);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
+
 .post .mark .stars-container {
-  width: 14px;
-  height: 50px;
+	width: 14px;
+	height: 50px;
 }
+
 .post .mark .icon-star {
-  color: var(--white);
-  font-size: 16px;
+	color: var(--white);
+	font-size: 16px;
 }
+
 .post .date {
-  position: absolute;
-  top: 8.8em;
-  left: 0;
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 0 1em;
-  margin: 0;
+	position: absolute;
+	top: 8.8em;
+	left: 0;
+	background-color: var(--primary);
+	color: var(--white);
+	padding: 0 1em;
+	margin: 0;
 }
+
 .post .data-post {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  height: 45%;
-  background-color: var(--white);
-  padding: 1em;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 0.5em auto 1em;
-  gap: 0.4em;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 45%;
+	background-color: var(--white);
+	padding: 1em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 0.5em auto 1em;
+	gap: 0.4em;
 }
+
 .post .data-post.primary {
-  background-color: var(--primary);
+	background-color: var(--primary);
 }
+
 main .container-main .first-contain {
-  margin: 0;
+	margin: 0;
 }
+
 main .container-main .first-contain .h1-big {
-  margin-top: 1em;
+	margin-top: 1em;
 }
+
 main .container-main .first-contain .h1-big h1 {
-  font-size: 76px;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: -1.2px;
+	font-size: 76px;
+	font-weight: 400;
+	line-height: 100%;
+	letter-spacing: -1.2px;
 }
+
 .post .data-post h1 {
-  margin-bottom: 0;
-  font-size: 24px;
-  line-height: 25px;
+	margin-bottom: 0;
+	font-size: 24px;
+	line-height: 25px;
 }
+
 .post .data-post.primary h1 {
-  color: var(--white);
+	color: var(--white);
 }
+
 .post .data-post .p-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 4px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 4px;
 
 }
 
 .post .data-post p,
 .post .data-post a {
-  border: 1px solid var(--primary);
-  border-radius: 49px;
-  padding: 0.2em 0.8em;
-  margin: 0;
+	border: 1px solid var(--primary);
+	border-radius: 49px;
+	padding: 0.2em 0.8em;
+	margin: 0;
 }
+
 .post .data-post.primary p,
 .post .data-post.primary a {
-  color: var(--white);
-  border: 1px solid var(--white);
+	color: var(--white);
+	border: 1px solid var(--white);
 
 }
 
 /* POST
 -------------------------------- \*/
 main.post-page .container-main .post-content {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 3em auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 3em auto;
 }
+
 main.post-page .container-main .post-content h1 {
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 100%;
-  text-align: center;
-  margin-bottom: 1em;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 100%;
+	text-align: center;
+	margin-bottom: 1em;
 }
+
 main.post-page .container-main .post-content img {
-  width: 100%;
-  margin-bottom: 2em;
+	width: 100%;
+	margin-bottom: 2em;
 }
-main.post-page .container-main .post-content .text .text-content h2, main.post-page .container-main .post-content .text .text-content h3 {
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 110%;
-  text-align: left;
+
+main.post-page .container-main .post-content .text .text-content h2,
+main.post-page .container-main .post-content .text .text-content h3 {
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 110%;
+	text-align: left;
 }
-main.post-page .container-main .post-content .text .text-content p, main.post-page .container-main .post-content .text .text-content ul li, main.post-page .container-main .post-content .text .text-content ol li {
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 150%;
+
+main.post-page .container-main .post-content .text .text-content p,
+main.post-page .container-main .post-content .text .text-content ul li,
+main.post-page .container-main .post-content .text .text-content ol li {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 150%;
 }
+
 main.post-page .container-main .post-content .text .text-content ul li {
-  padding-left: 12px;
+	padding-left: 12px;
 }
+
 main.post-page .container-main .post-content .text .text-content ul li::marker {
-  content: "·";
+	content: "·";
 }
+
 main.post-page .container-main .post-content .text .text-content p strong {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 150%;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 150%;
 }
+
 main.post-page .container-main .post-content .text .text-content p em {
-  font-size: 22px;
+	font-size: 22px;
 }
+
 main.post-page .container-main .like-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 0 0 4em;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0 0 4em;
 }
+
 main.post-page .container-main .like-content .like {
-  background-color: var(--primary);
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 2em;
-  gap: 1em;
+	background-color: var(--primary);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 2em;
+	gap: 1em;
 }
 
 main.post-page .container-main .like-content .like .text {
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
+
 main.post-page .container-main .like-content .like .text h3 {
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 100%;
-  color: var(--white);
-  margin: 0;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 100%;
+	color: var(--white);
+	margin: 0;
 }
+
 main.post-page .container-main .like-content .like .text p {
-  color: var(--white);
-  margin: 0;
-  font-size: 20px;
+	color: var(--white);
+	margin: 0;
+	font-size: 20px;
 }
+
 main.post-page .container-main .like-content .like .redes {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
 }
+
 main.post-page .container-main .like-content .like .redes a {
-width: 25%;
+	width: 25%;
 }
+
 main.post-page .container-main .like-content .like .redes a em {
-  color: var(--white);
-  font-size: 34px;
+	color: var(--white);
+	font-size: 34px;
 }
+
 main.blog .container-main .posts .pag {
-  margin: 0 0 2em;
+	margin: 0 0 2em;
 }
+
 main.blog .container-main .posts .pag ul.pagination {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
 }
+
 main.blog .container-main .posts .pag ul.pagination li {
-  display: inline;
+	display: inline;
 }
+
 main.blog .container-main .posts .pag ul.pagination li a {
-  color: var(--primary);
-  background-color: var(--primary-light);
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  margin: 0 8px;
+	color: var(--primary);
+	background-color: var(--primary-light);
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	margin: 0 8px;
 }
-main.blog .container-main .posts .pag ul.pagination li a.active, main.blog .container-main .posts .pag ul.pagination li a:hover {
-  color: var(--white);
-  background-color: var(--primary);
-  cursor: pointer;
+
+main.blog .container-main .posts .pag ul.pagination li a.active,
+main.blog .container-main .posts .pag ul.pagination li a:hover {
+	color: var(--white);
+	background-color: var(--primary);
+	cursor: pointer;
 }
+
 main.blog .container-main .posts .pag ul.pagination li a.more {
-  background-color: transparent;
-  padding: 8px 0;
+	background-color: transparent;
+	padding: 8px 0;
 }
+
 main.blog .container-main .posts .pag ul.pagination li a.arrow {
-  background-color: transparent;
-  font-size: 30px;
-  margin: 0;
-  padding: 8px 0;
+	background-color: transparent;
+	font-size: 30px;
+	margin: 0;
+	padding: 8px 0;
 }
+
 main.blog .container-main .posts .pag ul.pagination li a.arrow:hover {
-  color: var(--primary);
+	color: var(--primary);
 }
+
 main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
-  color: var(--grey-light);
+	color: var(--grey-light);
 }
 
 /* RESPONSIVE \*/
 @media only screen and (max-width: 1279.9px) {
-  .post .data-post {
-    position: absolute;
-    top: 45%;
-    left: 0;
-    height: 50%;
-    background-color: var(--white);
-    padding: 1em;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 0.5em auto 1em;
-    gap: 0.4em;
-  }
+	.post .data-post {
+		position: absolute;
+		top: 45%;
+		left: 0;
+		height: 50%;
+		background-color: var(--white);
+		padding: 1em;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin: 0.5em auto 1em;
+		gap: 0.4em;
+	}
 }
 
 @media only screen and (max-width: 1023.9px) {
-  .container-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0 1em;
-  }
-  .first-contain {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 1em;
-  }
-  main .container-main .first-contain {
-    margin: 0;
-  }
-  main .container-main .first-contain .h1-big h1 {
-    font-size: 40px;
-    line-height: 100%;
-  }
-  .search {
-    margin: 0 0 1em;
-  }
-  .search select {
-    display: none;
-  }
-  .search .search-container label {
-    padding: 8px 14px;
-  }
-  .search .search-container label input {
-    font-size: 16px;
-  }
-  .search .search-container label em.icon-search {
-    font-size: 22px;
-    margin-right: 12px;
-  }
-  .post {
-    border-radius: 16px;
-    filter: drop-shadow(0px 20px 30px rgba(22,22,22,0.06));
-  }
-  .post .data-post {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 50%;
-    background-color: var(--white);
-    padding: 2em;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 0.5em auto 1em;
-    gap: 0.4em;
-  }
-  .post .data-post.primary {
-    box-shadow: none;
-  }
-  .post .img-container {
-    height: 100%;
-    min-height: 400px;
-  }
-  .post .date {
-    top: 38%;
-  }
-  .post .data-post {
-    width: 100%;
-    padding: 0;
-    border-radius:  0 0 16px 16px;
-  }
-  .post .data-post h1, .post .data-post .p-container {
-    padding: 3% 4% 0;
-  }
+	.container-main {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 0 1em;
+	}
 
-  /* __________________________ POST  ___________________________\*/
-  main.post-page .container-main .post-content {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 6em auto;
-  }
-  main.post-page .container-main .post-content h1 {
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 110%;
-    text-align: left;
-    margin-bottom: 1em;
-  }
-  main.post-page .container-main .post-content .text .text-content h2, main.post-page .container-main .post-content .text .text-content h3 {
-    font-size: 25px;
-  }
-  main.post-page .container-main .post-content .text .text-content p, main.post-page .container-main .post-content .text .text-content ul li, main.post-page .container-main .post-content .text .text-content ol li {
-    font-size: 16px;
-  }
-  main.post-page .container-main .post-content .text .text-content ul li {
-    padding-left: 12px;
-  }
+	.first-contain {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding-left: 1em;
+	}
 
-  main.post-page .container-main .post-content .text .text-content p strong,  main.post-page .container-main .post-content .text .text-content p em {
-    font-size: 16px;
-  }
-  main.post-page .container-main .like-content {
-      margin: 0;
-  }
-  main.post-page .container-main .like-content .like {
-    align-items: center;
-    justify-content: center;
-  }
-  main.post-page .container-main .like-content .like .text {
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-  }
-  main.post-page .container-main .like-content .like .text h3 {
-      font-weight: 400;
-      font-size: 35.4257px;
-      line-height: 36px;
-  }
-  main.post-page .container-main .like-content .like .redes a {
-    text-align: center;
-  }
+	main .container-main .first-contain {
+		margin: 0;
+	}
 
-  main.post-page .container-main .like-content .like .redes a em {
-      font-size: 25px;
-  }
+	main .container-main .first-contain .h1-big h1 {
+		font-size: 40px;
+		line-height: 100%;
+	}
+
+	.search {
+		margin: 0 0 1em;
+	}
+
+	.search select {
+		display: none;
+	}
+
+	.search .search-container label {
+		padding: 8px 14px;
+	}
+
+	.search .search-container label input {
+		font-size: 16px;
+	}
+
+	.search .search-container label em.icon-search {
+		font-size: 22px;
+		margin-right: 12px;
+	}
+
+	.post {
+		border-radius: 16px;
+		filter: drop-shadow(0px 20px 30px rgba(22, 22, 22, 0.06));
+	}
+
+	.post .data-post {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		height: 50%;
+		background-color: var(--white);
+		padding: 2em;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin: 0.5em auto 1em;
+		gap: 0.4em;
+	}
+
+	.post .data-post.primary {
+		box-shadow: none;
+	}
+
+	.post .img-container {
+		height: 100%;
+		min-height: 400px;
+	}
+
+	.post .date {
+		top: 38%;
+	}
+
+	.post .data-post {
+		width: 100%;
+		padding: 0;
+		border-radius: 0 0 16px 16px;
+	}
+
+	.post .data-post h1,
+	.post .data-post .p-container {
+		padding: 3% 4% 0;
+	}
+
+	/* __________________________ POST  ___________________________\*/
+	main.post-page .container-main .post-content {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 6em auto;
+	}
+
+	main.post-page .container-main .post-content h1 {
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 110%;
+		text-align: left;
+		margin-bottom: 1em;
+	}
+
+	main.post-page .container-main .post-content .text .text-content h2,
+	main.post-page .container-main .post-content .text .text-content h3 {
+		font-size: 25px;
+	}
+
+	main.post-page .container-main .post-content .text .text-content p,
+	main.post-page .container-main .post-content .text .text-content ul li,
+	main.post-page .container-main .post-content .text .text-content ol li {
+		font-size: 16px;
+	}
+
+	main.post-page .container-main .post-content .text .text-content ul li {
+		padding-left: 12px;
+	}
+
+	main.post-page .container-main .post-content .text .text-content p strong,
+	main.post-page .container-main .post-content .text .text-content p em {
+		font-size: 16px;
+	}
+
+	main.post-page .container-main .like-content {
+		margin: 0;
+	}
+
+	main.post-page .container-main .like-content .like {
+		align-items: center;
+		justify-content: center;
+	}
+
+	main.post-page .container-main .like-content .like .text {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	main.post-page .container-main .like-content .like .text h3 {
+		font-weight: 400;
+		font-size: 35.4257px;
+		line-height: 36px;
+	}
+
+	main.post-page .container-main .like-content .like .redes a {
+		text-align: center;
+	}
+
+	main.post-page .container-main .like-content .like .redes a em {
+		font-size: 25px;
+	}
 
 }
+
 @media only screen and (max-width: 768px) {
-  .post .data-post {
-    top: 50%;
-    height: 50%;
-  }
-  .post .date {
-    top: 40%;
-  }
+	.post .data-post {
+		top: 50%;
+		height: 50%;
+	}
+
+	.post .date {
+		top: 40%;
+	}
 }

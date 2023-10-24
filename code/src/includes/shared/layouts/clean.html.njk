@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{L}}">
+
+<!-- Head -->
+<head>
+{% include 'shared/sections/common/head.html.njk' %}
+{% block head %}{% endblock %}
+</head>
+
+<!-- Body -->
+<body>
+{{ content | safe }}
+</body>
+
+</html>

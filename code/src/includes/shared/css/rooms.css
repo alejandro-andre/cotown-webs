@@ -166,17 +166,11 @@
   margin: 10px 0 0;
 }
 
-
-
-
-
-
 .splide__slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 
 /* ---------- ROOMS ---------- \*/
 .rooms .all-rooms {
@@ -415,7 +409,6 @@ margin-bottom: 0.5em;
   width: 10px;
   height: 10px;
 }
-
 
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {

@@ -1,0 +1,180 @@
+---
+name: booking
+eleventyComputed:
+    title: "{{langs[L].pages[name].title}}"
+    alt:
+      es: "{{root}}{{langs.es.folder}}/"
+      en: "{{root}}{{langs.en.folder}}/"
+    description: "{{langs[L].pages[name].description}}"
+    permalink: "{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
+layout: shared/layouts/clean.html
+pagination:
+    data: langs
+    size: 1
+    alias: L
+    addAllPagesToCollections: true
+
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+<!-- Additional head content -->
+{% block head %}
+<link rel="stylesheet" href="/assets/css/booking.css">
+{% endblock %}
+
+  <main class="content-booking">
+
+    <div style="width:100%;display:flex;justify-content:right;">
+      <button class="back" onclick="window.location.href='/{{data.lang}}';"></button>
+        <em class="icon-close"></em>
+      </button>
+    </div>
+
+    <section>
+      <h2>¿En qué ciudad quieres vivir?</h2>
+      <div class="booking-selector">
+        <div class="booking-icons">
+          {% for t in typologies %}
+          {% set l = locations | find('Name', 'eq', t.Name) | first %}
+          {% set i = l.Images | find('Image_type', 'eq', 'icono') | first %}
+          <div class="selector">
+            <div id="{{l.id}}" class="city content-selector" onclick="select_city('{{l.id}}');">
+              {% svg
+                constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
+                l.Name | translate('Name', L)
+              %}
+              <p>{{l | translate('Name', L)}}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>        
+      </div>
+    </section>
+
+    <section>
+      <h2>¿Qué estás buscando?</h2>
+      <div class="booking-selector">
+        <div class="booking-icons">
+          <div class="selector">
+            <div id="compartido" class="type content-selector" onclick="select_type('compartido');">
+              <img class="img" alt="city" src="../assets/icon/vanguard/icono__tipo_piso_compartido.svg">
+              <p>Piso compartido</p>
+            </div>
+          </div>
+          <div class="selector">
+            <div id="privado" class="type content-selector" onclick="select_type('privado');">
+              <img class="img" alt="city" src="../assets/icon/vanguard/icono__tipo_apartamento_privado.svg">
+              <p>Apartamento privado</p>
+            </div>
+          </div>
+          <div class="selector">
+            <div id="residencia" class="type content-selector" onclick="select_type('residencia');">
+              <img class="img" alt="city" src="../assets/icon/vanguard/icono__tipo_residencia_universitaria.svg">
+              <p>Residencia universitaria</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roomtype">
+      <h2>¿Qué tipo de habitación?</h2>
+      <div class="booking-selector">
+        <div class="booking-icons">
+          <div class="selector">
+            <div id="individual" class="room content-selector" onclick="select_room('individual');">
+              <img class="img" alt="city" src="../assets/icon/vanguard/icono__hab_habitacion_individual.svg">
+              <p>Habitación individual</p>
+            </div>
+          </div>
+          <div class="selector">
+            <div id="compartida" class="room content-selector" onclick="select_room('compartida');">
+              <img class="img" alt="city" src="../assets/icon/vanguard/icono__hab_habitacion_compartida.svg">
+              <p>Habitación compartida</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>¿Cuándo?</h2>
+      <div class="calendar pure-u-1">
+        <div class="reservas_form" id="reservas_form" name="form_multi" method="GET">
+          <button class="date-button">
+            <label class="labels">Fechas</label>
+            <input type="text" id="dates" name="dates" onclick="open_calendar('dates');" class="inputs" placeholder="dd/mm/aaaa - dd/mm/aaaa"/>
+          </button>            
+        </div>
+      </div>
+    </section>
+
+    <section class="results">
+      <button class="btn-secondary">
+          Ver Resultados
+      </button>
+    </section>
+
+  </main>
+
+{% block footer %}
+{% set script %}
+const tipology={{typologies|dump|safe}};
+let city = '';
+let type = '';
+
+function select_city(id) {
+  // Select city
+  city = id;
+  document.querySelectorAll('div.city').forEach(elem => elem.classList.remove('active'));
+  document.querySelectorAll('div.type').forEach(elem => elem.classList.remove('active'));
+  document.querySelectorAll('div.room').forEach(elem => elem.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+
+  // Private apartment
+  document.getElementById('roomtype').style.display = 'block';
+
+  // Hide tipologies
+  document.querySelectorAll('div.type').forEach(elem => elem.style.display = 'none');
+  for (let l of tipology) {
+    if (l.Name === id) {
+      for (let t of l.Sale_types) {
+        el = document.getElementById(t.Sale_type);
+        el.style.display = 'block';
+      }
+    }
+  }
+}
+function select_type(id) {
+  // Select type
+  document.querySelectorAll('div.type').forEach(elem => elem.classList.remove('active'));
+  document.querySelectorAll('div.room').forEach(elem => elem.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+
+  // Private apartment
+  document.getElementById('roomtype').style.display = (id == 'privado') ? 'none' : 'block';
+
+  // Hide rooms
+  document.querySelectorAll('div.room').forEach(elem => elem.style.display = 'none');
+  for (let l of tipology) {
+    if (l.Name === city) {
+      for (let t of l.Sale_types) {
+        if (t.Sale_type === id) {
+          for (let r of t.Room_types) {
+            el = document.getElementById(r.Room_type);
+            el.style.display = 'block';
+          }
+        }
+      }
+    }
+  }
+}
+function select_room(id) {
+  // Select type
+  document.querySelectorAll('div.room').forEach(elem => elem.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% endblock %}

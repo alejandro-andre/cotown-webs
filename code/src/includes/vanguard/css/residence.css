@@ -131,7 +131,6 @@
   object-fit: cover;
 }
 
-
 /* ---------- ROOMS ---------- \*/
 .rooms .all-rooms {
   display: flex;
@@ -483,9 +482,6 @@ margin-bottom: 0.5em;
 .desktop.description input[type=radio]:checked:before {
 	content: "";
 }
-
-
-
 
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
