@@ -20,7 +20,7 @@
       </select>
 
       <label class="label">{% literal texts, 'home-bienvenido-tipo', L %}:</label>
-      <select id="type" name="type" class="pure-u-1" onchange="localStorage.setItem('type', this.value);" required>
+      <select id="type" name="type" class="pure-u-1" onchange="localStorage.setItem('book_type', this.value);" required>
         <!--REMOVE
         <option value="" disabled selected>{% literal texts, 'home-bienvenido-tipo', L %}</option>
         <option value="Piso compartido">{% literal texts, 'home-pisazos-piso', L %} {% literal texts, 'home-pisazos-compartido', L %}</option>
@@ -34,9 +34,9 @@
           <label class="label" for="from">{% literal texts, 'home-bienvenido-cuando', L %}:</label>
           <div class="date">
             {% if L == 'es' %}
-            <input class="input" type="text" id="dates" name="dates" onchange="localStorage.setItem('dates', this.value);" required disabled>
+            <input class="input" type="text" id="dates" name="dates" onchange="localStorage.setItem('book_dates', this.value);" required disabled>
             {% else %}
-            <input class="input" type="text" id="dates" name="dates" onchange="localStorage.setItem('dates', this.value);" required disabled>
+            <input class="input" type="text" id="dates" name="dates" onchange="localStorage.setItem('book_dates', this.value);" required disabled>
             {% endif %}
             <em class="icon-calendar"></em>
           </div>
@@ -145,14 +145,14 @@ function get_types(value) {
       list.add(opt);
     }
   }
-  localStorage.setItem('type', document.getElementById('type').value);
+  localStorage.setItem('book_type', document.getElementById('type').value);
 }
 
 document.getElementById('city').value  = localStorage.getItem('city');
 get_types(localStorage.getItem('city'));
-document.getElementById('type').value  = localStorage.getItem('type');
-document.getElementById('dates').value = localStorage.getItem('dates');
-document.getElementById('in').value    = localStorage.getItem('checkin');
-document.getElementById('out').value   = localStorage.getItem('checkout');
+document.getElementById('type').value  = localStorage.getItem('book_type');
+document.getElementById('dates').value = localStorage.getItem('book_dates');
+document.getElementById('in').value    = localStorage.getItem('book_checkin');
+document.getElementById('out').value   = localStorage.getItem('book_checkout');
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
