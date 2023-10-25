@@ -204,7 +204,7 @@ tags: page
 // Buildings list
 var buildings = [
 {% for b in buildings | find('Building_type_id', 'lt', 4)-%}
-{city:'{{b.District.Location.Name}}',building:'{{b.Name}}'},
+{city:'{{b.District.Location.Name}}',building_id:{{b.id}},building:'{{b.Name}}'},
 {% endfor-%}
 ];
 
@@ -213,11 +213,11 @@ var room_types = [
 {% for b in buildings | find('Building_type_id', 'lt', 4)-%}
 {% set r = rooms | find('id', 'eq', b.id) | first-%}
 {% for p in r.Place_types-%}
-{building:'{{b.Name}}',code:'{{place_types[p.Code].Code}}',name:'{{place_types[p.Code] | translate('Name', L)}}'},
+{building_id:{{b.id}},building:'{{b.Name}}',code:'{{place_types[p.Code].Code}}',name:'{{place_types[p.Code] | translate('Name', L)}}'},
 {% endfor-%}
 {% set r = flats | find('id', 'eq', b.id) | first-%}
 {% for p in r.Flat_subtypes-%}
-{building:'{{b.Name}}',code:'{{flat_subtypes[p.Code].Code}}',name:'{{flat_subtypes[p.Code] | translate('Name', L)}}'},
+{building_id:{{b.id}},building:'{{b.Name}}',code:'{{flat_subtypes[p.Code].Code}}',name:'{{flat_subtypes[p.Code] | translate('Name', L)}}'},
 {% endfor-%}
 {% endfor-%}
 ];
@@ -303,8 +303,6 @@ function validate() {
   fin = document.getElementById('96');
   fout = document.getElementById('97');
   if (!months(fin.value, fout.value)) {
-    console.log(fin);
-    console.log(fout);
     fin.setCustomValidity("{{texts['cal-error'][L]}}");
   } else {
     fin.setCustomValidity("");

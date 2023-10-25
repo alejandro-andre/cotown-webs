@@ -145,6 +145,7 @@ function get_types(value) {
       list.add(opt);
     }
   }
+  localStorage.setItem('type', document.getElementById('type').value);
 }
 
 document.getElementById('city').value  = localStorage.getItem('city');
