@@ -20,7 +20,7 @@
           <em class="icon-close"></em>
         </div>
         <div class="clean-dates">
-          <a onclick="empty();">{% literal texts, 'cal-borrar-fechas', L %}</a>
+          <a onclick="empty('', '');">{% literal texts, 'cal-borrar-fechas', L %}</a>
         </div>
       </div>
       
@@ -117,7 +117,7 @@
           </table>
 
           <div class="buttons">
-            <a onclick="empty();">{% literal texts, 'cal-borrar-fechas', L %}</a>
+            <a onclick="empty('', '');">{% literal texts, 'cal-borrar-fechas', L %}</a>
             <button id="ok" class="btn-secondary" onclick="close_calendar();">{% literal texts, 'cal-cerrar', L %}</button>
           </div>
 
@@ -247,9 +247,9 @@ function forward() {
 }
 
 // Borrar fechas
-function empty() {
-    fin.value = '';
-    fout.value = '';
+function empty(i, o) {
+    fin.value = i;
+    fout.value = o;
     fin.dataset.id = undefined;
     fout.dataset.id = undefined;
     ftoday = fnow
@@ -328,6 +328,6 @@ const fin = document.getElementById('in');
 const fout =  document.getElementById('out');
 
 // Start calendar
-empty(ftoday);
+empty('', '');
 </script>
 {% endblock %}

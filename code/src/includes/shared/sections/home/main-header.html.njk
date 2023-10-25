@@ -14,13 +14,13 @@
         <option value="" disabled selected>{% literal texts, 'home-bienvenido-donde', L %}</option>
         {% for l in locations %}
         {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
-        <option>{{ l | translate('Name', L)}}</option>
+        <option value="{{l.id}}" >{{ l | translate('Name', L)}}</option>
         {% endif %}
         {% endfor %}
       </select>
 
       <label class="label">{% literal texts, 'home-bienvenido-tipo', L %}:</label>
-      <select id="type" name="type" class="pure-u-1" onchange="localStorage.setItem('book_type', this.value);" required>
+      <select id="type" name="type" class="pure-u-1" onchange="localStorage.setItem('path_type', this.value);" required>
         <!--REMOVE
         <option value="" disabled selected>{% literal texts, 'home-bienvenido-tipo', L %}</option>
         <option value="Piso compartido">{% literal texts, 'home-pisazos-piso', L %} {% literal texts, 'home-pisazos-compartido', L %}</option>
@@ -99,18 +99,21 @@ const types = [
   {% endif-%}
 {% endfor-%}
 {% if pc %}{ 
+  id:{{l.id}}, 
   city:'{{l | translate('Name', L)}}', 
   type:'Piso compartido',
   link: '{{root}}{{langs[L].folder}}/{{langs[L].pages.rooms.url}}-{{l | translate("Name", L) | slugify}}.html',
   value:'{{texts["home-pisazos-piso"][L]}} {{texts["home-pisazos-compartido"][L]}}'
 },{% endif-%}
 {% if ap %}{
+  id:{{l.id}}, 
   city:'{{l | translate('Name', L)}}', 
   type:'Apartamento privado',
   link: '{{root}}{{langs[L].folder}}/{{langs[L].pages.flats.url}}-{{l | translate("Name", L) | slugify}}.html',
   value:'{{texts["home-pisazos-apartamento"][L]}} {{texts["home-pisazos-privado"][L]}}'
 },{% endif-%}
 {% if rs %}{
+  id:{{l.id}}, 
   city:'{{l | translate('Name', L)}}', 
   type:'Residencia universitaria',
   link: '{{root}}{{langs[L].folder}}/{{langs[L].pages.residences.url | slugify}}.html',
@@ -134,23 +137,23 @@ function get_types(value) {
 
   // Get city
   if (!value) return;
-  localStorage.setItem('city', value);
+  localStorage.setItem('book_city_id', value);
 
   // Fill building listid
   for (var i = 0; i < types.length; i++) {
-    if (types[i].city == value) {
+    if (types[i].id == value) {
       var opt = document.createElement("option");
       opt.value = types[i].link;
       opt.text = types[i].value;
       list.add(opt);
     }
   }
-  localStorage.setItem('book_type', document.getElementById('type').value);
+  localStorage.setItem('path_type', document.getElementById('type').value);
 }
 
 document.getElementById('city').value  = localStorage.getItem('city');
 get_types(localStorage.getItem('city'));
-document.getElementById('type').value  = localStorage.getItem('book_type');
+document.getElementById('type').value  = localStorage.getItem('path_type');
 document.getElementById('dates').value = localStorage.getItem('book_dates');
 document.getElementById('in').value    = localStorage.getItem('book_checkin');
 document.getElementById('out').value   = localStorage.getItem('book_checkout');
