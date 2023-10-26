@@ -20,7 +20,7 @@
         <li class="splide__slide">
         {% image
           constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
-          rp.Name, rp.Name + '-' + rp.id | slugify, "",
+          rp.Name, building.Code + '-' + p.Code + '-' + rp.id | slugify, "",
           [1280], ""
         %}
         </li>
@@ -43,7 +43,7 @@
           <li class="splide__slide">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
-              rp.Name, rp.Name + '-' + rp.id | slugify, "",
+              rp.Name, building.Code + '-' + p.Code + '-' + rp.id | slugify, "",
               [500], ""
             %}
           </li>
@@ -59,7 +59,7 @@
           <li class="splide__slide">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
-              rp.Name, rp.Name + '-' + rp.id | slugify, "",
+              rp.Name, building.Code + '-' + p.Code + '-' + rp.id | slugify, "",
               [300], ""
             %}
           </li>
