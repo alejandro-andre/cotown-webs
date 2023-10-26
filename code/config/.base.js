@@ -25,10 +25,10 @@ module.exports = (eleventyConfig) => {
   function slugify(str) {
     str = str.toLowerCase();
     str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Acentos
-    str = str.replace(/[^a-z0-9\s-]/g, ''); // Reemplaza caracteres no alfanuméricos por guiones
-    str = str.replace(/\s+/g, '-'); // Reemplaza espacios en blanco por guiones
-    str = str.replace(/-{2,}/g, '-'); // Elimina guiones consecutivos
-    str = str.replace(/^-+|-+$/g, ''); // Elimina guiones al comienzo y al final
+    str = str.replace(/[^a-z0-9\s-]/g, '-');// Reemplaza caracteres no alfanuméricos por guiones
+    str = str.replace(/\s+/g, '-');         // Reemplaza espacios en blanco por guiones
+    str = str.replace(/-{2,}/g, '-');       // Elimina guiones consecutivos
+    str = str.replace(/^-+|-+$/g, '');      // Elimina guiones al comienzo y al final
     return str;
   }
   
