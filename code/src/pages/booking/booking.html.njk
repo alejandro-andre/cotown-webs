@@ -162,11 +162,10 @@ function booking() {
 function validate(event) {
   document.getElementById("book_button").disabled = 
   !(
-    get_field("book_city_id") && 
-    get_field("book_acom") && 
-    get_field("book_room") && 
-    get_field("book_checkin") && 
-    get_field("book_checkout")
+    (get_field("book_city_id")) && 
+    (get_field("book_acom")) && 
+    (get_field("book_room") || get_field("book_acom") == 'ap') && 
+    (get_field("book_checkin") && get_field("book_checkout"))
   )
 }
 
