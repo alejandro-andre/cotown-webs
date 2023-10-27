@@ -81,6 +81,12 @@
       "title": "Seguridad y datos",
       "description": "Seguridad y datos"
     },
+    "booking": {
+      "url": "reserva",
+      "text": "¡Reserva ahora!",
+      "title": "¡Reserva ahora!",
+      "description": "Alójate con nosotros y vive la experiencia universitaria como nunca la hayas vivido."
+    },
     "book": {
       "url": "reservar",
       "text": "¡Reserva ahora!",

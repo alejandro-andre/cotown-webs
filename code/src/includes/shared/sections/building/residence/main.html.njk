@@ -146,7 +146,9 @@ function close_tour() {
 function go_book(id) {
   localStorage.setItem('city', '{{building.District.Location.Name}}');
   localStorage.setItem('building', '{{building.Name}}');
-  localStorage.setItem('type', id);
+  localStorage.setItem('book_city_id', '{{building.District.Location.id}}');
+  localStorage.setItem('book_building_id', '{{building.id}}');
+  localStorage.setItem('book_type', id);
   location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
 }
 function go_visit(id) {

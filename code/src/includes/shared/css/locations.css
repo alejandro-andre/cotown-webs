@@ -29,7 +29,6 @@
 
 /* SOLO COTOWN */
 
-
 .locations .container-main .all-locations .left .locations-list .locations-container  .location.cotown {
   position: relative;
   display: flex;
@@ -86,10 +85,6 @@
   margin: 0;
   padding-right: 20px;
 }
-
-
-
-
 
 /* SOLO VANGUARD */
 
@@ -168,7 +163,7 @@
 .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 4%;
 }
@@ -216,9 +211,6 @@
   text-align: center;
   margin: 0 0 16px;
 }
-
-
-
 
 /* RESPONSIVE
 -------------------------------- */

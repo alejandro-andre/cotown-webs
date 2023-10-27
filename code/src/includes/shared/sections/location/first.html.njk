@@ -6,9 +6,8 @@
     </div>
     <h2>{{location | translate('Name', L)}}</h2>
   </div>
-    <!--
     <div class="opacity"></div> 
-    -->
+    <!--
     <div>
       {% for i in location.Images | find ('Image_type', 'eq', 'landing') %}
       {% if loop.index == 1 %}
@@ -19,7 +18,8 @@
       %}
       {% endif %}
       {% endfor %}
-      <!--
+    -->
+    <div class="video featured-bg-image">
       <video 
         playsinline="true" width="100%" style="object-fit: cover;" 
         autoplay="true" muted="true" loop="true" preload="auto" controls="1">
@@ -37,7 +37,6 @@
         {% endif %}
         {% endfor %}
       </div>
-      -->
     </div>    
   </div>
 </section>

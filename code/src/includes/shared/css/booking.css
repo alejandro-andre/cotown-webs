@@ -86,9 +86,10 @@ ol {
 	box-sizing: border-box;
 }
 
-/* Buttons */
-
+/* BOTONES
+-------------------------------- \*/
 button {
+	font-family: var(--text-font);
 	border: 1px solid transparent;
 }
 
@@ -105,13 +106,14 @@ button {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 16px;
-	background-color: var(--turquoise-light);
-	color: var(--white);
+	background-color: var(--primary);
+	color: var(--primary-text);
 	border: 1px solid transparent;
+	cursor: pointer;
 }
 
 .btn-regular:hover {
-	background-color: var(--turquoise-dark);
+	background-color: var(--primary-dark);
 }
 
 .btn-disabled {
@@ -127,14 +129,14 @@ button {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 16px;
-	background-color: var(--turquoise-light);
-	color: var(--white);
+	background-color: var(--primary);
+	color: var(--primary-text);
 	border: 0px 0 none;
 	opacity: 0.4;
 }
 
 .btn-disabled:hover {
-	background-color: var(--turquoise-dark);
+	background-color: var(--primary-dark);
 }
 
 .btn-loading {
@@ -150,21 +152,21 @@ button {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 16px;
-	background-color: var(--turquoise-light);
-	color: var(--white);
-	border: 1px solid var(--turquoise-light);
-
+	background-color: var(--primary);
+	color: var(--primary-text);
+	border: 1px solid var(--primary);
+	cursor: pointer;
 }
 
 .btn-loading:hover {
-	background-color: var(--turquoise-dark);
+	background-color: var(--primary-dark);
 }
 
-
 .btn-primary {
+	text-transform: uppercase;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	width: fit-content;
 	height: 32px;
@@ -173,22 +175,23 @@ button {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 14px;
-	padding: 0 1.5em;
-	border: 1px solid var(--turquoise-light);
+	padding: 0 12px;
+	border: 1px solid var(--primary);
 	background-color: var(--white);
-	color: var(--turquoise-light);
+	color: var(--primary);
+	cursor: pointer;
 }
 
 .btn-primary:hover {
-	border-color: var(--turquoise-dark);
+	border-color: var(--primary-dark);
 	background-color: var(--white);
-	color: var(--turquoise-dark);
+	color: var(--primary-dark);
 }
 
 .btn-secondary {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	width: fit-content;
 	height: 32px;
@@ -198,17 +201,43 @@ button {
 	font-size: 16px;
 	line-height: 16px;
 	padding: 0 1.5em;
-	border: 1px solid var(--turquoise-light);
-	background-color: var(--turquoise-light);
-	color: var(--white);
+	border: 1px solid var(--primary);
+	background-color: var(--primary);
+	color: var(--primary-text);
+	cursor: pointer;
 }
 
 .btn-secondary:hover {
-	border-color: var(--turquoise-dark);
+	border-color: var(--primary-dark);
 	background-color: var(--white);
-	color: var(--turquoise-dark);
+	color: var(--primary-dark);
 }
 
+.btn-primary.search {
+	height: auto;
+	text-transform: capitalize;
+	gap: .5em;
+	font-size: 18px;
+	padding: 14px 26px 14px 20px;
+}
+
+.btn-secondary.search.mobile {
+	font-size: 16px;
+	padding: 12px 26px;
+}
+
+.btn-text {
+	color: var(--black);
+	font-size: 22px;
+	font-weight: 800;
+	line-height: 150%;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.btn-text:hover {
+	color: var(--primary);
+}
 
 /* For devices larger than 400px */
 @media only screen and (min-width: 400px) {
@@ -296,9 +325,8 @@ button {
 		width: 48%;
 	}
 
-
 	/* Forms
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+	–––––––––––––––––––––––––––––––––––––––––––––––––– */
 	input[type="email"],
 	input[type="number"],
 	input[type="search"],
@@ -375,7 +403,6 @@ border: 1px solid #D1D1D1; */
 		font-weight: normal;
 	}
 
-
 	/* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 	ul {
@@ -404,7 +431,6 @@ border: 1px solid #D1D1D1; */
 		margin-bottom: 1rem;
 	}
 
-
 	/* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 	code {
@@ -422,7 +448,6 @@ border: 1px solid #D1D1D1; */
 		padding: 1rem 1.5rem;
 		white-space: pre;
 	}
-
 
 	/* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -442,7 +467,6 @@ border: 1px solid #D1D1D1; */
 	td:last-child {
 		padding-right: 0;
 	}
-
 
 	/* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -465,7 +489,6 @@ border: 1px solid #D1D1D1; */
 		margin-bottom: 2.5rem;
 	}
 
-
 	/* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 	.u-full-width {
@@ -486,7 +509,6 @@ border: 1px solid #D1D1D1; */
 		float: left;
 	}
 
-
 	/* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 	hr {
@@ -495,7 +517,6 @@ border: 1px solid #D1D1D1; */
 		border-width: 0;
 		border-top: 1px solid #E1E1E1;
 	}
-
 
 	/* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -509,7 +530,6 @@ border: 1px solid #D1D1D1; */
 		clear: both;
 	}
 
-
 	/* Icons
     ========================================================================== */
 
@@ -519,7 +539,6 @@ border: 1px solid #D1D1D1; */
 	}
 
 }
-
 
 section>h2 {
 	margin-top: 0;
@@ -628,6 +647,11 @@ section>h2 {
 	transition: all .4s ease-in-out;
 }
 
+.content-booking section .option-selector .option-icons .option .content-selector.active {
+    border: 3px solid var(--primary-bg);
+    border-radius: 16px;
+}
+
 .content-booking section .option-selector .option-icons .option .content-selector:hover,
 .content-booking section .option-selector .option-icons .option .content-selector:active,
 .content-booking section .option-selector .option-icons .option .content-selector:focus-visible,
@@ -645,7 +669,6 @@ section>h2 {
 	order: 2;
 	margin: 0;
 }
-
 
 /* RESERVAS GLOBAL STYLE */
 .content-booking section .calendar {
@@ -681,21 +704,27 @@ section>h2 {
 .content-booking section .calendar .reservas_form button.date-button label.labels {
 	width: 100%;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 16px;
 	text-align: left;
 }
 
 .content-booking section .calendar .reservas_form button.date-button input.inputs {
 	height: 16px;
-	text-align: left;
+	text-align: center;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 16px;
 	background-color: transparent;
 	border: none;
 }
 
+.content-booking .close {
+	width: 100%;
+	display: flex;
+	justify-content: right;
+	padding: 15px;
+}
 
 .tabs-container {
 	width: 100%;
@@ -733,6 +762,7 @@ button.back {
 	justify-content: space-between;
 	align-items: center;
 	background-color: transparent;
+	cursor: pointer;
 }
 
 button.back em {
@@ -1048,7 +1078,6 @@ button.back p {
 	width: 100%;
 }
 
-
 /* SEGUNDA TAB */
 /* LEFT */
 .main-booking .main-contain .panel-container .left.tab2 {
@@ -1209,7 +1238,6 @@ button.back p {
 .prices input[type=radio]:checked:before {
 	content: "\e929";
 }
-
 
 .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third {
 	display: flex;
@@ -1429,7 +1457,6 @@ button.back p {
 	margin-right: 4px;
 }
 
-
 /* TERCERA TAB */
 
 /* LEFT */
@@ -1459,7 +1486,6 @@ button.back p {
 	font-weight: 400;
 	line-height: 150%;
 }
-
 
 .main-booking .main-contain .panel-container .left.tab3 form .campo {
 	width: 100%;
@@ -1763,7 +1789,6 @@ button.back p {
 	text-transform: none !important;
 }
 
-
 /* RESPONSIVE */
 @media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
 	.tabs-container .nav-booking ul.pure-menu-list {
@@ -1926,7 +1951,6 @@ button.back p {
 		margin: 0.2em auto 1em;
 	}
 
-
 	.tabs-container {
 		margin: 0;
 		padding: 0;
@@ -2049,7 +2073,6 @@ button.back p {
 	.main-booking .main-contain .panel-container .left {
 		width: 100%;
 	}
-
 
 	.main-booking .main-contain .panel-container .left form .background label {
 		width: 80%;

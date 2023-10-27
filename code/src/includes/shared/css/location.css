@@ -55,7 +55,7 @@ main .location .container-main .first-contain .video-loc .text-container h3 {
     color: var(--white);
     width: fit-content;
     font-size: 40px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.2em;
     padding: 0.2em 0 0;
     position: relative;    
@@ -67,7 +67,7 @@ main .location .container-main .first-contain .video-loc .text-container h4 {
     color: var(--white);
     width: fit-content;
     font-size: 22px;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: none;
     line-height: 1.2em;
     padding: 0.2em 0 0;

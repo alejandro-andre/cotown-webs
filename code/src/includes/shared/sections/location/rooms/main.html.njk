@@ -54,7 +54,7 @@
         {% if loop.index == 1 %}
         {% image
           constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id  +"/Image/contents?access_token=" + token,
-          b.Name, b.Name + '_' + photo.id | slugify, "",
+          b.Name, b.Name + '-' + photo.id | slugify, "",
           [200], ""
         %}
         {% endif %}

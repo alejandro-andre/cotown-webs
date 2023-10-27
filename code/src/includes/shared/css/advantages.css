@@ -3,235 +3,266 @@
 /* BLOQUE 1 NO HOME
 -------------------------------- \*/
 main .container-main .first-contain .img-right {
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-    align-items: center;
-    position: absolute;
-    top: -50px;
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-end;
+	align-items: center;
+	position: absolute;
+	top: -50px;
 }
 
 main .container-main .first-contain .advantages.title-big {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 16em auto 2em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 16em auto 2em;
 }
+
 main .container-main .first-contain .advantages.title-big .h1-big {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
+
 main .container-main .first-contain .advantages.title-big .h1-big h1 {
-    font-family: var(--title-font);
-    font-size: 78px;
-    font-weight: 400;
-    line-height: 95%;
-    letter-spacing: -3.31px;
-    text-transform: uppercase;
+	font-family: var(--title-font);
+	font-size: 78px;
+	font-weight: 400;
+	line-height: 95%;
+	letter-spacing: -3.31px;
+	text-transform: uppercase;
 }
+
 main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
-    font-family: var(--title-font);
-    color: var(--primary-text);
-    text-shadow: var(--h2-border);
-    font-weight: 400;
-    font-size: 78px;
-    line-height: 95%;
-    letter-spacing: -8.274px;
+	font-family: var(--title-font);
+	color: var(--primary-text);
+	text-shadow: var(--h2-border);
+	font-weight: 400;
+	font-size: 78px;
+	line-height: 95%;
+	letter-spacing: -8.274px;
 }
+
 main .container-main .first-contain .advantages.title-big .text p {
-    font-size: 22px;
-    line-height: 150%;
-    font-weight: 400;
-    margin: 0 0 0.5em;
-    text-align: left;
+	font-size: 22px;
+	line-height: 150%;
+	font-weight: 400;
+	margin: 0 0 0.5em;
+	text-align: left;
 }
+
 main .container-main section.banner {
-    margin-bottom: 2em;
+	margin-bottom: 2em;
 }
 
 /* BLOQUE 2 GRID NO HOME
 -------------------------------- */
 main .container-main section.container-advantages {
-    padding: 2em 4em;
+	padding: 2em 4em;
 }
+
 main .container-main section.container-advantages .grid {
-    padding: 0;
-    max-width: 1280px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+	padding: 0;
+	max-width: 1280px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
 }
 
 main .container-main section.container-advantages .grid .promo-contain {
-    width: calc(33.33% - 2em);
-    margin: 1em 1em;
+	width: calc(33.33% - 2em);
+	margin: 1em 1em;
 }
+
 main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9 {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    cursor: pointer;
-    background-color: var(--primary-bg);
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	cursor: pointer;
+	background-color: var(--primary-bg);
 }
 
 main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9::before {
-    content: "";
-    display: block;
-    padding-bottom: 56.25%;
-    height: auto;
-    position: relative;
-    z-index: 1;
+	content: "";
+	display: block;
+	padding-bottom: 56.25%;
+	height: auto;
+	position: relative;
+	z-index: 1;
 }
 
 main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9 .img1 {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    z-index: 2;
-    top: 0px;
-    left: 0px;
-    object-fit: cover;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	object-fit: cover;
 }
+
 main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9 .img2 {
-    display: none;
+	display: none;
 }
+
 main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9:hover .img1 {
-    display: none;
+	display: none;
 }
+
 main .container-main section.container-advantages .grid .promo-contain .over.ar-16-9:hover .img2 {
-    width: 100%;
-    height: 100%;
-    display: block!important;
-    position: absolute;
-    z-index: 2;
-    top: 0px;
-    left: 0px;
-    object-fit: cover;
-    opacity: 1.0;
+	width: 100%;
+	height: 100%;
+	display: block !important;
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	object-fit: cover;
+	opacity: 1.0;
 }
 
 main .container-main section.container-advantages .grid.show {
-    display: none;
+	display: none;
 }
+
 main .container-main section.container-advantages .button-more {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 1.5em 0;
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 1.5em 0;
 }
 
 main .container-main section.container-advantages select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    /* Some browsers will not display the caret when using calc, so we put the fallback first */
-    background: url("..//img/br_down.png") white no-repeat 95% !important; /* !important used for overriding all other customisations */
-    background: url("..//img/br_down.png") white no-repeat calc(100% - 30px) !important; /* Better placement regardless of input width */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/* Some browsers will not display the caret when using calc, so we put the fallback first */
+	background: url("..//img/br_down.png") white no-repeat 95% !important;
+	/* !important used for overriding all other customisations */
+	background: url("..//img/br_down.png") white no-repeat calc(100% - 30px) !important;
+	/* Better placement regardless of input width */
 }
 
 button.btn-secondary {
-    padding: 20px 40px;
+	padding: 20px 40px;
 }
 
 /* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
-    main .container-main .first-contain .advantages.title-big .h1-big h1 {
-        font-size: 120px;
-    }
-    main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
-        font-size: 120px;
-        letter-spacing: -2px;
-    }
-    main .container-main section.container-advantages .grid .promo-contain {
-        width: calc(25% - 2em);
-    }
+	main .container-main .first-contain .advantages.title-big .h1-big h1 {
+		font-size: 96px;
+	}
+
+	main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
+		font-size: 96px;
+		letter-spacing: -2px;
+	}
+
+	main .container-main section.container-advantages .grid .promo-contain {
+		width: calc(25% - 2em);
+	}
 }
+
 @media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
-    main .container-main section.container-advantages .grid {
-        max-width: 100%;
-    }
-    main .container-main .first-contain .advantages.title-big .h1-big h1 {
-        font-size: 80px;
-    }
-    main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
-        font-size: 80px;
-        letter-spacing: -2px;
-    }
+	main .container-main section.container-advantages .grid {
+		max-width: 100%;
+	}
+
+	main .container-main .first-contain .advantages.title-big .h1-big h1 {
+		font-size: 80px;
+	}
+
+	main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
+		font-size: 80px;
+		letter-spacing: -2px;
+	}
 }
 
 @media only screen and (max-width: 1023.9px) {
-    main .container-main .first-contain .advantages.title-big {
-        margin: 8em auto 2em;
-    }
-    main .container-main .first-contain .img-right img {
-        width: 30%;
-    }
-    main .container-main .first-contain .advantages.title-big .h1-big h1 {
-        font-size: 40px;
-        line-height: 100%;
-        letter-spacing: -1.2px;
-    }
-    main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
-        font-size: 40px;
-        letter-spacing: 2.4px;
-    }
-    main .container-main .first-contain .advantages.title-big .text p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 150%;
-    }
-    main .container-main section.container-advantages {
-        padding: 1em 0;
-    }
-    main .container-main section.container-advantages .grid {
-        padding: 0 0.2em;
-    }
-    main .container-main section.container-advantages .grid .promo {
-        height: auto;
-        border-radius: 8px;
-        margin: 0.5em;
-        padding: 1em 0.5%;
-    }
+	main .container-main .first-contain .advantages.title-big {
+		margin: 8em auto 2em;
+	}
 
-    main .container-main section.banner h2 {
-        font-size: 30px;
-        padding-top: 3px;
-    }
+	main .container-main .first-contain .img-right img {
+		width: 30%;
+	}
+
+	main .container-main .first-contain .advantages.title-big .h1-big h1 {
+		font-size: 40px;
+		line-height: 100%;
+		letter-spacing: -1.2px;
+	}
+
+	main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
+		font-size: 40px;
+		letter-spacing: 2.4px;
+	}
+
+	main .container-main .first-contain .advantages.title-big .text p {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 150%;
+	}
+
+	main .container-main section.container-advantages {
+		padding: 1em 0;
+	}
+
+	main .container-main section.container-advantages .grid {
+		padding: 0 0.2em;
+	}
+
+	main .container-main section.container-advantages .grid .promo {
+		height: auto;
+		border-radius: 8px;
+		margin: 0.5em;
+		padding: 1em 0.5%;
+	}
+
+	main .container-main section.banner h2 {
+		font-size: 30px;
+		padding-top: 3px;
+	}
 }
+
 @media only screen and (max-width: 768px) {
-    main .container-main .first-contain .img-right img {
-        width: 40%;
-    }
-    main .container-main section.container-advantages .grid .promo {
-        height: auto;
-        border-radius: 8px;
-        margin: 0.5em;
-        padding: 1em 0.2%;
-    }
-    main .container-main section.container-advantages .grid .promo .promo-contain .promo-title {
-        font-size: 36px;
-    }
-    main .container-main section.container-advantages .grid .promo .promo-contain .promo-text {
-        font-size: 14px;
-    }
-    main .container-main section.container-advantages .grid .promo-contain {
-        width: calc(50% - 2em);
-    }
+	main .container-main .first-contain .img-right img {
+		width: 40%;
+	}
+
+	main .container-main section.container-advantages .grid .promo {
+		height: auto;
+		border-radius: 8px;
+		margin: 0.5em;
+		padding: 1em 0.2%;
+	}
+
+	main .container-main section.container-advantages .grid .promo .promo-contain .promo-title {
+		font-size: 36px;
+	}
+
+	main .container-main section.container-advantages .grid .promo .promo-contain .promo-text {
+		font-size: 14px;
+	}
+
+	main .container-main section.container-advantages .grid .promo-contain {
+		width: calc(50% - 2em);
+	}
 }
+
 @media only screen and (max-width: 599px) {
-    main .container-main .first-contain .img-right  {
-        top: 0px;
-    }
+	main .container-main .first-contain .img-right {
+		top: 0px;
+	}
 }

@@ -116,7 +116,6 @@
 	position: absolute;
 	}
 
-
 /* control positioning */
 
 .leaflet-control {
@@ -163,7 +162,6 @@
 	margin-right: 10px;
 	}
 
-
 /* zoom and fade animations */
 
 .leaflet-fade-anim .leaflet-tile {
@@ -201,7 +199,6 @@
 .leaflet-zoom-anim .leaflet-zoom-hide {
 	visibility: hidden;
 	}
-
 
 /* cursors */
 
@@ -264,12 +261,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	background: rgba(255,255,255,0.5);
 	}
 
-
 /* general typography */
 .leaflet-container {
 	font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
 	}
-
 
 /* general toolbar styles */
 
@@ -339,7 +334,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	font-size: 22px;
 	}
 
-
 /* layers control */
 
 .leaflet-control-layers {
@@ -396,7 +390,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-default-icon-path {
 	background-image: url(images/marker-icon.png);
 	}
-
 
 /* attribution and scale controls */
 
@@ -459,7 +452,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border: 2px solid rgba(0,0,0,0.2);
 	background-clip: padding-box;
 	}
-
 
 /* popup */
 
@@ -552,14 +544,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border: 1px solid #999;
 	}
 
-
 /* div icon */
 
 .leaflet-div-icon {
 	background: #fff;
 	border: 1px solid #666;
 	}
-
 
 /* Tooltip */
 /* Base styles for the element that has a tooltip */
