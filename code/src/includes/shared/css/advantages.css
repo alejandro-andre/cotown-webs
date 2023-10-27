@@ -161,11 +161,11 @@ button.btn-secondary {
 -------------------------------- */
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
 	main .container-main .first-contain .advantages.title-big .h1-big h1 {
-		font-size: 120px;
+		font-size: 96px;
 	}
 
 	main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
-		font-size: 120px;
+		font-size: 96px;
 		letter-spacing: -2px;
 	}
 
