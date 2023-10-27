@@ -107,16 +107,26 @@ tags: page
       <div class="reservas_form" id="reservas_form" name="form_multi" method="GET">
         <button class="date-button">
           <label class="labels">{% literal texts, 'cal-seleccionar-fechas', L %}</label>
-          <input type="text" id="dates" name="dates" onclick="open_calendar('dates');" class="inputs" placeholder="{% literal texts, 'booking-formato-fecha', L %}"/>
+          <input type="text" id="book_dates" name="book_dates" 
+            onchange="validate();" 
+            onclick="open_calendar('book_dates');" 
+            class="inputs" placeholder="{% literal texts, 'booking-formato-fecha', L %}"/>
         </button>            
       </div>
     </div>
   </section>
 
   <section class="results">
-    <button class="btn-secondary" onclick="window.location.href='/booking/{{L}}/step-1.html';">
+    <form id="book_form" action="http://localhost:5000/booking/{{L}}/2" method="post">
+      <input type="hidden" id="book_city_id" value="">
+      <input type="hidden" id="book_acom" value="">
+      <input type="hidden" id="book_room" value="">
+      <input type="hidden" id="book_checkin" value="">
+      <input type="hidden" id="book_checkout" value="">
+      <button id="book_button" class="btn-secondary" onclick="booking()" disabled>
         {% literal texts, 'booking-resultados', L %}
-    </button>
+      </button>
+    </form>
   </section>
 
 </main>
@@ -126,70 +136,99 @@ tags: page
 
 {% block footer %}
 {% set script %}
-const tipologies={{typologies|dump|safe}};
+const typologies={{typologies|dump|safe}};
 
-let book_city_id = 0;
-let book_acom = '';
+// Reset
+set_field("book_city_id", "");
+set_field("book_acom", "");
+set_field("book_room", "");
+set_field("book_checkin", localStorage.getItem("book_checkin"));
+set_field("book_checkout", localStorage.getItem("book_checkout"));
+set_field("book_dates", localStorage.getItem("book_dates"));
 
-console.log(localStorage.getItem('book_dates'));
-document.getElementById('dates').value = localStorage.getItem('book_dates');
+function get_field(field) {
+  return document.getElementById(field).value;
+}
+
+function set_field(field, value) {
+  localStorage.setItem(field, value);
+  document.getElementById(field).value = value;
+}
+
+function booking() {
+  document.getElementById("book_form").submit();
+}
+
+function validate(event) {
+  document.getElementById("book_button").disabled = 
+  !(
+    get_field("book_city_id") && 
+    get_field("book_acom") && 
+    get_field("book_room") && 
+    get_field("book_checkin") && 
+    get_field("book_checkout")
+  )
+}
 
 function select_city(id) {
   // Select city
-  book_city_id = id;
-  document.querySelectorAll('div.city').forEach(elem => elem.classList.remove('active'));
-  document.querySelectorAll('div.type').forEach(elem => elem.classList.remove('active'));
-  document.querySelectorAll('div.room').forEach(elem => elem.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  localStorage.setItem('book_city_id', id);
+  document.querySelectorAll("div.city").forEach(elem => elem.classList.remove("active"));
+  document.querySelectorAll("div.type").forEach(elem => elem.classList.remove("active"));
+  document.querySelectorAll("div.room").forEach(elem => elem.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  set_field("book_city_id", id)
 
   // Private apartment
-  document.getElementById('roomtype').style.display = 'block';
+  document.getElementById("roomtype").style.display = "block";
 
-  // Hide non available tipologies
-  document.querySelectorAll('div.type').forEach(elem => elem.style.display = 'none');
-  localStorage.setItem('book_acom', null);
-  for (let l of tipologies) {
-    if (l.id == book_city_id) {
+  // Hide non available typologies
+  document.querySelectorAll("div.type").forEach(elem => elem.style.display = "none");
+  localStorage.setItem("book_acom", null);
+  for (let l of typologies) {
+    if (l.id == get_field("book_city_id")) {
       for (let t of l.Sale_types) {
         el = document.getElementById(t.Sale_type);
-        el.style.display = 'block';
+        el.style.display = "block";
       }
     }
   }
+  validate();
 }
 
 function select_type(id) {
   // Select type
-  document.querySelectorAll('div.type').forEach(elem => elem.classList.remove('active'));
-  document.querySelectorAll('div.room').forEach(elem => elem.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  localStorage.setItem('book_acom', id);
-  localStorage.setItem('book_room', null);
+  document.querySelectorAll("div.type").forEach(elem => elem.classList.remove("active"));
+  document.querySelectorAll("div.room").forEach(elem => elem.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  set_field("book_acom", id)
+  set_field("book_room", null)
   
   // Private apartment
-  document.getElementById('roomtype').style.display = (id == 'ap') ? 'none' : 'block';
+  document.getElementById("roomtype").style.display = (id == "ap") ? "none" : "block";
 
   // Hide rooms
-  document.querySelectorAll('div.room').forEach(elem => elem.style.display = 'none');
-  for (let l of tipologies) {
-    if (l.id == book_city_id) {
+  document.querySelectorAll("div.room").forEach(elem => elem.style.display = "none");
+  for (let l of typologies) {
+    if (l.id == get_field("book_city_id")) {
       for (let t of l.Sale_types) {
         if (t.Sale_type == id) {
           for (let r of t.Room_types) {
             el = document.getElementById(r.Room_type);
-            el.style.display = 'block';
+            el.style.display = "block";
           }
         }
       }
     }
   }
+  validate();
 }
+
 function select_room(id) {
   // Select type
-  document.querySelectorAll('div.room').forEach(elem => elem.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  localStorage.setItem('book_room', id);
+  document.querySelectorAll("div.room").forEach(elem => elem.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  set_field("book_room", id)
+  validate();
 }
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

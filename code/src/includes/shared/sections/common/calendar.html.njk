@@ -146,9 +146,9 @@
 {% block footer %}
 <script>
 // Numero de meses entre dos fechas
-function months(fin, fout) {
-    f1 = new Date(fin);
-    f2 = new Date(fout);
+function months(fi, fo) {
+    f1 = new Date(fi);
+    f2 = new Date(fo);
     f2.setDate(f2.getDate() + 1)
     const meses = (f2.getFullYear() - f1.getFullYear()) * 12 + (f2.getMonth() - f1.getMonth());
     if (meses < 1 || meses > 11) return false;
@@ -306,6 +306,7 @@ function close_calendar(event) {
   localStorage.setItem('book_checkin', fin.dataset.id);
   localStorage.setItem('book_checkout', fout.dataset.id);
   calendar.style.display = "none";
+  result.dispatchEvent(new Event("change"));
 }
 
 // Calendar
