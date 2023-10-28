@@ -216,7 +216,8 @@ function select_type(id) {
         if (t.Sale_type == id) {
           for (let r of t.Room_types) {
             el = document.getElementById(r.Room_type);
-            el.style.display = "block";
+            if (el)
+              el.style.display = "block";
           }
         }
       }
