@@ -189,7 +189,8 @@ function select_city(id) {
     if (l.id == get_field("book_city_id")) {
       for (let t of l.Sale_types) {
         el = document.getElementById(t.Sale_type);
-        el.style.display = "block";
+        if (el)
+          el.style.display = "block";
       }
     }
   }
