@@ -8,7 +8,7 @@ module.exports = async (query, config, name) => {
   const token = require('./token');
   const fetch = require('node-fetch');
 
-  console.log('Retrieving content ' + name + ' from ' + config.site);
+  console.log('Retrieving GraphQL content ' + name + ' from ' + config.site);
   
   // Get token
   const variables = { id: config.siteid, authorization : await token() };

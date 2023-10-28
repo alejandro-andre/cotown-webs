@@ -1,4 +1,4 @@
-module.exports = async (url, name) => {
+module.exports = async (url, config, name) => {
 
   if (name == undefined)
     return undefined;
@@ -8,7 +8,7 @@ module.exports = async (url, name) => {
   const token = require('./token');
   const fetch = require('node-fetch');
 
-  console.log('Retrieving content ' + name);
+  console.log('Retrieving SQL content ' + name + ' from ' + config.site);
   
   // Get token
   const auth = await token();

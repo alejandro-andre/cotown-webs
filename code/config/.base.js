@@ -183,7 +183,6 @@ module.exports = (eleventyConfig) => {
   // SVG inline shortcode
   eleventyConfig.addNunjucksAsyncShortcode('svg', async (src, name) => {
     // Get metadata
-    // console.log(`Retrieving svg ${name}`);
     try {
       let metadata = await Image(src, {
         formats: ['svg'],
@@ -199,8 +198,8 @@ module.exports = (eleventyConfig) => {
   // Image optimizer shorcode
   eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
     // Get metadata
-    // console.log(`Retrieving image ${name}`);
     try {
+      // src = './config/image.jpg';
       let metadata = await Image(src, {
         widths: widths,
         formats: ["webp", "jpeg"],
