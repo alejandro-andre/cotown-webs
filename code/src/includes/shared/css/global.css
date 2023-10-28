@@ -40,6 +40,10 @@ select option:disabled {
 	color: var(--grey-light);
 }
 
+.only-desktop {
+	display: none;
+}
+
 /*
 ::placeholder {
     color: var(--grey-light);
@@ -1592,6 +1596,11 @@ button.date-button input.inputs {
 		display: none;
 	}
 
+	.only-desktop {
+		display: block;
+	}
+
+	.only-mobile,
 	.only-mobile-menu,
 	.only-mobile-private,
 	.black-line .pure-menu.pure-menu-horizontal ul li.only-menu-mobile {
