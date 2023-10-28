@@ -1,3 +1,8 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1,
@@ -116,6 +121,29 @@ button {
 	background-color: var(--primary-dark);
 }
 
+.btn-disabled {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 16px 26px;
+	width: 150px;
+	height: 32px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 63px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 16px;
+	background-color: var(--primary);
+	color: var(--primary-text);
+	border: 0px 0 none;
+	opacity: 0.4;
+}
+
+.btn-disabled:hover {
+	background-color: var(--primary-dark);
+}
+
 .btn-loading {
 	display: flex;
 	flex-direction: row;
@@ -175,7 +203,7 @@ button {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 63px;
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 16px;
 	padding: 18px;
 	border: 1px solid var(--primary);
@@ -188,13 +216,6 @@ button {
 	border-color: var(--primary-dark);
 	background-color: var(--white);
 	color: var(--primary-dark);
-}
-
-.btn-secondary:disabled, 
-.btn-secondary:disabled:hover {
-	border-color: var(--grey-dark);
-	background-color: var(--grey-light);
-	color: var(--grey-dark);
 }
 
 .btn-primary.search {
@@ -470,7 +491,7 @@ border: 1px solid #D1D1D1; */
 	ul,
 	ol,
 	form {
-		margin-bottom: 2.5rem;
+		margin-bottom: 0.5rem;
 	}
 
 	/* Utilities
@@ -1076,7 +1097,8 @@ button.back p {
 	justify-content: flex-start;
 	align-items: flex-start;
 	object-fit: contain;
-	padding: 0 0 0 80px;
+	padding: 0 0 0 100px;
+	margin-bottom: 20px;
 }
 
 .main-booking .main-contain .panel-container .left.tab2 .description .img {
@@ -1123,6 +1145,7 @@ button.back p {
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 70%;
+	text-align: right;
 }
 
 .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.first .price span {
@@ -1134,6 +1157,7 @@ button.back p {
 	width: 60%;
 	font-size: 22px;
 	font-weight: 400;
+	margin-bottom: 20px;
 }
 
 .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices {
@@ -1145,7 +1169,7 @@ button.back p {
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
-	margin: 0 0 1rem;
+	margin: 0;
 }
 
 .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.prices .share .sharing,
@@ -1229,6 +1253,7 @@ button.back p {
 	justify-content: flex-end;
 	align-items: flex-end;
 	position: relative;
+	margin-top: 15px
 }
 
 .main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third button {
@@ -1239,7 +1264,7 @@ button.back p {
 	letter-spacing: -0.15px;
 }
 
-.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc.third button em {
+.main-booking .main-contain .panel-container .left.tab2 .description .desc-container .secc button em {
 	font-size: 18px;
 	margin-left: 16px;
 }
@@ -1923,7 +1948,7 @@ button.back p {
 		width: 100%;
 		text-align: center;
 		justify-content: center;
-		padding: 18px;
+		padding: 1.5em 0;
 	}
 
 	.content-booking section .calendar .reservas_form {
