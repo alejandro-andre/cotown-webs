@@ -117,7 +117,9 @@ tags: page
   </section>
 
   <section class="results">
-    <form id="book_form" action="/booking/{{L}}/2" method="post">
+    <form id="book_form" action="/booking/2" method="post">
+      <input type="hidden" id="lang" name="lang" value="{{L}}">
+      <input type="hidden" id="segment" name="segment" value="{{siteid}}">
       <input type="hidden" id="book_city_id" name="book_city_id" value="">
       <input type="hidden" id="book_acom" name="book_acom" value="">
       <input type="hidden" id="book_room" name="book_room" value="">
