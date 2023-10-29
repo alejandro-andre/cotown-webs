@@ -120,11 +120,11 @@ tags: page
     <form id="book_form" action="/booking/2" method="post">
       <input type="hidden" id="lang" name="lang" value="{{L}}">
       <input type="hidden" id="segment" name="segment" value="{{siteid}}">
-      <input type="hidden" id="book_city_id" name="book_city_id" value="">
-      <input type="hidden" id="book_acom" name="book_acom" value="">
-      <input type="hidden" id="book_room" name="book_room" value="">
-      <input type="hidden" id="book_checkin" name="book_checkin" value="">
-      <input type="hidden" id="book_checkout" name="book_checkout" value="">
+      <input type="hidden" id="book_city_id" name="book_city_id" required value="">
+      <input type="hidden" id="book_acom" name="book_acom" required value="">
+      <input type="hidden" id="book_room" name="book_room" required value="">
+      <input type="hidden" id="book_checkin" name="book_checkin" required value="">
+      <input type="hidden" id="book_checkout" name="book_checkout" required value="">
       <button id="book_button" class="btn-secondary" onclick="booking()" disabled>
         {% literal texts, 'booking-resultados', L %}
       </button>
@@ -153,6 +153,8 @@ function get_field(field) {
 }
 
 function set_field(field, value) {
+  if (value == null)
+    value = "";
   localStorage.setItem(field, value);
   document.getElementById(field).value = value;
 }
@@ -162,6 +164,8 @@ function booking() {
 }
 
 function validate(event) {
+  set_field("book_checkin", localStorage.getItem("book_checkin"));
+  set_field("book_checkout", localStorage.getItem("book_checkout"));
   document.getElementById("book_button").disabled = 
   !(
     (get_field("book_city_id")) && 
@@ -178,19 +182,17 @@ function select_city(id) {
   document.querySelectorAll("div.room").forEach(elem => elem.classList.remove("active"));
   document.getElementById(id).classList.add("active");
   set_field("book_city_id", id)
-
-  // Private apartment
-  document.getElementById("roomtype").style.display = "block";
+  set_field("book_acom", null)
+  set_field("book_room", null)
 
   // Hide non available typologies
-  document.querySelectorAll("div.type").forEach(elem => elem.style.display = "none");
-  localStorage.setItem("book_acom", null);
+  document.querySelectorAll("div.type").forEach(elem => elem.style.visibility = "hidden");
   for (let l of typologies) {
     if (l.id == get_field("book_city_id")) {
       for (let t of l.Sale_types) {
         el = document.getElementById(t.Sale_type);
         if (el)
-          el.style.display = "block";
+          el.style.visibility = "visible";
       }
     }
   }
@@ -209,7 +211,7 @@ function select_type(id) {
   document.getElementById("roomtype").style.display = (id == "ap") ? "none" : "block";
 
   // Hide rooms
-  document.querySelectorAll("div.room").forEach(elem => elem.style.display = "none");
+  document.querySelectorAll("div.room").forEach(elem => elem.style.visibility = "hidden");
   for (let l of typologies) {
     if (l.id == get_field("book_city_id")) {
       for (let t of l.Sale_types) {
@@ -217,7 +219,7 @@ function select_type(id) {
           for (let r of t.Room_types) {
             el = document.getElementById(r.Room_type);
             if (el)
-              el.style.display = "block";
+              el.style.visibility = "visible";
           }
         }
       }

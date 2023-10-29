@@ -15,6 +15,9 @@ console.log = function() {
 
 module.exports = (eleventyConfig) => {
 
+  // Environment variables
+  eleventyConfig.test = process.env.TEST11TY;
+  
   // School year
   var year = new Date().getFullYear();
   if (new Date().getMonth() >= 8)
@@ -199,7 +202,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
     // Get metadata
     try {
-      // src = './config/image.jpg';
+      if (eleventyConfig.test == 'test') {
+        src = './config/image.jpg';
+      }
       let metadata = await Image(src, {
         widths: widths,
         formats: ["webp", "jpeg"],
