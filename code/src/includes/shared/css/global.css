@@ -678,6 +678,10 @@ span.turquoise {
 	height: 48px;
 }
 
+.container-header .black-line .left-nav .logo .desktop .img-logo.cotown {
+	margin-top: -5px;
+}
+
 /* NAVIGATION MENU
 -------------------------------- */
 .black-line {
