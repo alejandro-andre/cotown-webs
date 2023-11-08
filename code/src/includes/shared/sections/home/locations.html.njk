@@ -12,7 +12,7 @@
         {% for l in locations %}
         {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
         <li class="splide__slide">
-          {% if l.Name != 'Valencia' %}
+          {% if site == "cotown" or l.Name != 'Valencia' %}
           <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}-{{l | translate('Name', L) | slugify}}.html">
           {% else %}
           <a href="{{root}}{{langs[L].folder}}/facultades.html">
