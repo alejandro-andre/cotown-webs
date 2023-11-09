@@ -322,12 +322,12 @@
 	width: 48px;
 }
 
-.right-data .apartment-services .splide-services .splide__list .splide__slide .slide svg .svg_base {
-	fill: #fff !important;
+.svg_base {
+    fill: var(--primary-flats-text) !important;
 }
 
-.right-data .apartment-services .splide-services .splide__list .splide__slide .slide svg .svg_accent {
-	fill: #333 !important;
+.svg_accent {
+     fill:var(--primary) !important; 
 }
 
 .right-data .apartment-services .splide-services .splide__arrow {
@@ -530,7 +530,8 @@
 
 .svg_base {
     fill: var(--primary-flats-text) !important;
- }
+}
+
 .svg_accent {
      fill: var(--primary) !important; 
 }
