@@ -8,8 +8,9 @@
     /* // Main color */
     --primary: #00bfb2;
     --primary-regular: #00998b;
-    --primary-dark: #00736B;
+    --primary-dark: #3C434A;
     --primary-underline: #00bfb294;
+    --primary-flats: #121212;
 
     /* // Background color */
     --secondary-header: #121212;
@@ -24,6 +25,13 @@
 
     /* PRIVE */
     --prive-bg: #121212;
+    --secondary-button-fill: #00bfb2;
+    --secondary-button-border: #00bfb2;
+    --secondary-button-text: #ffffff;
+    --primary-button-fill: #121212;
+    --primary-button-border: #ffffff;
+    --primary-button-text: #ffffff;
+    --primary-flats-text: #ffffff;
 
     /* Locations boxes hover */
     --location-label-bg: rgba(37, 186, 209, 0.2);
@@ -69,13 +77,13 @@
     --shadow-soft: rgba(2, 0, 2, 15%);
     --shadow-medium: rgba(8, 0, 4, 15%);
     --shadow-strong: rgba(16, 0, 8, 20%);
-    /* box-shadow: 2px 3px 12px rgba(16, 0, 8, 20%); \*/
 
-    /* // border radius boxes */
-    --radius-1: 0px 0px;
-    --radius-2: 0px;
-    --left-top: 0px;
+    /* Border radius boxes */
+    --radius-1: 0; 
+    --radius-2: 0;
+    --left-top: 0;
     --slider-cards: 0;
+    --slider-cards-small: 0;
 
     /* BACKGROUN EN BANNER NUESTROS PISAZOS */
     --banner-bg1: rgb(0, 96, 89);

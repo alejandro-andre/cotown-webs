@@ -172,7 +172,7 @@
   display: inline-block;
   padding: 0;
   outline: 1px solid var(--grey-light);
-  border-radius: 0px 11.324px 11.324px 11.324px;
+  border-radius: var(--slider-cards-small);
   cursor: pointer;
   max-width: 156px;
   width: 28%;

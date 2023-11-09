@@ -135,16 +135,16 @@ section.location {
 .carousel {
     position: relative;
     max-width: 99vw;
-    height: auto;
+    height: auto; 
 }
 .carousel .carousel-main-list .splide__slide {
     max-width: 70vw;
     margin-right: 6em !important;
-    border-radius: 24px;
+    border-radius: var(--left-top);
 }
 .carousel .carousel-main-list .splide__slide .card-contain {
     background-color: var(--primary-dark);
-    border-radius: 24px;
+    border-radius: var(--left-top);
 }
 .carousel .carousel-main-list .splide__slide .card-contain .types {
     background-color: var(--primary-dark);
@@ -168,7 +168,7 @@ a {
     position: relative;
     height: 400px;
     object-fit: cover;
-    border-radius: 24px;
+    border-radius: var(--left-top);
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop img {
     border-top-left-radius: var(-left-top);
@@ -197,7 +197,7 @@ a {
     position: relative;
     z-index: 1000;
     background-color: var(--primary-dark);
-    border-radius: 0 0 24px 24px;
+    border-radius: var(--slider-cards);
     min-height: 280px;
 }
 .carousel .carousel-main-list .card .card-body a {
