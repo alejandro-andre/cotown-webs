@@ -7,7 +7,7 @@
 	.st1{fill:none;}
 	.st2{fill:#FFFFFF;}
 	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#00BFB2;}
-	.st4{stroke:#30363B;stroke-width:0.1828;}
+	.svg-base{stroke:#30363B;stroke-width:0.1828;}
 	.st5{fill-rule:evenodd;clip-rule:evenodd;}
 	.st6{fill:url(#SVGID_1_);}
 	.st7{fill:#FBFBFB;}

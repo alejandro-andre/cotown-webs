@@ -528,6 +528,13 @@
 	height: 10px;
 }
 
+.svg_base {
+    fill: var(--primary-flats-text) !important;
+ }
+.svg_accent {
+     fill: var(--primary) !important; 
+}
+
 /* DESKTOP SMALL */
 @media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
 	.first .first-contain .first-slider .splide__pagination {

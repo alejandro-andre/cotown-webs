@@ -342,11 +342,13 @@ button.green-button.btn-secondary {
     background-color: var(--white);
     transform: scale(1);
 }
-.carousel .carousel-main-list .card .card-body .carousel-mini li svg .svg_base { 
-    fill:#fff !important;
- }
-.carousel .carousel-main-list .card .card-body .carousel-mini li svg .svg_accent {
-     fill:var(--primary)!important; 
+
+.svg_base {
+    fill: var(--primary-flats-text) !important;
+}
+
+.svg_accent {
+     fill:var(--primary) !important; 
 }
 
 .carousel .carousel-main-list .card .card-body .price {    
@@ -413,15 +415,9 @@ section.necesities .grid .necesidad .img svg {
     width: 75px;
     padding: 1em 0 .5em;
 }
-section.necesities .grid .necesidad .img svg .svg_base { 
-    fill:#fff!important;
-}
 section.necesities .grid .necesidad .img svg .st4 { 
     fill:#fff!important;
 } 
-section.necesities .grid .necesidad .img svg .svg_accent {
-     fill: var(--primary)!important; 
-}
 section.necesities .grid .necesidad .p-title p {
     font-weight: 700;
     font-size: 24px;
@@ -796,12 +792,6 @@ section.necesities .grid .necesidad .p-text p {
     .piso .services-list li svg {
         width: 40px;        
     }
-    .piso .services-list li svg .svg_base { 
-        fill:#fff !important;
-    }
-    .piso .services-list li svg .st4 { 
-        fill:#fff!important;
-    } 
     .piso .services-list li svg .svg_accent {
          fill: var(--primary) !important; 
     }
@@ -852,12 +842,6 @@ section.necesities .grid .necesidad .p-text p {
     section.necesities .grid .necesidad .img svg {
         width: 50px;
         padding: 0;
-    }
-    section.necesities .grid .necesidad .img svg .svg_base { 
-        fill:#ffffff !important;
-     }
-    section.necesities .grid .necesidad .img svg .svg_accent {
-         fill: var(--primary) !important; 
     }
     section.necesities .grid .necesidad .p-title p {
         font-size: 15px;
