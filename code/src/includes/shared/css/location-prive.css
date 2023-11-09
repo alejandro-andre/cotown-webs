@@ -171,7 +171,7 @@ a {
     border-radius: var(--left-top);
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop img {
-    border-top-left-radius: var(-left-top);
+    border-top-left-radius: var(--left-top);
     width: 100%;
     height: 400px;
     object-fit: cover;
