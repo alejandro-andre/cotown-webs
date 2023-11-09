@@ -4,7 +4,7 @@
 	justify-content: center;
 	align-items: center;
 	background-color: var(--primary-dark);
-	color: var(--primary-flat-text);
+	color: var(--primary-flats-text);
 }
 
 .first .first-contain {
@@ -516,7 +516,7 @@
 }
 
 .btn-text a {
-	color: var(--primary-text)
+	color: var(--primary-flats-text)
 }
 
 #main-gallery.rooms-carousel .splide__pagination {
