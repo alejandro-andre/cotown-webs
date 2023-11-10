@@ -144,9 +144,9 @@ const typologies={{typologies|dump|safe}};
 set_field("book_city_id", "");
 set_field("book_acom", "");
 set_field("book_room", "");
-set_field("book_checkin", localStorage.getItem("book_checkin"));
-set_field("book_checkout", localStorage.getItem("book_checkout"));
-set_field("book_dates", localStorage.getItem("book_dates"));
+set_field("book_checkin", sessionStorage.getItem("book_checkin"));
+set_field("book_checkout", sessionStorage.getItem("book_checkout"));
+set_field("book_dates", sessionStorage.getItem("book_dates"));
 
 function get_field(field) {
   return document.getElementById(field).value;
@@ -155,7 +155,7 @@ function get_field(field) {
 function set_field(field, value) {
   if (value == null)
     value = "";
-  localStorage.setItem(field, value);
+  sessionStorage.setItem(field, value);
   document.getElementById(field).value = value;
 }
 
@@ -164,8 +164,8 @@ function booking() {
 }
 
 function validate(event) {
-  set_field("book_checkin", localStorage.getItem("book_checkin"));
-  set_field("book_checkout", localStorage.getItem("book_checkout"));
+  set_field("book_checkin", sessionStorage.getItem("book_checkin"));
+  set_field("book_checkout", sessionStorage.getItem("book_checkout"));
   document.getElementById("book_button").disabled = 
   !(
     (get_field("book_city_id")) && 

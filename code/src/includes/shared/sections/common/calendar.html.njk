@@ -289,9 +289,9 @@ function open_calendar(field) {
 
 // Valida y cierra el calendario
 function close_calendar(event) {
-  localStorage.removeItem("book_dates");
-  localStorage.removeItem("book_checkin");
-  localStorage.removeItem("book_checkout");
+  sessionStorage.removeItem("book_dates");
+  sessionStorage.removeItem("book_checkin");
+  sessionStorage.removeItem("book_checkout");
   if (fout.value == '') {
     fin.value = '';
     result.value = fin.value + ' - ' + fout.value
@@ -302,9 +302,9 @@ function close_calendar(event) {
     return;
   }
   result.value = fin.value + ' - ' + fout.value
-  localStorage.setItem('book_dates', result.value);
-  localStorage.setItem('book_checkin', fin.dataset.id);
-  localStorage.setItem('book_checkout', fout.dataset.id);
+  sessionStorage.setItem('book_dates', result.value);
+  sessionStorage.setItem('book_checkin', fin.dataset.id);
+  sessionStorage.setItem('book_checkout', fout.dataset.id);
   calendar.style.display = "none";
   result.dispatchEvent(new Event("change"));
 }

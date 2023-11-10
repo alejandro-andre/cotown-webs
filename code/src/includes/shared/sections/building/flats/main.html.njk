@@ -148,16 +148,16 @@ function close_tour() {
 
 // Buttons
 function go_book(id) {
-  localStorage.setItem('city', '{{building.District.Location.Name}}');
-  localStorage.setItem('building', '{{building.Name}}');
-  localStorage.setItem('book_city_id', '{{building.District.Location.id}}');
-  localStorage.setItem('book_building_id', '{{building.id}}');
-  localStorage.setItem('book_type', id);
+  sessionStorage.setItem('city', '{{building.District.Location.Name}}');
+  sessionStorage.setItem('building', '{{building.Name}}');
+  sessionStorage.setItem('book_city_id', '{{building.District.Location.id}}');
+  sessionStorage.setItem('book_building_id', '{{building.id}}');
+  sessionStorage.setItem('book_type', id);
   location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
 }
 function go_visit() {
-  localStorage.setItem('city', '{{building.District.Location.Name}}');
-  localStorage.setItem('building', '{{building.Name}}');
+  sessionStorage.setItem('city', '{{building.District.Location.Name}}');
+  sessionStorage.setItem('building', '{{building.Name}}');
   location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html";
 }
 {% endset %}<script>{{ script | jsmin | safe }}</script>

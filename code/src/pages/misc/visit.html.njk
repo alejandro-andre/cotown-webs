@@ -139,7 +139,7 @@ function get_buildings(value) {
 
   // Get city
   if (value)
-    localStorage.setItem('city', value);
+    sessionStorage.setItem('city', value);
   else
     value = document.getElementById('101').value
 
@@ -158,9 +158,9 @@ function get_buildings(value) {
 }
 
 // Load
-document.getElementById('101').value = localStorage.getItem('city');
+document.getElementById('101').value = sessionStorage.getItem('city');
 get_buildings(null);
-document.getElementById('100').value = localStorage.getItem('building');
+document.getElementById('100').value = sessionStorage.getItem('building');
 {% include "shared/js/ac.js" %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

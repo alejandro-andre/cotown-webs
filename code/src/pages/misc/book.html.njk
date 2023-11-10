@@ -230,7 +230,7 @@ function get_buildings(value) {
 
   // Get city
   if (value)
-    localStorage.setItem('city', value);
+    sessionStorage.setItem('city', value);
   else
     value = document.getElementById('101').value
 
@@ -259,7 +259,7 @@ function get_types(value) {
 
   // Get building
   if (value)
-    localStorage.setItem('building', value);
+    sessionStorage.setItem('building', value);
   else
     value = document.getElementById('100').value;
 
@@ -309,13 +309,13 @@ function validate() {
 };
 
 // Load
-document.getElementById('96').value  = localStorage.getItem('book_checkin');
-document.getElementById('97').value  = localStorage.getItem('book_checkout');
-document.getElementById('101').value = localStorage.getItem('city');
+document.getElementById('96').value  = sessionStorage.getItem('book_checkin');
+document.getElementById('97').value  = sessionStorage.getItem('book_checkout');
+document.getElementById('101').value = sessionStorage.getItem('city');
 get_buildings(null);
-document.getElementById('100').value = localStorage.getItem('building');
+document.getElementById('100').value = sessionStorage.getItem('building');
 get_types(null);
-document.getElementById('99').value = localStorage.getItem('book_type');
+document.getElementById('99').value = sessionStorage.getItem('book_type');
 {% include "shared/js/ac.js" %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
