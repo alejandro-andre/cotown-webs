@@ -877,7 +877,7 @@ button.back p {
 }
 
 .main-booking .main-contain .panel-container .left form h3 {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: var(--text-font);
 	font-size: 26px;
 	font-weight: 600;
 	line-height: 124%;
@@ -1322,7 +1322,7 @@ button.back p {
 }
 
 .main-booking .main-contain .panel-container .right.tab2 .resume h3 {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: var(--text-font);
 	font-size: 26px;
 	font-weight: 700;
 	line-height: 124%;
@@ -1567,7 +1567,7 @@ button.back p {
 }
 
 .main-booking .main-contain .panel-container .right.tab3 .resume h3 {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: var(--text-font);
 	font-size: 26px;
 	font-weight: 700;
 	line-height: 124%;

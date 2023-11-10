@@ -62,7 +62,7 @@ main .location .container-main .first-contain .video-loc .text-container h3 {
     position: relative;    
     left: 0;
     top: 0;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--text-font);
 }
 main .location .container-main .first-contain .video-loc .text-container h4 {
     color: var(--white);
@@ -75,7 +75,7 @@ main .location .container-main .first-contain .video-loc .text-container h4 {
     position: relative;    
     left: 0;
     top: 0;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--text-font);
 }
 main .location .container-main .first-contain .video-loc .text-container .description {
     width: 60%;
