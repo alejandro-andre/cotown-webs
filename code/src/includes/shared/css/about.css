@@ -17,10 +17,10 @@ main .container-main .first-contain.about .img {
 main .container-main .first-contain.about .title-big {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: stretch;
+	justify-content: justify;
 	align-items: flex-start;
-	margin: 0 0 8em 20%;
-	padding: 50px 50px 50px 25%;
+	margin: 0;
+	padding: 50px;
 	position: relative;
 	z-index: 1;
 	background-color: var(--primary-background);
@@ -35,6 +35,8 @@ main .container-main .first-contain.about .img img {
 }
 
 main .container-main .first-contain.about .title-big h1 {
+	justify-content: center;
+	margin: auto;
 	font-weight: 400;
 	font-size: 64px;
 	line-height: 100%;
@@ -149,8 +151,6 @@ main .container-main section.members .button-more {
 		flex-flow: row wrap;
 		justify-content: stretch;
 		align-items: flex-start;
-		margin: 2em 0 4em 0;
-		padding: 0 2em;
 		position: static;
 		background-color: var(--white);
 	}
