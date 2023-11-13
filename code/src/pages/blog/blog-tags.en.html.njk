@@ -2,11 +2,11 @@
 name: blog
 eleventyComputed:
     L: "en"
-    title: "{{langs[L].pages[name].title}}"
+    title: "{{langs[L].pages[name][site].title}}"
     alt:
       es: "{{langs.es.folder}}/blog/{{posttag | translate('Name', 'es') | slugify}}.html"
       en: "{{langs.en.folder}}/blog/{{posttag | translate('Name', 'en') | slugify}}.html"
-    description: "{{langs[L].pages[name].description}} | {{posttag | translate('Name', L) | slugify}}"
+    description: "{{langs[L].pages[name][site].description}} | {{posttag | translate('Name', L) | slugify}}"
     permalink: "{{root}}{{langs[L].folder}}/blog/{{posttag | translate('Name', L) | slugify}}.html"
 layout: shared/layouts/base.html
 pagination:

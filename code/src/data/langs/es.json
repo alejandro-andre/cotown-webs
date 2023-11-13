@@ -6,98 +6,194 @@
     "index": {
       "url": "index",
       "text": "",
-      "title": "Vanguard Student Housing- El lugar donde todo comienza",
-      "description": "Ven a vivir la el auténtico coliving para estudiantes universitar@s"
+      "cotown": {
+        "title": "Vanguard Student Housing- El lugar donde todo comienza",
+        "description": "Ven a vivir la el auténtico coliving para estudiantes universitar@s"
+      },
+      "vanguard": {
+        "title": "Vanguard Student Housing- El lugar donde todo comienza",
+        "description": "Ven a vivir la el auténtico coliving para estudiantes universitar@s"
+      }
     },
     "locations": {
       "url": "localizaciones",
       "text": "Localizaciones",
-      "title": "Alójate en nuestros pisos compartidos o vive a tu manera con nuestros pisos completos en las mejores zonas",
-      "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
+      "cotown": {
+        "title": "Alójate en nuestros pisos compartidos o vive a tu manera con nuestros pisos completos en las mejores zonas",
+        "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
+      },
+      "vanguard": {
+        "title": "Alójate en nuestros pisos compartidos o vive a tu manera con nuestros pisos completos en las mejores zonas",
+        "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
+      }
     },
     "rooms": {
       "url": "pisos-compartidos",
       "text": "Localizaciones",
-      "title": "Alójate en nuestros pisos compartidos en las mejores zonas",
-      "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
+      "cotown": {
+        "title": "Alójate en nuestros pisos compartidos en las mejores zonas",
+        "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
+      },
+      "vanguard": {
+        "title": "Alójate en nuestros pisos compartidos en las mejores zonas",
+        "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
+      }
     },
     "flats": {
       "url": "apartamentos-privados",
       "text": "Localizaciones",
-      "title": "Vive a tu manera con nuestros pisos completos en las mejores zonas de Barcelona",
-      "description": "Elige cómo, cuándo y de qué manera quieres vivir con un pisazo para ti sol@ en la ciudad más cosmopolita y molona."
+      "cotown": {
+        "title": "Vive a tu manera con nuestros pisos completos en las mejores zonas de Barcelona",
+        "description": "Elige cómo, cuándo y de qué manera quieres vivir con un pisazo para ti sol@ en la ciudad más cosmopolita y molona."
+      },
+      "vanguard": {
+        "title": "Vive a tu manera con nuestros pisos completos en las mejores zonas de Barcelona",
+        "description": "Elige cómo, cuándo y de qué manera quieres vivir con un pisazo para ti sol@ en la ciudad más cosmopolita y molona."
+      }
     },
     "residences": {
       "url": "residencias",
       "text": "Residencias",
-      "title": "Disfruta de experiencia universitaria en nuestras residencias para estudiantes",
-      "description": "Vive al máximo una de las mejores épocas de tu vida. Nosotros nos encargamos de todo lo demás"
+      "cotown": {
+        "title": "Disfruta de experiencia universitaria en nuestras residencias para estudiantes",
+        "description": "Vive al máximo una de las mejores épocas de tu vida. Nosotros nos encargamos de todo lo demás"
+      },
+      "vanguard": {
+        "title": "Disfruta de experiencia universitaria en nuestras residencias para estudiantes",
+        "description": "Vive al máximo una de las mejores épocas de tu vida. Nosotros nos encargamos de todo lo demás"
+      }
     },
     "about": {
       "url": "conocenos",
       "text": "Conócenos",
-      "title": "¡Conoce a nuestro equipazo!",
-      "description": "¿Quieres formar parte del team de Vanguard Student Housing o saber quien hay detrás de todo esto? ¡Bienvenid@!"
+      "cotown": {
+        "title": "¡Conoce a nuestro equipazo!",
+        "description": "¿Quieres formar parte del team de Vanguard Student Housing o saber quien hay detrás de todo esto? ¡Bienvenid@!"
+      },
+      "vanguard": {
+        "title": "¡Conoce a nuestro equipazo!",
+        "description": "¿Quieres formar parte del team de Vanguard Student Housing o saber quien hay detrás de todo esto? ¡Bienvenid@!"
+      }
     },
     "advantages": {
       "url": "ventajas",
       "text": "Ventajas",
-      "title": "Colabora con Vanguard Student Housing",
-      "description": "Si quieres convertirte en nuestro partner, tan solo tienes que decirlo. "
+      "cotown": {
+        "title": "Colabora con Vanguard Student Housing",
+        "description": "Si quieres convertirte en nuestro partner, tan solo tienes que decirlo. "
+      },
+      "vanguard": {
+        "title": "Colabora con Vanguard Student Housing",
+        "description": "Si quieres convertirte en nuestro partner, tan solo tienes que decirlo. "
+      }
     },
     "faqs": {
       "url": "preguntas-frecuentes",
       "text": "FAQs",
-      "title": "Preguntas frecuentes Vanguard Student Housing ",
-      "description": "¿Tienes alguna duda sobre tu reserva o estancia? Encuentra la respuesta aquí."
+      "cotown": {
+        "title": "Preguntas frecuentes Vanguard Student Housing ",
+        "description": "¿Tienes alguna duda sobre tu reserva o estancia? Encuentra la respuesta aquí."
+      },
+      "vanguard": {
+        "title": "Preguntas frecuentes Vanguard Student Housing ",
+        "description": "¿Tienes alguna duda sobre tu reserva o estancia? Encuentra la respuesta aquí."
+      }
     },
     "blog": {
       "url": "blog",
       "text": "Blog",
-      "title": "Entérate de todo lo que pasa en Vanguard Student Housing",
-      "description": "Todas las novedades y curiosidades del mundo universitario te esperan en este blog"
+      "cotown": {
+        "title": "Entérate de todo lo que pasa en Vanguard Student Housing",
+        "description": "Todas las novedades y curiosidades del mundo universitario te esperan en este blog"
+      },
+      "vanguard": {
+        "title": "Entérate de todo lo que pasa en Vanguard Student Housing",
+        "description": "Todas las novedades y curiosidades del mundo universitario te esperan en este blog"
+      }
     },
     "contact": {
       "url": "contacto",
       "text": "Contacto",
-      "title": "Contacta con nosotr@s",
-      "description": "Nuestro equipo estará encantad@ de atenderte"
+      "cotown": {
+        "title": "Contacta con nosotr@s",
+        "description": "Nuestro equipo estará encantad@ de atenderte"
+      },
+      "vanguard": {
+        "title": "Contacta con nosotr@s",
+        "description": "Nuestro equipo estará encantad@ de atenderte"
+      }
     },
     "privacy": {
       "url": "politica-privacidad",
       "text": "Politica de privacidad",
-      "title": "Política de privacidad",
-      "description": "Política de privacidad"
+      "cotown": {
+        "title": "Política de privacidad",
+        "description": "Política de privacidad"
+      },
+      "vanguard": {
+        "title": "Política de privacidad",
+        "description": "Política de privacidad"
+      }
     },
     "legal": {
       "url": "aviso-legal",
       "text": "Aviso legal",
-      "title": "Aviso legal",
-      "description": "Aviso legal"
+      "cotown": {
+        "title": "Aviso legal",
+        "description": "Aviso legal"
+      },
+      "vanguard": {
+        "title": "Aviso legal",
+        "description": "Aviso legal"
+      }
     },
     "datasecurity": {
       "url": "seguridad-datos",
       "text": "Seguridad y datos",
-      "title": "Seguridad y datos",
-      "description": "Seguridad y datos"
+      "cotown": {
+        "title": "Seguridad y datos",
+        "description": "Seguridad y datos"
+      },
+      "vanguard": {
+        "title": "Seguridad y datos",
+        "description": "Seguridad y datos"
+      }
     },
     "booking": {
       "url": "reserva",
       "text": "¡Reserva ahora!",
-      "title": "¡Reserva ahora!",
-      "description": "Alójate con nosotros y vive la experiencia universitaria como nunca la hayas vivido."
+      "cotown": {
+        "title": "¡Reserva ahora!",
+        "description": "Alójate con nosotros y vive la experiencia universitaria como nunca la hayas vivido."
+      },
+      "vanguard": {
+        "title": "¡Reserva ahora!",
+        "description": "Alójate con nosotros y vive la experiencia universitaria como nunca la hayas vivido."
+      }
     },
     "book": {
       "url": "reserva-ahora",
       "text": "¡Reserva ahora!",
-      "title": "¡Reserva ahora!",
-      "description": "Alójate con nosotros y vive la experiencia universitaria como nunca la hayas vivido."
+      "cotown": {
+        "title": "¡Reserva ahora!",
+        "description": "Alójate con nosotros y vive la experiencia universitaria como nunca la hayas vivido."
+      },
+      "vanguard": {
+        "title": "¡Reserva ahora!",
+        "description": "Alójate con nosotros y vive la experiencia universitaria como nunca la hayas vivido."
+      }
     },
     "visit": {
       "url": "agendar-visita",
       "text": "Agendar visita",
-      "title": "¿Quieres visitar nuestros pisos?",
-      "description": "Rellena el formulario y conoce el coliving universitario de tus sueños."
+      "cotown": {
+        "title": "¿Quieres visitar nuestros pisos?",
+        "description": "Rellena el formulario y conoce el coliving universitario de tus sueños."
+      },
+      "vanguard": {
+        "title": "¿Quieres visitar nuestros pisos?",
+        "description": "Rellena el formulario y conoce el coliving universitario de tus sueños."
+      }
     }
   }
 }

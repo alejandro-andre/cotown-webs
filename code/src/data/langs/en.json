@@ -6,98 +6,193 @@
     "index": {
       "url": "index",
       "text": "",
-      "title": "Vanguard Student Housing - Where everything begins",
-      "description": "Come experience the authentic coliving for university students."
+      "cotown": {
+        "title": "Cotown",
+        "description": "Come experience the authentic coliving."
+      },
+      "vanguard": {
+        "title": "Vanguard Student Housing - Where everything begins",
+        "description": "Come experience the authentic coliving for university students."
+      }
     },
     "locations": {
       "url": "locations",
       "text": "Locations",
-      "title": "Stay in our shared apartments or live your way with our full apartments in the best areas",
-      "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
-    },
+      "cotown":{
+        "title": "Stay in our shared apartments or live your way with our full apartments in the best areas",
+        "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
+      },
+      "vanguard":{
+        "title": "Stay in our shared apartments or live your way with our full apartments in the best areas",
+        "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
+      }    },
     "rooms": {
       "url": "shared-flats",
       "text": "Locations",
-      "title": "Stay in our shared apartments in the best areas",
-      "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
+      "cotown": {
+        "title": "Stay in our shared apartments in the best areas",
+        "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
+      },
+      "vanguard": {
+        "title": "Stay in our shared apartments in the best areas",
+        "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
+      }
     },
     "flats": {
       "url": "private-apartments",
       "text": "Locations",
-      "title": "Live your way with our full apartments in the best areas ",
-      "description": "Choose how, when, and in what way you want to live with a stunning apartment all to yourself in the most cosmopolitan and cool city."
+      "cotown": {
+        "title": "Live your way with our full apartments in the best areas ",
+        "description": "Choose how, when, and in what way you want to live with a stunning apartment all to yourself in the most cosmopolitan and cool city."
+      },
+      "vanguard": {
+        "title": "Live your way with our full apartments in the best areas ",
+        "description": "Choose how, when, and in what way you want to live with a stunning apartment all to yourself in the most cosmopolitan and cool city."
+      }
     },
     "residences": {
       "url": "residences",
       "text": "Residences",
-      "title": "Enjoy the university experience in our student accommodations",
-      "description": "Live one of the best times of your life to the fullest. We take care of everything else."
+      "cotown": {
+        "title": "Enjoy the university experience in our student accommodations",
+        "description": "Live one of the best times of your life to the fullest. We take care of everything else."
+      },
+      "vanguard": {
+        "title": "Enjoy the university experience in our student accommodations",
+        "description": "Live one of the best times of your life to the fullest. We take care of everything else."
+      }
     },
     "about": {
       "url": "about-us",
       "text": "About us",
-      "title": "Meet our amazing team!",
-      "description": "Would you like to join the Vanguard Student Housing team or find out who's behind all this? Welcome!"
+      "cotown": {
+        "title": "Meet our amazing team!",
+        "description": "Would you like to join the Vanguard Student Housing team or find out who's behind all this? Welcome!"
+      },
+      "vanguard": {
+        "title": "Meet our amazing team!",
+        "description": "Would you like to join the Vanguard Student Housing team or find out who's behind all this? Welcome!"
+      }
     },
     "advantages": {
       "url": "advantages",
       "text": "Advantages",
-      "title": "Collaborate with Vanguard Student Housing.",
-      "description": "If you want to become our partner, you just have to say it."
+      "cotown": {
+        "title": "Collaborate with Vanguard Student Housing.",
+        "description": "If you want to become our partner, you just have to say it."
+      },
+      "vanguard": {
+        "title": "Collaborate with Vanguard Student Housing.",
+        "description": "If you want to become our partner, you just have to say it."
+      }
     },
     "faqs": {
       "url": "faqs",
       "text": "FAQs",
-      "title": "FAQ's Vanguard Student Housing",
-      "description": "Do you have any questions about your reservation or stay? Find the answer here."
+      "cotown": {
+        "title": "FAQ's Vanguard Student Housing",
+        "description": "Do you have any questions about your reservation or stay? Find the answer here."
+      },
+      "vanguard": {
+        "title": "FAQ's Vanguard Student Housing",
+        "description": "Do you have any questions about your reservation or stay? Find the answer here."
+      }
     },
     "blog": {
       "url": "blog",
       "text": "Blog",
-      "title": "Stay informed about everything that happens at Vanguard Student Housing.",
-      "description": "All the latest news and curiosities from the university world await you in this blog."
+      "cotown": {
+        "title": "Stay informed about everything that happens at Vanguard Student Housing.",
+        "description": "All the latest news and curiosities from the university world await you in this blog."
+      },
+      "vanguard": {
+        "title": "Stay informed about everything that happens at Vanguard Student Housing.",
+        "description": "All the latest news and curiosities from the university world await you in this blog."
+      }
     },
     "contact": {
       "url": "contact",
       "text": "Contact",
-      "title": "Contact us",
-      "description": "Our team will be delighted to assist you."
+      "cotown": {
+        "title": "Contact us",
+        "description": "Our team will be delighted to assist you."
+      },
+      "vanguard": {
+        "title": "Contact us",
+        "description": "Our team will be delighted to assist you."
+      }
     },
     "privacy": {
       "url": "privacy",
       "text": "Privacy policies",
-      "title": "Privacy policies",
-      "description": "Privacy policies"
+      "cotown": {
+        "title": "Privacy policies",
+        "description": "Privacy policies"
+      },
+      "vanguard": {
+        "title": "Privacy policies",
+        "description": "Privacy policies"
+      }
     },
     "legal": {
       "url": "aviso-legal",
       "text": "Legal",
-      "title": "Legal",
-      "description": "Legal"
+      "cotown": {
+        "title": "Legal",
+        "description": "Legal"
+      },
+      "vanguard": {
+        "title": "Legal",
+        "description": "Legal"
+      }
     },
     "datasecurity": {
       "url": "datasecurity",
       "text": "Data security",
-      "title": "Data security",
-      "description": "Data security"
+      "cotown": {
+        "title": "Data security",
+        "description": "Data security"
+      },
+      "vanguard": {
+        "title": "Data security",
+        "description": "Data security"
+      }
     },
     "booking": {
       "url": "book",
       "text": "Book now!",
-      "title": "Book now!",
-      "description": "Stay with us and experience university life like you've never experienced it before."
+      "cotown": {
+        "title": "Book now!",
+        "description": "Stay with us and experience university life like you've never experienced it before."
+      },
+      "vanguard": {
+        "title": "Book now!",
+        "description": "Stay with us and experience university life like you've never experienced it before."
+      }
     },
     "book": {
       "url": "book-now",
       "text": "Book now!",
-      "title": "Book now!",
-      "description": "Stay with us and experience university life like you've never experienced it before."
+      "cotown": {
+        "title": "Book now!",
+        "description": "Stay with us and experience university life like you've never experienced it before."
+      },
+      "vanguard": {
+        "title": "Book now!",
+        "description": "Stay with us and experience university life like you've never experienced it before."
+      }
     },
     "visit": {
       "url": "schedule-visit",
       "text": "Schedule visit",
-      "title": "Do you want to visit our apartments?",
-      "description": "Fill out the form and discover the university coliving of your dreams.Fill out the form and discover the university coliving of your dreams."
+      "cotown": {
+        "title": "Do you want to visit our apartments?",
+        "description": "Fill out the form and discover the university coliving of your dreams.Fill out the form and discover the university coliving of your dreams."
+      },
+      "vanguard": {
+        "title": "Do you want to visit our apartments?",
+        "description": "Fill out the form and discover the university coliving of your dreams.Fill out the form and discover the university coliving of your dreams."
+      }
     }
   }
 }

@@ -1,11 +1,11 @@
 ---
 name: booking
 eleventyComputed:
-    title: "{{langs[L].pages[name].title}}"
+    title: "{{langs[L].pages[name][site].title}}"
     alt:
       es: "{{root}}{{langs.es.folder}}/"
       en: "{{root}}{{langs.en.folder}}/"
-    description: "{{langs[L].pages[name].description}}"
+    description: "{{langs[L].pages[name][site].description}}"
     permalink: "{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
 layout: shared/layouts/clean.html
 pagination:

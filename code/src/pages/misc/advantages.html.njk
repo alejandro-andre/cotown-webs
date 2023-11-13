@@ -1,11 +1,11 @@
 ---
 name: advantages
 eleventyComputed:
-    title: "{{langs[L].pages[name].title}}"
+    title: "{{langs[L].pages[name][site].title}}"
     alt:
       es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}.html"
       en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}.html"
-    description: "{{langs[L].pages[name].description}}"
+    description: "{{langs[L].pages[name][site].description}}"
     permalink: "{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}.html"
 layout: shared/layouts/base.html
 pagination:
