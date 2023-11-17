@@ -56,6 +56,9 @@
         <ul class="splide__list carousel-main-list">
 
           {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+          {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+          {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+          {% if ra > 0 or rp > 0 %}
           <li class="splide__slide main-slide">
             <div class="card-contain">
               <div class="card shadow desktop">
@@ -193,6 +196,7 @@
               </div>
             </div>
           </li>
+          {% endif %}
           {% endfor %}
 
         </ul>
@@ -205,6 +209,9 @@
   <div class="pisos mobile pure-u-1">
     <div class="piso-contain pure-u-1">
       {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
+      {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+      {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+      {% if ra > 0 or rp > 0 %}
       <div class="piso-main pure-u-1">
 
         <!-- Photo -->
@@ -321,6 +328,7 @@
         </div>
 
       </div>
+      {% endif %}
       {% endfor %}
     </div>
   </div>
