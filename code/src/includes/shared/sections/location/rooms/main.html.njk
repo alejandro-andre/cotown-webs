@@ -47,7 +47,9 @@
     {% endfor %}
     {% endfor %}
 
-    {% if rooms | find('id', 'eq', b.id) | length > 0 %}
+    {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+    {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+    {% if ra > 0 or rp > 0 %}
     <div id="marker_{{b.id}}" style="display: none;">
       <div class="mappopup" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html';">
         {% for photo in b.Photos | find ('Image_type', 'eq', 'habitacion') %}
