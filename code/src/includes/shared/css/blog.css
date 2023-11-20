@@ -280,14 +280,20 @@ main.post-page .container-main .post-content .text .text-content h3 {
 }
 
 main.post-page .container-main .post-content .text .text-content p,
+main.post-page .container-main .post-content .text .text-content a,
 main.post-page .container-main .post-content .text .text-content ul li,
 main.post-page .container-main .post-content .text .text-content ol li {
 	font-size: 22px;
-	font-weight: 500;
 	line-height: 150%;
 }
 
-main.post-page .container-main .post-content .text .text-content ul li {
+main.post-page .container-main .post-content .text .text-content a {
+	color: var(--primary-underline);
+	text-decoration: underline;
+}
+
+main.post-page .container-main .post-content .text .text-content ul li,
+main.post-page .container-main .post-content .text .text-content ol li {
 	padding-left: 12px;
 }
 
@@ -545,6 +551,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 	}
 
 	main.post-page .container-main .post-content .text .text-content p,
+	main.post-page .container-main .post-content .text .text-content a,
 	main.post-page .container-main .post-content .text .text-content ul li,
 	main.post-page .container-main .post-content .text .text-content ol li {
 		font-size: 16px;
