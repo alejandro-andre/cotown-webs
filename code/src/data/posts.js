@@ -4,6 +4,7 @@ module.exports = async (config) => {
   const QUERY = `
   query data ($id: Int) {
     data: Marketing_PostList (
+      orderBy: [{ attribute: Publish_date, direction:DESC } ]
       where: { 
         AND: [
           { Segment_id: { EQ: $id } } 
