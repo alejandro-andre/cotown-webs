@@ -12,21 +12,22 @@
       <div class="locations-container pure-u-1">
 
         {% for l in locations %}
+
+        {% set rooms = false %}
+        {% set flats = false %}
+        {% set residences = buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) | length > 0 %}
+        {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
+          {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
+          {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
+          {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
+          {% if ra > 0 or rp > 0 %}{% set rooms = true %}{% endif %}
+          {% if ra > 0 or rc > 0 %}{% set flats = true %}{% endif %}
+        {% endfor %}
+
+        {% if rooms or flats or residences %}
         <div class="location pure-u-1">
 
-          {% set rooms = false %}
-          {% set flats = false %}
-          {% set residences = buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'eq', 3) | length > 0 %}
-          {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 3) %}
-            {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
-            {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
-            {% set rc = b.Resources | find('Sale_type', 'eq', 'completo') | length  %}
-            {% if ra > 0 or rp > 0 %}{% set rooms = true %}{% endif %}
-            {% if ra > 0 or rc > 0 %}{% set flats = true %}{% endif %}
-          {% endfor %}
-
           <!-- Location -->
-          {% if rooms or flats or residences %}
           <div class="img-text pure-u-1 pure-u-lg-7-12">
             <div class="img-cont pure-u-7-24 pure-u-lg-1-3">
               <div class="img pure-u-1">

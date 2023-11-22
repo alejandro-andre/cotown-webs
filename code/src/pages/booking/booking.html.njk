@@ -71,12 +71,14 @@ tags: page
             <p>{% literal texts, 'home-pisazos-apartamento', L %} {% literal texts, 'home-pisazos-privado', L %}</p>
           </div>
         </div>
+        {% if siteid==1 %}
         <div class="option">
           <div id="rs" class="type content-selector" onclick="select_type('rs');">
             <img class="img" alt="Residencia universitaria" src="{{root}}/assets/img/icono__tipo_residencia_universitaria.svg">
             <p>{% literal texts, 'home-pisazos-residencia', L %} {% literal texts, 'home-pisazos-universitaria', L %}</p>
           </div>
         </div>
+        {% endif %}
       </div>
     </div>
   </section>
