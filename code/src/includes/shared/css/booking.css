@@ -12,7 +12,7 @@ h4,
 h5,
 h6 {
 	margin-top: 0;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	font-weight: 300;
 }
 
@@ -145,7 +145,6 @@ button {
 }
 
 .btn-primary {
-	text-transform: uppercase;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -157,7 +156,7 @@ button {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 14px;
-	padding: 0 12px;
+	padding: 1.5em 2em;
 	border: 1px solid var(--primary);
 	background-color: var(--white);
 	color: var(--primary);
@@ -325,6 +324,14 @@ button {
 	input[type="password"],
 	textarea,
 	select {
+		/* height: 38px; */
+		/* padding: 6px 10px;  */
+		/* The 6px vertically centers text on FF, ignored by Webkit */
+		/* background-color: #fff;
+border: 1px solid #D1D1D1; */
+		/* border-radius: 4px; */
+		/* box-shadow: none; */
+		/* box-sizing: border-box; */
 	}
 
 	/* Removes awkward default styles on some inputs for iOS */
@@ -588,7 +595,7 @@ section>h2 {
 	font-weight: 400;
 	font-size: 22px;
 	line-height: 150%;
-	color: var(--grey-light);
+	color: var(--grey-dark);
 	margin-top: 1em;
 	margin-bottom: 0.5em;
 	-webkit-appearance: none;
@@ -676,7 +683,7 @@ section>h2 {
 	align-items: flex-start;
 	width: -webkit-fill-available;
 	background-color: #fcfcfc;
-	border: 1.5px solid var(--grey-light);
+	border: 1.5px solid var(--grey-dark);
 	box-sizing: border-box;
 	border-radius: 6px;
 	padding: 10px 0 10px 10px;
@@ -835,7 +842,7 @@ button.back p {
 	padding: 16px 0 16px 1em;
 }
 
-.tabs-container .nav-booking ul.pure-menu-list li label.label a {
+.tabs-container .nav-booking ul.pure-menu-list li label.label .a {
 	color: var(--white);
 	font-size: 16px;
 	font-weight: 700;
@@ -844,11 +851,11 @@ button.back p {
 	text-decoration: none;
 }
 
-.tabs-container .nav-booking ul.pure-menu-list li.checked label.label a {
+.tabs-container .nav-booking ul.pure-menu-list li.checked label.label .a {
 	color: var(--grey-dark);
 }
 
-.tabs-container .nav-booking ul.pure-menu-list li label.label a .label-mobile {
+.tabs-container .nav-booking ul.pure-menu-list li label.label .a .label-mobile {
 	display: none;
 }
 
@@ -862,20 +869,15 @@ button.back p {
 }
 
 .main-booking .main-contain .panel-container {
-	width: 92%;
-	padding: 30px 4%;
+	width: 95%;
+	padding: 0px 30px;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: flex-start;
 }
 
-.main-booking .main-contain .panel-container .left {
-	width: 52%;
-}
-
 .main-booking .main-contain .panel-container .left .error-message p {
-
 	color: var(--red-error-light);
 	font-size: 22px;
 	font-style: normal;
@@ -895,15 +897,16 @@ button.back p {
 	width: 100%;
 }
 
-.main-booking .main-contain .panel-container .left form select.select1 {
-	width: 80%;
+.main-booking .main-contain .panel-container .left form select {
+	width: calc(100% - 20px);
+	box-sizing: border-box;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 150%;
-	color: var(--grey-light);
+	color: var(--grey-dark);
 	border: 1px solid var(--grey-light);
 	border-radius: 6px;
-	padding: 16px 24px;
+	padding: 14px 14px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -915,11 +918,11 @@ button.back p {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 150%;
-	color: var(--grey-light);
+	color: var(--grey-dark);
 }
 
 .main-booking .main-contain .panel-container .left form h3 {
-	font-family: var(--text-font);
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 26px;
 	font-weight: 600;
 	line-height: 124%;
@@ -1014,7 +1017,7 @@ button.back p {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 150%;
-	color: var(--grey-light);
+	color: var(--grey-dark);
 	border: 1px solid var(--grey-light);
 	border-radius: 6px;
 	padding: 8px 24px;
@@ -1024,7 +1027,7 @@ button.back p {
 	background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
 	background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
 }
-
+ 
 .main-booking .main-contain .panel-container .left form .next {
 	width: -webkit-fill-available;
 }
@@ -1032,14 +1035,13 @@ button.back p {
 .main-booking .main-contain .panel-container .left form .next button {
 	width: 100%;
 	justify-content: center;
-	margin: 2em 0;
+	margin: 1em 0;
 	padding-top: 28px;
 	padding-bottom: 28px;
-	font-size: 28px;
+	font-size: 20px;
 }
 
 .main-booking .main-contain .panel-container .right {
-	width: 38%;
 	display: flex;
 	flex-flow: row;
 	justify-content: flex-start;
@@ -1348,10 +1350,6 @@ button.back p {
 }
 
 /* RIGHT */
-.main-booking .main-contain .panel-container .right.tab2 {
-	width: 38%;
-}
-
 .main-booking .main-contain .panel-container .right.tab2 .resume {
 	width: 80%;
 	display: flex;
@@ -1365,7 +1363,7 @@ button.back p {
 }
 
 .main-booking .main-contain .panel-container .right.tab2 .resume h3 {
-	font-family: var(--text-font);
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 26px;
 	font-weight: 700;
 	line-height: 124%;
@@ -1452,10 +1450,6 @@ button.back p {
 
 .main-booking .main-contain .panel-container .left.tab3 form {
 	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	align-items: flex-start;
 }
 
 .main-booking .main-contain .panel-container .left.tab3 form h3 {
@@ -1468,7 +1462,7 @@ button.back p {
 .main-booking .main-contain .panel-container .left.tab3 form p {
 	font-size: 20px;
 	font-weight: 400;
-	line-height: 150%;
+	padding-bottom: 0.5em;
 }
 
 .main-booking .main-contain .panel-container .left.tab3 form .campo {
@@ -1482,14 +1476,15 @@ button.back p {
 }
 
 .main-booking .main-contain .panel-container .left.tab3 form .campo input.input {
-	width: 90%;
+	width: calc(100% - 20px);
+	box-sizing: border-box;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 150%;
-	color: var(--grey-light);
+	color: var(--grey-dark);
 	border: 1px solid var(--grey-light);
 	border-radius: 6px;
-	padding: 14px 24px;
+	padding: 14px 14px;
 	margin-bottom: 30px;
 }
 
@@ -1503,60 +1498,18 @@ button.back p {
 	line-height: 150%;
 }
 
-.main-booking .main-contain .panel-container .left.tab3 form .data1 {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: flex-start;
-}
-
-.main-booking .main-contain .panel-container .left.tab3 form .data1 .campo {
-	width: 46%;
-}
-
-.main-booking .main-contain .panel-container .left.tab3 form .data2 {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: flex-start;
-}
-
-.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code {
-	width: 22%;
-}
-
-.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code label {
-	font-size: 14px;
-	font-weight: 800;
-	margin-left: 0;
-}
-
-.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code select {
-	width: 100%;
-	line-height: 124%;
-	padding: 16.5px 24px;
-}
-
-.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.phone {
-	width: 72%;
-}
-
-.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.phone input.input {
-	width: 60%;
-}
-
 .main-booking .main-contain .panel-container .left.tab3 form .campo .dates input {
-	width: 44%;
+	width: calc(100% - 20px);
+	box-sizing: border-box;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 150%;
-	color: var(--grey-light);
+	color: var(--grey-dark);
 	border: 1px solid var(--grey-light);
 	border-radius: 6px;
-	padding: 14px 24px;
+	padding: 15px 14px;
 	margin-bottom: 30px;
+	margin-right: 20px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -1564,16 +1517,9 @@ button.back p {
 	background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
 }
 
-.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo {
-	width: 50%;
-}
-
-.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo.motive {
-	width: 100%;
-}
-
 .main-booking .main-contain .panel-container .left.tab3 form .data3 .campo select {
-	width: 100%;
+	width: calc(100% - 20px);
+	box-sizing: border-box;
 	margin-bottom: 30px;
 }
 
@@ -1586,29 +1532,13 @@ button.back p {
 	font-size: 28px;
 }
 
-.main-booking .main-contain .panel-container .left.tab3 form .campo select {
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 150%;
-	color: var(--grey-light);
-	border: 1px solid var(--grey-light);
-	border-radius: 6px;
-	padding: 14px 24px;
-	margin-bottom: 30px;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
-	background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
-}
-
 /* RIGHT */
 .main-booking .main-contain .panel-container .right.tab3 {
 	width: 38%;
 }
 
 .main-booking .main-contain .panel-container .right.tab3 .resume h3 {
-	font-family: var(--text-font);
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 26px;
 	font-weight: 700;
 	line-height: 124%;
@@ -1993,7 +1923,7 @@ button.back p {
 		border: 0;
 	}
 
-	.tabs-container .nav-booking ul.pure-menu-list li label.label a {
+	.tabs-container .nav-booking ul.pure-menu-list li label.label .breakdown {
 		color: var(--white);
 		font-size: 16px;
 		font-weight: 700;
@@ -2002,15 +1932,15 @@ button.back p {
 		text-decoration: none;
 	}
 
-	.tabs-container .nav-booking ul.pure-menu-list li.checked label.label a {
+	.tabs-container .nav-booking ul.pure-menu-list li.checked label.label .a {
 		color: var(--white);
 	}
 
-	.tabs-container .nav-booking ul.pure-menu-list li label.label a span {
+	.tabs-container .nav-booking ul.pure-menu-list li label.label .a span {
 		display: none;
 	}
 
-	.tabs-container .nav-booking ul.pure-menu-list li label.label a .label-mobile {
+	.tabs-container .nav-booking ul.pure-menu-list li label.label .a .label-mobile {
 		display: flex;
 		width: 100%;
 	}
@@ -2209,7 +2139,7 @@ button.back p {
 	.main-booking .main-contain .panel-container .left form .next button {
 		font-size: 14px;
 		padding-top: 22px;
-		padding-bottom: 22px;
+		padding-bottom: 18px;
 	}
 
 	.main-booking .main-contain .panel-container .left.tab2 {
@@ -2376,54 +2306,8 @@ button.back p {
 		padding: 1rem 0 0
 	}
 
-	.main-booking .main-contain .panel-container .left.tab3 form .data1 {
-		width: 100%;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		align-items: flex-start;
-	}
-
-	.main-booking .main-contain .panel-container .left.tab3 form .data1 .campo {
-		width: 100%;
-	}
-
-	.main-booking .main-contain .panel-container .left.tab3 form .data2 {
-		width: 100%;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		align-items: flex-start;
-	}
-
-	.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code {
-		width: 22%;
-	}
-
-	.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.code select {
-		width: 100%;
-		padding: 12px;
-	}
-
-	.main-booking .main-contain .panel-container .left.tab3 form .data2 .campo.phone input.input {
-		width: 90%;
-	}
-
 	.main-booking .main-contain .panel-container .left.tab3 form .campo .dates input {
 		width: 94%;
-		font-size: 16px;
-		padding: 12px;
-	}
-
-	.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo {
-		width: 100%;
-	}
-
-	.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo.motive {
-		width: 100%;
-	}
-
-	.main-booking .main-contain .panel-container .left.tab3 form .data3 .campo select {
 		font-size: 16px;
 		padding: 12px;
 	}
