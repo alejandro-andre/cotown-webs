@@ -498,7 +498,7 @@
 
 .last h2 {
 	text-transform: uppercase;
-	color: var(--footer);
+	color: var(--footer-text);
 }
 
 .last h2 span {
