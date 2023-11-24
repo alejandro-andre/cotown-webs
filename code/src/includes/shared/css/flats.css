@@ -223,11 +223,12 @@
 	padding: 1em 0;
 	margin: 0 auto 2em;
 }
-
 .apartments .all-rooms .card-room .left-carousel {
 	margin-right: 4em;
 }
-
+.apartments .all-rooms .card-room .left-carousel p {
+	margin: 5px 15px;
+}
 .left-carousel #main-carousel .splide__pagination {
 	bottom: 4em;
 }

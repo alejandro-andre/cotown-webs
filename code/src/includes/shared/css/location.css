@@ -843,7 +843,7 @@ section.necesities .grid .necesidad .p-text p {
     section.necesities .grid .necesidad {
         display: flex;
         width: calc(33% - 20px);
-        height: 180px;
+        min-height: 220px;
         padding: 16px 5px 0;
         margin-bottom: 8px;
         flex-direction: column;
@@ -889,7 +889,7 @@ section.necesities .grid .necesidad .p-text p {
     }
     section.necesities .grid .necesidad {
         width: calc(50% - 20px);
-        height: 200px;
+        min-height: 200px;
         padding: 5px;
     }
 }
