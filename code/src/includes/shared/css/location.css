@@ -288,7 +288,7 @@ h4 {
     font-weight: 700;
     line-height: 26px;
 }
-.room-type .text-green {
+.room-type .text-red {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -296,11 +296,11 @@ h4 {
     padding: 0.5em;
     max-width: 90%;
 }
-.room-type .text-green p {
+.room-type .text-red p {
     font-weight: 300;
     font-size: 16px;
     line-height: 16px;
-    color: var(--primary-dark);
+    color: var(--red-error-dark);
     letter-spacing: 0.125em;
 }
 button.green-button.btn-secondary {
@@ -526,7 +526,7 @@ section.necesities .grid .necesidad .p-text p {
     .room-type p {
         font-size: 16px;
     }
-    .room-type .text-green p {
+    .room-type .text-red p {
         font-size: 14px;
     }
     button.green-button.btn-secondary {

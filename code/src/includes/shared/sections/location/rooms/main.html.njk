@@ -149,5 +149,16 @@ new Splide('#sliderFlats', {
   },
 }).mount();
 
+// Availability
+fetch('https://back.cotown.com/api/v1/availability/0/1?date_from=2023-12-01&date_to=2024-03-31')
+  .then(resp => resp.text())
+  .then(data => {
+    json = JSON.parse(data);
+    console.log(json);
+    const divs = document.querySelectorAll('.text-red');
+    divs.forEach(function(div) {
+      console.log(div.id);
+    });
+  });
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
