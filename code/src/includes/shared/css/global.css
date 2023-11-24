@@ -650,7 +650,7 @@ li .select-container .options .option.selected {
 }
 
 .logo {
-	margin: 2px 0 -2px 0;
+	margin: -4px 0 0 0;
 }
 
 .logo a {
@@ -661,7 +661,7 @@ li .select-container .options .option.selected {
 	color: var(--second-header-text);
 	font-size: 42px;
 	vertical-align: middle;
-	margin: 0.2em auto 0;
+	margin: 0px auto 0;
 	line-height: 1;
 }
 
@@ -679,7 +679,7 @@ span.turquoise {
 }
 
 .container-header .black-line .left-nav .logo .desktop .img-logo.cotown {
-	padding-bottom: 12px;
+	padding-bottom: 4px;
 }
 
 /* NAVIGATION MENU
@@ -1928,7 +1928,7 @@ button.date-button input.inputs {
 
 	.container-header .black-line .left-nav .logo .mobile .img-logo {
 		height: 42px;
-		margin: auto 0;
+		margin: 10px auto 0;
 		display: inline-flex;
 	}
 
@@ -2008,6 +2008,7 @@ button.date-button input.inputs {
 		font-size: 16px;
 		line-height: 140%;
 		margin: 0;
+		color: var(--secondary-text-header);
 	}
 
 	.only-mobile-menu .logo {
@@ -2028,12 +2029,12 @@ button.date-button input.inputs {
 	}
 
 	.only-mobile-menu .menu-mobile-icons em {
-		color: var(--primary-text);
+		color: var(--secondary-text-header);
 		font-size: 16px;
 	}
 
 	.only-mobile-menu .close-menu a {
-		color: var(--primary-text);
+		color: var(--second-header-text);
 		cursor: pointer;
 	}
 
