@@ -259,8 +259,6 @@ h4 {
 .text-red {
     display: flex;
     flex-flow: column;
-    justify-content: center;
-    align-items: center;
     padding: 0.5em;
     max-width: 90%;
 }
@@ -460,7 +458,6 @@ section.necesities .grid .necesidad .p-text p {
     main .container-main .first-contain .title-big.home p {
         font-size: 24px;
         line-height: 36px;
-        font-weight: 500;
         margin: 0 0 0.5em;
         text-align: left;
     }
@@ -561,6 +558,7 @@ section.necesities .grid .necesidad .p-text p {
         padding: 8px;
         position: relative;
         right: 20px;
+        bottom: 10px;
         margin: 0;
     }   
     main .location .container-main .first-contain .video-loc .text-container .description {
@@ -738,7 +736,7 @@ section.necesities .grid .necesidad .p-text p {
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container p {
         font-weight: 700;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 150%;
         margin: 0;
         text-align: right;
@@ -792,7 +790,7 @@ section.necesities .grid .necesidad .p-text p {
 
     .piso .services-list li p {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 130%;
         text-align: center;
     }
@@ -846,8 +844,16 @@ section.necesities .grid .necesidad .p-text p {
         font-weight: 300;
         line-height: 150%;
     }
-
+    .text-red {
+        padding: 0 0 0 1em;
+    }
+    .text-red p {
+        margin: 5px 0 0 0;
+        padding: 0;
+        font-size: 14px;
+    }
 }
+
 @media only screen and (max-width: 768px) {
     .pisos-slider .h2-container h2 {
         font-size: 30px;
@@ -859,14 +865,6 @@ section.necesities .grid .necesidad .p-text p {
         width: calc(50% - 20px);
         height: 200px;
         padding: 5px;
-    }
-    .text-red {
-        padding: 0 0 0 1em;
-    }
-    .text-red p {
-        margin: 0;
-        padding: 0;
-        font-size: 14px;
     }
 }
 

@@ -887,7 +887,6 @@ main .container-main .first-contain .title-big p {
 main .container-main .first-contain .title-big.home p {
 	font-size: 22px;
 	line-height: 30px;
-	font-weight: 500;
 	margin: 0 0 0.5em;
 	text-align: left;
 }
@@ -1487,7 +1486,6 @@ button.date-button input.inputs {
 	main .container-main .first-contain .title-big.home p {
 		font-size: 24px;
 		line-height: 36px;
-		font-weight: 500;
 		margin: 0 0 0.5em;
 		text-align: left;
 	}
@@ -1928,7 +1926,7 @@ button.date-button input.inputs {
 
 	.container-header .black-line .left-nav .logo .mobile .img-logo {
 		height: 42px;
-		margin: 10px auto 0;
+		margin: 6px auto 0;
 		display: inline-flex;
 	}
 

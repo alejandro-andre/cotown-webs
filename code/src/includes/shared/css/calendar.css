@@ -531,7 +531,7 @@ button.date-button input:visited {
 	}
 
 	.calendar-container .dates-selector .selector-main table tbody tr td {
-		font-size: 14px;
+		font-size: 18px;
 		font-weight: 300;
 		line-height: 12px;
 		padding: 6px;

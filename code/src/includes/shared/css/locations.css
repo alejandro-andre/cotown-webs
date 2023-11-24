@@ -144,7 +144,7 @@
   font-size: 40px;
   line-height: 124%;
   letter-spacing: -0.6px;
-  margin: 0;
+  margin: 0 0 16px 0;
   text-align: start;
 }
 .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content p {
@@ -245,7 +245,7 @@
   .locations .container-main .all-locations .left .texto-container h1.title-where {
     font-size: 40px;
     line-height: 100%;
-    margin: 0 0 0 1em;
+    margin: 0 0 0.5em 1em;
   }
   .locations .container-main .all-locations .left .locations-list .locations-container .location .img-text {
     margin-bottom: 1rem;
@@ -259,7 +259,7 @@
     line-height: 110%;    
   }
   .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 150%;
   }
   .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list {
@@ -280,22 +280,22 @@
     height: 120px;
   }
   .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content h2 {
-    font-size: 17px;
+    font-size: 18px;
   }
   .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content p {
-    font-size: 12px;
+    font-size: 18px;
   }
   .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a img.img {
-    width: 14px;
+    width: 16px;
   }
   .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a .label-content {
-    margin-top: 12px;
+    margin-top: 14px;
   }
   .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a .label-content img.icon {
     width: 46px;
   }
   .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a .label-content p {
-    font-size: 10px;
+    font-size: 16px;
     margin: 0 0 12px;
   } 
   .locations .container-main .all-locations .left .locations-list .locations-container .location .right .type-list a {    
