@@ -649,10 +649,6 @@ li .select-container .options .option.selected {
 	padding: 0;
 }
 
-.logo {
-	margin: -4px 0 0 0;
-}
-
 .logo a {
 	text-decoration: none;
 }
@@ -676,10 +672,6 @@ span.turquoise {
 
 .container-header .black-line .left-nav .logo .desktop .img-logo {
 	height: 48px;
-}
-
-.container-header .black-line .left-nav .logo .desktop .img-logo.cotown {
-	padding-bottom: 4px;
 }
 
 /* NAVIGATION MENU
