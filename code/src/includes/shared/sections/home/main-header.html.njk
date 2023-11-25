@@ -11,7 +11,7 @@
 
       <label class="label">{% literal texts, 'home-bienvenido-donde', L %}:</label>
       <select id="city" name="city" class="pure-u-1" onchange="get_types(this.value);" required>
-        <option value="" disabled selected>{% literal texts, 'home-bienvenido-donde', L %}</option>
+        <option value="" disabled selected>{% literal texts, 'home-donde-seleccionar', L %}</option>
         {% for l in locations %}
         {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
         <option value="{{l.id}}" >{{ l | translate('Name', L)}}</option>
@@ -20,20 +20,18 @@
       </select>
 
       <label class="label">{% literal texts, 'home-bienvenido-tipo', L %}:</label>
-      <select id="type" name="type" class="pure-u-1" onchange="sessionStorage.setItem('path_type', this.value);" required>
-        <!--REMOVE
-        <option value="" disabled selected>{% literal texts, 'home-bienvenido-tipo', L %}</option>
-        <option value="Piso compartido">{% literal texts, 'home-pisazos-piso', L %} {% literal texts, 'home-pisazos-compartido', L %}</option>
-        <option value="Apartamento privado">{% literal texts, 'home-pisazos-apartamento', L %} {% literal texts, 'home-pisazos-privado', L %}</option>
-        <option value="Residencia">{% literal texts, 'home-pisazos-residencia', L %} {% literal texts, 'home-pisazos-universitaria', L %}</option>
-        -->
+      <select id="type" name="type" class="pure-u-1" 
+              onchange="sessionStorage.setItem('path_type', this.value);" required>
       </select>
 
       <div class="calendar pure-u-1">
-        <div class="pure-u-1" onclick="open_calendar('dates');">
+        <div class="pure-u-1">
           <label class="label" for="from">{% literal texts, 'home-bienvenido-cuando', L %}:</label>
           <div class="date">
-            <input class="input" type="text" id="dates" name="dates" onchange="sessionStorage.setItem('book_dates', this.value);" required disabled>
+            <input class="input" type="text" id="dates" name="dates" 
+                   onclick="open_calendar('dates');"
+                   onchange="sessionStorage.setItem('book_dates', this.value);" 
+                   required disabled>
             <em class="icon-calendar"></em>
           </div>
         </div>
@@ -154,7 +152,8 @@ function get_types(value) {
 document.getElementById('city').value  = sessionStorage.getItem('city') || '';
 get_types(sessionStorage.getItem('city'));
 document.getElementById('type').value  = sessionStorage.getItem('path_type');
-document.getElementById('dates').value = sessionStorage.getItem('book_dates') || '{% literal texts, 'cal-seleccionar-fechas', L %}';
+console.log('['+sessionStorage.getItem('book_dates')+']');
+document.getElementById('dates').value = sessionStorage.getItem('book_dates') || "{% literal texts, 'cal-seleccionar-fechas', L %}";
 document.getElementById('in').value    = sessionStorage.getItem('book_checkin');
 document.getElementById('out').value   = sessionStorage.getItem('book_checkout');
 {% endset %}<script>{{ script | jsmin | safe }}</script>
