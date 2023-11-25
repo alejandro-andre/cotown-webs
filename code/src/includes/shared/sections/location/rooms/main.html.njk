@@ -164,12 +164,12 @@ if (date_from && date_to) {
       const avail = json.find((e) => (e.id === div.id));
       if (avail) {
         if (avail.Qty === 1) {
-          div.firstChild.textContent = {%if L=='en'%}"ONLY " + avail.Qty + " AVAILABLE"{%else%}"SÓLO QUEDA " + avail.Qty{%endif%};
+          div.firstChild.textContent = {%if L=='en'%}"ONLY " + avail.Qty + " LEFT"{%else%}"SÓLO QUEDA " + avail.Qty{%endif%};
         } else if (avail.Qty <= 5) {
-          div.firstChild.textContent = {%if L=='en'%}"ONLY " + avail.Qty + " AVAILABLE"{%else%}"SÓLO QUEDAN " + avail.Qty{%endif%};
+          div.firstChild.textContent = {%if L=='en'%}"ONLY " + avail.Qty + " LEFT"{%else%}"SÓLO QUEDAN " + avail.Qty{%endif%};
         }
       } else {
-        div.firstChild.textContent = {%if L=='en'%}"NONE AVAILABLE"{%else%}"AGOTADO"{%endif%};
+        div.firstChild.textContent = {%if L=='en'%}"SOLD OUT"{%else%}"AGOTADO"{%endif%};
       }
     });
   });

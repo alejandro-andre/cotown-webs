@@ -150,20 +150,23 @@
 .first .first-contain .right-calendar .calendar .reservas .button-calendar p.label {
   width: 100%;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
   text-align: start;
   margin: 0;
 }
 .first .first-contain .right-calendar .calendar .reservas .button-calendar p.dates {	
-  height: 16px;
+  height: 18px;
   text-align: start;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
   background-color: transparent;
   border: none;
   margin: 10px 0 0;
+}
+.first .first-contain .right-calendar .calendar .reservas .button-calendar .checkout {	
+  box-sizing: border-box;
+  border-left: 1.5px solid var(--grey-light);
+  padding-left: 20px;
 }
 
 .splide__slide img {

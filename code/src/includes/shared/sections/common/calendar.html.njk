@@ -301,8 +301,10 @@ function close_calendar(event) {
     document.getElementById("calerror").style.display = "flex";
     return;
   }
-  result.value = fin.value + ' - ' + fout.value
-  sessionStorage.setItem('book_dates', result.value);
+  result.value = ''
+  if (fin.value && fout.value)
+    result.value = fin.value + ' - ' + fout.value
+  sessionStorage.setItem('book_dates', result.value || '');
   sessionStorage.setItem('book_checkin', fin.dataset.id);
   sessionStorage.setItem('book_checkout', fout.dataset.id);
   calendar.style.display = "none";

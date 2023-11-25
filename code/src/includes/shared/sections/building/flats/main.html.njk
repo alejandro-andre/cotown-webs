@@ -160,5 +160,17 @@ function go_visit() {
   sessionStorage.setItem('building', '{{building.Name}}');
   location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html";
 }
+
+// Show selected dates block
+dates = sessionStorage.getItem('book_dates') || '';
+console.log(dates);
+if (dates != '') {
+  document.getElementById("selected-dates").classList.remove("hidden");
+  document.getElementById("checkin").textContent = dates.split(" - ")[0];
+  document.getElementById("checkout").textContent = dates.split(" - ")[1];
+}
+else {
+  document.getElementById("selected-dates").classList.add("hidden");
+}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

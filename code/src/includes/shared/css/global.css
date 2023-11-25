@@ -44,18 +44,6 @@ select option:disabled {
 	display: none;
 }
 
-/*
-::placeholder {
-    color: var(--grey-light);
-}
-:-ms-input-placeholder {
-    color: var(--grey-light);
-}
-::-ms-input-placeholder {
-    color: var(--grey-light);
-}
-*/
-
 /* RESPONSIVE FONTS */
 @media only screen and (min-width: 1600px) {
 	h1 {
@@ -433,6 +421,9 @@ footer {
 main {
 	margin-top: 114px;
 	overflow: hidden;
+}
+.hidden {
+	display: none;
 }
 
 /* FIRST HEADER

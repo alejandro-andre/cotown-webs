@@ -28,11 +28,13 @@
         <div class="pure-u-1">
           <label class="label" for="from">{% literal texts, 'home-bienvenido-cuando', L %}:</label>
           <div class="date">
+            <span onclick="open_calendar('dates');">
             <input class="input" type="text" id="dates" name="dates" 
-                   onclick="open_calendar('dates');"
-                   onchange="sessionStorage.setItem('book_dates', this.value);" 
-                   required disabled>
+                   placeholder="{% literal texts, 'cal-seleccionar-fechas', L %}"
+                   onchange="save_dates(this.value);" 
+                   required>
             <em class="icon-calendar"></em>
+            </span> 
           </div>
         </div>
       </div>
@@ -54,17 +56,10 @@
     <div class="video-home">
       <!-- Image-->
       {% image
-          constants.SERVER + "/wopi/files/Marketing/Media/" + images['home'].id +"/Image/contents?access_token=" + token,
-          "home", "home", "",
-          [1280], ""
+         constants.SERVER + "/wopi/files/Marketing/Media/" + images['home'].id +"/Image/contents?access_token=" + token,
+         "home", "home", "",
+         [1280], ""
       %}
-      <!-- Video -->
-      <!--REMOVE
-      <video playsinline="true" width="100%" style="object-fit: cover;" autoplay="true" muted="true" loop="true" preload="auto" controls="1">
-        Sorry, your browser doesn't support embedded videos.
-        <source type="video/mp4" src="...">
-      </video>
-      -->
     </div>
   </div>
 
@@ -118,16 +113,18 @@ const types = [
 
 // Link
 function go() {
-  city = document.getElementById("city");
-  dates = document.getElementById("dates");
-  console.log(city.value);
-  console.log(dates.value);
-  if (city.value && dates.values) {
+  city = sessionStorage.getItem('book_city_id') || '';
+  if (city === '') 
+    document.getElementById("city").classList.add('input-error');
+  checkin = sessionStorage.getItem('book_checkin') || '';
+  if (checkin === '') 
+    document.getElementById("dates").classList.add('input-error');
+  if (city != '' && checkin != '') {
     location.href = document.getElementById("type").value;
   }
 }
 
-// Populate 
+// Get accomodation types by city
 function get_types(value) {
 
   // Empty list
@@ -135,7 +132,10 @@ function get_types(value) {
   list.innerHTML = "";
 
   // Get city
-  if (!value) return;
+  if (!value) return; 
+  city = document.getElementById('city')
+  city.value = value;
+  city.classList.remove('input-error')
   sessionStorage.setItem('book_city_id', value);
 
   // Fill building listid
@@ -149,12 +149,17 @@ function get_types(value) {
   }
   sessionStorage.setItem('path_type', document.getElementById('type').value);
 }
-document.getElementById('city').value  = sessionStorage.getItem('city') || '';
+
+// Save selected dates
+function save_dates(value) {
+  document.getElementById('dates').classList.remove('input-error')
+  sessionStorage.setItem('book_dates', value || '');
+}
+
 get_types(sessionStorage.getItem('city'));
 document.getElementById('type').value  = sessionStorage.getItem('path_type');
-console.log('['+sessionStorage.getItem('book_dates')+']');
-document.getElementById('dates').value = sessionStorage.getItem('book_dates') || "{% literal texts, 'cal-seleccionar-fechas', L %}";
 document.getElementById('in').value    = sessionStorage.getItem('book_checkin');
 document.getElementById('out').value   = sessionStorage.getItem('book_checkout');
+document.getElementById('dates').value = sessionStorage.getItem('book_dates');
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

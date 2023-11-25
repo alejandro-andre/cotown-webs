@@ -47,7 +47,7 @@ p.subtitle {
     margin-top: 1em;
 }
 .main-header .left .basic-searcher label {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 150%;
 }
@@ -68,8 +68,25 @@ p.subtitle {
     appearance: none;
     font-size: 18px;
 }
-.main-header .left .basic-searcher .error {
-    border: 1px dotted #a00000;
+.main-header .left .basic-searcher input.input-error,
+.main-header .left .basic-searcher select.input-error {
+    border: 2px dotted red;
+    color: red;
+}
+.main-header .left .basic-searcher select.input-error option {
+    color: black;
+}
+.input-error::placeholder {
+    color: red;
+}
+.input-error::-ms-input-placeholder {
+    color: red;
+}
+.input-error::-webkit-input-placeholder {
+    color: red;
+}
+.input-error::-moz-input-placeholder {
+    color: red;
 }
 .main-header .left .basic-searcher select:focus {
     border: 0px solid transparent;
