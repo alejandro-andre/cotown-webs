@@ -137,7 +137,6 @@ if (!document.referrer.includes('{{globals.url}}')) {
 utmSource   = sessionStorage.getItem('utm_source');
 utmCampaign = sessionStorage.getItem('utm_campaign');
 utmMedium   = sessionStorage.getItem('utm_medium');
-console.log(`utm_source: ${utmSource}, utm_campaign: ${utmCampaign}, utm_medium: ${utmMedium}`);
 
 <!-- JS / Banner -->
 {% for b in banners | find('Page', 'eq', 'home') %}

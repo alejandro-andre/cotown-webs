@@ -102,8 +102,10 @@
         <div class="sharing">
           <div class="left">
             {% if p.Flat_types | length > 1 %}
-            <label for="radio-{{p.Code}}" class="pure-radio">
-              <input type="radio" id="radio-{{p.Code}}" name="radio-{{p.Code}}" value="{{p.Code}}"{% if loop.index == 1%} checked{% endif %}/>
+            <label for="radio-{{p.Code}}_{{f.Code}}" class="pure-radio">
+              <input id="radio-{{p.Code}}_{{f.Code}}" name="radio-{{p.Code}}" 
+                     data-place="{{p.Code}}" data-flat="{{f.Code}}"
+                     type="radio"{% if loop.index == 1%} checked{% endif %}/>
               {{flat_types[f.Code] | translate('Name', L)}}
             </label>
             {% endif %}
@@ -111,6 +113,7 @@
           <div class="right">
             <p>{% literal texts, 'price-desde', L %} {{f.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
           </div>
+          <div id="{{p.Code}}_{{f.Code}}" class="text-red"><p>...</p></div>
         </div>
         {% endfor %}
       </div>
@@ -143,8 +146,14 @@
     </form>
 
     <div class="buttons pure-u-1">
-      <button class="btn-secondary" onclick="go_book('{{p.Code}}');">{% literal texts, 'button-reservar', L %}</button>
-      <button class="btn-primary" onclick="go_visit('{{building.Name}}');">{% literal texts, 'button-visita', L %}</button>
+      <button id="btn-book-{{p.Code}}" class="btn-secondary" 
+              onclick="go_book('{{p.Code}}');">
+        {% literal texts, 'button-reservar', L %}
+      </button>
+      <button id="btn-visit-{{p.Code}}" class="btn-primary" 
+              onclick="go_visit('{{p.Code}}');">
+        {% literal texts, 'button-visita', L %}
+      </button>
     </div>
 
   </div>

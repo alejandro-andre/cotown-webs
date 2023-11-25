@@ -163,7 +163,6 @@ function go_visit() {
 
 // Show selected dates block
 dates = sessionStorage.getItem('book_dates') || '';
-console.log(dates);
 if (dates != '') {
   document.getElementById("selected-dates").classList.remove("hidden");
   document.getElementById("checkin").textContent = dates.split(" - ")[0];

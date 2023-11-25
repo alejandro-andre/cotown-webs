@@ -169,6 +169,21 @@
   padding-left: 20px;
 }
 
+.text-red {
+  display: flex;
+  flex-flow: row;
+  justify-content: right;
+  width: 100%;
+  padding-right: 1em;
+}
+.text-red p {
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  color: var(--red-error-dark);
+  letter-spacing: 0.125em;
+  margin: 0;
+}
+
 .splide__slide img {
   width: 100%;
   height: 100%;
@@ -258,7 +273,7 @@
   line-height: 150%;
 }
 .right-data .share .sharing .right, .right-data .extra .extras .right  {
-  margin-right: 2em;
+  margin-right: 1em;
 }
 .right-data .share .sharing {
   display: flex;
@@ -267,14 +282,16 @@
   align-items: center;
   background: var(--white-background);
   border-radius: 4px;
+  padding: 10px 0;
 }
 .right-data .share .sharing label, .right-data .extra .extras label  {
   font-weight: 500;
   font-size: 18px;
-  line-height: 150%;
   vertical-align: middle;
   align-items: center;
   display: flex;
+  padding: 0;
+  margin: 0;
 }
 .right-data .share .sharing label input {
   margin: 0 0.4em;
@@ -286,6 +303,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 150%;
+  margin: 0;
 }
 .right-data .extra .extras label input {
   margin: 0.1em 0.4em 0;
