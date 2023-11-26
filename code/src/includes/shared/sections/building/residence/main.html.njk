@@ -133,31 +133,12 @@ main.sync(thumbnails);
 main.mount();
 thumbnails.mount();
 
-// Tour
-function open_tour() {
-  document.getElementById("tourframe").src="{{building.Tour}}" 
-  document.getElementById("tour").style.display = "block";
-}
-function close_tour() {
-  document.getElementById("tour").style.display = "none";
-}
+{% include "shared/js/book.js" %}
 
-// Buttons
-function go_book(type) {
-  sessionStorage.setItem('city', '{{building.District.Location.Name}}');
-  sessionStorage.setItem('book_city_id', '{{building.District.Location.id}}');
-  sessionStorage.setItem('building', '{{building.Name}}');
-  sessionStorage.setItem('book_building_id', '{{building.id}}');
-  sessionStorage.setItem('book_type', type);
-  location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
-}
-function go_visit(type) {
-  sessionStorage.setItem('city', '{{building.District.Location.Name}}');
-  sessionStorage.setItem('book_city_id', '{{building.District.Location.id}}');
-  sessionStorage.setItem('building', '{{building.Name}}');
-  sessionStorage.setItem('book_building_id', '{{building.id}}');
-  sessionStorage.setItem('book_type', type);
-  location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['visit'].url}}.html";
-}
+// Show dates
+show_dates()
+
+// Show availability
+availability('{{L}}', 1);
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

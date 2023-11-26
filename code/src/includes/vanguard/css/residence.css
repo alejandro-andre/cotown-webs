@@ -124,6 +124,63 @@
 }
 .first .first-contain .right-calendar .calendar {
   margin: 0;
+  width: 100%;
+}
+.first .first-contain .right-calendar .calendar .reservas {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.first .first-contain .right-calendar .calendar .reservas .button-calendar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  background-color: #fcfcfc;
+  border: 1.5px solid var(--grey-light);
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding: 16px;
+  cursor: pointer;
+}
+.first .first-contain .right-calendar .calendar .reservas .button-calendar p.label {
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: start;
+  margin: 0;
+}
+.first .first-contain .right-calendar .calendar .reservas .button-calendar p.dates {	
+  height: 18px;
+  text-align: start;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  margin: 10px 0 0;
+}
+.first .first-contain .right-calendar .calendar .reservas .button-calendar .checkout {	
+  box-sizing: border-box;
+  border-left: 1.5px solid var(--grey-light);
+  padding-left: 20px;
+}
+
+.text-red {
+  display: flex;
+  flex-flow: row;
+  justify-content: right;
+  width: 100%;
+  padding-right: 1em;
+}
+.text-red p {
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  color: var(--red-error-dark);
+  letter-spacing: 0.125em;
+  margin: 0;
 }
 
 .splide__slide img {
@@ -238,7 +295,7 @@
   line-height: 150%;
 }
 .right-data .share .sharing .right, .right-data .extra .extras .right  {
-  margin-right: 2em;
+  margin-right: 1em;
 }
 .right-data .share .sharing {
   display: flex;

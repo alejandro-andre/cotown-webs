@@ -50,29 +50,6 @@ optionListMobile.forEach((option) => {
     })
 })
 
-// Menu locations
-const choosedOption = document.querySelector('.change-value')
-const Value = document.querySelector('.chang-value')
-const optionContain = document.querySelector('.options-loc')
-const option = document.querySelectorAll('.option-loc')
-const selectIcon = document.querySelector('.icon.icon-corchete-down')  
-const changeToggle = () => {
-    if (optionContain.dataset.toggle == 'close') {
-        optionContain.dataset.toggle = '';
-        selectIcon.classList.replace('icon-corchete-down', 'icon-corchete-up');
-    } else {
-        optionContain.dataset.toggle = 'close';
-        selectIcon.classList.replace('icon-corchete-up', 'icon-corchete-down');
-    }
-}
-choosedOption.addEventListener('click', changeToggle);
-option.forEach((option) => {
-    option.addEventListener('click', (e) => {
-        changeToggle()
-        selectIcon.classList.replace('icon-corchete-up', 'icon-corchete-down');
-    })
-})   
-
 // Menu mobile
 function mostrarMenuMobile() { 
     document.getElementById('menu-desplegado').style.position = 'absolute';
