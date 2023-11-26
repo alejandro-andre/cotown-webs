@@ -52,7 +52,7 @@ function availability(lang, option) {
       // Get availability
       const avail = json.find((e) => (e.id === div.id));
       const qty = avail ? avail.Qty : 0;
-      document.getElementById('radio-' + div.id).setAttribute('data-qty', qty);
+      try { document.getElementById('radio-' + div.id).setAttribute('data-qty', qty); } catch {}
 
       // Not available? show sold out and disable buttons
       if (qty == 0) {
