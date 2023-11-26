@@ -40,8 +40,8 @@ function availability(lang, option) {
 
   // Get availability
   document.querySelectorAll('button[name="btn-check"]').forEach((btn) => { btn.classList.add("hidden"); });
-  document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.remove.hidden("hidden"); });
-  document.querySelectorAll('button[name="btn-visit"]').forEach((btn) => { btn.classList.remove.hidden("hidden"); });
+  document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.remove("hidden"); });
+  document.querySelectorAll('button[name="btn-visit"]').forEach((btn) => { btn.classList.remove("hidden"); });
   url = 'https://back.cotown.com/api/v1/availability/' + option + '/{{building.id}}?date_from=' + date_from + '&date_to=' + date_to;
   fetch(url).then(resp => resp.text()).then(data => {
     // Parse response
@@ -103,7 +103,7 @@ function go_book(id, code) {
   }
 
   // Flats
-  location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
+  //location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
 }
 
 // Button VISIT
@@ -117,7 +117,7 @@ function go_visit(id, code) {
 }
 
 // Button CHECK
-function go_check(id, code) {
+function go_check() {
   open_calendar();
   window.addEventListener("calendar", function(e) {
     if (e.detail.checkin != '') {
