@@ -28,10 +28,9 @@
         <div class="pure-u-1">
           <label class="label" for="from">{% literal texts, 'home-bienvenido-cuando', L %}:</label>
           <div class="date">
-            <span onclick="open_calendar('dates');">
+            <span onclick="open_calendar();">
             <input class="input" type="text" id="dates" name="dates" 
                    placeholder="{% literal texts, 'cal-seleccionar-fechas', L %}"
-                   onchange="save_dates(this.value);" 
                    required>
             <em class="icon-calendar"></em>
             </span> 
@@ -89,37 +88,37 @@ const types = [
 {% endfor-%}
 {% if pc %}{ 
   id:{{l.id}}, 
-  city:'{{l | translate('Name', L)}}', 
-  type:'Piso compartido',
-  link: '{{root}}{{langs[L].folder}}/{{langs[L].pages.rooms.url}}-{{l | translate("Name", L) | slugify}}.html',
-  value:'{{texts["home-pisazos-piso"][L]}} {{texts["home-pisazos-compartido"][L]}}'
+  city: "{{l | translate('Name', L)}}", 
+  type: "Piso compartido",
+  link: "{{root}}{{langs[L].folder}}/{{langs[L].pages.rooms.url}}-{{l | translate('Name', L) | slugify}}.html",
+  value: "{{texts['home-pisazos-piso'][L]}} {{texts['home-pisazos-compartido'][L]}}"
 },{% endif-%}
 {% if ap %}{
   id:{{l.id}}, 
-  city:'{{l | translate('Name', L)}}', 
-  type:'Apartamento privado',
-  link: '{{root}}{{langs[L].folder}}/{{langs[L].pages.flats.url}}-{{l | translate("Name", L) | slugify}}.html',
-  value:'{{texts["home-pisazos-apartamento"][L]}} {{texts["home-pisazos-privado"][L]}}'
+  city: "{{l | translate('Name', L)}}", 
+  type: "Apartamento privado",
+  link: "{{root}}{{langs[L].folder}}/{{langs[L].pages.flats.url}}-{{l | translate('Name', L) | slugify}}.html",
+  value: "{{texts['home-pisazos-apartamento'][L]}} {{texts['home-pisazos-privado'][L]}}"
 },{% endif-%}
 {% if rs %}{
   id:{{l.id}}, 
-  city:'{{l | translate('Name', L)}}', 
-  type:'Residencia universitaria',
-  link: '{{root}}{{langs[L].folder}}/{{langs[L].pages.residences.url | slugify}}.html',
-  value:'{{texts["home-pisazos-residencia"][L]}} {{texts["home-pisazos-universitaria"][L]}}'
+  city: "{{l | translate('Name', L)}}", 
+  type: "Residencia universitaria",
+  link: "{{root}}{{langs[L].folder}}/{{langs[L].pages.residences.url | slugify}}.html",
+  value: "{{texts['home-pisazos-residencia'][L]}} {{texts['home-pisazos-universitaria'][L]}}"
 },{% endif-%}
 {% endfor-%}
 ];
 
 // Link
 function go() {
-  city = sessionStorage.getItem('book_city_id') || '';
-  if (city === '') 
-    document.getElementById("city").classList.add('input-error');
-  checkin = sessionStorage.getItem('book_checkin') || '';
-  if (checkin === '') 
-    document.getElementById("dates").classList.add('input-error');
-  if (city != '' && checkin != '') {
+  city = sessionStorage.getItem("book_city_id") || "";
+  if (city === "") 
+    document.getElementById("city").classList.add("input-error");
+  checkin = sessionStorage.getItem('book_checkin') || "";
+  if (checkin === "") 
+    document.getElementById("dates").classList.add("input-error");
+  if (city != "" && checkin != "") {
     location.href = document.getElementById("type").value;
   }
 }
@@ -133,10 +132,10 @@ function get_types(value) {
 
   // Get city
   if (!value) return; 
-  city = document.getElementById('city')
+  city = document.getElementById("city")
   city.value = value;
-  city.classList.remove('input-error')
-  sessionStorage.setItem('book_city_id', value);
+  city.classList.remove("input-error")
+  sessionStorage.setItem("book_city_id", value);
 
   // Fill building listid
   for (var i = 0; i < types.length; i++) {
@@ -147,19 +146,20 @@ function get_types(value) {
       list.add(opt);
     }
   }
-  sessionStorage.setItem('path_type', document.getElementById('type').value);
+  sessionStorage.setItem("path_type", document.getElementById("type").value);
 }
 
-// Save selected dates
-function save_dates(value) {
-  document.getElementById('dates').classList.remove('input-error')
-  sessionStorage.setItem('book_dates', value || '');
-}
+// When calendar closes
+window.addEventListener("calendar", function(e) {
+  document.getElementById("dates").value = format_dates(e.detail.checkin, e.detail.checkout, "{{L}}");
+  document.getElementById("dates").classList.remove("input-error");
+});
 
-get_types(sessionStorage.getItem('book_city_id'));
-document.getElementById('type').value  = sessionStorage.getItem('path_type');
-document.getElementById('in').value    = sessionStorage.getItem('book_checkin');
-document.getElementById('out').value   = sessionStorage.getItem('book_checkout');
-document.getElementById('dates').value = sessionStorage.getItem('book_dates');
+// Get data from session
+get_types(sessionStorage.getItem("book_city_id"));
+document.getElementById("type").value  = sessionStorage.getItem("path_type");
+checkin  = sessionStorage.getItem("book_checkin");
+checkout = sessionStorage.getItem("book_checkout");
+document.getElementById("dates").value = format_dates(checkin, checkout, "{{L}}");
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

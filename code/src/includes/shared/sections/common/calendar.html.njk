@@ -163,10 +163,17 @@ function internal_date(yy, mm, dd) {
 }
 
 // Formato de fecha visualizacion
-function format_date(str) {
-    if (idioma == 'es-ES')
-        return str.slice(8,10) + '/' + str.slice(5,7) + '/' + str.slice(0,4);
-    return str.slice(5,7) + '/' + str.slice(8,10) + '/' + str.slice(0,4);
+function format_date(str, l) {
+  if (l == 'es')
+    return str.slice(8,10) + '/' + str.slice(5,7) + '/' + str.slice(0,4);
+  return str.slice(5,7) + '/' + str.slice(8,10) + '/' + str.slice(0,4);
+}
+
+// Formato de 2 fechas visualizacion
+function format_dates(fin, fout, l) {
+  if (fout)
+    return format_date(fin, l) + " - " + format_date(fout, l);
+  return "";
 }
 
 // Nombre del mes, en el idioma deseado
@@ -250,8 +257,8 @@ function forward() {
 function empty(i, o) {
     fin.value = i;
     fout.value = o;
-    fin.dataset.id = undefined;
-    fout.dataset.id = undefined;
+    fin.dataset.id = '';
+    fout.dataset.id = '';
     ftoday = fnow
     document.getElementById("calerror").style.display = "none";
     cal(ftoday);
@@ -266,24 +273,24 @@ function select(event) {
         document.getElementById("calerror").style.display = "none";
         fin.dataset.id = event.target.id;
         fout.dataset.id = event.target.id;
-        fin.value = format_date(event.target.id);
+        fin.value = format_date(event.target.id, idioma);
         document.getElementById("ok").innerHTML = "{% literal texts, 'cal-cerrar', L %}";
         fout.value = '';
         flag = true;
     } else {
         fout.dataset.id = event.target.id;
-        fout.value = format_date(event.target.id);
+        fout.value = format_date(event.target.id, idioma);
         document.getElementById("ok").innerHTML = "{% literal texts, 'cal-seleccionar', L %}";
         flag = false;
-        close_calendar()
+        close_calendar();
     }
     cal(ftoday);
     return true;
 }
 
 // Abre el calendario
-function open_calendar(field) {
-  result = document.getElementById(field);
+function open_calendar() {
+  flag = false;
   calendar.style.display = "block";
 }
 
@@ -294,21 +301,21 @@ function close_calendar(event) {
   sessionStorage.removeItem("book_checkout");
   if (fout.value == '') {
     fin.value = '';
-    result.value = fin.value + ' - ' + fout.value
     document.getElementById("calerror").style.display = "none";
   }
   if (!months(fin.dataset.id, fout.dataset.id)) {
     document.getElementById("calerror").style.display = "flex";
     return;
   }
-  result.value = ''
-  if (fin.value && fout.value)
-    result.value = fin.value + ' - ' + fout.value
-  sessionStorage.setItem('book_dates', result.value || '');
   sessionStorage.setItem('book_checkin', fin.dataset.id);
   sessionStorage.setItem('book_checkout', fout.dataset.id);
   calendar.style.display = "none";
-  result.dispatchEvent(new Event("change"));
+  window.dispatchEvent(new CustomEvent("calendar", {
+    detail: {
+      'checkin': fin.dataset.id, 
+      'checkout': fout.dataset.id
+    }
+  }));
 }
 
 // Calendar
@@ -321,9 +328,8 @@ ftoday = fnow
 
 // Params
 {% if L == 'es' %}idioma = 'es-ES';{% else %}idioma = 'en-US';{% endif %}
-fdesde = '';
-fhasta = '';
-result = '';
+fdesde = "";
+fhasta = "";
 flag = false;
 
 // Fields

@@ -110,9 +110,8 @@ tags: page
         <button class="date-button">
           <label class="labels">{% literal texts, 'cal-seleccionar-fechas', L %}</label>
           <input type="text" id="book_dates" name="book_dates" 
-            onchange="validate();" 
-            onclick="open_calendar('book_dates');" 
-            class="inputs" placeholder="{% literal texts, 'booking-formato-fecha', L %}"/>
+                 onclick="open_calendar();" 
+                 class="inputs" placeholder="{% literal texts, 'booking-formato-fecha', L %}"/>
         </button>            
       </div>
     </div>
