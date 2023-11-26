@@ -156,7 +156,7 @@ function save_dates(value) {
   sessionStorage.setItem('book_dates', value || '');
 }
 
-get_types(sessionStorage.getItem('city'));
+get_types(sessionStorage.getItem('book_city_id'));
 document.getElementById('type').value  = sessionStorage.getItem('path_type');
 document.getElementById('in').value    = sessionStorage.getItem('book_checkin');
 document.getElementById('out').value   = sessionStorage.getItem('book_checkout');

@@ -90,6 +90,7 @@
         {% endfor %}
       </p>
     </div> 
+    <div id="{{p.Code}}" class="pure-u-1 text-red"><p>...</p></div>
     
     <section class="apartment-services pure-u-1">
       <div id="amenities-carousel-{{p.Code}}" class="splide splide-services" role="group">
@@ -115,7 +116,7 @@
 
     <div class="buttons pure-u-1">
       <button class="btn-secondary" onclick="go_book('{{p.Code}}');">{% literal texts, 'button-reservar', L %}</button>
-      <button class="btn-primary" onclick="go_visit();">{% literal texts, 'button-visita', L %}</button>
+      <button class="btn-primary" onclick="go_visit('{{p.Code}}');">{% literal texts, 'button-visita', L %}</button>
     </div>
 
   </div>

@@ -184,6 +184,7 @@
 	font-size: 18px;
 	text-align: start;
 	margin: 0;
+	color: black;
 }
 .first .first-contain .right-calendar .calendar .reservas .button-calendar p.dates {
 	height: 18px;
@@ -193,11 +194,22 @@
 	background-color: transparent;
 	border: none;
 	margin: 10px 0 0;
+	color: black;
 }
 .first .first-contain .right-calendar .calendar .reservas .button-calendar .checkout {	
 	box-sizing: border-box;
 	border-left: 1.5px solid var(--grey-light);
 	padding-left: 20px;
+}
+ 
+.text-red {
+	padding-bottom: 1em;
+}
+.text-red p {
+	font-size: 16px !important;
+	color: var(--red-error) !important;
+	letter-spacing: 0.125em;
+	margin: 0;
 }
   
 .splide__slide img {
@@ -269,7 +281,6 @@
 }
 
 .right-data .text p {
-	font-weight: 500;
 	font-size: 16px;
 	line-height: 150%;
 	color: var(--white);

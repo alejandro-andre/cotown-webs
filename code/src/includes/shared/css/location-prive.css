@@ -256,19 +256,6 @@ h4 {
     font-weight: 700;
     line-height: 26px;
 }
-.text-red {
-    display: flex;
-    flex-flow: column;
-    padding: 0.5em;
-    max-width: 90%;
-}
-.text-red p {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
-    color: var(--red-error-dark);
-    letter-spacing: 0.125em;
-}
 button.green-button.btn-secondary {
     display: inline-flex;
     font-weight: 700;
@@ -843,14 +830,6 @@ section.necesities .grid .necesidad .p-text p {
         font-size: 14px;
         font-weight: 300;
         line-height: 150%;
-    }
-    .text-red {
-        padding: 0 0 0 1em;
-    }
-    .text-red p {
-        margin: 5px 0 0 0;
-        padding: 0;
-        font-size: 14px;
     }
 }
 
