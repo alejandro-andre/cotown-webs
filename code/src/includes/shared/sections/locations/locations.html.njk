@@ -95,30 +95,3 @@
   </div>
 
 </section>
-
-{% block footer %}
-{% set script %}
-{% include "shared/js/mark.min.js" %}
-
-  // Colapsa todas las preguntas (¿ocultarlas mejor?)
-  const cbs = document.querySelectorAll('.tab');
-  cbs.forEach((cb) => {
-    cb.checked = false;
-  });
-
-// Desmarca
-  var context = document.querySelector(".locations-container");
-  var instance = new Mark(context);
-  instance.unmark();
-
-  // Marca y expande  
-  instance.mark(filter, {
-    "each": function(node){
-      const input = node.closest('.loc-expansion')
-      if (input)
-        input.querySelector('.tab').checked = true;
-    },
-  });
-
-{% endset %}<script>{{ script | jsmin | safe }}</script>
-{% endblock %}

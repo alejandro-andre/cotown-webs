@@ -20,6 +20,8 @@
     --light-grey-background: #FAFAFA;
     --grey-light-background: #FCFCFC;
     --white-background: #f4f4f4;
+    --white-bg-op1: #f4f4f484;
+    --white-bg-op2: #f4f4f4b6;
     --footer: #121212;
     --footer-text: #00bfb2;
     --primary-bg: #00bfb266;
@@ -56,10 +58,11 @@
     --purple-dark: #8975b4;
     --yellow: #ecf166;
     --yellow-dark: #bdc152;
+    --grey-advise: #77889A;
 
     /* // Header border */
     --border-header: 0px;
-
+    --border-bottom: 0px;
     --h2-border: 2px 0 #00BFB2, -2px 0 #00BFB2, 0 2px #00BFB2, 0 -2px #00BFB2,
         1px 1px #00BFB2, -1px -1px #00BFB2, 1px -1px #00BFB2, -1px 1px #fff;
 

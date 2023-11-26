@@ -64,7 +64,7 @@
     --border-header: 2px solid #D1D1D1;
     --border-bottom: 1px solid #D1D1D1;
     --h2-border: 2px 0 #FF5166, -2px 0 #FF5166, 0 2px #FF5166, 0 -2px #FF5166,
-    1px 1px #FF5166, -1px -1px #FF5166, 1px -1px #FF5166, -1px 1px #fff;
+        1px 1px #FF5166, -1px -1px #FF5166, 1px -1px #FF5166, -1px 1px #fff;
 
     /* // Feedback color */
     --green-success-light: #e3f2e0;
@@ -102,10 +102,3 @@
 /* SVG Fill colours */
 .svg_base { fill: #363434 !important; }
 .svg_accent { fill: #ff5166 !important; }
-
-/* SOLO VANGUARD */
-@media only screen and (min-width: 0px) {
-    .black-menu .locations-dropdown .locations-container .options-loc, .black-menu .locations-dropdown .locations-container .locations-label .icons-open-close {
-        display: none;
-    }
-}
