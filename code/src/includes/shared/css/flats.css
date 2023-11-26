@@ -207,7 +207,6 @@
 }
 .text-red p {
 	font-size: 16px !important;
-	color: var(--red-error) !important;
 	letter-spacing: 0.125em;
 	margin: 0;
 }
@@ -340,12 +339,14 @@
 	width: 48px;
 }
 
-.svg_base {
+.svg_base { 
     fill: var(--primary-flats-text) !important;
 }
-
 .svg_accent {
-     fill:var(--primary) !important; 
+    fill: var(--primary) !important; 
+}
+.card-room .svg_accent {
+    fill: var(--primary-light) !important; 
 }
 
 .right-data .apartment-services .splide-services .splide__arrow {
@@ -499,7 +500,7 @@
 	justify-content: center;
 	align-items: flex-start;
 	background-color: var(--primary-flats);
-	padding: 0 auto;
+	padding-bottom: 2em;
 }
 
 .last .last-zone {
@@ -543,14 +544,6 @@
 #main-gallery.rooms-carousel .splide__pagination .splide__pagination__page {
 	width: 10px;
 	height: 10px;
-}
-
-.svg_base {
-    fill: var(--primary-flats-text) !important;
-}
-
-.svg_accent {
-     fill: var(--primary) !important; 
 }
 
 /* DESKTOP SMALL */

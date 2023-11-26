@@ -103,9 +103,9 @@
           <div class="left">
             <label for="radio-{{p.Code}}_{{f.Code}}" 
                    class="pure-radio {% if p.Flat_types | length < 2 %}hidden{% endif %}">
-            <input id="radio-{{p.Code}}_{{f.Code}}" name="radio-{{p.Code}}" 
+            <input required id="radio-{{p.Code}}_{{f.Code}}" name="radio-{{p.Code}}" 
                    data-place="{{p.id}}" data-flat="{{f.id}}"
-                   type="radio"{% if loop.index == 1%} checked{% endif %}/>
+                   type="radio"/>
             {{flat_types[f.Code] | translate('Name', L)}}
             </label>
           </div>

@@ -333,7 +333,7 @@ button.green-button.btn-secondary {
 }
 
 .svg_accent {
-     fill:var(--primary) !important; 
+    fill: var(--primary-light) !important; 
 }
 
 .carousel .carousel-main-list .card .card-body .price {    
@@ -772,7 +772,7 @@ section.necesities .grid .necesidad .p-text p {
         width: 40px;        
     }
     .piso .services-list li svg .svg_accent {
-         fill: var(--primary) !important; 
+        fill: var(--primary-light) !important; 
     }
 
     .piso .services-list li p {

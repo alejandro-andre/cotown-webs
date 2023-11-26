@@ -141,7 +141,7 @@ thumbnails.mount();
 
 // Availability
 const divs = document.querySelectorAll('.text-red');
-divs.forEach((div) => { div.firstChild.textContent = " "; });
+divs.forEach((div) => { div.firstChild.textContent = "&nbsp; "; });
 const date_from = sessionStorage.getItem('book_checkin');
 const date_to = sessionStorage.getItem('book_checkout');
 if (date_from && date_to) {
