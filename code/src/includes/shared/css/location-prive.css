@@ -98,12 +98,12 @@ section.location {
     background-color: var(--prive-bg);
 }
 .pisos-slider {
+    background-color: var(--prive-bg);
+    color: var(--white);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-color: var(--prive-bg);
-    color: var(--white);
     padding-bottom: 4em;
     position: relative;
 }
@@ -111,31 +111,73 @@ section.location {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
+    padding: 1em ; 
+    margin: 5px 0 8px 0;
+}
+.pisos-slider .h2-container h2 {
+    color: var(--white);
+    font-size: 64px;
+    text-align: left;
+    width: 70%;
+    text-transform: uppercase;
+    padding: 0.2em 0 0 4em;
+}
+.pisos-slider .h2-container h2 span {
+    color: var(--white);
+    font-weight: 200!important;
+}
+
+/* RESERVAS */
+.h2-container .calendar {
+    margin: 0;
+    width: 100%;
+}
+.h2-container .calendar .reservas {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
-.pisos-slider .h2-container h2 {
-    font-size: 64px;
-    text-align: center;
-    width: 50%;
+.h2-container .calendar .reservas .button-calendar {
+    color: black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    background-color: #fcfcfc;
+    border: 1.5px solid var(--grey-light);
+    box-sizing: border-box;
+    border-radius: var(--radius-2);
+    padding: 16px;
+    cursor: pointer;
+}
+.h2-container .calendar .reservas .button-calendar p.label {
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: start;
     margin: 0;
-    text-transform: uppercase;
-    padding: 1rem 0 0;
-    color: var(--white);
 }
-.pisos-slider .h2-container h2 span {
-    font-weight: 200!important;
-    color: var(--white);
+.h2-container .calendar .reservas .button-calendar p.dates {	
+    height: 18px;
+    text-align: start;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    margin: 10px 0 0;
 }
-
-.pisos-slider .h2-container .calendar {
-    display: none;        
+.h2-container .calendar .reservas .button-calendar .checkout {	
+    box-sizing: border-box;
+    border-left: 1.5px solid var(--grey-dark);
+    padding-left: 20px;
 }
 
 .carousel {
     position: relative;
     max-width: 99vw;
-    height: auto; 
+    height: auto;
 }
 .carousel .carousel-main-list .splide__slide {
     max-width: 70vw;
@@ -150,6 +192,7 @@ section.location {
     background-color: var(--primary-dark);
 }
 .carousel .carousel-main-list  .splide__slid .card.desktop {
+    color: var(--white);
     width: 70vw;
     display: flex;
     flex-flow: column;
@@ -157,12 +200,11 @@ section.location {
     align-items: center;
     cursor: pointer;
     text-decoration:none;
-    color: var(--white);
 }
 a {
+    color: var(--white);
     cursor: pointer;
     text-decoration:none;
-    color: var(--white);
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop {
     position: relative;
@@ -186,6 +228,7 @@ a {
     color: var(--primary-text);
 }
 .carousel .carousel-main-list .card .card-body {
+    background-color: var(--primary-dark);
     max-width: 70vw;
     width: auto;
     display: flex;
@@ -196,7 +239,6 @@ a {
     margin: 0;
     position: relative;
     z-index: 1000;
-    background-color: var(--primary-dark);
     border-radius: var(--slider-cards);
     min-height: 280px;
 }
@@ -268,9 +310,9 @@ button.green-button.btn-secondary {
     filter: brightness(0.4);
 }
 .arrow-nav.splide__arrow {
+    background-color: var(--white);
     height: 4em;
     width: 4em;
-    background-color: var(--white);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .arrow-nav.splide__arrow.splide__arrow--prev {
@@ -289,6 +331,10 @@ button.green-button.btn-secondary {
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .carousel-mini .card {
     width: 140px;
 }
+.carousel-mini {
+    position: relative;
+    z-index: 10;
+}
 .splide.mini {
     padding: 10px;
     visibility: visible;
@@ -296,6 +342,10 @@ button.green-button.btn-secondary {
 .carousel-mini .splide__list {
     position: relative;
     padding: 0 1em !important;
+}
+.carousel-mini .list-mini .splide__slide {
+    margin-left: 3em!important;
+    margin-right: 3em!important;
 }
 .carousel-mini .splide__slide.is-prev, .carousel-mini .splide__slide.is-next {
     opacity: 1;
@@ -331,19 +381,18 @@ button.green-button.btn-secondary {
 .svg_base {
     fill: var(--primary-flats-text) !important;
 }
-
 .svg_accent {
     fill: var(--primary-light) !important; 
 }
 
 .carousel .carousel-main-list .card .card-body .price {    
+    border-top: 1px solid var(--primary);
     width: 90%;
     padding: 1rem 0;
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
     align-items: flex-end;
-    border-top: 1px solid var(--primary);
 }
 .carousel .carousel-main-list .card .card-body .price p {
     font-size: 16px;
@@ -362,61 +411,61 @@ section.map {
     background-color: var(--prive-bg);
 }
 #map {
-    margin: 0;
+    margin: 0 0 6em;
 }
 
 section.necesities {
+    background-color: var(--prive-bg);
+    color: var(--white);    
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: stretch;
     padding: 4em 4em 6em;
-    background-color: var(--prive-bg);
-    color: var(--white);    
 }
 section.necesities .contain {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 section.necesities .contain .title h2 {
-    width: 100%;
     color: var(--white);
+    width: 100%;
 }
 section.necesities .contain .text p {
+    color: var(--white);
     font-weight: 300;
     font-size: 22px;
     line-height: 150%;
-    width: 80%;
-    color: var(--white);
+    width: 100%;
 }
 section.necesities .grid {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 0;
 }
 section.necesities .grid .necesidad img,
 section.necesities .grid .necesidad .img svg {
     width: 75px;
     padding: 1em 0 .5em;
 }
-section.necesities .grid .necesidad .img svg .st4 { 
-    fill:#fff!important;
-} 
 section.necesities .grid .necesidad .p-title p {
+    color: var(--white);
     font-weight: 700;
     font-size: 24px;
     line-height: 150%;
     margin: 0 0 1em;
-    color: var(--white);
 }
 
 section.necesities .grid .necesidad .p-text p {
+    color: var(--white);
     font-weight: 500;
     font-size: 18px;
     line-height: 150%;
     margin: 0;
-    color: var(--white);
 }
 
 .photos {
@@ -499,7 +548,7 @@ section.necesities .grid .necesidad .p-text p {
         font-size: 18px;
     }
     .pisos-slider .h2-container h2 {
-        font-size: 46px;
+        font-size: 48px;
     }
     /* section.necesities .grid.pure-u-lg-3-4 {
         padding: 0 1em;
@@ -524,7 +573,7 @@ section.necesities .grid .necesidad .p-text p {
     }
     .pisos-slider .h2-container .map-button {
         display: none;
-    }  
+    }
 }
 
 /* MOBILE \*/
@@ -591,9 +640,6 @@ section.necesities .grid .necesidad .p-text p {
         margin: 0;
         padding: 0;
     }
-    main .location .container-main .first-contain {
-        margin: 0;
-    }
     .pisos-slider  {
         display: flex;
         flex-flow: row wrap;
@@ -606,13 +652,15 @@ section.necesities .grid .necesidad .p-text p {
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1em;
+        padding: 1em;
+        margin: 16px 0 0;
+        border: none;       
     }
-    .pisos-slider .h2-container h2 {
-        width: 69%;
-        text-align: left;
+    .pisos-slider .h2-container h2 {        
+        font-size: 48px;   
     }
     .pisos-slider .h2-container .button-map-mobile {
+        display: flex;
         background-color: transparent;
     }
     .pisos-slider .h2-container .button-map-mobile img {
@@ -620,20 +668,30 @@ section.necesities .grid .necesidad .p-text p {
         text-align: center;
     }
     .pisos-slider .h2-container .button-map-mobile p {
+        color: var(--white);
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         margin:0;
-        color: var(--white);
     }
+    .pisos-slider .h2-container .calendar .reservas {
+        width: 100%;
+        margin-top: 16px;
+    }
+    .pisos-slider .h2-container .calendar {
+        width: 100%;
+    }    
+
     .carousel.desktop {
         display: none;
     }
-
+    .pisos.mobile {
+        margin-top: 1em;
+    }
     .pisos.mobile .piso-contain {
-        margin: 1em 0 0;
         background-color: var(--primary-dark);
         border: 1px solid var(--primary-dark);
+        margin: 0 0 2em;
         box-shadow: 0px 20px 30px rgba(22, 22, 22, 0.06);
         padding: 0 0 1em;
     }
@@ -660,33 +718,25 @@ section.necesities .grid .necesidad .p-text p {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         padding: 0.5em 1em;
-        height: 100px;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .img-container {
+        background-color: var(--white);
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
         width: 40px;
         height: 40px;
-        background-color: var(--white);
         border-radius: 5px;
         object-fit: cover;
         object-position: center center;
         text-align: center;
         padding: 0.2em;
     }
-    .pisos.mobile .piso-contain .piso-main .piso .options .type .left {
-        width: 60%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        align-items: center;
-    }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .img-container img {
-        width: 30px;
+        width: 25px;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container {
         display: flex;
@@ -694,15 +744,14 @@ section.necesities .grid .necesidad .p-text p {
         justify-content: flex-start;
         align-items: center;
         margin: auto 0;
-        width: calc(100% - 48px);
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
         font-size: 20px;
+        font-family: var(--text-font);
         font-weight: 400;
         line-height: 150%;
-        letter-spacing: 0.88px;
-        text-transform: uppercase;
-        width: 25%;
+        letter-spacing: 0.08em;
+        width: 60%;
         padding-left: 1em;
         margin: 0.1em 0 0;
     }
@@ -728,22 +777,9 @@ section.necesities .grid .necesidad .p-text p {
     .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container {
         display: flex;
         flex-flow: column;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: flex-end;
-        text-align: end;
-        width: fit-content;
-    }
-    .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container .price p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 150%;
-        margin: 0;
-    }
-    .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container .price h5 {
-        font-size: 24px;
-        font-weight: 500;
-        letter-spacing: 0.14px;
-        margin-bottom: 0;
+        margin: 10px 0 0 0;
     }
     .piso ul.services-list {
         display: flex;
@@ -759,6 +795,7 @@ section.necesities .grid .necesidad .p-text p {
         background-color: transparent;
         display: flex;
         flex-flow: column;
+        justify-content: center;
         align-items: center;
         padding: 0!important;
     }
@@ -766,12 +803,11 @@ section.necesities .grid .necesidad .p-text p {
         width: 20px;
     }
     .piso .services-list li svg {
-        width: 40px;        
+        width: 40px;
     }
     .piso .services-list li svg .svg_accent {
         fill: var(--primary-light) !important; 
     }
-
     .piso .services-list li p {
         font-weight: 400;
         font-size: 16px;
@@ -781,7 +817,8 @@ section.necesities .grid .necesidad .p-text p {
     section.necesities {
         justify-content: flex-start;
         align-items: center;
-        padding: 2em 1em;
+        padding: 0 1em;
+        margin: 2em 0;
     }
     section.necesities .contain .title h2 {
         font-size: 32px;
@@ -800,6 +837,8 @@ section.necesities .grid .necesidad .p-text p {
         gap: 8px;
     }
     section.necesities .grid .necesidad {
+        border: 0px solid var(--background-primary);
+        background-color: var(--primary-dark);
         display: flex;
         width: calc(33% - 20px);
         min-height: 220px;
@@ -810,8 +849,6 @@ section.necesities .grid .necesidad .p-text p {
         align-items: center;
         gap: 4px;
         border-radius: 4px;
-        border: 0px solid var(--background-primary);
-        background-color: var(--primary-dark);
         box-shadow: 0px 2px 3px 0px var(--shadow);
         text-align: center;
     }
@@ -820,19 +857,20 @@ section.necesities .grid .necesidad .p-text p {
         padding: 0;
     }
     section.necesities .grid .necesidad .p-title p {
-        font-size: 15px;
+        font-size: 16px;
         margin: 0;
     }
     section.necesities .grid .necesidad .p-text p {
         font-size: 14px;
-        font-weight: 300;
-        line-height: 150%;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .pisos-slider .h2-container h2 {
-        font-size: 30px;
+        font-size: 48px;
+    }
+    .pisos-slider .h2-container .calendar .reservas .button-calendar {
+        width: 100%;
     }
     section.necesities .grid {
         justify-content: flex-start;

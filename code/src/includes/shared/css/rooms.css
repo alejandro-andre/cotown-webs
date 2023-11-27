@@ -164,7 +164,7 @@
 }
 .first .first-contain .right-calendar .calendar .reservas .button-calendar .checkout {	
   box-sizing: border-box;
-  border-left: 1.5px solid var(--grey-light);
+  border-left: 1.5px solid var(--grey-dark);
   padding-left: 20px;
 }
 

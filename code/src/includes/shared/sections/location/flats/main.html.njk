@@ -78,6 +78,9 @@
 
 </main>
 
+<!-- Calendar-->
+{% include 'shared/sections/common/calendar.html.njk' %}
+
 <!-- Scripts -->
 {% block footer %}
 {% set script %}
@@ -133,5 +136,8 @@ new Splide('#sliderFlats', {
   },
 }).mount();
 
+{% include 'shared/sections/common/availability.html.njk' %}
+// Show dates
+show_dates();
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

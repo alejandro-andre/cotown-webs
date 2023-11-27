@@ -2,33 +2,35 @@
 
   <div class="h2-container pure-u-1">
 
-    <!-- Title -->
-    <h2>{% literal texts, 'rooms-nuestros-pisos', L %}</h2>
-
-    <!-- See map button (mobile) -->
-    <a href="#mapanchor" class="map-button pure-u-5-24">
-      <button class="button-map-mobile pure-u-1">
-        <img src="{{root}}/assets/img/icono__serv_mapa.svg">
-        <p>{% literal texts, 'location-ver-mapa', L %}</p>
-      </button>
-    </a>
-    
-    <!-- Dates -->
-    <!-- TODO: Fechas
-    <div class="calendar pure-u-1">
-      <div class="reservas pure-u-1">
-        <div class="button-calendar">
-          <p class="label">
-            Fechas
-          </p>
-          <p class="dates">
-            {% literal texts, 'booking-formato-fecha', L %}
-          </p>
-        </div>        
-      </div>
+    <div class="pure-u-1 pure-u-lg-1-2">
+      <h2 class="pure-u-20-24">{% literal texts, 'rooms-nuestros-pisos', L %}</h2>
+      <!-- See map button (mobile) -->
+      <a href="#mapanchor" class="map-button pure-u-4-24">
+        <button class="button-map-mobile pure-u-1">
+          <img src="{{root}}/assets/img/icono__serv_mapa.svg">
+          <p>{% literal texts, 'location-ver-mapa', L %}</p>
+        </button>
+      </a>
     </div>
-    -->
 
+    <!-- Dates -->
+    <section id="selected-dates" class="hidden pure-u-1 pure-u-lg-1-2">
+      <div class="calendar pure-u-1">
+        <div class="reservas pure-u-1">
+          <div class="button-calendar" onclick="go_check();">
+            <div class="checkin pure-u-1-2"> 
+              <p class="label">{% literal texts, 'dates-entrada', L %}</p>
+              <p id="checkin" class="dates"></p>
+            </div> 
+            <div class="checkout pure-u-1-2"> 
+              <p class="label">{% literal texts, 'dates-salida', L %}</p>
+              <p id="checkout" class="dates"></p>
+            </div> 
+          </div>        
+        </div>
+      </div>
+    </section>
+    
   </div>
 
   <!-- Desktop: slider -->

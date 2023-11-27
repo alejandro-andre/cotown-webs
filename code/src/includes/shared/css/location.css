@@ -45,11 +45,12 @@ main .location .container-main .first-contain .video-loc .text-container {
 }
 main .location .container-main .first-contain .video-loc .text-container h2 {
     color: var(--white);
+    width: fit-content;
     width: 100%;
     font-size: 78px;
     line-height: 1em;
     padding: 0.2em 1em 0 0;
-    text-align: end;    
+    text-align: end;
 }
 main .location .container-main .first-contain .video-loc .text-container h3 {
     color: var(--white);
@@ -93,46 +94,47 @@ main .location .container-main .first-contain .video-loc .text-container .descri
 /* CARRUSEL
 -------------------------------- \*/
 .pisos-slider {
+    background-color: var(--white-bg-op1);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-color: var(--white-bg-op1);
     padding-bottom: 4em;
     position: relative;
-    
 }
 .pisos-slider .h2-container {
+    background-color: var(--grey-light);
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    padding: 1em ; 
+    margin: 5px 0 8px 0;
 }
 .pisos-slider .h2-container h2 {
     font-size: 64px;
-    text-align: center;
-    width: 40%;
-    margin: 0;
+    text-align: left;
+    width: 70%;
     text-transform: uppercase;
-    padding: 1rem 0 0;
+    padding: 0.2em 0 0 4em;
 }
 .pisos-slider .h2-container h2 span {
     font-weight: 200!important;
 }
 
 /* RESERVAS */
-.pisos-slider .h2-container .calendar {
-    width: 50%;
+.h2-container .calendar {
+    margin: 0;
+    width: 100%;
 }
-.pisos-slider .h2-container .calendar .reservas {
+.h2-container .calendar .reservas {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
-.pisos-slider .h2-container .calendar .reservas .button-calendar {
+.h2-container .calendar .reservas .button-calendar {
+    color: black;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -141,27 +143,29 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     background-color: #fcfcfc;
     border: 1.5px solid var(--grey-light);
     box-sizing: border-box;
-    border-radius: 30px;
+    border-radius: var(--radius-2);
     padding: 16px;
     cursor: pointer;
 }
-.pisos-slider .h2-container .calendar .reservas .button-calendar p.label {
+.h2-container .calendar .reservas .button-calendar p.label {
     width: 100%;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 18px;
     text-align: start;
     margin: 0;
 }
-.pisos-slider .h2-container .calendar .reservas .button-calendar p.dates {	
-    height: 16px;
+.h2-container .calendar .reservas .button-calendar p.dates {	
+    height: 18px;
     text-align: start;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 18px;
     background-color: transparent;
     border: none;
     margin: 10px 0 0;
+}
+.h2-container .calendar .reservas .button-calendar .checkout {	
+    box-sizing: border-box;
+    border-left: 1.5px solid var(--grey-dark);
+    padding-left: 20px;
 }
 
 .carousel {
@@ -182,6 +186,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     background-color: var(--primary-light);
 }
 .carousel .carousel-main-list  .splide__slid .card.desktop {
+    color: var(--black);
     width: 70vw;
     display: flex;
     flex-flow: column;
@@ -189,12 +194,11 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     align-items: center;
     cursor: pointer;
     text-decoration:none;
-    color: var(--black);
 }
 a {
+    color: var(--black);
     cursor: pointer;
     text-decoration:none;
-    color: var(--black);
 }
 .carousel .carousel-main-list .splide__slide .ratio.desktop {
     position: relative;
@@ -218,6 +222,7 @@ a {
     color: var(--primary-text);
 }
 .carousel .carousel-main-list .card .card-body {
+    background-color: var(--primary-light);
     max-width: 70vw;
     width: auto;
     display: flex;
@@ -228,7 +233,6 @@ a {
     margin: 0;
     position: relative;
     z-index: 1000;
-    background-color: var(--primary-light);
     border-radius: var(--slider-cards);
     min-height: 280px;
 }
@@ -314,9 +318,9 @@ button.green-button.btn-secondary {
     filter: brightness(0.4);
 }
 .arrow-nav.splide__arrow {
+    background-color: var(--grey-background);
     height: 4em;
     width: 4em;
-    background-color: var(--grey-background);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .arrow-nav.splide__arrow.splide__arrow--prev {
@@ -342,20 +346,6 @@ button.green-button.btn-secondary {
 .splide.mini {
     padding: 10px;
     visibility: visible;
-}
-.carousel-mini .splide__arrow--prev {
-    left: 0;
-    position: absolute;
-    top: 36%;
-    background: var(--primary);
-    opacity: 0.75;
-}
-.carousel-mini .splide__arrow--next {
-    right: 0;
-    position: absolute;
-    top: 36%;
-    background: var(--primary);
-    opacity: 0.75;
 }
 .carousel-mini .splide__list {
     position: relative;
@@ -392,13 +382,13 @@ button.green-button.btn-secondary {
 }
 
 .carousel .carousel-main-list .card .card-body .price {    
+    border-top: 1px solid var(--grey-light);
     width: 90%;
     padding: 1rem 0;
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
     align-items: flex-end;
-    border-top: 1px solid var(--grey-light);
 }
 .carousel .carousel-main-list .card .card-body .price button.btn-text {
     font-size: 16px;
@@ -539,9 +529,9 @@ section.necesities .grid .necesidad .p-text p {
     }
     main .location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 18px;
-    }    
+    }
     .pisos-slider .h2-container h2 {
-        font-size: 46px;
+        font-size: 48px;
     }
     /* section.necesities .grid.pure-u-lg-3-4 {
         padding: 0 1em;
@@ -555,11 +545,9 @@ section.necesities .grid .necesidad .p-text p {
     section.necesities .contain .text p {
         font-size: 18px;
     }
-
     .carousel .carousel-main-list .splide__slide h3 {
         font-size: 64px;
     }
-
 }
 
 @media only screen and (min-width: 1024px) {
@@ -568,14 +556,16 @@ section.necesities .grid .necesidad .p-text p {
     }
     .pisos-slider .h2-container .map-button {
         display: none;
-    }    
+    }
+    /*
     .calendar {
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
-        margin: 1em 0;
+        margin: 2em 0 4em;
     }
+    */
 }
 
 /* MOBILE \*/
@@ -642,9 +632,6 @@ section.necesities .grid .necesidad .p-text p {
         margin: 0;
         padding: 0;
     }
-    /* main .location .container-main .first-contain {
-        margin: 0 0 1em;
-    } */
     .pisos-slider  {
         display: flex;
         flex-flow: row wrap;
@@ -657,18 +644,15 @@ section.necesities .grid .necesidad .p-text p {
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1rem;
-        margin: 40px 0 0;
-        background: transparent;
+        padding: 1em;
+        margin: 16px 0 0;
         border: none;       
     }
     .pisos-slider .h2-container h2 {        
-        color: var(--black);
-        font-size: 40px;   
-        width: 69%;
-        text-align: left;
+        font-size: 48px;   
     }
     .pisos-slider .h2-container .button-map-mobile {
+        display: flex;
         background-color: transparent;
     }
     .pisos-slider .h2-container .button-map-mobile img {
@@ -679,7 +663,7 @@ section.necesities .grid .necesidad .p-text p {
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
-        margin:0
+        margin:0;
     }
     .pisos-slider .h2-container .calendar .reservas {
         width: 100%;
@@ -693,10 +677,13 @@ section.necesities .grid .necesidad .p-text p {
         display: none;
     }
 
+    .pisos.mobile {
+        margin-top: 1em;
+    }
     .pisos.mobile .piso-contain {
-        margin: 1em 0 2em;
         background-color: var(--grey-light-background);
         border: 1px solid var(--grey-light);
+        margin: 0 0 2em;
         box-shadow: 0px 20px 30px rgba(22, 22, 22, 0.06);
         padding: 0 0 1em;
     }
@@ -727,13 +714,13 @@ section.necesities .grid .necesidad .p-text p {
         padding: 0.5em 1em;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .img-container {
+        background-color: var(--white-background);
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
         width: 40px;
         height: 40px;
-        background-color: var(--white-background);
         border-radius: 5px;
         object-fit: cover;
         object-position: center center;
@@ -751,9 +738,9 @@ section.necesities .grid .necesidad .p-text p {
         margin: auto 0;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
+        font-size: 20px;
         font-family: var(--text-font);
         font-weight: 400;
-        font-size: 16px;
         line-height: 150%;
         letter-spacing: 0.08em;
         width: 60%;
@@ -839,6 +826,8 @@ section.necesities .grid .necesidad .p-text p {
         gap: 8px;
     }
     section.necesities .grid .necesidad {
+        border: 1px solid var(--background-primary);
+        background: var(--white-background);
         display: flex;
         width: calc(33% - 20px);
         min-height: 220px;
@@ -849,8 +838,6 @@ section.necesities .grid .necesidad .p-text p {
         align-items: center;
         gap: 4px;
         border-radius: 4px;
-        border: 1px solid var(--background-primary);
-        background: var(--white-background);
         box-shadow: 0px 2px 3px 0px var(--shadow);
         text-align: center;
     }
@@ -877,8 +864,8 @@ section.necesities .grid .necesidad .p-text p {
 
 @media only screen and (max-width: 768px) {
     .pisos-slider .h2-container h2 {
-        font-size: 30px;
-    }   
+        font-size: 48px;
+    }
     .pisos-slider .h2-container .calendar .reservas .button-calendar {
         width: 100%;
     }
