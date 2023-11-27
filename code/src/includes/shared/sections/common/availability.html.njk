@@ -42,7 +42,8 @@ function availability(lang, option) {
   document.querySelectorAll('button[name="btn-check"]').forEach((btn) => { btn.classList.add("hidden"); });
   document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.remove("hidden"); });
   document.querySelectorAll('button[name="btn-visit"]').forEach((btn) => { btn.classList.remove("hidden"); });
-  url = 'https://back.cotown.com/api/v1/availability/' + option + '/{{building.id}}?date_from=' + date_from + '&date_to=' + date_to;
+  filter = '{{building.id}}' == '' ? '/0' : '/{{building.id}}'
+  url = 'https://back.cotown.com/api/v1/availability/' + option + filter + '?date_from=' + date_from + '&date_to=' + date_to;
   fetch(url).then(resp => resp.text()).then(data => {
     // Parse response
     json = JSON.parse(data);
