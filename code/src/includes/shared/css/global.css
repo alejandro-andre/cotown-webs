@@ -271,6 +271,13 @@ button {
 	color: var(--primary-text);
 	cursor: pointer;
 }
+.btn-secondary:disabled {
+	box-shadow: 0;
+	border: 0;
+	background-color: var(--grey-background);
+	color: gray;
+	cursor: pointer;
+}
 
 .btn-secondary:hover {
 	border-color: var(--primary-dark);

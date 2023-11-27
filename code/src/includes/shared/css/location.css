@@ -649,7 +649,8 @@ section.necesities .grid .necesidad .p-text p {
         border: none;       
     }
     .pisos-slider .h2-container h2 {        
-        font-size: 48px;   
+        font-size: 48px;
+        padding: 0;
     }
     .pisos-slider .h2-container .button-map-mobile {
         display: flex;
