@@ -70,7 +70,7 @@
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Post/" + p.id +"/Image/contents?access_token=" + token,
                 p.Title, p.Slug | slugify, "",
-                [600,300], "(max-width: 768px) 200px, (max-width: 1024px) 300px, 600px"
+                [800,400], "(max-width: 768px) 200px, (max-width: 1024px) 300px, 600px"
               %}
               <div class="date">
                 <p>{{p.Publish_date|dmy}}</p>

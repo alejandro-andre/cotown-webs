@@ -116,7 +116,7 @@ section.location {
 }
 .pisos-slider .h2-container h2 {
     color: var(--white);
-    font-size: 64px;
+    font-size: 48px;
     text-align: left;
     width: 70%;
     text-transform: uppercase;
@@ -547,9 +547,6 @@ section.necesities .grid .necesidad .p-text p {
     main .location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 18px;
     }
-    .pisos-slider .h2-container h2 {
-        font-size: 48px;
-    }
     /* section.necesities .grid.pure-u-lg-3-4 {
         padding: 0 1em;
     } */
@@ -657,7 +654,6 @@ section.necesities .grid .necesidad .p-text p {
         border: none;       
     }
     .pisos-slider .h2-container h2 {        
-        font-size: 48px;   
         padding: 0;
     }
     .pisos-slider .h2-container .button-map-mobile {
@@ -867,9 +863,6 @@ section.necesities .grid .necesidad .p-text p {
 }
 
 @media only screen and (max-width: 768px) {
-    .pisos-slider .h2-container h2 {
-        font-size: 48px;
-    }
     .pisos-slider .h2-container .calendar .reservas .button-calendar {
         width: 100%;
     }
