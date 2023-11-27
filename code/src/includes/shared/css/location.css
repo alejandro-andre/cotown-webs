@@ -574,7 +574,7 @@ section.necesities .grid .necesidad .p-text p {
         flex-flow: column;
         justify-content: center;
         align-items: center;
-        margin: 2em 0 4em;
+        margin: 1em 0;
     }
 }
 
@@ -693,9 +693,6 @@ section.necesities .grid .necesidad .p-text p {
         display: none;
     }
 
-    .pisos.mobile {
-        margin-top: 1em;
-    }
     .pisos.mobile .piso-contain {
         margin: 1em 0 2em;
         background-color: var(--grey-light-background);

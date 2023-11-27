@@ -630,9 +630,6 @@ section.necesities .grid .necesidad .p-text p {
         display: none;
     }
 
-    .pisos.mobile {
-        margin-top: 1em;
-    }
     .pisos.mobile .piso-contain {
         margin: 1em 0 0;
         background-color: var(--primary-dark);

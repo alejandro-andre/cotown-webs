@@ -89,10 +89,11 @@ function go_book(id, code) {
   if (radio) { 
     qty  = radio.getAttribute('data-qty');
     if (!qty) {
-      location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
+      location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['booking'].url}}.html";
       return;
     }
     flat = radio.getAttribute('data-flat');
+    document.getElementById('overlay').style.display = 'flex';
     location.href = '/booking/3?'
       + 'lang={{L}}&segment={{siteid}}&book_building_id={{building.id}}'
       + '&book_flat_type_id=' + flat
@@ -103,7 +104,7 @@ function go_book(id, code) {
   }
 
   // Flats
-  //location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['book'].url}}.html";
+  //location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['booking'].url}}.html";
 }
 
 // Button VISIT

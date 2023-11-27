@@ -110,7 +110,6 @@
   width: 50px;
 }
 .first .first-contain .flat-services .splide-services .splide__list .splide__slide .slide p {
-  font-weight: 500;
   font-size: 16px;
   text-align: center;
 }
@@ -144,7 +143,7 @@
   background-color: #fcfcfc;
   border: 1.5px solid var(--grey-light);
   box-sizing: border-box;
-  border-radius: 30px;
+  border-radius: var(--radius-2);
   padding: 16px;
   cursor: pointer;
 }
@@ -158,7 +157,6 @@
 .first .first-contain .right-calendar .calendar .reservas .button-calendar p.dates {	
   height: 18px;
   text-align: start;
-  font-weight: 500;
   font-size: 18px;
   background-color: transparent;
   border: none;
