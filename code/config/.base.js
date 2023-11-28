@@ -187,7 +187,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addNunjucksAsyncShortcode('svg', async (src, name) => {
     // Get metadata
     try {
-      console.log(`Loading svg ${name} ${src}`);
       let metadata = await Image(src, {
         formats: ['svg'],
         dryRun: true,
@@ -233,6 +232,7 @@ module.exports = (eleventyConfig) => {
 
       // Generate HTML
       html = Image.generateHTML(metadata, imageAttributes);
+      console.log(`Loaded image ${name} ${src}`);
       return html.replace("height", "h");
     } catch (err) {
       console.log(err);
