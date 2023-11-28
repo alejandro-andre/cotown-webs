@@ -1,5 +1,5 @@
 <!-- Google Tag Manager -->
-{% set script %}{% include "shared/js/gtm.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
+{% set script %}{% include site + "/js/gtm.js" %}{% endset %}<script>{{ script | jsmin | safe }}</script>
 
 <!-- Basic Page Needs
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -64,10 +64,10 @@
 {% set css %}{% include site +"/css/variables.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 {% set css %}{% include "shared/css/global.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>
 -->
-<link rel="stylesheet" href="/assets/css/pure.min.css">
-<link rel="stylesheet" href="/assets/css/grids-responsive.min.css">
-<link rel="stylesheet" href="/assets/css/splide.css">
-<link rel="stylesheet" href="/assets/css/variables.css">
+<link rel="stylesheet" href="{{root}}/assets/css/pure.min.css">
+<link rel="stylesheet" href="{{root}}/assets/css/grids-responsive.min.css">
+<link rel="stylesheet" href="{{root}}/assets/css/splide.css">
+<link rel="stylesheet" href="{{root}}/assets/css/variables.css">
 
 <!-- Icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
