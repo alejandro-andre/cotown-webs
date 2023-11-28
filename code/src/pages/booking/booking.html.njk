@@ -134,20 +134,16 @@ tags: page
 
 </main>
 
+<!-- Spinner -->
+<div id="overlay"><div id="spinner"></div></div>
+
 <!-- Calendar-->
 {% include 'shared/sections/common/calendar.html.njk' %}
 
 {% block footer %}
 {% set script %}
+// Typologies
 const typologies={{typologies|dump|safe}};
-
-// Reset
-set_field("book_city_id", "");
-set_field("book_acom", "");
-set_field("book_room", "");
-set_field("book_checkin", sessionStorage.getItem("book_checkin"));
-set_field("book_checkout", sessionStorage.getItem("book_checkout"));
-set_field("book_dates", sessionStorage.getItem("book_dates"));
 
 function get_field(field) {
   return document.getElementById(field).value;
@@ -161,6 +157,7 @@ function set_field(field, value) {
 }
 
 function booking() {
+  document.getElementById('overlay').style.display = 'flex';
   document.getElementById("book_form").submit();
 }
 
@@ -236,5 +233,23 @@ function select_room(id) {
   set_field("book_room", id)
   validate();
 }
+
+// Calendar event
+window.addEventListener("calendar", function(e) {
+  if (e.detail.checkin != '') {
+    document.getElementById("book_dates").value = format_dates(e.detail.checkin, e.detail.checkout, "{{L}}");
+    validate();
+  }
+});
+
+// Reset
+checkin = sessionStorage.getItem("book_checkin");
+checkout = sessionStorage.getItem("book_checkout");
+set_field("book_city_id", "");
+set_field("book_acom", "");
+set_field("book_room", "");
+set_field("book_checkin", checkin);
+set_field("book_checkout", checkin);
+set_field("book_dates", format_dates(checkin, checkout, "{{L}}"));
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

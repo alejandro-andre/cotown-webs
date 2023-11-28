@@ -296,7 +296,6 @@ function open_calendar() {
 
 // Valida y cierra el calendario
 function close_calendar(event) {
-  sessionStorage.removeItem("book_dates");
   sessionStorage.removeItem("book_checkin");
   sessionStorage.removeItem("book_checkout");
   if (fout.value == '') {
