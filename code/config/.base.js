@@ -187,6 +187,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addNunjucksAsyncShortcode('svg', async (src, name) => {
     // Get metadata
     try {
+      console.log(`Loading svg ${name} ${src}`);
       let metadata = await Image(src, {
         formats: ['svg'],
         dryRun: true,
@@ -202,6 +203,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
     // Get metadata
     try {
+      console.log(`Loading image ${name} ${src}`);
       if (eleventyConfig.test == 'test') {
         src = './config/image.jpg';
       }
