@@ -203,7 +203,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
     // Get metadata
     try {
-      //?console.log(`Loading image ${name} ${src}`);
       if (eleventyConfig.test == 'test') {
         src = './config/image.jpg';
       }
@@ -233,7 +232,6 @@ module.exports = (eleventyConfig) => {
 
       // Generate HTML
       html = Image.generateHTML(metadata, imageAttributes);
-      //?console.log(`Loaded image ${name} ${src}`);
       return html.replace("height", "h");
     } catch (err) {
       console.log(err);
