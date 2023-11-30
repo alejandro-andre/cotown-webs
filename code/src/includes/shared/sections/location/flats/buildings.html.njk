@@ -241,15 +241,13 @@
 
             <!-- Apartamento privado -->
             <div class="type pure-u-22-24">
-              <div class="left">
-                <div class="img-container">
-                  <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
-                </div>
-                <div class="h4-container">
-                  <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
-                </div>
-              </div>              
-              <div class="button-container">
+              <div class="img-container pure-u-3-24">
+                <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
+              </div>
+              <div class="h4-container pure-u-12-24">
+                <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
+              </div>
+              <div class="p-container pure-u-7-24">
 
                 <!-- DESDE -->
                 {% set min = 99999 %}
@@ -261,10 +259,8 @@
                 {% endfor %}
                 {% endfor %}
                 {% if min < 99999 %}
-                <div class="price">
-                  <p>{% literal texts, 'price-desde', L %}</p>
-                  <h5>{{min}} €/{% literal texts, 'price-mes', L %}</h5>
-                </div>
+                <span>{% literal texts, 'price-desde', L %}<span>
+                <p>{{min}} €/{% literal texts, 'price-mes', L %}</p>
                 {% endif %}
 
               </div>

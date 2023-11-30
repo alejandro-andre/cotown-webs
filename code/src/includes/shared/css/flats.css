@@ -342,9 +342,11 @@
 .svg_accent {
     fill: var(--primary) !important; 
 }
+/*
 .card-room .svg_accent {
     fill: var(--primary-light) !important; 
 }
+*/
 
 .right-data .apartment-services .splide-services .splide__arrow {
 	background-color: var(--white);

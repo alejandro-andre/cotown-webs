@@ -2145,7 +2145,9 @@ button.back p {
 		font-size: 10px;
 		line-height: 14px;
 	}
-}#overlay {
+}
+
+#overlay {
 	display: none;
 	position: fixed;
 	top: 0;

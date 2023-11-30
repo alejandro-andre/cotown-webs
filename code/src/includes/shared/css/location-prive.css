@@ -379,10 +379,13 @@ button.green-button.btn-secondary {
 }
 
 .svg_base {
-    fill: var(--primary-flats-text) !important;
+    fill: var(--primary-background) !important; 
 }
 .svg_accent {
-    fill: var(--primary-light) !important; 
+    /*
+    fill: var(--footer-text) !important;
+    */
+    fill: red !important;
 }
 
 .carousel .carousel-main-list .card .card-body .price {    
@@ -740,7 +743,7 @@ section.necesities .grid .necesidad .p-text p {
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
-        margin: auto 0;
+        margin: 5px 0;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
         font-size: 20px;
@@ -803,7 +806,10 @@ section.necesities .grid .necesidad .p-text p {
         width: 40px;
     }
     .piso .services-list li svg .svg_accent {
+        fill: red !important; 
+        /*
         fill: var(--primary-light) !important; 
+        */
     }
     .piso .services-list li p {
         font-weight: 400;
