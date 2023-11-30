@@ -77,7 +77,7 @@ function availability(lang, option) {
 
 // Button BOOK 
 // /booking/3?lang=en&segment=1&book_building_id=1&book_flat_type_id=1&book_place_type_id=100&book_checkin=2023-11-01&book_checkout=2024-03-31
-function go_book(id, code) {
+function go_book(pid, fid, code) {
   // Save in session
   sessionStorage.setItem('city', '{{building.District.Location.Name}}');
   sessionStorage.setItem('building', '{{building.Name}}');
@@ -97,15 +97,22 @@ function go_book(id, code) {
     document.getElementById('overlay').style.display = 'flex';
     location.href = '/booking/3?'
       + 'lang={{L}}&segment={{siteid}}&book_building_id={{building.id}}'
+      + '&book_acom=pc'
       + '&book_flat_type_id=' + flat
-      + '&book_place_type_id=' + id
+      + '&book_place_type_id=' + pid
       + '&book_checkin=' + sessionStorage.getItem('book_checkin') 
       + '&book_checkout=' + sessionStorage.getItem('book_checkout');
     return;
   }
 
   // Flats
-  //??
+  location.href = '/booking/3?'
+    + 'lang={{L}}&segment={{siteid}}&book_building_id={{building.id}}'
+    + '&book_acom=ap'
+    + '&book_flat_type_id=' + fid
+    + '&book_place_type_id=' + pid
+    + '&book_checkin=' + sessionStorage.getItem('book_checkin') 
+    + '&book_checkout=' + sessionStorage.getItem('book_checkout');
 }
 
 // Button VISIT
