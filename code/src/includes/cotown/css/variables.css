@@ -61,8 +61,8 @@
     --grey-advise: #77889A;
 
     /* // Header border */
-    --border-header: 0px;
-    --border-bottom: 0px;
+    --border-header: 2px solid #D1D1D1;
+    --border-bottom: 1px solid #D1D1D1;
     --h2-border: 2px 0 #00BFB2, -2px 0 #00BFB2, 0 2px #00BFB2, 0 -2px #00BFB2,
         1px 1px #00BFB2, -1px -1px #00BFB2, 1px -1px #00BFB2, -1px 1px #fff;
 
