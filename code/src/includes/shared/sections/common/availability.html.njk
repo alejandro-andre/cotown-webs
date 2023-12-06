@@ -88,20 +88,36 @@ function go_book(pid, fid, code) {
   // Rooms?
   radio = document.querySelector('input[name="radio-' + code + '"]:checked');
   if (radio) { 
+    // No availability
     qty  = radio.getAttribute('data-qty');
     if (!qty) {
       location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['booking'].url}}.html";
       return;
     }
+
+    // Get flat data
     flat = radio.getAttribute('data-flat');
     document.getElementById('overlay').style.display = 'flex';
+
+    // Get extras
+    extras = ""
+    const inputs = document.querySelectorAll('input[data-place="' + code + '"]:checked')
+    if (inputs) {
+      inputs.forEach((el) => { 
+        if (extras != "") extras += ","
+        extras += el.value
+      });
+    };
+
+    // Go booking
     location.href = '/booking/3?'
       + 'lang={{L}}&segment={{siteid}}&book_building_id={{building.id}}'
       + '&book_acom=pc'
       + '&book_flat_type_id=' + flat
       + '&book_place_type_id=' + pid
       + '&book_checkin=' + sessionStorage.getItem('book_checkin') 
-      + '&book_checkout=' + sessionStorage.getItem('book_checkout');
+      + '&book_checkout=' + sessionStorage.getItem('book_checkout')
+      + '&book_extras=' + extras;
     return;
   }
 

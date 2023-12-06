@@ -118,6 +118,8 @@
       </div>
 
       <!-- Extra -->
+      {{amenities | dump}}
+      {{amenities | find('id', 'eq', building.id) | dump}}
       <div class="extra">
         {% set eshow = false %}
         {% for a in amenities | find('id', 'eq', building.id) | find('Place_type', 'eq', p.Code) %}
@@ -130,7 +132,11 @@
         <div class="extras">
           <div class="left">
             <label for="extra_{{a.Name}}" class="pure-checkbox">
-              <input type="checkbox" id="extra_{{a.Name}}" name="extra_{{a.Name}}" value="{{a.Name}}"/>
+              <input type="checkbox" 
+                     data-place="{{p.Code}}"
+                     id="extra_{{p.Code}}_{{a.Name}}" 
+                     name="extra_{{p.Code}}_{{a.Name}}" 
+                     value="{{a.Name}}"/>
               {{a | translate('Name', L)}}
             </label>
           </div>
