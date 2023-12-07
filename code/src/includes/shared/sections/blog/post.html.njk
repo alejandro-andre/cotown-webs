@@ -22,7 +22,7 @@
           {% for t in p.Tags %}
             {{t.Tag | translate('Name', L)}}
           {% endfor %}
-          {{post | translate('Content', L) | safe }}
+          {{post | translate('Content', L) | markdown | safe }}
         </div>
       </div>
     </section>
