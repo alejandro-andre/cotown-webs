@@ -118,8 +118,6 @@
       </div>
 
       <!-- Extra -->
-      {{amenities | dump}}
-      {{amenities | find('id', 'eq', building.id) | dump}}
       <div class="extra">
         {% set eshow = false %}
         {% for a in amenities | find('id', 'eq', building.id) | find('Place_type', 'eq', p.Code) %}

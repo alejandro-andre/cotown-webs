@@ -170,7 +170,7 @@
         "description": "Stay with us and experience university life like you've never experienced it before."
       }
     },
-    "book": {
+    "info": {
       "url": "book-now",
       "text": "Book now!",
       "cotown": {

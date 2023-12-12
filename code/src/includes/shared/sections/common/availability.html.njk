@@ -75,8 +75,7 @@ function availability(lang, option) {
   });
 }
 
-// Button BOOK 
-// /booking/3?lang=en&segment=1&book_building_id=1&book_flat_type_id=1&book_place_type_id=100&book_checkin=2023-11-01&book_checkout=2024-03-31
+// Button BOOK
 function go_book(pid, fid, code) {
   // Save in session
   sessionStorage.setItem('city', '{{building.District.Location.Name}}');
@@ -85,13 +84,17 @@ function go_book(pid, fid, code) {
   sessionStorage.setItem('book_building_id', '{{building.id}}');
   sessionStorage.setItem('book_type', code);
 
+  //? Remove for production
+  location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['info'].url}}.html";
+  return;
+  
   // Rooms?
   radio = document.querySelector('input[name="radio-' + code + '"]:checked');
   if (radio) { 
     // No availability
     qty  = radio.getAttribute('data-qty');
     if (!qty) {
-      location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['booking'].url}}.html";
+      location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['info'].url}}.html";
       return;
     }
 
