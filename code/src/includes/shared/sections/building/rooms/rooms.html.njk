@@ -93,17 +93,16 @@
 
       <!-- Share -->
       <div class="share">
-        {% if p.Flat_types | length > 1 %}
         <div class="title">
           <p>{% literal texts, 'rooms-quiero-compartir', L %}:</p>
         </div>
-        {% endif %}
         {% for f in p.Flat_types %}
         <div class="sharing">
           <div class="left">
             <label for="radio-{{p.Code}}_{{f.Code}}" 
-                   class="pure-radio {% if p.Flat_types | length < 2 %}hidden{% endif %}">
+                   class="pure-radio">
             <input id="radio-{{p.Code}}_{{f.Code}}"{% if p.Flat_types | length == 1 %} checked{% endif %}
+                   class="{% if p.Flat_types | length < 2 %}hidden{% endif %}"
                    name="radio-{{p.Code}}" 
                    data-flat="{{f.id}}" type="radio"/>
             {{flat_types[f.Code] | translate('Name', L)}}
