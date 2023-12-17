@@ -83,7 +83,6 @@ function availability(lang, option) {
       // Not available? show sold out and disable buttons
       if (qty == 0) {
         try { document.getElementById('radio-' + div.id).disabled = true; } catch {}
-        try { document.getElementById('radio-' + div.id).checked = false; } catch {}
         div.firstChild.textContent = lang == 'en' ? "SOLD OUT" : "AGOTADO";
       }
 
