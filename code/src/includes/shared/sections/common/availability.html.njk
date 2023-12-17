@@ -128,8 +128,8 @@ function go_book(pid, fid, code) {
   if (radio) { 
     // No availability
     qty  = radio.getAttribute('data-qty');
-    if (!qty) {
-      location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['info'].url}}.html";
+    if (!qty || qty == "0") {
+      //?location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['info'].url}}.html";
       return;
     }
 
