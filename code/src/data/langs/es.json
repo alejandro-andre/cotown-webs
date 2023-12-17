@@ -159,7 +159,7 @@
         "description": "Seguridad y datos"
       }
     },
-    "booking": {
+    "book": {
       "url": "reserva",
       "text": "¡Reserva ahora!",
       "cotown": {

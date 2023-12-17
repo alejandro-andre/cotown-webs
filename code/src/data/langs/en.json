@@ -158,7 +158,7 @@
         "description": "Data security"
       }
     },
-    "booking": {
+    "book": {
       "url": "book",
       "text": "Book now!",
       "cotown": {
