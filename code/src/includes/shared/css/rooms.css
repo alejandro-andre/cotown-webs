@@ -288,7 +288,7 @@
   vertical-align: middle;
   align-items: center;
   display: flex;
-  padding: 0;
+  padding: 0 10px;
   margin: 0;
 }
 .right-data .share .sharing label input {

@@ -109,7 +109,10 @@
             </label>
           </div>
           <div class="right">
-            <p>{% literal texts, 'price-desde', L %} {{f.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
+            <p data-price="f">{% literal texts, 'price-desde', L %} {{f.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
+            <p data-price="l" class="hidden">{{f.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
+            <p data-price="m" class="hidden">{{f.Rent_medium}} €/{% literal texts, 'price-mes', L %}</p>
+            <p data-price="s" class="hidden">{{f.Rent_short}} €/{% literal texts, 'price-mes', L %}</p>
           </div>
           <div id="{{p.Code}}_{{f.Code}}" class="text-red"><p>...</p></div>
         </div>

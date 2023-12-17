@@ -137,7 +137,9 @@ new Splide('#sliderFlats', {
 }).mount();
 
 {% include 'shared/sections/common/availability.html.njk' %}
-// Show dates
-show_dates();
+window.addEventListener("calendar", function(e) {
+  availability('{{L}}', 0);
+});
+availability('{{L}}', 0);
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

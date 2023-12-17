@@ -80,15 +80,16 @@
     </div>
 
     <div class="option pure-u-1">
-      <p class="bold">
-        {% for f in flats | find('id', 'eq', building.id) %}
-        {% for t in f.Flat_subtypes | find('Code', 'eq', p.Code) %}
-        {% if loop.index == 1 %}
-        {% literal texts, 'price-desde', L %} {{t.Rent_long}} €/{% literal texts, 'price-mes', L %}
-        {% endif %}
-        {% endfor %}
-        {% endfor %}
-      </p>
+      {% for f in flats | find('id', 'eq', building.id) %}
+      {% for t in f.Flat_subtypes | find('Code', 'eq', p.Code) %}
+      {% if loop.index == 1 %}
+      <p data-price="f" class="bold">{% literal texts, 'price-desde', L %} {{t.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="l" class="hidden bold">{{t.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="m" class="hidden bold">{{t.Rent_medium}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="s" class="hidden bold">{{t.Rent_short}} €/{% literal texts, 'price-mes', L %}</p>
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
     </div> 
     <div id="{{p.Code}}" class="pure-u-1 text-red"><p>...</p></div>
     

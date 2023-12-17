@@ -137,9 +137,9 @@ main.mount();
 thumbnails.mount();
 
 {% include 'shared/sections/common/availability.html.njk' %}
-// Show dates
-show_dates();
-// Show availability
+window.addEventListener("calendar", function(e) {
+  availability('{{L}}', 1);
+});
 availability('{{L}}', 1);
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}

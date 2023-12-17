@@ -7,8 +7,21 @@ function close_tour() {
   document.getElementById("tour").style.display = "none";
 }
 
-// Show selected dates block
-function show_dates() {
+// Months interval
+function calculateMonths(date_from, date_to) {
+    let dt_curr = new Date(date_from);
+    let dt_to = new Date(date_to);
+    dt_to.setDate(dt_to.getDate() + 1);
+    let months = dt_to.getMonth() - dt_curr.getMonth() + (12 * (dt_to.getFullYear() - dt_curr.getFullYear()));
+    if (dt_to.getDate() < dt_curr.getDate()) {
+      months--;
+    }
+    return months;
+}
+
+// Availability
+function availability(lang, option) {
+  // Show selected dates block
   checkin = sessionStorage.getItem('book_checkin') || '';
   checkout = sessionStorage.getItem('book_checkout') || '';
   if (checkin != '') {
@@ -19,16 +32,28 @@ function show_dates() {
   else {
     document.getElementById("selected-dates").classList.add("hidden");
   }
-}
-
-// Availability
-function availability(lang, option) {
+  
   // Clear texts
   document.querySelectorAll('.text-red').forEach((div) => { div.firstChild.textContent = " "; });
 
   // Check dates
   const date_from = sessionStorage.getItem('book_checkin');
   const date_to = sessionStorage.getItem('book_checkout');
+
+  // Months/Prices
+  const m = calculateMonths(date_from, date_to);
+  let t = 'f';
+  if (date_to) {
+    if (m >= 7) t = 'l'; 
+    else if (m >= 3 && m < 7) t = 'm';
+    else t = 's';
+  };
+  document.querySelectorAll('[data-price]').forEach(el => {
+    if (t == el.getAttribute('data-price')) 
+      el.classList.remove("hidden"); 
+    else 
+      el.classList.add("hidden"); 
+  });
 
   // No dates, enable request availability buttons
   if (!date_from || !date_to) {
@@ -157,9 +182,7 @@ function go_visit(id, code) {
 // Button CHECK
 function go_check() {
   open_calendar();
-  window.addEventListener("calendar", function(e) {
-    if (e.detail.checkin != '') {
-      location.reload();
-    }
-  });
+  //?window.addEventListener("calendar", function(e) {
+  //?  location.reload();
+  //?});
 }
