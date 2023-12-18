@@ -442,8 +442,8 @@ button.date-button input:visited {
 	}
 
 	button.date-button input.inputs {
-		width: fit-content;
-		text-align: left;
+		width: 100%;
+		text-align: left !important;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 150%;
