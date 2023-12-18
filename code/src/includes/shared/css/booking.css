@@ -1652,8 +1652,8 @@ button.back p {
 	}
 
 	.tabs-container .nav-booking ul.pure-menu-list li label.label {
-		width: 94%;
-		padding: 0 2%;
+		width: 100%;
+		padding: 24px 0;
 		border: 0;
 	}
 
