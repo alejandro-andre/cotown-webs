@@ -1212,6 +1212,7 @@ button.back p {
 }
 .main-booking .main-contain .panel-container .left.tab3 form .campo {
 	width: 100%;
+	min-height: 90px;
 }
 .main-booking .main-contain .panel-container .left.tab3 form .campo label.label {
 	font-size: 14px;
