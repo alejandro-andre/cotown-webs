@@ -2,8 +2,8 @@
 -------------------------------- */
 :root {
     /* // Fonts */
-    --title-font: "Oswald", "Fira Sans", "Helvetica Neue", Helvetica, sans-serif;
-    --text-font: "Fira Sans", "Helvetica Neue", Helvetica, sans-serif;
+    --title-font: "Oswald", Helvetica, Arial, sans-serif;
+    --text-font: "Montserrat", Helvetica, Arial, sans-serif;
 
     /* // Main color */
     --primary: #00bfb2;
