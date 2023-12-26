@@ -99,8 +99,7 @@
         {% for f in p.Flat_types %}
         <div class="sharing">
           <div class="left">
-            <label for="radio-{{p.Code}}_{{f.Code}}" 
-                   class="pure-radio">
+            <label id="radio-{{p.Code}}_{{f.Code}}" for="radio-{{p.Code}}_{{f.Code}}" class="pure-radio">
             <input id="radio-{{p.Code}}_{{f.Code}}"{% if p.Flat_types | length == 1 %} checked{% endif %}
                    class="{% if p.Flat_types | length < 2 %}hidden{% endif %}"
                    name="radio-{{p.Code}}" 
@@ -114,7 +113,7 @@
             <p data-price="m" class="hidden">{{f.Rent_medium}} €/{% literal texts, 'price-mes', L %}</p>
             <p data-price="s" class="hidden">{{f.Rent_short}} €/{% literal texts, 'price-mes', L %}</p>
           </div>
-          <div id="{{p.Code}}_{{f.Code}}" class="text-red"><p>...</p></div>
+          <div id="{{p.Code}}_{{f.Code}}" data-id="{{p.Code}}" class="text-red"><p>...</p></div>
         </div>
         {% endfor %}
       </div>
@@ -126,7 +125,7 @@
       <button id="btn-check-{{p.Code}}" name="btn-check" class="hidden btn-secondary" onclick="go_check();">
         {% literal texts, 'button-solicitar', L %}
       </button>
-      <button id="btn-book-{{p.Code}}" name="btn-book" class="btn-secondary" onclick="go_book({{p.id}}, -1, '{{p.Code}}');">
+      <button id="btn-book-{{p.Code}}" name="btn-book" class="hidden btn-secondary" onclick="go_book({{p.id}}, -1, '{{p.Code}}');">
         {% literal texts, 'button-reservar', L %}
       </button>
       <button id="btn-info-{{p.Code}}" name="btn-info" class="btn-primary" onclick="go_info({{p.id}}, -1, '{{p.Code}}');">

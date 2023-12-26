@@ -317,6 +317,12 @@
   align-items: center;
   display: flex;
 }
+.disabled {
+  color: gray;
+}
+.disabled input {
+  color: gray;
+}
 .right-data .share .sharing label input {
   margin: 0 0.4em;
   font-size: 24px;

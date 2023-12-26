@@ -22,9 +22,9 @@ function calculateMonths(date_from, date_to) {
 // Availability
 function availability(lang, option) {
   // Show selected dates block
-  checkin = sessionStorage.getItem('book_checkin') || '';
-  checkout = sessionStorage.getItem('book_checkout') || '';
-  if (checkin != '') {
+  checkin = sessionStorage.getItem("book_checkin") || "";
+  checkout = sessionStorage.getItem("book_checkout") || "";
+  if (checkin != "") {
     document.getElementById("selected-dates").classList.remove("hidden");
     document.getElementById("checkin").textContent = format_date(checkin, "{{L}}");
     document.getElementById("checkout").textContent = format_date(checkout, "{{L}}");
@@ -33,66 +33,75 @@ function availability(lang, option) {
     document.getElementById("selected-dates").classList.add("hidden");
   }
   
-  // Clear texts
-  document.querySelectorAll('.text-red').forEach((div) => { div.firstChild.textContent = " "; });
-
   // Check dates
-  const date_from = sessionStorage.getItem('book_checkin');
-  const date_to = sessionStorage.getItem('book_checkout');
+  const date_from = sessionStorage.getItem("book_checkin");
+  const date_to = sessionStorage.getItem("book_checkout");
 
   // Months/Prices
   const m = calculateMonths(date_from, date_to);
-  let t = 'f';
+  let t = "f";
   if (date_to) {
-    if (m >= 7) t = 'l'; 
-    else if (m >= 3 && m < 7) t = 'm';
-    else t = 's';
+    if (m >= 7) t = "l"; 
+    else if (m >= 3 && m < 7) t = "m";
+    else t = "s";
   };
-  document.querySelectorAll('[data-price]').forEach(el => {
-    if (t == el.getAttribute('data-price')) 
+  document.querySelectorAll("[data-price]").forEach(el => {
+    if (t == el.getAttribute("data-price")) 
       el.classList.remove("hidden"); 
     else 
       el.classList.add("hidden"); 
   });
 
+  // Init
+  document.querySelectorAll(".text-red").forEach((div) => { div.firstChild.textContent = " "; });
+  document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.add("hidden"); });
+
   // No dates, enable request availability buttons
   if (!date_from || !date_to) {
     document.querySelectorAll('button[name="btn-check"]').forEach((btn) => { btn.classList.remove("hidden"); });
-    document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.add("hidden"); });
     document.querySelectorAll('button[name="btn-visit"]').forEach((btn) => { btn.classList.add("hidden"); });
     return;
   }
 
   // Get availability
   document.querySelectorAll('button[name="btn-check"]').forEach((btn) => { btn.classList.add("hidden"); });
-  document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.remove("hidden"); });
   document.querySelectorAll('button[name="btn-visit"]').forEach((btn) => { btn.classList.remove("hidden"); });
-  filter = '{{building.id}}' == '' ? '/0' : '/{{building.id}}'
-  url = 'https://back.cotown.com/api/v1/availability/' + option + filter + '?date_from=' + date_from + '&date_to=' + date_to;
+  filter = "{{building.id}}" == "" ? "/0" : "/{{building.id}}"
+  url = "https://back.cotown.com/api/v1/availability/" + option + filter + "?date_from=" + date_from + "&date_to=" + date_to;
   fetch(url).then(resp => resp.text()).then(data => {
     // Parse response
     json = JSON.parse(data);
 
     // Loop thru all resources
-    document.querySelectorAll('.text-red').forEach(function(div) {
+    document.querySelectorAll(".text-red").forEach(function(div) {
+
       // Get availability
       const avail = json.find((e) => (e.id === div.id));
       const qty = avail ? avail.Qty : 0;
-      try { document.getElementById('radio-' + div.id).setAttribute('data-qty', qty); } catch {}
+      try { 
+        document.getElementById("radio-" + div.id).setAttribute("data-qty", qty); 
+      } catch {}
 
       // Not available? show sold out and disable buttons
       if (qty == 0) {
-        try { document.getElementById('radio-' + div.id).disabled = true; } catch {}
-        div.firstChild.textContent = lang == 'en' ? "SOLD OUT" : "AGOTADO";
+        try { 
+          document.getElementById("radio-" + div.id).disabled = true; 
+          document.getElementById("label-" + div.id).classList.add("disabled"); 
+        } catch {}
+        div.firstChild.textContent = lang == "en" ? "SOLD OUT" : "AGOTADO";
       }
 
       // Available? show quantity and enable buttons
       else {
-        try { document.getElementById('radio-' + div.id).disabled = false; } catch {}
+        try { 
+          document.getElementById("btn-book-" + div.getAttribute("data-id")).classList.remove("hidden"); 
+          document.getElementById("radio-" + div.id).disabled = false; 
+          document.getElementById("label-" + div.id).classList.remove("disabled"); 
+        } catch {}
         if (qty == 1) {
-          div.firstChild.textContent = lang == 'en' ? "ONLY " + avail.Qty + " LEFT" : "SÓLO QUEDA " + avail.Qty;
+          div.firstChild.textContent = lang == "en" ? "ONLY " + avail.Qty + " LEFT" : "SÓLO QUEDA " + avail.Qty;
         } else if (qty <= 5) {
-          div.firstChild.textContent = lang == 'en' ? "ONLY " + avail.Qty + " LEFT" : "SÓLO QUEDAN " + avail.Qty;
+          div.firstChild.textContent = lang == "en" ? "ONLY " + avail.Qty + " LEFT" : "SÓLO QUEDAN " + avail.Qty;
         }
       }
     });
@@ -102,11 +111,11 @@ function availability(lang, option) {
 // Button INFO
 function go_info(pid, fid, code) {
   // Save in session
-  sessionStorage.setItem('city', '{{building.District.Location.Name}}');
-  sessionStorage.setItem('building', '{{building.Name}}');
-  sessionStorage.setItem('book_city_id', '{{building.District.Location.id}}');
-  sessionStorage.setItem('book_building_id', '{{building.id}}');
-  sessionStorage.setItem('book_type', code);
+  sessionStorage.setItem("city", "{{building.District.Location.Name}}");
+  sessionStorage.setItem("building", "{{building.Name}}");
+  sessionStorage.setItem("book_city_id", "{{building.District.Location.id}}");
+  sessionStorage.setItem("book_building_id", "{{building.id}}");
+  sessionStorage.setItem("book_type", code);
 
   // Form
   location.href = "{{root}}{{langs[L].folder}}/{{langs[L].pages['info'].url}}.html";
@@ -116,15 +125,15 @@ function go_info(pid, fid, code) {
 // Button BOOK
 function go_book(pid, fid, code) {
   // Save in session
-  sessionStorage.setItem('city', '{{building.District.Location.Name}}');
-  sessionStorage.setItem('building', '{{building.Name}}');
-  sessionStorage.setItem('book_city_id', '{{building.District.Location.id}}');
-  sessionStorage.setItem('book_building_id', '{{building.id}}');
-  sessionStorage.setItem('book_type', code);
+  sessionStorage.setItem("city", "{{building.District.Location.Name}}");
+  sessionStorage.setItem("building", "{{building.Name}}");
+  sessionStorage.setItem("book_city_id", "{{building.District.Location.id}}");
+  sessionStorage.setItem("book_building_id", "{{building.id}}");
+  sessionStorage.setItem("book_type", code);
 
   // Rooms?
   room = "ind";
-  if (code.charAt(0) == 'D') room = "sha";
+  if (code.charAt(0) == "D") room = "sha";
   if (fid == -1) {
     radio = document.querySelector('input[name="radio-' + code + '"]:checked');
     if (radio) { 
