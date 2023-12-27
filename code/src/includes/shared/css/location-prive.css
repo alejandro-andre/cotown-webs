@@ -382,10 +382,7 @@ button.green-button.btn-secondary {
     fill: var(--primary-background) !important; 
 }
 .svg_accent {
-    /*
-    fill: var(--footer-text) !important;
-    */
-    fill: red !important;
+    fill: var(--primary) !important;
 }
 
 .carousel .carousel-main-list .card .card-body .price {    
