@@ -5,7 +5,7 @@
     <div class="title-button">
       <h1>{{building.Name}}</h1>
       {% if building.Tour %}
-      <button class="btn-secondary" onclick="open_tour()">
+      <button class="btn-secondary" onclick="open_tour('{{building.Tour}}'')">
         {% literal texts, 'rooms-tour-virtual', L %}
       </button>
       {% endif %}
@@ -75,7 +75,7 @@
     <div class="text-first pure-u-23-24 pure-u-lg-12-24">
       {% if building.Tour %}
       <button class="btn-text">
-        <a href="#" onclick="open_tour()">{% literal texts, 'rooms-tour-virtual', L %}</a>
+        <a href="#" onclick="open_tour('{{building.Tour}}'')">{% literal texts, 'rooms-tour-virtual', L %}</a>
       </button>
       {% endif %}
       {% if flats | find('id', 'eq', building.id) | length > 0 %}

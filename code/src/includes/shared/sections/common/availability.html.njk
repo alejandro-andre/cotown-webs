@@ -1,6 +1,6 @@
 // Tour
-function open_tour() {
-  document.getElementById("tourframe").src="{{building.Tour}}" 
+function open_tour(tour) {
+  document.getElementById("tourframe").src=tour; 
   document.getElementById("tour").style.display = "block";
 }
 function close_tour() {
