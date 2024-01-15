@@ -158,7 +158,7 @@ function go_book(pid, fid, code, acom) {
 
       // Go booking
       location.href = '/booking/3?'
-        + 'lang={{L}}&segment={{siteid}}&book_building_id={{building.id}}'
+        + 'lang={{L}}&segment={{siteid}}&book_building_id={{building.id}}&book_city_id={{building.District.Location.id}}'
         + '&book_acom=' + acom
         + '&book_room=' + room
         + '&book_flat_type_id=' + flat
@@ -172,7 +172,7 @@ function go_book(pid, fid, code, acom) {
 
   // Flats
   location.href = '/booking/3?'
-    + 'lang={{L}}&segment={{siteid}}&book_building_id={{building.id}}'
+    + 'lang={{L}}&segment={{siteid}}&book_building_id={{building.id}}&book_city_id={{building.District.Location.id}}'
     + '&book_room=' + room
     + '&book_acom=ap'
     + '&book_flat_type_id=' + fid
