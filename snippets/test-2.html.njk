@@ -1,0 +1,23 @@
+---
+name: test
+eleventyComputed:
+ title: "Test"
+ alt:
+ es: "{{langs.es.folder}}/test.html"
+ en: "{{langs.en.folder}}/test.html"
+ description: "Test"
+ permalink: "{{root}}{{langs[L].folder}}/test.html"
+date: Last Modified
+changefreq: "weekly"
+priority: "1.0"
+tags: page
+---
+{%-for b in buildings | find('Building_type_id', 'eq', 3)-%}
+<p>{{b.id}} / {{b.Name}}-{{b.Building_type_id}}</p>
+{%-endfor-%}
+
+<hr>
+
+{%-for b in buildings | find('District.Location.id', 'eq', 2)-%}
+<p>{{b.id}} / {{b.Name}}-{{b.District.Location.Name}}</p>
+{%-endfor-%}

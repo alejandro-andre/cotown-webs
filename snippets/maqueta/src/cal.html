@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Cotown</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/buttons.css">
+    <link rel="stylesheet" href="./assets/css/variables.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+	  <link rel="stylesheet" href="./assets/css/date-range-picker.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="./assets/icons/style.css">
+
+    <!-- IMAGES -->
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+ 
+</head>
+
+<body>
+
+<div class="calendar-container">
+
+  <section class="dates-selector">
+	
+    <div class="mobile">
+		  <div class="close">
+  			<em class="icon-close"></em>
+		  </div>
+		  <div class="clean-dates">
+  			<a onclick="empty()">Borrar fechas</a>
+		  </div>
+	  </div>
+	
+    <div class="selector-header">
+
+      <div class="left">
+		    <h2>Seleccionar fechas</h2>
+		    <p>Estancia mínima: 1 mes</p>
+	    </div>        
+
+      <div class="right">
+				<div class="calendar">
+					<div class="reservas_form_div">           
+					  <form id="reservas_form" name="form_multi" method="GET">
+						<button class="date-button">
+						  <label class="labels">Entrada</label>
+						  <input type="text" id="in" class="inputs" name="in"/>
+						</button>   
+						<button class="date-button">
+						  <label class="labels">Salida</label>
+						  <input type="text" id="out" class="inputs" name="out"/>
+						</button>
+					  </form>
+					</div>
+			  </div>
+			</div>
+
+    </div>
+	
+    <div class="selector-main">
+
+      <div class="left">
+
+				<table id="daysleft" summary="a calendar">
+
+					<thead class="mobile">
+						<tr>
+							<th scope="col">L</th>
+							<th scope="col">M</th>
+							<th scope="col">X</th>
+							<th scope="col">J</th>
+							<th scope="col">V</th>
+							<th scope="col">S</th>
+							<th scope="col">D</th>
+						</tr>
+					</thead>
+
+					<caption>
+						<div class="calendar-header">
+							<a class="icon-left" rel="prev" onclick="back()">
+								<em class="icon-corchete-left"></em>
+							</a>
+							<p id="monthleft"></p>
+						</div>
+					</caption>
+		
+					<thead class="desktop">
+						<tr>
+							<th scope="col">L</th>
+							<th scope="col">M</th>
+							<th scope="col">X</th>
+							<th scope="col">J</th>
+							<th scope="col">V</th>
+							<th scope="col">S</th>
+							<th scope="col">D</th>
+						</tr>
+					</thead>
+		
+					<tbody>
+					</tbody>
+		
+				</table>
+
+        <div class="no-dates">
+					<p>¿No encuentras lo que buscas?</p>
+					<a>Avísame cuando tengas disponibilidad</a>
+				</div>
+	
+			</div>
+		   
+			<div class="right">
+
+				<table id="daysright" summary="a calendar">
+
+					<caption>
+						<div class="calendar-header">						
+							<p id="monthright"></p>
+							<a class="icon-right" rel="next" onclick="forward()">
+								<em class="icon-corchete-right"></em>
+							</a>
+						</div>
+					</caption>
+		
+					<thead class="desktop">
+						<tr>
+							<th scope="col">L</th>
+							<th scope="col">M</th>
+							<th scope="col">X</th>
+							<th scope="col">J</th>
+							<th scope="col">V</th>
+							<th scope="col">S</th>
+							<th scope="col">D</th>
+						</tr>
+					</thead>
+		
+					<tbody>
+					</tbody>
+
+        </table>
+
+				<div class="buttons">
+					<a onclick="empty()">Borrar fechas</a>
+					<button class="btn-secondary">Cerrar</button>
+				</div>
+
+				<div class="sticky-mobile">
+					<div class="left">
+						<p>¿No encuentras lo que buscas?</p>
+						<a>Avísame cuando tengas disponibilidad</a>
+					</div>
+					<div class="right">
+						<button class="btn-primary">Aplicar</button>
+					</div>
+				</div>
+	
+			</div>
+	
+		</div>
+
+	</section>
+
+</div>
+
+<script>
+
+fdesde = undefined;
+fhasta = undefined;
+ftoday = 2023*12+3;
+flag = false;
+idioma = 'es-ES';
+
+const fin = document.getElementById('in');
+const fout =  document.getElementById('out');
+
+function internal_date(yy, mm, dd) {
+  return yy + mm.toString().padStart(2, '0') + dd.toString().padStart(2, '0');
+}
+
+function format_date(str) {
+  if (idioma == 'es-ES')
+    return str.slice(6,8) + '/' + str.slice(4,6) + '/' + str.slice(0,4);
+  return str.slice(4,6) + '/' + str.slice(6,8) + '/' + str.slice(0,4);
+}
+
+// Nombre del mes, en el idioma deseado
+function month(mes) {
+  var d = new Date(1965, mes);
+  var text = d.toLocaleString(idioma, { month: 'long' });
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+// Pinta los dias de un mes
+function pm(cal, yy, mm) {
+
+  // Tabla
+  var c = document.querySelector('#days' + cal + ' tbody');
+  c.innerHTML = '';
+
+  // Nombre del mes
+  var name = document.querySelector('#month' + cal);
+  name.textContent = month(mm, 'es-ES') + ' ' + yy;
+
+  // Rango de días
+  var ud = new Date(yy, mm + 1, 0).getDate(); // Obtiene el último día del mes
+  var pd = new Date(yy, mm, 1).getDay();      // Obtiene el primer día del mes
+  pd = (pd === 0 ? 7 : pd) - 1;               // Ajusta el primer día de la semana a Lunes
+
+  // Crea la cuadrícula del calendario
+  var dd = 1;
+  for (var y = 0; y < 6; y++) {
+    var rowHTML = document.createElement('tr');
+    for (var x = 0; x < 7; x++) {
+      var colHTML = document.createElement('td');
+      if (y === 0 && x < pd || dd > ud) {
+        colHTML.textContent = '';
+      } else {
+        colHTML.textContent = dd;
+        colHTML.id = internal_date(yy, mm + 1, dd);
+        if (colHTML.id == fin.dataset.id || colHTML.id == fout.dataset.id) {
+          colHTML.classList.add('selected');
+        }
+        if (colHTML.id > fin.dataset.id && colHTML.id < fout.dataset.id) {
+          colHTML.classList.add('inside-selected');
+        }
+        colHTML.addEventListener('click', select)
+        dd++;
+      }
+      rowHTML.appendChild(colHTML);
+    }
+    c.appendChild(rowHTML);
+  }
+}
+
+// Pinta ambos meses
+function cal(date) {
+  yy = Math.floor(date / 12);
+  mm = date % 12
+  pm('left', yy, mm)
+
+  yy = Math.floor((date + 1) / 12);
+  mm = (date + 1) % 12
+  pm('right', yy, mm)
+}
+
+// Mes anterior
+function back() {
+  ftoday -= 1;
+  cal(ftoday);
+}
+
+// Mes posterior
+function forward() {
+  ftoday += 1;
+  cal(ftoday);
+}
+
+// Borrar fechas
+function empty() {
+  fin.value = '';
+  fout.value = '';
+  fin.dataset.id = undefined;
+  fout.dataset.id = undefined;
+  cal(ftoday);
+  return true;
+}
+
+// Selecciona fecha
+function select(event) {
+  event.preventDefault();
+  date = event.target.id;
+  if (!flag || date < fin.dataset.id) {
+    fin.dataset.id = event.target.id;
+    fout.dataset.id = event.target.id;
+    fin.value = format_date(event.target.id);
+    fout.value = '';
+    flag = true;
+  } else {
+    fout.dataset.id = event.target.id;
+    fout.value = format_date(event.target.id);
+    flag = false;
+  }
+  cal(ftoday);
+  return true;
+}
+
+cal(ftoday);
+
+</script>
+
+</body>
+</html>
