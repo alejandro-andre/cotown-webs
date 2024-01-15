@@ -123,7 +123,7 @@ function go_info(pid, fid, code) {
 }  
 
 // Button BOOK
-function go_book(pid, fid, code) {
+function go_book(pid, fid, code, acom) {
   // Save in session
   sessionStorage.setItem("city", "{{building.District.Location.Name}}");
   sessionStorage.setItem("building", "{{building.Name}}");
@@ -159,7 +159,7 @@ function go_book(pid, fid, code) {
       // Go booking
       location.href = '/booking/3?'
         + 'lang={{L}}&segment={{siteid}}&book_building_id={{building.id}}'
-        + '&book_acom=pc'
+        + '&book_acom=' + acom
         + '&book_room=' + room
         + '&book_flat_type_id=' + flat
         + '&book_place_type_id=' + pid

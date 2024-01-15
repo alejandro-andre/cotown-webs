@@ -121,7 +121,7 @@
       <button id="btn-check-{{p.Code}}" name="btn-check" class="hidden btn-secondary" onclick="go_check();">
         {% literal texts, 'button-solicitar', L %}
       </button>
-      <button id="btn-book-{{p.Code}}" name="btn-book" class="hidden btn-secondary" onclick="go_book({{p.id}}, -1, '{{p.Code}}');">
+      <button id="btn-book-{{p.Code}}" name="btn-book" class="hidden btn-secondary" onclick="go_book({{p.id}}, -1, '{{p.Code}}', 'rs');">
         {% literal texts, 'button-reservar', L %}
       </button>
       <button id="btn-info-{{p.Code}}" name="btn-info" class="btn-primary" onclick="go_info({{p.id}}, -1, '{{p.Code}}');">
