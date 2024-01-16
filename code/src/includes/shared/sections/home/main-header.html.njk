@@ -72,11 +72,13 @@
 // Types
 const types = [
 {% for l in locations-%}
+{% set residence = ""-%}
 {% set rs = false-%}
 {% set pc = false-%}
 {% set ap = false-%}
 {% for b in buildings | find('District.Location.id', 'eq', l.id) | find('Building_type_id', 'lt', 4)-%}
   {% if b.Building_type_id == 3-%}
+    {% set residence = b.Name-%}
     {% set rs = true-%}
   {% else-%}
     {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length > 0-%}
@@ -104,7 +106,7 @@ const types = [
   id:{{l.id}}, 
   city: "{{l | translate('Name', L)}}", 
   type: "Residencia universitaria",
-  link: "{{root}}{{langs[L].folder}}/{{langs[L].pages.residences.url | slugify}}.html",
+  link: "{{root}}{{langs[L].folder}}/{{residence | slugify}}.html", 
   value: "{{texts['home-pisazos-residencia'][L]}} {{texts['home-pisazos-universitaria'][L]}}"
 },{% endif-%}
 {% endfor-%}
