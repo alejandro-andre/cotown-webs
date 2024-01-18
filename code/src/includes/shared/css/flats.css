@@ -337,7 +337,7 @@
 }
 
 .apartment-services .splide-services .splide__list .splide__slide .slide .img .svg_accent { 
-    fill: var(--white) !important; 
+    fill: var(--secondary-button-fill) !important; 
 }
 
 .svg_base { 
