@@ -336,6 +336,10 @@
 	width: 48px;
 }
 
+.apartment-services .splide-services .splide__list .splide__slide .slide .img .svg_accent { 
+    fill: var(--white) !important; 
+}
+
 .svg_base { 
     fill: var(--primary-flats-text) !important;
 }
