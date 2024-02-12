@@ -325,16 +325,17 @@ main .container-main .first-contain .text p {
 .location .cotown .text-slide  {
     align-self: center;
     width: 100%;
+    padding-top: 4px;
 }
 .locations .cotown .text-slide h5 {
     text-align: center;
     color: var(--black);
     font-weight: 400;
     margin: 0;
-    line-height: 1;
+    line-height: 1.2;
 }
 .locations .cotown .text-slide .line {   
-    height: 4px;
+    height: 2px;
     width: 30px;
     margin: 0 auto;
     padding: 0 auto;
@@ -348,7 +349,6 @@ main .container-main .first-contain .text p {
     left: 0%;
     background-color: white;
     width: 100%;
-    padding-top: 4px;
 }
 
 
