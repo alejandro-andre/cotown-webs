@@ -1,66 +1,121 @@
 <section class="main-header pure-g">
 
   <!-- Formulario -->
-  <div class="left pure-u-lg-1-4">
+  {% if site == 'vanguard' %}
+    <div class="left pure-u-lg-1-4">
+      <div class="text-container desktop">
+        <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</h1>
+      </div>
+      <div class="basic-searcher pure-u-1">
 
-    <div class="text-container desktop">
-      <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</h1>
-    </div>
+        <label class="label">{% literal texts, 'home-bienvenido-donde', L %}:</label>
+        <select id="city" name="city" class="pure-u-1" onchange="get_types(this.value);" required>
+          <option value="" disabled selected>{% literal texts, 'home-donde-seleccionar', L %}</option>
+          {% for l in locations %}
+          {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
+          <option value="{{l.id}}" >{{ l | translate('Name', L)}}</option>
+          {% endif %}
+          {% endfor %}
+        </select>
 
-    <div class="basic-searcher pure-u-1">
+        <label class="label">{% literal texts, 'home-bienvenido-tipo', L %}:</label>
+        <select id="type" name="type" class="pure-u-1" 
+                onchange="sessionStorage.setItem('path_type', this.value);" required>
+        </select>
 
-      <label class="label">{% literal texts, 'home-bienvenido-donde', L %}:</label>
-      <select id="city" name="city" class="pure-u-1" onchange="get_types(this.value);" required>
-        <option value="" disabled selected>{% literal texts, 'home-donde-seleccionar', L %}</option>
-        {% for l in locations %}
-        {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
-        <option value="{{l.id}}" >{{ l | translate('Name', L)}}</option>
-        {% endif %}
-        {% endfor %}
-      </select>
-
-      <label class="label">{% literal texts, 'home-bienvenido-tipo', L %}:</label>
-      <select id="type" name="type" class="pure-u-1" 
-              onchange="sessionStorage.setItem('path_type', this.value);" required>
-      </select>
-
-      <div class="calendar pure-u-1">
-        <div class="pure-u-1">
-          <label class="label" for="from">{% literal texts, 'home-bienvenido-cuando', L %}:</label>
-          <div class="date">
-            <span onclick="open_calendar();">
-            <input class="input" type="text" id="dates" name="dates" 
-                   placeholder="{% literal texts, 'cal-seleccionar-fechas', L %}"
-                   required>
-            <em class="icon-calendar"></em>
-            </span> 
+        <div class="calendar pure-u-1">
+          <div class="pure-u-1">
+            <label class="label" for="from">{% literal texts, 'home-bienvenido-cuando', L %}:</label>
+            <div class="date">
+              <span onclick="open_calendar();">
+              <input class="input" type="text" id="dates" name="dates" 
+                    placeholder="{% literal texts, 'cal-seleccionar-fechas', L %}"
+                    required>
+              <em class="icon-calendar"></em>
+              </span> 
+            </div>
           </div>
         </div>
       </div>
+      <div class="button-search">
+        <a href="#" onclick="go();">
+        <button class="btn-primary search desktop"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
+        <button class="btn-secondary search mobile"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
+        </a>
+      </div>
     </div>
+  {% else %}
+    <div class="left cotown pure-u-lg-1-4">
+      <div class="text-container desktop">
+        <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</h1>
+      </div>
+      <div class="basic-searcher pure-u-1">
+        <label class="label">{% literal texts, 'home-bienvenido-donde', L %}:</label>
+        <select id="city" name="city" class="pure-u-1" onchange="get_types(this.value);" required>
+          <option value="" disabled selected>{% literal texts, 'home-donde-seleccionar', L %}</option>
+          {% for l in locations %}
+          {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
+          <option value="{{l.id}}" >{{ l | translate('Name', L)}}</option>
+          {% endif %}
+          {% endfor %}
+        </select>
+        <!-- <label class="label">{% literal texts, 'home-bienvenido-tipo', L %}:</label>
+        <select id="type" name="type" class="pure-u-1" 
+                onchange="sessionStorage.setItem('path_type', this.value);" required>
+        </select>  -->
+        <div class="calendar pure-u-1">
+          <div class="pure-u-1">
+            <label class="label" for="from">{% literal texts, 'home-bienvenido-cuando', L %}:</label>
+            <div class="date">
+              <span onclick="open_calendar();">
+              <input class="input" type="text" id="dates" name="dates" 
+                    placeholder="{% literal texts, 'cal-seleccionar-fechas', L %}"
+                    required>
+              <em class="icon-calendar"></em>
+              </span> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button-search">
+        <a href="#" onclick="go();">
+        <button class="btn-text search desktop"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
+        <button class="btn-secondary search mobile"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
+        </a>
+      </div>
+    </div>
+  {% endif %}
 
-    <div class="button-search">
-      <a href="#" onclick="go();">
-      <button class="btn-primary search desktop"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
-      <button class="btn-secondary search mobile"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
-      </a>
+  {% if site == 'vanguard' %}
+    <div id="video" class="video featured-bg-image">
+      <div class="text-container mobile pure-u-1-2">
+        <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</h1>
+      </div>
+      <div class="video-home">
+        <!-- Image-->
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['home'].id +"/Image/contents?access_token=" + token,
+          "home", "home", "",
+          [1280], ""
+        %}
+      </div>
     </div>
+  {% else %}
+  <div id="video" class="video cotown featured-bg-image">
+      <div class="text-container mobile pure-u-1-2">
+        <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</h1>
+      </div>
+      <div class="video-home">
+        <!-- Image-->
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['home'].id +"/Image/contents?access_token=" + token,
+          "home", "home", "",
+          [1280], ""
+        %}
+      </div>
+    </div>
+  {% endif %}
 
-  </div>
-
-  <div id="video" class="video featured-bg-image">
-    <div class="text-container mobile pure-u-1-2">
-      <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</h1>
-    </div>
-    <div class="video-home">
-      <!-- Image-->
-      {% image
-         constants.SERVER + "/wopi/files/Marketing/Media/" + images['home'].id +"/Image/contents?access_token=" + token,
-         "home", "home", "",
-         [1280], ""
-      %}
-    </div>
-  </div>
 
 </section>
 

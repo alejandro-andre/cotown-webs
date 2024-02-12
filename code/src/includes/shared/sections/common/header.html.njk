@@ -74,6 +74,7 @@
 
           <!-- Idiomas -->
           <li class="lang pure-menu-item">
+          {% if site == 'vanguard' %}
             <div class="select-container">
               {% if L == 'es' %}
               <label class="selected-option">
@@ -93,7 +94,29 @@
               </div>
               {% endif %}
             </div>
+          {% else %}
+             <div class="select-container cotown">
+              {% if L == 'es' %}
+              <label class="selected-option">
+                <em class="icon-corchete-down"></em>
+                <span class="select-value">Español (ES)</span>
+              </label>
+              <div data-toggle="collapsed" class="options">
+                <a href="{{alt.en}}"><div class="option">English (EN)</div></a>
+              </div>
+              {% else %}
+              <label class="selected-option">
+                <em class="icon-corchete-down"></em>
+                <span class="select-value">English (EN)</span>
+              </label>
+              <div data-toggle="collapsed" class="options">
+                <a href ="{{alt.es}}"><div class="option">Español (ES)</div></a>
+              </div>
+              {% endif %}
+            </div>
+          {% endif %}
           </li>
+          
 
           <!-- Area privada -->
           <li class="pure-menu-item private-container">
@@ -106,7 +129,7 @@
           </li>
 
           <!-- Reservar -->
-          <!--
+          
           <li class="pure-menu-item">
             <div class="booking">
               <button class="btn-primary">
@@ -116,7 +139,7 @@
               </button>
             </div>
           </li>
-          -->
+          
           
         </ul>
       </div>
