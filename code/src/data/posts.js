@@ -31,6 +31,13 @@ module.exports = async (config) => {
       Image {
         name
       }
+      Images: Media_postListViaPost_id {
+        id
+        Name
+        Image {
+          name
+        }
+      }
     }
   }`;
   const data = await gql(QUERY, config, 'posts');

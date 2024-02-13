@@ -271,6 +271,13 @@ main.post-page .container-main .post-content img {
 	margin-bottom: 2em;
 }
 
+main.post-page .container-main .post-content .other {
+	max-width: 800px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 main.post-page .container-main .post-content .text .text-content h2,
 main.post-page .container-main .post-content .text .text-content h3 {
 	font-size: 48px;
