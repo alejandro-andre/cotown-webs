@@ -1,40 +1,82 @@
 <section class="locations">
 
   <div class="text-container">
+    {% if site == 'vanguard' %}
     <h2 class="title">
       {% literal texts, 'home-localizaciones-titulo', L %}
     </h2>
+    {% else %}
+    <h2 class="title cotown">
+      {% literal texts, 'home-localizaciones-titulo', L %}
+    </h2>
+    {% endif %}
   </div>
 
-  <div class="carousel splide-locations splide" role="group">
-    <div class="splide__track">
-      <ul class="splide__list">
-        {% for l in locations %}
-        {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
-        <li class="splide__slide">
-          {% if site == "cotown" or l.Name != 'Valencia' %}
-          <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}-{{l | translate('Name', L) | slugify}}.html">
-          {% else %}
-          <a href="{{root}}{{langs[L].folder}}/facultades.html">
-          {% endif %}
-          <div class="img">
-            {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
-            {% if loop.index == 1 %}
-            {% image
-              constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
-              l.Name, l.Name + '-' + i.id | slugify, "",
-              [800], ""
-            %}
+  {% if site == 'vanguard' %}
+    <div class="carousel splide-locations splide" role="group">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for l in locations %}
+          {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
+          <li class="splide__slide">
+            {% if site == "cotown" or l.Name != 'Valencia' %}
+            <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}-{{l | translate('Name', L) | slugify}}.html">
+            {% else %}
+            <a href="{{root}}{{langs[L].folder}}/facultades.html">
             {% endif %}
-            {% endfor %}
-            <h3 class="img-title">{{l.Name}}</h3>
-          </div>
-          </a>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
+            <div class="img">
+              {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+              {% if loop.index == 1 %}
+              {% image
+                constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
+                l.Name, l.Name + '-' + i.id | slugify, "",
+                [800], ""
+              %}
+              {% endif %}
+              {% endfor %}
+              <h3 class="img-title">{{l.Name}}</h3>
+            </div>
+            </a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
     </div>
-  </div>
+  {% else %}
+    <div class="cotown carousel splide-locations splide" role="group">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for l in locations %}
+          {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
+          <li class="splide__slide">
+            {% if site == "cotown" or l.Name != 'Valencia' %}
+            <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['rooms'].url}}-{{l | translate('Name', L) | slugify}}.html">
+            {% else %}
+            <a href="{{root}}{{langs[L].folder}}/facultades.html">
+            {% endif %}
+            <div class="img">
+              {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+              {% if loop.index == 1 %}
+              {% image
+                constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
+                l.Name, l.Name + '-' + i.id | slugify, "",
+                [800], ""
+              %}
+              {% endif %}
+              {% endfor %}
+              <div class="text-slide">
+                <h5 class="img-title">{{l.Name}}</h5>
+                <div class="line"></div>
+              </div>
+            </div>
+            </a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endif %}
 
 </section>

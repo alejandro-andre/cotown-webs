@@ -5,12 +5,44 @@
     --title-font: "Bebas Neue", "Open Sans","Helvetica Neue", Helvetica, sans-serif;
     --text-font: "Open Sans","Helvetica Neue", Helvetica, sans-serif;
 
-    /* // Main color */
+    --big-title: 78px;
+    --title: 56px;
+    --big-subtitle: 40px;
+    --subtitle: 32px;
+    --text-title: 24px;
+    --tag-title: 20px;
+    --mini-title: 18px;
+    --text: 16px;
+
+    --btn-header: 14px;
+
+    --bold: 700;
+    --semibold: 600;
+    --regular: 500;
+    --light: 300;
+
+    --weight-btn: 300;
+
+     /* Responsive */    
+     --resp-big-title: 50px;
+     --resp-title: 38px;
+     --resp-big-subtitle: 30px;
+     --resp-subtitle: 28px;
+     --resp-text-title: 22px;
+     --resp-tag-title: 16px;
+     --resp-mini-title: 14px;
+     --resp-text: 12px;
+
+        /* // Main color */
     --primary: #ff5166;
     --primary-light: #fff5f7;
     --primary-dark: #c14256;
     --primary-underline: #ff516574;
     --primary-flats: #ff5166;
+    --new-bg: #F5F1EF;
+
+    --primary-ok: #ff5166;
+    --secondary-bg: #ffffff;
 
     /* // Background color */
     --secondary-header: #ffffff;
@@ -25,6 +57,8 @@
     --footer: #121212;
     --footer-text: #121212;
     --primary-bg: #ff516587;
+
+    --box-bg: #ff5166;
 
     /* PRIVE */
     --prive-bg: #ff5166;
@@ -43,6 +77,9 @@
     --primary-text: #ffffff;
     --second-header-text: #121212;
     --secondary-text-header: #000000;
+    --home-box-text: #000000;
+    --box-text: #ffffff;
+
     --white: #ffffff;
     --black: #000000;
     --black-op: #00000080;
