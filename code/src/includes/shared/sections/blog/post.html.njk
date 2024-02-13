@@ -19,7 +19,7 @@
       %}
       <div class="text pure-u-1 pure-u-18-24">
         <div class="text-content">
-          {{ post | translate('Content', L) | markdown | images(post.Images, constants.SERVER + "/wopi/files/Marketing/Post/{ID}/Image/contents?access_token=" + token) | safe }}
+          {{ post | translate('Content', L) | markdown | images(post.Images, constants.SERVER + "/wopi/files/Marketing/Media_post/{ID}/Image/contents?access_token=" + token) | safe }}
         </div>
       </div>
     </section>
