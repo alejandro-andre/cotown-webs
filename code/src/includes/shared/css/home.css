@@ -246,6 +246,7 @@ main .container-main .first-contain .text p {
 
 /* LOCALIZACIONES
 -------------------------------- \*/
+
 .locations {
     margin: 2em 0 4em;
     width: 100%;
@@ -253,6 +254,9 @@ main .container-main .first-contain .text p {
 .locations .img {
     width: 100%;
     overflow: hidden;
+}
+.locations .text-container h2.title {
+    text-align: center;
 }
 .locations .text-container h2.title.cotown {
     text-align: left;
