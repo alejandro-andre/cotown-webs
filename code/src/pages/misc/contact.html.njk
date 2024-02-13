@@ -125,6 +125,21 @@ tags: page
           <textarea type="textarea" id="181" name="181" rows="5" cols="40"></textarea>
         </div>
 
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="campo">
+          <label class="label">{% literal texts, 'language', L %}</label>
+          <select class="select" type="select" id="5" name="5" required>
+            {% if L == 'es' %}
+            <option value="ES">Español</option>
+            <option value="EN">Inglés</option>
+            {%else%}
+            <option value="EN">English</option>
+            <option value="ES">Spanish</option>
+            {% endif %}
+          </select>
+          </div>
+        </div>
+
         <div class="pure-u-1">
           <div class="campo checkbox">
             <input id="accept" name="accept" type="checkbox" required/>

@@ -81,7 +81,7 @@
       {% if flats | find('id', 'eq', building.id) | length > 0 %}
       <button class="btn-text">
         <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages.flats.url}}-{{building.Name | slugify}}.html">
-        {% literal texts, 'rooms-nuestros-pisos', L %}
+        {% literal texts, 'rooms-nuestros-apartamentos-privados', L %}
         </a>
       </button>
       {% endif %}
