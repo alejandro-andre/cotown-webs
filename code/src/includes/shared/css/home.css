@@ -863,7 +863,9 @@ main .container-main .first-contain .text p {
         width: 100%;
         order: 1;
     }
-
+    main .container-main .first-contain.cotown {
+        background-color: var(--new-bg);
+    }
     main .container-main .first-contain .title-big.home {
         margin: 4em auto 2em
     }
@@ -874,6 +876,9 @@ main .container-main .first-contain .text p {
     }
     main .container-main .first-contain .title-big.home p {
         font-size: 18px;
+    }
+    main .container-main .first-contain .title-big.home .h1-big.cotown h1 {
+        font-family: var(--text-font);
     }
 
     /* LOCALIZACIONES \*/
