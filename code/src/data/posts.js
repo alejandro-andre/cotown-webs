@@ -33,6 +33,7 @@ module.exports = async (config) => {
       }
       Images: Media_postListViaPost_id {
         id
+        Name
         Image {
           name
         }

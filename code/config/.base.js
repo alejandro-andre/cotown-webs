@@ -199,8 +199,39 @@ module.exports = (eleventyConfig) => {
     }
   })  
 
+  // Replace [xxx] for images async filter
+  eleventyConfig.addNunjucksAsyncFilter('images', async (text, images, src, callback) => {
+    // No text or no images
+    if (text == null || images == null) {
+      callback(null, text);
+      return;
+    }
+
+    // Find image references
+    finds = text.match(new RegExp(/\[[^\]]+\]/, 'g'));
+    if (!finds) {
+      callback(null, text);
+      return;
+    }
+
+    // Substitute image references
+    for (i = 0; i < finds.length; i++) {
+      const name = finds[i].slice(1, -1);
+      const img = images.find(i => i.Name === name);
+      if (img) {
+        const url = src.replace("/{ID}/", "/" + img.id + "/")
+        const html = await picture(url, "", "blog" + img.id, "other", [800], "")
+        text = text.replace(finds[i], html);
+      }
+    }
+    callback(null, text);
+  });
+  
   // Image optimizer shorcode
-  eleventyConfig.addShortcode("image", async (src, alt, name, cls, widths, sizes) => {
+  eleventyConfig.addShortcode("image", picture);
+
+  // Image optimizer shorcode
+  async function picture(src, alt, name, cls, widths, sizes) {
     // Get metadata
     try {
       if (eleventyConfig.test == 'test') {
@@ -233,10 +264,12 @@ module.exports = (eleventyConfig) => {
       // Generate HTML
       html = Image.generateHTML(metadata, imageAttributes);
       return html.replace("height", "h");
+
+    // Error
     } catch (err) {
       console.log(err);
       console.log(`Mising image ${name} ${src}`);
       return `<span style='color:red;'>[image missing ${name}]</span>`;
     }
-	});
+	};
 };
