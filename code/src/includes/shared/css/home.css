@@ -228,6 +228,16 @@ main .container-main .first-contain {
     justify-content: center;
     align-items: center;
 }
+main .container-main .first-contain.cotown {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--new-bg);
+    top: -5px;
+    position: relative;
+    padding-bottom: 2em;
+}
 main .container-main .first-contain .title-big.home {
     display: flex;
     flex-flow: row wrap;
@@ -242,7 +252,9 @@ main .container-main .first-contain .text p {
     font-size: var(--text);
     line-height: 130%;
 }
-
+main .container-main .first-contain.cotown .text p {
+    font-weight: var(--light);    
+}
 
 /* LOCALIZACIONES
 -------------------------------- \*/
@@ -256,13 +268,9 @@ main .container-main .first-contain .text p {
     overflow: hidden;
 }
 .locations .text-container h2.title {
-    text-align: center;
+    text-align: center;    
 }
-.locations .text-container h2.title.cotown {
-    text-align: left;
-    padding-left: 74px;
-    font-weight: var(--regular);
-} 
+
 .locations h3 {
     position: absolute!important;
     bottom: 0;
@@ -292,6 +300,13 @@ main .container-main .first-contain .text p {
 }
 
 /* COTOWN */
+.locations .text-container h2.title.cotown {
+    text-align: left;
+    padding-left: 74px;
+    font-weight: var(--regular);
+    font-size: var(--big-subtitle);
+    letter-spacing: 0.5;
+} 
 .locations .cotown .img {
     height:400px;
 }
@@ -386,7 +401,6 @@ main .container-main .first-contain .text p {
     filter: contrast(1.2);
     transition: transform .25s ease-in-out;
 }
-
 .pisos .container .img-container span {
     z-index: 20;
     position: relative;
@@ -421,6 +435,53 @@ main .container-main .first-contain .text p {
     -o-transition: width 0.25s ease-in-out;
     transition: width 0.25s ease-in-out;
 }
+
+/* COTOWN */
+.pisos .text-container h2.title.cotown {
+    text-align: left;
+    padding-left: 74px;
+    font-weight: var(--regular);
+    font-size: var(--big-subtitle);
+    letter-spacing: 0.5;
+} 
+.pisos .container .img-container .img {
+    margin-right: 0;    
+}
+.pisos .container .img-container.cotown span {
+    z-index: 20;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0px 7px 14px rgba(0, 0, 0, 0.15);
+    font-family: var(--title-font);
+}
+.pisos .container .img-container.cotown .img-title1 span {
+    top: -178px; 
+}
+.pisos .container .img-container.cotown .img-title2 span {
+    top: -110px;
+}
+.pisos .container .img-container.cotown .subrayado {
+    z-index: 18;
+    background-color: var(--primary);
+    position: absolute;
+    width: 0%;
+    height: 0.8rem;
+}
+.pisos .container .img-container.cotown.img-title1 .subrayado {
+    bottom: 178px;
+}
+.pisos .container .img-container.cotown .img-title2 .subrayado {
+    bottom: 108px;
+}
+.pisos .container .img-container.cotown:hover a > .img-title1 .subrayado,    
+.pisos .container .img-container.cotown:hover a > .img-title2 .subrayado {
+    width: 100%;
+    -webkit-transition: width 0.25s ease-in-out;
+    -moz-transition: width 0.25s ease-in-out;
+    -o-transition: width 0.25s ease-in-out;
+    transition: width 0.25s ease-in-out;
+}
+
 
 /* SERVICIOS
 -------------------------------- \*/

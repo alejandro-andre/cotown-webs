@@ -879,7 +879,13 @@ main .container-main .first-contain .title-big .h1-big h1 {
 	line-height: 95%;
 	/* font-size: 96px; */
 }
-
+main .container-main .first-contain.cotown .title-big .h1-big.cotown h1 {
+	width: 100%;
+	font-weight: var(--regular);
+	font-size: var(--title);
+	font-family: var(--text-font);
+	line-height: 1.05;
+}
 main .container-main .first-contain .title-big p {
 	font-size: var(--text);
 	line-height: 36px;
