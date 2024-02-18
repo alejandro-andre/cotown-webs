@@ -200,7 +200,7 @@ module.exports = (eleventyConfig) => {
   })  
 
   // Replace [xxx] for images async filter
-  eleventyConfig.addNunjucksAsyncFilter('images', async (text, images, src, callback) => {
+  eleventyConfig.addNunjucksAsyncFilter('images', async (text, lang, images, src, callback) => {
     // No text or no images
     if (text == null || images == null) {
       callback(null, text);
@@ -220,7 +220,8 @@ module.exports = (eleventyConfig) => {
       const img = images.find(i => i.Name === name);
       if (img) {
         const url = src.replace("/{ID}/", "/" + img.id + "/")
-        const html = await picture(url, "", "blog" + img.id, "other", [800], "")
+        let alt = (lang == 'es') ? img.Alt : img.Alt_en;
+        const html = await picture(url, alt, "blog" + img.id, "other", [800], "")
         text = text.replace(finds[i], html);
       }
     }

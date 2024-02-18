@@ -34,6 +34,8 @@ module.exports = async (config) => {
       Images: Media_postListViaPost_id {
         id
         Name
+        Alt
+        Alt_en
         Image {
           name
         }
