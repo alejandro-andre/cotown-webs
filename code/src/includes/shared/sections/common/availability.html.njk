@@ -52,7 +52,6 @@ function availability(lang, option) {
     else if (m >= 3 && m < 7) t = "m" + y;
     else t = "s" + y;
   };
-  console.log(t);
   document.querySelectorAll("[data-price]").forEach(el => {
     if (t == el.getAttribute("data-price")) 
       el.classList.remove("hidden"); 
