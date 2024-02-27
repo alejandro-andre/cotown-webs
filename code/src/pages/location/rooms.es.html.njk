@@ -7,7 +7,7 @@ eleventyComputed:
     alt:
       es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}-{{location | translate('Name', 'es') | slugify}}.html"
       en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}-{{location | translate('Name', 'es') | slugify}}.html"
-    description: "{{location | translate('Description', L)}}"
+    description: "{{langs[L].pages[name][site].description}}"
     permalink: "{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{location | translate('Name', L) | slugify}}.html"
 layout: shared/layouts/base.html
 pagination:
