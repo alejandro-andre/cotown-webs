@@ -30,8 +30,8 @@
       "url": "shared-flats",
       "text": "Locations",
       "cotown": {
-        "title": "Stay in our shared apartments in the best areas",
-        "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
+        "title": "Stay in Our Shared Apartments or Live Your Way with Our Furnished Apartments in the Best Areas",
+        "description": "Live in the most central areas, our furnished apartments and shared apartments for temporary rent, all services included. Can you ask for more?"
       },
       "vanguard": {
         "title": "Stay in our shared apartments in the best areas",
@@ -42,8 +42,8 @@
       "url": "private-apartments",
       "text": "Locations",
       "cotown": {
-        "title": "Live your way with our full apartments in the best areas ",
-        "description": "Choose how, when, and in what way you want to live with a stunning apartment all to yourself in the most cosmopolitan and cool city."
+        "title": "Our furnished apartments with all services included in the best areas of {city}",
+        "description": "Rent a furnished apartment temporarily in the best areas of {city}, fully equipped and with all services included"
       },
       "vanguard": {
         "title": "Live your way with our full apartments in the best areas ",

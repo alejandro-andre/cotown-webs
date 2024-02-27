@@ -2,7 +2,8 @@
 name: flats
 eleventyComputed:
     L: "es"
-    title: "{{langs[L].pages[name][site].title}} of {{location | translate('Name', L)}}"
+    title: "{{langs[L].pages[name][site].title}}"
+    name: "{{location.Name}}"
     alt:
       es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}-{{location | translate('Name', 'es') | slugify}}.html"
       en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}-{{location | translate('Name', 'es') | slugify}}.html"
