@@ -19,6 +19,7 @@
     --bold: 700;
     --semibold: 600;
     --regular: 500;
+    --400: 400;
     --light: 300;
 
     --weight-btn: 300;
@@ -40,6 +41,7 @@
     --primary-underline: #ff516574;
     --primary-flats: #ff5166;
     --new-bg: #F5F1EF;
+    --primary-old: #ff5166;
 
     --primary-ok: #ff5166;
     --secondary-bg: #ffffff;

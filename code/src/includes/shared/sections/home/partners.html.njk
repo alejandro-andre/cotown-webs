@@ -1,4 +1,9 @@
-<section class="partners">
+<section 
+ {% if site == 'vanguard' %} 
+      class="partners"
+      {% else %}
+      class="partners cotown"
+      {% endif %}>
 
   <div class="text-container">
     <h2 class="title">

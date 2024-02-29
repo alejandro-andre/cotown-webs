@@ -56,7 +56,11 @@ tags: page
 
     <section class="faqs-container pure-u-22-24 pure-u-lg-5-6">
       {% for f in faqs %}
-      <h1>{{f | translate('Name', L) }}</h1>
+        {% if site == 'vanguard' %}
+          <h1>{{f | translate('Name', L) }}</h1>
+        {% else %}
+          <h1 class="cotown">{{f | translate('Name', L) }}</h1>
+        {% endif %}      
       {% for q in f.Questions %}
       <div class="description text pure-u-1">
         <div class="expansion pure-u-1">

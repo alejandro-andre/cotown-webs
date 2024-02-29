@@ -28,12 +28,20 @@ tags: page
 <!-- Main -->
 <main class="about">
   <div class="container-main">
-
+    {% if site == 'vanguard' %}
     <section class="first-contain about pure-g">
       <div class="title-big pure-u-1">
         {% literal texts, 'about-conocenos', L, true %}
       </div>
     </section>
+    {% else %}
+    <section class="first-contain about cotown pure-g">
+      <div class="title-big pure-u-1">
+        {% literal texts, 'about-conocenos', L, true %}
+      </div>
+    </section>
+    {% endif %}
+
 
     <section class="banner">
       <div class="splide-banner splide" role="group">

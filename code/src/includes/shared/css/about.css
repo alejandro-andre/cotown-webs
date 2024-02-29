@@ -35,13 +35,23 @@ main .container-main .first-contain.about .img img {
 }
 
 main .container-main .first-contain.about .title-big h1 {
+	font-family: var(--title-font);
 	justify-content: center;
 	margin: auto;
 	font-weight: 400;
 	font-size: 64px;
 	line-height: 100%;
+	text-align: var(--align-title);
 }
-
+main .container-main .first-contain.about.cotown .title-big h1 {
+	font-family: var(--text-font);
+	justify-content: center;
+	margin: auto;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 100%;
+	text-align: var(--align-title);
+}
 main .container-main .first-contain.about .title-big p {
 	font-weight: 400;
 	font-size: 20px;

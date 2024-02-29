@@ -19,10 +19,19 @@
   padding: 40px 2em 2em 4em;
 }
 .locations .container-main .all-locations .left .texto-container h1.title-where {
+  font-family: var(--title-font);
   font-size: 64px;
   margin: 0 0 0.3em;
   text-align: var(--align-title);
 }
+.locations .container-main .all-locations .left .texto-container.cotown h1.title-where {
+  font-family: var(--text-font);
+  font-size: 64px;
+  font-weight: 600;
+  margin: 0 0 0.3em;
+  text-align: var(--align-title);
+}
+
 .locations .container-main .all-locations .left .locations-list {
   padding: 0;
 }
@@ -140,7 +149,17 @@
   padding-top: 20px;
 }
 .locations .container-main .all-locations .left .locations-list .locations-container .location .text-content h2 {
-  font-weight: 400;
+  font-family: var(--title-font);
+  font-weight: var(--400);
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 124%;
+  letter-spacing: -0.6px;
+  margin: 0 0 16px 0;
+  text-align: start;
+}
+.locations .container-main .all-locations .left .locations-list .locations-container .location .text-content.cotown h2 {
+  font-weight: var(--regular);
   font-size: 40px;
   line-height: 124%;
   letter-spacing: -0.6px;

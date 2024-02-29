@@ -1,15 +1,11 @@
 <section class="locations">
 
   <div class="text-container">
-    {% if site == 'vanguard' %}
-    <h2 class="title">
+    
+    <h2 {% if site == 'vanguard' %}  class="title"
+    {% else %} class="title cotown"  {% endif %}>
       {% literal texts, 'home-localizaciones-titulo', L %}
     </h2>
-    {% else %}
-    <h2 class="title cotown">
-      {% literal texts, 'home-localizaciones-titulo', L %}
-    </h2>
-    {% endif %}
   </div>
 
   {% if site == 'vanguard' %}

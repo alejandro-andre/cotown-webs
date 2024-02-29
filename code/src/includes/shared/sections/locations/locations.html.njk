@@ -1,12 +1,21 @@
 <section class="all-locations pure-u-1">
   <div class="left pure-u-1">
-  
+   {% if site == 'vanguard' %}
     <!-- Title -->
     <div class="texto-container pure-u-1 ">
       <h1 class="title-where">
         {% literal texts, 'home-localizaciones-titulo', L %}
       </h1>
     </div>
+    {% else %}
+    <!-- Title -->
+    <div class="texto-container cotown pure-u-1 ">
+      <h1 class="title-where">
+        {% literal texts, 'home-localizaciones-titulo', L %}
+      </h1>
+    </div>
+    {% endif %}
+    
 
     <section class="locations-list pure-u-1">
       <div class="locations-container pure-u-1">
@@ -42,10 +51,18 @@
                 {% endfor %}
               </div>
             </div>
+            {% if site == 'vanguard' %}
             <div class="text-content pure-u-1 pure-u-lg-11-24">
               <h2 class="location-title">{{l | translate('Name', L)}}</h2>
               <p class="body1">{{l.Texts[0] | translate('Description', L)}}</p>
             </div>
+            {% else %}
+            <div class="text-content cotown pure-u-1 pure-u-lg-11-24">
+              <h2 class="location-title">{{l | translate('Name', L)}}</h2>
+              <p class="body1">{{l.Texts[0] | translate('Description', L)}}</p>
+            </div>
+            {% endif %}
+            
           </div>
 
           <!-- Typologies -->

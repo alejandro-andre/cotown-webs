@@ -45,9 +45,16 @@
       </div>
     </div>
   {% else %}
-    <div class="left cotown pure-u-lg-1-4">
+    <div class="left cotown pure-u-lg-5-24">
       <div class="text-container desktop">
-        <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</h1>
+        <!-- CAMBIAR TRADUCCIONES -->
+        <h1 class="pure-u-1">BIENVENIDO
+          <span class="pure-u-1">COTOWNER.</span>
+        </h1>
+
+        <!-- <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}
+        <span class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</span>
+        </h1> -->
       </div>
       <div class="basic-searcher pure-u-1">
         <label class="label">{% literal texts, 'home-bienvenido-donde', L %}:</label>
@@ -79,7 +86,11 @@
       </div>
       <div class="button-search">
         <a href="#" onclick="go();">
-        <button class="btn-text search desktop"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
+         {% if site == 'vanguard' %}
+          <button class="btn-text search desktop"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
+        {% else %}
+          <button class="btn-text search desktop cotown"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
+        {% endif %}
         <button class="btn-secondary search mobile"><em class="icon-search"></em>{% literal texts, 'button-buscar', L %}</button>
         </a>
       </div>
