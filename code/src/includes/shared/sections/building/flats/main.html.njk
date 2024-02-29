@@ -68,6 +68,7 @@ new Splide("#splideServices", {
 // Sliders tipos de piso
 {% for r in flats | find('id', 'eq', building.id) %}
 {% for p in r.Flat_subtypes %}
+{% if flat_subtypes[p.Code].Tour == "" %}
 new Splide('#big-{{p.Code}}', { 
   type: 'loop', 
   height: '90vh',
@@ -97,6 +98,7 @@ var thumbnails_{{p.id}} = new Splide('#thumbnail-carousel-{{p.Code}}', {
 main_{{p.id}}.sync(thumbnails_{{p.id}});
 main_{{p.id}}.mount();
 thumbnails_{{p.id}}.mount();
+{% endif %}
 
 // Slider amenities
 new Splide('#amenities-carousel-{{p.Code}}', {

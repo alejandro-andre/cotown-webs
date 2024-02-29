@@ -96,7 +96,7 @@ var markerArray = [];
 {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}
 {% set ra = b.Resources | find('Sale_type', 'eq', 'ambos') | length %}
 {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
-{% if ra > 0 or rp > 0 %}
+{% if ra > 0 or rp > 0 and b.Lat_lon %}
 markerArray.push(putMarker(
   map,
   {{b.Lat_lon.slice(1,-1).split(',')[0]}},

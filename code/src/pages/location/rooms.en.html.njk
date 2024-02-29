@@ -2,11 +2,12 @@
 name: rooms
 eleventyComputed:
     L: "en"
-    title: "{{langs[L].pages[name][site].title}} of {{location | translate('Name', L)}}"
+    title: "{{langs[L].pages[name][site].title}}"
+    city: "{{location | translate('Name', L)}}"
     alt:
       es: "{{langs.es.folder}}/{{langs.es.pages[name].url}}-{{location | translate('Name', 'es') | slugify}}.html"
-      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}-{{location | translate('Name', 'es') | slugify}}.html"
-    description: "{{location | translate('Description', L)}}"
+      en: "{{langs.en.folder}}/{{langs.en.pages[name].url}}-{{location | translate('Name', 'en') | slugify}}.html"
+    description: "{{langs[L].pages[name][site].description}}"
     permalink: "{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{location | translate('Name', L) | slugify}}.html"
 layout: shared/layouts/base.html
 pagination:

@@ -310,7 +310,6 @@ button.green-button.btn-secondary {
     display: inline-flex;
     font-weight: 700;
     font-size: 16px;
-    line-height: 150%;
     padding: 6px 16px;
 }
 .carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain, .carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain {

@@ -112,6 +112,7 @@
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I">
                       <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
                       <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
+                      <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                       <p>{% literal texts, 'price-desde', L %} {{minI}} €/{% literal texts, 'price-mes', L %}</p>
                       </a>
                       <div id="{{b.id}}_I" class="pure-u-1 text-red"><p></p></div>
@@ -124,6 +125,7 @@
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D">
                       <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
                       <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
+                      <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                       <p>{% literal texts, 'price-desde', L %} {{minD}} €/{% literal texts, 'price-mes', L %}</p>
                       </a>
                       <div id="{{b.id}}_D" class="pure-u-1 text-red"><p></p></div>
@@ -137,6 +139,7 @@
                       <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html">
                       <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                      <p>&nbsp;</p>
                       </a>
                       <div id="{{b.id}}_F" class="pure-u-1 text-red"><p></p></div>
                     </div>
@@ -268,6 +271,11 @@
               <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
                 <p>{{minI}} €/{% literal texts, 'price-mes', L %}</p>
+                <button 
+                  class="btn-secondary green-button" 
+                  onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I'">
+                  {% literal texts, 'price-mas', L %}
+                </button>
               </div>
             </div>
             {% endif %}
@@ -285,6 +293,11 @@
               <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
                 <p>{{minD}} €/{% literal texts, 'price-mes', L %}</p>
+                <button 
+                  class="btn-secondary green-button" 
+                  onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D'">
+                  {% literal texts, 'price-mas', L %}
+                </button>
               </div>
             </div>
             {% endif %}

@@ -10,6 +10,7 @@ module.exports = async (config) => {
       Name_en
       Description
       Description_en
+      Tour
       Amenities: Resource_flat_amenityListViaFlat_subtype_id {
         Amenity: Resource_amenity_typeViaAmenity_type_id {
           id
@@ -33,7 +34,8 @@ module.exports = async (config) => {
     Name_en: o.Name_en,
     Description: o.Description, 
     Description_en: o.Description_en,
-    Amenities: o.Amenities
+    Amenities: o.Amenities,
+    Tour: o.Tour || ""
   } });
   return(json); 
 };

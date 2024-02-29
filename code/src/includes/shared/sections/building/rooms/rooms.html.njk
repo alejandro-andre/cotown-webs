@@ -112,6 +112,9 @@
             <p data-price="l" class="hidden" id="l_{{p.Code}}_{{f.Code}}">{{f.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
             <p data-price="m" class="hidden" id="m_{{p.Code}}_{{f.Code}}">{{f.Rent_medium}} €/{% literal texts, 'price-mes', L %}</p>
             <p data-price="s" class="hidden" id="s_{{p.Code}}_{{f.Code}}">{{f.Rent_short}} €/{% literal texts, 'price-mes', L %}</p>
+            <p data-price="ln" class="hidden" id="l_{{p.Code}}_{{f.Code}}">{{f.Rent_long_next}} €/{% literal texts, 'price-mes', L %}</p>
+            <p data-price="mn" class="hidden" id="m_{{p.Code}}_{{f.Code}}">{{f.Rent_medium_next}} €/{% literal texts, 'price-mes', L %}</p>
+            <p data-price="sn" class="hidden" id="s_{{p.Code}}_{{f.Code}}">{{f.Rent_short_next}} €/{% literal texts, 'price-mes', L %}</p>
           </div>
           <div id="{{p.Code}}_{{f.Code}}" data-id="{{p.Code}}" class="text-red"><p>...</p></div>
         </div>
@@ -125,7 +128,7 @@
         {% if not eshow %}
         {% set eshow = true %}
         <div class="title">
-          <p>Servicios extra</p>
+          <p>{% literal texts, 'room-extra', L %}</p>
         </div>
         {% endif %}
         <div class="extras">

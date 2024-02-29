@@ -38,12 +38,19 @@ function availability(lang, option) {
   const date_to = sessionStorage.getItem("book_checkout");
 
   // Months/Prices
+  var curr_y = new Date().getFullYear();
+  if (new Date().getMonth() >= 8)
+    curr_y += 1;
+  var from_y = new Date(date_from).getFullYear();
+  if (new Date(date_from).getMonth() >= 8)
+    from_y += 1;
+  y = curr_y == from_y ? "" : "n";
   const m = calculateMonths(date_from, date_to);
   let t = "f";
   if (date_to) {
-    if (m >= 7) t = "l"; 
-    else if (m >= 3 && m < 7) t = "m";
-    else t = "s";
+    if (m >= 7) t = "l" + y; 
+    else if (m >= 3 && m < 7) t = "m" + y;
+    else t = "s" + y;
   };
   document.querySelectorAll("[data-price]").forEach(el => {
     if (t == el.getAttribute("data-price")) 

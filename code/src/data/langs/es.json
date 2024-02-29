@@ -19,8 +19,8 @@
       "url": "destinos",
       "text": "Destinos",
       "cotown": {
-        "title": "Alójate en nuestros pisos compartidos o vive a tu manera con nuestros pisos completos en las mejores zonas",
-        "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
+        "title": "Alójate en nuestros pisos compartidos o vive a tu manera con nuestros apartamentos amueblados en las mejores zonas",
+        "description": "Vive en las zonas más centricas en nuestros apartamentos amueblados y pisos compartidos de alquiler temporal, con todos los servicios incluidos. ¿Se puede pedir más?"
       },
       "vanguard": {
         "title": "Alójate en nuestros pisos compartidos o vive a tu manera con nuestros pisos completos en las mejores zonas",
@@ -43,12 +43,12 @@
       "url": "apartamentos-privados",
       "text": "Localizaciones",
       "cotown": {
-        "title": "Vive a tu manera con nuestros pisos completos en las mejores zonas de Barcelona",
-        "description": "Elige cómo, cuándo y de qué manera quieres vivir con un pisazo para ti sol@ en la ciudad más cosmopolita y molona."
+        "title": "Vive a tu manera en nuestros apartamentos amueblados con todos los servicios incluidos, en las mejores zonas de {city}",
+        "description": "Alquila un apartamento amueblado temporalmente en las mejores zonas de {city}, totalmente equipados y con todos los servicios incluidos"
       },
       "vanguard": {
-        "title": "Vive a tu manera con nuestros pisos completos en las mejores zonas de Barcelona",
-        "description": "Elige cómo, cuándo y de qué manera quieres vivir con un pisazo para ti sol@ en la ciudad más cosmopolita y molona."
+        "title": "Vive a tu manera con nuestros pisos completos en las mejores zonas de {}",
+        "description": "Elige cómo, cuándo y de qué manera quieres vivir con un pisazo para ti sol@ en {}"
       }
     },
     "residences": {
