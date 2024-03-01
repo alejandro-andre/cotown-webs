@@ -65,7 +65,7 @@ p.subtitle {
 }
 
 .main-header .left .text-container h1 {
-    line-height: 80px;
+    line-height: 70px;
     margin: 0 0 0.5em;
 }
 
@@ -343,21 +343,24 @@ main .container-main .first-contain.home.cotown .text p {
 }
 
 .locations .text-container h2.title {
-    text-align: center;
+    text-align: left;
     font-family: var(--title-font);
     font-weight: var(--regular);
-    font-size: var(--big-title);
-
+    font-size: var(--title);
+    padding: 1.5em 0 0 74px;
 }
 
 .locations .carousel h3 {
     position: absolute !important;
-    font-size: var(--title);
+    font-family: var(--title-font);
+    font-size: var(--big-title);
+    font-weight: 400;
     bottom: 0;
     left: 0.3em;
-    color: var(--black);
+    color: var(--white);
     margin: 0;
     line-height: 1;
+    text-transform: uppercase;
 }
 
 .locations .carousel .img:hover h3 {
@@ -387,7 +390,6 @@ main .container-main .first-contain.home.cotown .text p {
     font-family: var(--text-font);
     font-weight: var(--regular);
     font-size: var(--big-subtitle);
-
 }
 
 .locations .cotown .img {
@@ -466,16 +468,24 @@ main .container-main .first-contain.home.cotown .text p {
 
 /* PISOS
 -------------------------------- \*/
-.pisos {
+.pisos.vanguard {
     margin: 2em 0 4em;
     text-align: center;
 }
+.pisos.vanguard .text-container h2.title {
+    font-family: var(--title-font);
+    font-size: var(--big-title);
+    font-weight: 400;
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+}
 
-.pisos .container .img-container {
+.pisos.vanguard .container .img-container {
     position: relative;
 }
 
-.pisos .container .img-container .img {
+.pisos.vanguard .container .img-container .img {
     height: 60vh;
     margin-right: 1em;
     margin-bottom: 0;
@@ -483,11 +493,11 @@ main .container-main .first-contain.home.cotown .text p {
     cursor: pointer;
 }
 
-.pisos .container .img-container .last {
+.pisos.vanguard .container .img-container .last {
     margin-right: 0 !important;
 }
 
-.pisos .container .img-container .img img {
+.pisos.vanguard .container .img-container .img img {
     max-width: 100%;
     max-height: 100%;
     width: 100%;
@@ -495,14 +505,14 @@ main .container-main .first-contain.home.cotown .text p {
     object-fit: cover;
 }
 
-.pisos .container .img-container:hover img {
+.pisos.vanguard .container .img-container:hover img {
     transform: scale(1.20);
     -webkit-transform: scale(1.20);
     filter: contrast(1.2);
     transition: transform .25s ease-in-out;
 }
 
-.pisos .container .img-container span {
+.pisos.vanguard .container .img-container span {
     z-index: 20;
     position: relative;
     display: inline-block;
@@ -510,11 +520,11 @@ main .container-main .first-contain.home.cotown .text p {
     font-family: var(--title-font);
 }
 
-.pisos .container .img-container .img-title1 span {
+.pisos.vanguard .container .img-container .img-title1 span {
     top: -178px;
 }
 
-.pisos .container .img-container .img-title2 span {
+.pisos.vanguard .container .img-container .img-title2 span {
     top: -110px;
 }
 
@@ -526,16 +536,16 @@ main .container-main .first-contain.home.cotown .text p {
     height: 0.8rem;
 }
 
-.pisos .container .img-container .img-title1 .subrayado {
+.pisos.vanguard .container .img-container .img-title1 .subrayado {
     bottom: 178px;
 }
 
-.pisos .container .img-container .img-title2 .subrayado {
+.pisos.vanguard .container .img-container .img-title2 .subrayado {
     bottom: 108px;
 }
 
-.pisos .container .img-container:hover a>.img-title1 .subrayado,
-.pisos .container .img-container:hover a>.img-title2 .subrayado {
+.pisos.vanguard .container .img-container:hover a>.img-title1 .subrayado,
+.pisos.vanguard .container .img-container:hover a>.img-title2 .subrayado {
     width: 100%;
     -webkit-transition: width 0.25s ease-in-out;
     -moz-transition: width 0.25s ease-in-out;
@@ -544,7 +554,7 @@ main .container-main .first-contain.home.cotown .text p {
 }
 
 /* PISOS COTOWN */
-.pisos .text-container h2.title.cotown {
+.pisos.cotown .text-container h2.title {
     text-align: left;
     padding-left: 74px;
     font-weight: var(--regular);
@@ -552,12 +562,12 @@ main .container-main .first-contain.home.cotown .text p {
 
 }
 
-.pisos .container .img-container .img.cotown {
+.pisos.cotown .container .img-container .img.cotown {
     margin-right: 0;
     margin-bottom: 0;
 }
 
-.pisos .container .img-container .img-title.cotown {
+.pisos.cotown .container .img-container .img-title.cotown {
     z-index: 20;
     position: absolute;
     display: inline-block;
@@ -569,7 +579,7 @@ main .container-main .first-contain.home.cotown .text p {
     padding: 80px 20px 20px;
 }
 
-.pisos .container .img-container .img-title.cotown h6 {
+.pisos.vanguard .container .img-container .img-title.cotown h6 {
     font-family: var(--text-font);
     color: var(--black);
     font-size: var(--mini-title);
@@ -578,6 +588,9 @@ main .container-main .first-contain.home.cotown .text p {
     line-height: 20px;
     margin: 0;
 }
+
+
+
 
 
 /* SERVICIOS
@@ -969,11 +982,11 @@ main .container-main .first-contain.home.cotown .text p {
 
 .opinions .text-container h2.title {
     font-family: var(--title-font);
-    padding: 1em 0;
-    font-size: 48px;
-    line-height: 40px;
+    font-size: var(--big-title);
+    line-height: 0.8;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
+    font-weight: 400;
 }
 
 .opinions.cotown .text-container h2.title {
@@ -1103,7 +1116,7 @@ main .container-main .first-contain.home.cotown .text p {
     padding: 0.5em 0 0;
 }
 
-.opinions .slide .opinion ul.stars {
+.opinions.cotown .slide .opinion ul.stars {
     list-style: none;
     margin: 0;
     display: flex;

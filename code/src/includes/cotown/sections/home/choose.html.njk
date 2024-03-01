@@ -1,32 +1,12 @@
-<section class="pisos">
+<section class="pisos cotown">
     <div class="text-container">
-      <h2 {% if site == 'vanguard' %} 
-      class="title"
-      {% else %}
-      class="title cotown"
-      {% endif %}>{% literal texts, 'home-pisazos-elige', L %}</h2>
+      <h2 class="title">{% literal texts, 'home-pisazos-elige', L %}</h2>
     </div>
 
   <div class="pure-g container">  
     <div class="pure-u-lg-1-2 pure-u-1 img-container">
       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['locations'].url}}.html">
-        {% if site == 'vanguard' %}
-          <div class="img">
-            {% image
-              constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
-              "apartamento-privado", "apartamento-privado", "",
-              [1280], ""
-            %}
-          </div>
-          <div class="img-title1">
-            <span>{% literal texts, 'home-pisazos-apartamento', L %}</span>
-            <div class="subrayado"></div>
-          </div>
-          <div class="img-title2">
-            <span>{% literal texts, 'home-pisazos-privado', L %}</span>
-            <div class="subrayado"></div>
-          </div>
-        {% else %}
+        
           <div class="img cotown">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
@@ -38,29 +18,12 @@
             <h6>{% literal texts, 'home-pisazos-apartamento', L %}</h6>
             <h6>{% literal texts, 'home-pisazos-privado', L %}</h6>
           </div>          
-        {% endif %}
+       
       </a>
     </div>
 
     <div class="pure-u-lg-1-2 pure-u-1 img-container">
       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['locations'].url}}.html">
-        {% if site == 'vanguard' %}
-          <div class="img last">
-            {% image
-              constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'].id +"/Image/contents?access_token=" + token,
-              "piso-compartido", "piso-compartido", "",
-              [1280], ""
-            %}
-          </div>
-          <div class="img-title1">
-            <span>{% literal texts, 'home-pisazos-piso', L %}</span>
-            <div class="subrayado"></div>
-          </div>
-          <div class="img-title2">
-            <span>{% literal texts, 'home-pisazos-compartido', L %}</span>
-            <div class="subrayado"></div>
-          </div>
-        {% else %}
           <div class="img last cotown">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'].id +"/Image/contents?access_token=" + token,
@@ -72,7 +35,6 @@
             <h6>{% literal texts, 'home-pisazos-piso', L %}</h6>
             <h6>{% literal texts, 'home-pisazos-compartido', L %}</h6>
           </div>          
-        {% endif %}
       </a>
     </div>
   </div>
