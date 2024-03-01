@@ -1278,7 +1278,7 @@ footer section.container-footer .footer-info {
 footer section.container-footer .footer-info .redes em {
 	font-size: 30px;
 	padding-right: 1em;
-	color: var(--primary);
+	color: var(--primary-old);
 }
 
 footer section.container-footer .footer-info .info-desktop p {

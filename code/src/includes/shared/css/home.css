@@ -610,9 +610,6 @@ main .container-main .first-contain.home.cotown .text p {
 }
 
 
-
-
-
 /* SERVICIOS
 -------------------------------- \*/
 .servicios {
@@ -1441,12 +1438,27 @@ main .container-main .first-contain.home.cotown .text p {
         line-height: 1.05;
     }
 
-    /* LOCALIZACIONES \*/
-    /* PISOS */
+    /* HOME SECTIONS */
+
+    .locations .text-container h2.title.cotown {
+        text-align: left;
+        padding: 1em 0 0.5em 24px;
+        font-family: var(--text-font);
+        font-weight: var(--regular);
+        font-size: var(--subtitle);
+    }
+    
     .locations .carousel h3 {
         font-size: var(--resp-title);
     }
-
+    
+    .pisos.cotown .text-container h2.title {
+        text-align: left;
+        padding: 1em 0 0.5em 24px;
+        font-family: var(--text-font);
+        font-weight: var(--regular);
+        font-size: var(--subtitle);
+    }
     .pisos .container .img-container .img {
         margin-bottom: 8px;
         margin-right: 0;
@@ -1467,19 +1479,53 @@ main .container-main .first-contain.home.cotown .text p {
     .pisos .container .img-container .img-title2 .subrayado {
         bottom: 86px;
     }
+    .pisos.cotown .container .img-container .img-title.cotown.second{
+        left: 0;
+        max-width: fit-content;
+    }
 
+
+
+    .servicios.cotown .text-container h2.title {
+        font-family: var(--text-font);
+        font-weight: var(--semibold);
+        font-size: var(--subtitle);
+    }
     .opinions .text-container {
         padding: 1em 0 0;
     }
 
+    .servicios.cotown {
+        background-color: var(--white);
+    }
+    .servicios.cotown .servicios-container {
+        padding: 1em;
+    }
+    .servicios.cotown .servicios-container .services-cards .card {
+        width: calc(50% - 32px);
+        align-items: center;
+    }
+    .servicios .servicios-container .services-cards .card img, .servicios .servicios-container .services-cards .card svg {
+        width: 60px;
+    }
+    .servicios.cotown .servicios-container .services-cards .card p.bold {
+        font-size: var(--resp-mini-title);
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    .servicios.cotown .servicios-container .services-cards .card p.text {
+        font-size: var(--resp-text);
+        line-height: 1.2;
+        text-align: center;
+
+    }
     .cotownity {
         display: none;
     }
-
     .cotownity-mobile {
         display: block;
     }
-
     .cotownity-mobile .container-cotownity .container-img {
         position: relative;
         height: 100%;
