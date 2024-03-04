@@ -50,7 +50,7 @@
     <section class="posts pure-u-1">
 
       {% for p in posts %}
-      {% if posttag.id | includes(p.Tags, 'Tag') %}
+      {% if posttag.id == 0 or posttag.id | includes(p.Tags, 'Tag') %}
       <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-8-24">
         <div style="padding:0;margin:5px;">
           <div class="post">

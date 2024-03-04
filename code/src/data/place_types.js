@@ -4,7 +4,7 @@ module.exports = async (config) => {
   const QUERY = `
   query data ($id: Int) {
     data: Resource_Resource_place_typeList (
-      where: { id: { LT: 300 } }
+      where: { NOT: { Code: { LIKE: "DUI_%" } } }
     ) {
       id
       Code
