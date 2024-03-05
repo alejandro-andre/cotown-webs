@@ -1132,6 +1132,7 @@ main .container-main section.banner h2 {
 
 /* CONTACTO
 -------------------------------- */
+
 .first-contact {
 	background-color: var(--primary);
 	height: 8em;
@@ -1145,6 +1146,12 @@ main .container-main section.banner h2 {
 	font-size: 76px;
 	line-height: 1.4em;
 }
+.contact.vanguard .first-contact h1 {
+	font-family: var(--title-font);
+}
+.contact.cotown .first-contact h1 {
+	font-family: var(--text-font);
+}
 
 .contact-main h2 {
 	padding: 1em 1.5em 0;
@@ -1152,6 +1159,14 @@ main .container-main section.banner h2 {
 	font-size: 46px;
 	line-height: 100%;
 }
+.contact.vanguard .contact-main h2 {
+	font-family: var(--title-font);
+}
+.contact.cotown .contact-main h2 {
+	font-family: var(--text-font);
+}
+
+
 
 .contact-main .img-content {
 	border-bottom: 1px solid var(--grey-light);
@@ -1185,7 +1200,12 @@ main .container-main section.banner h2 {
 	font-size: 24px;
 	line-height: 130%;
 }
-
+.contact.vanguard .img-content .contact-content .text-location h3 {
+	font-family: var(--title-font);
+}
+.contact.cotown .img-content .contact-content .text-location h3 {
+	font-family: var(--text-font);
+}
 .contact-main .img-content .contact-content .text-location p em::before {
 	vertical-align: bottom;
 }
