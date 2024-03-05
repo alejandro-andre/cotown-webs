@@ -17,7 +17,7 @@ main .container-main .first-contain.about .img {
 main .container-main .first-contain.about .title-big {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: justify;
+	justify-content: center;
 	align-items: flex-start;
 	margin: 0;
 	padding: 50px;
@@ -43,19 +43,41 @@ main .container-main .first-contain.about .title-big h1 {
 	line-height: 100%;
 	text-align: var(--align-title);
 }
-main .container-main .first-contain.about.cotown .title-big h1 {
-	font-family: var(--text-font);
-	justify-content: center;
-	margin: auto;
-	font-weight: 400;
-	font-size: 64px;
-	line-height: 100%;
-	text-align: var(--align-title);
-}
+
 main .container-main .first-contain.about .title-big p {
 	font-weight: 400;
 	font-size: 20px;
-	line-height: 150%;
+	line-height: 1.5;
+	text-align: left;
+}
+
+/* COTOWN */
+
+main .container-main .first-contain.about.cotown .title-big {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 0;
+	padding: 50px;
+	position: relative;
+	z-index: 1;
+	background-color: var(--primary-background);
+}
+
+main .container-main .first-contain.about.cotown .title-big h1 {
+	font-family: var(--text-font);
+	justify-content: flex-start;
+	margin: 0 0 0.5em;
+	font-weight: var(--semibold);
+	font-size: var(--big-title);
+	line-height: 1;
+	text-align: start;
+}
+
+main .container-main .first-contain.about.cotown .title-big p {
+	font-size: var(--text);
+	line-height: 1.5;
 	text-align: left;
 }
 
@@ -90,17 +112,7 @@ main .container-main section.members .grid .member .img-member {
 	text-align: center;
 }
 
-/*
-main .container-main section.members .grid .member .img-member:hover .first {
-    display: none;
-}
-main .container-main section.members .grid .member .img-member .hover {
-    display: none;
-}
-main .container-main section.members .grid .member .img-member:hover .hover {
-    display: block;
-}
-*/
+
 main .container-main section.members .grid .member .img-grid {
 	width: 100%;
 }
@@ -171,6 +183,23 @@ main .container-main section.members .button-more {
 
 	main .container-main section.members .grid .member {
 		width: 50%;
+	}
+
+
+	/* COTOWN */
+
+	main .container-main .first-contain.about.cotown .title-big {		
+		justify-content: center;
+		margin: 0 auto;
+	}
+	
+	main .container-main .first-contain.about.cotown .title-big h1 {		
+		font-size: var(--resp-big-title);
+		text-align: center;
+	}
+
+	main .container-main .first-contain.about.cotown .title-big p {
+		font-size: var(--resp-text);
 	}
 
 }

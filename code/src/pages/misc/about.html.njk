@@ -82,8 +82,7 @@ tags: page
 
       </div>
     </section>
-
-    <section class="form">
+    <section class="form {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
 
       {% literal texts, 'about-unete', L, true %}
 
@@ -125,9 +124,14 @@ tags: page
           <label class="label">{% literal texts, 'form-subir-cv', L %}</label>
           <div class="select">
             <span class="selected">
-              <input class="input selected" id="file" type="file" value="{% literal texts, 'form-subir-cv', L %}"/>
+              <input class="input selected" id="file" type="file" value="{% literal texts, 'form-subir-cv', L %}"/>              
               <label class="label btn-primary" for="selected">
-                <span>{% literal texts, 'form-adjuntar', L %}</span>
+                <span>{% literal texts, 'form-adjuntar', L %}
+                 {% if site == 'vanguard' %}
+               {% else %}
+              <em class="icon-corchete-down"></em>
+              {% endif %}
+                </span>
               </label>
             </span>
             <label class="select-file" for="selected">

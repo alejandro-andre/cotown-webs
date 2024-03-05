@@ -78,7 +78,7 @@ p.subtitle {
 
 .main-header .left.cotown .text-container h1 span {
     font-family: var(--title-font);
-    font-size: 72px;
+    font-size: var(--big-title);
     line-height: 74px;
     margin: 0 0 0.5em;
     font-weight: 800;
@@ -1263,7 +1263,6 @@ main .container-main .first-contain.home.cotown .text p {
     }
 
     .main-header .left .text-container h1 {
-        /* font-size: 56px; */
         line-height: 56px;
     }
 
@@ -1383,7 +1382,7 @@ main .container-main .first-contain.home.cotown .text p {
         position: absolute;
         bottom: 0;
         left: 0;
-        padding: 1em;
+        padding: 2em;
         background-color: var(--box-bg);        
     }
 
@@ -1393,13 +1392,6 @@ main .container-main .first-contain.home.cotown .text p {
         font-size: var(--resp-big-title);
         line-height: 100%;
         text-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-        text-align: left;
-    }
-    .main-header .video.cotown .text-container.mobile h1 {
-        color: var(--black);
-        font-weight: var(--400);
-        font-size: var(--resp-big-title);
-        line-height: 100%;
         text-align: left;
     }
 
@@ -1422,7 +1414,7 @@ main .container-main .first-contain.home.cotown .text p {
     }
 
     main .container-main .first-contain.home.cotown {
-        background-color: var(--new-bg);
+        background-color: var(--white);
     }
 
     main .container-main .first-contain.home .title-big.home {
@@ -1435,9 +1427,6 @@ main .container-main .first-contain.home.cotown .text p {
         text-align: left;
     }
 
-    main .container-main .first-contain.home .title-big.home p {
-        font-size: 18px;
-    }
 
     main .container-main .first-contain.home .title-big.home p {
         font-size: var(--text);
@@ -1448,10 +1437,25 @@ main .container-main .first-contain.home.cotown .text p {
 
     main .container-main .first-contain.home .title-big.home .h1-big.cotown h1 {
         font-family: var(--text-font);
-        font-size: var(--big-title);
+        font-size: var(--resp-title);
         width: 100%;
         font-weight: var(--regular);
         line-height: 1.05;
+    }
+    .main-header .video.cotown .text-container.mobile h1 {
+        color: var(--black);
+        font-weight: var(--400);
+        font-size: var(--resp-title);
+        line-height: 100%;
+        text-align: left;
+    }
+
+    .main-header .video.cotown .text-container.mobile h1 span {
+        font-family: var(--title-font);
+        font-size: var(--resp-big-title);
+        line-height: 74px;
+        margin: 0;
+        font-weight: var(--bold);
     }
 
     /* HOME SECTIONS */
@@ -1499,18 +1503,22 @@ main .container-main .first-contain.home.cotown .text p {
         left: 0;
         max-width: fit-content;
     }
-
-
+   
 
     .servicios.cotown .text-container h2.title {
         font-family: var(--text-font);
         font-weight: var(--semibold);
-        font-size: var(--subtitle);
+        font-size: var(--resp-big-subtitle);
     }
     .opinions .text-container {
         padding: 1em 0 0;
     }
-
+    .opinions.cotown .text-container {
+        padding: 1.5em 0 1em 1.5em;
+    }
+    .opinions.cotown .text-container h2.title {       
+        font-size: var(--resp-big-subtitle);
+    }
     .servicios.cotown {
         background-color: var(--white);
     }
@@ -1609,11 +1617,16 @@ main .container-main .first-contain.home.cotown .text p {
         object-position: center center;
     }
 
-
-
-
     .splide-opinions.splide {
         margin-top: 1em;
+    }
+
+    .partners.cotown .text-container {
+        padding: 1.5em 0 1em 1.5em;
+    }
+    .partners.cotown .text-container h2 {
+        padding: 0;
+        font-size: var(--resp-big-subtitle);
     }
 
 }
