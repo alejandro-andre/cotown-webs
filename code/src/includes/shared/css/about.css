@@ -66,6 +66,7 @@ main .container-main .first-contain.about.cotown .title-big {
 }
 
 main .container-main .first-contain.about.cotown .title-big h1 {
+	width: 100%;
 	font-family: var(--text-font);
 	justify-content: flex-start;
 	margin: 0 0 0.5em;
