@@ -1038,6 +1038,7 @@ main .container-main section.form .form-container .campo.add-file .select .selec
 	position: relative;
 	display: block;
 	height: 54px;
+	z-index: 20;
 }
 
 main .container-main section.form .form-container .campo.add-file .select label[for="selected"] {
@@ -1088,9 +1089,6 @@ main .container-main section.form .form-container .campo .select input.selected 
 	opacity: 0;
 }
 
-
-
-
 section.form .form-container .text-ok {
 	display: none;
 }
@@ -1110,6 +1108,25 @@ main .container-main section.form .form-container button.btn-secondary {
 	height: 54px;
 	font-size: 22px;
 }
+
+
+/* FORM ABOUT-US COTOWN Y RESPONSIVE */
+
+@media only screen and (max-width: 1023.9px) {
+	main .container-main section.form.cotown .form-container .campo.add-file .select {
+		width: 80%;
+	}
+	main .container-main section.form.cotown .form-container .campo.add-file .select .selected {
+		position: relative;
+		display: block;
+		height: 54px;
+		width: 122%;
+	}
+}
+/* -------------------------------------
+             FORM END */
+
+
 
 /* ICONOS CHAT */
 .iconos-chat {

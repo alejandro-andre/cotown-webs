@@ -45,6 +45,23 @@
 .locations .container-main .all-locations .locations-container .locations-list .list-container .location .types {
   width: 30%!important;
 } 
+.locations .container-main .all-locations .locations-container .locations-list .list-container .location .types .type-list a .label-content {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: var(--semibold);
+  margin-top: 16px;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list, .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4%;
+}
 
 /* SOLO COTOWN */
 .locations .container-main .all-locations.cotown .locations-container {
@@ -52,7 +69,7 @@
   flex-flow: row wrap;
   justify-content: var(--align-title);
   align-items: flex-start;
-  padding: 40px 0 2em;
+  padding: 40px 0 0;
 }
 .locations .container-main .all-locations.cotown .locations-container .locations-list {
   background-color: var(--new-bg);
@@ -138,6 +155,12 @@ padding-bottom: 0;
   margin: 0.5em auto 0.8em;
   background-color: var(--primary-old);
 }
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a img.img {
+  display: none;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a .label-content img.icon {
+  width: 40px;
+}
 
 /* SOLO VANGUARD */
 
@@ -196,7 +219,7 @@ padding-bottom: 0;
   border-radius: var(--radius-2);
   overflow: hidden;
   width: 240px;
-  height: 240px;
+  max-height: 240px;
   object-fit: cover;
   object-position: center center;  
 }
@@ -206,13 +229,13 @@ padding-bottom: 0;
   text-decoration: none;
 }
 
-.locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list {
+/* .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 4%;
-}
+} */
 .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list a {
   position: relative;
   display: inline-block;
@@ -221,9 +244,11 @@ padding-bottom: 0;
   border-radius: var(--slider-cards-small);
   cursor: pointer;
   max-width: 156px;
+  min-width: 136px;
   width: 28%;
   max-height: 156px;
   height: auto;
+  margin: 0 0 10px;
 }
 .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list a:last-child {
   margin-right: 20px;
@@ -239,8 +264,7 @@ padding-bottom: 0;
   left: -1px;
   width: 24px;
 }
-
-.locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list a .label-content {
+/* .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list a .label-content {
   position: relative;
   display: flex;
   flex-flow: column;
@@ -249,19 +273,19 @@ padding-bottom: 0;
   cursor: pointer;
   font-weight: 600;
   margin-top: 16px;
-}
+} */
 .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list a .label-content img.icon {
   width: 60px;
 }
 .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list a .label-content p {
   font-size: 16px;
   text-align: center;
-  margin: 0 0 16px;
+  margin: 0 8px 16px;
 }
 
 /* RESPONSIVE
 -------------------------------- */
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1279.99px) {
   .locations .container-main .all-locations .locations-container {    
     padding: 40px 2em 2em 2em;
   }
@@ -271,18 +295,14 @@ padding-bottom: 0;
   .locations .container-main .all-locations .locations-container .locations-list .list-container .location .text-content p {
     padding-right: 24px;
   }
-  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list, .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 6%;
-  }
+
   .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a, .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list a {
     width: 38%;
     margin-bottom: 4%;
   }
 }
+
+
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
 
@@ -291,7 +311,6 @@ padding-bottom: 0;
     align-items: flex-start;
     padding: 0;
   }
-
   .locations .container-main .all-locations .locations-container {
     display: flex;
     flex-flow: row wrap;
@@ -343,7 +362,7 @@ padding-bottom: 0;
     border-radius: var(--radius-2);
     overflow: hidden;
     width: 170px;
-    height: 170px;
+    max-height: 170px;
     object-fit: cover;
     object-position: center center;  
   }
@@ -452,4 +471,22 @@ padding-bottom: 0;
     min-width: 92px;
     min-height: 92px;
   }*/
-} 
+}
+/* MOVIL XS*/
+
+@media only screen and (max-width: 399.99px) {
+  .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .img-text {
+    flex-flow: column;
+  }
+  .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .img-text .img-cont {
+    width: 100%;
+    margin: 0;
+  }
+  .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .img-text .img-cont .img {
+    width: 100%;
+    max-height: auto;
+  }
+  .locations .container-main .all-locations .locations-container .locations-list .list-container .location .img-text .text-content {
+    width: 100%!important;
+  }
+}

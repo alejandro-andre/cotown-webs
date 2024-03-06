@@ -71,7 +71,7 @@ main .container-main .first-contain.about.cotown .title-big h1 {
 	justify-content: flex-start;
 	margin: 0 0 0.5em;
 	font-weight: var(--semibold);
-	font-size: var(--big-title);
+	font-size: var(--title);
 	line-height: 1;
 	text-align: start;
 }
@@ -156,6 +156,11 @@ main .container-main section.members .button-more {
 	margin: 1em 0;
 }
 
+
+/* FORM */
+
+
+
 @media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
 
 	/* TEAM */
@@ -195,7 +200,7 @@ main .container-main section.members .button-more {
 	}
 	
 	main .container-main .first-contain.about.cotown .title-big h1 {		
-		font-size: var(--resp-big-title);
+		font-size: var(--resp-title);
 		text-align: center;
 	}
 

@@ -26,9 +26,8 @@ tags: page
 {% endblock %}
 
 <!-- Main -->
-<main class="faqs pure-u-1">
+<main class="faqs pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
   <div class="container-main pure-u-1">
-
     <section class="first-contain pure-u-1">
       <div class="img-faqs pure-u-1">
         {% image
@@ -36,47 +35,72 @@ tags: page
             "FAQs", "FAQs", "img-faqs", [auto], ""
         %}
       </div>
-
-      <div class="title-big">
-        <div class="h1-big">
-          <h1>FAQs</h1>
-        </div>
-      </div>
-      <div class="search pure-u-22-24">
-        <form>
-          <div class="search-container pure-u-1">
-            <label class="selected-option pure-u-22-24 pure-u-lg-5-12" for="search">
-              <em class="icon-search"></em>
-              <input id="search" type="search" class="sinBorde" placeholder="{{texts['buscar-palabra'][L]}}" onkeyup="buscar()" />
-            </label>
+      {% if site == 'vanguard' %}
+        <div class="title-big">       
+          <div class="h1-big">
+            <h1>FAQs</h1>
           </div>
-        </form>
-      </div>
+        </div>
+        <div class="search pure-u-22-24">        
+          <form>
+            <div class="search-container pure-u-1">
+              <label class="selected-option pure-u-22-24 pure-u-lg-5-12" for="search">
+                <em class="icon-search"></em>
+                <input id="search" type="search" class="sinBorde" placeholder="{{texts['buscar-palabra'][L]}}" onkeyup="buscar()" />
+              </label>
+            </div>
+          </form>
+        </div>
+        
+      {% else %}    
+        <div class="title-big pure-u-9-24 pure-u-lg-1-6">       
+          <div class="feeling cotown">
+            <h2 class="title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
+          </div>
+          <div class="h1-big">
+            <h1>Frequently Asked Questions.</h1>
+          </div>
+          <div class="search pure-u-1">        
+            <form class="cotown">
+              <div class="search-container pure-u-1">
+                <label class="selected-option cotown pure-u-1" for="search">
+                  <em class="icon-search"></em>
+                  <input id="search" type="search" class="cotown sinBorde" placeholder="{{texts['buscar-palabra'][L]}}" onkeyup="buscar()" />
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>         
+      {% endif %}     
     </section>
 
-    <section class="faqs-container pure-u-22-24 pure-u-lg-5-6">
+    <section class="faqs-container pure-u-1">
       {% for f in faqs %}
-        {% if site == 'vanguard' %}
-          <h1>{{f | translate('Name', L) }}</h1>
-        {% else %}
-          <h1 class="cotown">{{f | translate('Name', L) }}</h1>
-        {% endif %}      
-      {% for q in f.Questions %}
-      <div class="description text pure-u-1">
-        <div class="expansion pure-u-1">
-          <h2>
-          {{q | translate('Question', L)}}
-          </h2>
-          <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
-          <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
-            <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
-          </label>
-          <div class="content pure-u-1">
-          {{q | translate('Response', L) | markdown | safe }}
-          </div>
-        </div>
-      </div>
-      {% endfor %}
+        <div class="faq pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
+          <div class="every-faq pure-u-22-24">
+            {% if site == 'vanguard' %}
+              <h1>{{f | translate('Name', L) }}</h1>
+            {% else %}
+              <h1 class="cotown">{{f | translate('Name', L) }}</h1>
+            {% endif %}      
+            {% for q in f.Questions %}
+              <div class="description text pure-u-1">
+                <div class="expansion pure-u-1">
+                  <h2>
+                  {{q | translate('Question', L)}}
+                  </h2>
+                  <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
+                  <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
+                    <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+                  </label>
+                  <div class="content pure-u-1">
+                  {{q | translate('Response', L) | markdown | safe }}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>        
+       </div>
       {% endfor %}
     </section>
 

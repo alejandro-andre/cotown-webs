@@ -1,11 +1,11 @@
-.container-main {
+main .container-main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.first-contain {
+main .container-main .first-contain {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -13,31 +13,63 @@
 	align-items: center;
 }
 
-.first-contain .title-big {
+main .container-main .first-contain .title-big {
 	position: absolute;
 }
 
-.first-contain .title-big h1 {
-	color: var(--white);
+main.cotown .container-main .first-contain .title-big {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--box-bg);
+	padding: 2em;
+}
+main.cotown .container-main .first-contain .title-big .feeling.cotown {
+	text-align: end;
 }
 
-.first-contain .img-faqs {
+main.cotown .container-main .first-contain .title-big .feeling.cotown h2.title-feel {
+	text-align: end;
+	font-size: var(--text-title);
+	color: var(--primary-old);
+	font-weight: var(--semibold);
+	text-transform: lowercase;
+}
+
+main .container-main .first-contain .title-big .h1-big h1 {
+	font-family: var(--title-font);
+	color: var(--white);
+	font-weight: var(--400);
+	font-size: 96px;
+	line-height: 1;
+}
+
+main.cotown .container-main .first-contain .title-big .h1-big h1 {
+	font-family: var(--text-font);
+	color: var(--black);
+	font-weight: var(--semibold);
+	font-size: var(--big-subtitle);
+	line-height: 1.2;
+	width: 76%;
+}
+
+main .container-main .first-contain .img-faqs {
 	width: 100vw;
 	object-fit: cover;
 }
 
-.first-contain .img-faqs img {
+main .container-main .first-contain .img-faqs img {
 	width: 100vw;
 	max-height: 400px;
 }
 
-.search .search-container {
+main .container-main .search .search-container {
 	position: absolute;
 	bottom: 12%;
 	left: 28%;
 }
 
-.search .search-container label {
+main .container-main .first-contain .search .search-container label {
 	border: 1px solid var(--grey-light);
 	box-shadow: 0px 2.93014px 5.86028px rgba(0, 0, 0, 0.15);
 	border-radius: 6px;
@@ -45,16 +77,16 @@
 	background-color: var(--white);
 }
 
-.search .search-container label em {
+main .container-main .first-contain .search .search-container label em {
 	width: 32px;
 	color: var(--primary);
 }
 
-.search .search-container label input.sinBorde {
+main .container-main .first-contain .search .search-container label input.sinBorde {
 	border: 0;
 }
 
-.search .search-container label input {
+main .container-main .first-contain .search .search-container label input {
 	outline: none;
 	font-family: var(--text-font);
 	font-size: 16px;
@@ -70,11 +102,101 @@ input[type="search"]::-webkit-search-results-decoration {
 	display: none;
 }
 
-.faqs-container {
+
+/* COTOWN NEW */
+
+main.cotown .container-main .search .search-container {
+	width: 100%;
+	position: static;
+	margin: 1em 0 0;
+}
+main.cotown .container-main .first-contain .search .search-container label {
+	border: 0;
+	border-bottom: 1px solid var(--black);
+	box-shadow: none;
+	border-radius: 0;
+	padding: 12px 0 12px 0;
+	background-color: transparent;
+	width: 100%;
+}
+main.cotown .container-main .first-contain .search .search-container label em.icon-search {
+	font-size: 12px;
+	margin: 0 4px;
+	color: var(--black);
+}
+main.cotown .container-main .first-contain .search .search-container label.cotown input.cotown.sinBorde {
+	border: 0;
+}
+main.cotown .container-main .first-contain .search .search-container label.cotown input {
+	outline: none;
+	font-family: var(--text-font);
+	color: var(--black);
+	font-size: var(--text);
+	margin: 0;
+	padding: 0;
+	all: unset;
+}
+main.cotown .container-main .first-contain .search .search-container label.cotown input::placeholder {
+	font-family: var(--text-font);
+	color: var(--black);
+	font-size: var(--text);
+}
+main.cotown .container-main .faqs-container {
+	align-items: center;
+	margin: 2em 0 0;
+}
+main.cotown .container-main .faqs-container .faq {
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+	background-color: var(--new-bg);
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main.cotown .container-main .faqs-container .faq .every-faq {
+	margin: 0 auto;
+}
+main.cotown .container-main .faqs-container h1.cotown {
+	font-family: var(--text-font);
+	font-weight: var(--semibold);
+	font-size: var(--title);
+	line-height: 1;
+	margin: 1em 0 0;
+	text-transform: none;
+}
+main.cotown .container-main .faqs-container .description.text {
+	border-bottom: 1px solid var(--black);
+}
+main.cotown .container-main .faqs-container .description.text .expansion h2 {
+	width: 90%;
+	font-weight: var(--semibold);
+	font-size: var(--text-title);
+	line-height: 1;
+	margin: 2em 0.2em 0.5em;
+	font-family: var(--text-font);
+	text-align: left;
+}
+main.cotown .container-main .faqs-container .description.text .expansion label[class^="tab"] {
+	width: fit-content;
+}
+main.cotown .container-main .faqs-container .description.text .expansion .open-close-icon {
+	margin-right: 0!important;
+	padding-top: 0.5em;
+}
+main.cotown .container-main .faqs-container .description.text .expansion .open-close-icon em {
+	font-size: var(--subtitle);
+}
+
+/* _________________________  */
+
+
+main .container-main .faqs-container {
 	margin: 2em 0 6em;
 }
 
-.faqs-container h1 {
+main .container-main .faqs-container h1 {
 	font-family: var(--title-font);
 	font-weight: 400;
 	font-size: 64px;
@@ -83,19 +205,11 @@ input[type="search"]::-webkit-search-results-decoration {
 	text-transform: uppercase;
 }
 
-.faqs-container h1.cotown {
-	font-family: var(--text-font);
-	font-weight: 400;
-	font-size: 64px;
-	line-height: 100%;
-	margin: 1em 0 0;
-}
-
-.faqs-container .description.text {
+main .container-main .faqs-container .description.text {
 	border-bottom: 1px solid var(--grey-light);
 }
 
-.faqs-container .description.text .expansion {
+main .container-main .faqs-container .description.text .expansion {
 	padding: 0;
 	position: relative;
 	height: fit-content;
@@ -105,7 +219,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	align-items: center;
 }
 
-.faqs-container .description.text .expansion h2 {
+main .container-main .faqs-container .description.text .expansion h2 {
 	width: 90%;
 	font-weight: 500;
 	font-size: 30px;
@@ -115,11 +229,11 @@ input[type="search"]::-webkit-search-results-decoration {
 	text-align: left;
 }
 
-.expansion .open-close-icon em {
+main.cotown .container-main .faqs-container .description.text .expansion.open-close-icon em {
 	font-size: 46px;
 }
 
-.faqs-container .description.text .expansion label[class^="tab"] {
+main .container-main .faqs-container .description.text .expansion label[class^="tab"] {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
@@ -130,44 +244,44 @@ input[type="search"]::-webkit-search-results-decoration {
 	width: 5%;
 }
 
-.faqs-container .description.text .expansion .content p,
-.faqs-container .description.text .expansion .content p a,
-.faqs-container .description.text .expansion .content ul li {
+main .container-main .faqs-container .description.text .expansion .content p,
+main .container-main .faqs-container .description.text .expansion .content p a,
+main .container-main .faqs-container .description.text .expansion .content ul li {
 	font-weight: 400;
 	font-size: 22px;
 	line-height: 150%;
 	color: var(--black)
 }
 
-.expansion label[class^="tab"] p {
+main.cotown .container-main .faqs-container .description.text .expansion label[class^="tab"] p {
 	text-decoration: underline;
 }
 
-.expansion label[class^="tab"]:hover {
+main.cotown .container-main .faqs-container .description.text .expansion label[class^="tab"]:hover {
 	cursor: pointer;
 }
 
 /* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
-	.faqs-container h1 {
-		font-size: 46px;
+	main .container-main .faqs-container h1 {
+		font-size: var(--title);
 	}
 
-	.faqs-container .description.text .expansion h2 {
+	main .container-main .faqs-container .description.text .expansion h2 {
 		font-size: 26px;
 	}
 
-	.faqs-container .description.text .expansion .content p,
-	.faqs-container .description.text .expansion .content p a,
-	.faqs-container .description.text .expansion .content ul li {
+	main .container-main .faqs-container .description.text .expansion .content p,
+	main .container-main .faqs-container .description.text .expansion .content p a,
+	main .container-main .faqs-container .description.text .expansion .content ul li {
 		font-size: 18px;
 	}
 }
 
 /* TABLET */
 @media only screen and (max-width: 1023.9px) {
-	.first-contain {
+	main .container-main .first-contain {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -179,44 +293,79 @@ input[type="search"]::-webkit-search-results-decoration {
 		text-align: left;
 		margin: 2em 1em 0
 	}
-
 	main .container-main .first-contain .title-big .h1-big h1 {
+		font-family: var(--title-font);
 		color: var(--black);
 		font-weight: 400;
 		font-size: 40px;
 		line-height: 100%;
 	}
 
-	.search .search-container {
+	main .container-main .search .search-container {
 		position: static;
 		margin: 0 0em 0 1em;
 	}
 
-	.faqs-container {
+	main .container-main .faqs-container {
 		margin: 0 1em 2em;
 	}
 
-	.faqs-container h1 {
+	main .container-main .faqs-container h1 {
 		font-weight: 400;
 		font-size: 32px;
 		line-height: 110%;
 		margin: 1em 0 0;
 	}
 
-	.faqs-container .description.text .expansion h2 {
+	main .container-main .faqs-container .description.text .expansion h2 {
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 150%;
 		margin: 5px 0 10px 0;
 	}
 
-	.expansion .open-close-icon em {
+	main.cotown .container-main .faqs-container .description.text .expansion .open-close-icon em {
 		font-size: 20px;
 	}
 
-	.faqs-container .description.text .expansion .content p,
-	.faqs-container .description.text .expansion .content p a,
-	.faqs-container .description.text .expansion .content ul li {
+	main .container-main .faqs-container .description.text .expansion .content p,
+	main .container-main .faqs-container .description.text .expansion .content p a,
+	main .container-main .faqs-container .description.text .expansion .content ul li {
 		font-size: 14px;
 	}
+
+
+	/* COTOWN NEW */
+	
+	main.cotown .container-main .first-contain .title-big {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: var(--box-bg);
+		margin: 0;
+	}
+	main.cotown .container-main .first-contain .title-big .h1-big h1 {
+		margin: 0.5em 0 0;
+		width: 100%;
+	}		
+	main.cotown .container-main .search .search-container {
+		width: 100%;
+		position: static;
+		margin: 1em 0 0;
+	}
+	main.cotown .container-main .faqs-container h1.cotown {
+		font-size: var(--resp-title);
+		line-height: 1;
+		margin: 1em 0 0;
+		text-transform: none;
+	}
+	main.cotown .container-main .faqs-container .faq {
+		margin-bottom: 0;
+	}
+	main.cotown .container-main .faqs-container .description.text .expansion h2 {
+		font-weight: var(--regular);
+		font-size: var(--mini-title);
+		margin: 2em 0.2em 1em;
+	}
+
 }
