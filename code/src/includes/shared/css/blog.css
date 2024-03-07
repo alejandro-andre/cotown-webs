@@ -1,6 +1,6 @@
 /* BLOG
 -------------------------------- \*/
-.container-main {
+main.blog .container-main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -8,18 +8,30 @@
 	margin: 0 2em;
 }
 
-.first-contain {
+main.blog .container-main .first-contain {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	align-items: center;
+	margin: 0;
+}
+main.blog .container-main .first-contain .h1-big {
+	margin-top: 1em;
 }
 
-.search {
+main.blog .container-main .first-contain .h1-big h1 {
+	font-family: var(--title-font);
+	color: var(--black);
+	font-weight: var(--400);
+	font-size: var(--big-title);
+	line-height: 1;	
+}
+
+main.blog .container-main .first-contain .search {
 	margin: 0 0 1.5em;
 }
 
-.search .search-form {
+main.blog .container-main .first-contain .search .search-form {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
@@ -28,8 +40,8 @@
 	gap: 2em;
 }
 
-.search select,
-.search .search-container label {
+main.blog .container-main .first-contain .search select,
+main.blog .container-main .first-contain .search .search-container label {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
@@ -46,14 +58,14 @@
 	color: var(--grey-light);
 }
 
-.search .search-container label input {
+main.blog .container-main .first-contain .search .search-container label input {
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 150%;
 	color: var(--grey-light);
 }
 
-.search select {
+main.blog .container-main .first-contain .search select {
 	padding: 12px 16px;
 }
 
@@ -73,8 +85,8 @@ select::-ms-expand {
 	display: none;
 }
 
-.search .search-container label input,
-.search .search-container label input:focus-visible {
+main.blog .container-main .first-contain .search .search-container label input,
+main.blog .container-main .first-contain .search .search-container label input:focus-visible {
 	border: 0;
 	padding: 0;
 	outline-offset: 0;
@@ -88,13 +100,13 @@ input[type="search"]::-webkit-search-results-decoration {
 	display: none;
 }
 
-.search .search-container label em.icon-search {
+main.blog .container-main .first-contain .search .search-container label em.icon-search {
 	font-size: 32px;
 	color: var(--primary);
 	margin-right: 20px;
 }
 
-.posts {
+main.blog .container-main .posts {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
@@ -102,7 +114,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	margin: 0 0 2em;
 }
 
-.post {
+main.blog .container-main .posts .post {
 	position: relative;
 	min-height: 380px;
 	height: fit-content;
@@ -112,25 +124,25 @@ input[type="search"]::-webkit-search-results-decoration {
 	background-color: transparent;
 }
 
-.post a {
+main.blog .container-main .posts .post a {
 	width: 100%;
 	cursor: pointer;
 	color: var(--black);
 }
 
-.post .img-container {
+main.blog .container-main .posts .post .img-container {
 	position: relative;
 	width: 100%;
 	height: fit-content;
 	min-height: 260px;
 }
 
-.post img {
+main.blog .container-main .posts .post img {
 	width: 100%;
 	object-fit: cover;
 }
 
-.post .mark-content {
+main.blog .container-main .posts .post .mark-content {
 	position: relative;
 	width: 100%;
 	display: flex;
@@ -139,7 +151,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	align-items: center;
 }
 
-.post .mark {
+main.blog .container-main .posts .post .mark {
 	position: absolute;
 	z-index: 200;
 	top: -42px;
@@ -160,17 +172,17 @@ input[type="search"]::-webkit-search-results-decoration {
 	transform: rotate(-45deg);
 }
 
-.post .mark .stars-container {
+main.blog .container-main .posts .post .mark .stars-container {
 	width: 14px;
 	height: 50px;
 }
 
-.post .mark .icon-star {
+main.blog .container-main .posts .post .mark .icon-star {
 	color: var(--white);
 	font-size: 16px;
 }
 
-.post .date {
+main.blog .container-main .posts .post .date {
 	position: absolute;
 	top: 8.8em;
 	left: 0;
@@ -180,7 +192,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	margin: 0;
 }
 
-.post .data-post {
+main.blog .container-main .posts .post .data-post {
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -195,36 +207,21 @@ input[type="search"]::-webkit-search-results-decoration {
 	gap: 0.4em;
 }
 
-.post .data-post.primary {
+main.blog .container-main .posts .post .data-post.primary {
 	background-color: var(--primary);
 }
 
-main .container-main .first-contain {
-	margin: 0;
-}
-
-main .container-main .first-contain .h1-big {
-	margin-top: 1em;
-}
-
-main .container-main .first-contain .h1-big h1 {
-	font-size: 76px;
-	font-weight: 400;
-	line-height: 100%;
-	letter-spacing: -1.2px;
-}
-
-.post .data-post h1 {
+main.blog .container-main .posts .post .data-post h1 {
 	margin-bottom: 0;
 	font-size: 24px;
 	line-height: 25px;
 }
 
-.post .data-post.primary h1 {
+main.blog .container-main .posts .post .data-post.primary h1 {
 	color: var(--white);
 }
 
-.post .data-post .p-container {
+main.blog .container-main .posts .post .data-post .p-container {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
@@ -233,16 +230,16 @@ main .container-main .first-contain .h1-big h1 {
 
 }
 
-.post .data-post p,
-.post .data-post a {
+main.blog .container-main .posts .post .data-post p,
+main.blog .container-main .posts .post .data-post a {
 	border: 1px solid var(--primary);
 	border-radius: 49px;
 	padding: 0.2em 0.8em;
 	margin: 0;
 }
 
-.post .data-post.primary p,
-.post .data-post.primary a {
+main.blog .container-main .posts .post .data-post.primary p,
+main.blog .container-main .posts .post .data-post.primary a {
 	color: var(--white);
 	border: 1px solid var(--white);
 
@@ -426,9 +423,193 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 	color: var(--grey-light);
 }
 
+/* COTOWN NEW */
+
+main.blog.cotown .container-main .first-contain .h1-big h1 {
+	font-family: var(--text-font);
+	color: var(--black);
+	font-weight: var(--regular);
+	font-size: var(--big-title);
+	line-height: 1;	
+	text-transform: lowercase;
+}
+
+main.blog.cotown .container-main .first-contain .search select,
+main.blog.cotown .container-main .first-contain .search .search-container label {
+	border: 0;
+	border-bottom: 1px solid var(--black);
+	box-shadow: none;
+	border-radius: 0;
+	padding: 12px 0 12px 0;
+	background-color: transparent;
+	color: var(--black);
+	font-size: var(--text);
+}
+
+main.blog.cotown .container-main .posts {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0 2em;
+	background-color: var(--new-bg);
+	padding: 2em 4em;
+	width: 100%;
+}
+main.blog.cotown .container-main .posts .inner-post.cotown{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: calc(100% - 8em);
+	margin: 0 auto;
+}
+
+main.blog.cotown .container-main .posts .post {
+	position: relative;
+	min-height: 380px;
+	height: fit-content;
+	background-color: var(--new-bg);
+	box-shadow: none;
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+main.blog.cotown .container-main .posts .post.primary {	
+	background-color: var(--white);	
+}
+
+main.blog.cotown .container-main .posts .post a {
+	width: 100%;
+	cursor: pointer;
+	color: var(--black);
+}
+
+main.blog.cotown .container-main .posts .post .img-container {
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	min-height: 260px;
+}
+
+main.blog.cotown .container-main .posts .post img {
+	width: 100%;
+	object-fit: cover;
+}
+
+main.blog.cotown .container-main .posts .post .mark-content {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+main.blog.cotown .container-main .posts .post .mark {
+	position: absolute;
+	z-index: 200;
+	top: -42px;
+	right: 13px;
+	width: 18px;
+	height: 115px;
+	padding: 1em 0.2em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	background: var(--primary);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+main.blog.cotown .container-main .posts .post .mark .stars-container {
+	width: 14px;
+	height: 50px;
+}
+
+main.blog.cotown .container-main .posts .post .mark .icon-star {
+	color: var(--white);
+	font-size: 16px;
+}
+
+main.blog.cotown .container-main .posts .post .date {
+	position: absolute;
+	top: -2.2em;
+	left: 0.5em;
+	background-color: transparent;
+	color: var(--primary);
+	padding: 0;
+	margin: 0;
+}
+
+main.blog.cotown .container-main .posts .post .data-post {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 45%;
+	background-color: var(--new-bg);
+	padding: 1em;
+	display: flex;
+	flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+	margin: 0.5em auto 1em;
+	gap: 0.4em;
+}
+
+main.blog.cotown .container-main .posts .post .data-post.primary {
+	background-color: var(--white);
+	color: var(--black);
+}
+
+main.blog.cotown .container-main .posts .post .data-post h1 {
+	margin-bottom: 0;
+	font-size: 24px;
+	line-height: 25px;
+}
+
+main.blog.cotown .container-main .posts .post .data-post.primary h1 {
+	color: var(--black);
+}
+
+main.blog.cotown .container-main .posts .post .data-post .p-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 4px;
+	padding-bottom: 1em;
+}
+
+main.blog.cotown .container-main .posts .post .data-post p,
+main.blog.cotown .container-main .posts .post .data-post a {
+	border: none;
+	border-radius: 0;
+	padding: 0.2em 0.8em;
+	margin: 0;
+	color: var(--primary-old);
+}
+
+main.blog.cotown .container-main .posts .post .data-post.primary p,
+main.blog.cotown .container-main .posts .post .data-post.primary a {
+	color: var(--primary-old);
+	border: none;
+
+}
+
+/* ___________________________________  */
+
+
+
+
 /* RESPONSIVE \*/
 @media only screen and (max-width: 1279.9px) {
-	.post .data-post {
+	main.blog .container-main .posts .post .data-post {
 		position: absolute;
 		top: 45%;
 		left: 0;
@@ -445,7 +626,8 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 }
 
 @media only screen and (max-width: 1023.9px) {
-	.container-main {
+
+	main.blog .container-main {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -453,85 +635,77 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 		margin: 0 1em;
 	}
 
-	.first-contain {
+	main.blog .container-main .first-contain {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
 		padding-left: 1em;
-	}
-
-	main .container-main .first-contain {
 		margin: 0;
 	}
 
-	main .container-main .first-contain .h1-big h1 {
+	main.blog .container-main .first-contain .h1-big h1 {
 		font-size: 40px;
 		line-height: 100%;
 	}
 
-	.search {
+	main.blog .container-main .first-contain .search {
 		margin: 0 0 1em;
 	}
 
-	.search select {
+	main.blog.vanguard .container-main .first-contain .search select {
 		display: none;
 	}
 
-	.search .search-container label {
+	main.blog .container-main .first-contain .search .search-container label {
 		padding: 8px 14px;
 	}
 
-	.search .search-container label input {
+	main.blog .container-main .first-contain .search .search-container label input {
 		font-size: 16px;
 	}
 
-	.search .search-container label em.icon-search {
+	main.blog .container-main .first-contain .search .search-container label em.icon-search {
 		font-size: 22px;
 		margin-right: 12px;
 	}
 
-	.post {
+	main.blog .container-main .posts .post {
 		border-radius: 16px;
 		filter: drop-shadow(0px 20px 30px rgba(22, 22, 22, 0.06));
 	}
 
-	.post .data-post {
+	main.blog .container-main .posts .post .data-post {
 		position: absolute;
 		top: 50%;
 		left: 0;
 		height: 50%;
 		background-color: var(--white);
-		padding: 2em;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: flex-start;
 		align-items: flex-start;
 		margin: 0.5em auto 1em;
 		gap: 0.4em;
+		width: 100%;
+		border-radius: 0 0 16px 16px;
 	}
 
-	.post .data-post.primary {
+	main.blog .container-main .posts .post .data-post.primary {
 		box-shadow: none;
 	}
 
-	.post .img-container {
+	main.blog .container-main .posts .post .img-container {
 		height: 100%;
 		min-height: 400px;
 	}
 
-	.post .date {
+	main.blog .container-main .posts .post .date {
 		top: 38%;
-	}
+	}	
 
-	.post .data-post {
-		width: 100%;
-		padding: 0;
-		border-radius: 0 0 16px 16px;
-	}
-
-	.post .data-post h1,
-	.post .data-post .p-container {
+	main.blog .container-main .posts .post .data-post h1,
+	main.blog .container-main .posts .post .data-post .p-container {
 		padding: 3% 4% 0;
 	}
 
@@ -603,15 +777,89 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 		font-size: 25px;
 	}
 
+	/* COTOWN NEW */
+	main.blog.cotown {
+		margin: 0;
+		padding: 0;
+	}
+	main.blog.cotown .container-main {		
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	main.blog.cotown .container-main .first-contain {
+		display: flex;
+		flex-flow: column;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	main.blog.cotown .container-main .first-contain .h1-big {
+		padding: 0 1em;
+		width: calc(100% - 2em);
+	}
+
+	main.blog.cotown .container-main .first-contain .h1-big h1 {
+		font-size: var(--resp-title);
+		text-transform: uppercase;
+		line-height: 1;
+	}
+
+	main.blog.cotown .container-main .first-contain .search {
+		margin: 0 ;
+		padding: 0;
+		width: calc(100% - 2em);
+	}
+
+	main.blog.cotown .container-main .first-contain .search select, 
+	main.blog.cotown .container-main .first-contain .search .search-container label {
+		width: 100%;
+	}
+
+	main.blog.cotown .container-main .posts {
+		padding: 2em 0;
+		width: 100%;
+		margin: 0;
+	}
+
+	main.blog.cotown .container-main .posts .inner-post.cotown {
+		width: calc(100% - 2em);
+		margin: 0;
+		padding: 0;
+	}
+
+	main.blog.cotown .container-main .posts .post {
+		border-radius: 0;
+		filter: none;
+		margin-bottom: 1em;
+	}
+	main.blog.cotown .container-main .posts .post .data-post {
+		width: calc(100% - 2em);
+	}
+	main.blog.cotown .container-main .posts .post .data-post h1 {
+		padding: 1em 0;
+		font-size: var(--resp-subtitle);
+	}
+	main.blog.cotown .container-main .posts .post .data-post .p-container {
+		padding: 0 0 1em 0;
+		margin: 0;
+	}
 }
 
 @media only screen and (max-width: 768px) {
-	.post .data-post {
+	main.blog .container-main .posts .post .data-post {
 		top: 50%;
 		height: 50%;
 	}
 
-	.post .date {
+	main.blog .container-main .posts .post .date {
 		top: 40%;
 	}
 }

@@ -347,6 +347,7 @@ main.cotown .container-main .faqs-container .description.text .expansion label[c
 	main.cotown .container-main .first-contain .title-big .h1-big h1 {
 		margin: 0.5em 0 0;
 		width: 100%;
+		font-size: var(--resp-big-subtitle);
 	}		
 	main.cotown .container-main .search .search-container {
 		width: 100%;
@@ -368,4 +369,16 @@ main.cotown .container-main .faqs-container .description.text .expansion label[c
 		margin: 2em 0.2em 1em;
 	}
 
+	main.cotown .container-main .first-contain .search .search-container label {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	main.cotown .container-main .first-contain .search .search-container label em.icon-search {
+		width: 14px;
+	}
+	main.cotown .container-main .first-contain .search .search-container label.cotown input.cotown.sinBorde {
+		width: calc(100% - 24px);
+	}
 }
