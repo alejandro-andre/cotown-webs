@@ -26,7 +26,7 @@ tags: page
 {% endblock %}
 
 <!-- Main -->
-<main class="about">
+<main class="about {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}>
   <div class="container-main">
     {% if site == 'vanguard' %}
     <section class="first-contain about pure-g">

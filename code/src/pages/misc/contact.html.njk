@@ -85,7 +85,7 @@ tags: page
       {% endfor %}
     </section>
 
-    <section class="form">
+    <section class="form {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
 
       <h2 class="title">
         {% literal texts, 'contact-contactanos', L %}

@@ -931,9 +931,9 @@ main .container-main section.form select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	background: url("..//img/br_down.png") white no-repeat 95% !important;
+	background: url("..//img/br_down.png") white no-repeat 95%;
 	/* !important used for overriding all other customisations */
-	background: url("..//img/br_down.png") white no-repeat calc(100% - 10px) !important;
+	background: url("..//img/br_down.png") white no-repeat calc(100% - 10px);
 	/* Better placement regardless of input width */
 }
 
@@ -978,7 +978,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	main .container-main section.form.cotown .form-container .campo input,
 	main .container-main section.form.cotown .form-container .campo input:focus-visible,
 	main .container-main section.form.cotown .form-container .campo.add-file .select,
-	main .container-main section.form.cotown .form-container .campo textarea {
+	main .container-main section.form.cotown .form-container .campo textarea,  main.contact.cotown .container-main section.form.cotown select {
 	font-size: var(--mini-title);
 	border: 0px;
 	border-bottom: 1px solid var(--black);
@@ -1195,93 +1195,6 @@ main .container-main section.banner h2 {
 	margin-bottom: 0;
 }
 
-/* CONTACTO
--------------------------------- */
-
-.first-contact {
-	background-color: var(--primary);
-	height: 8em;
-}
-
-.first-contact h1 {
-	color: var(--white);
-	padding: 0.2em 0.8em 0;
-	margin-bottom: 0;
-	font-weight: 400;
-	font-size: 76px;
-	line-height: 1.4em;
-}
-.contact.vanguard .first-contact h1 {
-	font-family: var(--title-font);
-}
-.contact.cotown .first-contact h1 {
-	font-family: var(--text-font);
-}
-
-.contact-main h2 {
-	padding: 1em 1.5em 0;
-	font-weight: 400;
-	font-size: 46px;
-	line-height: 100%;
-}
-.contact.vanguard .contact-main h2 {
-	font-family: var(--title-font);
-}
-.contact.cotown .contact-main h2 {
-	font-family: var(--text-font);
-}
-
-
-
-.contact-main .img-content {
-	border-bottom: 1px solid var(--grey-light);
-	padding: 2em 0;
-}
-
-.contact-main .img-content:last-child {
-	border-bottom: 0px solid var(--grey-light);
-}
-
-.contact-main .img-content .contact-content {
-	align-items: flex-start;
-}
-
-.contact-main .img-content .contact-content .text-location {
-	padding-top: 2em;
-}
-
-.contact-main .img-content .contact-content .img-city {
-	color: var(--primary-light);
-}
-
-.contact-main .img-content .contact-content .text-location h3 {
-	font-weight: 800;
-	font-size: 36px;
-	line-height: 140%;
-}
-
-.contact-main .img-content .contact-content .text-location p {
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 130%;
-}
-.contact.vanguard .img-content .contact-content .text-location h3 {
-	font-family: var(--title-font);
-}
-.contact.cotown .img-content .contact-content .text-location h3 {
-	font-family: var(--text-font);
-}
-.contact-main .img-content .contact-content .text-location p em::before {
-	vertical-align: bottom;
-}
-
-.contact-main .img-content .contact-content .text-location p span a {
-	text-decoration: 1px underline;
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 130%;
-	color: var(--black);
-}
 
 /* FOOTER
 -------------------------------- \*/
@@ -1528,24 +1441,6 @@ button.date-button input.inputs {
 	.btn-primary.search.desktop {
 		font-size: 20px;
 	}
-
-
-
-	.contact-main h2 {
-		font-size: 64px;
-	}
-
-	.contact-main .img-content .contact-content .text-location h3 {
-		font-size: 40px;
-	}
-
-	.contact-main .img-content .contact-content .text-location p {
-		font-size: 30px;
-	}
-
-	.contact-main .img-content .contact-content .text-location p span a {
-		font-size: 30px;
-	}
 }
 
 .banner-residences {
@@ -1573,9 +1468,6 @@ button.date-button input.inputs {
 .banner-residences .contain .text p {
 	width: 60%;
 	margin: 1em auto 1em;
-}
-
-.banner-residences .contain .text p {
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 1.5;
@@ -2403,78 +2295,24 @@ button.date-button input.inputs {
 		width: 94%;
 	}
 
-/* COTOWN NEW */
+	/* COTOWN NEW */
 
-main .container-main section.form .form-container .campo.add-file .select .icon-corchete-down {
-	display: none;
-}
-main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] {	
-	border-radius: 63px;
-}
-main .container-main section.form.cotown .form-container button.btn-secondary {
-	width: 100%;
-	justify-content: center;
-	background-color: transparent;
-	color: var(--black);
-	border-radius: 63px;
-	border: 1px solid var(--black);
-	box-shadow: none;
-}
-
-
-	/* CONTACTO TABLET Y MOBILE  ___________________________\*/
-	.first-contact {
-		height: 4.5em;
-	}
-
-	.first-contact h1 {
-		color: var(--white);
-		padding: 0.2em 0.2em 0;
-		font-weight: 400;
-		font-size: 40px;
-		line-height: 1.5em;
-	}
-
-	.contact-main h2 {
-		padding: 1em 0 0 0.5em;
-		font-size: 32px;
-		line-height: 100%;
-		text-align: left;
-	}
-
-	.contact-main .img-content {
-		padding: 0 0 1em;
-		margin: 0 1em;
-	}
-
-	.contact-main .contact-content .text-location {
-		padding-top: 0;
-	}
-
-	.contact-main .img-content .img-city {
+	main .container-main section.form .form-container .campo.add-file .select .icon-corchete-down {
 		display: none;
 	}
-
-	.contact-main .img-content .contact-content .text-location h3 {
-		font-size: 24px;
+	main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] {	
+		border-radius: 63px;
 	}
-
-	.contact-main .img-content .contact-content .text-location p {
-		font-size: var(--mini-title);
+	main .container-main section.form.cotown .form-container button.btn-secondary {
+		width: 100%;
+		justify-content: center;
+		background-color: transparent;
+		color: var(--black);
+		border-radius: 63px;
+		border: 1px solid var(--black);
+		box-shadow: none;
 	}
-
-	.contact-main .img-content .contact-content .text-location p span {
-		font-size: var(--mini-title);
-		font-weight: bold;
-		text-decoration-line: underline;
-	}
-
-	.contact-main .img-content .contact-content .text-location p span a {
-		font-weight: bold;
-		text-decoration-line: underline;
-		font-size: var(--mini-title);
-	}
-
+	
 	main .container-main section.form .form-container button.btn-secondary {
 		font-size: var(--mini-title);
 	}
