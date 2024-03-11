@@ -246,131 +246,6 @@ main.blog .container-main .posts .post .data-post.primary a {
 
 }
 
-/* POST
--------------------------------- \*/
-main.post-page .container-main .post-content {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
-	margin: 3em auto;
-}
-
-main.post-page .container-main .post-content h1 {
-	font-weight: 400;
-	font-size: 64px;
-	line-height: 100%;
-	text-align: center;
-	margin-bottom: 1em;
-}
-
-main.post-page .container-main .post-content img {
-	width: 100%;
-	margin-bottom: 2em;
-}
-
-main.post-page .container-main .post-content .other {
-	max-width: 800px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-main.post-page .container-main .post-content .text .text-content h2,
-main.post-page .container-main .post-content .text .text-content h3 {
-	font-size: 48px;
-	font-weight: 400;
-	line-height: 110%;
-	text-align: left;
-}
-
-main.post-page .container-main .post-content .text .text-content p,
-main.post-page .container-main .post-content .text .text-content a,
-main.post-page .container-main .post-content .text .text-content ul li,
-main.post-page .container-main .post-content .text .text-content ol li {
-	font-size: 22px;
-	line-height: 150%;
-}
-
-main.post-page .container-main .post-content .text .text-content a {
-	color: var(--primary-underline);
-	text-decoration: underline;
-}
-
-main.post-page .container-main .post-content .text .text-content ul li,
-main.post-page .container-main .post-content .text .text-content ol li {
-	padding-left: 12px;
-}
-
-main.post-page .container-main .post-content .text .text-content ul li::marker {
-	content: "·";
-}
-
-main.post-page .container-main .post-content .text .text-content p strong {
-	font-size: 22px;
-	font-weight: 700;
-	line-height: 150%;
-}
-
-main.post-page .container-main .post-content .text .text-content p em {
-	font-size: 22px;
-}
-
-main.post-page .container-main .like-content {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: center;
-	margin: 0 0 4em;
-}
-
-main.post-page .container-main .like-content .like {
-	background-color: var(--primary);
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	align-items: center;
-	padding: 2em;
-	gap: 1em;
-}
-
-main.post-page .container-main .like-content .like .text {
-	display: flex;
-	flex-flow: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-}
-
-main.post-page .container-main .like-content .like .text h3 {
-	font-weight: 400;
-	font-size: 32px;
-	line-height: 100%;
-	color: var(--white);
-	margin: 0;
-}
-
-main.post-page .container-main .like-content .like .text p {
-	color: var(--white);
-	margin: 0;
-	font-size: 20px;
-}
-
-main.post-page .container-main .like-content .like .redes {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
-}
-
-main.post-page .container-main .like-content .like .redes a {
-	width: 25%;
-}
-
-main.post-page .container-main .like-content .like .redes a em {
-	color: var(--white);
-	font-size: 34px;
-}
-
 main.blog .container-main .posts .pag {
 	margin: 0 0 2em;
 }
@@ -424,7 +299,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 	color: var(--grey-light);
 }
 
-/* COTOWN NEW */
+/* COTOWN BLOG NEW */
 
 main.blog.cotown .container-main .first-contain .h1-big h1 {
 	font-family: var(--text-font);
@@ -607,6 +482,214 @@ main.blog.cotown .container-main .posts .post .data-post.primary a {
 /* ___________________________________  */
 
 
+/* POST
+-------------------------------- \*/
+main.post-page .container-main .post-content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+main.post-page .container-main .post-content h1 {
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 100%;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+main.post-page .container-main .post-content img {
+	width: 100%;
+	margin-bottom: 2em;
+}
+
+main.post-page .container-main .post-content .other {
+	max-width: 800px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main.post-page .container-main .post-content .text .text-content h1 {
+	font-size: var(--big-title);
+	font-weight: var(--semibold);
+	line-height: 1.1;
+	text-align: center;
+}
+main.post-page .container-main .post-content .text .text-content h2,
+main.post-page .container-main .post-content .text .text-content h3 {
+	font-size: var(--title);
+	font-weight: var(--semibold);
+	line-height: 1.1;
+	text-align: left;
+}
+
+main.post-page .container-main .post-content .text .text-content p,
+main.post-page .container-main .post-content .text .text-content a,
+main.post-page .container-main .post-content .text .text-content ul li,
+main.post-page .container-main .post-content .text .text-content ol li {
+	font-size: var(--text);
+	line-height: 1.5;
+}
+
+main.post-page .container-main .post-content .text .text-content a {
+	color: var(--primary-old);
+	text-decoration: underline;
+}
+
+main.post-page .container-main .post-content .text .text-content ul li,
+main.post-page .container-main .post-content .text .text-content ol li {
+	padding-left: 12px;
+}
+
+main.post-page .container-main .post-content .text .text-content ul li::marker {
+	content: "·";
+}
+
+main.post-page .container-main .post-content .text .text-content p strong {
+	font-size: var(--text-title);
+	font-weight: var(--bold);
+	line-height: 1.5;
+}
+
+main.post-page .container-main .post-content .text .text-content p em {
+	font-size: var(--text-title);
+}
+
+main.post-page .container-main .like-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0 0 4em;
+}
+
+main.post-page .container-main .like-content .like {
+	background-color: var(--primary);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 2em;
+	gap: 1em;
+}
+
+main.post-page .container-main .like-content .like .text {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+main.post-page .container-main .like-content .like .text h3 {
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 100%;
+	color: var(--white);
+	margin: 0;
+}
+
+main.post-page .container-main .like-content .like .text p {
+	color: var(--white);
+	margin: 0;
+	font-size: var(--text-title);
+}
+
+main.post-page .container-main .like-content .like .redes {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+main.post-page .container-main .like-content .like .redes a {
+	width: 25%;
+}
+
+main.post-page .container-main .like-content .like .redes a em {
+	color: var(--white);
+	font-size: var(--subtitle);
+}
+
+/* COTOWN POST NEW */
+
+main.post-page.cotown .container-main .post-content .first-contain {
+	position: relative;
+}
+main.post-page.cotown .container-main .post-content .first-contain .title-big {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--box-bg);
+	padding: 2em;
+}
+main.post-page.cotown .container-main .post-content .first-contain .title-big .green-title.cotown {
+	text-align: end;
+}
+main.post-page.cotown .container-main .post-content .first-contain .title-big .h1-big h1 {
+	text-align: start;
+	font-family: var(--text-font);
+	color: var(--black);
+	font-weight: var(--semibold);
+	font-size: var(--big-subtitle);
+	line-height: 1.2;
+	width: 100%;
+}
+main.post-page.cotown .container-main .post-content .first-contain .title-big .green-title.cotown h2.title {
+	text-align: end;
+	font-size: var(--text-title);
+	color: var(--primary-old);
+	font-weight: var(--semibold);
+}
+main.post-page.cotown .container-main .post-content .first-contain .title-big .title p.subtitle {
+	font-size: var(--text);
+}
+main.post-page.cotown .container-main .post-content .text .text-content h1 {
+	margin: 1em 0;
+}
+main.post-page.cotown .container-main .post-content .other {
+	width: 100%;
+	max-width: 100%;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+}
+main.post-page.cotown .container-main .like-content {
+	margin: 2em 0 0;
+}
+main.post-page.cotown .container-main .like-content .like {
+	justify-content: space-between;
+	background-color: var(--new-bg);
+	padding: 2em 6em;
+}
+main.post-page.cotown .container-main .like-content .like .text h3,
+main.post-page .container-main .like-content .like .text p {
+	color: var(--black);
+}
+main.post-page.cotown .container-main .like-content .like .text h3 {
+	font-size: var(--text-title);
+	font-weight: var(--semibold);
+}
+main.post-page.cotown .container-main .like-content .like .text p {
+	font-size: var(--text-title);
+}
+main.post-page.cotown .container-main .like-content .like .redes {
+	justify-content: flex-end;
+}
+main.post-page.cotown .container-main .like-content .like .redes a {
+	width: 50px;
+}
+main.post-page.cotown .container-main .like-content .like .redes a em {
+	color: var(--primary-old);
+	font-size: var(--icon-redes);
+	align-items: flex-end;
+	text-align: end;
+}
+
+/* COTOWN POST END
+-------------------------------- \*/
 
 
 /* RESPONSIVE \*/
@@ -717,27 +800,23 @@ main.blog.cotown .container-main .posts .post .data-post.primary a {
 		flex-flow: row wrap;
 		justify-content: flex-start;
 		align-items: center;
-		margin: 6em auto;
+		margin: 0 auto;
 	}
 
 	main.post-page .container-main .post-content h1 {
-		font-weight: 400;
-		font-size: 32px;
-		line-height: 110%;
-		text-align: left;
-		margin-bottom: 1em;
+		font-size: var(--resp-big-subtitle);
 	}
 
 	main.post-page .container-main .post-content .text .text-content h2,
 	main.post-page .container-main .post-content .text .text-content h3 {
-		font-size: 25px;
+		font-size: var(--resp-title);
 	}
 
 	main.post-page .container-main .post-content .text .text-content p,
 	main.post-page .container-main .post-content .text .text-content a,
 	main.post-page .container-main .post-content .text .text-content ul li,
 	main.post-page .container-main .post-content .text .text-content ol li {
-		font-size: 16px;
+		font-size: var(--resp-mini-title)
 	}
 
 	main.post-page .container-main .post-content .text .text-content ul li {
@@ -746,7 +825,7 @@ main.blog.cotown .container-main .posts .post .data-post.primary a {
 
 	main.post-page .container-main .post-content .text .text-content p strong,
 	main.post-page .container-main .post-content .text .text-content p em {
-		font-size: 16px;
+		font-size: var(--resp-mini-title);
 	}
 
 	main.post-page .container-main .like-content {
@@ -779,7 +858,7 @@ main.blog.cotown .container-main .posts .post .data-post.primary a {
 		font-size: 25px;
 	}
 
-	/* COTOWN NEW */
+	/* COTOWN BLOG NEW */
 	main.blog.cotown {
 		margin: 0;
 		padding: 0;
@@ -807,7 +886,6 @@ main.blog.cotown .container-main .posts .post .data-post.primary a {
 		padding: 0 1em;
 		width: calc(100% - 2em);
 	}
-
 	main.blog.cotown .container-main .first-contain .h1-big h1 {
 		font-size: var(--resp-title);
 		text-transform: uppercase;
@@ -853,6 +931,90 @@ main.blog.cotown .container-main .posts .post .data-post.primary a {
 		padding: 0 0 1em 0;
 		margin: 0;
 	}
+
+
+
+	/* COTOWN POST NEW */
+	main.post-page.cotown .container-main .post-content .first-contain .title-big {
+		padding: 1em;
+	}
+	main.post-page.cotown .container-main .post-content .first-contain .title-big .green-title.cotown h2.title {
+		font-size: var(--resp-text-title);
+	}
+	main.post-page.cotown .container-main .post-content .first-contain .title-big .h1-big h1 {
+		font-size: var(--resp-big-subtitle);
+		margin-bottom: 0;
+	}
+	main.post-page.cotown .container-main .post-content .first-contain .title-big .title p.subtitle {
+		font-size: var(--resp-text);
+	}
+	main.post-page.cotown .container-main .post-content .text {
+		margin: 0 auto;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	main.post-page.cotown .container-main .post-content .text .text-content h1 {
+		margin: 1em 0;
+		font-size: var(--resp-title);
+	}
+	main.post-page.cotown .container-main .post-content .text .text-content h2, 	main.post-page.cotown .container-main .post-content .text .text-content h3 {
+		font-size: var(--resp-subtitle);
+	}
+	main.post-page.cotown .container-main .post-content .text .text-content p {
+		font-size: var(--resp-text);
+	}
+	main.post-page.cotown .container-main .post-content .text .text-content ul {
+		padding-inline-start: 10px;
+	}
+	main.post-page .container-main .post-content .text .text-content ul li {
+		padding-left: 4px;
+	}
+	main.post-page.cotown .container-main .post-content .other {
+		width: 100%;
+		max-width: 100%;
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	main.post-page.cotown .container-main .like-content {
+		margin: 2em 0 0;
+	}
+	main.post-page.cotown .container-main .like-content .like {
+		justify-content: space-between;
+		background-color: var(--new-bg);
+		padding: 2em 6em;
+	}
+	main.post-page.cotown .container-main .like-content .like .text h3,
+	main.post-page .container-main .like-content .like .text p {
+		color: var(--black);
+	}
+	main.post-page.cotown .container-main .like-content .like .text h3 {
+		font-size: var(--resp-text-title);
+		font-weight: var(--semibold);
+	}
+	main.post-page.cotown .container-main .like-content .like .text p {
+		font-size: var(--resp-text-title);
+	}
+	main.post-page.cotown .container-main .like-content .like .redes {
+		justify-content: flex-end;
+	}
+	main.post-page.cotown .container-main .like-content .like .redes a {
+		width: 50px;
+	}
+	main.post-page.cotown .container-main .like-content .like .redes a em {
+		color: var(--primary-old);
+		font-size: var(--icon-redes);
+		align-items: flex-end;
+		text-align: end;
+	}
+
+	/* COTOWN POST END
+	-------------------------------- \*/
+
+
+
 }
 
 @media only screen and (max-width: 768px) {

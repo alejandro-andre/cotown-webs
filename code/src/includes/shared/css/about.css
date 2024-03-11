@@ -62,7 +62,7 @@ main .container-main .first-contain.about.cotown .title-big {
 	padding: 50px;
 	position: relative;
 	z-index: 1;
-	background-color: var(--primary-background);
+	background-color: var(--new-bg);
 }
 
 main .container-main .first-contain.about.cotown .title-big h1 {
