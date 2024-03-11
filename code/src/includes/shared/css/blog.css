@@ -15,6 +15,7 @@ main.blog .container-main .first-contain {
 	align-items: center;
 	margin: 0;
 }
+
 main.blog .container-main .first-contain .h1-big {
 	margin-top: 1em;
 }
@@ -498,12 +499,13 @@ main.blog.cotown .container-main .posts .post img {
 }
 
 main.blog.cotown .container-main .posts .post .mark-content {
-	position: relative;
+	/* position: relative;
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-end;
-	align-items: center;
+	align-items: center; */
+	display: none;
 }
 
 main.blog.cotown .container-main .posts .post .mark {
@@ -813,7 +815,7 @@ main.blog.cotown .container-main .posts .post .data-post.primary a {
 	}
 
 	main.blog.cotown .container-main .first-contain .search {
-		margin: 0 ;
+		margin: 0 auto 1em;
 		padding: 0;
 		width: calc(100% - 2em);
 	}

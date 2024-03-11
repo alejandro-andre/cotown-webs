@@ -38,6 +38,46 @@ tags: page
 
     <section class="first-contact">
       <h1>{% literal texts, 'contact-titulo', L %}</h1>
+    
+      {% if site == 'vanguard' %}
+        
+        <div class="title-big">       
+          <div class="h1-big">
+                 <h1>{% literal texts, 'contact-titulo', L %}</h1>
+          </div>
+        </div> 
+
+      {% else %}
+        <div class="img-contact pure-u-1">
+          {% image
+              constants.SERVER + "/wopi/files/Marketing/Media/" + images['faqs'].id +"/Image/contents?access_token=" + token,
+              "FAQs", "FAQs", "img-faqs", [auto], ""
+          %}
+        </div>
+
+        <div class="title-big pure-u-9-24 pure-u-lg-1-6">       
+          <div class="feeling cotown">
+            <h2 class="title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
+          </div>
+          <div class="h1-big">
+            <h1>Frequently Asked Questions.</h1>
+          </div>
+          <div class="search pure-u-1">        
+            <h2>Barcelona</h2>
+          </div>
+        </div>
+
+        <!-- MOBILE -->
+        
+        <div class="title-big mobile">       
+          <div class="h1-big">
+                 <h1>{% literal texts, 'contact-titulo', L %}</h1>
+          </div>
+        </div>
+
+        
+                
+      {% endif %} 
     </section>
 
     <section class="contact-main">
@@ -57,7 +97,6 @@ tags: page
         </div>
 
         <div class="contact-content pure-u-1 pure-u-lg-5-6">
-
           <div class="text-location pure-u-1 pure-u-lg-14-24">
             <h3>{{o.Location}}</h3>
             <p>{{o.Address}}</p>
@@ -74,11 +113,9 @@ tags: page
             </p>
             {% endif %}
           </div>
-
           <div class="pure-u-1 pure-u-lg-10-24">
             <div class="pure-u-1" style="width:99%;height:320px;" id="map-{{o.id}}"></div>
           </div>
-
         </div>
 
       </div>

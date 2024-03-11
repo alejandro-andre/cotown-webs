@@ -1,12 +1,11 @@
 /* CONTACTO
 -------------------------------- */
-
-.first-contact {
+main.contact .container-main .first-contact {
 	background-color: var(--primary);
 	height: 8em;
 }
 
-.first-contact h1 {
+main.contact .container-main .first-contact h1 {
 	color: var(--white);
 	padding: 0.2em 0.8em 0;
 	margin-bottom: 0;
@@ -14,69 +13,71 @@
 	font-size: 76px;
 	line-height: 1.4em;
 }
-.contact.vanguard .first-contact h1 {
+
+main.contact.vanguard .container-main  .first-contact h1 {
 	font-family: var(--title-font);
 }
-.contact.cotown .first-contact h1 {
+
+main.contact.vanguard .container-main .first-contact h1 {
 	font-family: var(--text-font);
 }
 
-.contact-main h2 {
+main.contact .contact-main h2 {
 	padding: 1em 1.5em 0;
 	font-weight: 400;
 	font-size: 46px;
 	line-height: 100%;
 }
-.contact.vanguard .contact-main h2 {
+main.contact.vanguard .contact-main h2 {
 	font-family: var(--title-font);
 }
-.contact.cotown .contact-main h2 {
+main.contact.cotown .contact-main h2 {
 	font-family: var(--text-font);
 }
 
-.contact-main .img-content {
+main.contact .contact-main .img-content {
 	border-bottom: 1px solid var(--grey-light);
 	padding: 2em 0;
 }
 
-.contact-main .img-content:last-child {
+main.contact .contact-main .img-content:last-child {
 	border-bottom: 0px solid var(--grey-light);
 }
 
-.contact-main .img-content .contact-content {
+main.contact .contact-main .img-content .contact-content {
 	align-items: flex-start;
 }
 
-.contact-main .img-content .contact-content .text-location {
+main.contact .contact-main .img-content .contact-content .text-location {
 	padding-top: 2em;
 }
 
-.contact-main .img-content .contact-content .img-city {
+main.contact .contact-main .img-content .contact-content .img-city {
 	color: var(--primary-light);
 }
 
-.contact-main .img-content .contact-content .text-location h3 {
+main.contact .contact-main .img-content .contact-content .text-location h3 {
 	font-weight: 800;
 	font-size: 36px;
 	line-height: 140%;
 }
 
-.contact-main .img-content .contact-content .text-location p {
+main.contact .contact-main .img-content .contact-content .text-location p {
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 130%;
 }
-.contact.vanguard .img-content .contact-content .text-location h3 {
+main.contact.vanguard .img-content .contact-content .text-location h3 {
 	font-family: var(--title-font);
 }
-.contact.cotown .img-content .contact-content .text-location h3 {
+main.contact.cotown .img-content .contact-content .text-location h3 {
 	font-family: var(--text-font);
 }
-.contact-main .img-content .contact-content .text-location p em::before {
+main.contact .contact-main .img-content .contact-content .text-location p em::before {
 	vertical-align: bottom;
 }
 
-.contact-main .img-content .contact-content .text-location p span a {
+main.contact .contact-main .img-content .contact-content .text-location p span a {
 	text-decoration: 1px underline;
 	font-weight: 700;
 	font-size: 24px;
@@ -126,11 +127,11 @@
 @media only screen and (max-width: 1023.99px) {
 
 	/* CONTACTO TABLET Y MOBILE  ___________________________\*/
-	.first-contact {
+	main.contact .first-contact {
 		height: 4.5em;
 	}
 
-	.first-contact h1 {
+	main.contact .first-contact h1 {
 		color: var(--white);
 		padding: 0.2em 0.2em 0;
 		font-weight: 400;
@@ -138,41 +139,41 @@
 		line-height: 1.5em;
 	}
 
-	.contact-main h2 {
+	main.contact .contact-main h2 {
 		padding: 1em 0 0 0.5em;
 		font-size: 32px;
 		line-height: 100%;
 		text-align: left;
 	}
 
-	.contact-main .img-content {
+	main.contact .contact-main .img-content {
 		padding: 0 0 1em;
 		margin: 0 1em;
 	}
 
-	.contact-main .contact-content .text-location {
+	main.contact .contact-main .contact-content .text-location {
 		padding-top: 0;
 	}
 
-	.contact-main .img-content .img-city {
+	main.contact .contact-main .img-content .img-city {
 		display: none;
 	}
 
-	.contact-main .img-content .contact-content .text-location h3 {
+	main.contact .contact-main .img-content .contact-content .text-location h3 {
 		font-size: 24px;
 	}
 
-	.contact-main .img-content .contact-content .text-location p {
+	main.contact .contact-main .img-content .contact-content .text-location p {
 		font-size: var(--mini-title);
 	}
 
-	.contact-main .img-content .contact-content .text-location p span {
+	main.contact .contact-main .img-content .contact-content .text-location p span {
 		font-size: var(--mini-title);
 		font-weight: bold;
 		text-decoration-line: underline;
 	}
 
-	.contact-main .img-content .contact-content .text-location p span a {
+	main.contact .contact-main .img-content .contact-content .text-location p span a {
 		font-weight: bold;
 		text-decoration-line: underline;
 		font-size: var(--mini-title);
