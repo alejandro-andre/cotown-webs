@@ -4,7 +4,10 @@
       <div class="description text">        
         {{location.Texts[0] | translate('Details', L) | markdown | safe }}
       </div>
-      <h2>{{location | translate('Name', L)}}</h2>
+      {% if site == 'vanguard' %}
+        <h2>{{location | translate('Name', L)}}</h2>
+      {% else %}
+      {% endif %}     
     </div>
     <!--
     <div class="opacity"></div> 

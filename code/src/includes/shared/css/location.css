@@ -121,6 +121,31 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     font-weight: 200!important;
 }
 
+/* COTOWN NEW */
+.pisos-slider.cotown .h2-container {
+    background-color: var(--white);
+}
+.pisos-slider.cotown .h2-container .title-container.cotown {
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.pisos-slider.cotown .h2-container .title-container.cotown h2 {
+    width: fit-content;
+    font-size: var(--big-subtitle);
+    text-align: left;
+    text-transform: none;
+    padding: 0 0 0 1em;
+}
+.pisos-slider.cotown .h2-container .title-container.cotown h2.loc-title {
+    font-weight: var(--regular);
+}
+.pisos-slider.cotown .h2-container .title-container.cotown h2.desc-title {
+    font-weight: var(--light);
+    padding: 0 0 0 0.2em;
+}
+
 /* RESERVAS */
 .h2-container .calendar {
     margin: 0;
@@ -398,6 +423,61 @@ button.green-button.btn-secondary {
     text-transform: uppercase;
 }
 
+/* COTOWN NEW CAROUSEL */
+
+.pisos-slider.cotown .carousel .carousel-main-list .splide__slide {
+    max-width: 70vw;
+    margin-right: 0 !important;
+    border-radius: var(--left-top);
+}
+
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body {
+    background-color: var(--new-bg);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 {
+    text-align: start;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 h3 {
+    color: var(--black);
+    position: static;
+    font-size: var(--big-subtitle);
+    font-weight: var(--regular);
+    margin: 0.5em 0 0;
+    line-height: 1;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 p {
+    margin: 0.5em 0 0;
+    line-height: 1;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type h4 {
+    text-transform: none;
+    font-size: var(--text-title);
+    font-weight: var(--regular);
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type p {
+    text-transform: none;
+    font-size: var(--mini-title);
+    font-weight: var(--regular);
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type button.btn-secondary.green-button {
+    background-color: transparent;
+    border: 0px;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--primary-old);
+    font-size: var(--mini-title);
+    font-weight: var(--regular);
+}
+
+
+
+
+
+
 #map {
     margin: 0 0 6em;
 }
@@ -470,6 +550,15 @@ section.necesities .grid .necesidad .p-text p {
     object-fit: cover;
     object-position: center center;
 }
+
+/* COTOWN NEW NECESITIES */
+
+section.necesities.cotown .grid {
+    width: 80%;
+}
+
+
+
 
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {

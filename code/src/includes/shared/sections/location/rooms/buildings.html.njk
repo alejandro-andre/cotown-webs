@@ -1,9 +1,25 @@
-<section class="pisos-slider pure-u-1">
+<section class="pisos-slider rooms pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
 
   <div class="h2-container pure-u-1">
 
-    <div class="pure-u-1 pure-u-lg-1-2">
-      <h2 class="pure-u-20-24">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}</h2>
+    <div class="pure-u-1">
+
+      {% if site == 'vanguard' %}     
+       <h2 class="pure-u-20-24">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}</h2>
+      {% else %}
+      <div class="title-container cotown pure-u-20-24">
+        <h2 class="loc-title cotown">{{location | translate('Name', L)}}</h2>
+        <h2 class="desc-title cotown">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}</h2>
+      {% endif %}
+      <!-- See map button (mobile) -->
+      <a href="#mapanchor" class="map-button pure-u-4-24">
+        <button class="button-map-mobile pure-u-1">
+          <img src="{{root}}/assets/img/icono__serv_mapa.svg">
+          <p>{% literal texts, 'location-ver-mapa', L %}</p>
+        </button>
+      </a>
+
+    
       <!-- See map button (mobile) -->
       <a href="#mapanchor" class="map-button pure-u-4-24">
         <button class="button-map-mobile pure-u-1">
@@ -77,14 +93,22 @@
                     %}
                     {% endif %}
                     {% endfor %}
-                    <h3>{{b.Name}}</h3>
+                    {% if site == 'vanguard' %}
+                      <h3>{{b.Name}}</h3>
+                    {% else %}
+                    {% endif %}
                   </a>
                 </div>
 
                 <div class="card-body d-flex flex-column">
 
                   <!-- Name -->
+                  
                   <div class="flex-grow-1">
+                    {% if site == 'vanguard' %}                     
+                    {% else %}
+                    <h3>{{b.Name}}</h3>
+                    {% endif %}
                     <p>{{ b | translate ('Description', L) | safe }}</p>
                   </div>
 
@@ -112,8 +136,17 @@
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I">
                       <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
                       <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
-                      <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                      {% if site == 'vanguard' %}
+                       <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                     
+                      {% else %}
+                      {% endif %}                     
                       <p>{% literal texts, 'price-desde', L %} {{minI}} €/{% literal texts, 'price-mes', L %}</p>
+                      {% if site == 'vanguard' %}
+                      {% else %}
+                      <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button> 
+                      {% endif %}
+
+
                       </a>
                       <div id="{{b.id}}_I" class="pure-u-1 text-red"><p></p></div>
                     </div>
@@ -123,10 +156,17 @@
                     {% if minD < 99999 %}
                     <div class="room-type">
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D">
-                      <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
-                      <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
-                      <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
-                      <p>{% literal texts, 'price-desde', L %} {{minD}} €/{% literal texts, 'price-mes', L %}</p>
+                        <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
+                        <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
+                        {% if site == 'vanguard' %}
+                        <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                 
+                        {% else %}
+                        {% endif %}                     
+                        <p>{% literal texts, 'price-desde', L %} {{minD}} €/{% literal texts, 'price-mes', L %}</p>
+                        {% if site == 'vanguard' %}
+                        {% else %}
+                        <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                        {% endif %}                      
                       </a>
                       <div id="{{b.id}}_D" class="pure-u-1 text-red"><p></p></div>
                     </div>
@@ -138,8 +178,17 @@
                       <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
                       <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html">
-                      <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
-                      <p>&nbsp;</p>
+                      {% if site == 'vanguard' %}
+                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                         <p>&nbsp;</p>                 
+                        {% else %}
+                        {% endif %}                     
+                        <p>{% literal texts, 'price-desde', L %} {{minD}} €/{% literal texts, 'price-mes', L %}</p>
+                        {% if site == 'vanguard' %}
+                        {% else %}
+                          <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                          <p>&nbsp;</p>
+                        {% endif %}  
                       </a>
                       <div id="{{b.id}}_F" class="pure-u-1 text-red"><p></p></div>
                     </div>

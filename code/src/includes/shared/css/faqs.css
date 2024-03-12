@@ -124,7 +124,6 @@ main.cotown .container-main .first-contain .search .search-container label em.ic
 	margin: 0 4px;
 	color: var(--black);
 }
-
 main.cotown .container-main .first-contain .search .search-container label.cotown input {
 	outline: none;
 	font-family: var(--text-font);
@@ -153,7 +152,6 @@ main.cotown .container-main .faqs-container .faq {
 	justify-content: center;
 	align-items: center;
 }
-
 main.cotown .container-main .faqs-container .faq .every-faq {
 	margin: 0 auto;
 }

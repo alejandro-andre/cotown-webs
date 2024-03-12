@@ -1,9 +1,17 @@
-<section class="pisos-slider pure-u-1">
+<section class="pisos-slider rooms pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %} ">
 
   <div class="h2-container pure-u-1">
 
-    <div class="pure-u-1 pure-u-lg-1-2">
-      <h2 class="pure-u-20-24">{% literal texts, 'rooms-nuestros-apartamentos-privados', L %}</h2>
+    <div class="pure-u-1">
+      {% if site == 'vanguard' %}     
+      <h2 class="pure-u-20-24">{% literal texts, 'rooms-nuestros-apartamentos-privados', L %}</h2>  
+      {% else %}
+      <div class="title-container cotown pure-u-23-24">
+        <h2 class="loc-title cotown">{{location | translate('Name', L)}}</h2>
+        <h2 class="desc-title cotown">{% literal texts, 'rooms-nuestros-apartamentos-privados', L %}</h2>
+       </div>
+      {% endif %}
+      
       <!-- See map button (mobile) -->
       <a href="#mapanchor" class="map-button pure-u-4-24">
         <button class="button-map-mobile pure-u-1">
@@ -76,14 +84,21 @@
                     %}
                     {% endif %}
                     {% endfor %}
+                    {% if site == 'vanguard' %}
                     <h3>{{b.Name}}</h3>
+                    {% else %}
+                    {% endif %}
                   </a>
                 </div>
 
                 <div class="card-body d-flex flex-column">
 
-                  <!-- Name -->
+                  <!-- Name -->                  
                   <div class="flex-grow-1">
+                    {% if site == 'vanguard' %}                     
+                    {% else %}
+                    <h3>{{b.Name}}</h3>
+                    {% endif %}
                     <p>{{ b | translate ('Description_private', L) | safe }}</p>
                   </div>
 

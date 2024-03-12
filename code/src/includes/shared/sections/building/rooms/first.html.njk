@@ -1,4 +1,4 @@
-<section class="first-contain pure-u-1">
+<section class="first-contain pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}" >
 
   <!-- Photo carousel -->
   <section id="image-carousel" class="splide first-slider pure-u-1" aria-label="Beautiful Images">
@@ -7,7 +7,11 @@
       {% if building.Tour %}
       <button class="btn-secondary" onclick="open_tour('{{building.Tour}}')">
         {% literal texts, 'rooms-tour-virtual', L %}
-      </button>
+        {% if site == 'vanguard' %}
+        {% else %}
+          <div class="mini-border"></div>
+        {% endif %}
+      </button>       
       {% endif %}
     </div>    
     <div class="splide__track">

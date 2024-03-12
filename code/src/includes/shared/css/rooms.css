@@ -628,3 +628,52 @@ margin-bottom: 0.5em;
   }
 
 }
+
+
+
+
+/* COTOWN NEW */
+.first .first-contain.cotown .first-slider .title-button {
+  position: absolute;
+  z-index: 2;
+  text-align: center;  
+  top: 0;
+	left: 0;
+  width: 24%;
+  height: 74%;
+	background-color: var(--box-bg);
+	padding: 2em 2em 2em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.first .first-contain.cotown .first-slider .title-button h1 {
+  font-size: var(--big-title);
+  color: var(--black);
+  text-transform: none;
+  text-align: start;
+}
+.first .first-contain.cotown .first-slider .title-button button.btn-secondary {
+  font-size: var(--text-title);
+  color: var(--primary-old);
+  font-weight: var(--light);
+  text-transform: none;
+  text-align: start;
+  background-color: transparent;
+  border: 0px;
+  box-shadow: none;
+  padding: 0;
+  height: 24px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.first .first-contain.cotown .first-slider .title-button .mini-border {
+  width: 24px;
+  height: 1px;
+  margin: 0.1em auto 0;
+  background-color: var(--primary-old);
+}
+
