@@ -79,18 +79,33 @@
     <div class="text-first pure-u-23-24 pure-u-lg-12-24">
       {% if building.Tour %}
       <button class="btn-text">
-        <a href="#" onclick="open_tour('{{building.Tour}}')">{% literal texts, 'rooms-tour-virtual', L %}</a>
+        <a href="#" onclick="open_tour('{{building.Tour}}')">{% literal texts, 'rooms-tour-virtual', L %}
+          {% if site == 'vanguard' %}
+          {% else %}
+            <div class="mini-border"></div>
+          {% endif %}
+        </a>
       </button>
       {% endif %}
       {% if flats | find('id', 'eq', building.id) | length > 0 %}
       <button class="btn-text">
         <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages.flats.url}}-{{building.Name | slugify}}.html">
         {% literal texts, 'rooms-nuestros-apartamentos-privados', L %}
+          {% if site == 'vanguard' %}
+          {% else %}
+            <div class="mini-border"></div>
+          {% endif %}
         </a>
       </button>
       {% endif %}
       <button class="btn-text">
-        <a href="#barrio">{% literal texts, 'rooms-tu-barrio', L %}</a>
+        <a href="#barrio">
+          {% literal texts, 'rooms-tu-barrio', L %}
+          {% if site == 'vanguard' %}
+          {% else %}
+            <div class="mini-border"></div>
+          {% endif %}
+          </a>
       </button>
     </div>
 

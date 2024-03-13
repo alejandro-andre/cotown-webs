@@ -5,7 +5,7 @@
 
 {% if show %}
 {% set show = false %}
-<div class="title pure-u-1 pure-u-lg-21-24">
+<div class="title pure-u-1 pure-u-lg-22-24">
   <h2>{{typetitle}}</h2>
 </div>
 {% endif %}
@@ -152,15 +152,19 @@
       </fieldset>
     </form>
 
-    <div class="buttons pure-u-1">
+    <div class="buttons pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
       <button id="btn-check-{{p.Code}}" name="btn-check" class="hidden btn-secondary" onclick="go_check();">
         {% literal texts, 'button-solicitar', L %}
       </button>
       <button id="btn-book-{{p.Code}}" name="btn-book" class="hidden btn-secondary" onclick="go_book({{p.id}}, -1, '{{p.Code}}', 'pc');">
         {% literal texts, 'button-reservar', L %}
       </button>
-      <button id="btn-info-{{p.Code}}" name="btn-info" class="btn-primary" onclick="go_info({{p.id}}, -1, '{{p.Code}}');">
-        {% literal texts, 'button-mas-info', L %}
+      <button id="btn-info-{{p.Code}}" name="btn-info" class="{% if site == 'vanguard' %} btn-primary  {% else %} btn-text {% endif %}" onclick="go_info({{p.id}}, -1, '{{p.Code}}');">
+        {% literal texts, 'button-mas-info', L %}        		
+        {% if site == 'vanguard' %}
+        {% else %}
+          <div class="mini-border"></div>
+        {% endif %}
       </button>
       <button id="btn-visit-{{p.Code}}" name="btn-visit" class="btn-primary" onclick="go_visit({{p.id}}, -1, '{{p.Code}}');">
         {% literal texts, 'button-visita', L %}
