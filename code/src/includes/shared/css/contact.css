@@ -1,27 +1,18 @@
 /* CONTACTO
 -------------------------------- */
-main.contact .container-main .first-contact {
+main.contact.vanguard .container-main .first-contact, main.contact.cotown.visit .container-main .first-contact, main.contact.cotown.info .container-main .first-contact {
 	background-color: var(--primary);
 	height: 8em;
 }
-
-main.contact .container-main .first-contact h1 {
+main.contact.vanguard .container-main .first-contact h1 {
 	color: var(--white);
 	padding: 0.2em 0.8em 0;
 	margin-bottom: 0;
 	font-weight: 400;
 	font-size: 76px;
 	line-height: 1.4em;
-}
-
-main.contact.vanguard .container-main  .first-contact h1 {
 	font-family: var(--title-font);
 }
-
-main.contact.vanguard .container-main .first-contact h1 {
-	font-family: var(--text-font);
-}
-
 main.contact .contact-main h2 {
 	padding: 1em 1.5em 0;
 	font-weight: 400;
@@ -31,37 +22,27 @@ main.contact .contact-main h2 {
 main.contact.vanguard .contact-main h2 {
 	font-family: var(--title-font);
 }
-main.contact.cotown .contact-main h2 {
-	font-family: var(--text-font);
-}
-
 main.contact .contact-main .img-content {
 	border-bottom: 1px solid var(--grey-light);
 	padding: 2em 0;
 }
-
 main.contact .contact-main .img-content:last-child {
 	border-bottom: 0px solid var(--grey-light);
 }
-
 main.contact .contact-main .img-content .contact-content {
 	align-items: flex-start;
 }
-
 main.contact .contact-main .img-content .contact-content .text-location {
 	padding-top: 2em;
 }
-
 main.contact .contact-main .img-content .contact-content .img-city {
 	color: var(--primary-light);
 }
-
 main.contact .contact-main .img-content .contact-content .text-location h3 {
 	font-weight: 800;
 	font-size: 36px;
 	line-height: 140%;
 }
-
 main.contact .contact-main .img-content .contact-content .text-location p {
 	font-weight: 500;
 	font-size: 24px;
@@ -70,13 +51,9 @@ main.contact .contact-main .img-content .contact-content .text-location p {
 main.contact.vanguard .img-content .contact-content .text-location h3 {
 	font-family: var(--title-font);
 }
-main.contact.cotown .img-content .contact-content .text-location h3 {
-	font-family: var(--text-font);
-}
 main.contact .contact-main .img-content .contact-content .text-location p em::before {
 	vertical-align: bottom;
 }
-
 main.contact .contact-main .img-content .contact-content .text-location p span a {
 	text-decoration: 1px underline;
 	font-weight: 700;
@@ -84,13 +61,6 @@ main.contact .contact-main .img-content .contact-content .text-location p span a
 	line-height: 130%;
 	color: var(--black);
 }
-
-
-
-
-
-
-
 .office {
 	position: relative;
 	left: -150px;
@@ -99,11 +69,9 @@ main.contact .contact-main .img-content .contact-content .text-location p span a
 	overflow: hidden;
 	z-index: -9999;
 }
-
 .svg_base {
 	fill: #e0e0e0 !important;
 }
-
 
 
 @media only screen and (min-width: 1600px) {
@@ -179,3 +147,103 @@ main.contact .contact-main .img-content .contact-content .text-location p span a
 		font-size: var(--mini-title);
 	}
 }
+
+
+
+
+/* CONTACTO COTOWN NEW */
+
+main.contact.cotown.visit .container-main .first-contact h1, main.contact.cotown.info .container-main .first-contact h1 {
+	font-size: var(--big-title);
+	font-weight: var(--regular);
+	color: var(--white);
+	padding: 0.4em 0.8em 0;
+	margin-bottom: 0;
+	line-height: 1.4;
+}
+
+main.contact.cotown .container-main .first-contact {
+	background-color: transparent;
+	height: auto;
+	position: relative;
+}
+main.contact.cotown .container-main .first-contact .title-big.desktop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--box-bg);
+	padding: 2em;
+}
+
+main.contact.cotown .container-main .first-contact .img-contact {
+	width: 100vw;
+	object-fit: cover;
+}
+main.contact.cotown .container-main .first-contact .img-contact img {
+	width: 100vw;
+	max-height: 400px;
+}
+main.cotown .container-main .first-contact .title-big .h1-big h1 {
+	font-family: var(--text-font);
+	color: var(--black);
+	font-weight: var(--semibold);
+	font-size: var(--big-subtitle);
+	line-height: 1.2;
+	width: 100%;
+	padding: 0.5em 0 2em;
+}
+main.cotown .container-main .first-contact .title-big h2 {
+	font-family: var(--text);
+	color: var(--black);
+	font-weight: var(--light);
+	font-size: var(--text);
+	line-height: 1.2;
+	margin: 0;
+	width: 100%;
+	text-transform: uppercase;
+}
+main.cotown .container-main .first-contact .title-big .feeling.cotown {
+	text-align: end;
+}
+main.cotown .container-main .first-contact .title-big .feeling.cotown h2.title-feel {
+	text-align: end;
+	font-size: var(--text-title);
+	color: var(--primary-old);
+	font-weight: var(--semibold);
+	text-transform: lowercase;
+}
+
+@media only screen and (min-width: 1024px) {
+	main.cotown .container-main .first-contact .title-big.mobile {
+		display: none;
+	}
+}
+@media only screen and (max-width: 1023.9px) {
+	
+	main.cotown .container-main .first-contact .img-contact, 
+	main.cotown .container-main .first-contact .title-big.desktop {
+		display: none;
+	}
+	main.cotown .container-main .first-contact .title-big.mobile {
+		background-color: var(--primary);
+		height: 4.5em;
+	}
+	main.cotown .container-main .first-contact .title-big.mobile h1 {
+		color: var(--white);
+		padding: 0.4em 0.8em 0;
+		margin-bottom: 0;
+		line-height: 1;
+	}
+	main.contact.cotown.visit .container-main .first-contact, main.contact.cotown.info .container-main .first-contact {
+		height: 6em;
+	}
+	main.contact.cotown.visit .container-main .first-contact h1, main.contact.cotown.info .container-main .first-contact h1 {
+		font-size: var(--resp-title);
+		font-weight: var(--regular);
+		color: var(--white);
+		padding: 0.6em 0.8em 0;
+		margin-bottom: 0;
+		line-height: 1;
+	}
+}
+/* _________________________  */

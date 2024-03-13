@@ -12,7 +12,7 @@
 <div id="calendar" class="calendar-modal">
 	<div class="calendar-modal-content">
 
-    <div class="calendar-container">
+    <div class="calendar-container {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
     <section class="dates-selector">
       
       <div class="mobile">
@@ -117,7 +117,12 @@
           </table>
 
           <div class="buttons">
-            <a onclick="empty('', '');">{% literal texts, 'cal-borrar-fechas', L %}</a>
+            <a onclick="empty('', '');">{% literal texts, 'cal-borrar-fechas', L %}
+            {% if site == 'vanguard' %}
+            {% else %}
+              <div class="mini-border"></div>
+            {% endif %}
+            </a>
             <button id="ok" class="btn-secondary" onclick="close_calendar();">{% literal texts, 'cal-cerrar', L %}</button>
           </div>
 

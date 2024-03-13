@@ -636,7 +636,6 @@ margin-bottom: 0.5em;
 .first .first-contain.cotown .first-slider .title-button {
   position: absolute;
   z-index: 2;
-  text-align: center;  
   top: 0;
 	left: 0;
   width: 24%;
@@ -812,6 +811,7 @@ main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons.cotown button
   background-color: var(--primary-old);
   color: var(--white);
   font-weight: var(--regular);
+  box-shadow: none;
 }
 main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons button.btn-text {
   color: var(--primary-old);
@@ -826,7 +826,6 @@ main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons button.btn-te
   margin: 0.1em auto 0;
   background-color: var(--primary-old);
 }
-/* ---------- END ROOMS COTOWN ---------- \*/
 
 main.flat.cotown .last {
   background-color: var(--white);
@@ -846,4 +845,77 @@ main.flat.cotown .last .last-zone .last-content .left .text p {
   font-size: var(--text);
   font-weight: var(--400);
   line-height: 1.2;
+}
+
+/* COTOWN RESPONSIVE \*/
+@media only screen and (max-width: 1023.9px) {
+  .first .first-contain.cotown .first-slider .title-button {    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+  .first .first-contain.cotown .first-slider .title-button h1 {
+    text-align: center;
+    color: var(--white);
+    font-size: var(--big-subtitle);
+  }
+  .first .first-contain.cotown .flat-services {
+    margin: 0 auto;
+  }
+  .first .first-contain.cotown .flat-services .splide-services {
+    padding: 0 1em;
+  }
+  .first .first-contain.cotown .flat-services .splide-services .splide__arrows button.splide__arrow.splide__arrow--prev {
+    left: -14px;
+  }
+  .first .first-contain.cotown .flat-services .splide-services .splide__arrows button.splide__arrow.splide__arrow--next {
+    right: -10px;
+  }
+  .first .first-contain.cotown .flat-services .splide-services .splide__list .splide__slide .slide {
+    align-items: center;
+  }
+  .first .first-contain.cotown .flat-services .splide-services .splide__list .splide__slide .slide p {
+    text-align: center;
+    font-size: var(--resp-text);
+    text-transform: none;
+  }
+  main.flat.cotown .rooms .all-rooms .card-room {
+    background-color: var(--white);
+  }
+  main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons.cotown button.btn-secondary,
+  main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons.cotown button.btn-primary {
+    width: 100%;
+    height: auto;
+    font-size: var(--text);
+    font-weight: var(--semibold);
+    padding: 0.8em 0;
+    border-radius: 25px; 
+  }
+  main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons button.btn-text {
+    color: var(--primary);
+    font-weight: var(--semibold);
+    width: 100%;
+    justify-content: center;
+    text-transform: none;
+    border: 1px solid var(--primary);
+    border-radius: 25px;
+    background-color: var(--white);
+    margin-bottom: 2em;
+  }
+  main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons button.btn-text .mini-border {
+    display: none;
+  }
+  main.flat.cotown .last .last-zone .last-content .left h2 {
+    font-size: var(--resp-text-title);
+    font-weight: var(--semibold);
+  }
+  main.flat.cotown .last .last-zone .last-content .left h2 span {
+    color: var(--primary-old);
+  }
 }
