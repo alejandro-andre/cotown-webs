@@ -75,6 +75,16 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .faqs-container h1 {
+	font-family: var(--title-font);
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 100%;
+	margin: 1em 0 0;
+	text-transform: uppercase;
+}
+
+.faqs-container h1.cotown {
+	font-family: var(--text-font);
 	font-weight: 400;
 	font-size: 64px;
 	line-height: 100%;

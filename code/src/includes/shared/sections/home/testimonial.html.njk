@@ -1,4 +1,10 @@
-<section class="opinions">
+<section
+{% if site == 'vanguard' %} 
+      class="opinions"
+      {% else %}
+      class="opinions cotown"
+      {% endif %}
+>
 
   <div class="text-container">
       {% literal texts, 'home-testimonios-titulo', L, true %}
@@ -22,8 +28,16 @@
                 <p class="name bold">{{t.Name}}</p>
                 <p class="date">{{t.Date}}</p>
               </div>
-            <h3 class="comillas">“</h3>
-            <ul class="stars">
+            <h3 {% if site == 'vanguard' %} 
+              class="comillas"
+              {% else %}
+              class="comillas cotown"
+              {% endif %}>“</h3>
+            <ul {% if site == 'vanguard' %} 
+              class="stars"
+              {% else %}
+              class="stars cotown"
+              {% endif %}>
               {% for i in range(0, t.Stars) %}
               <li class="star"><em class="icon-star"></em></li>
               {% endfor %}
@@ -31,8 +45,13 @@
               <li class="star"><em class="icon-star no-active"></em></li>
               {% endfor %}
             </ul>
-            </div>
-            <p class="text">{{t | translate ('Text', L)}}</p>
+            </div>           
+            {% if site == 'vanguard' %}
+              <p class="text">{{t | translate ('Text', L)}}</p>
+            {% else %}
+               <p class="text">{{t | translate ('Text', L)}}</p>
+               <div class="mini-border"></div>
+            {% endif %}
           </div>
         </li>
         {% endfor %}

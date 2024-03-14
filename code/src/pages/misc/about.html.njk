@@ -28,12 +28,20 @@ tags: page
 <!-- Main -->
 <main class="about">
   <div class="container-main">
-
+    {% if site == 'vanguard' %}
     <section class="first-contain about pure-g">
       <div class="title-big pure-u-1">
         {% literal texts, 'about-conocenos', L, true %}
       </div>
     </section>
+    {% else %}
+    <section class="first-contain about cotown pure-g">
+      <div class="title-big pure-u-1">
+        {% literal texts, 'about-conocenos', L, true %}
+      </div>
+    </section>
+    {% endif %}
+
 
     <section class="banner">
       <div class="splide-banner splide" role="group">
@@ -74,8 +82,7 @@ tags: page
 
       </div>
     </section>
-
-    <section class="form">
+    <section class="form {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
 
       {% literal texts, 'about-unete', L, true %}
 
@@ -117,9 +124,14 @@ tags: page
           <label class="label">{% literal texts, 'form-subir-cv', L %}</label>
           <div class="select">
             <span class="selected">
-              <input class="input selected" id="file" type="file" value="{% literal texts, 'form-subir-cv', L %}"/>
+              <input class="input selected" id="file" type="file" value="{% literal texts, 'form-subir-cv', L %}"/>              
               <label class="label btn-primary" for="selected">
-                <span>{% literal texts, 'form-adjuntar', L %}</span>
+                <span>{% literal texts, 'form-adjuntar', L %}
+                 {% if site == 'vanguard' %}
+               {% else %}
+              <em class="icon-corchete-down"></em>
+              {% endif %}
+                </span>
               </label>
             </span>
             <label class="select-file" for="selected">

@@ -315,6 +315,41 @@ li .locations-container .options-loc .option-loc a:hover {
     color: var(--turquoise-light);    
 }
 
+/* BLOQUE 1 NO HOME
+-------------------------------- \*/
+main .container-main .first-contain .title-big {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 6em auto 2em;
+}
+
+main .container-main .first-contain .title-big .h1-big {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding-top: 16px;
+}
+
+main .container-main .first-contain .title-big .h1-big h1 {
+	width: 100%;
+	font-weight: 400;
+	line-height: 95%;
+	font-size: 96px;
+}
+
+main .container-main .first-contain .title-big p {
+	font-size: var(--text);
+	line-height: 36px;
+	font-weight: var(--regular);
+	margin-bottom: 0.2em;
+	text-align: center;
+}
+main .container-main .first-contain .title-big p span.bold {
+	font-weight: var(--bold);
+}
 
 /* BLOQUE 1 NO HOME */
 main .container-main .first-contain .title-big {
@@ -341,16 +376,14 @@ main .container-main .first-contain .title-big .text {
     margin-bottom: 0.2em;
     text-align: center;
 }
-main .container-main .first-contain .title-big.home .text {
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 500;
-    margin-bottom: 0.5em;
-    text-align: left;
-}
+
 main .container-main .first-contain .title-big .text .bold {
     font-weight: 700;
 }
+
+
+
+
 /* __________________________ OTHER PAGES ___________________________*/
 
 /* ABOUT PAGE */

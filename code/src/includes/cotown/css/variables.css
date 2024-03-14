@@ -5,41 +5,42 @@
     --title-font: "Oswald", Helvetica, Arial, sans-serif;
     --text-font: "Montserrat", Helvetica, Arial, sans-serif;
 
-    --big-title: 78px;
-    --title: 56px;
-    --big-subtitle: 40px;
-    --subtitle: 32px;
-    --text-title: 24px;
-    --tag-title: 20px;
-    --mini-title: 18px;
-    --text: 16px;
+    --big-title: 62px;
+    --title: 40px;
+    --big-subtitle: 36px;
+    --subtitle: 28px;
+    --text-title: 20px;
+    --tag-title: 18px;
+    --mini-title: 16px;
+    --text: 14px;
 
     --btn-header: 14px;
 
     --bold: 700;
     --semibold: 600;
     --regular: 500;
+    --400: 400;
     --light: 300;
 
     --weight-btn: 300;
 
      /* Responsive */    
      --resp-big-title: 50px;
-     --resp-title: 38px;
-     --resp-big-subtitle: 30px;
-     --resp-subtitle: 28px;
-     --resp-text-title: 22px;
+     --resp-title: 30px;
+     --resp-big-subtitle: 26px;
+     --resp-subtitle: 20px;
+     --resp-text-title: 18px;
      --resp-tag-title: 16px;
      --resp-mini-title: 14px;
      --resp-text: 12px;
 
     /* // Main color */
-    /* --primary: #00bfb2; */
     --primary: #121212;
     --primary-dark: #3C434A;
     --primary-underline: #00bfb294;
     --primary-flats: #121212;
     --new-bg: #F5F1EF;
+    --primary-old: #00bfb2;
 
     --primary-ok: #ffffff;
     --secondary-bg: #121212;

@@ -1,51 +1,98 @@
-<section class="cotownity">
-
-  <div class="container-cotownity pure-g">
-
-    <div class="pure-u-1 pure-u-lg-10-24">
-
-      <div class="left">
-        <div class="coral">
-          <h2>{% literal texts, 'home-cotownity-titulo', L %}</h2>
-          {% image
-           constants.SERVER + "/wopi/files/Marketing/Media/" + images['cotownity'].id +"/Image/contents?access_token=" + token,
-           "community", "community", "",
-           [800], ""
-          %}
-          <div class="last-contain">
+<section class="{% if site == 'vanguard' %} cotownity {% else %} cotownity cotown {% endif %}" >
+  {% if site == 'vanguard' %} 
+    <div class="container-cotownity pure-g">
+      <div class="pure-u-1 pure-u-lg-10-24">
+        <div class="left">
+          <div class="coral">
+            <h2>{% literal texts, 'home-cotownity-titulo', L %}</h2>
+            {% image
+            constants.SERVER + "/wopi/files/Marketing/Media/" + images['cotownity'].id +"/Image/contents?access_token=" + token,
+            "community", "community", "",
+            [800], ""
+            %}
+            <div class="last-contain">
+              <div class="insta-fb">
+                <em class="icon-instagram"></em>
+                <em class="icon-facebook"></em>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div {% if site == 'vanguard' %} 
+        class="feeling"
+        {% else %}
+        class="feeling cotown"
+        {% endif %}>
+        
+          <h2 class="title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-lg-14-24">
+        <div class="right">
+          <div class="widget">
+            {% literal texts, 'home-cotownity-tag', L %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="container-cotownity cotown pure-g">
+      <div class="container-img pure-u-1">
+        <div class="left">
+          <div class="redes-contain">
             <div class="insta-fb">
               <em class="icon-instagram"></em>
               <em class="icon-facebook"></em>
             </div>
-          </div>
+          </div>          
+          <h2>{% literal texts, 'home-cotownity-titulo', L %}</h2>           
+          <h2 class="title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
         </div>
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['cotownity'].id +"/Image/contents?access_token=" + token,
+          "community", "community", "",
+          [800], ""
+        %}       
       </div>
 
-      <div class="feeling">
-        <h2 class="title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
-      </div>
-
-    </div>
-
-    <div class="pure-u-1 pure-u-lg-14-24">
-      <div class="right">
+      <!-- WIDGET INSTAGRAM -->
+      <div class="container-widget">
         <div class="widget">
           {% literal texts, 'home-cotownity-tag', L %}
         </div>
       </div>
     </div>
-
-  </div>
-
+  {% endif %}
 </section>
 
 <section class="cotownity-mobile">
-
-  <div class="coral">
-    <h2>{% literal texts, 'home-cotownity-titulo', L %}</h2>
-  </div>
-
-  {% literal texts, 'home-cotownity-tag-mobile', L %}
-
+  {% if site == 'vanguard' %}
+    <div class="coral">
+      <h2>{% literal texts, 'home-cotownity-titulo', L %}</h2>
+    </div>
+    {% literal texts, 'home-cotownity-tag-mobile', L %}
+  {% else %}
+    <div class="container-cotownity cotown pure-g">
+      <div class="container-img pure-u-1">
+        <div class="left">
+          <div class="redes-contain">
+            <div class="insta-fb">
+              <em class="icon-instagram"></em>
+              <em class="icon-facebook"></em>
+            </div>
+          </div>          
+          <h2>{% literal texts, 'home-cotownity-titulo', L %}</h2>           
+          <h2 class="title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
+        </div>
+        {% image
+          constants.SERVER + "/wopi/files/Marketing/Media/" + images['cotownity'].id +"/Image/contents?access_token=" + token,
+          "community", "community", "",
+          [800], ""
+        %}       
+      </div>     
+    </div>
+    {% literal texts, 'home-cotownity-tag-mobile', L %}
+  {% endif %}
 </section>
 
+ 
