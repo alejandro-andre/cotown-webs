@@ -195,7 +195,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
 
 .carousel {
     position: relative;
-    max-width: 99vw;
+    max-width: 100vw;
     height: auto;
 }
 .carousel .carousel-main-list .splide__slide {
@@ -1007,4 +1007,77 @@ section.necesities.cotown .grid {
     font-weight: 400;
     text-align: right;
     color: var(--primary-dark);
+}
+
+/* COTOWN RESPONSIVE \*/
+@media only screen and (max-width: 1023.9px) {
+    main.location.cotown section.location {
+        background-color: var(--white);
+    }
+    .pisos-slider.cotown .h2-container {
+        align-items: flex-start;
+        padding: 0;
+        background-color: transparent;
+    }
+    .pisos-slider.cotown .h2-container .h2-contain.cotown {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0.2em;
+    }
+    .pisos-slider.cotown .h2-container .title-container.cotown {
+        align-items: flex-start;
+        width: calc(100% - 128px) !important;
+        padding: 0 0 0 1em;
+    }
+    .pisos-slider.cotown .h2-container .title-container.cotown h2 {
+        font-size: var(--resp-big-subtitle);
+        text-align: left;
+        text-transform: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .pisos-slider.cotown .h2-container .title-container.cotown h2.loc-title.cotown {
+        order: 2;
+        font-weight: var(--regular);
+    }
+    .pisos-slider.cotown .h2-container .title-container.cotown h2.desc-title.cotown {
+        order: 1;
+        font-weight: var(--bold);
+        padding: 0;
+    }
+    .pisos-slider.cotown .h2-container .h2-contain.cotown .map-button {
+        width: 94px;
+        padding: 0 1em 0 0;
+    }
+    .pisos-slider.cotown .h2-container .h2-contain.cotown .map-button .button-map-mobile {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso h3 {
+        font-size: var(--resp-big-subtitle);
+        font-weight: var(--bold);
+    }
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
+        font-size: var(--resp-text-title);
+        font-weight: var(--400);
+        font-family: var(--text-font);
+        line-height: 1.2;
+        letter-spacing: 0;
+        width: 60%;
+        padding-left: 0;
+        margin: 0;
+    }
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container button.green-button.btn-secondary,
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container button.green-button.btn-secondary {
+        border: 1px solid var(--primary);
+        background-color: var(--white);
+        color: var(--primary);
+        box-shadow: none;
+        font-weight: var(--regular);
+    }
 }

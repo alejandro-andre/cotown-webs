@@ -827,7 +827,6 @@ opacity: 1;
 	right: 0;
 	top: 36%;
 }
-
 .first .first-contain.cotown .apartment-services .splide-services .splide__arrows button.splide__arrow svg {
 	fill: var(--white);
 }
@@ -949,6 +948,34 @@ main.flat.cotown .last .last-zone .last-content .left .text p {
 font-size: var(--text);
 font-weight: var(--400);
 line-height: 1.2;
+}
+
+/* PRIVE */
+
+.first .first-contain .after-slide .flat-services .splide__arrow.splide__arrow {
+    background-color: transparent;    
+    box-shadow: none;
+    color: var(--white);
+    opacity: 1;   
+}
+.first .first-contain .after-slide .flat-services .splide__arrow.splide__arrow--prev {
+	left: -0.5em;
+}
+.first .first-contain .after-slide .flat-services .splide__arrow.splide__arrow--next {
+	right: -0.5em;
+}
+.first .first-contain .after-slide .flat-services .splide__arrow.splide__arrow svg {
+    fill: var(--white);
+}
+main.flat.cotown .last.prive {
+    background-color: var(--primary);
+    padding-top: 2em;
+}
+main.flat.cotown .apartments .all-rooms .card-room .right-data .border-division {
+	width: 100%;
+	height: 1px;
+	background-color: var(--white);
+	margin-bottom: 1em;
 }
 
 /* COTOWN RESPONSIVE \*/

@@ -2,11 +2,11 @@
 
   <div class="h2-container pure-u-1">
 
-    <div class="pure-u-1">
+    <div class="h2-contain pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}s">
       {% if site == 'vanguard' %}     
       <h2 class="pure-u-20-24">{% literal texts, 'rooms-nuestros-apartamentos-privados', L %}</h2>  
       {% else %}
-      <div class="title-container cotown pure-u-23-24">
+      <div class="title-container cotown pure-u-23-24 pure-u-lg-20-24">
         <h2 class="loc-title cotown">{{location | translate('Name', L)}}</h2>
         <h2 class="desc-title cotown">{% literal texts, 'rooms-nuestros-apartamentos-privados', L %}</h2>
        </div>

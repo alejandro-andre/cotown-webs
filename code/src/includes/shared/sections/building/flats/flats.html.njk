@@ -125,7 +125,10 @@
         </div>
       </div>
     </section>
-
+     {% if site == 'vanguard' %}
+     {% else %}
+     <div class="border-division"></div>
+     {% endif %}    
     <div class="buttons pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
       <button id="btn-check-{{p.Code}}" name="btn-check" class="hidden btn-secondary" onclick="go_check();">
         {% literal texts, 'button-solicitar', L %}
