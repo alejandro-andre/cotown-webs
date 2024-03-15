@@ -2,11 +2,15 @@
 
   <!-- Photo carousel -->
   <section id="image-carousel" class="splide first-slider pure-u-1" aria-label="Beautiful Images">
-    <div class="title-button">
+    <div class="title-button {% if building.Tour_private %} with-tour {% else %} no-tour {% endif %}">
       <h1>{{building.Name}}</h1>
-      {% if building.Tour_private %}
+      {% if building.Tour_private %}  
       <button class="btn-secondary" onclick="open_tour('{{building.Tour_private}}')">
         {% literal texts, 'rooms-tour-virtual', L %}
+        {% if site == 'vanguard' %}
+        {% else %}
+          <div class="mini-border"></div>
+        {% endif %}
       </button>
       {% endif %}
     </div>
@@ -75,11 +79,20 @@
     <div class="text-first pure-u-23-24 pure-u-lg-12-24">
       {% if building.Tour_private %}
       <button class="btn-text">
-        <a href="#" onclick="open_tour('{{building.Tour_private}}')">{% literal texts, 'rooms-tour-virtual', L %}</a>
+        <a href="#" onclick="open_tour('{{building.Tour_private}}')">{% literal texts, 'rooms-tour-virtual', L %}
+          {% if site == 'vanguard' %}
+          {% else %}
+            <div class="mini-border"></div>
+          {% endif %}</a>
         </button>
       {% endif %}
       <button class="btn-text">
-        <a href="#barrio">{% literal texts, 'rooms-tu-barrio', L %}</a>
+        <a href="#barrio">{% literal texts, 'rooms-tu-barrio', L %}
+          {% if site == 'vanguard' %}
+          {% else %}
+            <div class="mini-border"></div>
+          {% endif %}
+        </a>
       </button>
     </div>
 

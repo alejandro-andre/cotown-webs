@@ -647,6 +647,14 @@ margin-bottom: 0.5em;
   justify-content: space-between;
   align-items: flex-end;
 }
+.first .first-contain.cotown .first-slider .title-button.with-tour {
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.first .first-contain.cotown .first-slider .title-button.no-tour {
+	justify-content: space-between;
+	align-items: flex-end;
+}
 .first .first-contain.cotown .first-slider .title-button h1 {
   font-size: var(--big-title);
   color: var(--black);
@@ -748,6 +756,7 @@ main.flat.cotown .rooms .all-rooms .card-room .right-data .share .title p{
 main.flat.cotown .rooms .all-rooms .card-room .right-data .share .sharing {
   margin: 0;
   padding: 0;
+  background: transparent;
 }
 main.flat.cotown .rooms .all-rooms .card-room .right-data .share .sharing .left label {
   font-size: var(--mini-title);
@@ -886,7 +895,10 @@ main.flat.cotown .last .last-zone .last-content .left .text p {
     text-transform: none;
   }
   main.flat.cotown .rooms .all-rooms .card-room {
-    background-color: var(--white);
+    background-color: var(--white);   
+  }
+  main.flat.cotown .rooms .all-rooms .card-room .right-data {
+    margin-bottom: 2em;
   }
   main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons.cotown button.btn-secondary,
   main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons.cotown button.btn-primary {
@@ -905,8 +917,7 @@ main.flat.cotown .last .last-zone .last-content .left .text p {
     text-transform: none;
     border: 1px solid var(--primary);
     border-radius: 25px;
-    background-color: var(--white);
-    margin-bottom: 2em;
+    background-color: var(--white);    
   }
   main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons button.btn-text .mini-border {
     display: none;
