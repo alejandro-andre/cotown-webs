@@ -321,7 +321,7 @@ padding-bottom: 0;
   }
   .locations .container-main .all-locations.cotown .locations-container .locations-list {
     background-color: var(--new-bg);
-    padding: 2em;
+    padding: 1em 2em 2em;
   }
   .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .text-content h2.location-title {
     font-size: var(--resp-subtitle);
