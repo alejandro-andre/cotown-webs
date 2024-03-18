@@ -684,6 +684,12 @@ span.turquoise {
 .container-header .black-line .left-nav .logo .desktop .img-logo {
 	height: 48px;
 }
+.container-header .black-line.cotown .left-nav .logo .desktop .img-logo.cotown {
+	height: 74px;
+	position: relative;
+	top: 10px;
+	left: -24px;
+}
 
 /* NAVIGATION MENU
 -------------------------------- */
@@ -711,6 +717,15 @@ span.turquoise {
 	font-weight: var(--semibold);
 	font-size: var(--tag-title);
 }
+.black-line.cotown .pure-menu.pure-menu-horizontal ul li {
+	display: inline;
+	float: right;
+	position: relative;
+	min-width: fit-content;
+	width: fit-content;
+	font-weight: var(--400);
+	font-size: var(--tag-title);
+}
 
 .black-line .pure-menu.pure-menu-horizontal ul li:last-of-type {
 	margin: 0 2em;
@@ -729,6 +744,13 @@ span.turquoise {
 	text-decoration: none;
 	color: var(--second-header-text);
 	font-weight: var(--semibold);
+	font-size: var(--tag-title);
+	line-height: 1.1em;
+}
+.black-line.cotown .pure-menu.pure-menu-horizontal ul li a {
+	text-decoration: none;
+	color: var(--second-header-text);
+	font-weight: var(--400);
 	font-size: var(--tag-title);
 	line-height: 1.1em;
 }
@@ -792,12 +814,12 @@ span.turquoise {
 
 /* SELECT
 -------------------------------- */
-li .locations-container {
+ul.black-menu li .locations-container {
 	display: block;
 	position: relative;
 }
 
-li .locations-container label.locations-label {
+ul.black-menu li .locations-container label.locations-label {
 	display: flex;
 	color: var(--primary-text);
 	cursor: pointer;
@@ -806,19 +828,19 @@ li .locations-container label.locations-label {
 	background-color: transparent;
 }
 
-li .locations-container label.locations-label .loc a {
+ul.black-menu li .locations-container label.locations-label .loc a {
 	font-size: var(--tag-title);
 	line-height: 1.1em;
 	font-weight: var(--semibold);
 	padding-left: 0.5em;
 }
 
-li .locations-container label.locations-label em {
+ul.black-menu li .locations-container label.locations-label em {
 	font-size: 22px;
 	margin: 0 0 0 0.4em;
 }
 
-li .locations-container .options-loc {
+ul.black-menu li .locations-container .options-loc {
 	width: 97%;
 	background-color: var(--secondary-header);
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
@@ -829,16 +851,16 @@ li .locations-container .options-loc {
 	z-index: 10;
 }
 
-li .locations-container .options-loc[data-toggle="close"] {
+ul.black-menu li .locations-container .options-loc[data-toggle="close"] {
 	display: none;
 }
 
-li .locations-container .options-loc .option-loc {
+ul.black-menu li .locations-container .options-loc .option-loc {
 	padding: 0 1em;
 	cursor: pointer;
 }
 
-li .locations-container .options-loc .option-loc a {
+ul.black-menu li .locations-container .options-loc .option-loc a {
 	display: flex;
 	color: var(--primary-text);
 	border-top: 1px solid var(--white);
@@ -848,11 +870,13 @@ li .locations-container .options-loc .option-loc a {
 	padding: 1em 0;
 }
 
-li .locations-container .options-loc .option-loc a:hover {
+ul.black-menu li .locations-container .options-loc .option-loc a:hover {
 	color: var(--primary);
 }
 
-
+ul.black-menu.cotown li .locations-container label.locations-label .loc a {	
+	font-weight: var(--400);
+}
 
 /* FORM
 -------------------------------- \*/

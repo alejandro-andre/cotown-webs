@@ -304,7 +304,8 @@ main .container-main .first-contain.home .title-big.home .h1-big h1 {
 
 main .container-main .first-contain.home.cotown .title-big.home .h1-big h1 {
     font-family: var(--text-font);
-    font-size: var(--big-title)
+    font-size: var(--big-title);
+    font-weight: var(--semibold);
 }
 
 main .container-main .first-contain.home .title-big.home .text {
@@ -391,7 +392,7 @@ main .container-main .first-contain.home.cotown .text p {
     text-align: left;
     padding: 1.5em 0 0 74px;
     font-family: var(--text-font);
-    font-weight: var(--regular);
+    font-weight: var(--semibold);
     font-size: var(--big-subtitle);
 }
 
@@ -448,6 +449,7 @@ main .container-main .first-contain.home.cotown .text p {
     font-weight: 400;
     margin: 0;
     line-height: 1.2;
+    padding-top: 0.4em;
 }
 
 .locations .carousel.cotown .text-slide .line {
@@ -560,7 +562,7 @@ main .container-main .first-contain.home.cotown .text p {
 .pisos.cotown .text-container h2.title {
     text-align: left;
     padding-left: 74px;
-    font-weight: var(--regular);
+    font-weight: var(--semibold);
     font-size: var(--big-subtitle);
 
 }
@@ -693,7 +695,7 @@ main .container-main .first-contain.home.cotown .text p {
 
 .servicios.cotown .text-container h2.title {
     font-family: var(--text-font);
-    font-weight: var(--regular);
+    font-weight: var(--semibold);
     font-size: var(--big-subtitle);
     text-transform: none;
 }
@@ -719,6 +721,8 @@ main .container-main .first-contain.home.cotown .text p {
     text-align: left;
     font-weight: var(--semibold);
     text-transform: uppercase;
+    margin-bottom: 0.5em;
+    min-height: 52px;
 }
 
 .servicios.cotown .servicios-container .services-cards .card p.text {
@@ -972,7 +976,7 @@ main .container-main .first-contain.home.cotown .text p {
     line-height: 40px;
     text-align: left;
     font-family: var(--text-font);
-    font-weight: var(--regular);
+    font-weight: var(--semibold);
     font-size: var(--big-subtitle);
     text-transform: none;
 }
@@ -1012,7 +1016,7 @@ main .container-main .first-contain.home.cotown .text p {
     font-family: var(--text-font);
     line-height: 40px;
     text-align: left;
-    font-weight: var(--regular);
+    font-weight: var(--semibold);
     font-size: var(--big-subtitle);
     text-transform: none;
     padding: 0;
@@ -1464,7 +1468,7 @@ main .container-main .first-contain.home.cotown .text p {
         text-align: left;
         padding: 1em 0 0.5em 24px;
         font-family: var(--text-font);
-        font-weight: var(--regular);
+        font-weight: var(--semibold);
         font-size: var(--subtitle);
     }
     
@@ -1476,7 +1480,7 @@ main .container-main .first-contain.home.cotown .text p {
         text-align: left;
         padding: 1em 0 0.5em 24px;
         font-family: var(--text-font);
-        font-weight: var(--regular);
+        font-weight: var(--semibold);
         font-size: var(--subtitle);
     }
     .pisos .container .img-container .img {

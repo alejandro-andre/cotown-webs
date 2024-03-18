@@ -456,7 +456,7 @@ button.green-button.btn-secondary {
     color: var(--white);
     position: static;
     font-size: var(--big-subtitle);
-    font-weight: var(--regular);
+    font-weight: var(--semibold);
     margin: 0.5em 0 0;
     line-height: 1;
 }

@@ -151,7 +151,7 @@
 <!-- Menu Desktop Horizontal y Mobile Vertical
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section class="container-header second pure-g">
-  <div class="black-line custom-wrapper pure-g" id="blackMenu">
+  <div class="black-line custom-wrapper pure-g {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}" id="blackMenu">
 
     <div class="left-nav pure-u-1 pure-u-lg-6-24">
 
@@ -181,7 +181,7 @@
 
     <!-- Menu movil -->
     <div class="right-nav pure-u-1 pure-u-xl-16-24 pure-u-lg-18-24 pure-menu pure-menu-horizontal custom-can-transform" id="menu">
-      <ul class="black-menu pure-menu-list" id="menu-desplegado">
+      <ul class="black-menu pure-menu-list {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}" id="menu-desplegado">
 
         <div class="only-mobile-menu pure-u-1" id="only-mobile-menu">
 
@@ -245,7 +245,7 @@
 
         <!-- Locations -->
         <li class="locations-dropdown pure-menu-item">
-          <div class="locations-container">
+          <div class="locations-container ">
             <label class="locations-label">
               <span class="loc"><a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['locations'].url}}.html">{{langs[L].pages['locations'].text}}</a></span>
             </label>
