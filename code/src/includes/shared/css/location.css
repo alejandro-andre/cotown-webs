@@ -554,9 +554,20 @@ section.necesities .grid .necesidad .p-text p {
 /* COTOWN NEW NECESITIES */
 
 section.necesities.cotown .grid {
-    width: 80%;
+    width: 84%;
 }
-
+section.necesities.cotown .grid .necesidad .p-title p {
+    font-weight: var(--semibold);
+    font-size: var(--text-title);
+    line-height: 1.5;
+    margin: 0;
+}
+section.necesities.cotown .grid .necesidad .p-text p {
+    font-weight: var(--regular);
+    font-size: var(--text);
+    line-height: 1.5;
+    margin: 0;
+}
 
 
 

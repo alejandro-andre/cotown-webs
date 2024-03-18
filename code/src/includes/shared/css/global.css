@@ -1858,7 +1858,9 @@ button.date-button input.inputs {
 		-ms-transition: height 0.5s;
 		transition: height 0.5s;
 	}
-
+	.container-header.second .black-line.cotown.custom-wrapper {
+		background-color: var(--new-bg);
+	}
 	.container-header.second .black-line.custom-wrapper.open {
 		height: 14em;
 	}
@@ -1883,6 +1885,17 @@ button.date-button input.inputs {
 		margin: 6px auto 0;
 		display: inline-flex;
 	}
+	.container-header .black-line.cotown .left-nav .logo .mobile h1 {
+		height: 57px;
+		margin: 0 auto;
+		padding: 0.2em 0;
+		display: inline-flex;
+	}
+	.container-header .black-line.cotown .left-nav .logo .mobile h1 .img-logo {
+		height: 62px;
+		margin: 0;
+		padding: 0;
+	}
 
 	.container-header.second .black-line .left-nav .booking {
 		padding-right: 1em;
@@ -1899,7 +1912,15 @@ button.date-button input.inputs {
 	.container-header.second .black-line .left-nav .booking button.btn-primary a {
 		color: var(--black) !important;
 	}
-
+	.container-header.second .black-line.cotown .left-nav .booking button.btn-primary {
+		background-color: var(--new-bg);
+		border: 1px solid var(--primary)!important;	
+		box-shadow: none;
+	}
+	.container-header.second .black-line.cotown .left-nav .booking button.btn-primary a {
+		font-weight: var(--regular);
+		text-transform: capitalize;
+	}
 	.container-header.second .black-line .left-nav .logo {
 		text-align: center;
 		height: 57px;
