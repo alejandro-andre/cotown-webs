@@ -45,6 +45,10 @@ select option:disabled {
 .only-desktop {
 	display: none;
 }
+.hidden {
+	display: none!important;
+}
+
 
 /* RESPONSIVE FONTS */
 @media only screen and (min-width: 1024px) {
@@ -434,9 +438,6 @@ main {
 	margin-top: 114px;
 	overflow: hidden;
 }
-.hidden {
-	display: none;
-}
 
 /* FIRST HEADER
 -------------------------------- \*/
@@ -457,7 +458,7 @@ main {
 	gap: 2em;
 }
 
-.container-header.first.hidden {
+.container-header.first .hidden {
 	display: none;
 }
 
@@ -467,16 +468,6 @@ main {
 
 .container-header.first.desktop-only {
 	display: none;
-}
-
-@media only screen and (min-width: 1024px) {
-	.container-header.first.mobile-only {
-		display: none;
-	}
-
-	.container-header.first.desktop-only {
-		display: flex;
-	}
 }
 
 .container-header.first .turquoise-line .left-content {
@@ -568,14 +559,6 @@ main {
 li .select-container {
 	display: block;
 	position: relative;	
-}
-li .select-container.cotown {
-	display: block;
-	position: relative;	
-	border: 1px solid var(--primary-ok);
-	border-radius: 8px;
-	padding: 0;
-	margin: 0 6px;
 }
 
 li .select-container label {
@@ -684,12 +667,7 @@ span.turquoise {
 .container-header .black-line .left-nav .logo .desktop .img-logo {
 	height: 48px;
 }
-.container-header .black-line.cotown .left-nav .logo .desktop .img-logo.cotown {
-	height: 74px;
-	position: relative;
-	top: 10px;
-	left: -24px;
-}
+
 
 /* NAVIGATION MENU
 -------------------------------- */
@@ -717,15 +695,7 @@ span.turquoise {
 	font-weight: var(--semibold);
 	font-size: var(--tag-title);
 }
-.black-line.cotown .pure-menu.pure-menu-horizontal ul li {
-	display: inline;
-	float: right;
-	position: relative;
-	min-width: fit-content;
-	width: fit-content;
-	font-weight: var(--400);
-	font-size: var(--tag-title);
-}
+
 
 .black-line .pure-menu.pure-menu-horizontal ul li:last-of-type {
 	margin: 0 2em;
@@ -747,13 +717,7 @@ span.turquoise {
 	font-size: var(--tag-title);
 	line-height: 1.1em;
 }
-.black-line.cotown .pure-menu.pure-menu-horizontal ul li a {
-	text-decoration: none;
-	color: var(--second-header-text);
-	font-weight: var(--400);
-	font-size: var(--tag-title);
-	line-height: 1.1em;
-}
+
 
 .black-line .pure-menu.pure-menu-horizontal ul li button.nav-select {
 	display: inline-block;
@@ -874,9 +838,7 @@ ul.black-menu li .locations-container .options-loc .option-loc a:hover {
 	color: var(--primary);
 }
 
-ul.black-menu.cotown li .locations-container label.locations-label .loc a {	
-	font-weight: var(--400);
-}
+
 
 /* FORM
 -------------------------------- \*/
@@ -995,50 +957,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	display: none;
 }
 
-/* COTOWN NEW */
-@media only screen and (min-width: 1024px) {
 
-	main .container-main section.form.cotown .form-container .campo select,
-	main .container-main section.form.cotown .form-container .campo input,
-	main .container-main section.form.cotown .form-container .campo input:focus-visible,
-	main .container-main section.form.cotown .form-container .campo.add-file .select,
-	main .container-main section.form.cotown .form-container .campo textarea,  main.contact.cotown .container-main section.form.cotown select {
-	font-size: var(--mini-title);
-	border: 0px;
-	border-bottom: 1px solid var(--black);
-	border-radius: 0;
-	outline-offset: 0;
-	outline: -webkit-focus-ring-color auto 0px;
-	background-color: var(--primary-background);
-	box-shadow: none;
-}
-
-main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] {
-	font-size: var(--mini-title);
-	border: 0px;
-	border-radius: 0;
-	outline-offset: 0;
-	outline: -webkit-focus-ring-color auto 0px;
-	background-color: var(--primary-background)!important;
-	box-shadow: none;
-}
-main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] span {
-	display: flex;
-}
-main .container-main section.form .form-container .campo.add-file .select .icon-corchete-down {
-	font-size: 24px;
-	margin-left: 4px;
-}
-main .container-main section.form.cotown .form-container button.btn-secondary {
-	background-color: var(--primary-old);
-	color: var(--white);
-	border-radius: 10px;
-	border: 0;
-	box-shadow: none;
-}
-
-/* _________________ */
-}
 
 /* CAMPO ADD FILE
 -------------------------------- */
@@ -1130,27 +1049,8 @@ main .container-main section.form .form-container button.btn-secondary {
 	margin: 2em 0 1em;
 	padding: 20px 40px;
 	height: 54px;
-	font-size: 22px;
+	font-size: var(--mini-title);
 }
-
-
-/* FORM ABOUT-US COTOWN Y RESPONSIVE */
-
-@media only screen and (max-width: 1023.9px) {
-	main .container-main section.form.cotown .form-container .campo.add-file .select {
-		width: 80%;
-	}
-	main .container-main section.form.cotown .form-container .campo.add-file .select .selected {
-		position: relative;
-		display: block;
-		height: 54px;
-		width: 122%;
-	}
-}
-/* -------------------------------------
-             FORM END */
-
-
 
 /* ICONOS CHAT */
 .iconos-chat {
@@ -1177,19 +1077,12 @@ main .container-main section.form .form-container button.btn-secondary {
 	justify-content: center;
 	align-items: center;
 }
-.iconos-chat.cotown div {
-	background-color: transparent;	
-}
 
 .iconos-chat div em {
 	color: var(--primary-text);
 	font-size: 32px;
 }
 
-.iconos-chat.cotown div em {
-	color: var(--secondary-button-fill);
-	font-size: 32px;
-}
 
 /* BOT CSS override */
 #butonImgWidgetClose {
@@ -1401,6 +1294,7 @@ button.date-button input.inputs {
     height: 96%;
     position: relative;
 } */
+
 .popup h2 {
 	margin-top: 0;
 	color: #333;
@@ -1458,15 +1352,6 @@ button.date-button input.inputs {
 	margin: -10px 0 5px 0;
 }
 
-/* RESPONSIVE
--------------------------------- \*/
-/* XL DESKTOP */
-@media only screen and (min-width: 1600px) {
-	.btn-primary.search.desktop {
-		font-size: 20px;
-	}
-}
-
 .banner-residences {
 	margin: 0;
 	background-color: var(--primary);
@@ -1516,6 +1401,14 @@ button.date-button input.inputs {
 }
 
 /* DESKTOP */
+/* RESPONSIVE
+-------------------------------- \*/
+/* XL DESKTOP */
+@media only screen and (min-width: 1600px) {
+	.btn-primary.search.desktop {
+		font-size: 20px;
+	}
+}
 @media only screen and (min-width: 1280px) {
 	.container-header.first .turquoise-line {
 		margin: 0 4em;
@@ -1525,7 +1418,6 @@ button.date-button input.inputs {
 		padding: 0.2em 4em 0;
 	}
 }
-
 @media only screen and (min-width: 1024px) {
 	header {
 		position: fixed;
@@ -1533,7 +1425,13 @@ button.date-button input.inputs {
 		left: 0;
 		z-index: 1000;
 	}
+	.container-header.first.mobile-only {
+		display: none;
+	}
 
+	.container-header.first.desktop-only {
+		display: flex;
+	}
 	.container-header.first .turquoise-line .banner-container .spot .close {
 		display: none;
 	}
@@ -1749,19 +1647,10 @@ button.date-button input.inputs {
 	}
 
 	/* SECCIÓN HEADER */
-	.container-header.first .turquoise-line {
-		width: 100%;
-		margin: 0;
-	}
-
 	.container-header.first {
 		color: var(--primary-text);
 		background-color: var(--primary);
-		margin: auto;
 		padding: 0;
-	}
-
-	.container-header.first {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;
@@ -1769,6 +1658,10 @@ button.date-button input.inputs {
 		margin: 0;
 		height: 48px;
 		gap: 2em;
+	}
+	.container-header.first .turquoise-line {
+		width: 100%;
+		margin: 0;
 	}
 
 	.container-header.first .turquoise-line .left-content {
@@ -1779,14 +1672,19 @@ button.date-button input.inputs {
 		gap: 1em;
 		padding: 0 16px;
 		width: 100%;
+		align-items: center;
 	}
 
 	.container-header.first .turquoise-line .left-content .banner-container {
 		width: 100%;
 		gap: 1em;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	.container-header.first .left-content .banner-container .spot {
+	.container-header.first .turquoise-line .left-content .banner-container .spot {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;
@@ -1794,16 +1692,16 @@ button.date-button input.inputs {
 		gap: 16px;
 	}
 
-	.container-header.first .left-content .banner-container .spot .close {
+	.container-header.first .turquoise-line .left-content .banner-container .spot .close {
 		cursor: pointer;
 	}
 
-	.container-header.first .left-content .banner-container .spot .close em {
+	.container-header.first .turquoise-line .left-content .banner-container .spot .close em {
 		font-size: var(--tag-title);
 		color: var(--white);
 	}
 	
-	.container-header.first .left-content .banner-container .spot h1 {
+	.container-header.first .turquoise-line .left-content .banner-container .spot h1 {
 		font-family: var(--text-font);
 		font-size: var(--resp-mini-title);
 		font-style: normal;
@@ -1817,7 +1715,8 @@ button.date-button input.inputs {
 		width: 100%;
 	}
 
-	.container-header.first .left-content .banner-container a button.btn-primary {
+
+	.container-header.first .turquoise-line .left-content .banner-container a button.btn-primary {
 		font-family: var(--resp-mini-title);
 		font-size: var(--mini-title);
 		font-style: normal;
@@ -1829,18 +1728,6 @@ button.date-button input.inputs {
 		border: none;
 		border-radius: 0px;
 		box-shadow: none;
-	}
-
-	.container-header.first .turquoise-line .left-content {
-		align-items: center;
-	}
-
-	.container-header.first .turquoise-line .left-content .banner-container {
-		width: 100%;
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		align-items: center;
 	}
 
 	.container-header.first .right-content {
@@ -1858,9 +1745,7 @@ button.date-button input.inputs {
 		-ms-transition: height 0.5s;
 		transition: height 0.5s;
 	}
-	.container-header.second .black-line.cotown.custom-wrapper {
-		background-color: var(--new-bg);
-	}
+
 	.container-header.second .black-line.custom-wrapper.open {
 		height: 14em;
 	}
@@ -1885,17 +1770,6 @@ button.date-button input.inputs {
 		margin: 6px auto 0;
 		display: inline-flex;
 	}
-	.container-header .black-line.cotown .left-nav .logo .mobile h1 {
-		height: 57px;
-		margin: 0 auto;
-		padding: 0.2em 0;
-		display: inline-flex;
-	}
-	.container-header .black-line.cotown .left-nav .logo .mobile h1 .img-logo {
-		height: 62px;
-		margin: 0;
-		padding: 0;
-	}
 
 	.container-header.second .black-line .left-nav .booking {
 		padding-right: 1em;
@@ -1912,15 +1786,7 @@ button.date-button input.inputs {
 	.container-header.second .black-line .left-nav .booking button.btn-primary a {
 		color: var(--black) !important;
 	}
-	.container-header.second .black-line.cotown .left-nav .booking button.btn-primary {
-		background-color: var(--new-bg);
-		border: 1px solid var(--primary)!important;	
-		box-shadow: none;
-	}
-	.container-header.second .black-line.cotown .left-nav .booking button.btn-primary a {
-		font-weight: var(--regular);
-		text-transform: capitalize;
-	}
+
 	.container-header.second .black-line .left-nav .logo {
 		text-align: center;
 		height: 57px;
@@ -2309,11 +2175,7 @@ button.date-button input.inputs {
 	main .container-main section.form {
 		padding: 2em 1em;
 	}
-	main .container-main section.form.cotown h2 {
-		text-align: start;
-		font-size: var(--resp-title);
-		font-weight: var(--semibold);
-	}
+
 
 	main .container-main section.form .form-container {
 		padding: 0;
@@ -2340,27 +2202,7 @@ button.date-button input.inputs {
 		width: 94%;
 	}
 
-	/* COTOWN NEW */
 
-	main .container-main section.form .form-container .campo.add-file .select .icon-corchete-down {
-		display: none;
-	}
-	main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] {	
-		border-radius: 63px;
-	}
-	main .container-main section.form.cotown .form-container button.btn-secondary {
-		width: 100%;
-		justify-content: center;
-		background-color: transparent;
-		color: var(--black);
-		border-radius: 63px;
-		border: 1px solid var(--black);
-		box-shadow: none;
-	}
-	
-	main .container-main section.form .form-container button.btn-secondary {
-		font-size: var(--mini-title);
-	}
 
 	/* POPUP RESERVAS MOBILE ___________________________*/
 	.popup {
@@ -2575,3 +2417,228 @@ button.date-button input.inputs {
 	object-fit: cover;
 	object-position: center center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COTOWN NEW */
+
+.container-header.first .turquoise-line.cotown .left-content .spot {
+	align-items: center;
+	margin: auto 0;
+}
+
+.black-line.cotown .pure-menu.pure-menu-horizontal ul li {
+	display: inline;
+	float: right;
+	position: relative;
+	min-width: fit-content;
+	width: fit-content;
+	font-weight: var(--400);
+	font-size: var(--tag-title);
+}	
+
+.black-line.cotown .pure-menu.pure-menu-horizontal ul li a {
+	text-decoration: none;
+	color: var(--second-header-text);
+	font-weight: var(--400);
+	font-size: var(--tag-title);
+	line-height: 1.1em;
+}
+
+/* HEADER SELECT
+-------------------------------- \*/
+
+li .select-container.cotown {
+	display: block;
+	position: relative;	
+	border: 1px solid var(--primary-ok);
+	border-radius: 8px;
+	padding: 0;
+	margin: 0 6px;
+}
+
+.container-header .black-line.cotown .left-nav .logo .desktop .img-logo.cotown {
+	height: 74px;
+	position: relative;
+	top: 10px;
+	left: -24px;
+}	
+
+.container-header.first .turquoise-line.cotown .left-content .banner-container .spot h1 {
+	font-family: var(--text-font);
+	font-size: var(--mini-title);
+	font-style: normal;
+	font-weight: var(--light);
+	line-height: 1;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: var(--primary-text);
+	margin: 0;
+	min-width: fit-content;
+	width: 100%;
+}
+.container-header.second .black-line.cotown.custom-wrapper {
+	background-color: var(--new-bg);
+	box-shadow: 0px 2.93014px 5.86028px rgba(0, 0, 0, 0.15);
+}
+.container-header .black-line.cotown .left-nav .logo .mobile h1 {
+	height: 57px;
+	margin: 0 auto;
+	padding: 0.2em 0;
+	display: inline-flex;
+}
+.container-header .black-line.cotown .left-nav .logo .mobile h1 .img-logo {
+	height: 62px;
+	margin: 0;
+	padding: 0;
+}
+.container-header.second .black-line.cotown .left-nav .booking button.btn-primary {
+	background-color: var(--new-bg);
+	border: 1px solid var(--primary)!important;	
+	box-shadow: none;
+}
+.container-header.second .black-line.cotown .left-nav .booking button.btn-primary a {
+	font-weight: var(--regular);
+	text-transform: capitalize;
+}
+
+main .container-main section.form .form-container .campo.add-file .select .icon-corchete-down {
+	display: none;
+}
+main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] {	
+	border-radius: 63px;
+}
+main .container-main section.form.cotown .form-container button.btn-secondary {
+	width: 100%;
+	justify-content: center;
+	background-color: transparent;
+	color: var(--black);
+	border-radius: 63px;
+	border: 1px solid var(--black);
+	box-shadow: none;
+}
+
+/* ICONOS CHAT */
+
+.iconos-chat.cotown {
+	padding: 0.5em 0 0.9em 0;		
+	text-align: right;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 4em;
+	z-index: 9999;
+}
+.iconos-chat.cotown div {
+	background-color: transparent;	
+}
+.iconos-chat.cotown div em {
+	color: var(--secondary-button-fill);
+	font-size: 32px;
+}
+
+ul.black-menu.cotown li .locations-container label.locations-label .loc a {	
+	font-weight: var(--400);
+}
+/* COTOWN NEW DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+
+	main .container-main section.form.cotown .form-container .campo select,
+	main .container-main section.form.cotown .form-container .campo input,
+	main .container-main section.form.cotown .form-container .campo input:focus-visible,
+	main .container-main section.form.cotown .form-container .campo.add-file .select,
+	main .container-main section.form.cotown .form-container .campo textarea,  main.contact.cotown .container-main section.form.cotown select {
+		font-size: var(--mini-title);
+		border: 0px;
+		border-bottom: 1px solid var(--black);
+		border-radius: 0;
+		outline-offset: 0;
+		outline: -webkit-focus-ring-color auto 0px;
+		background-color: var(--primary-background);
+		box-shadow: none;
+	}
+	main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] {
+		font-size: var(--mini-title);
+		border: 0px;
+		border-radius: 0;
+		outline-offset: 0;
+		outline: -webkit-focus-ring-color auto 0px;
+		background-color: var(--primary-background)!important;
+		box-shadow: none;
+	}
+	main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] span {
+		display: flex;
+	}
+	main .container-main section.form .form-container .campo.add-file .select .icon-corchete-down {
+		font-size: 24px;
+		margin-left: 4px;
+	}
+	main .container-main section.form.cotown .form-container button.btn-secondary {
+		background-color: var(--primary-old);
+		color: var(--white);
+		border-radius: 10px;
+		border: 0;
+		box-shadow: none;
+	}
+}
+
+/* FORM ABOUT-US COTOWN Y RESPONSIVE */
+
+@media only screen and (max-width: 1023.9px) {
+
+	.container-header.first .turquoise-line.cotown .left-content {
+		padding: 0 8px;
+	}
+	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot {
+		justify-content: flex-start;
+		gap: 8px
+	}
+	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot h1 {
+		letter-spacing: 0px;
+		font-size: var(--resp-mini-title);
+	}
+	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot .close {
+		margin: auto 0;
+		padding: 0;
+	}
+	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot .close em {
+		font-size: var(--resp-text);
+		color: var(--white);
+	}
+	.container-header.first .turquoise-line.cotown .left-content .banner-container a button.btn-primary {
+		font-weight: var(--bold);
+		line-height: 1.4;
+		font-size: var(--resp-mini-title);
+	}
+	main .container-main section.form.cotown h2 {
+		text-align: start;
+		font-size: var(--resp-title);
+		font-weight: var(--semibold);
+	}
+	main .container-main section.form.cotown .form-container .campo.add-file .select {
+		width: 80%;
+	}
+	main .container-main section.form.cotown .form-container .campo.add-file .select .selected {
+		position: relative;
+		display: block;
+		height: 54px;
+		width: 122%;
+	}
+}
+/* ------  FORM END -------------- */
+

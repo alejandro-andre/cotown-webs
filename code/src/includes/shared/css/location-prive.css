@@ -500,12 +500,7 @@ button.green-button.btn-secondary {
     right: 0;
 }
 
-section.map {
-    background-color: var(--prive-bg);
-}
-#map {
-    margin: 0 0 6em;
-}
+
 
 section.necesities {
     background-color: var(--prive-bg);
@@ -586,8 +581,22 @@ section.necesities .grid .necesidad .p-text p {
 /* COTOWN NEW NECESITIES */
 
 section.necesities.cotown .grid {
-    width: 80%;
+    width: 84%;
 }
+section.necesities.cotown .grid .necesidad .p-title p {
+    font-weight: var(--semibold);
+    font-size: var(--text-title);
+    line-height: 1.5;
+    margin: 0;
+}
+section.necesities.cotown .grid .necesidad .p-text p {
+    font-weight: var(--regular);
+    font-size: var(--text);
+    line-height: 1.5;
+    margin: 0;
+}
+
+
 
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
@@ -977,12 +986,21 @@ section.necesities.cotown .grid {
 }
 
 /* MAP */
+section.map {
+    background-color: var(--prive-bg);
+}
+#map {
+    margin: 0 0 6em;
+}
 .map {
     width: 100%;
     height: 600px;
 }
 .map a {
     font-size: 12px;
+}
+.leaflet-tile-container {
+    filter: grayscale(100%) contrast(1.2) brightness(0.6) sepia(0.6) hue-rotate(80deg);
 }
 .map .leaflet-popup-content-wrapper {
     text-align: left !important;

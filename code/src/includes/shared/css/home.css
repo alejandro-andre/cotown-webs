@@ -323,7 +323,7 @@ main .container-main .first-contain.home .text {
 main .container-main .first-contain.home .text p {
     font-weight: var(--regular);
     font-size: var(--text);
-    line-height: 130%;
+    line-height: 1.3;
 }
 
 main .container-main .first-contain.home.cotown .text p {
@@ -1105,7 +1105,7 @@ main .container-main .first-contain.home.cotown .text p {
 
 .opinions.cotown .slide p.bold {
     font-weight: var(--regular);
-    font-size: 22px;
+    font-size: var(--text-title);
     margin: 0px;
 }
 
@@ -1114,6 +1114,14 @@ main .container-main .first-contain.home.cotown .text p {
     margin: 0px;
     color: var(--grey-light);
     line-height: 20px;
+}
+
+.opinions.cotown .slide p.date {
+    font-size: var(--text);
+    font-weight: var(--regular);
+    margin: 0px;
+    color: var(--primary);
+    line-height: 1.5;
 }
 
 .opinions .slide .opinion h3.comillas {
@@ -1306,22 +1314,9 @@ main .container-main .first-contain.home.cotown .text p {
     .main-header {
         flex-flow: row wrap;
     }
-
     .main-header .left {
         order: 2;
         position: relative;
-        width: 100%;
-        margin: -5px 0;
-        padding: 1em 1em 3em;
-        color: var(--black);
-        background-color: var(--primary-background);
-        border-radius: 0;
-    }
-
-    .main-header .left.cotown {
-        order: 2;
-        position: relative;
-        top: 0;
         width: 100%;
         margin: -5px 0;
         padding: 1em 1em 3em;
@@ -1381,14 +1376,7 @@ main .container-main .first-contain.home.cotown .text p {
         position: absolute;
         top: 1em;
         left: 1em;
-    }
-    .main-header .video.cotown .text-container.mobile {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        padding: 2em;
-        background-color: var(--box-bg);        
-    }
+    }    
 
     .main-header .video.vanguard .text-container.mobile h1 {
         color: var(--primary-text);
@@ -1408,19 +1396,6 @@ main .container-main .first-contain.home.cotown .text p {
         order: 1;
     }
 
-    .main-header .video.cotown {
-        position: relative;
-        top: 0;
-        left: 0;
-        max-width: 100%;
-        width: 100%;
-        order: 1;
-    }
-
-    main .container-main .first-contain.home.cotown {
-        background-color: var(--white);
-    }
-
     main .container-main .first-contain.home .title-big.home {
         margin: 4em auto 2em
     }
@@ -1431,7 +1406,6 @@ main .container-main .first-contain.home.cotown .text p {
         text-align: left;
     }
 
-
     main .container-main .first-contain.home .title-big.home p {
         font-size: var(--text);
         line-height: 30px;
@@ -1439,50 +1413,121 @@ main .container-main .first-contain.home.cotown .text p {
         text-align: left;
     }
 
-    main .container-main .first-contain.home .title-big.home .h1-big.cotown h1 {
-        font-family: var(--text-font);
-        font-size: var(--resp-title);
+    
+
+    /* COTOWN */
+
+    .main-header .video.cotown {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 100%;
         width: 100%;
-        font-weight: var(--regular);
-        line-height: 1.05;
+        order: 1;
     }
+    .main-header .video.cotown .text-container.mobile {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 2em;
+        background-color: var(--box-bg);        
+    }       
     .main-header .video.cotown .text-container.mobile h1 {
         color: var(--black);
-        font-weight: var(--400);
+        font-weight: var(--semibold);
+        font-size: var(--resp-middle-subtitle);
+        line-height: 1.2;
+        text-align: left;        
+    }
+    .main-header .video.cotown .text-container.mobile h1 span {
+        font-family: var(--title-font);
         font-size: var(--resp-title);
-        line-height: 100%;
+        line-height: 1;
+        margin: 0;
+        font-weight: var(--bold);
+    }   
+    .main-header .left.cotown {
+        order: 2;
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 1em 1em 1.5em;
+        color: var(--black);
+        background-color: var(--primary-background);
+        border-radius: 0;
+    }
+    .main-header .left.cotown .basic-searcher label {
+        font-size: var(--resp-mini-title);
+        font-weight: var(--semibold);
+    }
+    .main-header .left.cotown .basic-searcher select {
+        font-size: var(--resp-text);
+        font-weight: var(--regular);
+    }
+    .main-header .left.cotown .button-search {
+        height: fit-content;
+    }
+    .main-header .left.cotown .button-search a {
+        width: 100%;
+        height: fit-content;
+    }
+    .main-header .left.cotown .button-search button.search.mobile {
+        position: static;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--resp-mini-title);
+        color: var(--primary);
+        box-shadow: none;
+        border: 1px solid var(--primary);
+        background-color: var(--primary-background);
+        padding: 0;
+        margin: 1em 0 0;        
+    }
+    main .container-main .first-contain.home.cotown {
+        background-color: var(--white);
+    }
+    main .container-main .first-contain.home.cotown .title-big.home {
+        margin: 4em auto 0;
+    }
+    main .container-main .first-contain.home.cotown .title-big.home .h1-big.cotown h1 {
+        font-family: var(--text-font);
+        font-size: var(--resp-middle-subtitle);
+        width: 100%;
+        font-weight: var(--semibold);
+        line-height: 1;
+    }
+    main .container-main .first-contain.home.cotown .title-big.home .text {
+        padding: 0;
+    }
+    main .container-main .first-contain.home.cotown .title-big.home p {
+        font-size: var(--resp-text);
+        font-weight: var(--regular);
+        line-height: 1.5;
+        margin: 0 0 0.5em;
         text-align: left;
     }
 
-    .main-header .video.cotown .text-container.mobile h1 span {
-        font-family: var(--title-font);
-        font-size: var(--resp-big-title);
-        line-height: 74px;
-        margin: 0;
-        font-weight: var(--bold);
-    }
-
+    
     /* HOME SECTIONS */
+
 
     .locations .text-container h2.title.cotown {
         text-align: left;
-        padding: 1em 0 0.5em 24px;
+        padding: 0em 0 0.8em 24px;
         font-family: var(--text-font);
         font-weight: var(--semibold);
-        font-size: var(--subtitle);
+        font-size: var(--resp-middle-subtitle);
     }
-    
+
     .locations .carousel h3 {
         font-size: var(--resp-title);
     }
-    
-    .pisos.cotown .text-container h2.title {
-        text-align: left;
-        padding: 1em 0 0.5em 24px;
-        font-family: var(--text-font);
-        font-weight: var(--semibold);
-        font-size: var(--subtitle);
-    }
+ 
+  
     .pisos .container .img-container .img {
         margin-bottom: 8px;
         margin-right: 0;
@@ -1503,51 +1548,10 @@ main .container-main .first-contain.home.cotown .text p {
     .pisos .container .img-container .img-title2 .subrayado {
         bottom: 86px;
     }
-    .pisos.cotown .container .img-container .img-title.cotown.second{
-        left: 0;
-        max-width: fit-content;
-    }
-   
-
-    .servicios.cotown .text-container h2.title {
-        font-family: var(--text-font);
-        font-weight: var(--semibold);
-        font-size: var(--resp-big-subtitle);
-    }
     .opinions .text-container {
         padding: 1em 0 0;
     }
-    .opinions.cotown .text-container {
-        padding: 1.5em 0 1em 1.5em;
-    }
-    .opinions.cotown .text-container h2.title {       
-        font-size: var(--resp-big-subtitle);
-    }
-    .servicios.cotown {
-        background-color: var(--white);
-    }
-    .servicios.cotown .servicios-container {
-        padding: 1em;
-    }
-    .servicios.cotown .servicios-container .services-cards .card {
-        width: calc(50% - 32px);
-        align-items: center;
-    }
-    .servicios .servicios-container .services-cards .card img, .servicios .servicios-container .services-cards .card svg {
-        width: 60px;
-    }
-    .servicios.cotown .servicios-container .services-cards .card p.bold {
-        font-size: var(--resp-mini-title);
-        line-height: 1.2;
-        text-align: center;
-        margin-bottom: 0.5em;
-    }
-    .servicios.cotown .servicios-container .services-cards .card p.text {
-        font-size: var(--resp-text);
-        line-height: 1.2;
-        text-align: center;
 
-    }
     .cotownity {
         display: none;
     }
@@ -1625,14 +1629,146 @@ main .container-main .first-contain.home.cotown .text p {
         margin-top: 1em;
     }
 
+
+    /* COTOWN */
+
+    .locations.cotown {
+        margin: 0;
+    }
+    .locations.cotown .carousel.cotown .splide__pagination{
+        bottom: 3.5em;
+    }
+    .locations.cotown .carousel.cotown .splide__pagination__page {
+        top: 0;
+        width: 8px;
+        height: 8px;
+    }
+    
+    .pisos.cotown .text-container h2.title {
+        text-align: left;
+        padding: 0 0 0.5em 24px;
+        font-family: var(--text-font);
+        font-weight: var(--semibold);
+        font-size: var(--resp-middle-subtitle);
+    }
+    .pisos.cotown .container .img-container .img-title.cotown.second{
+        left: 0;
+        max-width: fit-content;
+    }
+
+    .opinions.cotown {
+        padding-bottom: 0;
+    }
+    .opinions.cotown .text-container {
+        padding: 1.5em 0 1em 1.5em;
+    }
+    .opinions.cotown .text-container h2.title {       
+        font-size: var(--resp-middle-subtitle);
+        line-height: 1.2;
+    }
+    .opinions.cotown .slide .avatar img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+    }
+    .opinions.cotown .slide .opinion {
+        padding-top: 0;
+    }
+    .opinions.cotown .slide p.bold {
+        font-weight: var(--regular);
+        font-size: var(--resp-text-title);
+        margin: 0px;
+    }
+    .opinions.cotown .slide p.date {
+        font-size: var(--resp-text);        
+    }
+    .opinions.cotown .slide .opinion ul.stars {
+        padding: 0 0 0 1em;
+    }
+    .opinions.cotown .slide .opinion ul.stars.cotown li em.icon-star {
+        font-size: var(--resp-mini-title);
+    }
+    .opinions.cotown .slide p.text {
+        font-size: var(--resp-text);
+        font-weight: var(--400);
+        line-height: 1.5;
+        margin: 1em 0 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        min-height: 100px;
+        width: 100%;
+    }
+    .opinions.cotown .slide .mini-border {
+        margin: 0em auto 0;
+    }
+    .opinions.cotown .splide__pagination {
+        bottom: 3em!important;
+    }
+    .opinions.cotown .splide__pagination__page {
+        top: 0;
+        width: 8px;
+        height: 8px;
+    }
+
+    .servicios.cotown {
+        background-color: var(--white);
+    }
+    .servicios.cotown .servicios-container {
+        padding: 1em;
+    }
+    .servicios.cotown .servicios-container .services-cards .card {
+        width: calc(50% - 32px);
+        align-items: center;
+    }
+    .servicios .servicios-container .services-cards .card img, .servicios .servicios-container .services-cards .card svg {
+        width: 60px;
+    }
+    .servicios.cotown .text-container h2.title {
+        font-family: var(--text-font);
+        font-weight: var(--semibold);
+        font-size: var(--resp-middle-subtitle);
+    }
+    .servicios.cotown .servicios-container .services-cards .card p.bold {
+        font-size: var(--resp-mini-title);
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    .servicios.cotown .servicios-container .services-cards .card p.text {
+        font-size: var(--resp-text);
+        line-height: 1.2;
+        text-align: center;
+
+    }
+
+    .cotownity-mobile .container-cotownity.cotown .container-img .left {
+        width: 50%;
+    }
+    .cotownity-mobile .container-cotownity.cotown .container-img .left h2 {
+        width: 100%;
+        font-size: var(--resp-middle-subtitle);
+        line-height: 1.2;
+    }
+    .cotownity-mobile .container-cotownity.cotown .container-img .left h2.title-feel {
+        font-size: var(--resp-mini-title);
+        text-transform: lowercase;
+        line-height: 1;
+        margin: 0.5em 0 0;
+    }
+    
     .partners.cotown .text-container {
         padding: 1.5em 0 1em 1.5em;
     }
     .partners.cotown .text-container h2 {
         padding: 0;
-        font-size: var(--resp-big-subtitle);
+        font-size: var(--resp-subtitle);
     }
 
+  
 }
 
 /* MOVIL */

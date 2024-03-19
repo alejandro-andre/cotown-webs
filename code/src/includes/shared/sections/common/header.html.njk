@@ -14,7 +14,7 @@
 {% for b in banners | find('Page', 'eq', 'home') %}
 {% if loop.index == 1 and b | length > 0 %}
 <section class="container-header mobile-only first pure-g hidden" id="banner_{{b.id}}">
-  <div class="turquoise-line pure-u-1-2 pure-u-lg-1" >
+  <div class="turquoise-line pure-u-1-2 pure-u-lg-1 {% if site == 'vanguard' %} vanguard  {% else %} cotown {% endif %}" >
     <div class="left-content pure-u-md-1-2 pure-u-1" >
       <div class="banner-container pure-u-1">
         <div class="spot">
@@ -36,7 +36,7 @@
 <!-- Desktop first header
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section class="container-header desktop-only first pure-g">
-  <div class="turquoise-line pure-u-14-24 pure-u-lg-1" >
+  <div class="turquoise-line pure-u-14-24 pure-u-lg-1 {% if site == 'vanguard' %} vanguard  {% else %} cotown {% endif %}" >
 
     <!-- Banner
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
