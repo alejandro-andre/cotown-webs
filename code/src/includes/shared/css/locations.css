@@ -25,13 +25,7 @@
   margin: 0 0 0.3em;
   text-align: var(--align-title);
 }
-.locations .container-main .all-locations .locations-container .text-container.cotown h1.title-where {
-  font-family: var(--text-font);
-  font-size: var(--big-title);
-  font-weight: var(--semibold);
-  margin: 0 0 0.3em;
-  text-align: var(--align-title);
-}
+
 .locations .container-main .all-locations .locations-container .locations-list {
   padding: 0;
 }
@@ -55,112 +49,12 @@
   font-weight: var(--semibold);
   margin-top: 16px;
 }
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list, .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list {
+.locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 4%;
-}
-
-/* SOLO COTOWN */
-.locations .container-main .all-locations.cotown .locations-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: var(--align-title);
-  align-items: flex-start;
-  padding: 40px 0 0;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list {
-  background-color: var(--new-bg);
-  padding: 40px 2em 2em 4em;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: stretch;
-  align-items: flex-start;
-  width: 100%; 
-  margin: 0;
-  position: relative;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location {
-  position: relative;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: stretch;
-  align-items: flex-start;
-  width: 100%; 
-  border: none;
-  padding-bottom: 2em;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location:last-of-type {
-margin-bottom: 0;
-padding-bottom: 0;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content.cotown h2.location-title {
-  font-family: var(--text-font);
-  font-size: var(--subtitle);
-  font-weight: var(--400);
-  line-height: 1.2;
-  letter-spacing: -0.6px;
-  margin: 0 0 16px 0;
-  text-align: start;
-  text-transform: none;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content p {
-  font-size: var(--text);
-  font-weight: var(--regular);
-  line-height: 1.2; 
-  margin: 0;
-  padding-right: 20px;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img-text .img-cont {   
-  width: 25%;
-  margin-right: 24px;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img-text .img-cont .img {
-  border-radius: var(--radius-2);
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center center;  
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img img {  
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content {
-  padding-top: 0;
-  width: calc(75% - 24px) !important;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list {
-  margin-left: 3em;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  outline: 0px;
-  cursor: pointer;
-  max-width: 156px;
-  width: 28%;
-  max-height: 156px;
-  height: auto;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a .label-content .mini-border {
-  width: 20px;
-  height: 1px;
-  margin: 0.5em auto 0.8em;
-  background-color: var(--primary-old);
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a img.img {
-  display: none;
-}
-.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a .label-content img.icon {
-  width: 40px;
 }
 
 /* SOLO VANGUARD */
@@ -284,6 +178,123 @@ padding-bottom: 0;
   margin: 0 8px 16px;
 }
 
+
+/* COTOWN NEW */
+
+.locations .container-main .all-locations .locations-container .text-container.cotown h1.title-where {
+  font-family: var(--text-font);
+  font-size: var(--big-title);
+  font-weight: var(--semibold);
+  margin: 0 0 0.3em;
+  text-align: var(--align-title);
+}
+  /* SOLO COTOWN */
+.locations .container-main .all-locations.cotown .locations-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: var(--align-title);
+  align-items: flex-start;
+  padding: 40px 0 0;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list {
+  background-color: var(--new-bg);
+  padding: 40px 2em 2em 4em;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: stretch;
+  align-items: flex-start;
+  width: 100%; 
+  margin: 0;
+  position: relative;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: stretch;
+  align-items: flex-start;
+  width: 100%; 
+  border: none;
+  padding-bottom: 2em;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location:last-of-type {
+margin-bottom: 0;
+padding-bottom: 0;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content.cotown h2.location-title {
+  font-family: var(--text-font);
+  font-size: var(--subtitle);
+  font-weight: var(--400);
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  margin: 0 0 16px 0;
+  text-align: start;
+  text-transform: none;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content p {
+  font-size: var(--text);
+  font-weight: var(--regular);
+  line-height: 1.2; 
+  margin: 0;
+  padding-right: 20px;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img-text .img-cont {   
+  width: 25%;
+  margin-right: 24px;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img-text .img-cont .img {
+  border-radius: var(--radius-2);
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;  
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img img {  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content {
+  padding-top: 0;
+  width: calc(75% - 24px) !important;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4%;
+  margin-left: 3em;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  outline: 0px;
+  cursor: pointer;
+  max-width: 156px;
+  width: 28%;
+  max-height: 156px;
+  height: auto;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a .label-content .mini-border {
+  width: 20px;
+  height: 1px;
+  margin: 0.5em auto 0.8em;
+  background-color: var(--primary-old);
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a img.img {
+  display: none;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a .label-content img.icon {
+  width: 40px;
+}
+
+
+
 /* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1024px) and (max-width: 1279.99px) {
@@ -296,8 +307,13 @@ padding-bottom: 0;
   .locations .container-main .all-locations .locations-container .locations-list .list-container .location .text-content p {
     padding-right: 24px;
   }
-
-  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a, .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list a {
+  .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list a {
+    width: 38%;
+    margin-bottom: 4%;
+  }
+  
+  /* COTOWN NEW */
+  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a {
     width: 38%;
     margin-bottom: 4%;
   }
@@ -318,24 +334,10 @@ padding-bottom: 0;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0px 1em 2em 2em;
-  }
-  .locations .container-main .all-locations.cotown .locations-container .locations-list {
-    background-color: var(--new-bg);
-    padding: 1em 2em 2em;
-  }
+  } 
   .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .text-content h2.location-title {
     font-size: var(--resp-subtitle);
     margin-top: 0.5em;
-  }
-  .locations .container-main .all-locations.cotown .locations-container, .locations .container-main .all-locations.cotown .locations-container .text-container.cotown {
-    background-color: var(--new-bg);
-  } 
-  .locations .container-main .all-locations.cotown .locations-container .text-container.cotown h1.title-where {
-    font-family: var(--text-font);
-    font-size: var(--resp-title);
-    font-weight: var(--semibold);
-    margin: 0 0 0.3em 1em;
-    text-align: start;
   }  
   .locations .container-main .all-locations .locations-container .text-container h1.title-where {
     font-size: var(--resp-title);
@@ -346,17 +348,6 @@ padding-bottom: 0;
     width: 60%!important;
     margin: 0;
     flex-flow: row wrap;
-  }
-  
-  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img-text .img-cont .img {
-    width: 100%;
-    height: auto;
-    margin-right: 0;
-  }
-  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img-text .img-cont {
-    width: 100%;
-    height: auto;
-    margin-right: 0;
   }
   .locations .container-main .all-locations .locations-container .locations-list .list-container .location .img-text .img-cont .img {
     width: 100%;
@@ -370,41 +361,72 @@ padding-bottom: 0;
     object-fit: cover;
     object-position: center center;  
   }
-  /* .locations .container-main .all-locations .locations-container .locations-list .list-container .location .img-text .img-cont .img img {
-    width: 100%;
-    height: auto;
-  } */
-  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content {
-    padding-top: 0;
-    width: 100%!important;
-  }
   .locations .container-main .all-locations .locations-container .locations-list .list-container .location .text-content p {
   font-size: var(--resp-text);
   }
-  /* .locations .container-main .all-locations .locations-container .locations-list .list-container .location .types .type-list {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 4%;
-  } */
   .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types {
     width: 40%!important;
   }
-.locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list {
+  .locations .container-main .all-locations.vanguard .locations-container .locations-list .list-container .location .types .type-list {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-  }
-  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types {
-    display: none;
   }
   .locations .container-main .all-locations .locations-container .locations-list .list-container .location .text-content h2.location-title {
     font-size: var(--resp-subtitle);
     font-weight: var(--semibold);
     text-align: start;
     margin: 16px 0 12px;
+  }
+  .locations .container-main .all-locations .locations-container .locations-list .list-container .location .types .type-list a {
+    width: 33%!important;
+    margin-bottom: 1em;
+  }
+  .locations .container-main .all-locations .locations-container .locations-list .list-container .location .types .type-list a .label-content img.icon {
+    width: 46px;
+  }
+  .locations .container-main .all-locations .locations-container .locations-list .list-container .location .types .type-list a .label-content p {
+    font-size: var(--resp-text);
+  }
+
+
+  /* COTOWN NEW */
+
+  .locations .container-main .all-locations.cotown .locations-container .locations-list {
+    background-color: var(--new-bg);
+    padding: 1em 2em 2em;
+  }
+  .locations .container-main .all-locations.cotown .locations-container, .locations .container-main .all-locations.cotown .locations-container .text-container.cotown {
+    background-color: var(--new-bg);
+  } 
+  .locations .container-main .all-locations.cotown .locations-container .text-container.cotown h1.title-where {
+    font-family: var(--text-font);
+    font-size: var(--resp-title);
+    font-weight: var(--semibold);
+    margin: 0 0 0.3em 1em;
+    text-align: start;
+  }
+  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img-text .img-cont .img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img-text .img-cont {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content {
+    padding-top: 0;
+    width: 100%!important;
+  }
+  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list {
+    margin-left: 0;
+    justify-content: space-evenly;
+  }
+  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types {
+    width: 100% !important;
   }
   .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content.cotown h2.location-title {
     font-size: var(--resp-subtitle);
@@ -414,16 +436,16 @@ padding-bottom: 0;
     padding-right: 0px;
     line-height: 1.4;
   }
-  .locations .container-main .all-locations .locations-container .locations-list .list-container .location .types .type-list a {
-    width: 33%;
+  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a {
+    width: 50%!important;
     margin-bottom: 1em;
   }
-  .locations .container-main .all-locations .locations-container .locations-list .list-container .location .types .type-list a .label-content img.icon {
-    width: 46px;
+  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a .label-content p {
+    text-align: center;
+    margin: 0;
   }
-  .locations .container-main .all-locations .locations-container .locations-list .list-container .location .types .type-list a .label-content p {
-    font-size: var(--resp-text);
-  }
+
+
 }
 
 /* MOVIL*/
