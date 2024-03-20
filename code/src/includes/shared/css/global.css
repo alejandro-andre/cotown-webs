@@ -2621,6 +2621,17 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		line-height: 1.4;
 		font-size: var(--resp-mini-title);
 	}
+	.black-line.cotown .pure-menu.pure-menu-horizontal ul li {		
+		width: 92%;
+		font-size: var(--resp-tag-title);
+		margin: 0 1em;
+	}
+	ul.black-menu.cotown li .locations-container label.locations-label {
+		padding: 0;
+	}
+	ul.black-menu.cotown li .locations-container label.locations-label .loc a {
+		padding-left: 0;
+	}
 	main .container-main section.form.cotown h2 {
 		text-align: start;
 		font-size: var(--resp-title);

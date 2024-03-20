@@ -47,6 +47,12 @@ tags: page
           {% literal texts, 'advantages-texto', L, true %}
         </div>
       </div>
+      {% if site == 'vanguard' %}
+      {% else %}   
+        <div class="sello-cotown pure-u-1">
+          <img class="img-sello" alt="sello" src="{{root}}/assets/img/sello-cotown.png">
+        </div>
+      {% endif %}
     </section>
 
     <section class="banner">

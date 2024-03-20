@@ -232,6 +232,18 @@ p.subtitle {
     margin-right: 8px;
 }
 
+.main-header .left.cotown .sello-cotown {
+	position: relative;
+    height: 4em;
+	
+}
+.main-header .left.cotown .sello-cotown img.img-sello {
+    position: absolute;
+    top: -34px;
+    right: -40%;
+}
+
+
 
 .main-header .video {
     position: relative;
@@ -1429,7 +1441,7 @@ main .container-main .first-contain.home.cotown .text p {
         position: absolute;
         bottom: 0;
         left: 0;
-        padding: 2em;
+        padding: 2em 0 2em 2em;
         background-color: var(--box-bg);        
     }       
     .main-header .video.cotown .text-container.mobile h1 {
@@ -1437,7 +1449,8 @@ main .container-main .first-contain.home.cotown .text p {
         font-weight: var(--semibold);
         font-size: var(--resp-middle-subtitle);
         line-height: 1.2;
-        text-align: left;        
+        text-align: left;
+        margin: 0;
     }
     .main-header .video.cotown .text-container.mobile h1 span {
         font-family: var(--title-font);
@@ -1456,6 +1469,17 @@ main .container-main .first-contain.home.cotown .text p {
         background-color: var(--primary-background);
         border-radius: 0;
     }
+
+    .main-header .video.cotown .text-container.mobile .sello-cotown {
+        position: relative;
+    }
+    .main-header .video.cotown .text-container.mobile .sello-cotown img.img-sello {
+        position: absolute;
+        bottom: -28px;
+        right: -18%;
+        width: 40%;
+    }
+
     .main-header .left.cotown .basic-searcher label {
         font-size: var(--resp-mini-title);
         font-weight: var(--semibold);

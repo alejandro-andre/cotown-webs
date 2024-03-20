@@ -5,7 +5,6 @@
 main.cotown .container-main .first-contain {
 	background-color: var(--new-bg);
 }
-
 main .container-main .first-contain .img-right {
 	display: flex;
 	flex-flow: row;
@@ -29,6 +28,7 @@ main .container-main .first-contain .advantages.title-big {
 
 main.cotown .container-main .first-contain .advantages.title-big {	
 	margin: 4em auto 2em;
+	justify-content: space-between;
 }
 
 main .container-main .first-contain .advantages.title-big .h1-big {
@@ -90,8 +90,13 @@ main.cotown .container-main .first-contain .advantages.title-big .text .feeling.
 main.cotown .container-main .first-contain .advantages.title-big .text .feeling.cotown h2.title-feel {
 	text-align: end;
 	font-size: var(--subtitle);
+	font-weight: var(--bold);
 	color: var(--primary-old);
 	text-transform: lowercase;
+}
+
+main.cotown .container-main .first-contain .advantages.title-big .text {
+	padding-left: 1em;
 }
 
 main.cotown .container-main .first-contain .advantages.title-big .text p {
@@ -100,6 +105,14 @@ main.cotown .container-main .first-contain .advantages.title-big .text p {
 	line-height: 1.5;
 }
 
+main.cotown .container-main .first-contain .sello-cotown {
+	position: relative;	
+}
+main.cotown .container-main .first-contain .sello-cotown img.img-sello {
+	position: absolute;
+    top: -45px;
+    left: 33%;
+}
 main .container-main section.banner {
 	margin-bottom: 2em;
 }
@@ -108,6 +121,9 @@ main .container-main section.banner {
 -------------------------------- */
 main .container-main section.container-advantages {
 	padding: 2em 4em;
+}
+main.cotown .container-main section.container-advantages {
+	padding: 6em 4em 2em;
 }
 
 main .container-main section.container-advantages .grid {
@@ -237,6 +253,9 @@ button.btn-secondary {
 }
 
 @media only screen and (max-width: 1023.9px) {
+	main.cotown .container-main .first-contain .sello-cotown {
+		display: none;
+	}
 	main .container-main .first-contain .advantages.title-big {
 		margin: 8em auto 2em;
 	}
@@ -279,8 +298,15 @@ button.btn-secondary {
 	
 	main.cotown .container-main .first-contain .advantages.title-big .text .feeling.cotown h2.title-feel {
 		text-align: start;		
-		font-weight: var(--bold);
+	}	
+	main.cotown .container-main .first-contain .advantages.title-big .text {
+		padding-left: 0;
 	}
+	main.cotown .container-main .first-contain .advantages.title-big .text p {
+		font-weight: var(--semibold);
+	}
+
+
 
 	main .container-main .first-contain .advantages.title-big .text p {
 		font-size: var(--resp-text);
@@ -294,6 +320,7 @@ button.btn-secondary {
 
 	main .container-main section.container-advantages .grid {
 		padding: 0 0.2em;
+		justify-content: flex-start;
 	}
 
 	main .container-main section.container-advantages .grid .promo {
