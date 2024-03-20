@@ -65,8 +65,9 @@ input[type="search"]::-webkit-search-results-decoration {
 	display: none;
 }
 
+
 main .container-main .faqs-container {
-	margin: 2em 0 6em;
+	margin: 2em 1em 6em;	
 }
 main .container-main .faqs-container h1 {
 	font-family: var(--title-font);
@@ -75,6 +76,16 @@ main .container-main .faqs-container h1 {
 	line-height: 100%;
 	margin: 1em 0 0;
 	text-transform: uppercase;
+}
+main .container-main .faqs-container .faq {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+main .container-main .faqs-container .faq .every-faq {
+	margin: 0 auto;
 }
 main .container-main .faqs-container .description.text {
 	border-bottom: 1px solid var(--grey-light);
@@ -116,6 +127,7 @@ main .container-main .faqs-container .description.text .expansion .content ul li
 	line-height: 150%;
 	color: var(--black)
 }
+
 /* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {

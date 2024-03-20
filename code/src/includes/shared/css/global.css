@@ -51,6 +51,7 @@ select option:disabled {
 
 
 /* RESPONSIVE FONTS */
+
 @media only screen and (min-width: 1024px) {
 	h1 {
 		font-size: var(--big-title);
@@ -180,6 +181,10 @@ select option:disabled {
 		text-decoration: none;
 	}
 }
+
+
+/* END RESPONSIVE FONTS */
+
 
 /* BOTONES
 -------------------------------- \*/
@@ -1663,65 +1668,60 @@ button.date-button input.inputs {
 		width: 100%;
 		margin: 0;
 	}
-
 	.container-header.first .turquoise-line .left-content {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;
-		align-items: flex-start;
-		gap: 1em;
-		padding: 0 16px;
-		width: 100%;
 		align-items: center;
+		gap: 1em;
+		width: 100%;			
+		padding: 0 8px;
 	}
-
 	.container-header.first .turquoise-line .left-content .banner-container {
 		width: 100%;
-		gap: 1em;
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.container-header.first .turquoise-line .left-content .banner-container {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
+		justify-content: space-between;		
 		align-items: flex-start;
 		gap: 16px;
 	}
-
+	.container-header.first .turquoise-line .left-content .banner-container .spot {
+		width: calc(100% - 130px);
+		justify-content: flex-start;
+		gap: 8px
+	}
 	.container-header.first .turquoise-line .left-content .banner-container .spot .close {
 		cursor: pointer;
-	}
-
-	.container-header.first .turquoise-line .left-content .banner-container .spot .close em {
-		font-size: var(--tag-title);
-		color: var(--white);
-	}
 	
+		margin: auto 8px auto 4px;
+		padding: 0;
+	}
+	.container-header.first .turquoise-line .left-content .banner-container .spot .close em {
+		font-size: var(--resp-text);
+		color: var(--white);
+	}	
 	.container-header.first .turquoise-line .left-content .banner-container .spot h1 {
 		font-family: var(--text-font);
 		font-size: var(--resp-mini-title);
 		font-style: normal;
-		font-weight: 300;
-		line-height: 1.5;
-		letter-spacing: 0.88px;
+		min-width: calc(100% - 12px);
+		letter-spacing: 0px;
+		font-weight: var(--light);
+		line-height: 1.2;
 		text-transform: uppercase;
 		color: var(--primary-text);
 		margin: 0;
-		min-width: fit-content;
 		width: 100%;
+	}	
+	.container-header.first .turquoise-line .left-content .banner-container a {
+		margin: auto 0;
 	}
-
-
 	.container-header.first .turquoise-line .left-content .banner-container a button.btn-primary {
-		font-family: var(--resp-mini-title);
-		font-size: var(--mini-title);
+		font-family: var(--text-font);
+		font-size: var(--resp-mini-title);
 		font-style: normal;
-		font-weight: 700;
-		line-height: 140%;
+		font-weight: var(--bold);
+		line-height: 1.4;
 		text-decoration-line: underline;
 		color: var(--white);
 		background-color: var(--primary);
@@ -1729,11 +1729,9 @@ button.date-button input.inputs {
 		border-radius: 0px;
 		box-shadow: none;
 	}
-
 	.container-header.first .right-content {
 		display: none;
 	}
-
 	.container-header.second .black-line.custom-wrapper {
 		background-color: var(--secondary-black);
 		-webkit-font-smoothing: antialiased;
@@ -1745,11 +1743,9 @@ button.date-button input.inputs {
 		-ms-transition: height 0.5s;
 		transition: height 0.5s;
 	}
-
 	.container-header.second .black-line.custom-wrapper.open {
 		height: 14em;
 	}
-
 	.container-header.second .black-line .left-nav {
 		height: 57px;
 		display: flex;
@@ -1757,20 +1753,17 @@ button.date-button input.inputs {
 		justify-content: space-between;
 		align-items: center;
 	}
-
 	.container-header .black-line .left-nav .logo {
 		display: flex;
 		flex-flow: column;
 		justify-content: center;
 		align-items: center;
 	}
-
 	.container-header .black-line .left-nav .logo .mobile .img-logo {
 		height: 42px;
 		margin: 6px auto 0;
 		display: inline-flex;
 	}
-
 	.container-header.second .black-line .left-nav .booking {
 		padding-right: 1em;
 		display: flex;
@@ -1778,40 +1771,32 @@ button.date-button input.inputs {
 		justify-content: flex-end;
 		align-items: center;
 	}
-
 	.container-header.second .black-line .left-nav .booking button.btn-primary {
 		border: none !important;
 	}
-
 	.container-header.second .black-line .left-nav .booking button.btn-primary a {
 		color: var(--black) !important;
 	}
-
 	.container-header.second .black-line .left-nav .logo {
 		text-align: center;
 		height: 57px;
 	}
-
 	.container-header.second .black-line .left-nav .lang {
 		margin-right: 0;
 	}
-
 	.left-nav .pure-menu {
 		display: block;
 		padding-left: 20px;
 	}
-
 	.left-nav .logo a.desktop {
 		display: none;
 	}
-
 	.left-nav .pure-menu .menu-link {
 		width: 25px;
 		height: 25px;
 		color: var(--primary);
 		transform: rotateY(180deg);
 	}
-
 	.left-nav .pure-menu .menu-link em.icon-flat {
 		color: var(--primary);
 		cursor: pointer;
@@ -2008,6 +1993,11 @@ button.date-button input.inputs {
 		height: 400px;
 	}
 
+	ul.black-menu li .locations-container label.locations-label {
+		padding: 0;
+	}
+
+
 	li .locations-container label.locations-label {
 		display: flex;
 		flex-flow: row wrap;
@@ -2141,6 +2131,11 @@ button.date-button input.inputs {
 		justify-content: space-between;
 		align-items: center;
 		padding: 1em;
+	}
+
+
+	.iconos-chat {
+		padding: 0.5em 1em 0.9em 0;		
 	}
 
 	/* __________________________ OTHER PAGES ___________________________*/
@@ -2595,40 +2590,41 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 
 @media only screen and (max-width: 1023.9px) {
 
-	.container-header.first .turquoise-line.cotown .left-content {
+	/* .container-header.first .turquoise-line.cotown .left-content {
 		padding: 0 8px;
-	}
-	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot {
+	} */
+	/* .container-header.first .turquoise-line.cotown .left-content .banner-container .spot {
 		width: calc(100% - 130px);
 		justify-content: flex-start;
 		gap: 8px
-	}
-	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot h1 {
+	} */
+	/* .container-header.first .turquoise-line.cotown .left-content .banner-container .spot h1 {
 		min-width: calc(100% - 12px);
 		letter-spacing: 0px;
 		font-size: var(--resp-text);
-	}
-	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot .close {
+	} */
+	/* .container-header.first .turquoise-line.cotown .left-content .banner-container .spot .close {
 		margin: auto 8px auto 4px;
 		padding: 0;
 	}
 	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot .close em {
 		font-size: var(--resp-text);
 		color: var(--white);
-	}
-	.container-header.first .turquoise-line.cotown .left-content .banner-container a button.btn-primary {
+	} */
+	/* .container-header.first .turquoise-line.cotown .left-content .banner-container a button.btn-primary {
 		font-weight: var(--bold);
 		line-height: 1.4;
 		font-size: var(--resp-mini-title);
-	}
+	} */
+
+
+
 	.black-line.cotown .pure-menu.pure-menu-horizontal ul li {		
 		width: 92%;
 		font-size: var(--resp-tag-title);
 		margin: 0 1em;
 	}
-	ul.black-menu.cotown li .locations-container label.locations-label {
-		padding: 0;
-	}
+
 	ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		padding-left: 0;
 	}

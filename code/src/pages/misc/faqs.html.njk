@@ -75,9 +75,10 @@ tags: page
     </section>
 
     <section class="faqs-container pure-u-1">
-      {% for f in faqs %}
-        <div class="faq pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
-          <div class="every-faq pure-u-22-24">
+     
+      <div class="faq pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
+        {% for f in faqs %}
+          <div class="every-faq pure-u-22-24 {% if site == 'vanguard' %} pure-u-lg-5-6 {% else %} {% endif %}">
             {% if site == 'vanguard' %}
               <h1>{{f | translate('Name', L) }}</h1>
             {% else %}
@@ -99,9 +100,10 @@ tags: page
                 </div>
               </div>
             {% endfor %}
-          </div>        
-       </div>
-      {% endfor %}
+          </div>   
+        {% endfor %}     
+      </div>
+      
     </section>
 
   </div>

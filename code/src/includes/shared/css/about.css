@@ -182,7 +182,9 @@ main .container-main section.members .button-more {
 		position: static;
 		background-color: var(--white);
 	}
-
+	main .container-main .first-contain.about .title-big h1 {
+		font-size: var(--resp-middle-title);
+	}
 	main .container-main section.members {
 		padding: 2em 0;
 	}
