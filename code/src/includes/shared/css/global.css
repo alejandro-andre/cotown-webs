@@ -2507,9 +2507,11 @@ main .container-main section.form .form-container .campo.add-file .select .icon-
 }
 main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] {	
 	border-radius: 63px;
+	border: 1px solid var(--black);
+	box-shadow: none;
 }
 main .container-main section.form.cotown .form-container button.btn-secondary {
-	width: 100%;
+	width: fit-content;
 	justify-content: center;
 	background-color: transparent;
 	color: var(--black);
@@ -2561,6 +2563,7 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		outline: -webkit-focus-ring-color auto 0px;
 		background-color: var(--primary-background);
 		box-shadow: none;
+		cursor: pointer;
 	}
 	main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] {
 		font-size: var(--mini-title);
@@ -2579,6 +2582,7 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		margin-left: 4px;
 	}
 	main .container-main section.form.cotown .form-container button.btn-secondary {
+		width: fit-content;
 		background-color: var(--primary-old);
 		color: var(--white);
 		border-radius: 10px;
@@ -2624,12 +2628,22 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 	}
 	main .container-main section.form.cotown .form-container .campo.add-file .select {
 		width: 80%;
+		box-shadow: none;
 	}
 	main .container-main section.form.cotown .form-container .campo.add-file .select .selected {
 		position: relative;
 		display: block;
 		height: 54px;
 		width: 122%;
+		box-shadow: none;
+	}
+	main .container-main section.form.cotown .form-container button.btn-secondary {
+		width: 100%;
+		background-color: transparent;
+		color: var(--black);
+		border-radius: 63px;
+		border: 1px solid var(--black);
+		box-shadow: none;
 	}
 }
 /* ------  FORM END -------------- */
