@@ -127,32 +127,6 @@ section.location {
     font-weight: 200!important;
 }
 
-/* COTOWN NEW */
-.pisos-slider.cotown .h2-container {
-    background-color: var(--black);
-}
-.pisos-slider.cotown .h2-container .title-container.cotown {
-    display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	align-items: center;
-}
-.pisos-slider.cotown .h2-container .title-container.cotown h2 {
-    color: var(--white);
-    width: fit-content;
-    font-size: var(--big-subtitle);
-    text-align: left;
-    text-transform: none;
-    padding: 0 0 0 1em;
-}
-.pisos-slider.cotown .h2-container .title-container.cotown h2.loc-title {
-    font-weight: var(--regular);
-}
-.pisos-slider.cotown .h2-container .title-container.cotown h2.desc-title {
-    font-weight: var(--light);
-    padding: 0 0 0 0.2em;
-}
-
 /* RESERVAS */
 .h2-container .calendar {
     margin: 0;
@@ -432,77 +406,7 @@ button.green-button.btn-secondary {
     line-height: 100%;
     letter-spacing: -0.6px;
 }
-
-
-/* COTOWN NEW CAROUSEL */
-
-.pisos-slider.cotown .carousel .carousel-main-list .splide__slide {
-    max-width: 70vw;
-    margin-right: 0 !important;
-    border-radius: var(--left-top);
-}
-
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body {
-    background-color: var(--black);
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 {
-    text-align: start;
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 h3 {
-    color: var(--white);
-    position: static;
-    font-size: var(--big-subtitle);
-    font-weight: var(--semibold);
-    margin: 0.5em 0 0;
-    line-height: 1;
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 p {
-    margin: 0.5em 0 0;
-    line-height: 1;
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type h4 {
-    text-transform: none;
-    font-size: var(--text-title);
-    font-weight: var(--regular);
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type p {
-    text-transform: none;
-    font-size: var(--mini-title);
-    font-weight: var(--regular);
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type button.btn-secondary.green-button {
-    background-color: transparent;
-    border: 0px;
-    border-radius: 0;
-    box-shadow: none;
-    color: var(--primary-old);
-    font-size: var(--mini-title);
-    font-weight: var(--regular);
-}
-.pisos-slider.cotown .carousel .arrow-nav.splide__arrow.splide__arrow {
-    background-color: transparent;
-    height: 4em;
-    width: 4em;
-    box-shadow: none;
-    color: var(--white);
-    opacity: 1;
-}
-.pisos-slider.cotown .carousel .carousel-main-list .main-slide.splide__slide .card-contain .carousel-mini .arrow-mini.splide__arrow.splide__arrow {
-    background-color: transparent;    
-    box-shadow: none;
-    color: var(--white);
-    opacity: 1;
-    top: 34%;
-    right: 0;
-}
-
-
-
-section.necesities {
+main.location section.necesities {
     background-color: var(--prive-bg);
     color: var(--white);    
     display: flex;
@@ -511,48 +415,48 @@ section.necesities {
     align-items: stretch;
     padding: 4em 4em 6em;
 }
-section.necesities .contain {
+main.location section.necesities .contain {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
 }
-section.necesities .contain .title h2 {
+main.location section.necesities .contain .title h2 {
     color: var(--white);
     width: 100%;
+    font-size: var(--subtitle);
 }
-section.necesities .contain .text p {
+main.location section.necesities .contain .text p {
     color: var(--white);
     font-weight: 300;
     font-size: 22px;
     line-height: 150%;
     width: 100%;
 }
-section.necesities .grid {
+main.location section.necesities .grid {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0;
 }
-section.necesities .grid .necesidad img,
-section.necesities .grid .necesidad .img svg {
+main.location section.necesities .grid .necesidad img,
+main.location section.necesities .grid .necesidad .img svg {
     width: 75px;
     padding: 1em 0 .5em;
 }
-section.necesities .grid .necesidad .p-title p {
+main.location section.necesities .grid .necesidad .p-title p {
     color: var(--white);
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 150%;
-    margin: 0 0 1em;
+    font-weight: var(--bold);
+    font-size: var(--text-title);
+    line-height: 1.5;
+    margin: 0;
 }
-
-section.necesities .grid .necesidad .p-text p {
+main.location section.necesities .grid .necesidad .p-text p {
     color: var(--white);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 150%;
+    font-weight: var(--regular);
+    font-size: var(--mini-title);
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -576,27 +480,6 @@ section.necesities .grid .necesidad .p-text p {
     object-fit: cover;
     object-position: center center;
 }
-
-
-/* COTOWN NEW NECESITIES */
-
-section.necesities.cotown .grid {
-    width: 84%;
-}
-section.necesities.cotown .grid .necesidad .p-title p {
-    font-weight: var(--semibold);
-    font-size: var(--text-title);
-    line-height: 1.5;
-    margin: 0;
-}
-section.necesities.cotown .grid .necesidad .p-text p {
-    font-weight: var(--regular);
-    font-size: var(--text);
-    line-height: 1.5;
-    margin: 0;
-}
-
-
 
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
@@ -1042,6 +925,118 @@ section.map {
     color: var(--primary-dark);
 }
 
+/* COTOWN NEW */
+.pisos-slider.cotown .h2-container {
+    background-color: var(--black);
+}
+.pisos-slider.cotown .h2-container .title-container.cotown {
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.pisos-slider.cotown .h2-container .title-container.cotown h2 {
+    color: var(--white);
+    width: fit-content;
+    font-size: var(--big-subtitle);
+    text-align: left;
+    text-transform: none;
+    padding: 0 0 0 1em;
+}
+.pisos-slider.cotown .h2-container .title-container.cotown h2.loc-title {
+    font-weight: var(--regular);
+}
+.pisos-slider.cotown .h2-container .title-container.cotown h2.desc-title {
+    font-weight: var(--light);
+    padding: 0 0 0 0.2em;
+}
+
+/* COTOWN NEW CAROUSEL */
+
+.pisos-slider.cotown .carousel .carousel-main-list .splide__slide {
+    max-width: 70vw;
+    margin-right: 0 !important;
+    border-radius: var(--left-top);
+}
+
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body {
+    background-color: var(--black);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 {
+    text-align: start;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 h3 {
+    color: var(--white);
+    position: static;
+    font-size: var(--big-subtitle);
+    font-weight: var(--semibold);
+    margin: 0.5em 0 0;
+    line-height: 1;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 p {
+    margin: 0.5em 0 0;
+    line-height: 1;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type h4 {
+    text-transform: none;
+    font-size: var(--text-title);
+    font-weight: var(--regular);
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type p {
+    text-transform: none;
+    font-size: var(--mini-title);
+    font-weight: var(--regular);
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type button.btn-secondary.green-button {
+    background-color: transparent;
+    border: 0px;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--primary-old);
+    font-size: var(--mini-title);
+    font-weight: var(--regular);
+}
+.pisos-slider.cotown .carousel .arrow-nav.splide__arrow.splide__arrow {
+    background-color: transparent;
+    height: 4em;
+    width: 4em;
+    box-shadow: none;
+    color: var(--white);
+    opacity: 1;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .main-slide.splide__slide .card-contain .carousel-mini .arrow-mini.splide__arrow.splide__arrow {
+    background-color: transparent;    
+    box-shadow: none;
+    color: var(--white);
+    opacity: 1;
+    top: 34%;
+    right: 0;
+}
+
+/* COTOWN NEW NECESITIES */
+
+main.location.cotown section.necesities.cotown {
+    margin: 0 0 2em;
+}
+main.location.cotown section.necesities.cotown .grid {
+    width: 84%;
+}
+main.location.cotown section.necesities.cotown .grid .necesidad .p-title p {
+    font-weight: var(--semibold);
+    font-size: var(--text-title);
+    line-height: 1.5;
+    margin: 0;
+}
+main.location.cotown section.necesities.cotown .grid .necesidad .p-text p {
+    font-weight: var(--regular);
+    font-size: var(--text);
+    line-height: 1.5;
+    margin: 0;
+}
 
 /* COTOWN RESPONSIVE \*/
 @media only screen and (max-width: 1023.9px) {
@@ -1122,8 +1117,40 @@ section.map {
         box-shadow: none;
         font-weight: var(--regular);
     }
-    main.location.cotown section.necesities {
+
+    main.location.cotown section.necesities.cotown {
         margin: 0;
         padding: 2em 1em;
+    }    
+    main.location.cotown section.necesities.cotown .contain .title h2 {
+        font-size: var(--resp-middle-subtitle);
+        font-weight: var(--bold);
+    }
+    main.location.cotown section.necesities.cotown .grid {
+        width: 100%;
+    }
+    main.location.cotown section.necesities.cotown .grid .necesidad {
+        border: 0;
+        background: transparent;
+        width: calc(50% - 14px);
+        min-height: 200px;
+        padding: 5px;       
+        margin-bottom: 8px;
+        gap: 0;
+        border-radius: 0;
+        box-shadow: none;
+        text-align: center;
+    }
+    main.location.cotown section.necesities.cotown .grid .necesidad .p-title p {
+        font-weight: var(--semibold);
+        font-size: var(--resp-text-title);
+        line-height: 1.5;
+        margin: 0;
+    }
+    main.location.cotown section.necesities.cotown .grid .necesidad .p-text p {
+        font-weight: var(--regular);
+        font-size: var(--resp-text);
+        line-height: 1.5;
+        margin: 0;
     }
 }

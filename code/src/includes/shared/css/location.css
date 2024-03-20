@@ -121,31 +121,6 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     font-weight: 200!important;
 }
 
-/* COTOWN NEW */
-.pisos-slider.cotown .h2-container {
-    background-color: var(--white);
-}
-.pisos-slider.cotown .h2-container .title-container.cotown {
-    display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	align-items: center;
-}
-.pisos-slider.cotown .h2-container .title-container.cotown h2 {
-    width: fit-content;
-    font-size: var(--big-subtitle);
-    text-align: left;
-    text-transform: none;
-    padding: 0 0 0 1em;
-}
-.pisos-slider.cotown .h2-container .title-container.cotown h2.loc-title {
-    font-weight: var(--regular);
-}
-.pisos-slider.cotown .h2-container .title-container.cotown h2.desc-title {
-    font-weight: var(--light);
-    padding: 0 0 0 0.2em;
-}
-
 /* RESERVAS */
 .h2-container .calendar {
     margin: 0;
@@ -423,110 +398,56 @@ button.green-button.btn-secondary {
     text-transform: uppercase;
 }
 
-/* COTOWN NEW CAROUSEL */
-
-.pisos-slider.cotown .carousel .carousel-main-list .splide__slide {
-    max-width: 70vw;
-    margin-right: 0 !important;
-    border-radius: var(--left-top);
-}
-
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body {
-    background-color: var(--new-bg);
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 {
-    text-align: start;
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 h3 {
-    color: var(--black);
-    position: static;
-    font-size: var(--big-subtitle);
-    font-weight: var(--semibold);
-    margin: 0.5em 0 0;
-    line-height: 1;
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 p {
-    margin: 0.5em 0 0;
-    line-height: 1;
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type h4 {
-    text-transform: none;
-    font-size: var(--text-title);
-    font-weight: var(--regular);
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type p {
-    text-transform: none;
-    font-size: var(--mini-title);
-    font-weight: var(--regular);
-}
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type button.btn-secondary.green-button {
-    background-color: transparent;
-    border: 0px;
-    border-radius: 0;
-    box-shadow: none;
-    color: var(--primary-old);
-    font-size: var(--mini-title);
-    font-weight: var(--regular);
-}
-
-
-
-
-
-
 #map {
     margin: 0 0 6em;
 }
 
-section.necesities {
+main.location section.necesities {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: stretch;
     padding: 4em 4em 6em;
 }
-section.necesities .contain {
+main.location section.necesities .contain {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
 }
-section.necesities .contain .title h2 {
+main.location section.necesities .contain .title h2 {
+    width: 100%;
+    font-size: var(--subtitle);
+}
+main.location section.necesities .contain .text p {
+    font-weight: var(--light);
+    font-size: var(--text-title);
+    line-height: 1.5;
     width: 100%;
 }
-section.necesities .contain .text p {
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 150%;
-    width: 100%;
-}
-section.necesities .grid {
+main.location section.necesities .grid {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0;
 }
-section.necesities .grid .necesidad img,
-section.necesities .grid .necesidad .img svg {
+main.location section.necesities .grid .necesidad img,
+main.location section.necesities .grid .necesidad .img svg {
     width: 75px;
     padding: 1em 0 .5em;
 }
-section.necesities .grid .necesidad .p-title p {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 150%;
-    margin: 0 0 1em;
+main.location section.necesities .grid .necesidad .p-title p {
+    font-weight: var(--bold);
+    font-size: var(--text-title);
+    line-height: 1.5;
+    margin: 0;
 }
 
-section.necesities .grid .necesidad .p-text p {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 150%;
+main.location section.necesities .grid .necesidad .p-text p {
+    font-weight: var(--regular);
+    font-size: var(--mini-title);
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -551,26 +472,6 @@ section.necesities .grid .necesidad .p-text p {
     object-position: center center;
 }
 
-/* COTOWN NEW NECESITIES */
-
-section.necesities.cotown .grid {
-    width: 84%;
-}
-section.necesities.cotown .grid .necesidad .p-title p {
-    font-weight: var(--semibold);
-    font-size: var(--text-title);
-    line-height: 1.5;
-    margin: 0;
-}
-section.necesities.cotown .grid .necesidad .p-text p {
-    font-weight: var(--regular);
-    font-size: var(--text);
-    line-height: 1.5;
-    margin: 0;
-}
-
-
-
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
     main .container-main .first-contain .title-big.home p {
@@ -592,16 +493,16 @@ section.necesities.cotown .grid .necesidad .p-text p {
     .contact-main .img-content .contact-content .text-location p span a {
         font-size: 30px;
     }
-    main .location .container-main .first-contain h1 {
+    main.location .container-main .first-contain h1 {
         font-size: 170px;
     }
-    main .location .container-main .first-contain .video-loc .description p {
+    main.location .container-main .first-contain .video-loc .description p {
         font-size: 22px;
     }
-    section.necesities .grid .necesidad .p-title p {
+    main.location section.necesities .grid .necesidad .p-title p {
         font-size: 30px;
     }
-    section.necesities .grid .necesidad .p-text p {
+    main.location section.necesities .grid .necesidad .p-text p {
         font-size: 22px;
     }
     .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type img {
@@ -629,16 +530,14 @@ section.necesities.cotown .grid .necesidad .p-text p {
     main .location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 18px;
     }
-    /* section.necesities .grid.pure-u-lg-3-4 {
-        padding: 0 1em;
-    } */
-    section.necesities .contain {
+
+    main.location section.necesities .contain {
         width: 100%;
     }
-    section.necesities .contain .title h2 {
+    main.location section.necesities .contain .title h2 {
         font-size: 46px;
     }
-    section.necesities .contain .text p {
+    main.location section.necesities .contain .text p {
         font-size: 18px;
     }
     .carousel .carousel-main-list .splide__slide h3 {
@@ -666,18 +565,18 @@ section.necesities.cotown .grid .necesidad .p-text p {
 
 /* MOBILE \*/
 @media only screen and (max-width: 1023.9px) {
-    main .location .container-main .first-contain .video-loc .video {
+    main.location .container-main .first-contain .video-loc .video {
         height: 430px;
         max-height: 430px;        
     }
-    main .location .container-main .first-contain .video-loc .text-container {
+    main.location .container-main .first-contain .video-loc .text-container {
         left: 0;
         margin: 10px 0 0 10px;
         width: calc(100% - 20px);
         justify-content: flex-end;
         align-items: flex-end;
     }    
-    main .location .container-main .first-contain .video-loc .text-container h2 {
+    main.location .container-main .first-contain .video-loc .text-container h2 {
         font-size: 58px;
         padding: 8px;
         position: relative;
@@ -685,15 +584,15 @@ section.necesities.cotown .grid .necesidad .p-text p {
         bottom: 10px;
         margin: 0;
     }   
-    main .location .container-main .first-contain .video-loc .text-container .description {
+    main.location .container-main .first-contain .video-loc .text-container .description {
         width: 100%;
         padding: 0;
     }
-    main .location .container-main .first-contain .video-loc .text-container h3 {
+    main.location .container-main .first-contain .video-loc .text-container h3 {
         font-size: 28px;
     }
 
-    main .location .container-main .first-contain .video-loc .text-container .description p {
+    main.location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 15px;
         line-height: 130%;   
         margin: 0;
@@ -899,21 +798,21 @@ section.necesities.cotown .grid .necesidad .p-text p {
         line-height: 130%;
         text-align: center;
     }
-    section.necesities {
+    main.location section.necesities {
         justify-content: flex-start;
         align-items: center;
         padding: 0 1em;
         margin: 2em 0;
     }
-    section.necesities .contain .title h2 {
+    main.location section.necesities .contain .title h2 {
         font-size: 32px;
     }
-    section.necesities .contain .text p {
+    main.location section.necesities .contain .text p {
         width: 100%;
         font-size: 16px;
         line-height: 150%;
     }
-    section.necesities .grid {
+    main.location section.necesities .grid {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -921,7 +820,7 @@ section.necesities.cotown .grid .necesidad .p-text p {
         padding: 0;
         gap: 8px;
     }
-    section.necesities .grid .necesidad {
+    main.location section.necesities .grid .necesidad {
         border: 1px solid var(--background-primary);
         background: var(--white-background);
         display: flex;
@@ -937,17 +836,26 @@ section.necesities.cotown .grid .necesidad .p-text p {
         box-shadow: 0px 2px 3px 0px var(--shadow);
         text-align: center;
     }
-    section.necesities .grid .necesidad .img svg {
+    main.location section.necesities .grid .necesidad .img svg {
         width: 50px;
         padding: 0;
     }
-    section.necesities .grid .necesidad .p-title p {
-        font-size: 16px;
+    main.location main.location section.necesities .grid .necesidad .p-title p {
+        color: var(--white);
+        font-weight: var(--bold);
+        font-size: var(--resp-mini-title);
+        line-height: 1.5;
         margin: 0;
     }
-    section.necesities .grid .necesidad .p-text p {
-        font-size: 14px;
+    
+    main.location main.location section.necesities .grid .necesidad .p-text p {
+        color: var(--white);
+        font-weight: var(--regular);
+        font-size: var(--resp-mini-title);
+        line-height: 1.5;
+        margin: 0;
     }
+
     .text-red {
         padding: 0 0 0 1em;
     }
@@ -962,10 +870,10 @@ section.necesities.cotown .grid .necesidad .p-text p {
     .pisos-slider .h2-container .calendar .reservas .button-calendar {
         width: 100%;
     }
-    section.necesities .grid {
+    main.location section.necesities .grid {
         justify-content: flex-start;
     }
-    section.necesities .grid .necesidad {
+    main.location section.necesities .grid .necesidad {
         width: calc(50% - 20px);
         min-height: 200px;
         padding: 5px;
@@ -1021,6 +929,100 @@ section.necesities.cotown .grid .necesidad .p-text p {
     font-weight: 400;
     text-align: right;
     color: var(--primary-dark);
+}
+
+/* COTOWN NEW */
+.pisos-slider.cotown .h2-container {
+    background-color: var(--white);
+}
+.pisos-slider.cotown .h2-container .title-container.cotown {
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.pisos-slider.cotown .h2-container .title-container.cotown h2 {
+    width: fit-content;
+    font-size: var(--big-subtitle);
+    text-align: left;
+    text-transform: none;
+    padding: 0 0 0 1em;
+}
+.pisos-slider.cotown .h2-container .title-container.cotown h2.loc-title {
+    font-weight: var(--regular);
+}
+.pisos-slider.cotown .h2-container .title-container.cotown h2.desc-title {
+    font-weight: var(--light);
+    padding: 0 0 0 0.2em;
+}
+
+/* COTOWN NEW CAROUSEL */
+
+.pisos-slider.cotown .carousel .carousel-main-list .splide__slide {
+    max-width: 70vw;
+    margin-right: 0 !important;
+    border-radius: var(--left-top);
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body {
+    background-color: var(--new-bg);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 {
+    text-align: start;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 h3 {
+    color: var(--black);
+    position: static;
+    font-size: var(--big-subtitle);
+    font-weight: var(--semibold);
+    margin: 0.5em 0 0;
+    line-height: 1;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 p {
+    margin: 0.5em 0 0;
+    line-height: 1;
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type h4 {
+    text-transform: none;
+    font-size: var(--text-title);
+    font-weight: var(--regular);
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type p {
+    text-transform: none;
+    font-size: var(--mini-title);
+    font-weight: var(--regular);
+}
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type button.btn-secondary.green-button {
+    background-color: transparent;
+    border: 0px;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--primary-old);
+    font-size: var(--mini-title);
+    font-weight: var(--regular);
+}
+
+/* COTOWN NEW NECESITIES */
+main.location section.necesities.cotown .contain .title h2 {
+    font-size: var(--subtitle);
+}
+main.location section.necesities.cotown .grid {
+    width: 84%;
+}
+main.location section.necesities.cotown .grid .necesidad .p-title p {
+    font-weight: var(--bold);
+    font-size: var(--text-title);
+    line-height: 1.5;
+    margin: 0;
+}
+main.location section.necesities.cotown .grid .necesidad .p-text p {
+    font-weight: var(--regular);
+    font-size: var(--mini-title);
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* COTOWN RESPONSIVE \*/
@@ -1102,5 +1104,40 @@ section.necesities.cotown .grid .necesidad .p-text p {
     }
     main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .services-list {
         border-top: 1px solid var(--primary);
+    }
+    main.location.cotown section.necesities.cotown {
+        margin: 0;
+        padding: 2em 1em;
+    }    
+    main.location.cotown section.necesities.cotown .contain .title h2 {
+        font-size: var(--resp-middle-subtitle);
+        font-weight: var(--bold);
+    }
+    main.location.cotown section.necesities.cotown .grid {
+        width: 100%;
+    }
+    main.location.cotown section.necesities.cotown .grid .necesidad {
+        border: 0;
+        background: transparent;
+        width: calc(50% - 14px);
+        min-height: 200px;
+        padding: 5px;       
+        margin-bottom: 8px;
+        gap: 0;
+        border-radius: 0;
+        box-shadow: none;
+        text-align: center;
+    }
+    main.location.cotown section.necesities.cotown .grid .necesidad .p-title p {
+        font-weight: var(--semibold);
+        font-size: var(--resp-text-title);
+        line-height: 1.5;
+        margin: 0;
+    }
+    main.location.cotown section.necesities.cotown .grid .necesidad .p-text p {
+        font-weight: var(--regular);
+        font-size: var(--resp-text);
+        line-height: 1.5;
+        margin: 0;
     }
 }
