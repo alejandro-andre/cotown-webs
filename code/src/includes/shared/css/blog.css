@@ -518,9 +518,20 @@ main.post-page .container-main .post-content .text .text-content h1 {
 	line-height: 1.1;
 	text-align: center;
 }
-main.post-page .container-main .post-content .text .text-content h2,
-main.post-page .container-main .post-content .text .text-content h3 {
+main.post-page .container-main .post-content .text .text-content h2 {
 	font-size: var(--title);
+	font-weight: var(--semibold);
+	line-height: 1.1;
+	text-align: left;
+}
+main.post-page .container-main .post-content .text .text-content h3 {
+	font-size: var(--big-subtitle);
+	font-weight: var(--semibold);
+	line-height: 1.1;
+	text-align: left;
+}
+main.post-page .container-main .post-content .text .text-content h4 {
+	font-size: var(--subtitle);
 	font-weight: var(--semibold);
 	line-height: 1.1;
 	text-align: left;
