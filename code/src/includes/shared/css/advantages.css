@@ -106,12 +106,16 @@ main.cotown .container-main .first-contain .advantages.title-big .text p {
 }
 
 main.cotown .container-main .first-contain .sello-cotown {
-	position: relative;	
+	position: relative;
+	width: 100%;
+	display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
 }
 main.cotown .container-main .first-contain .sello-cotown img.img-sello {
 	position: absolute;
-    top: -45px;
-    left: 33%;
+	top: -64px
 }
 main .container-main section.banner {
 	margin-bottom: 2em;

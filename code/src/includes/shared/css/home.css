@@ -235,12 +235,13 @@ p.subtitle {
 .main-header .left.cotown .sello-cotown {
 	position: relative;
     height: 4em;
-	
+    width: 100%;
+	align-items: end;
 }
 .main-header .left.cotown .sello-cotown img.img-sello {
     position: absolute;
     top: -34px;
-    right: -40%;
+    right: -122px;
 }
 
 
@@ -1470,12 +1471,16 @@ main .container-main .first-contain.home.cotown .text p {
     }
     .main-header .video.cotown .text-container.mobile .sello-cotown {
         position: relative;
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        justify-content: flex-end;
     }
     .main-header .video.cotown .text-container.mobile .sello-cotown img.img-sello {
         position: absolute;
-        bottom: -28px;
-        right: -18%;
-        width: 40%;
+        bottom: -16px;
+        right: -40px;
+        width: 80px;
     }
     .main-header .left.cotown .basic-searcher label {
         font-size: var(--resp-mini-title);
