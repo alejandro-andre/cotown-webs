@@ -61,6 +61,10 @@ main.contact .contact-main .img-content .contact-content .text-location p span a
 	line-height: 130%;
 	color: var(--black);
 }
+main.contact .contact-main .map .leaflet-tile-container {
+    filter: grayscale(100%) contrast(1.2) brightness(0.6) sepia(0.6) hue-rotate(80deg);
+}
+
 .office {
 	position: relative;
 	left: -150px;
@@ -211,6 +215,27 @@ main.cotown .container-main .first-contact .title-big .feeling.cotown h2.title-f
 	color: var(--primary-old);
 	font-weight: var(--semibold);
 	text-transform: lowercase;
+}
+main.cotown .contact-main .img-content .contact-content .text-location h3 {
+	font-family: var(--text-font);
+	text-transform: uppercase;
+	font-weight: var(--regular);
+	font-size: var(--subtitle);
+}
+main.cotown .contact-main .img-content .contact-content .text-location p {
+	font-weight: var(--regular);
+	font-size: var(--text-title);
+}
+main.cotown .contact-main .img-content .contact-content .text-location p em {
+	vertical-align: text-top;
+}
+main.cotown .contact-main .img-content .contact-content .text-location p em::before {
+	vertical-align: middle;
+}
+main.cotown .contact-main .img-content .contact-content .text-location p span a {
+	font-size: var(--text-title);
+	font-weight: var(--regular);
+	text-decoration: none;
 }
 
 @media only screen and (min-width: 1024px) {

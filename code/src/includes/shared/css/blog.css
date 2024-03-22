@@ -343,7 +343,7 @@ main.blog.cotown .container-main .posts .inner-post.cotown{
 
 main.blog.cotown .container-main .posts .post {
 	position: relative;
-	min-height: 380px;
+	min-height: 300px;
 	height: fit-content;
 	background-color: var(--new-bg);
 	box-shadow: none;
@@ -426,9 +426,9 @@ main.blog.cotown .container-main .posts .post .date {
 
 main.blog.cotown .container-main .posts .post .data-post {
 	position: absolute;
-	top: 50%;
-	left: 0;
-	height: 45%;
+	top: 56%;
+    left: 0;
+    height: 40%;
 	background-color: var(--new-bg);
 	padding: 1em;
 	display: flex;
@@ -445,8 +445,9 @@ main.blog.cotown .container-main .posts .post .data-post.primary {
 }
 
 main.blog.cotown .container-main .posts .post .data-post h1 {
+	font-size: var(--text-title);
+	font-family: var(--text-font);
 	margin-bottom: 0;
-	font-size: 24px;
 	line-height: 25px;
 }
 

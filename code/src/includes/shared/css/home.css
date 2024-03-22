@@ -1,8 +1,5 @@
 /* GENERAL
 -------------------------------- */
-h1 {
-    font-family: var(--title-font);
-}
 
 h3.title {
     text-align: center;
@@ -1537,6 +1534,9 @@ main .container-main .first-contain.home.cotown .text p {
         text-align: left;
     }
 
+    .main-header .left.cotown .sello-cotown {
+        display: none;
+    }
     
     /* HOME SECTIONS */
     .locations .text-container h2.title {

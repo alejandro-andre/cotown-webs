@@ -11,9 +11,11 @@ h4,
 h5,
 h6 {
 	margin-top: 0;
-	margin-bottom: 1rem;	
+	margin-bottom: 1rem;
 }
-
+h1 {
+    font-family: var(--title-font);
+}
 p,
 input,
 label,
@@ -1842,6 +1844,9 @@ button.date-button input.inputs {
 	.only-mobile-menu .logo .img-logo {
 		height: 42px;
 	}
+	.cotown .only-mobile-menu .logo .img-logo {
+		height: 60px;
+	}
 
 	.only-mobile-menu .menu-mobile-icons {
 		display: flex;
@@ -2518,7 +2523,7 @@ main .container-main section.form.cotown .form-container button.btn-secondary {
 /* ICONOS CHAT */
 
 .iconos-chat.cotown {
-	padding: 0.5em 0 0.9em 0;		
+	padding: 0.5em 8em 0.9em 0;		
 	text-align: right;
 	position: fixed;
 	bottom: 0;
@@ -2559,6 +2564,7 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		background-color: var(--primary-background);
 		box-shadow: none;
 		cursor: pointer;
+		padding: 8px 0px;
 	}
 	main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] {
 		font-size: var(--mini-title);
@@ -2598,11 +2604,11 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		justify-content: flex-start;
 		gap: 8px
 	} */
-	/* .container-header.first .turquoise-line.cotown .left-content .banner-container .spot h1 {
+	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot h1 {
 		min-width: calc(100% - 12px);
 		letter-spacing: 0px;
 		font-size: var(--resp-text);
-	} */
+	}
 	/* .container-header.first .turquoise-line.cotown .left-content .banner-container .spot .close {
 		margin: auto 8px auto 4px;
 		padding: 0;
@@ -2617,7 +2623,9 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		font-size: var(--resp-mini-title);
 	} */
 
-
+	.iconos-chat.cotown {
+		padding: 0.5em 0 0.9em 0;
+	}
 
 	.black-line.cotown .pure-menu.pure-menu-horizontal ul li {		
 		width: 92%;

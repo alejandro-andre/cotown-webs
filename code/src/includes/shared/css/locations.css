@@ -236,7 +236,7 @@ padding-bottom: 0;
 .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content p {
   font-size: var(--text);
   font-weight: var(--regular);
-  line-height: 1.2; 
+  line-height: 1.5; 
   margin: 0;
   padding-right: 20px;
 }
@@ -260,6 +260,9 @@ padding-bottom: 0;
 .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content {
   padding-top: 0;
   width: calc(75% - 24px) !important;
+}
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .text-content h2 {
+  font-weight: var(--regular);
 }
 .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list {
   display: flex;
@@ -290,9 +293,15 @@ padding-bottom: 0;
   display: none;
 }
 .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a .label-content img.icon {
-  width: 40px;
+  width: 64px;
 }
-
+.locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a .label-content p {
+ text-align: center;
+ margin-top: 0;
+ text-transform: uppercase;
+ font-weight: var(--regular);
+ font-size: var(--resp-text);
+}
 
 
 /* RESPONSIVE
@@ -407,6 +416,11 @@ padding-bottom: 0;
     margin: 0 0 0.3em 1em;
     text-align: start;
   }
+  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img-text {
+    width: 100%!important;
+    margin: 0;
+    flex-flow: row wrap;
+  }
   .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .img-text .img-cont .img {
     width: 100%;
     height: auto;
@@ -437,15 +451,9 @@ padding-bottom: 0;
     line-height: 1.4;
   }
   .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a {
-    width: 50%!important;
+    width: 48%!important;
     margin-bottom: 1em;
   }
-  .locations .container-main .all-locations.cotown .locations-container .locations-list .list-container .location .types .type-list a .label-content p {
-    text-align: center;
-    margin: 0;
-  }
-
-
 }
 
 /* MOVIL*/
