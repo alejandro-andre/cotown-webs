@@ -47,14 +47,7 @@
   {% else %}
     <div class="left cotown pure-u-lg-5-24">
       <div class="text-container desktop">
-        <!-- CAMBIAR TRADUCCIONES -->
-        <h1 class="pure-u-1">BIENVENIDO
-          <span class="pure-u-1">COTOWNER.</span>
-        </h1>
-
-        <!-- <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}
-        <span class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</span>
-        </h1> -->
+        <h1 class="pure-u-1">{% literal texts, 'home-bienvenido', L %}</h1>
       </div>
       <div class="basic-searcher pure-u-1">
         <label class="label">{% literal texts, 'home-bienvenido-donde', L %}:</label>
@@ -66,10 +59,7 @@
           {% endif %}
           {% endfor %}
         </select>
-        <!-- <label class="label">{% literal texts, 'home-bienvenido-tipo', L %}:</label>
-        <select id="type" name="type" class="pure-u-1" 
-                onchange="sessionStorage.setItem('path_type', this.value);" required>
-        </select>  -->
+        <select style="display:none;" id="type" name="type" class="pure-u-1" onchange="sessionStorage.setItem('path_type', this.value);" required></select>
         <div class="calendar pure-u-1">
           <div class="pure-u-1">
             <label class="label" for="from">{% literal texts, 'home-bienvenido-cuando', L %}:</label>

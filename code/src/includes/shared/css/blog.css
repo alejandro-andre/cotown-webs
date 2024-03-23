@@ -307,7 +307,6 @@ main.blog.cotown .container-main .first-contain .h1-big h1 {
 	font-weight: var(--regular);
 	font-size: var(--big-title);
 	line-height: 1;	
-	text-transform: lowercase;
 }
 
 main.blog.cotown .container-main .first-contain .search select,
@@ -468,7 +467,7 @@ main.blog.cotown .container-main .posts .post .data-post p,
 main.blog.cotown .container-main .posts .post .data-post a {
 	border: none;
 	border-radius: 0;
-	padding: 0.2em 0.8em;
+	padding: 0.2em 0.8em 0.2em 0;
 	margin: 0;
 	color: var(--primary-old);
 }
