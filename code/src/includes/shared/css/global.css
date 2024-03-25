@@ -2520,6 +2520,11 @@ main .container-main section.form.cotown .form-container button.btn-secondary {
 	box-shadow: none;
 }
 
+/* FORM COTONW */
+main.contact.cotown .container-main section.form .form-container .campo label a {
+	text-decoration: 1px solid underline;
+}
+
 /* ICONOS CHAT */
 
 .iconos-chat.cotown {
@@ -2546,6 +2551,7 @@ main .container-main section.form.cotown .form-container button.btn-secondary {
 ul.black-menu.cotown li .locations-container label.locations-label .loc a {	
 	font-weight: var(--400);
 }
+
 /* COTOWN NEW DESKTOP */
 
 @media only screen and (min-width: 1024px) {

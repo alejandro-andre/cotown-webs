@@ -1050,7 +1050,7 @@ main.flat.cotown .apartments .all-rooms .card-room .right-data .align-end {
 	text-transform: none;
 }
 main.flat.cotown .apartments .all-rooms .card-room {
-	background-color: var(--white);   
+	background-color: var(--primary);   
 }
 main.flat.cotown .apartments .all-rooms .card-room .right-data {
 	margin-bottom: 2em;
@@ -1058,7 +1058,7 @@ main.flat.cotown .apartments .all-rooms .card-room .right-data {
 main.flat.cotown .apartments .all-rooms .card-room .right-data .buttons.cotown button.btn-secondary,
 main.flat.cotown .apartments .all-rooms .card-room .right-data .buttons.cotown button.btn-primary {
 	width: 100%;
-	height: auto;
+	height: 46px;
 	font-size: var(--text);
 	font-weight: var(--semibold);
 	padding: 0.8em 0;
@@ -1085,3 +1085,4 @@ main.flat.cotown .last .last-zone .last-content .left h2 span {
 	color: var(--primary-old);
 }
 }
+

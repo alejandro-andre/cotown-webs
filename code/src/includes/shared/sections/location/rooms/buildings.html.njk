@@ -310,7 +310,13 @@
               </div>
               <div class="h4-container pure-u-12-24">
                 <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
-                <div id="{{b.id}}_I" class="pure-u-1 text-red"></div>
+                {% if site == 'vanguard' %}
+                  <div id="{{b.id}}_I" class="pure-u-1 text-red"></div>
+                {% else %}
+                  {% if rooms | find(b.id) %}
+                  <div id="{{b.id}}_I" class="pure-u-1 text-red"></div>
+                  {% endif %}
+                {% endif %}                
               </div>
               <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
@@ -331,8 +337,14 @@
                 <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
               </div>
               <div class="h4-container pure-u-12-24">
-                <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
-                <div id="{{b.id}}_D" class="pure-u-1 text-red"></div>
+                <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>                
+                {% if site == 'vanguard' %} 
+                  <div id="{{b.id}}_D" class="pure-u-1 text-red"></div>
+                {% else %}
+                  {% if rooms | find(b.id) %}
+                   <div id="{{b.id}}_D" class="pure-u-1 text-red"></div>
+                  {% endif %}
+                {% endif %}
               </div>
               <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
@@ -353,8 +365,14 @@
                 <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
               </div>
               <div class="h4-container pure-u-12-24">
-                <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
-                <div id="{{b.id}}_F" class="pure-u-1 text-red"></div>
+                <h4>{% literal texts, 'type-apartamento-privado', L %}</h4> 
+                {% if site == 'vanguard' %} 
+                 <div id="{{b.id}}_F" class="pure-u-1 text-red"></div>
+                {% else %}
+                  {% if flats | find(b.id) %}
+                    <div id="{{b.id}}_F" class="pure-u-1 text-red"></div>
+                  {% endif %}
+                {% endif %}                 
               </div>
               <div class="button-container pure-u-7-24">
                 <button 
