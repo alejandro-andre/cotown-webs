@@ -4,8 +4,10 @@
 
     <div class="h2-contain pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
       
-      {% if site == 'vanguard' %}     
-       <h2 class="pure-u-20-24">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}</h2>
+      {% if site == 'vanguard' %}
+      <div class="title-container vanguard pure-u-1 pure-u-lg-1-2">
+        <h2 class="vanguard pure-u-20-24">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}</h2>
+      </div>
       {% else %}
       <div class="title-container cotown pure-u-1 pure-u-lg-18-24">
         <h2 class="loc-title cotown">{{location | translate('Name', L)}}</h2>
@@ -21,7 +23,7 @@
       </a>
       
       <!-- Dates -->
-      <section id="selected-dates" class="dates hidden pure-u-22-24 {% if site == 'vanguard' %} vanguard pure-u-lg-10-24 {% else %} cotown pure-u-lg-6-24 {% endif %}">
+      <section id="selected-dates" class="dates hidden pure-u-22-24 {% if site == 'vanguard' %} vanguard pure-u-lg-1-2 {% else %} cotown pure-u-lg-6-24 {% endif %}">
         <div class="calendar pure-u-1">
           <div class="reservas pure-u-1">
             <div class="button-calendar" onclick="go_check();">

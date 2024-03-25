@@ -190,6 +190,10 @@
 }
 
 /* ---------- ROOMS ---------- \*/
+.flat.vanguard h2 {
+  font-family: var(--title-font);
+  font-weight: var(--400);
+}
 .rooms .all-rooms {
   display: flex;
   flex-flow: column;

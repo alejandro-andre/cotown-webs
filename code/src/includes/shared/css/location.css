@@ -91,6 +91,11 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     color: var(--white);
 }
 
+main.location.vanguard h2 {
+    font-family: var(--title-font);
+    font-weight: var(--400);
+}
+
 /* CARRUSEL
 -------------------------------- \*/
 .pisos-slider {
@@ -117,10 +122,13 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     text-transform: uppercase;
     padding: 0.2em 0 0 4em;
 }
+.pisos-slider .h2-container.vanguard h2 {
+    font-family: var(--title-font);
+    font-weight: var(--400);
+}
 .pisos-slider .h2-container h2 span {
     font-weight: 200!important;
 }
-
 
 
 /* RESERVAS */
@@ -418,7 +426,6 @@ main.location section.necesities .contain {
 }
 main.location section.necesities .contain .title h2 {
     width: 100%;
-    font-size: var(--subtitle);
 }
 main.location section.necesities .contain .text p {
     font-weight: var(--light);
