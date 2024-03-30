@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#00BFB2;}
-	.st1{fill:none;}
-	.st2{fill:#FFFFFF;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#00BFB2;}
-	.svg-base{stroke:#30363B;stroke-width:0.1828;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;}
-	.st6{font-family:'MyriadPro-Regular';}
-	.st7{font-size:181.3991px;}
-	.st8{fill:url(#SVGID_1_);}
-	.st9{fill:#FBFBFB;}
-</style>
-<text transform="matrix(1 0 0 1 -516.844 -35.6103)" class="st2 st6 st7">OTROS</text>
 <g>
-	<path class="st1" d="M256,63.8C150,63.8,63.8,150,63.8,256S150,448.2,256,448.2c106,0,192.2-86.2,192.2-192.2S362,63.8,256,63.8z
-		 M256,432c-97.2,0-176-78.8-176-176S158.8,80,256,80c97.2,0,176,78.8,176,176S353.2,432,256,432z"/>
-	<path class="st0" d="M256,80c-97.2,0-176,78.8-176,176s78.8,176,176,176c97.2,0,176-78.8,176-176S353.2,80,256,80z M353.5,268.4
-		l-135.6,78.3c-9.5,5.5-21.4-1.4-21.4-12.4V177.7c0-11,11.9-17.9,21.4-12.4l135.6,78.3C363.1,249.1,363.1,262.9,353.5,268.4z"/>
-	<path class="st0" d="M256,58.1C146.9,58.1,58.1,146.9,58.1,256S146.9,453.9,256,453.9S453.9,365.1,453.9,256S365.1,58.1,256,58.1z
-		 M256,448.2C150,448.2,63.8,362,63.8,256S150,63.8,256,63.8c106,0,192.2,86.2,192.2,192.2S362,448.2,256,448.2z"/>
+	<path d="M256,460.7c-112.9,0-204.7-91.8-204.7-204.7S143.1,51.3,256,51.3S460.7,143.1,460.7,256S368.9,460.7,256,460.7z M256,76.3
+		c-99.1,0-179.7,80.6-179.7,179.7S156.9,435.7,256,435.7S435.7,355.1,435.7,256S355.1,76.3,256,76.3z"/>
+</g>
+<g>
+	<path d="M179,351.2V160.8L387,256L179,351.2z M204,199.7v112.5L327,256L204,199.7z"/>
 </g>
 </svg>
