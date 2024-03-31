@@ -1,8 +1,6 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <style type="text/css">
-	.svg_base {fill:#343434;}
-	.svg_line{stroke:#343434;}
 </style>
 <g>
 	<path class="svg_base" d="M85.9,65.7v285.4c0,35.5-25.6,70.9-25.8,71.3l10,7.4l10,7.4c1.3-1.7,30.7-42.2,30.7-86V90.6h296.6v343.2h24.9V65.7H85.9z"

@@ -2,8 +2,6 @@
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#000000;stroke-width:25;stroke-miterlimit:10;}
-	.svg_base {fill:#343434;}
-	.svg_line{stroke:#343434;}
 </style>
 <g>
 	<line class="st0 svg_line" x1="163.1" y1="180.6" x2="348.9" y2="180.6"/>

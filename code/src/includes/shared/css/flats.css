@@ -338,15 +338,9 @@
 .apartment-services .splide-services .splide__list .splide__slide .slide .img .svg_accent { 
     fill: var(--secondary-button-fill) !important; 
 }
-.svg_base { 
-    fill: var(--primary-flats-text) !important;
-}
-.svg_accent {
-    fill: var(--primary) !important; 
-}
-.svg_line { 
-    stroke: var(--primary-flats-text) !important;
-}
+.svg_base { fill: var(--primary-flats-text) !important; }
+.svg_accent { fill: var(--primary) !important; }
+.svg_line { stroke: var(#e0e0e0) !important; }
 
 /*
 .card-room .svg_accent {

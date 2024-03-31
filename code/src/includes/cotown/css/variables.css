@@ -142,6 +142,6 @@
 }
 
 /* SVG Fill colours */
-.svg_base { fill: #363434 !important; }
-.svg_accent { fill: #00bfb2 !important; }
-.svg_line { stroke: #363434 !important; }
+.svg_base { fill: #363434; }
+.svg_accent { fill: #00bfb2; }
+.svg_line { stroke: #363434; }

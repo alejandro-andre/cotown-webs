@@ -73,12 +73,8 @@ main.contact .contact-main .map .leaflet-tile-container {
 	overflow: hidden;
 	z-index: -9999;
 }
-.svg_base {
-	fill: #e0e0e0 !important;
-}
-.svg_line { 
-	stroke: #e0e0e0 !important; 
-}
+.svg_base { fill: #e0e0e0 !important;}
+.svg_line { stroke: #e0e0e0 !important; }
 
 @media only screen and (min-width: 1600px) {
 /* .contact-main h2 {

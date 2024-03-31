@@ -378,12 +378,9 @@ button.green-button.btn-secondary {
     transform: scale(1);
 }
 
-.svg_base {
-    fill: var(--primary-background) !important; 
-}
-.svg_accent {
-    fill: var(--primary) !important;
-}
+.svg_base { fill: var(--primary-background) !important; }
+.svg_accent { fill: var(--primary) !important; }
+.svg_line { stroke: var(#e0e0e0) !important; }
 
 .carousel .carousel-main-list .card .card-body .price {    
     border-top: 1px solid var(--primary);
@@ -1031,7 +1028,7 @@ section.map {
 /* COTOWN NEW NECESITIES */
 
 main.location.cotown section.necesities.cotown {
-    margin: 0 0 2em;
+    margin: 0;
 }
 main.location.cotown section.necesities.cotown .grid {
     width: 84%;
