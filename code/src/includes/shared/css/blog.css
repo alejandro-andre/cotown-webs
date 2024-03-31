@@ -698,6 +698,10 @@ main.post-page.cotown .container-main .like-content .like .redes a em {
 	align-items: flex-end;
 	text-align: end;
 }
+main.post-page.cotown .container-main .post-content .text .text-content p {
+	font-size: var(--mini-title);
+}
+
 
 /* COTOWN POST END
 -------------------------------- \*/
@@ -974,7 +978,7 @@ main.post-page.cotown .container-main .like-content .like .redes a em {
 		font-size: var(--resp-subtitle);
 	}
 	main.post-page.cotown .container-main .post-content .text .text-content p {
-		font-size: var(--resp-text);
+		font-size: var(--text);
 	}
 	main.post-page.cotown .container-main .post-content .text .text-content ul {
 		padding-inline-start: 10px;

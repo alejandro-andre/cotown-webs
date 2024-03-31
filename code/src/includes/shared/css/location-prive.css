@@ -90,6 +90,10 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     margin: 0 0 5px 0;
     color: var(--white);
 }
+main.location.vanguard h2 {
+    font-family: var(--title-font);
+    font-weight: var(--400);
+}
 
 /* CARRUSEL
 -------------------------------- \*/
@@ -122,6 +126,9 @@ section.location {
     width: 70%;
     text-transform: uppercase;
     padding: 0.2em 0 0 4em;
+}
+.pisos-slider .h2-container.vanguard h2 {
+    font-family: var(--title-font);
 }
 .pisos-slider .h2-container h2 span {
     color: var(--white);
@@ -422,7 +429,6 @@ main.location section.necesities .contain {
 main.location section.necesities .contain .title h2 {
     color: var(--white);
     width: 100%;
-    font-size: var(--subtitle);
 }
 main.location section.necesities .contain .text p {
     color: var(--white);

@@ -91,6 +91,11 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     color: var(--white);
 }
 
+main.location.vanguard h2 {
+    font-family: var(--title-font);
+    font-weight: var(--400);
+}
+
 /* CARRUSEL
 -------------------------------- \*/
 .pisos-slider {
@@ -117,10 +122,13 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     text-transform: uppercase;
     padding: 0.2em 0 0 4em;
 }
+.pisos-slider .h2-container.vanguard h2 {
+    font-family: var(--title-font);
+    font-weight: var(--400);
+}
 .pisos-slider .h2-container h2 span {
     font-weight: 200!important;
 }
-
 
 
 /* RESERVAS */
@@ -269,7 +277,6 @@ a {
     text-align: center;
     padding: 1.5em 0 0.5em;
 }
-
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type img {
     width: 60px;
 }
@@ -419,7 +426,6 @@ main.location section.necesities .contain {
 }
 main.location section.necesities .contain .title h2 {
     width: 100%;
-    font-size: var(--subtitle);
 }
 main.location section.necesities .contain .text p {
     font-weight: var(--light);
@@ -1048,6 +1054,10 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
     .pisos-slider.cotown .h2-container .title-container.cotown h2 {
         font-size: var(--resp-big-subtitle);
     }
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container {
+        align-items: center;
+        background-color: lightcoral;
+    }
 }
 @media only screen and (max-width: 1023.9px) {
     main.location.cotown section.location {
@@ -1101,6 +1111,9 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
         font-size: var(--resp-big-subtitle);
         font-weight: var(--bold);
     }
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type {
+        align-items: center;
+    }
     main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container {
         margin: 0;
     }
@@ -1128,6 +1141,8 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
     main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .services-list {
         border-top: 1px solid var(--primary);
     }
+
+
     main.location.cotown section.necesities.cotown {
         margin: 0;
         padding: 2em 1em;
