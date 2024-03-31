@@ -315,9 +315,7 @@
                 {% if site == 'vanguard' %}
                   <div id="{{b.id}}_I" class="pure-u-1 text-red"></div>
                 {% else %}
-                  {% if rooms | find(b.id) %}
                   <div id="{{b.id}}_I" class="pure-u-1 text-red"></div>
-                  {% endif %}
                 {% endif %}                
               </div>
               <div class="p-container pure-u-7-24">
@@ -343,9 +341,7 @@
                 {% if site == 'vanguard' %} 
                   <div id="{{b.id}}_D" class="pure-u-1 text-red"></div>
                 {% else %}
-                  {% if rooms | find(b.id) %}
-                   <div id="{{b.id}}_D" class="pure-u-1 text-red"></div>
-                  {% endif %}
+                  <div id="{{b.id}}_D" class="pure-u-1 text-red"></div>
                 {% endif %}
               </div>
               <div class="p-container pure-u-7-24">
