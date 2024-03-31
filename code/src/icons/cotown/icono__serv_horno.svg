@@ -1,10 +1,14 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.svg_base {fill:#343434;}
+	.svg_line{stroke:#343434;}
+</style>
 <g>
-	<path d="M154.5,56.7c-33.1,0-60,26.9-60,60v44.6v28.6v265.4h262.9c33.1,0,60-26.9,60-60V189.9v-28.6V56.7H154.5z M388.8,395.3
+	<path class="svg_base" d="M154.5,56.7c-33.1,0-60,26.9-60,60v44.6v28.6v265.4h262.9c33.1,0,60-26.9,60-60V189.9v-28.6V56.7H154.5z M388.8,395.3
 		c0,17.3-14.1,31.4-31.4,31.4H123.2V189.9h265.7V395.3z M123.2,161.3v-44.6c0-17.3,14.1-31.4,31.4-31.4h234.3v75.9H123.2z"/>
-	<rect x="335.5" y="108.9" width="28.6" height="28.8"/>
-	<rect x="281.1" y="108.9" width="28.6" height="28.8"/>
-	<path d="M352.6,226.6H159.4v156.3h193.3V226.6z M324,354.3H188v-99.1h136V354.3z"/>
+	<rect class="svg_base" x="335.5" y="108.9" width="28.6" height="28.8"/>
+	<rect class="svg_base" x="281.1" y="108.9" width="28.6" height="28.8"/>
+	<path class="svg_base" d="M352.6,226.6H159.4v156.3h193.3V226.6z M324,354.3H188v-99.1h136V354.3z"/>
 </g>
 </svg>

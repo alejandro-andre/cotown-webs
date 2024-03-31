@@ -344,7 +344,7 @@
 .svg_accent {
     fill: var(--primary) !important; 
 }
-.cls-1 { 
+.svg_line { 
     stroke: var(--primary-flats-text) !important;
 }
 
