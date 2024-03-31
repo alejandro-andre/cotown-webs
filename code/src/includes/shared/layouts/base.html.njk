@@ -20,7 +20,7 @@
 <!-- Icono spotify -->
  {% if site == 'vanguard' %}
 <section class="iconos-chat">
-  {% for r in rrss | find ('Name', 'eq', 'spotify') %}
+  {% for r in rrss | find('Name', 'eq', 'spotify') %}
   <a href="{{r.Link}}" rel="noreferrer" target="_blank">
   <div class="spotify"><em class="icon-spotify"></em></div>
   </a>
@@ -28,7 +28,7 @@
 </section>
 {% else %}
 <section class="iconos-chat cotown">
-  {% for r in rrss | find ('Name', 'eq', 'spotify') %}
+  {% for r in rrss | find('Name', 'eq', 'spotify') %}
   <a href="{{r.Link}}" rel="noreferrer" target="_blank">
   <div class="spotify"><em class="icon-spotify"></em></div>
   </a>

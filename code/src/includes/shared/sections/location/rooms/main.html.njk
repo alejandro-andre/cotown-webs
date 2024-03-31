@@ -52,7 +52,7 @@
     {% if ra > 0 or rp > 0 %}
     <div id="marker_{{b.id}}" style="display: none;">
       <div class="mappopup" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html';">
-        {% for photo in b.Photos | find ('Image_type', 'eq', 'habitacion') %}
+        {% for photo in b.Photos | find('Image_type', 'eq', 'habitacion') %}
         {% if loop.index == 1 %}
         {% image
           constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id  +"/Image/contents?access_token=" + token,

@@ -80,7 +80,7 @@
                 <!-- Photo -->
                 <div class="ratio desktop">
                   <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
-                    {% for photo in b.Photos | find ('Image_type', 'eq', 'piso') %}
+                    {% for photo in b.Photos | find('Image_type', 'eq', 'piso') %}
                     {% if loop.index == 1 %}
                     {% image
                         constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
@@ -190,7 +190,7 @@
         <!-- Photo -->
         <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
         <div class="img pure-u-1">
-          {% for photo in b.Photos | find ('Image_type', 'eq', 'piso') %}
+          {% for photo in b.Photos | find('Image_type', 'eq', 'piso') %}
           {% if loop.index == 1 %}
           {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,

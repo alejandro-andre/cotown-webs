@@ -48,7 +48,7 @@
     {% if flats | find('id', 'eq', b.id) | length > 0 %}
     <div id="marker_{{b.id}}" style="display: none;">
       <div class="mappopup" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html';">
-        {% for photo in b.Photos | find ('Image_type', 'eq', 'piso')%}
+        {% for photo in b.Photos | find('Image_type', 'eq', 'piso')%}
         {% if loop.index == 1 %}
         {% image
           constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id  +"/Image/contents?access_token=" + token,

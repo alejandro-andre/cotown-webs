@@ -40,7 +40,7 @@
           <div class="img-text pure-u-1 pure-u-lg-7-12 ">
             <div class="img-cont pure-u-1 pure-u-lg-1-3">
               <div class="img pure-u-1">
-                {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+                {% for i in l.Images | find('Image_type', 'eq', 'principal') %}
                 {% if loop.index == 1 %}
                 {% image
                   constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,

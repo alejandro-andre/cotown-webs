@@ -79,7 +79,7 @@
                 <!-- Photo -->
                 <div class="ratio desktop">
                   <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
-                    {% for photo in b.Photos | find ('Image_type', 'eq', 'habitacion') %}
+                    {% for photo in b.Photos | find('Image_type', 'eq', 'habitacion') %}
                     {% if loop.index == 1 %}
                     {% image
                         constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
@@ -268,7 +268,7 @@
         <!-- Photo -->
         <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
         <div class="img pure-u-1">
-          {% for photo in b.Photos | find ('Image_type', 'eq', 'habitacion') %}
+          {% for photo in b.Photos | find('Image_type', 'eq', 'habitacion') %}
           {% if loop.index == 1 %}
           {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
@@ -367,9 +367,7 @@
                 {% if site == 'vanguard' %} 
                  <div id="{{b.id}}_F" class="pure-u-1 text-red"></div>
                 {% else %}
-                  {% if flats | find(b.id) %}
-                    <div id="{{b.id}}_F" class="pure-u-1 text-red"></div>
-                  {% endif %}
+                  <div id="{{b.id}}_F" class="pure-u-1 text-red"></div>
                 {% endif %}                 
               </div>
               <div class="button-container pure-u-7-24">

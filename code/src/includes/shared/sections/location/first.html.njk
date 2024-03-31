@@ -13,7 +13,7 @@
     <div class="opacity"></div> 
     -->
     <div>
-      {% for i in location.Images | find ('Image_type', 'eq', 'landing') %}
+      {% for i in location.Images | find('Image_type', 'eq', 'landing') %}
       {% if loop.index == 1 %}
       {% image
         constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,

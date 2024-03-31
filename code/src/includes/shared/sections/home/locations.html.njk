@@ -22,7 +22,7 @@
             <a href="{{root}}{{langs[L].folder}}/facultades.html">
             {% endif %}
             <div class="img">
-              {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+              {% for i in l.Images | find('Image_type', 'eq', 'principal') %}
               {% if loop.index == 1 %}
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
@@ -53,7 +53,7 @@
             <a href="{{root}}{{langs[L].folder}}/facultades.html">
             {% endif %}
             <div class="img">
-              {% for i in l.Images | find ('Image_type', 'eq', 'principal') %}
+              {% for i in l.Images | find('Image_type', 'eq', 'principal') %}
               {% if loop.index == 1 %}
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
