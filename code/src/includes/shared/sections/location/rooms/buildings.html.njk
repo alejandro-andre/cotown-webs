@@ -181,8 +181,11 @@
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html">
                         {% if site == 'vanguard' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
-                        {% endif %}                     
+                        {% endif %}
+                        <p>&nbsp;</p>
+                        <!--?
                         <p>{% literal texts, 'price-desde', L %} {{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                        -->
                         {% if site == 'cotown' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                         {% endif %}  
