@@ -92,7 +92,6 @@
 	color: black;
 }
 .first .first-contain .text-first {
-	display: flex;
 	flex-flow: row wrap;
 	justify-content: start;
 	align-items: top;
@@ -111,7 +110,7 @@
 }
 
 .first .first-contain .flat-services .splide-services {
-	margin: 0 0 2em;
+	margin: 0;
 }
 
 .first .first-contain .flat-services .splide-services .splide__list .splide__slide {
