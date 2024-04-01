@@ -70,6 +70,13 @@ module.exports = (eleventyConfig) => {
     return result;
   });
   
+  // Number filter
+  eleventyConfig.addFilter("number", function(number, lang) {
+    if (lang == 'es')
+      return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");    
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");    
+  });
+
   // Clean up filter
   eleventyConfig.addFilter("cleanup", function(text) {
     return text.replace(/[\x00-\x1F]/g, " ").replace("  ", " ");
@@ -108,10 +115,12 @@ module.exports = (eleventyConfig) => {
   });
   
   // Text to date
-  eleventyConfig.addFilter('dmy', (value) => {
+  eleventyConfig.addFilter('dmy', (value, lang) => {
     if (value != null) {
       var parts = value.split('-');
-      return parts[2] + '/' + parts[1] + '/' + parts[0];
+      if (lang == 'es')
+        return parts[2] + '/' + parts[1] + '/' + parts[0];
+      return parts[1] + '/' + parts[2] + '/' + parts[0];
     }
     return null;
   });

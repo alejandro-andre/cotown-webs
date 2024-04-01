@@ -112,6 +112,7 @@
 .first .first-contain .flat-services .splide-services .splide__list .splide__slide .slide p {
   font-size: 16px;
   text-align: center;
+	min-height: 55px;
 }
 .first .first-contain .right-calendar {
   display: flex;
@@ -169,7 +170,6 @@
 .text-red {
   display: flex;
   flex-flow: row;
-  justify-content: right;
   width: 100%;
   padding-right: 1em;
 }

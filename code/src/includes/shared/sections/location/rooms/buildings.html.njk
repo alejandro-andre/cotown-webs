@@ -143,7 +143,7 @@
                        <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                     
                       {% else %}
                       {% endif %}                     
-                      <p>{% literal texts, 'price-desde', L %} {{minI}} €/{% literal texts, 'price-mes', L %}</p>
+                      <p>{% literal texts, 'price-desde', L %} {{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                       {% if site == 'vanguard' %}
                       {% else %}
                       <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button> 
@@ -163,7 +163,7 @@
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                 
                         {% else %}
                         {% endif %}                     
-                        <p>{% literal texts, 'price-desde', L %} {{minD}} €/{% literal texts, 'price-mes', L %}</p>
+                        <p>{% literal texts, 'price-desde', L %} {{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                         {% if site == 'vanguard' %}
                         {% else %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
@@ -182,7 +182,7 @@
                         {% if site == 'vanguard' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                         {% endif %}                     
-                        <p>{% literal texts, 'price-desde', L %} {{minF}} €/{% literal texts, 'price-mes', L %}</p>
+                        <p>{% literal texts, 'price-desde', L %} {{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                         {% if site == 'cotown' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                         {% endif %}  
@@ -312,15 +312,11 @@
               </div>
               <div class="h4-container pure-u-12-24">
                 <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
-                {% if site == 'vanguard' %}
-                  <div id="{{b.id}}_I" class="pure-u-1 text-red"></div>
-                {% else %}
-                  <div id="{{b.id}}_I" class="pure-u-1 text-red"></div>
-                {% endif %}                
+                <div id="{{b.id}}_I" class="pure-u-1 text-red"><p></p></div>
               </div>
               <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minI}} €/{% literal texts, 'price-mes', L %}</p>
+                <p>{{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                 <button 
                   class="btn-secondary green-button" 
                   onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I'">
@@ -338,15 +334,11 @@
               </div>
               <div class="h4-container pure-u-12-24">
                 <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>                
-                {% if site == 'vanguard' %} 
-                  <div id="{{b.id}}_D" class="pure-u-1 text-red"></div>
-                {% else %}
-                  <div id="{{b.id}}_D" class="pure-u-1 text-red"></div>
-                {% endif %}
+                <div id="{{b.id}}_D" class="pure-u-1 text-red"><p></p></div>
               </div>
               <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minD}} €/{% literal texts, 'price-mes', L %}</p>
+                <p>{{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                 <button 
                   class="btn-secondary green-button" 
                   onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D'">
@@ -364,11 +356,7 @@
               </div>
               <div class="h4-container pure-u-12-24">
                 <h4>{% literal texts, 'type-apartamento-privado', L %}</h4> 
-                {% if site == 'vanguard' %} 
-                 <div id="{{b.id}}_F" class="pure-u-1 text-red"></div>
-                {% else %}
-                  <div id="{{b.id}}_F" class="pure-u-1 text-red"></div>
-                {% endif %}                 
+                <div id="{{b.id}}_F" class="pure-u-1 text-red"><p></p></div>
               </div>
               <div class="button-container pure-u-7-24">
                 <button 

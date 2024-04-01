@@ -83,7 +83,7 @@
                   [800,400], "(max-width: 768px) 200px, (max-width: 1024px) 300px, 600px"
                 %}
                 <div class="date">
-                  <p>{{p.Publish_date|dmy}}</p>
+                  <p>{{p.Publish_date|dmy(L)}}</p>
                 </div>
               </div>
               <div class="data-post {% if p.Featured %}primary {% endif %}pure-u-23-24">

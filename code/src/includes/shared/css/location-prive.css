@@ -1034,7 +1034,7 @@ section.map {
 /* COTOWN NEW NECESITIES */
 
 main.location.cotown section.necesities.cotown {
-    margin: 0;
+    margin: 0 0 2em;
 }
 main.location.cotown section.necesities.cotown .grid {
     width: 84%;
