@@ -153,7 +153,7 @@ tags: page
           <label class="label">{% literal texts, 'form-presupuesto', L %}</label>
           <select class="select" type="select" id="95-min" name="95-min" onchange="budget();" required>
             {% for i in range(400, 2200, 100) -%}
-            <option value="{{i}}"{% if i == 600 %} selected{% endif %}>{{i}} €/{% literal texts, 'price-mes', L %}</option>
+            <option value="{{i}}"{% if i == 600 %} selected{% endif %}>{{i|number(L)}} €/{% literal texts, 'price-mes', L %}</option>
             {% endfor %}
           </select>
           </div>
@@ -163,7 +163,7 @@ tags: page
           <label class="label">&nbsp;</label>
           <select class="select" type="select" id="95-max" name="95-max" onchange="budget();" required>
             {% for i in range(400, 2200, 100) -%}
-            <option value="{{i}}"{% if i == 900 %} selected{% endif %}>{{i}} €/{% literal texts, 'price-mes', L %}</option>
+            <option value="{{i}}"{% if i == 900 %} selected{% endif %}>{{i|number(L)}} €/{% literal texts, 'price-mes', L %}</option>
             {% endfor %}
           </select>
           </div>

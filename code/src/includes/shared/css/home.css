@@ -608,13 +608,14 @@ main .container-main .first-contain.home.cotown .text p {
     bottom: 0;
     right: 0;
     text-align: center;
-    padding: 80px 20px 20px;
+    min-width: 160px;
+    padding: 120px 30px 30px;
 }
 
 .pisos.cotown .container .img-container .img-title.cotown h6 {
     font-family: var(--text-font);
     color: var(--black);
-    font-size: var(--mini-title);
+    font-size: var(--text-title);
     font-weight: var(--regular);
     text-align: start;
     line-height: 20px;

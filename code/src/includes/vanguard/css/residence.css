@@ -63,7 +63,7 @@
 }
 .first .first-contain .after-slide {
   background-color: var(--primary-light);
-  display: flex;
+	display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: top;
@@ -75,7 +75,6 @@
 	min-height: 70px;
 }
 .first .first-contain .text-first {
-  display: flex;
   flex-flow: row wrap;
   justify-content: start;
   align-items: top;
@@ -91,7 +90,7 @@
   padding: 2em;
 }
 .first .first-contain .flat-services .splide-services {
-  margin: 0 0 2em;
+  margin: 0;
 }
 .first .first-contain .flat-services .splide-services .splide__list .splide__slide {
   display: flex;
@@ -112,6 +111,7 @@
 .first .first-contain .flat-services .splide-services .splide__list .splide__slide .slide p {
   font-size: 16px;
   text-align: center;
+	min-height: 55px;
 }
 .first .first-contain .right-calendar {
   display: flex;

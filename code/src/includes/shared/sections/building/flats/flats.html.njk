@@ -87,26 +87,25 @@
     {{ flat_subtypes[p.Code] | translate('Description', L) | markdown | safe }}
     </div>
 
-
     <div class="option pure-u-1">
       {% for f in flats | find('id', 'eq', building.id) %}
       {% for t in f.Flat_subtypes | find('Code', 'eq', p.Code) %}
       {% if loop.index == 1 %}      
       {% if site == 'vanguard' %}
-      <p data-price="f" class="bold">{% literal texts, 'price-desde', L %} {{t.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
-      <p data-price="l" class="hidden bold">{{t.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
-      <p data-price="m" class="hidden bold">{{t.Rent_medium}} €/{% literal texts, 'price-mes', L %}</p>
-      <p data-price="s" class="hidden bold">{{t.Rent_short}} €/{% literal texts, 'price-mes', L %}</p>
-      <p data-price="ln" class="hidden bold">{{t.Rent_long_next}} €/{% literal texts, 'price-mes', L %}</p>
-      <p data-price="mn" class="hidden bold">{{t.Rent_medium_next}} €/{% literal texts, 'price-mes', L %}</p>
-      <p data-price="sn" class="hidden bold">{{t.Rent_short_next}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="f" class="bold">{% literal texts, 'price-desde', L %} {{t.Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="l" class="hidden bold">{{t.Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="m" class="hidden bold">{{t.Rent_medium|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="s" class="hidden bold">{{t.Rent_short|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="ln" class="hidden bold">{{t.Rent_long_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="mn" class="hidden bold">{{t.Rent_medium_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="sn" class="hidden bold">{{t.Rent_short_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
       {% else %}
-         
       {% endif %}     
       {% endif %}
       {% endfor %}
       {% endfor %}
     </div> 
+
     <div id="{{p.Code}}" data-id="{{p.Code}}" class="pure-u-1 text-red"><p>...</p></div>
     
     <section class="apartment-services pure-u-1">
@@ -131,25 +130,28 @@
       </div>
     </section>
 
-      {% if site == 'vanguard' %}
+    <div class="align-end pure-u-1">
+      {% for f in flats | find('id', 'eq', building.id) %}
+      {% for t in f.Flat_subtypes | find('Code', 'eq', p.Code) %}
+      {% if loop.index == 1 %}      
+      {% if site != 'vanguard' %}
+      <p data-price="f" class="bold">{% literal texts, 'price-desde', L %} {{t.Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="l" class="hidden bold">{{t.Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="m" class="hidden bold">{{t.Rent_medium|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="s" class="hidden bold">{{t.Rent_short|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="ln" class="hidden bold">{{t.Rent_long_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="mn" class="hidden bold">{{t.Rent_medium_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+      <p data-price="sn" class="hidden bold">{{t.Rent_short_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
       {% else %}
-      <div class="align-end pure-u-1">
-        <p data-price="f" class="bold">{% literal texts, 'price-desde', L %} {{t.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
-          <p data-price="l" class="hidden bold">{{t.Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
-          <p data-price="m" class="hidden bold">{{t.Rent_medium}} €/{% literal texts, 'price-mes', L %}</p>
-          <p data-price="s" class="hidden bold">{{t.Rent_short}} €/{% literal texts, 'price-mes', L %}</p>
-          <p data-price="ln" class="hidden bold">{{t.Rent_long_next}} €/{% literal texts, 'price-mes', L %}</p>
-          <p data-price="mn" class="hidden bold">{{t.Rent_medium_next}} €/{% literal texts, 'price-mes', L %}</p>
-          <p data-price="sn" class="hidden bold">{{t.Rent_short_next}} €/{% literal texts, 'price-mes', L %}</p>
-      </div>    
+      {% endif %}     
       {% endif %}
-
-
-     {% if site == 'vanguard' %}
-     {% else %}
-     <div class="border-division"></div>
-     {% endif %}    
-
+      {% endfor %}
+      {% endfor %}
+    </div>
+    
+    {% if site != 'vanguard' %}
+    <div class="border-division"></div>
+    {% endif %}    
 
     <div class="buttons pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
       <button id="btn-check-{{p.Code}}" name="btn-check" class="hidden btn-secondary" onclick="go_check();">
@@ -160,8 +162,7 @@
       </button>
       <button id="btn-info-{{p.Code}}" name="btn-info" class="{% if site == 'vanguard' %} btn-primary {% else %} btn-text {% endif %}" onclick="go_info({{p.id}}, {{p.Flat_type_id}}, '{{p.Code}}');">
         {% literal texts, 'button-mas-info', L %}
-        {% if site == 'vanguard' %}
-        {% else %}
+        {% if site != 'vanguard' %}
           <div class="mini-border"></div>
         {% endif %}
       </button>

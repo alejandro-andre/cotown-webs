@@ -538,6 +538,7 @@ main.post-page .container-main .post-content .text .text-content h4 {
 }
 
 main.post-page .container-main .post-content .text .text-content p,
+main.post-page .container-main .post-content .text .text-content strong,
 main.post-page .container-main .post-content .text .text-content a,
 main.post-page .container-main .post-content .text .text-content ul li,
 main.post-page .container-main .post-content .text .text-content ol li {
@@ -560,9 +561,7 @@ main.post-page .container-main .post-content .text .text-content ul li::marker {
 }
 
 main.post-page .container-main .post-content .text .text-content p strong {
-	font-size: var(--text-title);
 	font-weight: var(--bold);
-	line-height: 1.5;
 }
 
 main.post-page .container-main .post-content .text .text-content p em {
@@ -698,7 +697,8 @@ main.post-page.cotown .container-main .like-content .like .redes a em {
 	align-items: flex-end;
 	text-align: end;
 }
-main.post-page.cotown .container-main .post-content .text .text-content p {
+main.post-page.cotown .container-main .post-content .text .text-content p,
+main.post-page.cotown .container-main .post-content .text .text-content strong {
 	font-size: var(--mini-title);
 }
 
@@ -977,8 +977,9 @@ main.post-page.cotown .container-main .post-content .text .text-content p {
 	main.post-page.cotown .container-main .post-content .text .text-content h2, 	main.post-page.cotown .container-main .post-content .text .text-content h3 {
 		font-size: var(--resp-subtitle);
 	}
-	main.post-page.cotown .container-main .post-content .text .text-content p {
-		font-size: var(--text);
+	main.post-page.cotown .container-main .post-content .text .text-content p,
+	main.post-page.cotown .container-main .post-content .text .text-content strong {
+			font-size: var(--text);
 	}
 	main.post-page.cotown .container-main .post-content .text .text-content ul {
 		padding-inline-start: 10px;

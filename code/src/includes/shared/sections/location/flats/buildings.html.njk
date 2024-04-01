@@ -10,8 +10,8 @@
       </div>
       {% else %}
       <div class="title-container cotown pure-u-1 pure-u-lg-18-24">
-        <h2 class="loc-title cotown">{{location | translate('Name', L)}}</h2>
-        <h2 class="desc-title cotown">{% literal texts, 'rooms-nuestros-apartamentos-privados', L %}</h2>
+        <h2 class="loc-title cotown">{{location | translate('Name', L)}}.</h2>
+        <h2 class="desc-title cotown">{% literal texts, 'rooms-nuestros-apartamentos-privados', L %}.</h2>
        </div>
       {% endif %}
       
@@ -161,7 +161,7 @@
                   {% if min < 99999 %}
                   <div class="price">
                     <p>{% literal texts, 'price-desde', L %}</p>
-                    <h5>{{min}} €/{% literal texts, 'price-mes', L %}</h5>
+                    <h5>{{min|number(L)}} €/{% literal texts, 'price-mes', L %}</h5>
                   </div>
                   {% endif %}
 
@@ -237,7 +237,7 @@
               </div>
               <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minI}} €/{% literal texts, 'price-mes', L %}</p>
+                <p>{{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
               </div>
             </div>
             </a>
@@ -254,7 +254,7 @@
               </div>
               <div class="p-container pure-u-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minD}} €/{% literal texts, 'price-mes', L %}</p>
+                <p>{{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
               </div>
             </div>
             {% endif %}
@@ -280,7 +280,7 @@
                 {% endfor %}
                 {% if min < 99999 %}
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{min}} €/{% literal texts, 'price-mes', L %}</p>
+                <p>{{min|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                 {% endif %}
 
               </div>

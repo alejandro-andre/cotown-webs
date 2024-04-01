@@ -70,7 +70,7 @@
         <div class="pure-u-1-3 pure-u-md-1-4">
           <div class="type">
             <p>{{place_types[pt.Code] | translate('Name', L)}}</p>
-            <p class="price">{{pt.Flat_types[0].Rent_long}} €/{% literal texts, 'price-mes', L %}</p>
+            <p class="price">{{pt.Flat_types[0].Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
           </div>
         </div>
         {% endfor %}
