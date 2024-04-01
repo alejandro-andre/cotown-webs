@@ -47,7 +47,7 @@
 
 
   <!-- Desktop: slider -->
-  <div class="carousel desktop">
+  <div class="carousel desktop {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
     <div class="splide" id="sliderFlats" aria-label="Slider">
       <div class="splide__track">
 
@@ -74,7 +74,7 @@
           {% if flats | find('id', 'eq', b.id) | length > 0 %}
 
           <li class="splide__slide main-slide">
-            <div class="card-contain">
+            <div class="card-contain {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
               <div class="card shadow desktop">
 
                 <!-- Photo -->

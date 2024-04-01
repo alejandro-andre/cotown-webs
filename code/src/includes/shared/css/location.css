@@ -92,6 +92,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
 }
 
 main.location.vanguard h2 {
+    font-size: 60px;
     font-family: var(--title-font);
     font-weight: var(--400);
 }
@@ -195,7 +196,7 @@ main.location.vanguard h2 {
 .carousel .carousel-main-list .splide__slide .card-contain .types {
     background-color: var(--primary-light);
 }
-.carousel .carousel-main-list  .splide__slid .card.desktop {
+.carousel .carousel-main-list  .splide__slid  .card.desktop {
     color: var(--black);
     width: 70vw;
     display: flex;
@@ -223,7 +224,7 @@ a {
     object-fit: cover;
     object-position: center center;
 }
-.carousel .carousel-main-list .splide__slide h3 {
+.carousel .carousel-main-list .splide__slide .card-contain .ratio.desktop h3 {
     font-size: 78px;
     text-align: left;
     position: absolute;
@@ -231,6 +232,10 @@ a {
     left: 20px;
     color: var(--primary-text);
 }
+.carousel .carousel-main-list .splide__slide .card-contain.vanguard .ratio.desktop  h3 {
+    font-family: var(--title-font);
+}
+
 .carousel .carousel-main-list .card .card-body {
     background-color: var(--primary-light);
     max-width: 70vw;
@@ -291,6 +296,11 @@ a {
 }
 .room-type h4 {
     font-size: 22px;
+    font-weight: 400;
+}
+.room-type.vanguard h4 {
+    font-family: var(--title-font);
+    font-size: 24px;
     font-weight: 400;
 }
 h4 {
@@ -893,7 +903,7 @@ main.location section.necesities .grid .necesidad .p-text p {
     width: 100%;
     height: 600px;
 }
-.leaflet-tile-container {
+.map.cotown .leaflet-tile-container {
     filter: grayscale(100%) contrast(1.2) brightness(0.6) sepia(0.6) hue-rotate(80deg);
 }
 .map a {

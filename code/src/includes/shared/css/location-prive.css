@@ -91,6 +91,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     color: var(--white);
 }
 main.location.vanguard h2 {
+    font-size: 60px;
     font-family: var(--title-font);
     font-weight: var(--400);
 }
@@ -227,7 +228,7 @@ a {
     object-fit: cover;
     object-position: center center;
 }
-.carousel .carousel-main-list .splide__slide h3 {
+.carousel .carousel-main-list .splide__slide .card-contain .ratio.desktop h3 {
     font-size: 78px;
     text-align: left;
     position: absolute;
@@ -235,6 +236,13 @@ a {
     left: 20px;
     color: var(--primary-text);
 }
+
+
+.carousel .carousel-main-list .splide__slide .card-contain.vanguard .ratio.desktop h3 {
+    font-family: var(--title-font);
+}
+
+
 .carousel .carousel-main-list .card .card-body {
     background-color: var(--primary-dark);
     max-width: 70vw;
@@ -296,6 +304,11 @@ a {
 }
 .room-type h4 {
     font-size: 22px;
+    font-weight: 400;
+}
+.room-type.vanguard h4 {
+    font-family: var(--title-font);
+    font-size: 24px;
     font-weight: 400;
 }
 h4 {
@@ -886,7 +899,7 @@ section.map {
 .map a {
     font-size: 12px;
 }
-.leaflet-tile-container {
+.map.cotown .leaflet-tile-container {
     filter: grayscale(100%) contrast(1.2) brightness(0.6) sepia(0.6) hue-rotate(80deg);
 }
 .map .leaflet-popup-content-wrapper {
