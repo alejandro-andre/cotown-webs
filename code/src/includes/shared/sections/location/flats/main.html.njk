@@ -28,10 +28,10 @@
 
   <!-- Map -->
   <anchor class="anchor" id="mapanchor"></anchor> 
-  <section class="map">
+  <section class="map {% if site == 'cotown' %} cotown {% else %} vanguard {% endif %}">
 
     <!-- Map -->
-    <div class="map" id="map"></div>
+    <div class="map {% if site == 'cotown' %} cotown {% else %} vanguard {% endif %}" id="map"></div>
 
     <!-- Popups -->
     {% for b in buildings | find('District.Location.id', 'eq', location.id) | find('Building_type_id', 'lt', 3) %}

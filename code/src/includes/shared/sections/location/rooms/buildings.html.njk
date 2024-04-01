@@ -45,7 +45,7 @@
   </div>
 
   <!-- Desktop: slider -->
-  <div class="carousel desktop">
+  <div class="carousel desktop {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
     <div class="splide" id="sliderFlats" aria-label="Slider">
       <div class="splide__track">
 
@@ -73,7 +73,7 @@
           {% set rp = b.Resources | find('Sale_type', 'eq', 'plazas') | length  %}
           {% if ra > 0 or rp > 0 %}
           <li class="splide__slide main-slide">
-            <div class="card-contain">
+            <div class="card-contain {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
               <div class="card shadow desktop">
 
                 <!-- Photo -->
@@ -135,7 +135,7 @@
 
                     <!-- Habitacion-individual -->
                     {% if minI < 99999 %}
-                    <div class="room-type">
+                    <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I">
                       <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
                       <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
@@ -155,7 +155,7 @@
 
                     <!-- Habitacion-compartida -->
                     {% if minD < 99999 %}
-                    <div class="room-type">
+                    <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D">
                         <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
                         <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
@@ -175,7 +175,7 @@
 
                     <!-- Apartamento-privado -->
                     {% if minF < 99999 %}
-                    <div class="room-type">
+                    <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
                       <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html">

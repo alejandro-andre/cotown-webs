@@ -508,7 +508,7 @@ main {
 	align-items: flex-start;
 }
 
-.container-header.first .left-content .spot h1 {
+.container-header.first .turquoise-line .left-content .spot h1 {
 	color: var(--primary-text);
 	font-size: var(--text-title);
 	font-style: normal;
@@ -517,7 +517,9 @@ main {
 	letter-spacing: -1px;
 	margin: 0;
 }
-
+.container-header.first .turquoise-line.vanguard .left-content .spot h1 {
+	font-size: 32px;
+}
 .container-header.first .right-content {
 	width: fit-content;
 	align-items: flex-end;
@@ -860,6 +862,11 @@ main .container-main section.form {
 
 main .container-main section.form h2.title {
 	text-align: center;
+}
+main.vanguard .container-main section.form.vanguard h2 {
+	font-family: var(--title-font);
+	font-weight: var(--400);
+	font-size: 60px;
 }
 
 main .container-main section.form p {
@@ -1419,6 +1426,14 @@ button.date-button input.inputs {
 	.btn-primary.search.desktop {
 		font-size: 20px;
 	}
+	.container-header.first .turquoise-line.vanguard .left-content .spot h1 {
+		font-size: 32px;
+	}
+}
+@media only screen and (min-width: 1280px) and (max-width: 1600px) {
+	.container-header.first .turquoise-line.vanguard .left-content .spot h1 {
+		font-size: 30px;
+	}
 }
 @media only screen and (min-width: 1280px) {
 	.container-header.first .turquoise-line {
@@ -1428,6 +1443,7 @@ button.date-button input.inputs {
 	.container-header.second .black-line.custom-wrapper {
 		padding: 0.2em 4em 0;
 	}
+	
 }
 @media only screen and (min-width: 1024px) {
 	header {
@@ -1514,10 +1530,15 @@ button.date-button input.inputs {
 	footer section.container-footer .contain .left .img-logo {
 		height: 100px;
 	}
+	
 }
 
 /* DESKTOP SMALL */
 @media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
+	.container-header.first .turquoise-line.vanguard .left-content .spot h1 {
+		font-size: 26px;
+	}
+
 	.icons-header .pure-menu-link {
 		padding: 0 0.5em;
 	}
@@ -2669,6 +2690,9 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		border-radius: 63px;
 		border: 1px solid var(--black);
 		box-shadow: none;
+	}
+	main.vanguard .container-main section.form.vanguard h2 {
+		font-size: 40px;
 	}
 }
 /* ------  FORM END -------------- */
