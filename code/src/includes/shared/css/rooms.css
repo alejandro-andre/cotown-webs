@@ -340,7 +340,7 @@
 	content: "\e929";
 }
 .right-data .extra {
-  border-top: 1px solid var(--grey-light);
+  border-bottom: 1px solid var(--grey-light);
   margin-top: 2em;
 }
 .right-data .extra .extras {
@@ -802,8 +802,9 @@ main.flat.cotown .rooms .all-rooms .card-room .right-data .share .sharing .right
   padding: 0;
 }
 main.flat.cotown .rooms .all-rooms .card-room .right-data .extra {
-  border-top: 1px solid var(--primary);
-  margin-top: 1em; 
+  border-bottom: 1px solid var(--primary);
+  margin-top: 0.5em; 
+  padding-bottom: 0.5em;
 }
 main.flat.cotown .rooms .all-rooms .card-room .right-data .extra .title p {
   font-size: var(--mini-title);

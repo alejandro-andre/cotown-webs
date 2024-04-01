@@ -61,18 +61,23 @@ function availability(lang, option) {
 
   // Init
   document.querySelectorAll(".text-red").forEach((div) => { div.firstChild.textContent = " "; });
-  document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.add("hidden"); });
+  document.querySelectorAll('button[name="btn-check"]').forEach((btn) => { btn.classList.add("hidden"); });
+  document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.add("invisible"); });
+  document.querySelectorAll('button[name="btn-visit"]').forEach((btn) => { btn.classList.add("invisible"); });
 
   // No dates, enable request availability buttons
   if (!date_from || !date_to) {
     document.querySelectorAll('button[name="btn-check"]').forEach((btn) => { btn.classList.remove("hidden"); });
-    document.querySelectorAll('button[name="btn-visit"]').forEach((btn) => { btn.classList.add("hidden"); });
+    document.querySelectorAll('button[name="btn-check"]').forEach((btn) => { btn.classList.remove("invisible"); });
+    document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.add("hidden"); });
+    document.querySelectorAll('button[name="btn-check"]').forEach((btn) => { btn.classList.remove("invisible"); });
     return;
   }
 
   // Get availability
   document.querySelectorAll('button[name="btn-check"]').forEach((btn) => { btn.classList.add("hidden"); });
-  document.querySelectorAll('button[name="btn-visit"]').forEach((btn) => { btn.classList.remove("hidden"); });
+  document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.remove("hidden"); });
+  document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.add("invisible"); });
   filter = "{{building.id}}" == "" ? "/0" : "/{{building.id}}"
   url = "https://back.cotown.com/api/v1/availability/" + option + filter + "?date_from=" + date_from + "&date_to=" + date_to;
   fetch(url).then(resp => resp.text()).then(data => {
@@ -101,7 +106,8 @@ function availability(lang, option) {
       // Available? show quantity and enable buttons
       else {
         try { 
-          document.getElementById("btn-book-" + div.getAttribute("data-id")).classList.remove("hidden"); 
+          document.getElementById("btn-book-" + div.getAttribute("data-id")).classList.remove("invisible"); 
+          document.getElementById("btn-visit-" + div.getAttribute("data-id")).classList.remove("invisible"); 
           document.getElementById("radio-" + div.id).disabled = false; 
           document.getElementById("label-" + div.id).classList.remove("disabled"); 
         } catch {}

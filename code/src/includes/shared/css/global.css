@@ -48,7 +48,11 @@ select option:disabled {
 	display: none;
 }
 .hidden {
-	display: none!important;
+	display: none !important;
+}
+.invisible {
+	visibility: hidden !important;
+	pointer-events: none;
 }
 
 
