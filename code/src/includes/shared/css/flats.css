@@ -784,6 +784,7 @@ background-color: var(--primary-old);
     position: absolute;
     top: -60px;
     right: -90px;
+	width: 130px;
 }
 
 
