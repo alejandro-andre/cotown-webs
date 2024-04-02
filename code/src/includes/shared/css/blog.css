@@ -131,7 +131,7 @@ main.blog .container-main .posts .post a {
 	color: var(--black);
 }
 
-main.blog .container-main .posts .post .img-container {
+main.blog.vanguard .container-main .posts .post .img-container {
 	position: relative;
 	width: 100%;
 	height: fit-content;
@@ -342,15 +342,24 @@ main.blog.cotown .container-main .posts .inner-post.cotown{
 	width: calc(100% - 8em);
 	margin: 0 auto;
 }
-
+main.blog .container-main .posts .inner-post .inside-post {
+	padding:0;
+	margin:5px;
+}
+main.blog.cotown .container-main .posts .inner-post.cotown .inside-post {
+	padding:0;
+	margin:5px 5px 10px;
+	width: calc(100% - 10px);
+}
 main.blog.cotown .container-main .posts .post {
 	position: relative;
-	min-height: 300px;
+	min-height: fit-content;
 	height: fit-content;
 	background-color: var(--new-bg);
 	box-shadow: none;
 	overflow: hidden;
 	padding-top: 20px;
+	width: 100%;
 }
 
 main.blog.cotown .container-main .posts .post.primary {	
@@ -361,18 +370,19 @@ main.blog.cotown .container-main .posts .post a {
 	width: 100%;
 	cursor: pointer;
 	color: var(--black);
+	position: relative;
 }
 
 main.blog.cotown .container-main .posts .post .img-container {
-	position: relative;
 	width: 100%;
 	height: fit-content;
-	min-height: 260px;
 }
 
 main.blog.cotown .container-main .posts .post img {
 	width: 100%;
 	object-fit: cover;
+	height: 144px;
+	object-position: top;
 }
 
 main.blog.cotown .container-main .posts .post .mark-content {
@@ -426,18 +436,17 @@ main.blog.cotown .container-main .posts .post .date {
 	margin: 0;
 }
 
-main.blog.cotown .container-main .posts .post .data-post {
-	position: absolute;
-	top: 56%;
-    left: 0;
-    height: 40%;
+main.blog.cotown .container-main .posts .post .data-post {   
+	position: relative;
+	width: 100%;
+	height: 116px;
 	background-color: var(--new-bg);
-	padding: 1em;
+	padding: 1em 0.1em 0;
 	display: flex;
 	flex-flow: column;
     justify-content: space-between;
     align-items: flex-start;
-	margin: 0.5em auto 1em;
+	margin: 0;
 	gap: 0.4em;
 }
 
@@ -451,6 +460,7 @@ main.blog.cotown .container-main .posts .post .data-post h1 {
 	font-family: var(--text-font);
 	margin-bottom: 0;
 	line-height: 25px;
+	width: 100%;
 }
 
 main.blog.cotown .container-main .posts .post .data-post.primary h1 {
@@ -737,6 +747,13 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 		margin: 0.5em auto 1em;
 		gap: 0.4em;
 	}
+	main.blog.cotown .container-main .posts .post .data-post {
+		padding: 0.2em 0.1em 0;
+	}
+	main.blog.cotown .container-main .posts .post .data-post h1 {
+		font-size: var(--mini-title);
+		line-height: 1.2;
+	}
 }
 
 @media only screen and (max-width: 1023.9px) {
@@ -809,7 +826,7 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 		box-shadow: none;
 	}
 
-	main.blog .container-main .posts .post .img-container {
+	main.blog.vanguard .container-main .posts .post .img-container {
 		height: 100%;
 		min-height: 400px;
 	}
@@ -823,6 +840,11 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 	main.blog .container-main .posts .post .data-post h1,
 	main.blog .container-main .posts .post .data-post .p-container {
 		padding: 3% 4% 0;
+	}
+
+	main.blog.cotown .container-main .posts .post .data-post h1 {
+		padding: 0;
+		font-size: var(--resp-mini-title);
 	}
 
 	/* __________________________ POST  ___________________________\*/
@@ -951,12 +973,12 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 		filter: none;
 		margin-bottom: 1em;
 	}
-	main.blog.cotown .container-main .posts .post .data-post {
+	/* main.blog.cotown .container-main .posts .post .data-post {
 		width: calc(100% - 2em);
-	}
-	main.blog.cotown .container-main .posts .post .data-post h1 {
-		padding: 1em 0;
-		font-size: var(--resp-subtitle);
+	} */
+	main.blog.cotown .container-main .posts .post .data-post {   
+		height: fit-content;
+		min-height: 76px;
 	}
 	main.blog.cotown .container-main .posts .post .data-post .p-container {
 		padding: 0 0 1em 0;

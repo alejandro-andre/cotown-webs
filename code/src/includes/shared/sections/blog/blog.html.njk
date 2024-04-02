@@ -62,10 +62,10 @@
         {% for p in posts %}
         {% if posttag.id == 0 or posttag.id | includes(p.Tags, 'Tag') %}
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-8-24">
-          <div style="padding:0;margin:5px;">
+          <div class="inside-post {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
             <div class="post {% if p.Featured %}primary {% endif %}">
-              <a href="{{root}}{{langs[L].folder}}/{{p | translate('Slug', L) | slugify}}.html">
-              <div class="img-container">
+              <a class="{% if site == 'vanguard' %} {% else %} pure-u-1 {% endif %}" href="{{root}}{{langs[L].folder}}/{{p | translate('Slug', L) | slugify}}.html">
+              <div class="img-container {% if site == 'vanguard' %} {% else %} pure-u-1 {% endif %}">
                 {% if p.Featured %}
                 <div class="mark-content">
                   <div class="mark">
@@ -86,7 +86,7 @@
                   <p>{{p.Publish_date|dmy(L)}}</p>
                 </div>
               </div>
-              <div class="data-post {% if p.Featured %}primary {% endif %}pure-u-23-24">
+              <div class="data-post {% if p.Featured %}primary {% endif %} pure-u-23-24">
                 <h1 class="pure-u-22-24">{{p | translate('Title', L)}}</h1>
                 <div class="p-container">
                 {% for t in p.Tags %}
