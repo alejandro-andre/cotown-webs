@@ -29,17 +29,17 @@ tags: page
 <main class="about {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
   <div class="container-main">
     {% if site == 'vanguard' %}
-    <section class="first-contain about pure-g">
-      <div class="title-big pure-u-1">
-        {% literal texts, 'about-conocenos', L, true %}
-      </div>
-    </section>
+      <section class="first-contain about pure-g">
+        <div class="title-big pure-u-1">
+          {% literal texts, 'about-conocenos', L, true %}
+        </div>
+      </section>
     {% else %}
-    <section class="first-contain about cotown pure-g">
-      <div class="title-big pure-u-1">
-        {% literal texts, 'about-conocenos', L, true %}
-      </div>
-    </section>
+      <section class="first-contain about cotown pure-g">
+        <div class="title-big pure-u-1">
+          {% literal texts, 'about-conocenos', L, true %}
+        </div>
+      </section>
     {% endif %}
 
     <!-- NO APARECE
@@ -87,85 +87,89 @@ tags: page
       {% literal texts, 'about-unete', L, true %}
 
       <form id="form" enctype="multipart/form-data" onsubmit="post(event)">
-      <div class="form-container pure-g">
 
-        <div class="pure-u-1 pure-u-md-1-2">
-          <div class="campo">
-          <label class="label">{% literal texts, 'form-nombre', L %}</label>
-          <input class="input" type="name" id="firstName" name="firstName" placeholder="{% literal texts, 'form-nombre', L %}" required>
-          </div>
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2">
-          <div class="campo">
-          <label class="label">{% literal texts, 'form-apellidos', L %}</label>
-          <input class="input" type="name" id="lastName" name="lastName" placeholder="{% literal texts, 'form-apellidos', L %}" required>
-          </div>
-        </div>
+        <div class="form-container pure-g">
 
-        <div class="pure-u-1 pure-u-md-1-2">
-          <div class="campo">
-          <label class="label">{% literal texts, 'form-email', L %}</label>
-          <input class="input" type="email" id="email" name="email" placeholder="{% literal texts, 'form-email', L %}" required>
+          <div class="pure-u-1 pure-u-md-1-2">
+            <div class="campo">
+            <label class="label">{% literal texts, 'form-nombre', L %}</label>
+            <input class="input" type="name" id="firstName" name="firstName" placeholder="{% literal texts, 'form-nombre', L %}" required>
+            </div>
           </div>
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2">
-          <div class="campo">
-          <label class="label">{% literal texts, 'form-telefono', L %}</label>
-          <input class="input" type="text" id="phone" name="phone" placeholder="{% literal texts, 'form-telefono', L %}">
+
+          <div class="pure-u-1 pure-u-md-1-2">
+            <div class="campo">
+            <label class="label">{% literal texts, 'form-apellidos', L %}</label>
+            <input class="input" type="name" id="lastName" name="lastName" placeholder="{% literal texts, 'form-apellidos', L %}" required>
+            </div>
           </div>
-        </div>
 
-        <div class="campo coment pure-u-1">
-          <label class="label">{% literal texts, 'form-mensaje', L %}</label>
-          <textarea type="textarea" id="181" name="181" rows="5" cols="40"></textarea>
-        </div>
+          <div class="pure-u-1 pure-u-md-1-2">
+            <div class="campo">
+            <label class="label">{% literal texts, 'form-email', L %}</label>
+            <input class="input" type="email" id="email" name="email" placeholder="{% literal texts, 'form-email', L %}" required>
+            </div>
+          </div>
 
-        <div class="campo add-file">
-          <label class="label">{% literal texts, 'form-subir-cv', L %}</label>
-          <div class="select">
-            <span class="selected">
-              <input class="input selected" id="file" type="file" value="{% literal texts, 'form-subir-cv', L %}"/>              
-              <label class="label btn-primary" for="selected">
-                <span>{% literal texts, 'form-adjuntar', L %}
-                 {% if site == 'vanguard' %}
-               {% else %}
-              <em class="icon-corchete-down"></em>
-              {% endif %}
-                </span>
+          <div class="pure-u-1 pure-u-md-1-2">
+            <div class="campo">
+            <label class="label">{% literal texts, 'form-telefono', L %}</label>
+            <input class="input" type="text" id="phone" name="phone" placeholder="{% literal texts, 'form-telefono', L %}">
+            </div>
+          </div>
+
+          <div class="campo coment pure-u-1">
+            <label class="label">{% literal texts, 'form-mensaje', L %}</label>
+            <textarea type="textarea" id="181" name="181" rows="5" cols="40"></textarea>
+          </div>
+
+          <div class="campo add-file">
+            <label class="label">{% literal texts, 'form-subir-cv', L %}</label>
+            <div class="select">
+              <span class="selected">
+                <input class="input selected" id="file" type="file" value="{% literal texts, 'form-subir-cv', L %}"/>              
+                <label class="label btn-primary" for="selected">
+                  <span>{% literal texts, 'form-adjuntar', L %}
+                  {% if site == 'vanguard' %}
+                {% else %}
+                <em class="icon-corchete-down"></em>
+                {% endif %}
+                  </span>
+                </label>
+              </span>
+              <label class="select-file" for="selected">
               </label>
-            </span>
-            <label class="select-file" for="selected">
-            </label>
+            </div>
+            <div class="text-ok">
+            <p>
+            {% literal texts, 'about-ok', L %}
+            </p>
+            </div>
           </div>
-          <div class="text-ok">
-          <p>
-          {% literal texts, 'about-ok', L %}
-          </p>
+
+          <div class="pure-u-1">
+            <div class="campo checkbox">
+              <input id="accept" name="accept" type="checkbox" required/>
+              <label for="accept" class="pure-checkbox">{% literal texts, 'form-rgpd', L %}
+              </label>
+            </div>
           </div>
-        </div>
 
-        <div class="pure-u-1">
-          <div class="campo checkbox">
-            <input id="accept" name="accept" type="checkbox" required/>
-            <label for="accept" class="pure-checkbox">{% literal texts, 'form-rgpd', L %}
-            </label>
+          <div id="div-ok" class="text-ok pure-u-1">
+            {% literal texts, 'contact-ok', L, true %}
           </div>
+
+          <div id="div-send" class="pure-u-1">
+            <input type="hidden" id="listid" name="listid" value="31"/>
+            <input type="hidden" id="185" name="185" value="Web"/>
+            <input type="hidden" id="186" name="186" value="{% if siteid==1 %}VSH{% else %}Cotown{% endif %}"/>
+            <input type="hidden" id="188" name="188" value="B2C"/>
+            <input type="hidden" id="190" name="190" value="CV"/>
+            <button class="btn-secondary">{% literal texts, 'form-enviar', L %}</button>
+          </div>
+
         </div>
 
-        <div id="div-ok" class="text-ok pure-u-1">
-          {% literal texts, 'contact-ok', L, true %}
-        </div>
-
-        <div id="div-send" class="pure-u-1">
-          <input type="hidden" id="listid" name="listid" value="31"/>
-          <input type="hidden" id="185" name="185" value="Web"/>
-          <input type="hidden" id="186" name="186" value="{% if siteid==1 %}VSH{% else %}Cotown{% endif %}"/>
-          <input type="hidden" id="188" name="188" value="B2C"/>
-          <input type="hidden" id="190" name="190" value="CV"/>
-          <button class="btn-secondary">{% literal texts, 'form-enviar', L %}</button>
-        </div>
-
-      </div>
       </form>
 
     </section>

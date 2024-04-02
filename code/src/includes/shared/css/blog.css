@@ -708,6 +708,15 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 
 
 /* RESPONSIVE \*/
+@media only screen and (min-width: 1600px) {
+	main.blog.vanguard .container-main .first-contain .h1-big h1 {
+		font-size: 76px;
+		font-weight: 400;
+		line-height: 100%;
+		letter-spacing: -1.2px;
+	}
+}
+
 @media only screen and (max-width: 1279.9px) {
 	main.blog .container-main .posts .post .data-post {
 		position: absolute;

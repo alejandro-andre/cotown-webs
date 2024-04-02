@@ -81,21 +81,19 @@ main.contact.cotown .contact-main .map .leaflet-tile-container {
 .svg_line { stroke: #e0e0e0 !important; }
 
 @media only screen and (min-width: 1600px) {
-/* .contact-main h2 {
+
+	main.contact.vanguard .contact-main h2{
 		font-size: 64px;
 	}
-
-	.contact-main .img-content .contact-content .text-location h3 {
+	main.contact.vanguard .contact-main .img-content .contact-content .text-location h3 {
 		font-size: 40px;
 	}
-
-	.contact-main .img-content .contact-content .text-location p {
+	main.contact.vanguard .contact-main .img-content .contact-content .text-location p {
 		font-size: 30px;
 	}
-
-	.contact-main .img-content .contact-content .text-location p span a {
+	main.contact.vanguard .contact-main .img-content .contact-content .text-location p span a {
 		font-size: 30px;
-	} */
+	}
 }
 
 @media only screen and (max-width: 1023.99px) {

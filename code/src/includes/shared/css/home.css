@@ -1220,9 +1220,14 @@ main .container-main .first-contain.home.cotown .text p {
 -------------------------------- */
 @media only screen and (min-width: 1600px) {
     .main-header .left .text-container h1 {
+        font-size: 78px;
+        line-height: 80px;
+        margin: 0 0 0.1em;
+    }
+    .main-header .left.cotown .text-container h1 {
         line-height: 80px;
     }
-
+    
     .main-header .left .basic-searcher label {
         font-size: 22px;
         font-weight: 600;
@@ -1232,12 +1237,13 @@ main .container-main .first-contain.home.cotown .text p {
         font-size: 16px;
     }
 
-    main .container-main .first-contain.home .title-big .h1-big h1 {
+    main .container-main .first-contain.home .title-big.home .h1-big h1 {
+        font-family: var(--title-font);
+        font-size: 100px;
         width: 100%;
         font-weight: 400;
         line-height: 95%;
     }
-
     main .container-main .first-contain.home .title-big.home p {
         font-size: 24px;
         line-height: 36px;
@@ -1245,12 +1251,66 @@ main .container-main .first-contain.home.cotown .text p {
         text-align: left;
     }
 
+    .locations .text-container h2.title {
+        text-align: center;
+        font-family: var(--title-font);
+        font-weight: var(--regular);
+        font-size: var(--big-title);
+        padding: 1.5em 0 0 74px;
+    }
+    .locations.vanguard .text-container h2.title {       
+        font-size: 78px;
+        font-weight: 400;
+    }
+    .locations .carousel h3 {
+        position: absolute !important;
+        font-family: var(--title-font);
+        font-size: var(--big-title);
+        font-weight: 400;
+        bottom: 0;
+        left: 0.3em;
+        color: var(--white);
+        margin: 0;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+    .locations.vanguard .carousel h3 {
+        font-size: 78px;
+    }
+
+    .pisos.vanguard .text-container h2.title {
+        font-size: 78px;
+        font-weight: 400;
+    }
+
+    .pisos.vanguard .container .img-container .img-title1 span, .pisos.vanguard .container .img-container .img-title2 span {
+        font-size: 78px;
+    }
+
+
     .pisos .container .img-container .img-title1 .subrayado {
         bottom: 174px;
     }
 
     .pisos .container .img-container .img-title2 .subrayado {
         bottom: 104px;
+    }
+
+    .servicios.vanguard .text-container h2.title {
+        font-size: 78px;
+    }
+
+    .cotownity.vanguard .container-cotownity .left .coral h2 {
+        padding: 1em 0;
+        font-size: 48px;
+        line-height: 40px;
+    }
+
+    .partners.vanguard .text-container h2.title {
+        font-size: 78px;
+    }
+    .opinions.vanguard .text-container h2 {
+        font-size: 78px;
     }
 }
 

@@ -92,7 +92,6 @@ main .location .container-main .first-contain .video-loc .text-container .descri
 }
 
 main.location.vanguard h2 {
-    font-size: 60px;
     font-family: var(--title-font);
     font-weight: var(--400);
 }

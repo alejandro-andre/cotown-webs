@@ -1,10 +1,4 @@
-<section
-{% if site == 'vanguard' %} 
-      class="opinions"
-      {% else %}
-      class="opinions cotown"
-      {% endif %}
->
+<section class="opinions {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
 
   <div class="text-container">
       {% literal texts, 'home-testimonios-titulo', L, true %}

@@ -900,6 +900,7 @@ main .container-main section.form .form-container .campo input {
 	width: 100%;
 	padding: 8px 16px;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 main .container-main section.form .form-container .campo input,
@@ -999,7 +1000,8 @@ main .container-main section.form .form-container .campo.add-file .select .selec
 	position: relative;
 	display: block;
 	height: 54px;
-	z-index: 20;
+	z-index: 1;
+	cursor: pointer;
 }
 
 main .container-main section.form .form-container .campo.add-file .select label[for="selected"] {
@@ -1428,6 +1430,10 @@ button.date-button input.inputs {
 	}
 	.container-header.first .turquoise-line.vanguard .left-content .spot h1 {
 		font-size: 32px;
+	}
+	main.vanguard .container-main section.form.vanguard h2 {
+		font-size: 78px;
+		font-weight: 400;
 	}
 }
 @media only screen and (min-width: 1280px) and (max-width: 1600px) {
