@@ -330,9 +330,13 @@ button.green-button.btn-secondary {
     font-size: 16px;
     padding: 6px 16px;
 }
-.carousel .carousel-main-list .main-slide.splide__slide.is-prev .card-contain, .carousel .carousel-main-list .main-slide.splide__slide.is-next .card-contain {
+.carousel.cotown .carousel-main-list .main-slide.splide__slide.is-prev .card-contain, .carousel.cotown .carousel-main-list .main-slide.splide__slide.is-next .card-contain {
     opacity: 0.3;
     filter: brightness(0.9);
+}
+.carousel.vanguard .carousel-main-list .main-slide.splide__slide.is-prev .card-contain, .carousel.vanguard .carousel-main-list .main-slide.splide__slide.is-next .card-contain {
+    opacity: 0.5;
+    filter: brightness(0.4);
 }
 .arrow-nav.splide__arrow {
     background-color: var(--grey-background);
@@ -710,6 +714,10 @@ main.location section.necesities .grid .necesidad .p-text p {
         font-size: 40px;
         line-height: 100%;
         padding: 0.5em 0.4em 0.2em;
+    }
+    .pisos.vanguard.mobile .piso-contain .piso-main .piso h3 {
+        font-family: var(--title-font);
+        text-transform: uppercase;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options {
         display: flex;

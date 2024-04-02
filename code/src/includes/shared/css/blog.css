@@ -185,12 +185,15 @@ main.blog .container-main .posts .post .mark .icon-star {
 
 main.blog .container-main .posts .post .date {
 	position: absolute;
-	top: 8.8em;
+	top: 152px;
 	left: 0;
 	background-color: var(--primary);
 	color: var(--white);
 	padding: 0 1em;
 	margin: 0;
+}
+main.blog.vanguard .container-main .posts .post .date {
+	top: 146px;
 }
 
 main.blog .container-main .posts .post .data-post {
@@ -513,6 +516,7 @@ main.post-page .container-main .post-content .other {
 }
 
 main.post-page .container-main .post-content .text .text-content h1 {
+	font-family: var(--title-font);
 	font-size: var(--big-title);
 	font-weight: var(--semibold);
 	line-height: 1.1;
@@ -658,6 +662,8 @@ main.post-page.cotown .container-main .post-content .first-contain .title-big .t
 }
 main.post-page.cotown .container-main .post-content .text .text-content h1 {
 	margin: 1em 0;
+	font-family: var(--text-font);
+	text-align: left;
 }
 main.post-page.cotown .container-main .post-content .other {
 	width: 100%;
@@ -679,11 +685,11 @@ main.post-page .container-main .like-content .like .text p {
 	color: var(--black);
 }
 main.post-page.cotown .container-main .like-content .like .text h3 {
-	font-size: var(--text-title);
+	font-size: var(--title);
 	font-weight: var(--semibold);
 }
 main.post-page.cotown .container-main .like-content .like .text p {
-	font-size: var(--text-title);
+	font-size: var(--title);
 }
 main.post-page.cotown .container-main .like-content .like .redes {
 	justify-content: flex-end;
@@ -720,7 +726,6 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 @media only screen and (max-width: 1279.9px) {
 	main.blog .container-main .posts .post .data-post {
 		position: absolute;
-		top: 45%;
 		left: 0;
 		height: 50%;
 		background-color: var(--white);
@@ -811,8 +816,10 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 
 	main.blog .container-main .posts .post .date {
 		top: 38%;
-	}	
-
+	}
+	main.blog.vanguard .container-main .posts .post .date {
+		top: 156px;
+	}
 	main.blog .container-main .posts .post .data-post h1,
 	main.blog .container-main .posts .post .data-post .p-container {
 		padding: 3% 4% 0;
@@ -1016,11 +1023,11 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 		color: var(--black);
 	}
 	main.post-page.cotown .container-main .like-content .like .text h3 {
-		font-size: var(--resp-text-title);
+		font-size: var(--resp-title);
 		font-weight: var(--semibold);
 	}
 	main.post-page.cotown .container-main .like-content .like .text p {
-		font-size: var(--resp-text-title);
+		font-size: var(--resp-title);
 	}
 	main.post-page.cotown .container-main .like-content .like .redes {
 		justify-content: flex-end;

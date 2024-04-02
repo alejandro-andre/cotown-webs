@@ -712,6 +712,9 @@ main.location section.necesities .grid .necesidad .p-text p {
         line-height: 100%;
         padding: 0.5em 0.4em 0.2em;
     }
+    .pisos.vanguard.mobile .piso-contain .piso-main .piso h3 {
+        font-family: var(--title-font);
+    }
     .pisos.mobile .piso-contain .piso-main .piso .options {
         display: flex;
         flex-flow: column;

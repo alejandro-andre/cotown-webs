@@ -119,7 +119,9 @@ main.cotown .container-main .first-contain .sello-cotown {
 }
 main.cotown .container-main .first-contain .sello-cotown img.img-sello {
 	position: absolute;
-	top: -64px
+	top: -60px;
+    width: 120px;
+    margin-right: 26%;
 }
 main .container-main section.banner {
 	margin-bottom: 2em;
