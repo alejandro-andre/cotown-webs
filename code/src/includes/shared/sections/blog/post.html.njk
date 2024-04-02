@@ -27,8 +27,9 @@
         <section class="first-contain pure-u-1">
           <div class="img-post pure-u-1">
             {% image
-                constants.SERVER + "/wopi/files/Marketing/Media/" + images['faqs'].id +"/Image/contents?access_token=" + token,
-                "FAQs", "FAQs", "img-faqs", [auto], ""
+              constants.SERVER + "/wopi/files/Marketing/Post/" + post.id +"/Image/contents?access_token=" + token,
+              post.Title, post.Slug | slugify, "",
+              [1280], ""
             %}
           </div>       
           <div class="title-big pure-u-9-24 pure-u-lg-1-6">       
