@@ -7,21 +7,29 @@
       {% if site == 'vanguard' %}
       <div class="title-container vanguard pure-u-1 pure-u-lg-1-2">
             <h2 class="vanguard pure-u-20-24">{% literal texts, 'rooms-nuestros-apartamentos-privados', L %}</h2>
+             <!-- See map button (mobile) -->
+            <a href="#mapanchor" class="map-button pure-u-4-24">
+              <button class="button-map-mobile pure-u-1">
+                <img src="{{root}}/assets/img/icono__serv_mapa.svg">
+                <p>{% literal texts, 'location-ver-mapa', L %}</p>
+              </button>
+            </a>
       </div>
       {% else %}
-      <div class="title-container cotown pure-u-1 pure-u-lg-18-24">
-        <h2 class="loc-title cotown">{{location | translate('Name', L)}}.</h2>
-        <h2 class="desc-title cotown">{% literal texts, 'rooms-nuestros-apartamentos-privados', L %}.</h2>
-       </div>
+        <div class="title-container cotown pure-u-1 pure-u-lg-18-24">
+          <h2 class="loc-title cotown">{{location | translate('Name', L)}}.</h2>
+          <h2 class="desc-title cotown">{% literal texts, 'rooms-nuestros-apartamentos-privados', L %}.</h2>
+        </div>
+        <!-- See map button (mobile) -->
+        <a href="#mapanchor" class="map-button pure-u-4-24">
+          <button class="button-map-mobile pure-u-1">
+            <img src="{{root}}/assets/img/icono__serv_mapa.svg">
+            <p>{% literal texts, 'location-ver-mapa', L %}</p>
+          </button>
+        </a>
       {% endif %}
+
       
-      <!-- See map button (mobile) -->
-      <a href="#mapanchor" class="map-button pure-u-4-24">
-        <button class="button-map-mobile pure-u-1">
-          <img src="{{root}}/assets/img/icono__serv_mapa.svg">
-          <p>{% literal texts, 'location-ver-mapa', L %}</p>
-        </button>
-      </a>
 
       <!-- Dates -->
       <section id="selected-dates" class="dates hidden pure-u-22-24 {% if site == 'vanguard' %} vanguard pure-u-lg-1-2 {% else %} cotown pure-u-lg-6-24 {% endif %}">

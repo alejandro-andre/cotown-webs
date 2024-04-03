@@ -472,6 +472,80 @@ main.location section.necesities .grid .necesidad .p-text p {
     margin: 0;
 }
 
+
+main.location.vanguard section.necesities.vanguard .contain .title h2 {
+    font-size: 60px;
+    font-weight: 400;
+}
+main.location.vanguard section.necesities.vanguard .text p {
+    font-size: 24px;
+}
+main.location.vanguard section.necesities.vanguard .grid .necesidad .p-title p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0 0 1em;
+}
+main.vanguard section.necesities.vanguard .grid .necesidad .p-text p {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+section.necesities.cotown .contain .title h2 {
+    font-size: 46px;
+}
+
+
+.banner-residences {
+    margin: 0;
+    background-color: var(--primary);
+}
+
+.banner-residences .contain {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-light);
+    text-align: center;
+    margin: 0 0 4rem;
+    padding: 2rem 0;
+}
+
+.banner-residences .contain .title h2 {
+    width: 40%;
+    margin: auto;
+    line-height: 100%;
+    font-size: 60px;
+    font-weight: 400; 
+}
+
+.banner-residences .contain .text p {
+    width: 60%;
+    margin: 1em auto 1em;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.banner-residences .contain .booking {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-residences .contain .booking button.btn-secondary {
+    position: absolute;
+    height: 44px;
+    top: 16px;
+}
+
+.banner-residences .contain .booking button.btn-secondary em {
+    margin-left: 8px;
+}
+
+
 .photos {
     padding: 3em 0 5em 0;
     background: linear-gradient(
@@ -491,6 +565,9 @@ main.location section.necesities .grid .necesidad .p-text p {
     height: 100%;
     object-fit: cover;
     object-position: center center;
+}
+.photos.vanguard .splide__pagination__page {
+    background-color: #ccc;
 }
 
 /* XL DESKTOP */
@@ -542,27 +619,36 @@ main.location section.necesities .grid .necesidad .p-text p {
 
 @media only screen and (min-width: 1024px) and (max-width: 1400px){
 
-    main .location .container-main .first-contain .video-loc .text-container h2 {
+    main.location .container-main .first-contain .video-loc .text-container h2 {
         font-size: 76px;
     }
-    main .location .container-main .first-contain .video-loc .text-container .description {
+    main.location .container-main .first-contain .video-loc .text-container .description {
         width: 100%;
     }
-    main .location .container-main .first-contain .video-loc .text-container .description p {
+    main.location .container-main .first-contain .video-loc .text-container .description p {
         font-size: 18px;
     }
 
-    main.location section.necesities .contain {
+    main.location.cotown section.necesities.cotown .contain {
         width: 100%;
     }
-    main.location section.necesities .contain .title h2 {
+    main.location.cotown section.necesities.cotown .contain .title h2 {
         font-size: 46px;
     }
-    main.location section.necesities .contain .text p {
+    main.location.cotown section.necesities.cotown .contain .text p {
         font-size: 18px;
     }
     .carousel .carousel-main-list .splide__slide h3 {
         font-size: 64px;
+    }
+    main.location section.necesities.cotown .contain .title h2 {
+        font-size: 46px;
+    }
+    section.necesities.vanguard .contain {
+        width: 100%;
+    }
+    main.location.vanguard section.necesities.vanguard .contain .title h2, main.location.cotown section.necesities.cotown .contain .title h2 {
+        font-size: 46px;
     }
 }
 
@@ -572,16 +658,7 @@ main.location section.necesities .grid .necesidad .p-text p {
     }
     .pisos-slider .h2-container .map-button {
         display: none;
-    }
-    /*
-    .calendar {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        margin: 2em 0 4em;
-    }
-    */
+    }    
 }
 
 /* MOBILE \*/
@@ -829,7 +906,8 @@ main.location section.necesities .grid .necesidad .p-text p {
         padding: 0 1em;
         margin: 2em 0;
     }
-    main.location section.necesities .contain .title h2 {
+
+    main.location.vanguard section.necesities.vanguard .contain .title h2, main.location.cotown section.necesities.cotown .contain .title h2 {
         font-size: 32px;
     }
     main.location section.necesities .contain .text p {
@@ -865,6 +943,27 @@ main.location section.necesities .grid .necesidad .p-text p {
         width: 50px;
         padding: 0;
     }
+
+    main.location section.necesities .grid .necesidad img, main.location section.necesities .grid .necesidad .img svg {
+        width: 50px;
+        padding: 0;
+    }
+    section.necesities .grid .necesidad .p-title p {
+        font-size: 16px;
+        margin: 0;
+    }
+    section.necesities .grid .necesidad .p-text p {
+        font-size: 14px;
+    }
+    main.location.vanguard section.necesities.vanguard .grid .necesidad .p-title p {
+        font-size: 16px;
+        margin: 0;
+    }
+    main.vanguard section.necesities.vanguard .grid .necesidad .p-text p {
+        font-size: 14px;
+    }
+
+
     main.location main.location section.necesities .grid .necesidad .p-title p {
         color: var(--white);
         font-weight: var(--bold);
@@ -889,6 +988,22 @@ main.location section.necesities .grid .necesidad .p-text p {
         padding: 0;
         font-size: 14px;
     }
+    .banner-residences .contain .title h2,
+	.banner-residences .contain .text p {
+		width: 80%;
+	}
+
+	.banner-residences .contain .title h2 {
+		font-size: 32px;
+		font-weight: 400;
+		line-height: 110%;
+	}
+
+	.banner-residences .contain .text p {
+		font-size: var(--mini-title);
+		font-weight: 400;
+		line-height: 1.5;
+	}
 }
 
 @media only screen and (max-width: 768px) {
