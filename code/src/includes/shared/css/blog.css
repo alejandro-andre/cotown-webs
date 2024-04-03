@@ -342,7 +342,7 @@ main.blog.cotown .container-main .posts .inner-post.cotown{
 	width: calc(100% - 8em);
 	margin: 0 auto;
 }
-main.blog .container-main .posts .inner-post .inside-post {
+main.blog.vanguard .container-main .posts .inside-post.vanguard {
 	padding:0;
 	margin:5px;
 }
@@ -718,6 +718,43 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 	font-size: var(--mini-title);
 }
 
+main.post-page.vanguard .container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2em;
+}
+main.post-page.vanguard .container-main .post-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3em auto;
+}
+main.post-page.vanguard .container-main .post-content .text .text-content h2, 
+main.post-page.vanguard .container-main .post-content .text .text-content h3{
+	font-family: var(--title-font);
+	font-weight: var(--400);
+	line-height: 1.1;
+}
+
+main.post-page.vanguard .container-main .like-content .like .text h3 {
+	font-family: var(--title-font);
+	font-weight: var(--400);
+}
+main.post-page.vanguard .container-main .like-content .like .text p {
+    color: var(--white);
+    margin: 0;
+    font-size: 20px;
+}
+main.post-page.vanguard .container-main .post-content .text .text-content p, 
+	main.post-page.vanguard .container-main .post-content .text .text-content a, 
+	main.post-page.vanguard .container-main .post-content .text .text-content ul li, 
+	main.post-page.vanguard .container-main .post-content .text .text-content ol li {
+		font-size: 22px;
+    	line-height: 1.5;
+}
 
 /* COTOWN POST END
 -------------------------------- \*/
@@ -821,6 +858,10 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 		width: 100%;
 		border-radius: 0 0 16px 16px;
 	}
+	main.blog.vanguard .container-main .posts .post .data-post {		
+		height: 48%;
+		padding: 0;		
+	}
 
 	main.blog .container-main .posts .post .data-post.primary {
 		box-shadow: none;
@@ -848,6 +889,42 @@ main.post-page.cotown .container-main .post-content .text .text-content strong {
 	}
 
 	/* __________________________ POST  ___________________________\*/
+
+	main.post-page.vanguard .container-main {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 0 1em;
+	}
+	main.post-page.vanguard .container-main .post-content {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 6em auto;
+	}
+	main.post-page.vanguard .container-main .post-content h1 {
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 110%;
+		text-align: left;
+		margin-bottom: 1em;
+	}
+	main.post-page.vanguard .container-main .post-content .text .text-content h2, 
+	main.post-page.vanguard .container-main .post-content .text .text-content h3 {
+		font-size: 25px;
+	}
+
+	main.post-page.vanguard .container-main .post-content .text .text-content p, 
+	main.post-page.vanguard .container-main .post-content .text .text-content a, 
+	main.post-page.vanguard .container-main .post-content .text .text-content ul li, 
+	main.post-page.vanguard .container-main .post-content .text .text-content ol li {
+		font-size: 16px;
+	}
+
+
+
 	main.post-page .container-main .post-content {
 		display: flex;
 		flex-flow: row wrap;
