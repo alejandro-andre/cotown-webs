@@ -981,7 +981,7 @@ section.necesities.cotown .contain .title h2 {
     }
 
     .text-red {
-        padding: 0 0 0 1em;
+        padding: 0;
     }
     .text-red p {
         margin: 5px 0 0 0;
@@ -1188,7 +1188,6 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
     }
     main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container {
         align-items: center;
-        background-color: lightcoral;
     }
 }
 @media only screen and (max-width: 1023.9px) {
@@ -1243,11 +1242,10 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
         font-size: var(--resp-big-subtitle);
         font-weight: var(--bold);
     }
-    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type {
-        align-items: center;
-    }
+
     main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container {
         margin: 0;
+        padding: 0.1rem 0 0;
     }
     main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
         font-size: var(--resp-text-title);
@@ -1255,13 +1253,11 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
         font-family: var(--text-font);
         line-height: 1.2;
         letter-spacing: 0;
-        width: 60%;
+        width: 100%;
         padding-left: 0;
         margin: 0;
     }
-    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container {
-        width: fit-content;
-    }
+   
     main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container button.green-button.btn-secondary,
     main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container button.green-button.btn-secondary {
         border: 1px solid var(--primary);
@@ -1309,5 +1305,17 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
         font-size: var(--resp-text);
         line-height: 1.5;
         margin: 0;
+    }
+}
+@media only screen and (max-width: 599.9px) {
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
+        font-size: 16px;
+    }
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container button.green-button.btn-secondary, main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container button.green-button.btn-secondary {
+        font-size: 14px;
+    }
+    .piso .services-list.cotown li p {
+        font-size: 14px;
+        line-height: 1.3;
     }
 }

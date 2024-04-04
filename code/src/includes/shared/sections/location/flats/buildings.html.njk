@@ -240,10 +240,10 @@
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
               </div>
-              <div class="h4-container pure-u-12-24">
+              <div class="h4-container pure-u-10-24 pure-u-lg-1-2">
                 <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
               </div>
-              <div class="p-container pure-u-7-24">
+              <div class="p-container pure-u-9-24 pure-u-lg-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
                 <p>{{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
               </div>
@@ -257,10 +257,10 @@
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
               </div>
-              <div class="h4-container pure-u-12-24">
+              <div class="h4-container pure-u-10-24 pure-u-lg-1-2">
                 <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
               </div>
-              <div class="p-container pure-u-7-24">
+              <div class="p-container pure-u-9-24 pure-u-lg-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
                 <p>{{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
               </div>
@@ -272,10 +272,10 @@
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
               </div>
-              <div class="h4-container pure-u-12-24">
+              <div class="h4-container pure-u-10-24 pure-u-lg-1-2">
                 <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
               </div>
-              <div class="p-container pure-u-7-24">
+              <div class="p-container pure-u-9-24 pure-u-lg-7-24">
 
                 <!-- DESDE -->
                 {% set min = 99999 %}
@@ -297,7 +297,7 @@
           </div>
 
           <!-- Amenities -->          
-          <div class="services-list">
+          <div class="services-list {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
             <div class="splide mini" id="sliderMiniMobile_{{b.id}}" aria-label="sliderMiniMobile_{{b.id}}">
               <div class="splide__track">
                 <ul class="splide__list list-mini">
