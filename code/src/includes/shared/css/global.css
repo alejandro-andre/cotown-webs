@@ -2434,7 +2434,7 @@ li .select-container.cotown {
 	left: -24px;
 }	
 
-.container-header.first .turquoise-line.cotown .left-content .banner-container .spot h1 {
+.container-header.first .turquoise-line.cotown .left-content .banner-container .spot span {
 	font-family: var(--text-font);
 	font-size: var(--mini-title);
 	font-style: normal;
@@ -2581,7 +2581,7 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		justify-content: flex-start;
 		gap: 8px
 	} */
-	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot h1 {
+	.container-header.first .turquoise-line.cotown .left-content .banner-container .spot span {
 		min-width: calc(100% - 12px);
 		letter-spacing: 0px;
 		font-size: var(--resp-text);
