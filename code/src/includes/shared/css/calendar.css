@@ -99,6 +99,7 @@ button.date-button {
 	box-sizing: border-box;
 	border-radius: 6px;
 	padding: 10px 0 10px 10px;
+	pointer-events: none;
 }
 
 button.date-button label.labels {
