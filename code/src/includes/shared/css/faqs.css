@@ -69,7 +69,7 @@ input[type="search"]::-webkit-search-results-decoration {
 main .container-main .faqs-container {
 	margin: 2em 1em 6em;	
 }
-main .container-main .faqs-container h1 {
+main .container-main .faqs-container h2 {
 	font-family: var(--title-font);
 	font-weight: 400;
 	font-size: 64px;
@@ -99,7 +99,7 @@ main .container-main .faqs-container .description.text .expansion {
 	justify-content: space-between;
 	align-items: center;
 }
-main .container-main .faqs-container .description.text .expansion h2 {
+main .container-main .faqs-container .description.text .expansion h3 {
 	width: 90%;
 	font-weight: 500;
 	font-size: 30px;
@@ -131,11 +131,11 @@ main .container-main .faqs-container .description.text .expansion .content ul li
 /* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
-	main .container-main .faqs-container h1 {
+	main .container-main .faqs-container h2 {
 		font-size: var(--title);
 	}
 
-	main .container-main .faqs-container .description.text .expansion h2 {
+	main .container-main .faqs-container .description.text .expansion h3 {
 		font-size: 26px;
 	}
 
@@ -172,13 +172,13 @@ main .container-main .faqs-container .description.text .expansion .content ul li
 	main .container-main .faqs-container {
 		margin: 0 1em 2em;
 	}
-	main .container-main .faqs-container h1 {
+	main .container-main .faqs-container h2 {
 		font-weight: 400;
 		font-size: 32px;
 		line-height: 110%;
 		margin: 1em 0 0;
 	}
-	main .container-main .faqs-container .description.text .expansion h2 {
+	main .container-main .faqs-container .description.text .expansion h3 {
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 150%;
@@ -272,7 +272,7 @@ main.cotown .container-main .faqs-container .faq {
 main.cotown .container-main .faqs-container .faq .every-faq {
 	margin: 0 auto;
 }
-main.cotown .container-main .faqs-container h1.cotown {
+main.cotown .container-main .faqs-container h2.cotown {
 	font-family: var(--text-font);
 	font-weight: var(--semibold);
 	font-size: var(--title);
@@ -283,7 +283,7 @@ main.cotown .container-main .faqs-container h1.cotown {
 main.cotown .container-main .faqs-container .description.text {
 	border-bottom: 1px solid var(--black);
 }
-main.cotown .container-main .faqs-container .description.text .expansion h2 {
+main.cotown .container-main .faqs-container .description.text .expansion h3 {
 	width: 90%;
 	font-weight: var(--semibold);
 	font-size: var(--text-title);
@@ -329,7 +329,7 @@ main.cotown .container-main .faqs-container .description.text .expansion label[c
 		position: static;
 		margin: 1em 0 0;
 	}
-	main.cotown .container-main .faqs-container h1.cotown {
+	main.cotown .container-main .faqs-container h2.cotown {
 		font-size: var(--resp-title);
 		line-height: 1;
 		margin: 1em 0 0;
@@ -338,7 +338,7 @@ main.cotown .container-main .faqs-container .description.text .expansion label[c
 	main.cotown .container-main .faqs-container .faq {
 		margin-bottom: 0;
 	}
-	main.cotown .container-main .faqs-container .description.text .expansion h2 {
+	main.cotown .container-main .faqs-container .description.text .expansion h3 {
 		font-weight: var(--regular);
 		font-size: var(--mini-title);
 		margin: 2em 0.2em 1em;

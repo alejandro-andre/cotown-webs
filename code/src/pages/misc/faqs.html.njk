@@ -80,16 +80,16 @@ tags: page
         {% for f in faqs %}
           <div class="every-faq pure-u-22-24 {% if site == 'vanguard' %} pure-u-lg-5-6 {% else %} {% endif %}">
             {% if site == 'vanguard' %}
-              <h1>{{f | translate('Name', L) }}</h1>
+              <h2>{{f | translate('Name', L) }}</h2>
             {% else %}
-              <h1 class="cotown">{{f | translate('Name', L) }}</h1>
+              <h2 class="cotown">{{f | translate('Name', L) }}</h2>
             {% endif %}      
             {% for q in f.Questions %}
               <div class="description text pure-u-1">
                 <div class="expansion pure-u-1">
-                  <h2>
+                  <h3>
                   {{q | translate('Question', L)}}
-                  </h2>
+                  </h3>
                   <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
                   <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
                     <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
