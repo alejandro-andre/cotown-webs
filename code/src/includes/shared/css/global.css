@@ -508,7 +508,8 @@ main {
 	align-items: flex-start;
 }
 
-.container-header.first .turquoise-line .left-content .spot h1 {
+.container-header.first .turquoise-line .left-content .spot span {
+	font-family: var(--title-font);
 	color: var(--primary-text);
 	font-size: var(--text-title);
 	font-style: normal;
@@ -517,7 +518,7 @@ main {
 	letter-spacing: -1px;
 	margin: 0;
 }
-.container-header.first .turquoise-line.vanguard .left-content .spot h1 {
+.container-header.first .turquoise-line.vanguard .left-content .spot span {
 	font-size: 32px;
 }
 .container-header.first .right-content {
@@ -1382,7 +1383,7 @@ button.date-button input.inputs {
 	.btn-primary.search.desktop {
 		font-size: 20px;
 	}
-	.container-header.first .turquoise-line.vanguard .left-content .spot h1 {
+	.container-header.first .turquoise-line.vanguard .left-content .spot span {
 		font-size: 32px;
 	}
 	main.vanguard .container-main section.form.vanguard h2 {
@@ -1391,7 +1392,7 @@ button.date-button input.inputs {
 	}
 }
 @media only screen and (min-width: 1280px) and (max-width: 1600px) {
-	.container-header.first .turquoise-line.vanguard .left-content .spot h1 {
+	.container-header.first .turquoise-line.vanguard .left-content .spot span {
 		font-size: 30px;
 	}
 }
@@ -1495,7 +1496,7 @@ button.date-button input.inputs {
 
 /* DESKTOP SMALL */
 @media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
-	.container-header.first .turquoise-line.vanguard .left-content .spot h1 {
+	.container-header.first .turquoise-line.vanguard .left-content .spot span {
 		font-size: 26px;
 	}
 
@@ -1687,7 +1688,7 @@ button.date-button input.inputs {
 		font-size: var(--resp-text);
 		color: var(--white);
 	}	
-	.container-header.first .turquoise-line .left-content .banner-container .spot h1 {
+	.container-header.first .turquoise-line .left-content .banner-container .spot span {
 		font-family: var(--text-font);
 		font-size: var(--resp-mini-title);
 		font-style: normal;
