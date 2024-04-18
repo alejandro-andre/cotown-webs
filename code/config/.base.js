@@ -230,7 +230,7 @@ module.exports = (eleventyConfig) => {
       if (img) {
         const url = src.replace("/{ID}/", "/" + img.id + "/")
         let alt = (lang == 'es') ? img.Alt : img.Alt_en;
-        const html = await picture(url, alt, "blog" + img.id, "other", [800], "")
+        const html = await picture(url, alt, "blog" + img.id, "other", [1280], "")
         text = text.replace(finds[i], html);
       }
     }

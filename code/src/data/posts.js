@@ -19,6 +19,8 @@ module.exports = async (config) => {
       Slug_en
       Title
       Title_en
+      Subtitle
+      Subtitle_en
       Content
       Content_en
       Tags: Post_tagListViaPost_id {
