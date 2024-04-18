@@ -807,7 +807,7 @@ section.necesities.cotown .contain .title h2 {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         padding: 0.5em 1em;
     }
     .pisos.mobile .piso-contain .piso-main .piso .options .type .img-container {
