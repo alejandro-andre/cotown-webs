@@ -144,6 +144,9 @@
 
                     <!-- Habitacion-individual -->
                     {% if minI < 99999 %}
+                    {% if location.Name == 'Barcelona' %} <!--###-->
+                    {% if minI > 1000 %}{% set minI = 1000 %}{% endif %}
+                    {% endif %}
                     <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I">
                       <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
@@ -151,7 +154,7 @@
                       {% if site == 'vanguard' %}
                        <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                     
                       {% else %}
-                      {% endif %}                     
+                      {% endif %}
                       <p>{% literal texts, 'price-desde', L %} {{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                       {% if site == 'vanguard' %}
                       {% else %}
@@ -164,6 +167,9 @@
 
                     <!-- Habitacion-compartida -->
                     {% if minD < 99999 %}
+                    {% if location.Name == 'Barcelona' %} <!--###-->
+                    {% if minD > 1000 %}{% set minD = 1000 %}{% endif %}
+                    {% endif %}
                     <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D">
                         <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
@@ -188,13 +194,17 @@
                       <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
                       <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html">
-                        {% if site == 'vanguard' %}
-                        <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                          {% if site == 'vanguard' %}
+                          <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
+                          {% endif %}
+                          {% if location.Name == 'Barcelona' %} <!--###-->
+                          <p> &nbsp;</p>
+                          {% else %}
+                          <p>{% literal texts, 'price-desde', L %} {{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                          {% endif %}  
+                          {% if site == 'cotown' %}
+                          <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                         {% endif %}
-                        <p>{% literal texts, 'price-desde', L %} {{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-                        {% if site == 'cotown' %}
-                        <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
-                        {% endif %}  
                       </a>
                       <div id="{{b.id}}_F" class="pure-u-1 text-red"><p></p></div>
                     </div>
@@ -323,6 +333,9 @@
 
             <!-- Habitacion individual -->
             {% if minI < 99999 %}
+            {% if location.Name == 'Barcelona' %} <!--###-->
+            {% if minI > 1000 %}{% set minI = 1000 %}{% endif %}
+            {% endif %}
             <div class="type pure-u-22-24" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I'">
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
@@ -345,6 +358,9 @@
 
             <!-- Habitacion compartida -->
             {% if minD < 99999 %}
+            {% if location.Name == 'Barcelona' %} <!--###-->
+            {% if minD > 1000 %}{% set minD = 1000 %}{% endif %}
+            {% endif %}
             <div class="type pure-u-22-24" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D'">
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
@@ -376,8 +392,12 @@
                 <div id="{{b.id}}_F" class="pure-u-1 text-red"><p></p></div>
               </div>              
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
+                {% if location.Name == 'Barcelona' %} <!--###-->
+                <p>&nbsp;</p>
+                {% else %}
                 <span>{% literal texts, 'price-desde', L %}<span>
                 <p>{{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                {% endif %}
                 <button 
                   class="btn-secondary green-button" 
                   onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html'">

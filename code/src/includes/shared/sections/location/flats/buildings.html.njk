@@ -168,8 +168,12 @@
                   {% endfor %}
                   {% if min < 99999 %}
                   <div class="price">
+                    {% if location.Name == 'Barcelona' %} <!--###-->
+                    <p> &nbsp;</p><h5></h5>
+                    {% else %}
                     <p>{% literal texts, 'price-desde', L %}</p>
                     <h5>{{min|number(L)}} €/{% literal texts, 'price-mes', L %}</h5>
+                    {% endif %}  
                   </div>
                   {% endif %}
 
@@ -236,6 +240,9 @@
 
             <!-- Habitacion individual -->
             {% if minI < 99999 %}
+            {% if location.Name == 'Barcelona' %} <!--###-->
+            {% if minI > 1000 %}{% set minI = 1000 %}{% endif %}
+            {% endif %}
             <div class="type pure-u-22-24" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I'">
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
@@ -252,7 +259,10 @@
             {% endif %}
 
             <!-- Habitacion compartida -->
-            {% if minI < 99999 %}
+            {% if minD < 99999 %}
+            {% if location.Name == 'Barcelona' %} <!--###-->
+            {% if minD > 1000 %}{% set minD = 1000 %}{% endif %}
+            {% endif %}
             <div class="type pure-u-22-24" onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D'">
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
@@ -287,8 +297,13 @@
                 {% endfor %}
                 {% endfor %}
                 {% if min < 99999 %}
+                {% if location.Name == 'Barcelona' %} <!--###-->
+                <span> &nbsp;<span>
+                <p> &nbsp;</p>
+                {% else %}
                 <span>{% literal texts, 'price-desde', L %}<span>
                 <p>{{min|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                {% endif %}
                 {% endif %}
 
               </div>
