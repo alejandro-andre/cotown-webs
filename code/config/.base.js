@@ -70,6 +70,13 @@ module.exports = (eleventyConfig) => {
     return result;
   });
   
+  // Min filter
+  eleventyConfig.addFilter("min", function(number, min) {
+    if (number > min)
+      return min;
+    return number;    
+  });
+
   // Number filter
   eleventyConfig.addFilter("number", function(number, lang) {
     if (lang == 'es')
