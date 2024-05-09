@@ -34,7 +34,7 @@
           </div>       
           <div class="title-big pure-u-8-24 pure-u-lg-6-24">       
             <div class="green-title cotown">
-              <h2 class="title">Consejos</h2>
+              <h2 class="title">{% for t in post.Tags %}{% if loop.index > 1 %}, {% endif %}{{t.Tag | translate('Name', L)}}{% endfor %}</h2>
             </div>
             <div class="h1-big">
               <h1>{{post | translate('Title', L)}}</h1>
