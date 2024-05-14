@@ -141,6 +141,7 @@ main.blog.vanguard .container-main .posts .post .img-container {
 main.blog .container-main .posts .post img {
 	width: 100%;
 	object-fit: cover;
+	height: 200px;
 }
 
 main.blog .container-main .posts .post .mark-content {
