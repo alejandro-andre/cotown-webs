@@ -381,8 +381,7 @@ main.blog.cotown .container-main .posts .post .img-container {
 main.blog.cotown .container-main .posts .post img {
 	width: 100%;
 	object-fit: cover;
-	height: 144px;
-	object-position: top;
+	height: 240px;
 }
 
 main.blog.cotown .container-main .posts .post .mark-content {
