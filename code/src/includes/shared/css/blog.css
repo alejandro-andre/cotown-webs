@@ -556,13 +556,13 @@ main.post-page .container-main .post-content .text .text-content strong,
 main.post-page .container-main .post-content .text .text-content a,
 main.post-page .container-main .post-content .text .text-content ul li,
 main.post-page .container-main .post-content .text .text-content ol li {
-	font-size: var(--text);
 	line-height: 1.5;
 }
 
 main.post-page .container-main .post-content .text .text-content a {
 	color: var(--primary-old);
 	text-decoration: underline;
+	font-size: var(--mini-title)
 }
 
 main.post-page .container-main .post-content .text .text-content ul li,
@@ -579,7 +579,7 @@ main.post-page .container-main .post-content .text .text-content p strong {
 }
 
 main.post-page .container-main .post-content .text .text-content p em {
-	font-size: var(--text-title);
+	font-size: var(--mini-title);
 }
 
 main.post-page .container-main .like-content {
@@ -749,9 +749,9 @@ main.post-page.vanguard .container-main .like-content .like .text p {
     font-size: 20px;
 }
 main.post-page.vanguard .container-main .post-content .text .text-content p, 
-	main.post-page.vanguard .container-main .post-content .text .text-content a, 
-	main.post-page.vanguard .container-main .post-content .text .text-content ul li, 
-	main.post-page.vanguard .container-main .post-content .text .text-content ol li {
+main.post-page.vanguard .container-main .post-content .text .text-content a, 
+main.post-page.vanguard .container-main .post-content .text .text-content ul li, 
+main.post-page.vanguard .container-main .post-content .text .text-content ol li {
 		font-size: 22px;
     	line-height: 1.5;
 }
