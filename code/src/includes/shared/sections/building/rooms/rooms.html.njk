@@ -93,38 +93,21 @@
 
       <!-- Share -->
       <div class="share">
-        {% if building.District.Location.Name == 'Barcelona' %}
-        {% else %}
         <div class="title">
           <p>{% literal texts, 'rooms-quiero-compartir', L %}:</p>
         </div>
-        {% endif %}
         {% for f in p.Flat_types %}
-        {% if loop.index <= 1 or building.District.Location.Name != 'Barcelona' %}
         <div class="sharing">
           <div class="left">
             <label id="label-{{p.Code}}_{{f.Code}}" for="radio-{{p.Code}}_{{f.Code}}" class="pure-radio">
-            {% if building.District.Location.Name == 'Barcelona' %}
-            {% literal texts, 'price-desde', L %}
-            {% else %}
             <input id="radio-{{p.Code}}_{{f.Code}}"{% if p.Flat_types | length == 1 %} checked{% endif %}
                    class="{% if p.Flat_types | length < 2 %}hidden{% endif %}"
                    name="radio-{{p.Code}}" 
                    data-flat="{{f.id}}" type="radio"/>
             {{flat_types[f.Code] | translate('Name', L)}}
-            {% endif %}
             </label>
           </div>
           <div class="right">
-            {% if building.District.Location.Name == 'Barcelona' %}
-            <p data-price="f">{% literal texts, 'price-desde', L %} {{f.Rent_long|min(1000)|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-            <p data-price="l" class="hidden" id="l_{{p.Code}}_{{f.Code}}">{{f.Rent_long|min(1000)|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-            <p data-price="m" class="hidden" id="m_{{p.Code}}_{{f.Code}}">{{f.Rent_medium|min(1000)|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-            <p data-price="s" class="hidden" id="s_{{p.Code}}_{{f.Code}}">{{f.Rent_short|min(1000)|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-            <p data-price="ln" class="hidden" id="l_{{p.Code}}_{{f.Code}}">{{f.Rent_long_next|min(1000)|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-            <p data-price="mn" class="hidden" id="m_{{p.Code}}_{{f.Code}}">{{f.Rent_medium_next|min(1000)|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-            <p data-price="sn" class="hidden" id="s_{{p.Code}}_{{f.Code}}">{{f.Rent_short_next|min(1000)|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-            {% else %}
             <p data-price="f">{% literal texts, 'price-desde', L %} {{f.Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
             <p data-price="l" class="hidden" id="l_{{p.Code}}_{{f.Code}}">{{f.Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
             <p data-price="m" class="hidden" id="m_{{p.Code}}_{{f.Code}}">{{f.Rent_medium|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
@@ -132,11 +115,9 @@
             <p data-price="ln" class="hidden" id="l_{{p.Code}}_{{f.Code}}">{{f.Rent_long_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
             <p data-price="mn" class="hidden" id="m_{{p.Code}}_{{f.Code}}">{{f.Rent_medium_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
             <p data-price="sn" class="hidden" id="s_{{p.Code}}_{{f.Code}}">{{f.Rent_short_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-            {% endif %}
           </div>
         </div>
         <div id="{{p.Code}}_{{f.Code}}" data-id="{{p.Code}}" class="text-red"><p>...</p></div>
-        {% endif %}
         {% endfor %}
       </div>
 

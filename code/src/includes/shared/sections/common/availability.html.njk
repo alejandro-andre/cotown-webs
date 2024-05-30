@@ -106,7 +106,7 @@ function availability(lang, option) {
       // Available? show quantity and enable buttons
       else {
         try { 
-          //document.getElementById("btn-book-" + div.getAttribute("data-id")).classList.remove("invisible"); 
+          document.getElementById("btn-book-" + div.getAttribute("data-id")).classList.remove("invisible"); 
           document.getElementById("btn-visit-" + div.getAttribute("data-id")).classList.remove("invisible"); 
           document.getElementById("radio-" + div.id).disabled = false; 
           document.getElementById("label-" + div.id).classList.remove("disabled"); 

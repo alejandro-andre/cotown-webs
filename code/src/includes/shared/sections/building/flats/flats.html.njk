@@ -92,9 +92,6 @@
       {% for t in f.Flat_subtypes | find('Code', 'eq', p.Code) %}
       {% if loop.index == 1 %}      
       {% if site == 'vanguard' %}
-      {% if building.District.Location.Name == 'Barcelona' %} <!--###-->
-      <p data-price="f" class="bold"> &nbsp;</p>
-      {% else %}
       <p data-price="f" class="bold">{% literal texts, 'price-desde', L %} {{t.Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
       <p data-price="l" class="hidden bold">{{t.Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
       <p data-price="m" class="hidden bold">{{t.Rent_medium|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
@@ -102,7 +99,6 @@
       <p data-price="ln" class="hidden bold">{{t.Rent_long_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
       <p data-price="mn" class="hidden bold">{{t.Rent_medium_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
       <p data-price="sn" class="hidden bold">{{t.Rent_short_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-      {% endif %}
       {% else %}
       {% endif %}     
       {% endif %}
@@ -139,9 +135,6 @@
       {% for t in f.Flat_subtypes | find('Code', 'eq', p.Code) %}
       {% if loop.index == 1 %}      
       {% if site != 'vanguard' %}
-      {% if building.District.Location.Name == 'Barcelona' %} <!--###-->
-      <p data-price="f" class="bold"> &nbsp;</p>
-      {% else %}
       <p data-price="f" class="bold">{% literal texts, 'price-desde', L %} {{t.Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
       <p data-price="l" class="hidden bold">{{t.Rent_long|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
       <p data-price="m" class="hidden bold">{{t.Rent_medium|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
@@ -149,7 +142,6 @@
       <p data-price="ln" class="hidden bold">{{t.Rent_long_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
       <p data-price="mn" class="hidden bold">{{t.Rent_medium_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
       <p data-price="sn" class="hidden bold">{{t.Rent_short_next|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
-      {% endif %}
       {% else %}
       {% endif %}     
       {% endif %}
