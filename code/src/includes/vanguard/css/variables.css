@@ -39,7 +39,7 @@
 
         /* // Main color */
     --primary: #ff5166;
-    --primary-light: #fff5f7;
+    --primary-light: #ffb1b6;
     --primary-dark: #c14256;
     --primary-underline: #ff516574;
     --primary-flats: #ff5166;
@@ -81,7 +81,7 @@
     /* // Text color */
     --primary-text: #ffffff;
     --second-header-text: #121212;
-    --secondary-text-header: #000000;
+    --secondary-text-header: #ffffff;
     --home-box-text: #000000;
     --box-text: #ffffff;
 
