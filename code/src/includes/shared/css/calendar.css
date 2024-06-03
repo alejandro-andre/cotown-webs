@@ -336,7 +336,7 @@ button.date-button input:visited {
 }
 
 .calendar-container .dates-selector .selector-main table tbody tr td.inside-selected {
-	background-color: var(--primary-light);
+	background-color: var(--primary-shadow);
 	border-radius: 0px;
 }
 
