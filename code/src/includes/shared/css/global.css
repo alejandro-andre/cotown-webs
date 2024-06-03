@@ -1820,7 +1820,7 @@ button.date-button input.inputs {
 		font-size: var(--mini-title);
 		line-height: 140%;
 		margin: 0;
-		color: var(--secondary-text-header);
+		color: var(--second-header-text);
 	}
 
 	.only-mobile-menu .logo {
@@ -2085,7 +2085,7 @@ button.date-button input.inputs {
 	.black-line .pure-menu.pure-menu-horizontal ul li,
 	.black-line .pure-menu.pure-menu-horizontal ul li a,
 	.black-line .pure-menu.pure-menu-horizontal ul li .options-loc .option-loc a {
-		color: var(--secondary-text-header);
+		color: var(--second-header-text);
 	}
 
 	.only-menu-mobile {
