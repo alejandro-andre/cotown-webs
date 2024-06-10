@@ -149,7 +149,7 @@
 </div>
 
 {% block footer %}
-<script>
+{% set script %}
 // Numero de meses entre dos fechas
 function months(fi, fo) {
     f1 = new Date(fi);
@@ -342,5 +342,5 @@ const fout =  document.getElementById('out');
 
 // Start calendar
 empty('', '');
-</script>
+{% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
