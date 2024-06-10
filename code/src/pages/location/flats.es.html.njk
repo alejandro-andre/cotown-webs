@@ -11,7 +11,7 @@ eleventyComputed:
     permalink: "{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{location | translate('Name', L) | slugify}}.html"
 layout: shared/layouts/base.html
 pagination:
-    data: locations
+    data: locationsflats
     size: 1
     alias: location
     addAllPagesToCollections: true

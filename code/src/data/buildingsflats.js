@@ -45,7 +45,10 @@ module.exports = async (config) => {
           Name
         }
       }
-      Resources: ResourceListViaBuilding_id {
+      Resources: ResourceListViaBuilding_id (
+            joinType: INNER
+            where: { Sale_type: { IN: [completo, ambos] } }
+      ) {
         id
         Code
         Sale_type
