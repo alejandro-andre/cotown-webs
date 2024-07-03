@@ -12,7 +12,7 @@
             {% for o in offices %}
             {% if loop.index == 1 %}
             <p>{{o.Address}}</p>
-            <p>{{o.Phones}}</p>
+            <a href="tel:{{o.Phones}}" target="_blank"><p>{{o.Phones}}</p></a>
             <p>{{o.Email}}</p>
             {% endif %}
             {% endfor %}
@@ -84,7 +84,7 @@
     <div class="info-desktop pure-u-3-5">
       {% for o in offices %}
       {% if loop.index == 1 %}
-      <p>{{o.Phone}}</p>
+      <a href="tel:{{o.Phone}}" target="_blank"><p>{{o.Phone}}</p></a>
       <p>{{o.Email}}</p>
       <p>{{o.Address}}</p>
       {% endif %}
