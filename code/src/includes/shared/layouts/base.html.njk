@@ -18,24 +18,13 @@
 {{ content | safe }}
 
 <!-- Icono spotify -->
- {% if site == 'vanguard' %}
-<section class="iconos-chat">
-  {% for r in rrss | find('Name', 'eq', 'spotify') %}
+<section class="only-mobile iconos-chat">
+  {% for r in rrss | find('Name', 'eq', 'whatsapp') %}
   <a href="{{r.Link}}" rel="noreferrer" target="_blank">
-  <div class="spotify"><em class="icon-spotify"></em></div>
+  <div><em class="icon-whatsapp"></em></div>
   </a>
   {% endfor %}
 </section>
-{% else %}
-<section class="iconos-chat cotown">
-  {% for r in rrss | find('Name', 'eq', 'spotify') %}
-  <a href="{{r.Link}}" rel="noreferrer" target="_blank">
-  <div class="spotify"><em class="icon-spotify"></em></div>
-  </a>
-  {% endfor %}
-</section>
-{% endif %}
-
 
 <!-- Spinner -->
 <div id="overlay"><div id="spinner"></div></div>
@@ -44,6 +33,28 @@
 {% include 'shared/sections/common/footer.html.njk' %}
 {% block footer %}{% endblock %}
 
+<!-- Bot -->
+<div style="width: 0; height: 0;" id="VG_OVERLAY_CONTAINER">
+</div>
+<script defer>
+  (function() {
+    window.VG_CONFIG = {
+      {% if site == 'cotown' %}
+      ID: "RXTmkM7BH7zPHDn",
+      {% else %}
+      ID: "7JlqKofVUMYNH2e",
+      {% endif %}
+      region: 'na',
+      render: 'popup',
+      stylesheets: [
+        'https://storage.googleapis.com/voiceglow-cdn/vg_live_build/styles.css',
+      ],
+    }
+    var VG_SCRIPT = document.createElement("script");
+    VG_SCRIPT.src = 'https://storage.googleapis.com/voiceglow-cdn/vg_live_build/vg_bundle.js';
+    document.body.appendChild(VG_SCRIPT);
+  })()
+</script>
 </body>
 
 </html>

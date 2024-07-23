@@ -1078,8 +1078,8 @@ main .container-main section.form .form-container button.btn-secondary {
 	padding: 0.5em 8em 0.9em 0;
 	text-align: right;
 	position: fixed;
-	bottom: 0;
-	right: 0;
+	bottom: 37px;
+	left: 20px;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-end;
@@ -1089,10 +1089,10 @@ main .container-main section.form .form-container button.btn-secondary {
 }
 
 .iconos-chat div {
-	background-color: var(--primary);
+	background-color: var(--secondary-bg);
 	border-radius: 50%;
-	width: 46px;
-	height: 46px;
+	width: 76px;
+	height: 76px;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
@@ -1100,8 +1100,8 @@ main .container-main section.form .form-container button.btn-secondary {
 }
 
 .iconos-chat div em {
-	color: var(--primary-text);
-	font-size: 32px;
+	color: var(--primary-old);
+	font-size: 40px;
 }
 
 
@@ -2502,8 +2502,8 @@ main.contact.cotown .container-main section.form .form-container .campo label a 
 	padding: 0.5em 8em 0.9em 0;		
 	text-align: right;
 	position: fixed;
-	bottom: 0;
-	right: 0;
+	bottom: 32px;
+	left: 20px;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-end;
@@ -2511,12 +2511,9 @@ main.contact.cotown .container-main section.form .form-container .campo label a 
 	gap: 4em;
 	z-index: 9999;
 }
-.iconos-chat.cotown div {
-	background-color: transparent;	
-}
 .iconos-chat.cotown div em {
 	color: var(--secondary-button-fill);
-	font-size: 32px;
+	font-size: 40px;
 }
 
 ul.black-menu.cotown li .locations-container label.locations-label .loc a {	
