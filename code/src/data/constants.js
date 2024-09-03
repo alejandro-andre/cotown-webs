@@ -1,5 +1,5 @@
 module.exports = Object.freeze({
-  //BACK: "https://dev.cotown.ciber.es/api/v1",
+  //BACK: "https://back.cotown.oimbra.tecg/api/v1",
   //SERVER: "https://experis.flows.ninja",
   BACK: "https://back.cotown.com/api/v1",
   SERVER: "https://core.cotown.com",
