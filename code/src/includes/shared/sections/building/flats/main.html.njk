@@ -13,9 +13,9 @@
     {% include 'shared/sections/building/flats/first.html.njk' %}
     </section>
 
-    <!-- Rooms -->    
-    <section class="apartments pure-u-1">     
-      <section class="all-rooms pure-u-1">      
+    <!-- Rooms -->
+    <section class="apartments pure-u-1">
+      <section class="all-rooms pure-u-1">
       {% include 'shared/sections/building/flats/flats.html.njk' %}
       </section>
     </section>
@@ -49,6 +49,13 @@ new Splide( '#image-carousel', {
   perPage: 1,
   pagination: true,
   cover: true,
+}).mount();
+
+// Sliders inicio en grande
+new Splide('#big', { 
+  type: 'loop', 
+  height: '90vh',
+  arrows: true 
 }).mount();
 
 // Slider servicios

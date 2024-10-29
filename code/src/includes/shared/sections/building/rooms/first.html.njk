@@ -4,15 +4,12 @@
   <section id="image-carousel" class="splide first-slider pure-u-1" aria-label="Beautiful Images">
     <div class="title-button {% if building.Tour %} with-tour {% else %} no-tour {% endif %}">
       <h1>{{building.Name}}</h1>
-
       {% if site == 'vanguard' %}
       {% else %}
       <div class="sello-cotown pure-u-1">
         <img class="img-sello" alt="sello" src="{{root}}/assets/img/sello.svg">
       </div>    
       {% endif %}
-
-      
       {% if building.Tour %}
       <button class="btn-secondary" onclick="open_tour('{{building.Tour}}')">
         {% literal texts, 'rooms-tour-virtual', L %}
@@ -23,19 +20,39 @@
       </button>
       {% endif %}
 
-    </div>    
-    <div class="splide__track">
+    </div>
+    <div class="splide__track" onclick="document.getElementById('big').style.display = 'flex';">
       <ul class="splide__list">
         {% for i in building.Photos | find('Image_type', 'eq', 'habitacion') %}
         <li class="splide__slide">
           {% image
             constants.SERVER + "/wopi/files/Marketing/Media_building/" + i.id +"/Image/contents?access_token=" + token,
             building.Name, building.Name + '-' + i.id | slugify, "",
-            [1280], ""
+            [1600], ""
           %}
         </li>
         {% endfor %}
       </ul>
+    </div>
+  </section>
+
+  <!-- Big photos -->
+  <section id="big" class="splide hidden-div">
+    <div class="photos">
+      <div class="close" onclick="document.getElementById('big').style.display = 'none';"><em class="icon-close"></em></div>
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for i in building.Photos | find('Image_type', 'eq', 'habitacion') %}
+          <li class="splide__slide">
+            {% image
+              constants.SERVER + "/wopi/files/Marketing/Media_building/" + i.id +"/Image/contents?access_token=" + token,
+              building.Name, building.Name + '-' + i.id | slugify, "",
+              [1600], ""
+            %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -93,8 +110,7 @@
           {% if site == 'vanguard' %}
           {% else %}
             <div class="mini-border"></div>
-          {% endif %}
-        </a>
+          {% endif %}</a>
       </button>
       {% endif %}
       {% if flats | find('id', 'eq', building.id) | length > 0 %}
@@ -115,7 +131,7 @@
           {% else %}
             <div class="mini-border"></div>
           {% endif %}
-          </a>
+        </a>
       </button>
     </div>
 
