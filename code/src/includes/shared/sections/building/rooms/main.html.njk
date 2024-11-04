@@ -149,7 +149,7 @@ thumbnails.mount();
 
 function thumb(id, target, origin) {
   document.getElementById(id).style.display = 'flex';
-  target.go(origin.index, true)
+  target.Components.Move.jump(origin.index)
 }
 
 {% include 'shared/sections/common/availability.html.njk' %}

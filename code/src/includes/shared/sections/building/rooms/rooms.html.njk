@@ -37,7 +37,7 @@
   <div class="left-carousel pure-u-1 pure-u-lg-11-24">
 
     <section id="main-carousel-{{p.Code}}" class="splide rooms-carousel" aria-label="Gallery">
-      <div class="splide__track" onclick="thumb('big-{{p.Code}}', big_{{p.id}}, main_{{p.id}})">
+      <div class="splide__track" onclick="thumb('big-{{p.Code}}', big_{{p.id}}, thumbnails_{{p.id}})">
         <ul class="splide__list">
           {% for rp in photos | find('Building.id', 'eq', building.id) | find('Place_type.Code', 'eq', p.Code) %}
           <li class="splide__slide">
