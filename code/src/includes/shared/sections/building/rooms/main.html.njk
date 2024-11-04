@@ -113,7 +113,6 @@ var thumbnails_{{p.id}} = new Splide('#thumbnail-carousel-{{p.Code}}', {
   arrows: false,
   isNavigation: true,
 });
-big_{{p.id}}.sync(main_{{p.id}});
 main_{{p.id}}.sync(thumbnails_{{p.id}});
 big_{{p.id}}.mount();
 main_{{p.id}}.mount();
@@ -148,9 +147,9 @@ main.sync(thumbnails);
 main.mount();
 thumbnails.mount();
 
-function thumb(id) {
+function thumb(id, splide) {
   document.getElementById(id).style.display = 'flex';
-  splidebig.go(splidefirst.index)
+  splide.go(splidefirst.index)
 }
 
 {% include 'shared/sections/common/availability.html.njk' %}
