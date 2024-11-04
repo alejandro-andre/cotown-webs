@@ -51,20 +51,24 @@
 {% block footer %}
 {% set script %}
 // Slider inicio
-new Splide( '#image-carousel', {
+const splidefirst = new Splide( '#image-carousel', {
   type  : 'fade',
   rewind: true,
   perPage: 1,
   pagination: true,
   cover: true,
-}).mount();
+});
 
 // Sliders inicio en grande
-new Splide('#big', { 
+const splidebig = new Splide('#big', { 
   type: 'loop', 
   height: '90vh',
   arrows: true 
-}).mount();
+});
+
+// Syncronize and mount
+splidebig.mount();
+splidefirst.mount();
 
 // Slider servicios
 new Splide("#splideServices", {
@@ -83,11 +87,11 @@ new Splide("#splideServices", {
 // Sliders tipos de habitacion
 {% for r in rooms | find('id', 'eq', building.id) %}
 {% for p in r.Place_types %}
-new Splide('#big-{{p.Code}}', { 
+var big_{{p.id}} = new Splide('#big-{{p.Code}}', { 
   type: 'loop', 
   height: '90vh',
   arrows: true 
-}).mount();
+});
 var main_{{p.id}} = new Splide( '#main-carousel-{{p.Code}}', {
   type: 'fade',
   rewind: true,
@@ -109,7 +113,9 @@ var thumbnails_{{p.id}} = new Splide('#thumbnail-carousel-{{p.Code}}', {
   arrows: false,
   isNavigation: true,
 });
+big_{{p.id}}.sync(main_{{p.id}});
 main_{{p.id}}.sync(thumbnails_{{p.id}});
+big_{{p.id}}.mount();
 main_{{p.id}}.mount();
 thumbnails_{{p.id}}.mount();
 {% endfor %}
@@ -141,6 +147,11 @@ var thumbnails = new Splide('#thumbnail-gallery', {
 main.sync(thumbnails);
 main.mount();
 thumbnails.mount();
+
+function thumb(id) {
+  document.getElementById(id).style.display = 'flex';
+  splidebig.go(splidefirst.index)
+}
 
 {% include 'shared/sections/common/availability.html.njk' %}
 window.addEventListener("calendar", function(e) {
