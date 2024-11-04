@@ -21,7 +21,7 @@
       {% endif %}
 
     </div>
-    <div class="splide__track" onclick="document.getElementById('big').style.display = 'flex';">
+    <div class="splide__track" onclick="thumb('big', splidebig, splidefirst);">
       <ul class="splide__list">
         {% for i in building.Photos | find('Image_type', 'eq', 'piso') %}
         <li class="splide__slide">
@@ -39,8 +39,7 @@
   <!-- Big photos -->
   <section id="big" class="splide hidden-div">
     <div class="photos">
-      <div class="close" onclick="thumb('big', splidebig);">
-      <em class="icon-close"></em></div>
+      <div class="close" onclick="document.getElementById('big').style.display = 'none';"><em class="icon-close"></em></div>
       <div class="splide__track">
         <ul class="splide__list">
           {% for i in building.Photos | find('Image_type', 'eq', 'piso') %}

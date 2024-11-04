@@ -154,9 +154,9 @@ main.sync(thumbnails);
 main.mount();
 thumbnails.mount();
 
-function thumb(id, splide) {
+function thumb(id, target, origin) {
   document.getElementById(id).style.display = 'flex';
-  splide.go(splidefirst.index)
+  target.go(origin.index, true)
 }
 
 {% include 'shared/sections/common/availability.html.njk' %}
