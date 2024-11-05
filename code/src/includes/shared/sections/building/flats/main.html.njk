@@ -81,7 +81,7 @@ new Splide("#splideServices", {
 {% for p in r.Flat_subtypes %}
 {% if flat_subtypes[p.Code].Tour == "" %}
 var big_{{p.id}} = new Splide('#big-{{p.Code}}', { 
-  type: 'loop', 
+  type: 'fade', 
   height: '90vh',
   arrows: true 
 });
@@ -156,7 +156,8 @@ thumbnails.mount();
 
 function thumb(id, target, origin) {
   document.getElementById(id).style.display = 'flex';
-  target.Components.Move.jump(origin.index)
+  target.Components.Move.jump(origin.index);
+  target.go(origin.index, true);
 }
 
 {% include 'shared/sections/common/availability.html.njk' %}
