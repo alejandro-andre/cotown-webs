@@ -37,8 +37,8 @@ tags: page
       </div>
       {% if site == 'vanguard' %}
         <div class="title-big">       
-          <div class="h1-big">
-            <h1>FAQs</h1>
+          <div class="bigh">
+            <h1 class="head1">FAQs</h1>
           </div>
         </div>
         <div class="search pure-u-22-24">        
@@ -55,10 +55,10 @@ tags: page
       {% else %}    
         <div class="title-big pure-u-9-24 pure-u-lg-1-6">       
           <div class="feeling cotown">
-            <h2 class="title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
+            <h2 class="head2 title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
           </div>
-          <div class="h1-big">
-            <h1>Frequently Asked Questions.</h1>
+          <div class="bigh">
+            <h1 class="head1">Frequently Asked Questions.</h1>
           </div>
           <div class="search pure-u-1">        
             <form class="cotown">
@@ -80,14 +80,14 @@ tags: page
         {% for f in faqs %}
           <div class="every-faq pure-u-22-24 {% if site == 'vanguard' %} pure-u-lg-5-6 {% else %} {% endif %}">
             {% if site == 'vanguard' %}
-              <h2>{{f | translate('Name', L) }}</h2>
+              <h2 class="head2">{{f | translate('Name', L) }}</h2>
             {% else %}
-              <h2 class="cotown">{{f | translate('Name', L) }}</h2>
+              <h2 class="head2 cotown">{{f | translate('Name', L) }}</h2>
             {% endif %}      
             {% for q in f.Questions %}
               <div class="description text pure-u-1">
                 <div class="expansion pure-u-1">
-                  <h3>
+                  <h3 class="head3">
                   {{q | translate('Question', L)}}
                   </h3>
                   <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>

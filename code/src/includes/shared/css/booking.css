@@ -5,42 +5,42 @@ body {
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.head1,
+.head2,
+.head3,
+.head4,
+.head5,
+.head6 {
 	margin-top: 0;
 	margin-bottom: 1rem;
 	font-weight: 300;
 }
-h1 {
+.head1 {
 	font-family: var(--title-font);
 	font-size: 3rem;
 	line-height: 1.2;
 }
-h2 {
+.head2 {
 	font-family: var(--title-font);
 	font-size: 2.5rem;
 	line-height: 1.25;
 }
-h3 {
+.head3 {
 	font-family: var(--title-font);
 	font-size: 1.9rem;
 	line-height: 1.3;
 }
-h4 {
+.head4 {
 	font-family: var(--text-font);
 	font-size: 1.5rem;
 	line-height: 1.35;
 }
-h5 {
+.head5 {
 	font-family: var(--text-font);
 	font-size: 1.2rem;
 	line-height: 1.5;
 }
-h6 {
+.head6 {
 	font-family: var(--text-font);
 	font-size: 1rem;
 	line-height: 1.2;
@@ -465,7 +465,7 @@ border: 1px solid #D1D1D1; */
 
 }
 
-section>h2 {
+section>.head2 {
 	margin-top: 0;
 	color: #333;
 }
@@ -500,7 +500,7 @@ section>h2 {
 	align-items: center;
 	margin: 2em 0 4em;
 }
-.content-booking section h2 {
+.content-booking section .head2 {
 	width: 100%;
 	font-size: 64px;
 	line-height: 110%;
@@ -783,7 +783,7 @@ button.back p {
 	font-weight: 800;
 	line-height: 150%;
 }
-.main-booking .main-contain .panel-container .left h2 {
+.main-booking .main-contain .panel-container .left .head2 {
 	width: 100%;
 	font-size: 64px;
 	font-weight: 400;
@@ -816,7 +816,7 @@ button.back p {
 	line-height: 150%;
 	color: var(--grey-dark);
 }
-.main-booking .main-contain .panel-container .left form h3 {
+.main-booking .main-contain .panel-container .left form .head3 {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 26px;
 	font-weight: 600;
@@ -1191,7 +1191,7 @@ button.back p {
 
 /* TERCERA TAB */
 /* LEFT */
-.main-booking .main-contain .panel-container .left.tab3 h2 {
+.main-booking .main-contain .panel-container .left.tab3 .head2 {
 	font-size: 64px;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -1199,7 +1199,7 @@ button.back p {
 .main-booking .main-contain .panel-container .left.tab3 form {
 	width: 100%;
 }
-.main-booking .main-contain .panel-container .left.tab3 form h3 {
+.main-booking .main-contain .panel-container .left.tab3 form .head3 {
 	font-size: 26px;
 	font-weight: 700;
 	text-transform: none;
@@ -1282,7 +1282,7 @@ button.back p {
 	background: var(--background-pure-white, #FFF);
 	box-shadow: 0px 20px 30px 0px rgba(22, 22, 22, 0.06);
 }
-.main-booking .main-contain .panel-container .right .summary h3 {
+.main-booking .main-contain .panel-container .right .summary .head3 {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 26px;
 	font-weight: 700;
@@ -1324,8 +1324,8 @@ button.back p {
 	letter-spacing: 1.28px;
 	text-transform: uppercase;
 }
-.main-booking .main-contain .panel-container .right .summary .summary-edit h4,
-.main-booking .main-contain .panel-container .right .summary .dates h4 {
+.main-booking .main-contain .panel-container .right .summary .summary-edit .head4,
+.main-booking .main-contain .panel-container .right .summary .dates .head4 {
 	margin: 0;
 	font-size: 20px;
 	font-weight: 700;
@@ -1350,8 +1350,8 @@ button.back p {
 	font-size: 14px;
 	margin-right: 4px;
 }
-.main-booking .main-contain .panel-container .right .summary .dates .in h4,
-.main-booking .main-contain .panel-container .right .summary .dates .out h4 {
+.main-booking .main-contain .panel-container .right .summary .dates .in .head4,
+.main-booking .main-contain .panel-container .right .summary .dates .out .head4 {
 	margin: 0.5rem 0 0;
 }
 .main-booking .main-contain .panel-container .right .summary .type-summary {
@@ -1364,7 +1364,7 @@ button.back p {
 	border-top: var(--border-bottom);
 	border-bottom: var(--border-bottom);
 }
-.main-booking .main-contain .panel-container .right .summary .type-summary h4 {
+.main-booking .main-contain .panel-container .right .summary .type-summary .head4 {
 	width: 60%;
 	margin: 0;
 	font-size: 20px;
@@ -1384,7 +1384,7 @@ button.back p {
 .main-booking .main-contain .panel-container .right .summary .breakdown p {
 	text-transform: none !important;
 }
-.main-booking .main-contain .panel-container .right .summary .breakdown h4 {
+.main-booking .main-contain .panel-container .right .summary .breakdown .head4 {
 	margin: 0 0 0.5rem;
 	font-size: 20px;
 	font-weight: 700;
@@ -1461,14 +1461,14 @@ button.back p {
 		padding: 24px 24px 30px 24px;
 	}
 
-	.main-booking .main-contain .panel-container .right .summary h3 {
+	.main-booking .main-contain .panel-container .right .summary .head3 {
 		font-size: 22px;
 	}
 
-	.main-booking .main-contain .panel-container .right .summary .summary-edit h4,
-	.main-booking .main-contain .panel-container .right .summary .dates h4,
-	.main-booking .main-contain .panel-container .right .summary h4,
-	.main-booking .main-contain .panel-container .right .summary .dates h4,
+	.main-booking .main-contain .panel-container .right .summary .summary-edit .head4,
+	.main-booking .main-contain .panel-container .right .summary .dates .head4,
+	.main-booking .main-contain .panel-container .right .summary .head4,
+	.main-booking .main-contain .panel-container .right .summary .dates .head4,
 	.main-booking .main-contain .panel-container .right .summary .breakdown .total p {
 		font-size: 18px;
 	}
@@ -1518,7 +1518,7 @@ button.back p {
 		margin: 0 auto;
 	}
 
-	.content-booking section h2 {
+	.content-booking section .head2 {
 		width: -webkit-fill-available;
 		font-size: 24px;
 		text-align: start;
@@ -1736,13 +1736,13 @@ button.back p {
 		padding: 8px 12px;
 	}
 
-	.main-booking .main-contain .panel-container .left h2 {
+	.main-booking .main-contain .panel-container .left .head2 {
 		text-align: left;
 		margin-top: 0.6em;
 		font-size: 32px !important;
 	}
 
-	.main-booking .main-contain .panel-container .left form h3 {
+	.main-booking .main-contain .panel-container .left form .head3 {
 		font-size: 17px;
 		margin-top: 20px;
 	}
@@ -1935,7 +1935,7 @@ button.back p {
 		padding: 1rem;
 	}
 
-	.main-booking .main-contain .panel-container .right .summary h3 {
+	.main-booking .main-contain .panel-container .right .summary .head3 {
 		font-size: 17px;
 	}
 
@@ -1966,8 +1966,8 @@ button.back p {
 		font-size: 11px;
 	}
 
-	.main-booking .main-contain .panel-container .right .summary .summary-edit h4,
-	.main-booking .main-contain .panel-container .right .summary .dates h4 {
+	.main-booking .main-contain .panel-container .right .summary .summary-edit .head4,
+	.main-booking .main-contain .panel-container .right .summary .dates .head4 {
 		font-size: 14px;
 	}
 
@@ -1987,11 +1987,11 @@ button.back p {
 		width: 100%;
 	}
 
-	.main-booking .main-contain .panel-container .left.tab3 h2 {
+	.main-booking .main-contain .panel-container .left.tab3 .head2 {
 		font-size: 32px !important;
 	}
 
-	.main-booking .main-contain .panel-container .left.tab3 form h3 {
+	.main-booking .main-contain .panel-container .left.tab3 form .head3 {
 		font-size: 17px;
 		margin-top: 20px;
 	}
@@ -2033,7 +2033,7 @@ button.back p {
 		padding: 16px 26px;
 	}
 
-	.main-booking .main-contain .panel-container .left.tab3 form h3.record {
+	.main-booking .main-contain .panel-container .left.tab3 form .head3.record {
 		border-top: 1px solid var(--grey-light);
 		padding: 1rem 0 0
 	}
@@ -2064,7 +2064,7 @@ button.back p {
 		padding: 1rem;
 	}
 
-	.main-booking .main-contain .panel-container .right .summary h3 {
+	.main-booking .main-contain .panel-container .right .summary .head3 {
 		font-size: 17px;
 	}
 
@@ -2090,8 +2090,8 @@ button.back p {
 		text-transform: uppercase;
 	}
 
-	.main-booking .main-contain .panel-container .right .summary .summary-edit h4,
-	.main-booking .main-contain .panel-container .right .summary .dates h4 {
+	.main-booking .main-contain .panel-container .right .summary .summary-edit .head4,
+	.main-booking .main-contain .panel-container .right .summary .dates .head4 {
 		margin: 0;
 		font-size: 22px;
 		font-weight: 700;
@@ -2120,17 +2120,17 @@ button.back p {
 		margin-right: 4px;
 	}
 
-	.main-booking .main-contain .panel-container .right .summary h3 {
+	.main-booking .main-contain .panel-container .right .summary .head3 {
 		font-size: 17px;
 	}
 
-	.main-booking .main-contain .panel-container .right .summary .summary-edit h4,
-	.main-booking .main-contain .panel-container .right .summary .dates h4,
-	.main-booking .main-contain .panel-container .right .summary h4,
-	.main-booking .main-contain .panel-container .right .summary .dates h4,
-	.main-booking .main-contain .panel-container .right .summary .type-summary h4,
+	.main-booking .main-contain .panel-container .right .summary .summary-edit .head4,
+	.main-booking .main-contain .panel-container .right .summary .dates .head4,
+	.main-booking .main-contain .panel-container .right .summary .head4,
+	.main-booking .main-contain .panel-container .right .summary .dates .head4,
+	.main-booking .main-contain .panel-container .right .summary .type-summary .head4,
 	.main-booking .main-contain .panel-container .right .summary .breakdown .total p,
-	.main-booking .main-contain .panel-container .right .summary .breakdown h4 {
+	.main-booking .main-contain .panel-container .right .summary .breakdown .head4 {
 		font-size: 14px;
 	}
 

@@ -34,14 +34,14 @@ tags: page
         <img class="img" alt="advantage" src="{{root}}/assets/img/advantages-logo.svg">
       </div>         
       <div class="title-big advantages pure-u-22-24">
-        <div class="h1-big pure-u-1 {% if site == 'vanguard' %} pure-u-lg-5-12 pure-u-xl-7-12 {% else %} pure-u-lg-10-24 {% endif %}">
+        <div class="bigh pure-u-1 {% if site == 'vanguard' %} pure-u-lg-5-12 pure-u-xl-7-12 {% else %} pure-u-lg-10-24 {% endif %}">
           {% literal texts, 'advantages-titulo', L, true %}
         </div>
         <div class="text pure-u-1 {% if site == 'vanguard' %} pure-u-lg-7-12 pure-u-xl-5-12 {% else %} pure-u-lg-13-24 {% endif %}">
         {% if site == 'vanguard' %}
         {% else %}
           <div class="feeling cotown">
-          <h2 class="title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
+          <h2 class="head2 title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
           </div>
         {% endif %}
           {% literal texts, 'advantages-texto', L, true %}
@@ -61,10 +61,10 @@ tags: page
           <ul class="splide__list">
             {% for b in banners | find('Page', 'eq', 'ventajas') %}
             {% for p in (b | translate('Text', L)).split('|') %}
-            <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+            <li class="splide__slide"><h2 class="head2">{{p}} |&nbsp;</h2></li>
             {% endfor %}
             {% for p in (b | translate('Text', L)).split('|') %}
-            <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+            <li class="splide__slide"><h2 class="head2">{{p}} |&nbsp;</h2></li>
             {% endfor %}
             {% endfor %}
           </ul>

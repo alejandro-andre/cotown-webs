@@ -32,18 +32,18 @@ main.cotown .container-main .first-contain .advantages.title-big {
 	justify-content: space-between;
 }
 
-main .container-main .first-contain .advantages.title-big .h1-big {
+main .container-main .first-contain .advantages.title-big .bigh {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
 }
 
-main.cotown .container-main .first-contain .advantages.title-big .h1-big  {	
+main.cotown .container-main .first-contain .advantages.title-big .bigh  {	
 	padding: 0 0 0 1em;
 }
 
-main .container-main .first-contain .advantages.title-big .h1-big h1 {
+main .container-main .first-contain .advantages.title-big .bigh .head1 {
 	font-family: var(--title-font);
 	font-size: var(--big-title);
 	font-weight: var(--400);
@@ -51,10 +51,10 @@ main .container-main .first-contain .advantages.title-big .h1-big h1 {
 	letter-spacing: -3.31px;
 	text-transform: uppercase;
 }
-main.vanguard .container-main .first-contain .advantages.title-big .h1-big h1 {
+main.vanguard .container-main .first-contain .advantages.title-big .bigh .head1 {
 	font-size: 92px;
 }
-main.cotown .container-main .first-contain .advantages.title-big .h1-big h1 {
+main.cotown .container-main .first-contain .advantages.title-big .bigh .head1 {
 	font-family: var(--text-font);
 	text-transform: none;
 	font-weight: var(--semibold);
@@ -62,16 +62,16 @@ main.cotown .container-main .first-contain .advantages.title-big .h1-big h1 {
 	letter-spacing: 0px;
 }
 
-main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
+main .container-main .first-contain .advantages.title-big .bigh .head1 span.borderh {
 	font-family: var(--title-font);
 	color: var(--primary-text);
-	text-shadow: var(--h2-border);
+	text-shadow: var(--borderh);
 	font-weight: var(--400);
 	line-height: 95%;
 	letter-spacing: -2;
 }
 
-main.cotown .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
+main.cotown .container-main .first-contain .advantages.title-big .bigh .head1 span.borderh {
 	font-family: var(--text-font);
 	font-weight: var(--semibold);
 	color: var(--black);	
@@ -91,7 +91,7 @@ main.cotown .container-main .first-contain .advantages.title-big .text .feeling.
 	text-align: end;
 }
 
-main.cotown .container-main .first-contain .advantages.title-big .text .feeling.cotown h2.title-feel {
+main.cotown .container-main .first-contain .advantages.title-big .text .feeling.cotown .head2.title-feel {
 	text-align: end;
 	font-size: var(--subtitle);
 	font-weight: var(--bold);
@@ -126,7 +126,7 @@ main.cotown .container-main .first-contain .sello-cotown img.img-sello {
 main .container-main section.banner {
 	margin-bottom: 2em;
 }
-main .container-main section.banner.vanguard h2 {
+main .container-main section.banner.vanguard .head2 {
 	font-family: var(--title-font);
 	font-size: 78px;
 	font-weight: 400;
@@ -239,11 +239,11 @@ button.btn-secondary {
 /* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
-	/* main .container-main .first-contain .advantages.title-big .h1-big h1 {
+	/* main .container-main .first-contain .advantages.title-big .bigh .head1 {
 		font-size: 96px;
 	}
 
-	main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
+	main .container-main .first-contain .advantages.title-big .bigh .head1 span.borderh {
 		font-size: 96px;
 		letter-spacing: -2px;
 	} */
@@ -258,11 +258,11 @@ button.btn-secondary {
 		max-width: 100%;
 	}
 
-	/* main .container-main .first-contain .advantages.title-big .h1-big h1 {
+	/* main .container-main .first-contain .advantages.title-big .bigh .head1 {
 		font-size: 80px;
 	} */
 
-	main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
+	main .container-main .first-contain .advantages.title-big .bigh .head1 span.borderh {
 		/* font-size: 80px; */
 		letter-spacing: -2px;
 	}
@@ -282,30 +282,30 @@ button.btn-secondary {
 	main .container-main .first-contain .img-right img {
 		width: 30%;
 	}
-	main.cotown .container-main .first-contain .advantages.title-big .h1-big  {	
+	main.cotown .container-main .first-contain .advantages.title-big .bigh  {	
 		padding: 0;
 	}
-	main .container-main .first-contain .advantages.title-big .h1-big h1 {
+	main .container-main .first-contain .advantages.title-big .bigh .head1 {
 		font-size: var(--resp-title);
 		line-height: 1;
 		letter-spacing: -1.2px;
 		width: 100%;
 	}
-	main.vanguard .container-main .first-contain .advantages.title-big .h1-big h1 {
+	main.vanguard .container-main .first-contain .advantages.title-big .bigh .head1 {
 		font-size: 40px;
 	}
-	main.cotown .container-main .first-contain .advantages.title-big .h1-big h1 {
+	main.cotown .container-main .first-contain .advantages.title-big .bigh .head1 {
 		font-size: var(--resp-title);
 		letter-spacing: -1.2px;
 	}
 
-	main .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
+	main .container-main .first-contain .advantages.title-big .bigh .head1 span.borderh {
 		font-size: var(--resp-title);
 		line-height: 1;
 		letter-spacing: 2.4px;
 	}
 	
-	main.cotown .container-main .first-contain .advantages.title-big .h1-big h1 span.h2-border {
+	main.cotown .container-main .first-contain .advantages.title-big .bigh .head1 span.borderh {
 		line-height: 1.5;
 		letter-spacing: 1px;
 	}
@@ -315,7 +315,7 @@ button.btn-secondary {
 		margin-bottom: 2em;
 	}
 	
-	main.cotown .container-main .first-contain .advantages.title-big .text .feeling.cotown h2.title-feel {
+	main.cotown .container-main .first-contain .advantages.title-big .text .feeling.cotown .head2.title-feel {
 		text-align: start;		
 	}	
 	main.cotown .container-main .first-contain .advantages.title-big .text {
@@ -350,7 +350,7 @@ button.btn-secondary {
 	main.cotown .container-main section.banner,main .container-main section.banner.vanguard {
 		margin: 0;
 	}
-	main .container-main section.banner h2, main .container-main section.banner.vanguard h2 {
+	main .container-main section.banner .head2, main .container-main section.banner.vanguard .head2 {
 		font-size: 30px;
 		padding-top: 3px;
 	}

@@ -49,10 +49,10 @@ tags: page
           <ul class="splide__list">
             {% for b in banners | find('Page', 'eq', 'equipo') %}
             {% for p in (b | translate('Text', L)).split('|') %}
-            <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+            <li class="splide__slide"><h2 class="head2">{{p}} |&nbsp;</h2></li>
             {% endfor %}
             {% for p in (b | translate('Text', L)).split('|') %}
-            <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+            <li class="splide__slide"><h2 class="head2">{{p}} |&nbsp;</h2></li>
             {% endfor %}
             {% endfor %}
           </ul>

@@ -34,7 +34,7 @@ main .container-main .first-contain.about .img img {
 	object-position: center center;
 }
 
-main .container-main .first-contain.about .title-big h1 {
+main .container-main .first-contain.about .title-big .head1 {
 	font-family: var(--title-font);
 	justify-content: center;
 	margin: auto;
@@ -65,7 +65,7 @@ main .container-main .first-contain.about.cotown .title-big {
 	background-color: var(--new-bg);
 }
 
-main .container-main .first-contain.about.cotown .title-big h1 {
+main .container-main .first-contain.about.cotown .title-big .head1 {
 	width: 100%;
 	font-family: var(--text-font);
 	justify-content: flex-start;
@@ -182,7 +182,7 @@ main .container-main section.members .button-more {
 		position: static;
 		background-color: var(--white);
 	}
-	main .container-main .first-contain.about .title-big h1 {
+	main .container-main .first-contain.about .title-big .head1 {
 		font-size: var(--resp-middle-title);
 	}
 	main .container-main section.members {
@@ -201,7 +201,7 @@ main .container-main section.members .button-more {
 		margin: 0 auto;
 	}
 	
-	main .container-main .first-contain.about.cotown .title-big h1 {		
+	main .container-main .first-contain.about.cotown .title-big .head1 {		
 		font-size: var(--resp-title);
 		text-align: center;
 	}

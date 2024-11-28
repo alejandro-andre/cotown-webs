@@ -15,7 +15,7 @@ main .container-main .first-contain .title-big {
 	position: absolute;
 }
 
-main .container-main .first-contain .title-big .h1-big h1 {
+main .container-main .first-contain .title-big .bigh .head1 {
 	font-family: var(--title-font);
 	color: var(--white);
 	font-weight: var(--400);
@@ -69,7 +69,7 @@ input[type="search"]::-webkit-search-results-decoration {
 main .container-main .faqs-container {
 	margin: 2em 1em 6em;	
 }
-main .container-main .faqs-container h2 {
+main .container-main .faqs-container .head2 {
 	font-family: var(--title-font);
 	font-weight: 400;
 	font-size: 64px;
@@ -99,7 +99,7 @@ main .container-main .faqs-container .description.text .expansion {
 	justify-content: space-between;
 	align-items: center;
 }
-main .container-main .faqs-container .description.text .expansion h3 {
+main .container-main .faqs-container .description.text .expansion .head3 {
 	width: 90%;
 	font-weight: 500;
 	font-size: 30px;
@@ -131,11 +131,11 @@ main .container-main .faqs-container .description.text .expansion .content ul li
 /* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
-	main .container-main .faqs-container h2 {
+	main .container-main .faqs-container .head2 {
 		font-size: var(--title);
 	}
 
-	main .container-main .faqs-container .description.text .expansion h3 {
+	main .container-main .faqs-container .description.text .expansion .head3 {
 		font-size: 26px;
 	}
 
@@ -158,7 +158,7 @@ main .container-main .faqs-container .description.text .expansion .content ul li
 		text-align: left;
 		margin: 2em 1em 0
 	}
-	main .container-main .first-contain .title-big .h1-big h1 {
+	main .container-main .first-contain .title-big .bigh .head1 {
 		font-family: var(--title-font);
 		color: var(--black);
 		font-weight: 400;
@@ -172,13 +172,13 @@ main .container-main .faqs-container .description.text .expansion .content ul li
 	main .container-main .faqs-container {
 		margin: 0 1em 2em;
 	}
-	main .container-main .faqs-container h2 {
+	main .container-main .faqs-container .head2 {
 		font-weight: 400;
 		font-size: 32px;
 		line-height: 110%;
 		margin: 1em 0 0;
 	}
-	main .container-main .faqs-container .description.text .expansion h3 {
+	main .container-main .faqs-container .description.text .expansion .head3 {
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 150%;
@@ -204,14 +204,14 @@ main.cotown .container-main .first-contain .title-big {
 main.cotown .container-main .first-contain .title-big .feeling.cotown {
 	text-align: end;
 }
-main.cotown .container-main .first-contain .title-big .feeling.cotown h2.title-feel {
+main.cotown .container-main .first-contain .title-big .feeling.cotown .head2.title-feel {
 	text-align: end;
 	font-size: var(--text-title);
 	color: var(--primary-old);
 	font-weight: var(--semibold);
 	text-transform: lowercase;
 }
-main.cotown .container-main .first-contain .title-big .h1-big h1 {
+main.cotown .container-main .first-contain .title-big .bigh .head1 {
 	font-family: var(--text-font);
 	color: var(--black);
 	font-weight: var(--semibold);
@@ -272,7 +272,7 @@ main.cotown .container-main .faqs-container .faq {
 main.cotown .container-main .faqs-container .faq .every-faq {
 	margin: 0 auto;
 }
-main.cotown .container-main .faqs-container h2.cotown {
+main.cotown .container-main .faqs-container .head2.cotown {
 	font-family: var(--text-font);
 	font-weight: var(--semibold);
 	font-size: var(--title);
@@ -283,7 +283,7 @@ main.cotown .container-main .faqs-container h2.cotown {
 main.cotown .container-main .faqs-container .description.text {
 	border-bottom: 1px solid var(--black);
 }
-main.cotown .container-main .faqs-container .description.text .expansion h3 {
+main.cotown .container-main .faqs-container .description.text .expansion .head3 {
 	width: 90%;
 	font-weight: var(--semibold);
 	font-size: var(--text-title);
@@ -319,7 +319,7 @@ main.cotown .container-main .faqs-container .description.text .expansion label[c
 		left: 0;
 		margin: 0;
 	}
-	main.cotown .container-main .first-contain .title-big .h1-big h1 {
+	main.cotown .container-main .first-contain .title-big .bigh .head1 {
 		margin: 0.5em 0 0;
 		width: 100%;
 		font-size: var(--resp-big-subtitle);
@@ -329,7 +329,7 @@ main.cotown .container-main .faqs-container .description.text .expansion label[c
 		position: static;
 		margin: 1em 0 0;
 	}
-	main.cotown .container-main .faqs-container h2.cotown {
+	main.cotown .container-main .faqs-container .head2.cotown {
 		font-size: var(--resp-title);
 		line-height: 1;
 		margin: 1em 0 0;
@@ -338,7 +338,7 @@ main.cotown .container-main .faqs-container .description.text .expansion label[c
 	main.cotown .container-main .faqs-container .faq {
 		margin-bottom: 0;
 	}
-	main.cotown .container-main .faqs-container .description.text .expansion h3 {
+	main.cotown .container-main .faqs-container .description.text .expansion .head3 {
 		font-weight: var(--regular);
 		font-size: var(--mini-title);
 		margin: 2em 0.2em 1em;

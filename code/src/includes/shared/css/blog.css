@@ -16,11 +16,11 @@ main.blog .container-main .first-contain {
 	margin: 0;
 }
 
-main.blog .container-main .first-contain .h1-big {
+main.blog .container-main .first-contain .bigh {
 	margin-top: 1em;
 }
 
-main.blog .container-main .first-contain .h1-big h1 {
+main.blog .container-main .first-contain .bigh .head1 {
 	font-family: var(--title-font);
 	color: var(--black);
 	font-weight: var(--400);
@@ -216,13 +216,13 @@ main.blog .container-main .posts .post .data-post.primary {
 	background-color: var(--primary);
 }
 
-main.blog .container-main .posts .post .data-post h1 {
+main.blog .container-main .posts .post .data-post .head1 {
 	margin-bottom: 0;
 	font-size: 24px;
 	line-height: 25px;
 }
 
-main.blog .container-main .posts .post .data-post.primary h1 {
+main.blog .container-main .posts .post .data-post.primary .head1 {
 	color: var(--white);
 }
 
@@ -305,7 +305,7 @@ main.blog .container-main .posts .pag ul.pagination li a.arrow.disable {
 
 /* COTOWN BLOG NEW */
 
-main.blog.cotown .container-main .first-contain .h1-big h1 {
+main.blog.cotown .container-main .first-contain .bigh .head1 {
 	font-family: var(--text-font);
 	color: var(--black);
 	font-weight: var(--regular);
@@ -455,7 +455,7 @@ main.blog.cotown .container-main .posts .post .data-post.primary {
 	color: var(--black);
 }
 
-main.blog.cotown .container-main .posts .post .data-post h1 {
+main.blog.cotown .container-main .posts .post .data-post .head1 {
 	font-size: var(--text-title);
 	font-family: var(--text-font);
 	margin-bottom: 0;
@@ -463,7 +463,7 @@ main.blog.cotown .container-main .posts .post .data-post h1 {
 	width: 100%;
 }
 
-main.blog.cotown .container-main .posts .post .data-post.primary h1 {
+main.blog.cotown .container-main .posts .post .data-post.primary .head1 {
 	color: var(--black);
 }
 
@@ -505,7 +505,7 @@ main.post-page .container-main .post-content {
 	margin: 0 auto;
 }
 
-main.post-page .container-main .post-content h1 {
+main.post-page .container-main .post-content .head1 {
 	font-weight: 400;
 	font-size: 64px;
 	line-height: 100%;
@@ -525,26 +525,26 @@ main.post-page .container-main .post-content .other {
 	margin-right: auto;
 }
 
-main.post-page .container-main .post-content .text .text-content h1 {
+main.post-page .container-main .post-content .text .text-content .head1 {
 	font-family: var(--title-font);
 	font-size: var(--big-title);
 	font-weight: var(--semibold);
 	line-height: 1.1;
 	text-align: center;
 }
-main.post-page .container-main .post-content .text .text-content h2 {
+main.post-page .container-main .post-content .text .text-content .head2 {
 	font-size: var(--title);
 	font-weight: var(--semibold);
 	line-height: 1.1;
 	text-align: left;
 }
-main.post-page .container-main .post-content .text .text-content h3 {
+main.post-page .container-main .post-content .text .text-content .head3 {
 	font-size: var(--big-subtitle);
 	font-weight: var(--semibold);
 	line-height: 1.1;
 	text-align: left;
 }
-main.post-page .container-main .post-content .text .text-content h4 {
+main.post-page .container-main .post-content .text .text-content .head4 {
 	font-size: var(--subtitle);
 	font-weight: var(--semibold);
 	line-height: 1.1;
@@ -607,7 +607,7 @@ main.post-page .container-main .like-content .like .text {
 	align-items: flex-start;
 }
 
-main.post-page .container-main .like-content .like .text h3 {
+main.post-page .container-main .like-content .like .text .head3 {
 	font-weight: 400;
 	font-size: 32px;
 	line-height: 100%;
@@ -652,7 +652,7 @@ main.post-page.cotown .container-main .post-content .first-contain .title-big {
 main.post-page.cotown .container-main .post-content .first-contain .title-big .green-title.cotown {
 	text-align: end;
 }
-main.post-page.cotown .container-main .post-content .first-contain .title-big .h1-big h1 {
+main.post-page.cotown .container-main .post-content .first-contain .title-big .bigh .head1 {
 	text-align: start;
 	font-family: var(--text-font);
 	color: var(--black);
@@ -661,7 +661,7 @@ main.post-page.cotown .container-main .post-content .first-contain .title-big .h
 	line-height: 1.2;
 	width: 100%;
 }
-main.post-page.cotown .container-main .post-content .first-contain .title-big .green-title.cotown h2.title {
+main.post-page.cotown .container-main .post-content .first-contain .title-big .green-title.cotown .head2.title {
 	text-align: end;
 	font-size: var(--text-title);
 	color: var(--primary-old);
@@ -670,7 +670,7 @@ main.post-page.cotown .container-main .post-content .first-contain .title-big .g
 main.post-page.cotown .container-main .post-content .first-contain .title-big .title p.subtitle {
 	font-size: var(--text);
 }
-main.post-page.cotown .container-main .post-content .text .text-content h1 {
+main.post-page.cotown .container-main .post-content .text .text-content .head1 {
 	margin: 1em 0;
 	font-family: var(--text-font);
 	text-align: left;
@@ -690,11 +690,11 @@ main.post-page.cotown .container-main .like-content .like {
 	background-color: var(--new-bg);
 	padding: 2em 6em;
 }
-main.post-page.cotown .container-main .like-content .like .text h3,
+main.post-page.cotown .container-main .like-content .like .text .head3,
 main.post-page .container-main .like-content .like .text p {
 	color: var(--black);
 }
-main.post-page.cotown .container-main .like-content .like .text h3 {
+main.post-page.cotown .container-main .like-content .like .text .head3 {
 	font-size: var(--title);
 	font-weight: var(--semibold);
 }
@@ -732,14 +732,14 @@ main.post-page.vanguard .container-main .post-content {
     align-items: center;
     margin: 3em auto;
 }
-main.post-page.vanguard .container-main .post-content .text .text-content h2, 
-main.post-page.vanguard .container-main .post-content .text .text-content h3{
+main.post-page.vanguard .container-main .post-content .text .text-content .head2, 
+main.post-page.vanguard .container-main .post-content .text .text-content .head3{
 	font-family: var(--title-font);
 	font-weight: var(--400);
 	line-height: 1.1;
 }
 
-main.post-page.vanguard .container-main .like-content .like .text h3 {
+main.post-page.vanguard .container-main .like-content .like .text .head3 {
 	font-family: var(--title-font);
 	font-weight: var(--400);
 }
@@ -762,7 +762,7 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 
 /* RESPONSIVE \*/
 @media only screen and (min-width: 1600px) {
-	main.blog.vanguard .container-main .first-contain .h1-big h1 {
+	main.blog.vanguard .container-main .first-contain .bigh .head1 {
 		font-size: 76px;
 		font-weight: 400;
 		line-height: 100%;
@@ -787,7 +787,7 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 	main.blog.cotown .container-main .posts .post .data-post {
 		padding: 0.2em 0.1em 0;
 	}
-	main.blog.cotown .container-main .posts .post .data-post h1 {
+	main.blog.cotown .container-main .posts .post .data-post .head1 {
 		font-size: var(--mini-title);
 		line-height: 1.2;
 	}
@@ -812,7 +812,7 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 		margin: 0;
 	}
 
-	main.blog .container-main .first-contain .h1-big h1 {
+	main.blog .container-main .first-contain .bigh .head1 {
 		font-size: 40px;
 		line-height: 100%;
 	}
@@ -878,12 +878,12 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 	main.blog.vanguard .container-main .posts .post .date {
 		top: 156px;
 	}
-	main.blog .container-main .posts .post .data-post h1,
+	main.blog .container-main .posts .post .data-post .head1,
 	main.blog .container-main .posts .post .data-post .p-container {
 		padding: 3% 4% 0;
 	}
 
-	main.blog.cotown .container-main .posts .post .data-post h1 {
+	main.blog.cotown .container-main .posts .post .data-post .head1 {
 		padding: 0;
 		font-size: var(--resp-mini-title);
 	}
@@ -904,15 +904,15 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 		align-items: center;
 		margin: 6em auto;
 	}
-	main.post-page.vanguard .container-main .post-content h1 {
+	main.post-page.vanguard .container-main .post-content .head1 {
 		font-weight: 400;
 		font-size: 32px;
 		line-height: 110%;
 		text-align: left;
 		margin-bottom: 1em;
 	}
-	main.post-page.vanguard .container-main .post-content .text .text-content h2, 
-	main.post-page.vanguard .container-main .post-content .text .text-content h3 {
+	main.post-page.vanguard .container-main .post-content .text .text-content .head2, 
+	main.post-page.vanguard .container-main .post-content .text .text-content .head3 {
 		font-size: 25px;
 	}
 
@@ -933,12 +933,12 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 		margin: 0 auto;
 	}
 
-	main.post-page .container-main .post-content h1 {
+	main.post-page .container-main .post-content .head1 {
 		font-size: var(--resp-big-subtitle);
 	}
 
-	main.post-page .container-main .post-content .text .text-content h2,
-	main.post-page .container-main .post-content .text .text-content h3 {
+	main.post-page .container-main .post-content .text .text-content .head2,
+	main.post-page .container-main .post-content .text .text-content .head3 {
 		font-size: var(--resp-title);
 	}
 
@@ -974,7 +974,7 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 		align-items: center;
 	}
 
-	main.post-page .container-main .like-content .like .text h3 {
+	main.post-page .container-main .like-content .like .text .head3 {
 		font-weight: 400;
 		font-size: 35.4257px;
 		line-height: 36px;
@@ -1012,11 +1012,11 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 		margin: 0;
 		width: 100%;
 	}
-	main.blog.cotown .container-main .first-contain .h1-big {
+	main.blog.cotown .container-main .first-contain .bigh {
 		padding: 0 1em;
 		width: calc(100% - 2em);
 	}
-	main.blog.cotown .container-main .first-contain .h1-big h1 {
+	main.blog.cotown .container-main .first-contain .bigh .head1 {
 		font-size: var(--resp-title);
 		text-transform: uppercase;
 		line-height: 1;
@@ -1068,10 +1068,10 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 	main.post-page.cotown .container-main .post-content .first-contain .title-big {
 		padding: 1em;
 	}
-	main.post-page.cotown .container-main .post-content .first-contain .title-big .green-title.cotown h2.title {
+	main.post-page.cotown .container-main .post-content .first-contain .title-big .green-title.cotown .head2.title {
 		font-size: var(--resp-text-title);
 	}
-	main.post-page.cotown .container-main .post-content .first-contain .title-big .h1-big h1 {
+	main.post-page.cotown .container-main .post-content .first-contain .title-big .bigh .head1 {
 		font-size: var(--resp-big-subtitle);
 		margin-bottom: 0;
 	}
@@ -1085,11 +1085,11 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 		justify-content: center;
 		align-items: flex-start;
 	}
-	main.post-page.cotown .container-main .post-content .text .text-content h1 {
+	main.post-page.cotown .container-main .post-content .text .text-content .head1 {
 		margin: 1em 0;
 		font-size: var(--resp-title);
 	}
-	main.post-page.cotown .container-main .post-content .text .text-content h2, 	main.post-page.cotown .container-main .post-content .text .text-content h3 {
+	main.post-page.cotown .container-main .post-content .text .text-content .head2, 	main.post-page.cotown .container-main .post-content .text .text-content .head3 {
 		font-size: var(--resp-subtitle);
 	}
 	main.post-page.cotown .container-main .post-content .text .text-content p,
@@ -1117,11 +1117,11 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 		background-color: var(--new-bg);
 		padding: 2em 6em;
 	}
-	main.post-page.cotown .container-main .like-content .like .text h3,
+	main.post-page.cotown .container-main .like-content .like .text .head3,
 	main.post-page .container-main .like-content .like .text p {
 		color: var(--black);
 	}
-	main.post-page.cotown .container-main .like-content .like .text h3 {
+	main.post-page.cotown .container-main .like-content .like .text .head3 {
 		font-size: var(--resp-title);
 		font-weight: var(--semibold);
 	}

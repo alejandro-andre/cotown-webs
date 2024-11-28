@@ -1,11 +1,11 @@
 /* GENERAL
 -------------------------------- */
 
-h3.title {
+.head3.title {
     text-align: center;
 }
 
-h3.title.cotown {
+.head3.title.cotown {
     text-align: left;
     font-family: var(--text-font);
 }
@@ -61,19 +61,19 @@ p.subtitle {
     order: 1;
 }
 
-.main-header .left .text-container h1 {
+.main-header .left .text-container .head1 {
     line-height: 70px;
     margin: 0 0 0.5em;
 }
 
-.main-header .left.cotown .text-container h1 {
+.main-header .left.cotown .text-container .head1 {
     font-size: var(--title);
     font-weight: 800;
     line-height: 40px;
     margin: 0 0 0.5em;
 }
 
-.main-header .left.cotown .text-container h1 span {
+.main-header .left.cotown .text-container .head1 span {
     font-family: var(--title-font);
     font-size: var(--big-title);
     line-height: 74px;
@@ -308,12 +308,12 @@ main .container-main .first-contain.home .title-big.home {
     margin: 6em auto 2em;
 }
 
-main .container-main .first-contain.home .title-big.home .h1-big h1 {
+main .container-main .first-contain.home .title-big.home .bigh .head1 {
     font-family: var(--title-font);
     font-size: 80px;
 }
 
-main .container-main .first-contain.home.cotown .title-big.home .h1-big h1 {
+main .container-main .first-contain.home.cotown .title-big.home .bigh .head1 {
     font-family: var(--text-font);
     font-size: var(--big-title);
     font-weight: var(--semibold);
@@ -354,7 +354,7 @@ main .container-main .first-contain.home.cotown .text p {
     overflow: hidden;
 }
 
-.locations .text-container h2.title {
+.locations .text-container .head2.title {
     text-align: center;
     font-family: var(--title-font);
     font-weight: var(--regular);
@@ -362,7 +362,7 @@ main .container-main .first-contain.home.cotown .text p {
     padding: 1.5em 0 0 74px;
 }
 
-.locations .carousel h3 {
+.locations .carousel .head3 {
     position: absolute !important;
     font-family: var(--title-font);
     font-size: var(--big-title);
@@ -375,7 +375,7 @@ main .container-main .first-contain.home.cotown .text p {
     text-transform: uppercase;
 }
 
-.locations .carousel .img:hover h3 {
+.locations .carousel .img:hover .head3 {
     color: var(--primary);
 }
 
@@ -399,7 +399,7 @@ main .container-main .first-contain.home.cotown .text p {
 .locations.cotown {
     margin: 2em 0;
 }
-.locations .text-container h2.title.cotown {
+.locations .text-container .head2.title.cotown {
     text-align: left;
     padding: 1.5em 0 0 74px;
     font-family: var(--text-font);
@@ -454,7 +454,7 @@ main .container-main .first-contain.home.cotown .text p {
     padding-top: 4px;
 }
 
-.locations .carousel.cotown .text-slide h5 {
+.locations .carousel.cotown .text-slide .head5 {
     text-align: center;
     color: var(--black);
     font-weight: 400;
@@ -488,7 +488,7 @@ main .container-main .first-contain.home.cotown .text p {
     margin: 2em 0 4em;
     text-align: center;
 }
-.pisos.vanguard .text-container h2.title {
+.pisos.vanguard .text-container .head2.title {
     font-family: var(--title-font);
     font-size: var(--big-title);
     font-weight: 400;
@@ -570,7 +570,7 @@ main .container-main .first-contain.home.cotown .text p {
 }
 
 /* PISOS COTOWN */
-.pisos.cotown .text-container h2.title {
+.pisos.cotown .text-container .head2.title {
     text-align: left;
     padding-left: 74px;
     font-weight: var(--semibold);
@@ -613,7 +613,7 @@ main .container-main .first-contain.home.cotown .text p {
     padding: 120px 30px 30px;
 }
 
-.pisos.cotown .container .img-container .img-title.cotown h6 {
+.pisos.cotown .container .img-container .img-title.cotown .head6 {
     font-family: var(--text-font);
     color: var(--black);
     font-size: var(--text-title);
@@ -642,7 +642,7 @@ main .container-main .first-contain.home.cotown .text p {
     padding: 2em 6em;
 }
 
-.servicios .text-container h2.title {
+.servicios .text-container .head2.title {
     text-align: center;
     font-family: var(--title-font);
     font-weight: var(--regular);
@@ -705,7 +705,7 @@ main .container-main .first-contain.home.cotown .text p {
     background-color: var(--new-bg);
 }
 
-.servicios.cotown .text-container h2.title {
+.servicios.cotown .text-container .head2.title {
     font-family: var(--text-font);
     font-weight: var(--semibold);
     font-size: var(--big-subtitle);
@@ -761,7 +761,7 @@ main .container-main .first-contain.home.cotown .text p {
     padding-left: 6em;
 }
 
-.cotownity .container-cotownity .left .coral h2 {
+.cotownity .container-cotownity .left .coral .head2 {
     font-family: var(--title-font);
     font-size: var(--title);
     font-weight: var(--400);
@@ -771,7 +771,7 @@ main .container-main .first-contain.home.cotown .text p {
     text-align: start;
 }
 
-.cotownity .container-cotownity.cotown .left h2 {
+.cotownity .container-cotownity.cotown .left .head2 {
     padding: 1em 0;
     line-height: 40px;
     text-align: left;
@@ -831,7 +831,7 @@ main .container-main .first-contain.home.cotown .text p {
     width: 100%
 }
 
-.cotownity .feeling h2.title-feel {
+.cotownity .feeling .head2.title-feel {
     font-family: var(--title-font);
     background-color: var(--primary);
     color: var(--primary-text);
@@ -843,7 +843,7 @@ main .container-main .first-contain.home.cotown .text p {
     text-transform: uppercase;
 }
 
-.cotownity .feeling.cotown h2.title-feel {
+.cotownity .feeling.cotown .head2.title-feel {
     font-family: var(--text-font);
     background-color: var(--primary);
     color: var(--primary-text);
@@ -878,7 +878,7 @@ main .container-main .first-contain.home.cotown .text p {
     padding: 2em 2em 5em;
     background-color: var(--white-bg-op2);
 }
-.cotownity.cotown .container-cotownity .container-img .left h2 {
+.cotownity.cotown .container-cotownity .container-img .left .head2 {
     width: 180px;
     padding: 0;
     line-height: 32px;
@@ -917,7 +917,7 @@ main .container-main .first-contain.home.cotown .text p {
     color: var(--primary-old);
 }
 
-.cotownity.cotown .container-cotownity .container-img .left h2.title-feel {
+.cotownity.cotown .container-cotownity .container-img .left .head2.title-feel {
     font-family: var(--text-font);
     color: var(--primary-old);
     font-weight: var(--bold);
@@ -947,7 +947,7 @@ main .container-main .first-contain.home.cotown .text p {
     margin: 3em 0 4em;
 }
 
-.partners .text-container h2 {
+.partners .text-container .head2 {
     font-family: var(--title-font);
     padding: 1em 0;
     font-size: var(--big-title);
@@ -972,7 +972,7 @@ main .container-main .first-contain.home.cotown .text p {
     padding: 0 0 2em;
 }
 
-.partners.cotown .text-container h2 {
+.partners.cotown .text-container .head2 {
     padding: 1.5em 0 1em 74px;
     line-height: 40px;
     text-align: left;
@@ -1004,7 +1004,7 @@ main .container-main .first-contain.home.cotown .text p {
     padding: 1.5em 0 1em 74px;
 }
 
-.opinions .text-container h2.title {
+.opinions .text-container .head2.title {
     font-family: var(--title-font);
     font-size: var(--big-title);
     line-height: 0.8;
@@ -1013,7 +1013,7 @@ main .container-main .first-contain.home.cotown .text p {
     font-weight: 400;
 }
 
-.opinions.cotown .text-container h2.title {
+.opinions.cotown .text-container .head2.title {
     font-family: var(--text-font);
     line-height: 40px;
     text-align: left;
@@ -1024,7 +1024,7 @@ main .container-main .first-contain.home.cotown .text p {
     margin: 0;
 }
 
-.opinions .text-container h2.title.turquoise {
+.opinions .text-container .head2.title.turquoise {
     padding-top: 0;
     color: var(--primary);
     text-transform: uppercase;
@@ -1125,7 +1125,7 @@ main .container-main .first-contain.home.cotown .text p {
     line-height: 1.5;
 }
 
-.opinions .slide .opinion h3.comillas {
+.opinions .slide .opinion .head3.comillas {
     color: var(--primary);
     font-size: 78px;
     margin: 0;
@@ -1133,7 +1133,7 @@ main .container-main .first-contain.home.cotown .text p {
     font-family: var(--title-font);
 }
 
-.opinions.cotown .slide .opinion h3.comillas.cotown {
+.opinions.cotown .slide .opinion .head3.comillas.cotown {
     display: none;
 }
 
@@ -1220,12 +1220,12 @@ main .container-main .first-contain.home.cotown .text p {
 /* RESPONSIVE
 -------------------------------- */
 @media only screen and (min-width: 1600px) {
-    .main-header .left .text-container h1 {
+    .main-header .left .text-container .head1 {
         font-size: 78px;
         line-height: 80px;
         margin: 0 0 0.1em;
     }
-    .main-header .left.cotown .text-container h1 {
+    .main-header .left.cotown .text-container .head1 {
         line-height: 80px;
     }
     
@@ -1238,7 +1238,7 @@ main .container-main .first-contain.home.cotown .text p {
         font-size: 16px;
     }
 
-    main .container-main .first-contain.home .title-big.home .h1-big h1 {
+    main .container-main .first-contain.home .title-big.home .bigh .head1 {
         font-family: var(--title-font);
         font-size: 100px;
         width: 100%;
@@ -1252,18 +1252,18 @@ main .container-main .first-contain.home.cotown .text p {
         text-align: left;
     }
 
-    .locations .text-container h2.title {
+    .locations .text-container .head2.title {
         text-align: center;
         font-family: var(--title-font);
         font-weight: var(--regular);
         font-size: var(--big-title);
         padding: 1.5em 0 0 74px;
     }
-    .locations.vanguard .text-container h2.title {       
+    .locations.vanguard .text-container .head2.title {       
         font-size: 78px;
         font-weight: 400;
     }
-    .locations .carousel h3 {
+    .locations .carousel .head3 {
         position: absolute !important;
         font-family: var(--title-font);
         font-size: var(--big-title);
@@ -1275,11 +1275,11 @@ main .container-main .first-contain.home.cotown .text p {
         line-height: 1;
         text-transform: uppercase;
     }
-    .locations.vanguard .carousel h3 {
+    .locations.vanguard .carousel .head3 {
         font-size: 78px;
     }
 
-    .pisos.vanguard .text-container h2.title {
+    .pisos.vanguard .text-container .head2.title {
         font-size: 78px;
         font-weight: 400;
     }
@@ -1297,20 +1297,20 @@ main .container-main .first-contain.home.cotown .text p {
         bottom: 104px;
     }
 
-    .servicios.vanguard .text-container h2.title {
+    .servicios.vanguard .text-container .head2.title {
         font-size: 78px;
     }
 
-    .cotownity.vanguard .container-cotownity .left .coral h2 {
+    .cotownity.vanguard .container-cotownity .left .coral .head2 {
         padding: 1em 0;
         font-size: 48px;
         line-height: 40px;
     }
 
-    .partners.vanguard .text-container h2.title {
+    .partners.vanguard .text-container .head2.title {
         font-size: 78px;
     }
-    .opinions.vanguard .text-container h2 {
+    .opinions.vanguard .text-container .head2 {
         font-size: 78px;
     }
 }
@@ -1335,7 +1335,7 @@ main .container-main .first-contain.home.cotown .text p {
         padding-right: 2em;
     }
 
-    .main-header .left .text-container h1 {
+    .main-header .left .text-container .head1 {
         line-height: 56px;
     }
 
@@ -1359,10 +1359,10 @@ main .container-main .first-contain.home.cotown .text p {
 @media only screen and (max-width: 1023.9px) {
 
     /* GENERAL */
-    main .container-main .first-contain.home .title-big.home .h1-big h1 {
+    main .container-main .first-contain.home .title-big.home .bigh .head1 {
         font-size: 52px;
     }
-    h2.title {
+    .head2.title {
         padding: 0 40px;
         text-align: left;
     }
@@ -1374,7 +1374,7 @@ main .container-main .first-contain.home.cotown .text p {
         margin: 0;
     }
 
-    .text-container h2.title{
+    .text-container .head2.title{
         font-family: var(--title-font);
         font-size: var(--resp-middle-title);
         font-weight: var(--400);
@@ -1449,7 +1449,7 @@ main .container-main .first-contain.home.cotown .text p {
         left: 1em;
     }    
 
-    .main-header .video.vanguard .text-container.mobile h1 {
+    .main-header .video.vanguard .text-container.mobile .head1 {
         color: var(--primary-text);
         font-weight: var(--400);
         font-size: var(--resp-big-title);
@@ -1471,8 +1471,8 @@ main .container-main .first-contain.home.cotown .text p {
         margin: 4em auto 2em
     }
 
-    main .container-main .first-contain.home .title-big.home .h1-big h2,
-    main .container-main .first-contain.home .title-big.home .h2-border h2 {
+    main .container-main .first-contain.home .title-big.home .bigh .head2,
+    main .container-main .first-contain.home .title-big.home .borderh .head2 {
         font-size: 40px;
         text-align: left;
     }
@@ -1503,7 +1503,7 @@ main .container-main .first-contain.home.cotown .text p {
         padding: 2em 0 2em 2em;
         background-color: var(--box-bg);        
     }       
-    .main-header .video.cotown .text-container.mobile h1 {
+    .main-header .video.cotown .text-container.mobile .head1 {
         color: var(--black);
         font-weight: var(--semibold);
         font-size: var(--resp-middle-subtitle);
@@ -1511,7 +1511,7 @@ main .container-main .first-contain.home.cotown .text p {
         text-align: left;
         margin: 0;
     }
-    .main-header .video.cotown .text-container.mobile h1 span {
+    .main-header .video.cotown .text-container.mobile .head1 span {
         font-family: var(--title-font);
         font-size: var(--resp-title);
         line-height: 1;
@@ -1578,7 +1578,7 @@ main .container-main .first-contain.home.cotown .text p {
     main .container-main .first-contain.home.cotown .title-big.home {
         margin: 4em auto 0;
     }
-    main .container-main .first-contain.home.cotown .title-big.home .h1-big.cotown h1 {
+    main .container-main .first-contain.home.cotown .title-big.home .bigh.cotown .head1 {
         font-family: var(--text-font);
         font-size: var(--resp-middle-subtitle);
         width: 100%;
@@ -1601,7 +1601,7 @@ main .container-main .first-contain.home.cotown .text p {
     }
     
     /* HOME SECTIONS */
-    .locations .text-container h2.title {
+    .locations .text-container .head2.title {
         text-align: left;
         font-family: var(--title-font);
         font-size: var(--resp-middle-title);
@@ -1609,7 +1609,7 @@ main .container-main .first-contain.home.cotown .text p {
         padding: 0 0.5em 0.2em;
     }
 
-    .locations .text-container h2.title.cotown {
+    .locations .text-container .head2.title.cotown {
         text-align: left;
         padding: 0em 0 0.8em 24px;
         font-family: var(--text-font);
@@ -1617,11 +1617,11 @@ main .container-main .first-contain.home.cotown .text p {
         font-size: var(--resp-middle-subtitle);
     }
 
-    .locations .carousel h3 {
+    .locations .carousel .head3 {
         font-size: var(--resp-title);
     }
  
-    .pisos.vanguard .text-container h2.title {
+    .pisos.vanguard .text-container .head2.title {
         font-family: var(--title-font);
         font-size: var(--resp-middle-title);
         text-align: left;
@@ -1650,15 +1650,15 @@ main .container-main .first-contain.home.cotown .text p {
         bottom: 86px;
     }
 
-    .servicios .text-container h2.title,
-    .opinions .text-container h2.title {
+    .servicios .text-container .head2.title,
+    .opinions .text-container .head2.title {
         font-family: var(--title-font);
         font-size: var(--resp-middle-title);
         text-align: left;
         font-weight: var(--400);
         padding: 0 0.5em 0.2em;
     }
-    .partners .text-container h2 {
+    .partners .text-container .head2 {
         padding: 0 0.8em 0.5em;
     }
 
@@ -1672,7 +1672,7 @@ main .container-main .first-contain.home.cotown .text p {
     .cotownity-mobile {
         display: block;
     }
-    .cotownity-mobile .coral h2 {
+    .cotownity-mobile .coral .head2 {
         font-family: var(--title-font);
     }
     .cotownity-mobile .container-cotownity .container-img {
@@ -1690,7 +1690,7 @@ main .container-main .first-contain.home.cotown .text p {
         padding: 0.5em 0.5em 1em 1em;
         background-color: var(--white-bg-op2);
     }
-    .cotownity-mobile .container-cotownity .container-img .left h2 {
+    .cotownity-mobile .container-cotownity .container-img .left .head2 {
         width: 30vw;
         padding: 0;
         line-height: 32px;
@@ -1726,7 +1726,7 @@ main .container-main .first-contain.home.cotown .text p {
         font-size: 20px;
         color: var(--primary-old);
     }
-    .cotownity-mobile .container-cotownity .container-img .left h2.title-feel {
+    .cotownity-mobile .container-cotownity .container-img .left .head2.title-feel {
         font-family: var(--text-font);
         color: var(--primary-old);
         font-weight: var(--bold);
@@ -1761,7 +1761,7 @@ main .container-main .first-contain.home.cotown .text p {
         height: 8px;
     }
     
-    .pisos.cotown .text-container h2.title {
+    .pisos.cotown .text-container .head2.title {
         text-align: left;
         padding: 0 0 0.5em 24px;
         font-family: var(--text-font);
@@ -1779,7 +1779,7 @@ main .container-main .first-contain.home.cotown .text p {
     .opinions.cotown .text-container {
         padding: 1.5em 0 1em 1.5em;
     }
-    .opinions.cotown .text-container h2.title {       
+    .opinions.cotown .text-container .head2.title {       
         font-size: var(--resp-middle-subtitle);
         line-height: 1.2;
     }
@@ -1844,7 +1844,7 @@ main .container-main .first-contain.home.cotown .text p {
     .servicios .servicios-container .services-cards .card img, .servicios .servicios-container .services-cards .card svg {
         width: 60px;
     }
-    .servicios.cotown .text-container h2.title {
+    .servicios.cotown .text-container .head2.title {
         font-family: var(--text-font);
         font-weight: var(--semibold);
         font-size: var(--resp-middle-subtitle);
@@ -1865,12 +1865,12 @@ main .container-main .first-contain.home.cotown .text p {
     .cotownity-mobile .container-cotownity.cotown .container-img .left {
         width: 50%;
     }
-    .cotownity-mobile .container-cotownity.cotown .container-img .left h2 {
+    .cotownity-mobile .container-cotownity.cotown .container-img .left .head2 {
         width: 100%;
         font-size: var(--resp-middle-subtitle);
         line-height: 1.2;
     }
-    .cotownity-mobile .container-cotownity.cotown .container-img .left h2.title-feel {
+    .cotownity-mobile .container-cotownity.cotown .container-img .left .head2.title-feel {
         font-size: var(--resp-mini-title);
         text-transform: lowercase;
         line-height: 1;
@@ -1880,7 +1880,7 @@ main .container-main .first-contain.home.cotown .text p {
     .partners.cotown .text-container {
         padding: 1.5em 0 1em 1.5em;
     }
-    .partners.cotown .text-container h2 {
+    .partners.cotown .text-container .head2 {
         padding: 0;
         font-size: var(--resp-subtitle);
     }

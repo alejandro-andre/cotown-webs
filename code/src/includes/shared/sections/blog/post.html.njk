@@ -10,8 +10,8 @@
     <section class="post-content">
 
       {% if site == 'vanguard' %}
-        <div class="h1-container">
-          <h1>{{post | translate('Title', L)}}</h1>
+        <div>
+          <h1 class="head1">{{post | translate('Title', L)}}</h1>
         </div>
         {% image
           constants.SERVER + "/wopi/files/Marketing/Post/" + post.id +"/Image/contents?access_token=" + token,
@@ -34,10 +34,10 @@
           </div>       
           <div class="title-big pure-u-8-24 pure-u-lg-6-24">       
             <div class="green-title cotown">
-              <h2 class="title">{% for t in post.Tags %}{% if loop.index > 1 %}, {% endif %}{{t.Tag | translate('Name', L)}}{% endfor %}</h2>
+              <h2 class="head2 title">{% for t in post.Tags %}{% if loop.index > 1 %}, {% endif %}{{t.Tag | translate('Name', L)}}{% endfor %}</h2>
             </div>
-            <div class="h1-big">
-              <h1>{{post | translate('Title', L)}}</h1>
+            <div class="bigh">
+              <h1 class="head1">{{post | translate('Title', L)}}</h1>
             </div>
             <div class="title pure-u-1">        
               <p class="subtitle">
@@ -64,7 +64,7 @@
       <div class="like pure-u-1 {% if site == 'vanguard' %} pure-u-lg-7-12 {% else %} cotown {% endif %} ">
 
         <div class="text pure-u-22-24 pure-u-lg-15-24">
-          <h3>{% literal texts, 'post-te-ha-gustado', L %}</h3>
+          <h3 class="head3">{% literal texts, 'post-te-ha-gustado', L %}</h3>
           <p>{% literal texts, 'post-comparte', L %}</p>
         </div>
 

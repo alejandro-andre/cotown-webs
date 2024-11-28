@@ -15,12 +15,12 @@
     text-align: justify;
     align-items: center;
 }
-.legal .container-main h1 {
+.legal .container-main .head1 {
     font-size: 78px;
     font-weight: 400;
     margin: 1.5em 0 1em;
 }
-.legal .container-main h2 {
+.legal .container-main .head2 {
     font-family: var(--text-font);
     font-size: 22px;
     font-weight: 700;
@@ -73,10 +73,10 @@
         text-align: justify;
         align-items: center;
     }
-    .legal .container-main h1 {
+    .legal .container-main .head1 {
         font-size: 48px;
     }
-    .legal .container-main h2 {
+    .legal .container-main .head2 {
         font-size: 18px;
     }
     .legal .container-main p, a, ul, li {
@@ -95,10 +95,10 @@
         text-align: justify;
         align-items: center;
     }
-    .legal .container-main h1 {
+    .legal .container-main .head1 {
         font-size: 48px;
     }
-    .legal .container-main h2 {
+    .legal .container-main .head2 {
         font-size: 18px;
     }
     .legal .container-main p, a, ul, li, th, td {

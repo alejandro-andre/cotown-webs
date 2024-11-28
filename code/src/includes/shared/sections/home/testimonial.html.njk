@@ -22,11 +22,7 @@
                 <p class="name bold">{{t.Name}}</p>
                 <p class="date">{{t.Date}}</p>
               </div>
-            <h3 {% if site == 'vanguard' %} 
-              class="comillas"
-              {% else %}
-              class="comillas cotown"
-              {% endif %}>“</h3>
+            <h3 {% if site == 'vanguard' %}class="head3 comillas"{% else %}class="head3 comillas cotown"{% endif %}></h3>
             <ul {% if site == 'vanguard' %} 
               class="stars"
               {% else %}

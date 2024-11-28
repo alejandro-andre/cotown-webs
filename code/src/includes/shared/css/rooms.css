@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
 }
-.first .first-contain .first-slider .title-button h1 { 
+.first .first-contain .first-slider .title-button .head1 { 
   text-align: center;  
   width: 100%;
   font-size: 120px;
@@ -190,7 +190,7 @@
 }
 
 /* ---------- ROOMS ---------- \*/
-.flat.vanguard h2 {
+.flat.vanguard .head2 {
   font-family: var(--title-font);
   font-weight: var(--400);
 }
@@ -203,7 +203,7 @@
   background-color: var(--grey-light-background);
   box-shadow: 0px 20px 30px rgba(22, 22, 22, 0.06);
 }
-.rooms .all-rooms .title h2 {
+.rooms .all-rooms .title .head2 {
   margin-top: 2rem;
 }
 .rooms .all-rooms .card-room {
@@ -420,10 +420,10 @@ margin-bottom: 0.5em;
 .last .last-zone .last-content {
   padding: 1em 0 0;
 }
-.last h2 {
+.last .head2 {
   text-transform: uppercase;
 }
-.last h2 span {
+.last .head2 span {
   color: var(--primary);
   font-family: inherit;
 }
@@ -512,7 +512,7 @@ margin-bottom: 0.5em;
 
 /* RESPONSIVE \*/
 @media only screen and (max-width: 1023.9px) {
-  .first .first-contain .first-slider .title-button h1 { 
+  .first .first-contain .first-slider .title-button .head1 { 
     font-size: 96px;
   }
   .first .first-contain .after-slide .text-first {
@@ -532,7 +532,7 @@ margin-bottom: 0.5em;
   .rooms {
     padding: 0;
   }
-  .rooms .all-rooms .title h2 {
+  .rooms .all-rooms .title .head2 {
     margin: 1em 0;
     font-weight: 400;
     font-size: 40px;
@@ -599,10 +599,10 @@ margin-bottom: 0.5em;
   #thumbnail-carousel {
     display: none;
   }
-  .last h2 {
+  .last .head2 {
     text-align: left;
   }
-  .last h2 span {
+  .last .head2 span {
     width: 100%;
   }
   .last .left .text p {
@@ -659,7 +659,7 @@ margin-bottom: 0.5em;
 	justify-content: space-between;
 	align-items: flex-end;
 }
-.first .first-contain.cotown .first-slider .title-button h1 {
+.first .first-contain.cotown .first-slider .title-button .head1 {
   font-size: var(--big-title);
   color: var(--black);
   text-transform: none;
@@ -867,14 +867,14 @@ main.flat.cotown .last {
   background-color: var(--white);
   padding-top: 2em;
 }
-main.flat.cotown .last .last-zone .last-content .left h2 {
+main.flat.cotown .last .last-zone .last-content .left .head2 {
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
   text-transform: none;
 }
-main.flat.cotown .last .last-zone .last-content .left h2 span {
+main.flat.cotown .last .last-zone .last-content .left .head2 span {
   width: 100%;
 }
 main.flat.cotown .last .last-zone .last-content .left .text p {
@@ -900,7 +900,7 @@ main.flat.cotown .last .last-zone .last-content .left .text p {
     justify-content: center;
     align-items: center;
   }
-  .first .first-contain.cotown .first-slider .title-button h1 {
+  .first .first-contain.cotown .first-slider .title-button .head1 {
     text-align: center;
     color: var(--white);
     font-size: var(--resp-big-title);
@@ -972,11 +972,11 @@ main.flat.cotown .last .last-zone .last-content .left .text p {
   main.flat.cotown .rooms .all-rooms .card-room .right-data .buttons button.btn-text .mini-border {
     display: none;
   }
-  main.flat.cotown .last .last-zone .last-content .left h2 {
+  main.flat.cotown .last .last-zone .last-content .left .head2 {
     font-size: var(--resp-text-title);
     font-weight: var(--semibold);
   }
-  main.flat.cotown .last .last-zone .last-content .left h2 span {
+  main.flat.cotown .last .last-zone .last-content .left .head2 span {
     color: var(--primary-old);
   }
 }

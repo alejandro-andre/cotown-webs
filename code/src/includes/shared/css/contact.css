@@ -4,7 +4,7 @@ main.contact.vanguard .container-main .first-contact, main.contact.cotown.visit 
 	background-color: var(--primary);
 	height: 8em;
 }
-main.contact.vanguard .container-main .first-contact h1 {
+main.contact.vanguard .container-main .first-contact .head1 {
 	color: var(--white);
 	padding: 0.2em 0.8em 0;
 	margin-bottom: 0;
@@ -13,16 +13,16 @@ main.contact.vanguard .container-main .first-contact h1 {
 	line-height: 1.4em;
 	font-family: var(--title-font);
 }
-main.contact .contact-main h2 {
+main.contact .contact-main .head2 {
 	padding: 1em 1.5em 0;
 	font-weight: 400;
 	font-size: 46px;
 	line-height: 100%;
 }
-main.contact.vanguard .contact-main h2 {
+main.contact.vanguard .contact-main .head2 {
 	font-family: var(--title-font);
 }
-main.contact.vanguard .container-main section.form h2.title {
+main.contact.vanguard .container-main section.form .head2.title {
 	font-family: var(--title-font);
 	font-weight: var(--400);
 }
@@ -42,7 +42,7 @@ main.contact .contact-main .img-content .contact-content .text-location {
 main.contact .contact-main .img-content .contact-content .img-city {
 	color: var(--primary-light);
 }
-main.contact .contact-main .img-content .contact-content .text-location h3 {
+main.contact .contact-main .img-content .contact-content .text-location .head3 {
 	font-weight: 800;
 	font-size: 36px;
 	line-height: 140%;
@@ -52,7 +52,7 @@ main.contact .contact-main .img-content .contact-content .text-location p {
 	font-size: 24px;
 	line-height: 130%;
 }
-main.contact.vanguard .img-content .contact-content .text-location h3 {
+main.contact.vanguard .img-content .contact-content .text-location .head3 {
 	font-family: var(--title-font);
 }
 main.contact .contact-main .img-content .contact-content .text-location p em::before {
@@ -82,10 +82,10 @@ main.contact.cotown .contact-main .map .leaflet-tile-container {
 
 @media only screen and (min-width: 1600px) {
 
-	main.contact.vanguard .contact-main h2{
+	main.contact.vanguard .contact-main .head2{
 		font-size: 64px;
 	}
-	main.contact.vanguard .contact-main .img-content .contact-content .text-location h3 {
+	main.contact.vanguard .contact-main .img-content .contact-content .text-location .head3 {
 		font-size: 40px;
 	}
 	main.contact.vanguard .contact-main .img-content .contact-content .text-location p {
@@ -103,7 +103,7 @@ main.contact.cotown .contact-main .map .leaflet-tile-container {
 		height: 4.5em;
 	}
 
-	main.contact .first-contact h1 {
+	main.contact .first-contact .head1 {
 		color: var(--white);
 		padding: 0.2em 0.2em 0;
 		font-weight: 400;
@@ -111,7 +111,7 @@ main.contact.cotown .contact-main .map .leaflet-tile-container {
 		line-height: 1.5em;
 	}
 
-	main.contact .contact-main h2 {
+	main.contact .contact-main .head2 {
 		padding: 1em 0 0 0.5em;
 		font-size: 32px;
 		line-height: 100%;
@@ -131,7 +131,7 @@ main.contact.cotown .contact-main .map .leaflet-tile-container {
 		display: none;
 	}
 
-	main.contact .contact-main .img-content .contact-content .text-location h3 {
+	main.contact .contact-main .img-content .contact-content .text-location .head3 {
 		font-size: 24px;
 	}
 
@@ -157,7 +157,7 @@ main.contact.cotown .contact-main .map .leaflet-tile-container {
 
 /* CONTACTO COTOWN NEW */
 
-main.contact.cotown.visit .container-main .first-contact h1, main.contact.cotown.info .container-main .first-contact h1 {
+main.contact.cotown.visit .container-main .first-contact .head1, main.contact.cotown.info .container-main .first-contact .head1 {
 	font-size: var(--big-title);
 	font-weight: var(--regular);
 	color: var(--white);
@@ -187,7 +187,7 @@ main.contact.cotown .container-main .first-contact .img-contact img {
 	width: 100vw;
 	max-height: 400px;
 }
-main.cotown .container-main .first-contact .title-big .h1-big h1 {
+main.cotown .container-main .first-contact .title-big .bigh .head1 {
 	font-family: var(--text-font);
 	color: var(--black);
 	font-weight: var(--semibold);
@@ -196,7 +196,7 @@ main.cotown .container-main .first-contact .title-big .h1-big h1 {
 	width: 100%;
 	padding: 0.5em 0 2em;
 }
-main.cotown .container-main .first-contact .title-big h2 {
+main.cotown .container-main .first-contact .title-big .head2 {
 	font-family: var(--text);
 	color: var(--black);
 	font-weight: var(--light);
@@ -209,14 +209,14 @@ main.cotown .container-main .first-contact .title-big h2 {
 main.cotown .container-main .first-contact .title-big .feeling.cotown {
 	text-align: end;
 }
-main.cotown .container-main .first-contact .title-big .feeling.cotown h2.title-feel {
+main.cotown .container-main .first-contact .title-big .feeling.cotown .head2.title-feel {
 	text-align: end;
 	font-size: var(--text-title);
 	color: var(--primary-old);
 	font-weight: var(--semibold);
 	text-transform: lowercase;
 }
-main.cotown .contact-main .img-content .contact-content .text-location h3 {
+main.cotown .contact-main .img-content .contact-content .text-location .head3 {
 	font-family: var(--text-font);
 	text-transform: uppercase;
 	font-weight: var(--regular);
@@ -253,7 +253,7 @@ main.cotown .contact-main .img-content .contact-content .text-location p span a 
 		background-color: var(--primary);
 		height: 4.5em;
 	}
-	main.cotown .container-main .first-contact .title-big.mobile h1 {
+	main.cotown .container-main .first-contact .title-big.mobile .head1 {
 		color: var(--white);
 		padding: 0.4em 0.8em 0;
 		margin-bottom: 0;
@@ -262,7 +262,7 @@ main.cotown .contact-main .img-content .contact-content .text-location p span a 
 	main.contact.cotown.visit .container-main .first-contact, main.contact.cotown.info .container-main .first-contact {
 		height: 6em;
 	}
-	main.contact.cotown.visit .container-main .first-contact h1, main.contact.cotown.info .container-main .first-contact h1 {
+	main.contact.cotown.visit .container-main .first-contact .head1, main.contact.cotown.info .container-main .first-contact .head1 {
 		font-size: var(--resp-title);
 		font-weight: var(--regular);
 		color: var(--white);
@@ -277,7 +277,7 @@ main.cotown .contact-main .img-content .contact-content .text-location p span a 
 		padding: 0;
 		margin-bottom: 0;
 	}
-	main.contact.vanguard .container-main .first-contact .title-big h1 {
+	main.contact.vanguard .container-main .first-contact .title-big .head1 {
 		font-size: 40px;
 		font-weight: var(--regular);
 		color: var(--white);

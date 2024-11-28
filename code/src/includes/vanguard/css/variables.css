@@ -105,7 +105,7 @@
     /* // Header border */
     --border-header: 2px solid #D1D1D1;
     --border-bottom: 1px solid #D1D1D1;
-    --h2-border: 2px 0 #FF5166, -2px 0 #FF5166, 0 2px #FF5166, 0 -2px #FF5166,
+    --borderh: 2px 0 #FF5166, -2px 0 #FF5166, 0 2px #FF5166, 0 -2px #FF5166,
         1px 1px #FF5166, -1px -1px #FF5166, 1px -1px #FF5166, -1px 1px #fff;
 
     /* // Feedback color */

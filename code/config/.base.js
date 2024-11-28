@@ -111,7 +111,9 @@ module.exports = (eleventyConfig) => {
     };
     const md = new MarkdownIt(options);
     md.use(MarkdownItAttrs);
-    return md.render(value.replace(/"/g, '\u2018'));
+    let result = md.render(value.replace(/"/g, '\u2018'));
+    result = result.replace(/<h([1-6])>/g, '<h$1 class="head$1">');
+    return result;
   });
 
   // Text to URL filter
@@ -188,7 +190,9 @@ module.exports = (eleventyConfig) => {
         };    
         const md = new MarkdownIt(options);
         md.use(MarkdownItAttrs);
-        return md.render(literals[id][lang]);
+        let result = md.render(literals[id][lang]);
+        result = result.replace(/<h([1-6])>/g, '<h$1 class="head$1">');
+        return result;
       } else {
         return literals[id][lang];
       }

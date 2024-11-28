@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
 }
-.first .first-contain .first-slider .title-button h1 { 
+.first .first-contain .first-slider .title-button .head1 { 
   text-align: center;  
   width: 100%;
   font-size: 120px;
@@ -214,13 +214,13 @@
   top: -20px;
   left: -16px;
 }
-.rooms .all-rooms .title h2 {
+.rooms .all-rooms .title .head2 {
   width: fit-content;
   position: relative;
   left: 3%;
   font-size: 64px;
 }
-.rooms .all-rooms .title.no-corner h2 {
+.rooms .all-rooms .title.no-corner .head2 {
   position: static;
   text-align: start;
 }
@@ -447,10 +447,10 @@ margin-bottom: 0.5em;
 .last .last-zone .last-content {
   padding: 1em 0 0;
 }
-.last h2 {
+.last .head2 {
   text-transform: uppercase;
 }
-.last h2 span {
+.last .head2 span {
   color: var(--primary);
   font-family: inherit;
 }
@@ -549,7 +549,7 @@ margin-bottom: 0.5em;
 
 /* XL DESKTOP */
 @media only screen and (min-width: 1600px) {
-  .first .first-contain .first-slider .title-button h1 { 
+  .first .first-contain .first-slider .title-button .head1 { 
     font-size: 96px;
   }
   .first .first-contain .first-slider .splide__pagination {
@@ -620,13 +620,13 @@ margin-bottom: 0.5em;
   .rooms .all-rooms .title .corner {
     left: 2%;
   }
-  .rooms .all-rooms .title h2 {
+  .rooms .all-rooms .title .head2 {
     width: fit-content;
     position: relative;
     font-size: 60px;
     left: 3%;
   }
-  .rooms .all-rooms .title.no-corner h2{
+  .rooms .all-rooms .title.no-corner .head2{
     margin-left: 0.2em;
   }
   .last .last-zone .last-content {
@@ -669,7 +669,7 @@ margin-bottom: 0.5em;
   .rooms .all-rooms .title .corner img, .rooms .all-rooms .title .corner svg  {
     display: none;
   }
-  .rooms .all-rooms .title h2 {
+  .rooms .all-rooms .title .head2 {
     position: static;
     font-size: 40px;
     text-align: start;
@@ -763,10 +763,10 @@ margin-bottom: 0.5em;
     display: none;
   }
 
-  .last h2 {
+  .last .head2 {
     text-align: left;
   }
-  .last h2 span {
+  .last .head2 span {
     width: 100%;
   }
   .last .left .text p {

@@ -1,12 +1,12 @@
 <section class="pisos-slider rooms pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
 
-  <div class="h2-container pure-u-1">
+  <div class="container-2 pure-u-1">
 
-    <div class="h2-contain pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
+    <div class="contain-2 pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
       
       {% if site == 'vanguard' %}
       <div class="title-container vanguard pure-u-1 pure-u-lg-1-2">
-        <h2 class="vanguard pure-u-20-24">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}</h2>
+        <h2 class="head2 vanguard pure-u-20-24">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}</h2>
         <!-- See map button (mobile) -->
         <a href="#mapanchor" class="map-button pure-u-4-24">
           <button class="button-map-mobile pure-u-1">
@@ -17,8 +17,8 @@
       </div>
       {% else %}
       <div class="title-container cotown pure-u-1 pure-u-lg-18-24">
-        <h2 class="loc-title cotown">{{location | translate('Name', L)}}.</h2>
-        <h2 class="desc-title cotown">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}.</h2>
+        <h2 class="head2 loc-title cotown">{{location | translate('Name', L)}}.</h2>
+        <h2 class="head2 desc-title cotown">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}.</h2>
       </div>
       <!-- See map button (mobile) -->
       <a href="#mapanchor" class="map-button pure-u-4-24">
@@ -98,7 +98,7 @@
                     {% endif %}
                     {% endfor %}
                     {% if site == 'vanguard' %}
-                      <h3>{{b.Name}}</h3>
+                      <h3 class="head3">{{b.Name}}</h3>
                     {% else %}
                     {% endif %}
                   </a>
@@ -111,7 +111,7 @@
                   <div class="flex-grow-1">
                     {% if site == 'vanguard' %}                     
                     {% else %}
-                    <h3>{{b.Name}}</h3>
+                    <h3 class="head3">{{b.Name}}</h3>
                     {% endif %}
                     <p>{{ b | translate ('Description', L) | safe }}</p>
                   </div>
@@ -147,7 +147,7 @@
                     <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I">
                       <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
-                      <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
+                      <h4 class="head4">{% literal texts, 'type-habitacion-individual', L %}</h4>
                       {% if site == 'vanguard' %}
                        <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                     
                       {% else %}
@@ -167,7 +167,7 @@
                     <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D">
                         <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
-                        <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
+                        <h4 class="head4">{% literal texts, 'type-habitacion-compartida', L %}</h4>
                         {% if site == 'vanguard' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                 
                         {% else %}
@@ -186,7 +186,7 @@
                     {% if minF < 99999 %}
                     <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
-                      <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
+                      <h4 class="head4">{% literal texts, 'type-apartamento-privado', L %}</h4>
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html">
                         {% if site == 'vanguard' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
@@ -292,7 +292,7 @@
         <div class="piso pure-u-1">
 
           <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
-            <h3>{{b.Name}}</h3>
+            <h3 class="head3">{{b.Name}}</h3>
           </a>
 
           {% set minI = 99999 %}
@@ -327,8 +327,8 @@
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
               </div>
-              <div class="h4-container pure-u-10-24 pure-u-lg-1-2">
-                <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
+              <div class="container-4 pure-u-10-24 pure-u-lg-1-2">
+                <h4 class="head4">{% literal texts, 'type-habitacion-individual', L %}</h4>
                 <div id="{{b.id}}_I" class="pure-u-1 text-red"><p></p></div>
               </div>
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
@@ -349,8 +349,8 @@
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
               </div>
-              <div class="h4-container pure-u-10-24 pure-u-lg-1-2">
-                <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>                
+              <div class="container-4 pure-u-10-24 pure-u-lg-1-2">
+                <h4 class="head4">{% literal texts, 'type-habitacion-compartida', L %}</h4>                
                 <div id="{{b.id}}_D" class="pure-u-1 text-red"><p></p></div>
               </div>
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
@@ -371,8 +371,8 @@
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
               </div>
-              <div class="h4-container pure-u-10-24 pure-u-lg-1-2">
-                <h4>{% literal texts, 'type-apartamento-privado', L %}</h4> 
+              <div class="container-4 pure-u-10-24 pure-u-lg-1-2">
+                <h4 class="head4">{% literal texts, 'type-apartamento-privado', L %}</h4> 
                 <div id="{{b.id}}_F" class="pure-u-1 text-red"><p></p></div>
               </div>              
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">

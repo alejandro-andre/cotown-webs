@@ -11,8 +11,8 @@
       <!-- Cabecera -->
     <section class="first-contain pure-u-1">
 
-        <div class="h1-big">
-          <h1>Blog</h1>
+        <div class="bigh">
+          <h1 class="head1">Blog</h1>
         </div>
 
         <div class="search pure-u-23-24">
@@ -87,7 +87,7 @@
                 </div>
               </div>
               <div class="data-post {% if p.Featured %}primary {% endif %} pure-u-23-24">
-                <h1 class="pure-u-22-24">{{p | translate('Title', L)}}</h1>
+                <h1 class="head1 pure-u-22-24">{{p | translate('Title', L)}}</h1>
                 <div class="p-container">
                 {% for t in p.Tags %}
                 <p>{{t.Tag | translate('Name', L)}}</p>
@@ -96,7 +96,7 @@
               </div>
               {% if p.featured %}
               <div class="data-post primary pure-u-23-24">
-                <h1 class="pure-u-22-24">{{p | translate('Title', L)}}</h1>
+                <h1 class="head1 pure-u-22-24">{{p | translate('Title', L)}}</h1>
                 <div class="p-container">
                 {% for t in p.Tags %}
                 <p>{{t.Tag | translate('Name', L)}}</p>

@@ -21,7 +21,7 @@
   position: absolute;
   margin: 0;
 }
-.first-contain .title-big h1{
+.first-contain .title-big .head1{
   color: var(--white);
 }
 .search .search-container {
@@ -101,7 +101,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-left: 25%;
   padding-left: 1em;
 }
-.residence-locations .location .title h2 {
+.residence-locations .location .title .head2 {
   transform: rotate(-90deg);
   text-align: right;
   position: absolute;
@@ -137,7 +137,7 @@ input[type="search"]::-webkit-search-results-decoration {
   object-fit: cover;
   object-position: center center;
 }
-.residence-locations .residence-card .card-title h3 {
+.residence-locations .residence-card .card-title .head3 {
   font-size: 40px;
   font-weight: 400;
   line-height: 100%;
@@ -198,7 +198,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 @media only screen and (min-width: 1600px) {
-  .residence-locations .location .title h2 {
+  .residence-locations .location .title .head2 {
     top: 180px;
     left: -150px;
   }
@@ -229,7 +229,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .first-contain .title-big {
     margin: 2em 1em 0
   }
-  .first-contain .title-big h1 {
+  .first-contain .title-big .head1 {
     font-weight: 400;
     font-size: 40px;
     line-height: 100%;
@@ -261,7 +261,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-left: 0;
     padding-left: 0;
   }
-  .residence-locations .location .title h2 {
+  .residence-locations .location .title .head2 {
     position: initial;
     transform: rotate(0deg);
     margin: 0;
@@ -282,7 +282,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .residence-locations .residence-card {
     width: 100%;
   }
-  .residence-locations .residence-card .card-title h3 {
+  .residence-locations .residence-card .card-title .head3 {
     text-align: start;
     font-size: 32px;
   }
