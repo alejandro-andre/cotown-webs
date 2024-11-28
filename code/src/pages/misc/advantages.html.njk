@@ -80,13 +80,13 @@ tags: page
             <div class="img1">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Advantages/" + a.id +"/Image/contents?access_token=" + token,
-              a.Name, a.Name + '-' + a.id | slugify, "img1 ar-target", [600], ""
+              L, a.Name, a.Name, a.Name + '-' + a.id | slugify, "img1 ar-target", [600], ""
             %}
             </div>
             <div class="img2">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Advantages/" + a.id +"/Second_image/contents?access_token=" + token,
-              a.Name, a.Name + '-' + a.id | slugify + '-hover', "img2", [600], ""
+              L, a.Name, a.Name, a.Name + '-' + a.id | slugify + '-hover', "img2", [600], ""
             %}
             </div>
           </div>

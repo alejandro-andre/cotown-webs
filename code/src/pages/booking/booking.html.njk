@@ -44,7 +44,7 @@ tags: page
           <div id="{{l.id}}" class="city content-selector" onclick="select_city({{l.id}});">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
-              l.Name, l.Name | slugify, "img",
+              L, l.Name, l.Name, l.Name | slugify, "img",
               [200], ""
             %}
             <p>{{l | translate('Name', L)}}</p>

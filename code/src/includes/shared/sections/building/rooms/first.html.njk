@@ -27,7 +27,7 @@
         <li class="splide__slide">
           {% image
             constants.SERVER + "/wopi/files/Marketing/Media_building/" + i.id +"/Image/contents?access_token=" + token,
-            building.Name, building.Name + '-' + i.id | slugify, "",
+            L, building.Name, building.Name, building.Name + '-' + i.id | slugify, "",
             [1600], ""
           %}
         </li>
@@ -46,7 +46,7 @@
           <li class="splide__slide">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + i.id +"/Image/contents?access_token=" + token,
-              building.Name, building.Name + '-' + i.id | slugify, "",
+              L, building.Name, building.Name, building.Name + '-' + i.id | slugify, "",
               [1600], ""
             %}
           </li>

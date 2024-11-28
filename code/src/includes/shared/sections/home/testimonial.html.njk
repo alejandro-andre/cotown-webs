@@ -13,7 +13,7 @@
             <div class="avatar">
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Testimonials/" + t.id +"/Image/contents?access_token=" + token,
-                t.Name, t.Name + '-' + t.id | slugify, "",
+                L, t.Name, t.Name, t.Name + '-' + t.id | slugify, "",
                 [200], ""
               %}
             </div>

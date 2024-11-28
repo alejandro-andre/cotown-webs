@@ -28,7 +28,7 @@
             <li class="splide__slide">
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Media_district/" + f.id +"/Image/contents?access_token=" + token,
-                f.Name, f.Name + '-' + f.id | slugify, "",
+                L, f.Name, f.Name, f.Name + '-' + f.id | slugify, "",
                 [800], ""
               %}
             </li>
@@ -44,7 +44,7 @@
             <li class="splide__slide">
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Media_district/" + f.id +"/Image/contents?access_token=" + token,
-                f.Name, f.Name + '-' + f.id | slugify, "",
+                L, f.Name, f.Name, f.Name + '-' + f.id | slugify, "",
                 [500], ""
               %}
             </li>

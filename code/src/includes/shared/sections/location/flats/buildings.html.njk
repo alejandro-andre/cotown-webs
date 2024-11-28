@@ -92,7 +92,7 @@
                     {% if loop.index == 1 %}
                     {% image
                         constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
-                        b.Name, b.Name + '-' + photo.id | slugify, "card-img-top",
+                        L, b.Name, b.Name, b.Name + '-' + photo.id | slugify, "card-img-top",
                         [800], ""
                     %}
                     {% endif %}
@@ -202,7 +202,7 @@
           {% if loop.index == 1 %}
           {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
-              b.Name, b.Name + '-' + photo.id | slugify, "card-img-top",
+              L, b.Name, b.Name, b.Name + '-' + photo.id | slugify, "card-img-top",
               [800], ""
           %}
           {% endif %}

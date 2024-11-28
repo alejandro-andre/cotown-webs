@@ -240,8 +240,7 @@ module.exports = (eleventyConfig) => {
       const img = images.find(i => i.Name === name);
       if (img) {
         const url = src.replace("/{ID}/", "/" + img.id + "/")
-        let alt = (lang == 'es') ? img.Alt : img.Alt_en;
-        const html = await picture(url, alt, "blog" + img.id, "other", [1280], "")
+        const html = await picture(url, lang, img.Alt, img.Alt_en, "blog" + img.id, "other", [1280], "")
         text = text.replace(finds[i], html);
       }
     }
@@ -252,7 +251,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("image", picture);
 
   // Image optimizer shorcode
-  async function picture(src, alt, name, cls, widths, sizes) {
+  async function picture(src, lang, alt, alt_en, name, cls, widths, sizes) {
     // Get metadata
     try {
       if (eleventyConfig.test == 'test') {
@@ -275,7 +274,7 @@ module.exports = (eleventyConfig) => {
 
       // Image attributes
       let imageAttributes = {
-        alt,
+        alt: (lang == 'es' ? alt : alt_en),
         sizes,
         class: cls,
         loading: "lazy",
@@ -289,6 +288,11 @@ module.exports = (eleventyConfig) => {
     // Error
     } catch (err) {
       console.log(err);
+      console.log(lang)
+      console.log(alt)
+      console.log(alt_en)
+      console.log(name)
+      console.log(cls)
       console.log(`Mising image ${name} ${src}`);
       return `<span style='color:red;'>[image missing ${name}]</span>`;
     }

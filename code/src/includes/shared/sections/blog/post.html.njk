@@ -15,7 +15,7 @@
         </div>
         {% image
           constants.SERVER + "/wopi/files/Marketing/Post/" + post.id +"/Image/contents?access_token=" + token,
-          post.Title, post.Slug | slugify, "",
+          L, post.Title, post.Title, post.Slug | slugify, "",
           [1280], ""
         %}
         <div class="text pure-u-1 pure-u-18-24">
@@ -28,7 +28,7 @@
           <div class="img-post pure-u-1">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Post/" + post.id +"/Image/contents?access_token=" + token,
-              post.Title, post.Slug | slugify, "",
+              L, post.Title, post.Title, post.Slug | slugify, "",
               [1280], ""
             %}
           </div>       

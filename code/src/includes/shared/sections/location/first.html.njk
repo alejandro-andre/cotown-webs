@@ -17,7 +17,7 @@
       {% if loop.index == 1 %}
       {% image
         constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
-        location.Name, location.Name + '-' + i.id | slugify, "video",
+        L, location.Name, location.Name, location.Name + '-' + i.id | slugify, "video",
         [1600], ""
       %}
       {% endif %}

@@ -5,7 +5,7 @@
   <div class="img-residences pure-u-1">
     {% image
       constants.SERVER + "/wopi/files/Marketing/Media/" + images['residencias'].id +"/Image/contents?access_token=" + token,
-      "residencias", "residencias", "img-faqs", 
+      L, "residencias", "residencias", "residencias", "img-faqs", 
       [auto], ""
     %}
   </div>
@@ -43,7 +43,7 @@
       <div class="img">
         {% image
            constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
-           b.Name, b.Name + '-' + b.Photos[0].id | slugify, "",
+           L, b.Name, b.Name, b.Name + '-' + b.Photos[0].id | slugify, "",
            [800], ""
         %}
       </div>
