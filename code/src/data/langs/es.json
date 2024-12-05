@@ -68,7 +68,7 @@
       "text": "Conócenos",
       "cotown": {
         "title": "¡Conoce a nuestro equipazo!",
-        "description": "¿Quieres formar parte del team de Vanguard Student Housing o saber quien hay detrás de todo esto? ¡Bienvenid@!"
+        "description": "¿Quieres formar parte del team de Cotown o saber quien hay detrás de todo esto? ¡Bienvenid@!"
       },
       "vanguard": {
         "title": "¡Conoce a nuestro equipazo!",
@@ -79,7 +79,7 @@
       "url": "membership",
       "text": "Membership",
       "cotown": {
-        "title": "Colabora con Vanguard Student Housing",
+        "title": "Colabora con Cotown",
         "description": "Si quieres convertirte en nuestro partner, tan solo tienes que decirlo. "
       },
       "vanguard": {
@@ -91,11 +91,11 @@
       "url": "preguntas-frecuentes",
       "text": "FAQs",
       "cotown": {
-        "title": "Preguntas frecuentes Vanguard Student Housing ",
+        "title": "Preguntas frecuentes Cotown",
         "description": "¿Tienes alguna duda sobre tu reserva o estancia? Encuentra la respuesta aquí."
       },
       "vanguard": {
-        "title": "Preguntas frecuentes Vanguard Student Housing ",
+        "title": "Preguntas frecuentes Vanguard Student Housing",
         "description": "¿Tienes alguna duda sobre tu reserva o estancia? Encuentra la respuesta aquí."
       }
     },
@@ -103,7 +103,7 @@
       "url": "blog",
       "text": "Blog",
       "cotown": {
-        "title": "Entérate de todo lo que pasa en Vanguard Student Housing",
+        "title": "Entérate de todo lo que pasa en Cotown",
         "description": "Todas las novedades y curiosidades del mundo universitario te esperan en este blog"
       },
       "vanguard": {

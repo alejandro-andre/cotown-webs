@@ -67,7 +67,7 @@
       "text": "About us",
       "cotown": {
         "title": "Meet our amazing team!",
-        "description": "Would you like to join the Vanguard Student Housing team or find out who's behind all this? Welcome!"
+        "description": "Would you like to join the Cotown team or find out who's behind all this? Welcome!"
       },
       "vanguard": {
         "title": "Meet our amazing team!",
@@ -78,11 +78,11 @@
       "url": "membership",
       "text": "Membership",
       "cotown": {
-        "title": "Collaborate with Vanguard Student Housing.",
+        "title": "Collaborate with Cotown",
         "description": "If you want to become our partner, you just have to say it."
       },
       "vanguard": {
-        "title": "Collaborate with Vanguard Student Housing.",
+        "title": "Collaborate with Vanguard Student Housing",
         "description": "If you want to become our partner, you just have to say it."
       }
     },
@@ -90,11 +90,11 @@
       "url": "faqs",
       "text": "FAQs",
       "cotown": {
-        "title": "FAQ's Vanguard Student Housing",
+        "title": "FAQs Cotown",
         "description": "Do you have any questions about your reservation or stay? Find the answer here."
       },
       "vanguard": {
-        "title": "FAQ's Vanguard Student Housing",
+        "title": "FAQs Vanguard Student Housing",
         "description": "Do you have any questions about your reservation or stay? Find the answer here."
       }
     },
@@ -102,11 +102,11 @@
       "url": "blog",
       "text": "Blog",
       "cotown": {
-        "title": "Stay informed about everything that happens at Vanguard Student Housing.",
+        "title": "Stay informed about everything that happens at Cotown",
         "description": "All the latest news and curiosities from the university world await you in this blog."
       },
       "vanguard": {
-        "title": "Stay informed about everything that happens at Vanguard Student Housing.",
+        "title": "Stay informed about everything that happens at Vanguard Student Housing",
         "description": "All the latest news and curiosities from the university world await you in this blog."
       }
     },
