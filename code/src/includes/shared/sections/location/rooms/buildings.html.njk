@@ -97,7 +97,7 @@
                     {% endif %}
                     {% endfor %}
                     {% if site == 'vanguard' %}
-                      <h3 class="head3">{{b.Name}}</h3>
+                      <h2 class="head3">{{b.Name}}</h2>
                     {% else %}
                     {% endif %}
                   </a>
@@ -110,7 +110,7 @@
                   <div class="flex-grow-1">
                     {% if site == 'vanguard' %}                     
                     {% else %}
-                    <h3 class="head3">{{b.Name}}</h3>
+                    <h2 class="head3">{{b.Name}}</h2>
                     {% endif %}
                     <p>{{ b | translate ('Description', L) | safe }}</p>
                   </div>

@@ -95,7 +95,7 @@
                     {% endif %}
                     {% endfor %}
                     {% if site == 'vanguard' %}
-                    <h3 class="head3">{{b.Name}}</h3>
+                    <h2 class="head3">{{b.Name}}</h2>
                     {% else %}
                     {% endif %}
                   </a>
@@ -107,7 +107,7 @@
                   <div class="flex-grow-1">
                     {% if site == 'vanguard' %}                     
                     {% else %}
-                    <h3 class="head3">{{b.Name}}</h3>
+                    <h2 class="head3">{{b.Name}}</h2>
                     {% endif %}
                     <p>{{ b | translate ('Description_private', L) | safe }}</p>
                   </div>
@@ -210,7 +210,7 @@
         <div class="piso pure-u-1">
 
           <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
-            <h3 class="head3">{{b.Name}}</h3>
+            <h2 class="head3">{{b.Name}}</h2>
           </a>
 
           {% set minI = 99999 %}
