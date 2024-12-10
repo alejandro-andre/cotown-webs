@@ -510,11 +510,11 @@ main.post-page .container-main .post-content .head1 {
 	font-size: 64px;
 	line-height: 100%;
 	text-align: center;
-	margin-bottom: 1em;
 }
 
 main.post-page .container-main .post-content img {
 	width: 100%;
+	max-width: 1024px;
 	margin-bottom: 2em;
 }
 
