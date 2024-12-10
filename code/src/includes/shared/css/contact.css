@@ -47,7 +47,7 @@ main.contact .contact-main .img-content .contact-content .text-location .head3 {
 	font-size: 36px;
 	line-height: 140%;
 }
-main.contact .contact-main .img-content .contact-content .text-location p {
+main.contact .contact-main .img-content .contact-content .text-location h3 {
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 130%;
@@ -55,10 +55,10 @@ main.contact .contact-main .img-content .contact-content .text-location p {
 main.contact.vanguard .img-content .contact-content .text-location .head3 {
 	font-family: var(--title-font);
 }
-main.contact .contact-main .img-content .contact-content .text-location p em::before {
+main.contact .contact-main .img-content .contact-content .text-location h3 em::before {
 	vertical-align: bottom;
 }
-main.contact .contact-main .img-content .contact-content .text-location p span a {
+main.contact .contact-main .img-content .contact-content .text-location h3 span a {
 	text-decoration: 1px underline;
 	font-weight: 700;
 	font-size: 24px;
@@ -88,10 +88,10 @@ main.contact.cotown .contact-main .map .leaflet-tile-container {
 	main.contact.vanguard .contact-main .img-content .contact-content .text-location .head3 {
 		font-size: 40px;
 	}
-	main.contact.vanguard .contact-main .img-content .contact-content .text-location p {
+	main.contact.vanguard .contact-main .img-content .contact-content .text-location h3 {
 		font-size: 30px;
 	}
-	main.contact.vanguard .contact-main .img-content .contact-content .text-location p span a {
+	main.contact.vanguard .contact-main .img-content .contact-content .text-location h3 span a {
 		font-size: 30px;
 	}
 }
@@ -135,17 +135,17 @@ main.contact.cotown .contact-main .map .leaflet-tile-container {
 		font-size: 24px;
 	}
 
-	main.contact .contact-main .img-content .contact-content .text-location p {
+	main.contact .contact-main .img-content .contact-content .text-location h3 {
 		font-size: var(--mini-title);
 	}
 
-	main.contact .contact-main .img-content .contact-content .text-location p span {
+	main.contact .contact-main .img-content .contact-content .text-location h3 span {
 		font-size: var(--mini-title);
 		font-weight: bold;
 		text-decoration-line: underline;
 	}
 
-	main.contact .contact-main .img-content .contact-content .text-location p span a {
+	main.contact .contact-main .img-content .contact-content .text-location h3 span a {
 		font-weight: bold;
 		text-decoration-line: underline;
 		font-size: var(--mini-title);
@@ -222,17 +222,17 @@ main.cotown .contact-main .img-content .contact-content .text-location .head3 {
 	font-weight: var(--regular);
 	font-size: var(--subtitle);
 }
-main.cotown .contact-main .img-content .contact-content .text-location p {
+main.cotown .contact-main .img-content .contact-content .text-location h3 {
 	font-weight: var(--regular);
 	font-size: var(--text-title);
 }
-main.cotown .contact-main .img-content .contact-content .text-location p em {
+main.cotown .contact-main .img-content .contact-content .text-location h3 em {
 	vertical-align: text-top;
 }
-main.cotown .contact-main .img-content .contact-content .text-location p em::before {
+main.cotown .contact-main .img-content .contact-content .text-location h3 em::before {
 	vertical-align: middle;
 }
-main.cotown .contact-main .img-content .contact-content .text-location p span a {
+main.cotown .contact-main .img-content .contact-content .text-location h3 span a {
 	font-size: var(--text-title);
 	font-weight: var(--regular);
 	text-decoration: none;

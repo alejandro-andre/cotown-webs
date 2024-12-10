@@ -284,7 +284,7 @@ a {
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type img {
     width: 60px;
 }
-.room-type .head4, .room-type p {
+.room-type .head4, .room-type h4 {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -305,7 +305,7 @@ a {
 .head4 {
     text-transform: uppercase;
 }
-.room-type p {
+.room-type h4 {
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
@@ -609,7 +609,7 @@ section.necesities.cotown .contain .title .head2 {
     .room-type .head4 {
         font-size: 24px;
     }
-    .room-type p {
+    .room-type h4 {
         font-size: 16px;
     }
     button.green-button.btn-secondary {
@@ -1140,7 +1140,7 @@ section.necesities.cotown .contain .title .head2 {
     font-size: var(--text-title);
     font-weight: var(--regular);
 }
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type p {
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types  p {
     text-transform: none;
     font-size: var(--mini-title);
     font-weight: var(--regular);

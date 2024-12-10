@@ -5,7 +5,7 @@
         {{location.Texts[0] | translate('Details', L) | markdown | safe }}
       </div>
       {% if site == 'vanguard' %}
-        <h2 class="head2">{{location | translate('Name', L)}}</h2>
+        <div class="head2">{{location | translate('Name', L)}}</div>
       {% else %}
       {% endif %}     
     </div>

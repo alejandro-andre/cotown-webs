@@ -26,8 +26,10 @@ module.exports = async (config) => {
       ) {
           Description
           Description_en
-          Details
-          Details_en
+          Title
+          Title_en
+          Title_flat
+          Title_flat_en
       }
       Images: Media_locationListViaLocation_id (
         joinType: INNER

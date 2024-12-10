@@ -3,16 +3,19 @@
    {% if site == 'vanguard' %}
     <!-- Title -->
     <div class="text-container pure-u-1 ">
-      <h1 class="head1 title-where">
-        {% literal texts, 'home-localizaciones-titulo', L %}
+      <h1>
+        {% literal texts, 'home-localizaciones-head', L %}
       </h1>
+      <h2 class="head1 title-where">
+        {% literal texts, 'home-localizaciones-titulo', L %}
+      </h2>
     </div>
     {% else %}
     <!-- Title -->
     <div class="text-container cotown pure-u-1 ">
-      <h1 class="head1 title-where">
+      <h2 class="head1 title-where">
         {% literal texts, 'home-localizaciones-titulo', L %}
-      </h1>
+      </h2>
     </div>
     {% endif %}
     
@@ -51,7 +54,7 @@
               </div>
             </div>
             <div class="text-content pure-u-1 pure-u-lg-22-24">
-              <h2 class="head2 location-title">{{l | translate('Name', L)}}</h2>
+              <h3 class="head2 location-title">{{l | translate('Name', L)}}</h3>
               <p class="body1">{{l.Texts[0] | translate('Description', L)}}</p>
             </div>
           </div>
@@ -69,7 +72,7 @@
                   {% else %}
                     <div class="mini-border"></div>
                   {% endif %}                  
-                  <p>{% literal texts, 'home-pisazos-piso', L %}<br>{% literal texts, 'home-pisazos-compartido', L %}</p>
+                  <h3>{% literal texts, 'home-pisazos-piso', L %}<br>{% literal texts, 'home-pisazos-compartido', L %}</h3>
                 </div>
               </a>
               {% endif %}
@@ -83,7 +86,7 @@
                   {% else %}
                     <div class="mini-border"></div>
                   {% endif %}                  
-                  <p>{% literal texts, 'home-pisazos-apartamento', L %}<br>{% literal texts, 'home-pisazos-privado', L %}</p>
+                  <h3>{% literal texts, 'home-pisazos-apartamento', L %}<br>{% literal texts, 'home-pisazos-privado', L %}</h3>
                 </div>
               </a>
               {% endif %}
@@ -94,7 +97,7 @@
                 <img class="img" src="{{root}}/assets/img/corner.svg"></img>
                 <div class="label-content">
                   <img class="icon" alt="" src="{{root}}/assets/img/icono__tipo_residencia_universitaria.svg"></img>
-                  <p>{% literal texts, 'home-pisazos-residencia', L %}<br>{% literal texts, 'home-pisazos-universitaria', L %}</p>
+                  <h3>{% literal texts, 'home-pisazos-residencia', L %}<br>{% literal texts, 'home-pisazos-universitaria', L %}</h3>
                 </div>
               </a>
               {% endif %}

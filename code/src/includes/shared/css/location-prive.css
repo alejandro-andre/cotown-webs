@@ -313,7 +313,7 @@ a {
 .head4 {
     text-transform: uppercase;
 }
-.room-type p {
+.room-type h3 {
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
@@ -619,7 +619,7 @@ section.necesities.cotown .contain .title .head2 {
     .room-type .head4 {
         font-size: 24px;
     }
-    .room-type p {
+    .room-type h4 {
         font-size: 16px;
     }
     button.green-button.btn-secondary {
@@ -1147,7 +1147,7 @@ section.map {
     font-size: var(--text-title);
     font-weight: var(--regular);
 }
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type p {
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type h4 {
     text-transform: none;
     font-size: var(--mini-title);
     font-weight: var(--regular);

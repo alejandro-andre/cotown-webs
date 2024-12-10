@@ -41,7 +41,7 @@ tags: page
         {% if site == 'vanguard' %}
         {% else %}
           <div class="feeling cotown">
-          <h2 class="head2 title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
+          <div class="head2 title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</div>
           </div>
         {% endif %}
           {% literal texts, 'advantages-texto', L, true %}
@@ -61,10 +61,10 @@ tags: page
           <ul class="splide__list">
             {% for b in banners | find('Page', 'eq', 'ventajas') %}
             {% for p in (b | translate('Text', L)).split('|') %}
-            <li class="splide__slide"><h2 class="head2">{{p}} |&nbsp;</h2></li>
+            <li class="splide__slide"><div class="head2">{{p}} |&nbsp;</div></li>
             {% endfor %}
             {% for p in (b | translate('Text', L)).split('|') %}
-            <li class="splide__slide"><h2 class="head2">{{p}} |&nbsp;</h2></li>
+            <li class="splide__slide"><div class="head2">{{p}} |&nbsp;</div></li>
             {% endfor %}
             {% endfor %}
           </ul>

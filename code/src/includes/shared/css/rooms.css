@@ -237,7 +237,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.right-data .title-favorite p {
+.right-data .title-favorite h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 1.5;
@@ -269,7 +269,7 @@
   font-size: 22px;
   line-height: 1.5;
 }
-.right-data .share .title p, .right-data .extra .title p {
+.right-data .share .title p, .right-data .share .title h4 {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.5;
@@ -458,7 +458,7 @@ margin-bottom: 0.5em;
   .first .first-contain .text-first p {
     font-size: 22px;
   }
-  .right-data .title-favorite p {
+  .right-data .title-favorite h3, .right-data .title-favorite h4 {
     font-size: 30px;
   }
   .right-data .title-favorite em {
@@ -473,7 +473,7 @@ margin-bottom: 0.5em;
   .right-data .option p.bold {
     font-size: 30px;
   }
-  .right-data .share .title p, .right-data .extra .title p {
+  .right-data .share .title p, .right-data .share .title h4 {
     font-size: 22px;
   }
   .right-data .share .sharing label, .right-data .extra .extras label  {
@@ -772,7 +772,7 @@ main.flat.cotown .rooms .all-rooms .card-room .right-data .text p {
 main.flat.cotown .rooms .all-rooms .card-room .right-data .share .sharing {
   background-color: transparent;
 }
-main.flat.cotown .rooms .all-rooms .card-room .right-data .share .title p{
+main.flat.cotown .rooms .all-rooms .card-room .right-data .share .title h4 {
   font-size: var(--mini-title);
   font-weight: var(--semibold);
   margin: 0;
