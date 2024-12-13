@@ -34,6 +34,9 @@
   text-transform: uppercase;
   color: var(--white);
 }
+.first .first-contain .first-slider .title-button .head6 { 
+  color: var(--white);
+}
 .first .first-contain .first-slider .title-button button.btn-secondary {  
   text-align: center;
   height: 36px;
@@ -666,6 +669,12 @@ margin-bottom: 0.5em;
   text-align: start;
   font-family: var(--text-font);
 }
+.first .first-contain.cotown .first-slider .title-button .head6 {
+  color: var(--black);
+  text-transform: none;
+  text-align: start;
+  font-family: var(--text-font);
+}
 .first .first-contain.cotown .first-slider .title-button button.btn-secondary {
   font-size: var(--text-title);
   color: var(--primary-old);
@@ -904,6 +913,10 @@ main.flat.cotown .last .last-zone .last-content .left .text p {
     text-align: center;
     color: var(--white);
     font-size: var(--resp-big-title);
+  }
+  .first .first-contain.cotown .first-slider .title-button .head6 {
+    text-align: center;
+    color: var(--white);
   }
   .first .first-contain.cotown .first-slider .title-button .sello-cotown {
     display: none;

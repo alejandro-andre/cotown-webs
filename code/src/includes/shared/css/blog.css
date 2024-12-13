@@ -512,9 +512,14 @@ main.post-page .container-main .post-content .head1 {
 	text-align: center;
 }
 
-main.post-page .container-main .post-content img {
+main.post-page.vanguard .container-main .post-content img {
 	width: 100%;
 	max-width: 1024px;
+	margin-bottom: 2em;
+}
+
+main.post-page.cotown .container-main .post-content img {
+	width: 100%;
 	margin-bottom: 2em;
 }
 

@@ -34,6 +34,9 @@
   text-transform: uppercase;
   color: var(--white);
 }
+.first .first-contain .first-slider .title-button .head6 { 
+  color: var(--white);
+}
 .first .first-contain .first-slider .title-button button.btn-secondary {  
   text-align: center;
   height: 36px;
