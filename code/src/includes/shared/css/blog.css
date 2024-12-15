@@ -1178,7 +1178,7 @@ pre.ql-syntax {
 	background-color: #23241f;
 	color: #f8f8f2;
 	overflow: visible;
-	padding: 2px 4px;
+	padding: 10px 10px;
 }
 
 blockquote {
@@ -1217,7 +1217,6 @@ ol li.ql-indent-1 {
 ol li.ql-indent-1:before {
 	content: counter(list-1, lower-alpha) '. ';
 }
-
 ol li.ql-indent-2 {
 	padding-left: 4em;
 	counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
@@ -1225,4 +1224,14 @@ ol li.ql-indent-2 {
 }
 ol li.ql-indent-2:before {
 	content: counter(list-2, lower-roman) '. ';
+}
+
+ul li.ql-indent-1 {
+	padding-left: 2em;
+}
+ul li.ql-indent-2 {
+	padding-left: 4em;
+}
+ul li.ql-indent-3 {
+	padding-left: 6em;
 }
