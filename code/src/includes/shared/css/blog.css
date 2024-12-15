@@ -1163,3 +1163,66 @@ main.post-page.vanguard .container-main .post-content .text .text-content ol li 
 		top: 40%;
 	}
 }
+
+.ql-align-center {
+	text-align: center;
+}
+.ql-align-right {
+	text-align: right;
+}
+.ql-align-justify {
+	text-align: justify;
+}
+
+pre.ql-syntax {
+	background-color: #23241f;
+	color: #f8f8f2;
+	overflow: visible;
+	padding: 2px 4px;
+}
+
+blockquote {
+	border-left: 4px solid #ccc;
+	margin-left: 0;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding-left: 16px;
+}
+
+.ql-indent-1 {
+	margin-left: 2em;
+}
+.ql-indent-2 {
+	margin-left: 4em;
+}
+.ql-indent-3 {
+	margin-left: 6em;
+}
+
+ol {
+    list-style: none;
+}
+ol li {
+	counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+	counter-increment: list-0;
+}
+ol li:before {
+	content: counter(list-0, decimal) '. ';
+}
+ol li.ql-indent-1 {
+	padding-left: 2em;
+	counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+	counter-increment: list-1;
+}
+ol li.ql-indent-1:before {
+	content: counter(list-1, lower-alpha) '. ';
+}
+
+ol li.ql-indent-2 {
+	padding-left: 4em;
+	counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+	counter-increment: list-2;
+}
+ol li.ql-indent-2:before {
+	content: counter(list-2, lower-roman) '. ';
+}
