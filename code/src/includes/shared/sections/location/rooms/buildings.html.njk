@@ -151,7 +151,7 @@
                       <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                     
                       {% else %}
                       {% endif %}                     
-                      <h4>{% literal texts, 'price-desde', L %} {{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
+                      <p>{% literal texts, 'price-desde', L %} {{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                       {% if site == 'vanguard' %}
                       {% else %}
                       <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button> 
@@ -171,7 +171,7 @@
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                 
                         {% else %}
                         {% endif %}                     
-                        <h4>{% literal texts, 'price-desde', L %} {{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
+                        <p>{% literal texts, 'price-desde', L %} {{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                         {% if site == 'vanguard' %}
                         {% else %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
@@ -190,7 +190,7 @@
                         {% if site == 'vanguard' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                         {% endif %}
-                        <h4>{% literal texts, 'price-desde', L %} {{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
+                        <p>{% literal texts, 'price-desde', L %} {{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                         {% if site == 'cotown' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                         {% endif %}  
@@ -332,7 +332,7 @@
               </div>
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <h4>{{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
+                <p>{{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                 <button 
                   class="btn-secondary green-button" 
                   onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I'">
@@ -354,7 +354,7 @@
               </div>
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <h4>{{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
+                <p>{{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                 <button 
                   class="btn-secondary green-button" 
                   onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D'">
@@ -376,7 +376,7 @@
               </div>              
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <h4>{{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
+                <p>{{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
                 <button 
                   class="btn-secondary green-button" 
                   onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html'">
