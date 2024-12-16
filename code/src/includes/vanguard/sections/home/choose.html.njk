@@ -8,67 +8,55 @@
 
     <div class="pure-u-lg-1-3 pure-u-1 img-container">
       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['locations'].url}}.html">
-      <div class="img">
-        {% image
-           constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
-           L, "apartamento-privado", "apartamento-privado", "apartamento-privado", "",
-           [1280], ""
-        %}
-      </div>
-      <h3>
-        <div class="img-title1">
-          <span>{% literal texts, 'home-pisazos-apartamento', L %}</span>
-          <div class="subrayado"></div>
+        <div class="img">
+          {% image
+            constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
+            L, "apartamento-privado", "apartamento-privado", "apartamento-privado", "",
+            [1280], ""
+          %}
         </div>
-        <div class="img-title2">
-          <span>{% literal texts, 'home-pisazos-privado', L %}</span>
-          <div class="subrayado"></div>
+        <div class="img-title">
+          <h3>
+            {% literal texts, 'home-pisazos-apartamento', L %}<br/>
+            {% literal texts, 'home-pisazos-privado', L %}
+          </h3>
         </div>
-      </h3>
       </a>
     </div>
 
     <div class="pure-u-lg-1-3 pure-u-1 img-container">
       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['residences'].url}}.html">
-      <div class="img">
-        {% image
-           constants.SERVER + "/wopi/files/Marketing/Media/" + images['residencia'].id +"/Image/contents?access_token=" + token,
-           L, "residencia", "residencia", "residencia", "",
-           [1280], ""
-        %}
-      </div>
-      <h3>
-        <div class="img-title1">
-          <span>{% literal texts, 'home-pisazos-residencia', L %}</span>
-          <div class="subrayado"></div>
+        <div class="img">
+          {% image
+            constants.SERVER + "/wopi/files/Marketing/Media/" + images['residencia'].id +"/Image/contents?access_token=" + token,
+            L, "residencia", "residencia", "residencia", "",
+            [1280], ""
+          %}
         </div>
-        <div class="img-title2">
-          <span>{% literal texts, 'home-pisazos-universitaria', L %}</span>
-          <div class="subrayado"></div>
+        <div class="img-title">
+          <h3>
+            {% literal texts, 'home-pisazos-residencia', L %}<br/>
+            {% literal texts, 'home-pisazos-universitaria', L %}
+          </h3>
         </div>
-      </h3>
       </a>
     </div>
 
     <div class="pure-u-lg-1-3 pure-u-1 img-container">
       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['locations'].url}}.html">
-      <div class="img last">
-        {% image
-           constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'].id +"/Image/contents?access_token=" + token,
-           L, "piso-compartido", "piso-compartido", "piso-compartido", "",
-           [1280], ""
-        %}
-      </div>
-      <h3>
-        <div class="img-title1">
-          <span>{% literal texts, 'home-pisazos-piso', L %}</span>
-          <div class="subrayado"></div>
+        <div class="img last">
+          {% image
+            constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'].id +"/Image/contents?access_token=" + token,
+            L, "piso-compartido", "piso-compartido", "piso-compartido", "",
+            [1280], ""
+          %}
         </div>
-        <div class="img-title2">
-          <span>{% literal texts, 'home-pisazos-compartido', L %}</span>
-          <div class="subrayado"></div>
+        <div class="img-title">
+          <h3>
+            {% literal texts, 'home-pisazos-piso', L %}<br/>
+            {% literal texts, 'home-pisazos-compartido', L %}
+          </h3>
         </div>
-      </h3>
       </a>
     </div>
 

@@ -528,20 +528,16 @@ main .container-main .first-contain.home.cotown .text p {
     transition: transform .25s ease-in-out;
 }
 
-.pisos.vanguard .container .img-container span {
+.pisos.vanguard .container .img-container h3 {
+    top: -240px;
+    font-weight: 400;
     z-index: 20;
     position: relative;
     display: inline-block;
     text-shadow: 0px 7px 14px rgba(0, 0, 0, 0.15);
     font-family: var(--title-font);
-}
-
-.pisos.vanguard .container .img-container .img-title1 span {
-    top: -178px;
-}
-
-.pisos.vanguard .container .img-container .img-title2 span {
-    top: -110px;
+    line-height: 1.1em;
+    margin-left: 10px;
 }
 
 .pisos .container .img-container .subrayado {
@@ -550,23 +546,6 @@ main .container-main .first-contain.home.cotown .text p {
     position: absolute;
     width: 0%;
     height: 0.8rem;
-}
-
-.pisos.vanguard .container .img-container .img-title1 .subrayado {
-    bottom: 178px;
-}
-
-.pisos.vanguard .container .img-container .img-title2 .subrayado {
-    bottom: 108px;
-}
-
-.pisos.vanguard .container .img-container:hover a>.img-title1 .subrayado,
-.pisos.vanguard .container .img-container:hover a>.img-title2 .subrayado {
-    width: 100%;
-    -webkit-transition: width 0.25s ease-in-out;
-    -moz-transition: width 0.25s ease-in-out;
-    -o-transition: width 0.25s ease-in-out;
-    transition: width 0.25s ease-in-out;
 }
 
 /* PISOS COTOWN */
@@ -1203,8 +1182,7 @@ main .container-main .first-contain.home.cotown .text p {
 }
 
 
-.pisos .container .img-container .img-title1,
-.pisos .container .img-container .img-title2 {
+.pisos .container .img-container .img-title {
     color: var(--primary-text);
     font-family: var(--title-font);
     font-weight: 400;
@@ -1287,17 +1265,8 @@ main .container-main .first-contain.home.cotown .text p {
         font-weight: 400;
     }
 
-    .pisos.vanguard .container .img-container .img-title1 span, .pisos.vanguard .container .img-container .img-title2 span {
+    .pisos.vanguard .container .img-container h3 {
         font-size: 78px;
-    }
-
-
-    .pisos .container .img-container .img-title1 .subrayado {
-        bottom: 174px;
-    }
-
-    .pisos .container .img-container .img-title2 .subrayado {
-        bottom: 104px;
     }
 
     .servicios.vanguard .text-container .head2.title {
@@ -1323,8 +1292,7 @@ main .container-main .first-contain.home.cotown .text p {
         font-size: 22px;
     }
 
-    .pisos .container .img-container .img-title1,
-    .pisos .container .img-container .img-title2 {
+    .pisos .container .img-container h3 {
         font-size: 60px;
     }
 }
@@ -1637,20 +1605,8 @@ main .container-main .first-contain.home.cotown .text p {
         margin-right: 0;
     }
 
-    .pisos .container .img-container .img-title1 span {
+    .pisos .container .img-container h3 {
         top: -134px;
-    }
-
-    .pisos .container .img-container .img-title2 span {
-        top: -80px;
-    }
-
-    .pisos .container .img-container .img-title1 .subrayado {
-        bottom: 140px;
-    }
-
-    .pisos .container .img-container .img-title2 .subrayado {
-        bottom: 86px;
     }
 
     .servicios .text-container .head2.title,
