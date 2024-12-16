@@ -60,7 +60,7 @@ function availability(lang, option) {
   });
 
   // Init
-  document.querySelectorAll(".text-red").forEach((div) => { div.firstChild.textContent = " "; });
+  document.querySelectorAll(".text-red").forEach((div) => { div.firstChild.innerHTML = "&nbsp;"; });
   document.querySelectorAll('button[name="btn-check"]').forEach((btn) => { btn.classList.add("hidden"); });
   document.querySelectorAll('button[name="btn-book"]').forEach((btn) => { btn.classList.add("invisible"); });
   document.querySelectorAll('button[name="btn-visit"]').forEach((btn) => { btn.classList.add("invisible"); });

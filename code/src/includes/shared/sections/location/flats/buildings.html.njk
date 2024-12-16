@@ -166,7 +166,7 @@
                   {% if min < 99999 %}
                   <div class="price">
                     <p>{% literal texts, 'price-desde', L %}</p>
-                    <h5 class="head5">{{min|number(L)}} €/{% literal texts, 'price-mes', L %}</h5>
+                    <h4 class="head5">{{min|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
                   </div>
                   {% endif %}
 
@@ -242,7 +242,7 @@
               </div>
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                <h4>{{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
               </div>
             </div>
             </a>
@@ -259,7 +259,7 @@
               </div>
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                <h4>{{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
               </div>
             </div>
             {% endif %}
@@ -285,7 +285,7 @@
                 {% endfor %}
                 {% if min < 99999 %}
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{min|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                <h4>{{min|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
                 {% endif %}
 
               </div>

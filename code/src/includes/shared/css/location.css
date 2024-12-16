@@ -855,7 +855,8 @@ section.necesities.cotown .contain .title .head2 {
         line-height: 150%;
         text-align: right;
     }
-    .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container p {
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container p,
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container h4 {
         font-weight: 700;
         font-size: 18px;
         line-height: 150%;
