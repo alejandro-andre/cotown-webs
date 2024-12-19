@@ -6,7 +6,7 @@
 {% if show %}
 {% set show = false %}
 <div class="title pure-u-1 pure-u-lg-22-24">
-  <h2>{{typetitle}}</h2>
+  <h2 class="head2">{{typetitle}}</h2>
 </div>
 {% endif %}
 
@@ -20,7 +20,7 @@
         <li class="splide__slide">
         {% image
           constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
-          rp.Name, building.Code + '-' + p.Code + '-' + rp.id, "",
+          L, rp.Name, rp.Name, building.Code + '-' + p.Code + '-' + rp.id, "",
           [1280], ""
         %}
         </li>
@@ -43,7 +43,7 @@
           <li class="splide__slide">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
-              rp.Name, building.Code + '-' + p.Code + '-' + rp.id, "",
+              L, rp.Name, rp.Name, building.Code + '-' + p.Code + '-' + rp.id, "",
               [500], ""
             %}
           </li>
@@ -59,7 +59,7 @@
           <li class="splide__slide">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
-              rp.Name, building.Code + '-' + p.Code + '-' + rp.id, "",
+              L, rp.Name, rp.Name, building.Code + '-' + p.Code + '-' + rp.id, "",
               [500], ""
             %}
           </li>
@@ -77,7 +77,7 @@
 
     <!-- Title -->
     <div class="title-favorite pure-u-1">
-      <p>{{place_types[p.Code] | translate('Name', L)}}</p>
+      <h3>{{place_types[p.Code] | translate('Name', L)}}</h3>
       <!--
       <em class="icon-heart"></em>
       -->
@@ -94,7 +94,7 @@
       <!-- Share -->
       <div class="share">
         <div class="title">
-          <p>{% literal texts, 'rooms-quiero-compartir', L %}:</p>
+          <h4>{% literal texts, 'rooms-quiero-compartir', L %}:</h4>
         </div>
         {% for f in p.Flat_types %}
         <div class="sharing">

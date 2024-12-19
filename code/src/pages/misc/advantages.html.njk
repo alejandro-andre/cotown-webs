@@ -34,14 +34,14 @@ tags: page
         <img class="img" alt="advantage" src="{{root}}/assets/img/advantages-logo.svg">
       </div>         
       <div class="title-big advantages pure-u-22-24">
-        <div class="h1-big pure-u-1 {% if site == 'vanguard' %} pure-u-lg-5-12 pure-u-xl-7-12 {% else %} pure-u-lg-10-24 {% endif %}">
+        <div class="bigh pure-u-1 {% if site == 'vanguard' %} pure-u-lg-5-12 pure-u-xl-7-12 {% else %} pure-u-lg-10-24 {% endif %}">
           {% literal texts, 'advantages-titulo', L, true %}
         </div>
         <div class="text pure-u-1 {% if site == 'vanguard' %} pure-u-lg-7-12 pure-u-xl-5-12 {% else %} pure-u-lg-13-24 {% endif %}">
         {% if site == 'vanguard' %}
         {% else %}
           <div class="feeling cotown">
-          <h2 class="title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
+          <div class="head2 title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</div>
           </div>
         {% endif %}
           {% literal texts, 'advantages-texto', L, true %}
@@ -61,10 +61,10 @@ tags: page
           <ul class="splide__list">
             {% for b in banners | find('Page', 'eq', 'ventajas') %}
             {% for p in (b | translate('Text', L)).split('|') %}
-            <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+            <li class="splide__slide"><div class="head2">{{p}} |&nbsp;</div></li>
             {% endfor %}
             {% for p in (b | translate('Text', L)).split('|') %}
-            <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+            <li class="splide__slide"><div class="head2">{{p}} |&nbsp;</div></li>
             {% endfor %}
             {% endfor %}
           </ul>
@@ -80,13 +80,13 @@ tags: page
             <div class="img1">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Advantages/" + a.id +"/Image/contents?access_token=" + token,
-              a.Name, a.Name + '-' + a.id | slugify, "img1 ar-target", [600], ""
+              L, a.Name, a.Name, a.Name + '-' + a.id | slugify, "img1 ar-target", [600], ""
             %}
             </div>
             <div class="img2">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Advantages/" + a.id +"/Second_image/contents?access_token=" + token,
-              a.Name, a.Name + '-' + a.id | slugify + '-hover', "img2", [600], ""
+              L, a.Name, a.Name, a.Name + '-' + a.id | slugify + '-hover', "img2", [600], ""
             %}
             </div>
           </div>

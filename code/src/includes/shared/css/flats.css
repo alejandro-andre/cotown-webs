@@ -30,13 +30,16 @@
 	align-items: center;
 }
 
-.first .first-contain .first-slider .title-button h1 {
+.first .first-contain .first-slider .title-button .head1 {
 	text-align: center;
 	width: 100%;
 	font-size: 120px;
 	font-weight: 500;
 	line-height: 95%;
 	text-transform: uppercase;
+	color: var(--white);
+}
+.first .first-contain .first-slider .title-button .head6 {
 	color: var(--white);
 }
 
@@ -215,7 +218,7 @@
 }
 
 /* ---------- ROOMS ---------- \*/
-.flat.vanguard h2 {
+.flat.vanguard .head2 {
 	font-family: var(--title-font);
 	font-weight: var(--400);
   }
@@ -230,7 +233,7 @@
 	box-shadow: 0px 20px 30px rgba(22, 22, 22, 0.06);
 }
 
-.apartments .all-rooms .title h2 {
+.apartments .all-rooms .title .head2 {
 	margin-top: 2rem;
 }
 
@@ -268,7 +271,7 @@
 	align-items: center;
 }
 
-.right-data .title-favorite p {
+.right-data .title-favorite h3 {
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 150%;
@@ -520,12 +523,12 @@
 	padding: 1em 0 0;
 }
 
-.last h2 {
+.last .head2 {
 	text-transform: uppercase;
 	color: var(--footer-text);
 }
 
-.last h2 span {
+.last .head2 span {
 	color: var(--white);
 	font-family: inherit;
 }
@@ -568,7 +571,7 @@
 
 /* RESPONSIVE \*/
 @media only screen and (max-width: 1023.9px) {
-	.first .first-contain .first-slider .title-button h1 {
+	.first .first-contain .first-slider .title-button .head1 {
 		font-size: 96px;
 	}
 
@@ -593,7 +596,7 @@
 		padding: 0;
 	}
 
-	.apartments .all-rooms .title h2 {
+	.apartments .all-rooms .title .head2 {
 		margin-bottom: 1em;
 		font-weight: 400;
 		font-size: 40px;
@@ -676,11 +679,11 @@
 		display: none;
 	}
 
-	.last h2 {
+	.last .head2 {
 		text-align: left;
 	}
 
-	.last h2 span {
+	.last .head2 span {
 		width: 100%;
 	}
 
@@ -743,13 +746,18 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.first .first-contain.cotown .first-slider .title-button h1 {
+.first .first-contain.cotown .first-slider .title-button .head1 {
 font-size: var(--big-title);
 color: var(--black);
 text-transform: none;
 text-align: start;
 font-family: var(--text-font);
-
+}
+.first .first-contain.cotown .first-slider .title-button .head6 {
+color: var(--black);
+text-transform: none;
+text-align: start;
+font-family: var(--text-font);
 }
 .first .first-contain.cotown .first-slider .title-button button.btn-secondary {
 font-size: var(--text-title);
@@ -862,7 +870,7 @@ main.flat.cotown .apartments .all-rooms .card-room .right-data .text p {
 font-size: var(--text);
 font-weight: var(--regular);
 }
-main.flat.cotown .apartments .all-rooms .card-room .right-data .share .title p{
+main.flat.cotown .apartments .all-rooms .card-room .right-data .share .title h4 {
 font-size: var(--mini-title);
 font-weight: var(--semibold);
 margin: 0;
@@ -957,14 +965,14 @@ main.flat.cotown .last {
 background-color: var(--white);
 padding-top: 2em;
 }
-main.flat.cotown .last .last-zone .last-content .left h2 {
+main.flat.cotown .last .last-zone .last-content .left .head2 {
 display: flex;
 flex-flow: column;
 justify-content: flex-start;
 align-items: flex-start;
 text-transform: none;
 }
-main.flat.cotown .last .last-zone .last-content .left h2 span {
+main.flat.cotown .last .last-zone .last-content .left .head2 span {
 width: 100%;
 }
 main.flat.cotown .last .last-zone .last-content .left .text p {
@@ -1022,10 +1030,14 @@ main.flat.cotown .apartments .all-rooms .card-room .right-data .align-end {
 	align-items: center;
 	flex-flow: column;
 }
-.first .first-contain.cotown .first-slider .title-button h1 {
+.first .first-contain.cotown .first-slider .title-button .head1 {
 	text-align: center;
 	color: var(--white);
 	font-size: var(--resp-big-title);
+}
+.first .first-contain.cotown .first-slider .title-button .head6 {
+	text-align: center;
+	color: var(--white);
 }
 .first .first-contain.cotown .first-slider .title-button .sello-cotown {
 	display: none;
@@ -1078,11 +1090,11 @@ main.flat.cotown .apartments .all-rooms .card-room .right-data .buttons button.b
 main.flat.cotown .apartments .all-rooms .card-room .right-data .buttons button.btn-text .mini-border {
 	display: none;
 }
-main.flat.cotown .last .last-zone .last-content .left h2 {
+main.flat.cotown .last .last-zone .last-content .left .head2 {
 	font-size: var(--resp-text-title);
 	font-weight: var(--semibold);
 }
-main.flat.cotown .last .last-zone .last-content .left h2 span {
+main.flat.cotown .last .last-zone .last-content .left .head2 span {
 	color: var(--primary-old);
 }
 }

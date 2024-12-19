@@ -56,7 +56,7 @@
 	padding: 0 2%;
 }
 
-.calendar-container .dates-selector .selector-header .left h2 {
+.calendar-container .dates-selector .selector-header .left .head2 {
 	color: var(--secondary-black);
 	font-size: 40px;
 	font-style: normal;
@@ -396,7 +396,7 @@ button.date-button input:visited {
 		text-align: left;
 	}
 
-	.calendar-container .dates-selector .selector-header .left h2 {
+	.calendar-container .dates-selector .selector-header .left .head2 {
 		text-align: left;
 		font-size: 34px;
 		font-weight: 400;
@@ -614,7 +614,7 @@ button.date-button input:visited {
 	justify-content: center;
 	align-items: flex-start;
 }
-.calendar-container.cotown .dates-selector .selector-header .left h2 {
+.calendar-container.cotown .dates-selector .selector-header .left .head2 {
 	font-size: var(--subtitle);
 	font-weight: var(--regular);
 	line-height: 1.2;

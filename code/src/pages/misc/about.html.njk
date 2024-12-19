@@ -49,10 +49,10 @@ tags: page
           <ul class="splide__list">
             {% for b in banners | find('Page', 'eq', 'equipo') %}
             {% for p in (b | translate('Text', L)).split('|') %}
-            <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+            <li class="splide__slide"><h2 class="head2">{{p}} |&nbsp;</h2></li>
             {% endfor %}
             {% for p in (b | translate('Text', L)).split('|') %}
-            <li class="splide__slide"><h2>{{p}} |&nbsp;</h2></li>
+            <li class="splide__slide"><h2 class="head2">{{p}} |&nbsp;</h2></li>
             {% endfor %}
             {% endfor %}
           </ul>
@@ -69,7 +69,7 @@ tags: page
             <div class="first">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Team/" + t.id +"/Image/contents?access_token=" + token,
-              t.Name, t.Name + '-' + t.id | slugify, "img-grid", [600], ""
+              L, t.Name, t.Name, t.Name + '-' + t.id | slugify, "img-grid", [600], ""
             %}
             </div>
             <div class="data">

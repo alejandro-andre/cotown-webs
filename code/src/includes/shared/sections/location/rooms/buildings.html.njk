@@ -1,12 +1,12 @@
 <section class="pisos-slider rooms pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
 
-  <div class="h2-container pure-u-1">
+  <div class="container-2 pure-u-1">
 
-    <div class="h2-contain pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
+    <div class="contain-2 pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
       
       {% if site == 'vanguard' %}
       <div class="title-container vanguard pure-u-1 pure-u-lg-1-2">
-        <h2 class="vanguard pure-u-20-24">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}</h2>
+        <h1 class="head2 vanguard pure-u-20-24">{{location.Texts[0] | translate('Title', L)}}</h1>
         <!-- See map button (mobile) -->
         <a href="#mapanchor" class="map-button pure-u-4-24">
           <button class="button-map-mobile pure-u-1">
@@ -17,8 +17,7 @@
       </div>
       {% else %}
       <div class="title-container cotown pure-u-1 pure-u-lg-18-24">
-        <h2 class="loc-title cotown">{{location | translate('Name', L)}}.</h2>
-        <h2 class="desc-title cotown">{% literal texts, 'rooms-nuestros-pisos-compartidos', L %}.</h2>
+        <h1 class="head2 loc-title cotown">{{location.Texts[0] | translate('Title', L)}}</h1>
       </div>
       <!-- See map button (mobile) -->
       <a href="#mapanchor" class="map-button pure-u-4-24">
@@ -92,13 +91,13 @@
                     {% if loop.index == 1 %}
                     {% image
                         constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
-                        b.Name, b.Name + '-' + photo.id | slugify, "card-img-top",
+                        L, b.Name, b.Name, b.Name + '-' + photo.id | slugify, "card-img-top",
                         [800], ""
                     %}
                     {% endif %}
                     {% endfor %}
                     {% if site == 'vanguard' %}
-                      <h3>{{b.Name}}</h3>
+                      <h2 class="head3">{{b.Name}}</h2>
                     {% else %}
                     {% endif %}
                   </a>
@@ -111,7 +110,7 @@
                   <div class="flex-grow-1">
                     {% if site == 'vanguard' %}                     
                     {% else %}
-                    <h3>{{b.Name}}</h3>
+                    <h2 class="head3">{{b.Name}}</h2>
                     {% endif %}
                     <p>{{ b | translate ('Description', L) | safe }}</p>
                   </div>
@@ -147,18 +146,18 @@
                     <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I">
                       <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
-                      <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
+                      <h3 class="head4">{% literal texts, 'type-habitacion-individual', L %}</h3>
                       {% if site == 'vanguard' %}
-                       <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                     
+                      <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                     
                       {% else %}
                       {% endif %}                     
-                      <p>{% literal texts, 'price-desde', L %} {{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                      <h4>{% literal texts, 'price-desde', L %} {{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
                       {% if site == 'vanguard' %}
                       {% else %}
                       <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button> 
                       {% endif %}
                       </a>
-                      <div id="{{b.id}}_I" class="pure-u-1 text-red"><p></p></div>
+                      <div id="{{b.id}}_I" class="pure-u-1 text-red"><p>&nbsp;</p></div>
                     </div>
                     {% endif %}
 
@@ -167,18 +166,18 @@
                     <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D">
                         <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
-                        <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>
+                        <h3 class="head4">{% literal texts, 'type-habitacion-compartida', L %}</h3>
                         {% if site == 'vanguard' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>                 
                         {% else %}
                         {% endif %}                     
-                        <p>{% literal texts, 'price-desde', L %} {{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                        <h4>{% literal texts, 'price-desde', L %} {{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
                         {% if site == 'vanguard' %}
                         {% else %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                         {% endif %}                      
                       </a>
-                      <div id="{{b.id}}_D" class="pure-u-1 text-red"><p></p></div>
+                      <div id="{{b.id}}_D" class="pure-u-1 text-red"><p>&nbsp;</p></div>
                     </div>
                     {% endif %}
 
@@ -186,17 +185,17 @@
                     {% if minF < 99999 %}
                     <div class="room-type {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
                       <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
-                      <h4>{% literal texts, 'type-apartamento-privado', L %}</h4>
+                      <h3 class="head4">{% literal texts, 'type-apartamento-privado', L %}</h3>
                       <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html">
                         {% if site == 'vanguard' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                         {% endif %}
-                        <p>{% literal texts, 'price-desde', L %} {{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                        <h4>{% literal texts, 'price-desde', L %} {{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
                         {% if site == 'cotown' %}
                         <button class="btn-secondary green-button">{% literal texts, 'price-mas', L %}</button>
                         {% endif %}  
                       </a>
-                      <div id="{{b.id}}_F" class="pure-u-1 text-red"><p></p></div>
+                      <div id="{{b.id}}_F" class="pure-u-1 text-red"><p>&nbsp;</p></div>
                     </div>
                     {% endif %}
 
@@ -281,7 +280,7 @@
           {% if loop.index == 1 %}
           {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + photo.id +"/Image/contents?access_token=" + token,
-              b.Name, b.Name + '-' + photo.id | slugify, "card-img-top",
+              L, b.Name, b.Name, b.Name + '-' + photo.id | slugify, "card-img-top",
               [800], ""
           %}
           {% endif %}
@@ -292,7 +291,7 @@
         <div class="piso pure-u-1">
 
           <a href="{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html">
-            <h3>{{b.Name}}</h3>
+            <h3 class="head3">{{b.Name}}</h3>
           </a>
 
           {% set minI = 99999 %}
@@ -327,13 +326,13 @@
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_habitacion_individual.svg">
               </div>
-              <div class="h4-container pure-u-10-24 pure-u-lg-1-2">
-                <h4>{% literal texts, 'type-habitacion-individual', L %}</h4>
-                <div id="{{b.id}}_I" class="pure-u-1 text-red"><p></p></div>
+              <div class="container-4 pure-u-10-24 pure-u-lg-1-2">
+                <h3 class="head4">{% literal texts, 'type-habitacion-individual', L %}</h3>
+                <div id="{{b.id}}_I" class="pure-u-1 text-red"><p>&nbsp;</p></div>
               </div>
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                <h4>{{minI|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
                 <button 
                   class="btn-secondary green-button" 
                   onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#I'">
@@ -349,13 +348,13 @@
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_habitacion_compartida.svg">
               </div>
-              <div class="h4-container pure-u-10-24 pure-u-lg-1-2">
-                <h4>{% literal texts, 'type-habitacion-compartida', L %}</h4>                
-                <div id="{{b.id}}_D" class="pure-u-1 text-red"><p></p></div>
+              <div class="container-4 pure-u-10-24 pure-u-lg-1-2">
+                <h3 class="head4">{% literal texts, 'type-habitacion-compartida', L %}</h3>
+                <div id="{{b.id}}_D" class="pure-u-1 text-red"><p>&nbsp;</p></div>
               </div>
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                <h4>{{minD|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
                 <button 
                   class="btn-secondary green-button" 
                   onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages[name].url}}-{{b.Name | slugify}}.html#D'">
@@ -371,13 +370,13 @@
               <div class="img-container pure-u-3-24">
                 <img src="{{root}}/assets/img/icono__hab_apartamento_privado.svg">
               </div>
-              <div class="h4-container pure-u-10-24 pure-u-lg-1-2">
-                <h4>{% literal texts, 'type-apartamento-privado', L %}</h4> 
-                <div id="{{b.id}}_F" class="pure-u-1 text-red"><p></p></div>
+              <div class="container-4 pure-u-10-24 pure-u-lg-1-2">
+                <h3 class="head4">{% literal texts, 'type-apartamento-privado', L %}</h3> 
+                <div id="{{b.id}}_F" class="pure-u-1 text-red"><p>&nbsp;</p></div>
               </div>              
               <div class="p-container pure-u-9-24 pure-u-lg-7-24">
                 <span>{% literal texts, 'price-desde', L %}<span>
-                <p>{{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
+                <h4>{{minF|number(L)}} €/{% literal texts, 'price-mes', L %}</h4>
                 <button 
                   class="btn-secondary green-button" 
                   onclick="location.href='{{root}}{{langs[L].folder}}/{{langs[L].pages['flats'].url}}-{{b.Name | slugify}}.html'">
@@ -412,6 +411,14 @@
       </div>
       {% endif %}
       {% endfor %}
+    </div>
+  </div>
+
+  <div class="container-2 pure-u-1">
+    <div class="contain-2 pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
+      <div class="title-container {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %} pure-u-1 pure-u-lg-1-2">
+        <h2 class="head2 loc-title{% if site == 'vanguard' %} vanguard{% else %} cotown {% endif %}">{% literal texts, 'location-mapa-habitaciones', L %}</h2>
+      </div>
     </div>
   </div>
 

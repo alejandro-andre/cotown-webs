@@ -3,7 +3,8 @@
   <!-- Photo carousel -->
   <section id="image-carousel" class="splide first-slider pure-u-1" aria-label="Beautiful Images">
     <div class="title-button {% if building.Tour_private %} with-tour {% else %} no-tour {% endif %}">
-      <h1>{{building.Name}}</h1>
+      <h1 class="head6" style="text-align:left;">{{ building | translate('Description_private', L) | safe }}</h1>
+      <div class="head1">{{building.Name}}</div>
       {% if site == 'vanguard' %}
       {% else %}
       <div class="sello-cotown pure-u-1">
@@ -27,7 +28,7 @@
         <li class="splide__slide">
           {% image
             constants.SERVER + "/wopi/files/Marketing/Media_building/" + i.id +"/Image/contents?access_token=" + token,
-            building.Name, building.Name + '-' + i.id | slugify, "",
+            L, building.Name, building.Name, building.Name + '-' + i.id | slugify, "",
             [1600], ""
           %}
         </li>
@@ -46,7 +47,7 @@
           <li class="splide__slide">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media_building/" + i.id +"/Image/contents?access_token=" + token,
-              building.Name, building.Name + '-' + i.id | slugify, "",
+              L, building.Name, building.Name, building.Name + '-' + i.id | slugify, "",
               [1600], ""
             %}
           </li>
@@ -65,6 +66,7 @@
 
     <!-- Services -->
     <section class="flat-services pure-u-23-24 pure-u-lg-9-24">
+      <h2 class="head2">{% literal texts, 'home-servicios-titulo', L %}</h2>
       <div id="splideServices" class="splide splide-services" role="group">
         <div class="splide__track">
           <ul class="splide__list">

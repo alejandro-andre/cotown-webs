@@ -43,7 +43,7 @@ main .location .container-main .first-contain .video-loc .text-container {
     height: 100%;
     z-index: 1;
 }
-main .location .container-main .first-contain .video-loc .text-container h2 {
+main .location .container-main .first-contain .video-loc .text-container .head2 {
     color: var(--white);
     width: fit-content;
     width: 100%;
@@ -52,7 +52,7 @@ main .location .container-main .first-contain .video-loc .text-container h2 {
     padding: 0.2em 1em 0 0;
     text-align: end;
 }
-main .location .container-main .first-contain .video-loc .text-container h3 {
+main .location .container-main .first-contain .video-loc .text-container .head3 {
     color: var(--white);
     width: fit-content;
     font-size: 40px;
@@ -64,7 +64,7 @@ main .location .container-main .first-contain .video-loc .text-container h3 {
     top: 0;
     font-family: var(--text-font);
 }
-main .location .container-main .first-contain .video-loc .text-container h4 {
+main .location .container-main .first-contain .video-loc .text-container .head4 {
     color: var(--white);
     width: fit-content;
     font-size: 22px;
@@ -91,7 +91,7 @@ main .location .container-main .first-contain .video-loc .text-container .descri
     color: var(--white);
 }
 
-main.location.vanguard h2 {
+main.location.vanguard .head2 {
     font-family: var(--title-font);
     font-weight: var(--400);
 }
@@ -104,10 +104,9 @@ main.location.vanguard h2 {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4em;
     position: relative;
 }
-.pisos-slider .h2-container {
+.pisos-slider .container-2 {
     background-color: var(--grey-light);
     width: 100%;
     display: flex;
@@ -115,35 +114,35 @@ main.location.vanguard h2 {
     padding: 1em ; 
     margin: 5px 0 8px 0;
 }
-.pisos-slider .h2-container h2 {
+.pisos-slider .container-2 .head2 {
     font-size: 48px;
     text-align: left;
     width: 70%;
     text-transform: uppercase;
     padding: 0.2em 0 0 4em;
 }
-.pisos-slider .h2-container.vanguard h2 {
+.pisos-slider .container-2.vanguard .head2 {
     font-family: var(--title-font);
     font-weight: var(--400);
 }
-.pisos-slider .h2-container h2 span {
+.pisos-slider .container-2 .head2 span {
     font-weight: 200!important;
 }
 
 
 /* RESERVAS */
-.h2-container .calendar {
+.container-2 .calendar {
     margin: 0;
     width: 100%;
 }
-.h2-container .calendar .reservas {
+.container-2 .calendar .reservas {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
-.h2-container .calendar .reservas .button-calendar {
+.container-2 .calendar .reservas .button-calendar {
     color: black;
     display: flex;
     flex-flow: row wrap;
@@ -157,14 +156,14 @@ main.location.vanguard h2 {
     padding: 16px;
     cursor: pointer;
 }
-.h2-container .calendar .reservas .button-calendar p.label {
+.container-2 .calendar .reservas .button-calendar p.label {
     width: 100%;
     font-weight: 700;
     font-size: 18px;
     text-align: start;
     margin: 0;
 }
-.h2-container .calendar .reservas .button-calendar p.dates {	
+.container-2 .calendar .reservas .button-calendar p.dates {	
     height: 18px;
     text-align: start;
     font-size: 18px;
@@ -172,7 +171,7 @@ main.location.vanguard h2 {
     border: none;
     margin: 10px 0 0;
 }
-.h2-container .calendar .reservas .button-calendar .checkout {	
+.container-2 .calendar .reservas .button-calendar .checkout {	
     box-sizing: border-box;
     border-left: 1.5px solid var(--grey-dark);
     padding-left: 20px;
@@ -223,7 +222,7 @@ a {
     object-fit: cover;
     object-position: center center;
 }
-.carousel .carousel-main-list .splide__slide .card-contain .ratio.desktop h3 {
+.carousel .carousel-main-list .splide__slide .card-contain .ratio.desktop .head3 {
     font-size: 78px;
     text-align: left;
     position: absolute;
@@ -231,7 +230,7 @@ a {
     left: 20px;
     color: var(--primary-text);
 }
-.carousel .carousel-main-list .splide__slide .card-contain.vanguard .ratio.desktop  h3 {
+.carousel .carousel-main-list .splide__slide .card-contain.vanguard .ratio.desktop  .head3 {
     font-family: var(--title-font);
 }
 
@@ -284,7 +283,7 @@ a {
 .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type img {
     width: 60px;
 }
-.room-type h4, .room-type p {
+.room-type .head4, .room-type h4 {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -293,19 +292,19 @@ a {
     margin: 0;
     max-width: 90%;
 }
-.room-type h4 {
+.room-type .head4 {
     font-size: 22px;
     font-weight: 400;
 }
-.room-type.vanguard h4 {
+.room-type.vanguard .head4 {
     font-family: var(--title-font);
     font-size: 24px;
     font-weight: 400;
 }
-h4 {
+.head4 {
     text-transform: uppercase;
 }
-.room-type p {
+.room-type h4 {
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
@@ -437,7 +436,7 @@ main.location section.necesities .contain {
     justify-content: center;
     align-items: flex-start;
 }
-main.location section.necesities .contain .title h2 {
+main.location section.necesities .contain .title .head2 {
     width: 100%;
 }
 main.location section.necesities .contain .text p {
@@ -473,7 +472,7 @@ main.location section.necesities .grid .necesidad .p-text p {
 }
 
 
-main.location.vanguard section.necesities.vanguard .contain .title h2 {
+main.location.vanguard section.necesities.vanguard .contain .title .head2 {
     font-size: 60px;
     font-weight: 400;
 }
@@ -490,7 +489,7 @@ main.vanguard section.necesities.vanguard .grid .necesidad .p-text p {
     font-size: 18px;
 }
 
-section.necesities.cotown .contain .title h2 {
+section.necesities.cotown .contain .title .head2 {
     font-size: 46px;
 }
 
@@ -511,7 +510,7 @@ section.necesities.cotown .contain .title h2 {
     padding: 2rem 0;
 }
 
-.banner-residences .contain .title h2 {
+.banner-residences .contain .title .head2 {
     width: 40%;
     margin: auto;
     line-height: 100%;
@@ -578,10 +577,10 @@ section.necesities.cotown .contain .title h2 {
         margin: 0 0 0.5em;
         text-align: left;
     }
-    .contact-main h2 {
+    .contact-main .head2 {
         font-size: 64px;
     }
-    .contact-main .img-content .contact-content .text-location h3 {
+    .contact-main .img-content .contact-content .text-location .head3 {
         font-size: 40px;
     }
     .contact-main .img-content .contact-content .text-location p {
@@ -591,7 +590,7 @@ section.necesities.cotown .contain .title h2 {
     .contact-main .img-content .contact-content .text-location p span a {
         font-size: 30px;
     }
-    main.location .container-main .first-contain h1 {
+    main.location .container-main .first-contain .head1 {
         font-size: 170px;
     }
     main.location .container-main .first-contain .video-loc .description p {
@@ -606,10 +605,10 @@ section.necesities.cotown .contain .title h2 {
     .carousel .carousel-main-list .main-slide.splide__slide .card-contain .room-type img {
         width: 46px;
     }
-    .room-type h4 {
+    .room-type .head4 {
         font-size: 24px;
     }
-    .room-type p {
+    .room-type h4 {
         font-size: 16px;
     }
     button.green-button.btn-secondary {
@@ -619,7 +618,7 @@ section.necesities.cotown .contain .title h2 {
 
 @media only screen and (min-width: 1024px) and (max-width: 1400px){
 
-    main.location .container-main .first-contain .video-loc .text-container h2 {
+    main.location .container-main .first-contain .video-loc .text-container .head2 {
         font-size: 76px;
     }
     main.location .container-main .first-contain .video-loc .text-container .description {
@@ -632,22 +631,22 @@ section.necesities.cotown .contain .title h2 {
     main.location.cotown section.necesities.cotown .contain {
         width: 100%;
     }
-    main.location.cotown section.necesities.cotown .contain .title h2 {
+    main.location.cotown section.necesities.cotown .contain .title .head2 {
         font-size: 46px;
     }
     main.location.cotown section.necesities.cotown .contain .text p {
         font-size: 18px;
     }
-    .carousel .carousel-main-list .splide__slide h3 {
+    .carousel .carousel-main-list .splide__slide .head3 {
         font-size: 64px;
     }
-    main.location section.necesities.cotown .contain .title h2 {
+    main.location section.necesities.cotown .contain .title .head2 {
         font-size: 46px;
     }
     section.necesities.vanguard .contain {
         width: 100%;
     }
-    main.location.vanguard section.necesities.vanguard .contain .title h2, main.location.cotown section.necesities.cotown .contain .title h2 {
+    main.location.vanguard section.necesities.vanguard .contain .title .head2, main.location.cotown section.necesities.cotown .contain .title .head2 {
         font-size: 46px;
     }
 }
@@ -656,7 +655,7 @@ section.necesities.cotown .contain .title h2 {
     .pisos.mobile {
         display: none;
     }
-    .pisos-slider .h2-container .map-button {
+    .pisos-slider .container-2 .map-button {
         display: none;
     }    
 }
@@ -674,7 +673,7 @@ section.necesities.cotown .contain .title h2 {
         justify-content: flex-end;
         align-items: flex-end;
     }    
-    main.location .container-main .first-contain .video-loc .text-container h2 {
+    main.location .container-main .first-contain .video-loc .text-container .head2 {
         font-size: 58px;
         padding: 8px;
         position: relative;
@@ -686,7 +685,7 @@ section.necesities.cotown .contain .title h2 {
         width: 100%;
         padding: 0;
     }
-    main.location .container-main .first-contain .video-loc .text-container h3 {
+    main.location .container-main .first-contain .video-loc .text-container .head3 {
         font-size: 28px;
     }
 
@@ -732,7 +731,7 @@ section.necesities.cotown .contain .title h2 {
         align-items: center;
         padding: 0 0 4em;
     }
-    .pisos-slider .h2-container {
+    .pisos-slider .container-2 {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -741,28 +740,28 @@ section.necesities.cotown .contain .title h2 {
         margin: 16px 0 0;
         border: none;       
     }
-    .pisos-slider .h2-container h2 {        
+    .pisos-slider .container-2 .head2 {        
         padding: 0;
     }
-    .pisos-slider .h2-container .button-map-mobile {
+    .pisos-slider .container-2 .button-map-mobile {
         display: flex;
         background-color: transparent;
     }
-    .pisos-slider .h2-container .button-map-mobile img {
+    .pisos-slider .container-2 .button-map-mobile img {
         width: 40px;
         text-align: center;
     }
-    .pisos-slider .h2-container .button-map-mobile p {
+    .pisos-slider .container-2 .button-map-mobile p {
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         margin:0;
     }
-    .pisos-slider .h2-container .calendar .reservas {
+    .pisos-slider .container-2 .calendar .reservas {
         width: 100%;
         margin-top: 16px;
     }
-    .pisos-slider .h2-container .calendar {
+    .pisos-slider .container-2 .calendar {
         width: 100%;
     }    
 
@@ -786,13 +785,13 @@ section.necesities.cotown .contain .title h2 {
         width: 100%;
         height: 24em;
     }
-    .pisos.mobile .piso-contain .piso-main .piso h3 {
+    .pisos.mobile .piso-contain .piso-main .piso .head3 {
         font-weight: 400;
         font-size: 40px;
         line-height: 100%;
         padding: 0.5em 0.4em 0.2em;
     }
-    .pisos.vanguard.mobile .piso-contain .piso-main .piso h3 {
+    .pisos.vanguard.mobile .piso-contain .piso-main .piso .head3 {
         font-family: var(--title-font);
         text-transform: uppercase;
     }
@@ -827,14 +826,14 @@ section.necesities.cotown .contain .title h2 {
     .pisos.mobile .piso-contain .piso-main .piso .options .type .img-container img {
         width: 25px;
     }
-    .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container {
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .container-4 {
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
         margin: auto 0;
     }
-    .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .container-4 .head4 {
         font-size: 20px;
         font-family: var(--text-font);
         font-weight: 400;
@@ -856,7 +855,8 @@ section.necesities.cotown .contain .title h2 {
         line-height: 150%;
         text-align: right;
     }
-    .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container p {
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container p,
+    .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container h4 {
         font-weight: 700;
         font-size: 18px;
         line-height: 150%;
@@ -907,7 +907,7 @@ section.necesities.cotown .contain .title h2 {
         margin: 2em 0;
     }
 
-    main.location.vanguard section.necesities.vanguard .contain .title h2, main.location.cotown section.necesities.cotown .contain .title h2 {
+    main.location.vanguard section.necesities.vanguard .contain .title .head2, main.location.cotown section.necesities.cotown .contain .title .head2 {
         font-size: 32px;
     }
     main.location section.necesities .contain .text p {
@@ -988,12 +988,12 @@ section.necesities.cotown .contain .title h2 {
         padding: 0;
         font-size: 14px;
     }
-    .banner-residences .contain .title h2,
+    .banner-residences .contain .title .head2,
 	.banner-residences .contain .text p {
 		width: 80%;
 	}
 
-	.banner-residences .contain .title h2 {
+	.banner-residences .contain .title .head2 {
 		font-size: 32px;
 		font-weight: 400;
 		line-height: 110%;
@@ -1007,7 +1007,7 @@ section.necesities.cotown .contain .title h2 {
 }
 
 @media only screen and (max-width: 768px) {
-    .pisos-slider .h2-container .calendar .reservas .button-calendar {
+    .pisos-slider .container-2 .calendar .reservas .button-calendar {
         width: 100%;
     }
     main.location section.necesities .grid {
@@ -1072,37 +1072,37 @@ section.necesities.cotown .contain .title h2 {
 }
 
 /* COTOWN NEW */
-.pisos-slider.cotown .h2-container {
+.pisos-slider.cotown .container-2 {
     background-color: var(--white);
 }
-.pisos-slider.cotown .h2-container .h2-contain.cotown {
+.pisos-slider.cotown .container-2 .contain-2.cotown {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
-.pisos-slider.cotown .h2-container .title-container.cotown {
+.pisos-slider.cotown .container-2 .title-container.cotown {
     display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	align-items: center;
 }
-.pisos-slider.cotown .h2-container .title-container.cotown h2 {
+.pisos-slider.cotown .container-2 .title-container.cotown .head2 {
     width: fit-content;
     font-size: var(--big-subtitle);
     text-align: left;
     text-transform: none;
     padding: 0 0 0 1em;
 }
-.pisos-slider.cotown .h2-container .title-container.cotown h2.loc-title {
+.pisos-slider.cotown .container-2 .title-container.cotown .head2.loc-title {
     font-weight: var(--regular);
 }
-.pisos-slider.cotown .h2-container .title-container.cotown h2.desc-title {
+.pisos-slider.cotown .container-2 .title-container.cotown .head2.desc-title {
     font-weight: var(--light);
     padding: 0 0 0 0.2em;
 }
-.pisos-slider.cotown .h2-container .dates.cotown .calendar .reservas .button-calendar {    
+.pisos-slider.cotown .container-2 .dates.cotown .calendar .reservas .button-calendar {    
     width: 100%;
 }
 
@@ -1123,7 +1123,7 @@ section.necesities.cotown .contain .title h2 {
 .pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 {
     text-align: start;
 }
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 h3 {
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .flex-grow-1 .head3 {
     color: var(--black);
     position: static;
     font-size: var(--big-subtitle);
@@ -1135,12 +1135,12 @@ section.necesities.cotown .contain .title h2 {
     margin: 0.5em 0 0;
     line-height: 1;
 }
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type h4 {
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type .head4 {
     text-transform: none;
     font-size: var(--text-title);
     font-weight: var(--regular);
 }
-.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types .room-type p {
+.pisos-slider.cotown .carousel .carousel-main-list .card .card-body .types  p {
     text-transform: none;
     font-size: var(--mini-title);
     font-weight: var(--regular);
@@ -1156,7 +1156,7 @@ section.necesities.cotown .contain .title h2 {
 }
 
 /* COTOWN NEW NECESITIES */
-main.location section.necesities.cotown .contain .title h2 {
+main.location section.necesities.cotown .contain .title .head2 {
     font-size: var(--subtitle);
 }
 main.location section.necesities.cotown .grid {
@@ -1177,16 +1177,16 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
 
 /* COTOWN RESPONSIVE \*/
 @media only screen and (min-width: 1024px) and (max-width: 1280px ) {
-    .pisos-slider.cotown .h2-container .title-container.cotown {
+    .pisos-slider.cotown .container-2 .title-container.cotown {
         width: 66%!important;
     }
-    .pisos-slider.cotown .h2-container .dates.cotown {
+    .pisos-slider.cotown .container-2 .dates.cotown {
         width: 34%!important;
     } 
-    .pisos-slider.cotown .h2-container .title-container.cotown h2 {
+    .pisos-slider.cotown .container-2 .title-container.cotown .head2 {
         font-size: var(--resp-big-subtitle);
     }
-    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container {
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .container-4 {
         align-items: center;
     }
 }
@@ -1194,24 +1194,24 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
     main.location.cotown section.location {
         background-color: var(--white);
     }
-    .pisos-slider.cotown .h2-container {
+    .pisos-slider.cotown .container-2 {
         align-items: flex-start;
         padding: 0;
         background-color: transparent;
     }
-    .pisos-slider.cotown .h2-container .h2-contain.cotown {
+    .pisos-slider.cotown .container-2 .contain-2.cotown {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
         gap: 0.2em;
     }
-    .pisos-slider.cotown .h2-container .title-container.cotown {
+    .pisos-slider.cotown .container-2 .title-container.cotown {
         align-items: flex-start;
         width: calc(100% - 128px) !important;
         padding: 0 0 0 1em;
     }
-    .pisos-slider.cotown .h2-container .title-container.cotown h2 {
+    .pisos-slider.cotown .container-2 .title-container.cotown .head2 {
         font-size: var(--resp-big-subtitle);
         text-align: left;
         text-transform: none;
@@ -1219,35 +1219,35 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
         margin: 0;
         width: 100%;
     }
-    .pisos-slider.cotown .h2-container .title-container.cotown h2.loc-title.cotown {
+    .pisos-slider.cotown .container-2 .title-container.cotown .head2.loc-title.cotown {
         order: 2;
         font-weight: var(--regular);
     }
-    .pisos-slider.cotown .h2-container .title-container.cotown h2.desc-title.cotown {
+    .pisos-slider.cotown .container-2 .title-container.cotown .head2.desc-title.cotown {
         order: 1;
         font-weight: var(--bold);
         padding: 0;
     }
-    .pisos-slider.cotown .h2-container .h2-contain.cotown .map-button {
+    .pisos-slider.cotown .container-2 .contain-2.cotown .map-button {
         width: 94px;
         padding: 0 1em 0 0;
     }
-    .pisos-slider.cotown .h2-container .h2-contain.cotown .map-button .button-map-mobile {
+    .pisos-slider.cotown .container-2 .contain-2.cotown .map-button .button-map-mobile {
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
     }
-    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso h3 {
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .head3 {
         font-size: var(--resp-big-subtitle);
         font-weight: var(--bold);
     }
 
-    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container {
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .container-4 {
         margin: 0;
         padding: 0.1rem 0 0;
     }
-    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .container-4 .head4 {
         font-size: var(--resp-text-title);
         font-weight: var(--400);
         font-family: var(--text-font);
@@ -1275,7 +1275,7 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
         margin: 0;
         padding: 2em 1em;
     }    
-    main.location.cotown section.necesities.cotown .contain .title h2 {
+    main.location.cotown section.necesities.cotown .contain .title .head2 {
         font-size: var(--resp-middle-subtitle);
         font-weight: var(--bold);
     }
@@ -1308,7 +1308,7 @@ main.location section.necesities.cotown .grid .necesidad .p-text p {
     }
 }
 @media only screen and (max-width: 599.9px) {
-    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .h4-container h4 {
+    main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .container-4 .head4 {
         font-size: 16px;
     }
     main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .p-container button.green-button.btn-secondary, main.location.cotown section.location .container-main .pisos-slider .pisos.mobile .piso-contain .piso-main .piso .options .type .button-container button.green-button.btn-secondary {

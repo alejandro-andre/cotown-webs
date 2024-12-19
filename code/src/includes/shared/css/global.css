@@ -4,16 +4,16 @@
 	font-family: var(--text-font);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.head1,
+.head2,
+.head3,
+.head4,
+.head5,
+.head6 {
 	margin-top: 0;
 	margin-bottom: 1rem;
 }
-h1 {
+.head1 {
     font-family: var(--title-font);
 }
 p,
@@ -59,32 +59,32 @@ select option:disabled {
 /* RESPONSIVE FONTS */
 
 @media only screen and (min-width: 1024px) {
-	h1 {
+	.head1 {
 		font-size: var(--big-title);
 		font-weight: var(--regular);
 	}
 
-	h2 {
+	.head2 {
 		font-size: var(--title);
 		font-weight: var(--semibold);
 	}
 
-	h3 {
+	.head3 {
 		font-size: var(--big-subtitle);
 		line-height: 1.3;
 	}
 
-	h4 {
+	.head4 {
 		font-size: var(--subtitle);
 		line-height: 1.3;
 	}
 
-	h5 {
+	.head5 {
 		font-size: var(--text-title);
 		line-height: 1.3;
 	}
 
-	h6 {
+	.head6 {
 		font-size: var(--mini-title);
 		line-height: 1.2;
 	}
@@ -103,32 +103,32 @@ select option:disabled {
 }
 
 /* @media only screen and (min-width: 1024px) and (max-width: 1599px) {
-	h1 {
+	.head1 {
 		font-size: 78px;
 		font-weight: 400;
 	}
 
-	h2 {
+	.head2 {
 		font-size: 60px;
 		font-weight: 400;
 	}
 
-	h3 {
+	.head3 {
 		font-size: 36px;
 		line-height: 1.3;
 	}
 
-	h4 {
+	.head4 {
 		font-size: 20px;
 		line-height: 1.3;
 	}
 
-	h5 {
+	.head5 {
 		font-size: 1.2rem;
 		line-height: 1.3;
 	}
 
-	h6 {
+	.head6 {
 		font-size: 1rem;
 		line-height: 1.2;
 	}
@@ -146,32 +146,32 @@ select option:disabled {
 } */
 
 @media only screen and (max-width: 1023.99px) {
-	h1 {
+	.head1 {
 		font-size: var(--resp-big-title);
 		font-weight: var(--400);
 	}
 
-	h2 {
+	.head2 {
 		font-size: var(--resp-big-title);
 		font-weight: var(--400);
 	}
 
-	h3 {
+	.head3 {
 		font-size: var(--resp-title);
 		line-height: 1.3;
 	}
 
-	h4 {
+	.head4 {
 		font-size: var(--resp-big-subtitle);
 		line-height: 1.3;
 	}
 
-	h5 {
+	.head5 {
 		font-size: var(--resp-subtitle);
 		line-height: 1.3;
 	}
 
-	h6 {
+	.head6 {
 		font-size: var(--resp-mini-title);
 		line-height: 1.2;
 	}
@@ -661,7 +661,7 @@ li .select-container .options .option.selected {
 	text-decoration: none;
 }
 
-/* .container-header.second h1 {
+/* .container-header.second .head1 {
 	color: var(--second-header-text);
 	font-size: 42px;
 	vertical-align: middle;
@@ -861,10 +861,10 @@ main .container-main section.form {
 	background-color: var(--primary-background);
 }
 
-main .container-main section.form h2.title {
+main .container-main section.form .head2.title {
 	text-align: center;
 }
-main.vanguard .container-main section.form.vanguard h2 {
+main.vanguard .container-main section.form.vanguard .head2 {
 	font-family: var(--title-font);
 	font-weight: var(--400);
 	font-size: 60px;
@@ -1127,7 +1127,7 @@ main .container-main section.banner {
 	margin-bottom: 6em;
 }
 
-main .container-main section.banner h2 {
+main .container-main section.banner .head2 {
 	color: var(--primary-text);
 	font-weight: 400;
 	margin-bottom: 0;
@@ -1316,7 +1316,7 @@ button.date-button input.inputs {
     position: relative;
 } */
 
-.popup h2 {
+.popup .head2 {
 	margin-top: 0;
 	color: #333;
 	font-family: var(--text-font);
@@ -1386,7 +1386,7 @@ button.date-button input.inputs {
 	.container-header.first .turquoise-line.vanguard .left-content .spot span {
 		font-size: 32px;
 	}
-	main.vanguard .container-main section.form.vanguard h2 {
+	main.vanguard .container-main section.form.vanguard .head2 {
 		font-size: 78px;
 		font-weight: 400;
 	}
@@ -1547,7 +1547,7 @@ button.date-button input.inputs {
 		text-align: center;
 	}
 
-	.cotownity .container-cotownity .contain-bg .title-bg h2 {
+	.cotownity .container-cotownity .contain-bg .title-bg .head2 {
 		font-size: 64px;
 		width: 70%;
 	}
@@ -1621,12 +1621,7 @@ button.date-button input.inputs {
 		margin-top: 0px;
 	}
 
-	h1.h1-logo {
-		font-size: 38px;
-	}
-
-
-	h2 {
+	.head2 {
 		font-size: 40px;
 		margin: auto;
 		text-align: center;
@@ -2172,8 +2167,8 @@ button.date-button input.inputs {
 		font-size: 12px !important;
 	}
 
-	main .container-main .first-contain .title-big .h1-big,
-	main .container-main .first-contain .title-big .h2-border {
+	main .container-main .first-contain .title-big .bigh,
+	main .container-main .first-contain .title-big .borderh {
 		text-align: start;
 	}
 
@@ -2452,13 +2447,13 @@ li .select-container.cotown {
 	background-color: var(--new-bg);
 	box-shadow: 0px 2.93014px 5.86028px rgba(0, 0, 0, 0.15);
 }
-.container-header .black-line.cotown .left-nav .logo .mobile h1 {
+.container-header .black-line.cotown .left-nav .logo .mobile .head1 {
 	height: 57px;
 	margin: 0 auto;
 	padding: 0.2em 0;
 	display: inline-flex;
 }
-.container-header .black-line.cotown .left-nav .logo .mobile h1 .img-logo {
+.container-header .black-line.cotown .left-nav .logo .mobile .head1 .img-logo {
 	height: 62px;
 	margin: 0;
 	padding: 0;
@@ -2611,7 +2606,7 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 	ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		padding-left: 0;
 	}
-	main .container-main section.form.cotown h2 {
+	main .container-main section.form.cotown .head2 {
 		text-align: start;
 		font-size: var(--resp-title);
 		font-weight: var(--semibold);
@@ -2635,7 +2630,7 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		border: 1px solid var(--black);
 		box-shadow: none;
 	}
-	main.vanguard .container-main section.form.vanguard h2 {
+	main.vanguard .container-main section.form.vanguard .head2 {
 		font-size: 40px;
 	}
 }

@@ -7,7 +7,7 @@ cotown
 {% endif %}">
 
   <div class="text-container">
-    <h2 class="title">{% literal texts, 'home-servicios-titulo', L %}</h2>
+    <h2 class="head2 title">{% literal texts, 'home-servicios-titulo', L %}</h2>
     <p class="subtitle">{% literal texts, 'home-servicios-texto', L %}</p>
   </div>
 
@@ -20,7 +20,7 @@ cotown
            constants.SERVER + "/wopi/files/Marketing/Media_service_type/" + s.Icons[0].id +"/Icon/contents?access_token=" + token,
            s.Name
         %}
-        <p class="bold">{{s | translate('Name', L)}}</p>
+        <h3 class="bold">{{s | translate('Name', L)}}</h3>
         <p class="text">{{s | translate('Description', L)}}</p>
       </div>
       {% endfor %}

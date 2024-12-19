@@ -1,6 +1,6 @@
 <section class="pisos cotown">
     <div class="text-container">
-      <h2 class="title">{% literal texts, 'home-pisazos-elige', L %}</h2>
+      <h2 class="head2 title">{% literal texts, 'home-pisazos-elige', L %}</h2>
     </div>
 
   <div class="pure-g container">  
@@ -10,13 +10,16 @@
           <div class="img cotown">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media/" + images['apartamento-privado'].id +"/Image/contents?access_token=" + token,
-              "apartamento-privado", "apartamento-privado", "",
+              L, "apartamento-privado", "apartamento-privado", "apartamento-privado", "",
               [1280], ""
             %}
           </div>
           <div class="img-title cotown">
-            <h6>{% literal texts, 'home-pisazos-apartamento', L %}</h6>
-            <h6>{% literal texts, 'home-pisazos-privado', L %}</h6>
+            <h3 class="head6">
+            {% literal texts, 'home-pisazos-apartamento', L %}
+            <br/>
+            {% literal texts, 'home-pisazos-privado', L %}
+            </h3>
           </div>          
        
       </a>
@@ -27,14 +30,17 @@
           <div class="img last cotown">
             {% image
               constants.SERVER + "/wopi/files/Marketing/Media/" + images['piso-compartido'].id +"/Image/contents?access_token=" + token,
-              "piso-compartido", "piso-compartido", "",
+              L, "piso-compartido", "piso-compartido", "piso-compartido", "",
               [1280], ""
             %}
           </div>
           <div class="img-title cotown second">
-            <h6>{% literal texts, 'home-pisazos-piso', L %}</h6>
-            <h6>{% literal texts, 'home-pisazos-compartido', L %}</h6>
-          </div>          
+            <h3 class="head6">
+            {% literal texts, 'home-pisazos-piso', L %}
+            <br/>
+            {% literal texts, 'home-pisazos-compartido', L %}
+            </h3>
+          </div>
       </a>
     </div>
   </div>

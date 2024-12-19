@@ -3,7 +3,7 @@
 
   <div class="pure-u-1">
     {% if site == 'vanguard' %}
-      <h2>{% literal texts, 'rooms-bienvenido', L %} <span>{{building.District.Name}}</span></h2>
+      <h2 class="head2">{% literal texts, 'rooms-bienvenido', L %} <span>{{building.District.Name}}</span></h2>
     {% else %} 
     {% endif %}
   </div>
@@ -11,7 +11,7 @@
   <div class="left pure-u-1 pure-u-lg-7-12">
     {% if site == 'vanguard' %}      
     {% else %}
-    <h2>{% literal texts, 'rooms-bienvenido', L %} <span>{{building.District.Name}}</span></h2>
+    <h2 class="head2">{% literal texts, 'rooms-bienvenido', L %} <span>{{building.District.Name}}</span></h2>
     {% endif %}
     <div class="text pure-u-23-24">
       {{ building.District | translate('Description', L) | markdown | safe }}
@@ -28,7 +28,7 @@
             <li class="splide__slide">
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Media_district/" + f.id +"/Image/contents?access_token=" + token,
-                f.Name, f.Name + '-' + f.id | slugify, "",
+                L, f.Name, f.Name, f.Name + '-' + f.id | slugify, "",
                 [800], ""
               %}
             </li>
@@ -44,7 +44,7 @@
             <li class="splide__slide">
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Media_district/" + f.id +"/Image/contents?access_token=" + token,
-                f.Name, f.Name + '-' + f.id | slugify, "",
+                L, f.Name, f.Name, f.Name + '-' + f.id | slugify, "",
                 [500], ""
               %}
             </li>

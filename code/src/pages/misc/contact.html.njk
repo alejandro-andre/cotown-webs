@@ -39,28 +39,27 @@ tags: page
     <section class="first-contact">    
       {% if site == 'vanguard' %}
         <div class="title-big">       
-          <div class="h1-big">
-            <h1>{% literal texts, 'contact-titulo', L %}</h1>
+          <div class="bigh">
+            <div class="head1">{% literal texts, 'contact-titulo', L %}</div>
           </div>
         </div>
       {% else %}
         <div class="img-contact pure-u-1">
           {% image
               constants.SERVER + "/wopi/files/Marketing/Media/" + images['faqs'].id +"/Image/contents?access_token=" + token,
-              "FAQs", "FAQs", "img-contact", [auto], ""
+              L, "FAQs", "FAQs", "FAQs", "img-contact", [auto], ""
           %}
         </div>
         <div class="title-big desktop pure-u-9-24 pure-u-lg-1-6">       
           <div class="feeling cotown">
-            <h2 class="title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</h2>
+            <div class="head2 title-feel">{% literal texts, 'home-cotownity-hashtag', L %}</div>
           </div>          
-          <div class="h1-big">
-            <h1>
+          <div class="bigh">
+            <h1 class="head1">
               {% literal texts, 'contact-titulo', L %}
               {% literal texts, 'contact-oficinas', L %}
             </h1> 
           </div>
-          <h2>Barcelona</h2>
         </div>       
       {% endif %}
 
@@ -68,8 +67,8 @@ tags: page
       {% if site == 'vanguard' %}
       {% else %}    
       <div class="title-big mobile pure-u-1">       
-        <div class="h1-big">
-          <h1>{% literal texts, 'contact-titulo', L %}</h1>
+        <div class="bigh">
+          <h1 class="head1">{% literal texts, 'contact-titulo', L %}</h1>
         </div>
       </div>
       {% endif %}
@@ -78,7 +77,7 @@ tags: page
 
     <section class="contact-main">
       {% if site == 'vanguard' %}
-      <h2>{% literal texts, 'contact-oficinas', L %}</h2>
+      <h2 class="head2">{% literal texts, 'contact-oficinas', L %}</h2>
       {% else %}
       {% endif %} 
       {% for o in offices %}
@@ -95,19 +94,19 @@ tags: page
 
         <div class="contact-content pure-u-1 pure-u-lg-5-6">
           <div class="text-location pure-u-1 pure-u-lg-14-24">
-            <h3>{{o.Location}}</h3>
-            <p>{{o.Address}}</p>
+            <h2 class="head3">{{o.Location}}</h2>
+            <h3>{{o.Address}}</h3>
             {% if o.Email %}
-            <p>
+            <h3>
               <em class="icon-envelope"></em>
               <span><a href="mailto:{{o.Email}}" target="_blank">{{o.Email}}</a></span>
-            </p>
+            </h3>
             {% endif %}
             {% if o.Phone != '' %}
-            <p>
+            <h3>
               <em class="icon-call"></em>
               <span><a href="tel:{{o.Phone}}" target="_blank">{{o.Phone}}</a></span>
-            </p>
+            </h3>
             {% endif %}
           </div>
           <div class="map pure-u-1 pure-u-lg-10-24">
@@ -120,7 +119,7 @@ tags: page
     </section>
 
     <section class="form {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
-      <h2 class="title">
+      <h2 class="head2 title">
         {% literal texts, 'contact-contactanos', L %}
       </h2>      
       <form id="form" onsubmit="post(event)">

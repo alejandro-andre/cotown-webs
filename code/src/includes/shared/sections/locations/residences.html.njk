@@ -5,15 +5,15 @@
   <div class="img-residences pure-u-1">
     {% image
       constants.SERVER + "/wopi/files/Marketing/Media/" + images['residencias'].id +"/Image/contents?access_token=" + token,
-      "residencias", "residencias", "img-faqs", 
+      L, "residencias", "residencias", "residencias", "img-faqs", 
       [auto], ""
     %}
   </div>
 
   <!-- Title -->
   <div class="title-big">
-    <div class="h1-big">
-      <h1>{% literal texts, 'residencias-titulo', L %}</h1>
+    <div class="bigh">
+      <h2 class="head1">{% literal texts, 'residencias-titulo', L %}</h2>
     </div>
   </div>
 
@@ -28,7 +28,7 @@
   <div class="pure-u-1 pure-u-3-24 location">
     <div class="title">
       <img class="img mobile" src="{{root}}/assets/img/corner.svg"></img>
-      <h2>{{l | translate('Name', L)}}</h2>
+      <h3 class="head2">{{l | translate('Name', L)}}</h3>
       <img class="img desktop" src="{{root}}/assets/img/corner.svg"></img>
     </div>
   </div>
@@ -43,7 +43,7 @@
       <div class="img">
         {% image
            constants.SERVER + "/wopi/files/Marketing/Media_building/" + b.Photos[0].id +"/Image/contents?access_token=" + token,
-           b.Name, b.Name + '-' + b.Photos[0].id | slugify, "",
+           L, b.Name, b.Name, b.Name + '-' + b.Photos[0].id | slugify, "",
            [800], ""
         %}
       </div>
@@ -52,7 +52,7 @@
       <!-- Title -->
       <div class="card-title">
         <a href="{{root}}{{langs[L].folder}}/{{b.Name | slugify}}.html">
-          <h3>{{b.Name}}</h3>
+          <h4 class="head3">{{b.Name}}</h4>
         </a>
       </div>
 

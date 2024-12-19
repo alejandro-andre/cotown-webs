@@ -3,8 +3,7 @@
 
   <div class="text-container">
     
-    <h2 {% if site == 'vanguard' %}  class="title"
-    {% else %} class="title cotown"  {% endif %}>
+    <h2 {% if site == 'vanguard' %}class="head2 title"{% else %}class="head2 title cotown"{% endif %}>
       {% literal texts, 'home-localizaciones-titulo', L %}
     </h2>
   </div>
@@ -26,12 +25,12 @@
               {% if loop.index == 1 %}
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
-                l.Name, l.Name + '-' + i.id | slugify, "",
+                L, l.Name, l.Name, l.Name + '-' + i.id | slugify, "",
                 [800], ""
               %}
               {% endif %}
               {% endfor %}
-              <h3 class="img-title">{{l.Name}}</h3>
+              <h3 class="head3 img-title">{{l.Name}}</h3>
             </div>
             </a>
           </li>
@@ -57,13 +56,13 @@
               {% if loop.index == 1 %}
               {% image
                 constants.SERVER + "/wopi/files/Marketing/Media_location/" + i.id +"/Image/contents?access_token=" + token,
-                l.Name, l.Name + '-' + i.id | slugify, "",
+                L, l.Name, l.Name, l.Name + '-' + i.id | slugify, "",
                 [800], ""
               %}
               {% endif %}
               {% endfor %}
               <div class="text-slide">
-                <h5 class="img-title">{{l.Name}}</h5>
+                <h5 class="head5 img-title">{{l.Name}}</h5>
                 <div class="line"></div>
               </div>
             </div>

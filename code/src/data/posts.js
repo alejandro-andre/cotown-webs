@@ -23,6 +23,8 @@ module.exports = async (config) => {
       Subtitle_en
       Content
       Content_en
+      Rich_content
+      Rich_content_en
       Tags: Post_tagListViaPost_id {
         Tag: TagViaTag_id {
           id

@@ -1,7 +1,7 @@
 <section class="partners
  {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
   <div class="text-container">
-    <h2 class="title">
+    <h2 class="head2 title">
       {% literal texts, 'home-partners-titulo', L %}
     </h2>
   </div>
@@ -13,7 +13,7 @@
         <li class="img splide__slide">
           {% image
             constants.SERVER + "/wopi/files/Marketing/Partner/" + p.id +"/Image/contents?access_token=" + token,
-            p.Name, p.Name + '-' + p.id | slugify, "",
+            L, p.Name, p.Name, p.Name + '-' + p.id | slugify, "",
             [300], ""
           %}
         </li>
