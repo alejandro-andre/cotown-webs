@@ -520,6 +520,7 @@ main.post-page.vanguard .container-main .post-content img {
 
 main.post-page.cotown .container-main .post-content img {
 	width: 100%;
+	max-width: 1024px;
 	margin-bottom: 2em;
 }
 
