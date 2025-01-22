@@ -1099,3 +1099,12 @@ main.flat.cotown .last .last-zone .last-content .left .head2 span {
 }
 }
 
+.bigdiv {
+    display: flex;
+    align-items: center;
+	height: 100%;
+}
+
+.bigimage {
+	height: auto !important;
+}

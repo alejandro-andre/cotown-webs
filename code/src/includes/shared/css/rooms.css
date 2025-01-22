@@ -993,3 +993,13 @@ main.flat.cotown .last .last-zone .last-content .left .text p {
     color: var(--primary-old);
   }
 }
+
+.bigdiv {
+  display: flex;
+  align-items: center;
+	height: 100%;
+}
+
+.bigimage {
+	height: 100%;
+}
