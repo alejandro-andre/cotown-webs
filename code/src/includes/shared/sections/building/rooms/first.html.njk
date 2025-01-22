@@ -22,7 +22,7 @@
       {% endif %}
 
     </div>
-    <div class="splide__track">
+    <div class="splide__track" onclick="thumb('big', splidebig, splidefirst);">
       <ul class="splide__list">
         {% for i in building.Photos | find('Image_type', 'eq', 'habitacion') %}
         <li class="splide__slide">

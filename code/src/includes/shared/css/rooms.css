@@ -1001,5 +1001,5 @@ main.flat.cotown .last .last-zone .last-content .left .text p {
 }
 
 .bigimage {
-	height: 100%;
+	height: auto !important;
 }
