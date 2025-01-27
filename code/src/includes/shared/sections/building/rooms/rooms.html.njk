@@ -18,11 +18,13 @@
       <ul class="splide__list">
         {% for rp in photos | find('Building.id', 'eq', building.id) | find('Place_type.Code', 'eq', p.Code) %}
         <li class="splide__slide">
+        <div class="bigdiv">
         {% image
           constants.SERVER + "/wopi/files/Marketing/Media_resource_type/" + rp.id +"/Image/contents?access_token=" + token,
-          L, rp.Name, rp.Name, building.Code + '-' + p.Code + '-' + rp.id, "",
+          L, rp.Name, rp.Name, building.Code + '-' + p.Code + '-' + rp.id, "bigimage",
           [1280], ""
         %}
+        </div>
         </li>
       {% endfor %}
       </ul>
