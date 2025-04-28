@@ -25,6 +25,18 @@ module.exports = async (config) => {
       Content_en
       Rich_content
       Rich_content_en
+      Author: TeamViaAuthor_id {
+        id
+        Name
+        Link
+        Position
+        Position_en
+        Description
+        Description_en
+        Image {
+            name
+        }
+      }
       Tags: Post_tagListViaPost_id {
         Tag: TagViaTag_id {
           id

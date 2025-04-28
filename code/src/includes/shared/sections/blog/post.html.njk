@@ -2,6 +2,45 @@
 {% block head %}
 <!--{% set css %}{% include "shared/css/blog.css" %}{% endset %}<style>{{ css | cssmin | safe }}</style>-->
 <link rel="stylesheet" href="{{root}}/assets/css/blog.css">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ page.url }}"
+    },
+    "headline": "{{post | translate('Title', L)}}",
+    "image": {
+        "@type": "ImageObject",
+        "caption": "{{post | translate('Title', L)}}",
+        "url": "/assets/img/{{ post | translate('Slug', L) | slugify }}-640.jpeg"
+    },
+    "datePublished": "{{ post.Publish_date }} 00:00:00+01:00",    	
+    "author": {
+        "@type": "Person",
+        "name": "{{ post.Author.Name }}",
+        "jobTitle": "{{ post.Author | translate('Position', L)}}"
+    },
+    "publisher": {
+        "@type": "Organization",
+        {% if site == 'vanguard' %}
+        "name": "VANGUARD",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/assets/img/vanguard-coral.svg"
+        }
+        {% else %}
+        "name": "COTOWN",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/assets/img/cotown-logo-black.svg"
+        }
+        {% endif %}
+    },
+    "description": "{{post | translate('Subtitle', L)}}"
+}
+</script>
 {% endblock %}
 
 <!-- Main -->
@@ -53,6 +92,29 @@
         </div>
       {% endif %}
     </section>
+
+    {% if post.Author %}
+    <section class="post-author pure-u-1">
+      <div class="author pure-u-1{% if site == 'vanguard' %}{% else %} pure-u-lg-20-24{% endif %}">
+        <div class="avatar">
+          <a href="{{ post.Author.Link }}" target="_blank">
+          {% image
+            constants.SERVER + "/wopi/files/Marketing/Team/" + post.Author.id +"/Image/contents?access_token=" + token,
+            L, post.Author.Name, post.Author.Name, post.Author.Name | slugify, "",
+            [600], ""
+          %}
+          </a>
+        </div>
+        <div class="author-content">
+          <div class="title-info">
+            <p class="name">{{ post.Author.Name }}</p>
+            <p class="position">{{ post.Author | translate('Position', L)}}</p>
+            <p class="text">{{ post.Author | translate('Description', L)}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endif %}
 
     <section class="like-content pure-u-1">
       <div class="like pure-u-1 {% if site == 'vanguard' %} pure-u-lg-7-12 {% else %} cotown {% endif %} ">
