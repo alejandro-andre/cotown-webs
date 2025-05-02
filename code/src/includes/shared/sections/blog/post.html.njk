@@ -8,13 +8,13 @@
     "@type": "BlogPosting",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ page.url }}"
+        "@id": "{{globals.url}}/{{ page.url }}"
     },
     "headline": "{{post | translate('Title', L)}}",
     "image": {
         "@type": "ImageObject",
         "caption": "{{post | translate('Title', L)}}",
-        "url": "/assets/img/{{ post | translate('Slug', L) | slugify }}-640.jpeg"
+        "url": "{{globals.url}}/assets/img/{{ post | translate('Slug', L) | slugify }}-1280.jpeg"
     },
     "datePublished": "{{ post.Publish_date }} 00:00:00+01:00",    	
     "author": {
@@ -28,13 +28,13 @@
         "name": "VANGUARD",
         "logo": {
             "@type": "ImageObject",
-            "url": "/assets/img/vanguard-coral.svg"
+            "url": "{{globals.url}}/assets/img/vanguard-coral.svg"
         }
         {% else %}
         "name": "COTOWN",
         "logo": {
             "@type": "ImageObject",
-            "url": "/assets/img/cotown-logo-black.svg"
+            "url": "{{globals.url}}/assets/img/cotown-logo-black.svg"
         }
         {% endif %}
     },
