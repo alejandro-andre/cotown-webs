@@ -43,6 +43,7 @@ function post(event) {
   formData.append('168', sessionStorage.getItem('utm_campaign'));
   formData.append('169', sessionStorage.getItem('utm_medium'));
   formData.append('170', sessionStorage.getItem('utm_source'));
+  formData.append('173', sessionStorage.getItem('gclid'));
 
   const file = document.getElementById('file')
   if (file)

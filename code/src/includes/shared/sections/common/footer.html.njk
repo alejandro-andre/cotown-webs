@@ -111,6 +111,7 @@ if (!document.referrer.includes('{{globals.url}}')) {
   var utmSource = urlParams.get('utm_source');
   var utmCampaign = urlParams.get('utm_campaign');
   var utmMedium = urlParams.get('utm_medium');
+  var gclid = urlParams.get('gclid');
 
   // Generate UTM if not passed
   if (!utmSource && !utmCampaign && !utmMedium) {
@@ -132,12 +133,14 @@ if (!document.referrer.includes('{{globals.url}}')) {
   sessionStorage.setItem('utm_source', utmSource);
   sessionStorage.setItem('utm_campaign', utmCampaign);
   sessionStorage.setItem('utm_medium', utmMedium);
+  sessionStorage.setItem('gclid', gclid);
 }
 
 // Debug
-utmSource   = sessionStorage.getItem('utm_source');
+utmSource   = sessionStorage.getItem('source');
 utmCampaign = sessionStorage.getItem('utm_campaign');
 utmMedium   = sessionStorage.getItem('utm_medium');
+gclid       = sessionStorage.getItem('gclid');
 
 <!-- JS / Banner -->
 {% for b in banners | find('Page', 'eq', 'home') %}
