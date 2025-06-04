@@ -7,48 +7,48 @@
       "url": "index",
       "text": "",
       "cotown": {
-        "title": "Apartamentos compartidos - Coliving COTOWN",
+        "title": "Pisos compartidos - Coliving COTOWN",
         "description": "Coliving en España ideal para nómadas digitales. Habitaciones modernas, tecnológicas y con todos los servicios incluidos. ⭐⭐⭐⭐⭐"
       },
       "vanguard": {
-        "title": "Vanguard Student Housing- El lugar donde todo comienza",
-        "description": "Ven a vivir la el auténtico coliving para estudiantes universitar@s"
+        "title": "Pisos para estudiantes en España - Vanguard Student Housing",
+        "description": "Pisos para estudiantes en las mejores ubicaciones de España. Ven a vivir la el auténtico coliving para estudiantes universitar@s."
       }
     },
     "locations": {
       "url": "destinos",
       "text": "Destinos",
       "cotown": {
-        "title": "Alójate en nuestros pisos compartidos o vive a tu manera con nuestros apartamentos amueblados en las mejores zonas",
-        "description": "Vive en las zonas más centricas en nuestros apartamentos amueblados y pisos compartidos de alquiler temporal, con todos los servicios incluidos. ¿Se puede pedir más?"
+        "title": "Alquiler temporal de pisos compartidos y apartamentos amueblados en España - Coliving COTOWN",
+        "description": "Vive en las zonas más céntricas en nuestros apartamentos amueblados y pisos compartidos de alquiler temporal, con todos los servicios incluidos. ¿Se puede pedir más?"
       },
       "vanguard": {
-        "title": "Alójate en nuestros pisos compartidos o vive a tu manera con nuestros pisos completos en las mejores zonas",
-        "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
+        "title": "Alojamientos para estudiantes en España - Vanguard Student Housing",
+        "description": "Encuentra pisos y residencias para estudiantes en España con Vanguard Student Housing. Alojamientos céntricos, seguros y adaptados a tus necesidades para una experiencia universitaria única."
       }
     },
     "rooms": {
       "url": "pisos-compartidos",
       "text": "Localizaciones",
       "cotown": {
-        "title": "Alójate en nuestros pisos compartidos en las mejores zonas",
-        "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
+        "title": "Pisos compartidos en {city} - Las mejores zonas - Coliving COTOWN",
+        "description": "Vivir en las zonas más céntricas de {city}, con todas las comodidades y varios servicios incluidos en nuestros pisos compartidos. ¿Se puede pedir más?"
       },
       "vanguard": {
-        "title": "Alójate en nuestros pisos compartidos en las mejores zonas",
-        "description": "Vivir en las zonas más céntricas, con todas las comodidas y varios servicios incluidos. ¿Se puede pedir más?"
+        "title": "Pisos compartidos para estudiantes en {city} - Vanguard Student Housing",
+        "description": "Vivir en las zonas más céntricas, con todas las comodidades y varios servicios incluidos con nuestros pisos compartidos para estudiantes en {city}. ¿Se puede pedir más?"
       }
     },
     "flats": {
       "url": "apartamentos-privados",
       "text": "Localizaciones",
       "cotown": {
-        "title": "Vive a tu manera en nuestros apartamentos amueblados con todos los servicios incluidos, en las mejores zonas de {city}",
-        "description": "Alquila un apartamento amueblado temporalmente en las mejores zonas de {city}, totalmente equipados y con todos los servicios incluidos"
+        "title": "Alquiler temporal en {city} - Apartamentos amueblados - Coliving COTOWN",
+        "description": "Alquiler de un apartamento amueblado temporalmente en las mejores zonas de {city}, totalmente equipados y con todos los servicios incluidos"
       },
       "vanguard": {
-        "title": "Vive a tu manera con nuestros pisos completos en las mejores zonas de {}",
-        "description": "Elige cómo, cuándo y de qué manera quieres vivir con un pisazo para ti sol@ en {}"
+        "title": "Pisos para estudiantes en {city} - Vanguard Student Housing",
+        "description": "Elige cómo, cuándo y de qué manera quieres vivir con un piso para estudiantes en {city} para ti sol@."
       }
     },
     "residences": {
@@ -59,19 +59,19 @@
         "description": "Vive al máximo una de las mejores épocas de tu vida. Nosotros nos encargamos de todo lo demás"
       },
       "vanguard": {
-        "title": "Disfruta de experiencia universitaria en nuestras residencias para estudiantes",
-        "description": "Vive al máximo una de las mejores épocas de tu vida. Nosotros nos encargamos de todo lo demás"
+        "title": "Residencias para estudiantes en España - Vanguard Student Housing",
+        "description": "Vive al máximo una de las mejores épocas de tu vida en nuestras residencias de estudiantes en España. Nosotros nos encargamos de todo lo demás"
       }
     },
     "about": {
       "url": "conocenos",
       "text": "Conócenos",
       "cotown": {
-        "title": "¡Conoce a nuestro equipazo!",
+        "title": "¡Conoce a nuestro equipazo! - Coliving COTOWN",
         "description": "¿Quieres formar parte del team de Cotown o saber quien hay detrás de todo esto? ¡Bienvenid@!"
       },
       "vanguard": {
-        "title": "¡Conoce a nuestro equipazo!",
+        "title": "¡Conoce a nuestro equipazo! - Vanguard Student Housing",
         "description": "¿Quieres formar parte del team de Vanguard Student Housing o saber quien hay detrás de todo esto? ¡Bienvenid@!"
       }
     },

@@ -7,47 +7,47 @@
       "url": "index",
       "text": "",
       "cotown": {
-        "title": "Coliving Apartments in Spain - COTOWN",
-        "description": "Coliving apartments in Spain for students and young professionals. Modern rooms, technology. All services included. ⭐⭐⭐⭐⭐"
+        "title": "Coliving & Shared Apartments in Spain - COTOWN",
+        "description": "Coliving in Spain ideal for digital nomads. Modern, tech-savvy rooms with all services included. ⭐⭐⭐⭐⭐"
       },
       "vanguard": {
-        "title": "Vanguard Student Housing - Where everything begins",
-        "description": "Come experience the authentic coliving for university students."
+        "title": "Student Apartments in Spain - Vanguard Student Housing",
+        "description": "Student apartments in the best locations in Spain. Come and experience authentic student coliving."
       }
     },
     "locations": {
       "url": "destinations",
       "text": "Destinations",
       "cotown":{
-        "title": "Stay in our shared apartments or live your way with our full apartments in the best areas",
-        "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
+        "title": "Short-term rental - Shared apartments & furnished apartments in Spain - Coliving COTOWN",
+        "description": "Live in the most central areas in our furnished apartments and shared flats for short-term rentals, with all the comforts and various services included. Amazing, right?"
       },
       "vanguard":{
-        "title": "Stay in our shared apartments or live your way with our full apartments in the best areas",
-        "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
+        "title": "Student accommodation in Spain - Vanguard Student Housing",
+        "description": "Find student apartments and residences in Spain with Vanguard Student Housing. Centrally located, safe, and tailored accommodations for a unique university experience."
       }    },
     "rooms": {
       "url": "shared-flats",
       "text": "Locations",
       "cotown": {
-        "title": "Stay in Our Shared Apartments or Live Your Way with Our Furnished Apartments in the Best Areas",
-        "description": "Live in the most central areas, our furnished apartments and shared apartments for temporary rent, all services included. Can you ask for more?"
+        "title": "Shared Apartments in {city} - The Best Areas - Coliving COTOWN",
+        "description": "Live in the most central areas of {city}, with all the comforts and several services included in our shared apartments. Can you ask for more?"
       },
       "vanguard": {
-        "title": "Stay in our shared apartments in the best areas",
-        "description": "Living in the most central areas, with all the comforts and various services included. Amazing, right?"
+        "title": "Shared Apartments for Students in {city} - Vanguard Student Housing",
+        "description": "Live in the most central areas, with all the comforts and several services included with our shared apartments for students in {city}. Can you ask for more?"
       }
     },
     "flats": {
       "url": "private-apartments",
       "text": "Locations",
       "cotown": {
-        "title": "Our furnished apartments with all services included in the best areas of {city}",
-        "description": "Rent a furnished apartment temporarily in the best areas of {city}, fully equipped and with all services included"
+        "title": "Short-term Rental in {city} - Furnished Apartments - Coliving COTOWN",
+        "description": "Rent a furnished apartment temporarily in the best areas of {city}, fully equipped with all services included."
       },
       "vanguard": {
-        "title": "Live your way with our full apartments in the best areas ",
-        "description": "Choose how, when, and in what way you want to live with a stunning apartment all to yourself in the most cosmopolitan and cool city."
+        "title": "Student Apartments in {city} - Vanguard Student Housing",
+        "description": "Choose how, when, and in what way you want to live with a private student apartment in {city} just for you."
       }
     },
     "residences": {
@@ -58,19 +58,19 @@
         "description": "Live one of the best times of your life to the fullest. We take care of everything else."
       },
       "vanguard": {
-        "title": "Enjoy the university experience in our student accommodations",
-        "description": "Live one of the best times of your life to the fullest. We take care of everything else."
+        "title": "Student Residences in Spain - Vanguard Student Housing",
+        "description": "Live the most of one of the best times of your life in our student residences in Spain. We take care of everything else."
       }
     },
     "about": {
       "url": "about-us",
       "text": "About us",
       "cotown": {
-        "title": "Meet our amazing team!",
+        "title": "Meet our amazing team!  - Coliving COTOWN",
         "description": "Would you like to join the Cotown team or find out who's behind all this? Welcome!"
       },
       "vanguard": {
-        "title": "Meet our amazing team!",
+        "title": "Meet our amazing team! - Vanguard Student Housing",
         "description": "Would you like to join the Vanguard Student Housing team or find out who's behind all this? Welcome!"
       }
     },
