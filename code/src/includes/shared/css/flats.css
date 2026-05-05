@@ -532,6 +532,13 @@
 	margin: 0 0 1em 0;
 	color: var(--white);
 }
+.last .left .text li,
+.last .left .text a {
+	font-weight: 500;
+	font-size: 18px;
+	margin: 0 0 1em 0;
+	color: var(--white);
+}
 
 .btn-text a {
 	color: var(--primary-flats-text)
