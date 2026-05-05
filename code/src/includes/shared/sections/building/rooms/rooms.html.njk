@@ -122,7 +122,7 @@
           </div>
           <div class="right">
           <!--! >> BCN -->
-          {% if building.District.Location.id != 1 %}
+          {% if building.District.Location.id != 999 %}
             {% if f.Rent_pct %}{% set pct = f.Rent_pct %}{% else %}{% set pct = 1.0 %}{% endif %}
             {% if pct != 1 %}
             <p data-price="f"  class="right linethru hidden">{% literal texts, 'price-desde', L %} {{f.Rent_long       |round|number(L)}} €/{% literal texts, 'price-mes', L %}</p>
