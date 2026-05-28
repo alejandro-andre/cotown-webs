@@ -8,7 +8,6 @@ module.exports = async (config) => {
       where: { 
         Active: { EQ: true }
         Building_type_id: { EQ: 3 }
-        Code: { NE: "SAR326" } 
       } 
     ) {
       id
