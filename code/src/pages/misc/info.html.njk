@@ -161,7 +161,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-4">
           <div class="campo">
           <label class="label">&nbsp;</label>
-          <select class="select" type="select" id="budger-max" name="budget-max" onchange="budget();" required>
+          <select class="select" type="select" id="budget-max" name="budget-max" onchange="budget();" required>
             {% for i in range(400, 2200, 100) -%}
             <option value="{{i}}"{% if i == 900 %} selected{% endif %}>{{i|number(L)}} €/{% literal texts, 'price-mes', L %}</option>
             {% endfor %}
@@ -239,14 +239,14 @@ var room_types = [
 function get_buildings(value) {
 
   // Empty list
-  list = document.getElementById("100");
+  list = document.getElementById("building");
   list.innerHTML = "";
 
   // Get city
   if (value)
     sessionStorage.setItem('city', value);
   else
-    value = document.getElementById('101').value
+    value = document.getElementById('city').value
 
   // Fill building listid
   for (var i = 0; i < buildings.length; i++) {
@@ -268,14 +268,14 @@ function get_buildings(value) {
 function get_types(value) {
 
   // Empty list
-  list = document.getElementById("99");
+  list = document.getElementById("place_type");
   list.innerHTML = "";
 
   // Get building
   if (value)
     sessionStorage.setItem('building', value);
   else
-    value = document.getElementById('100').value;
+    value = document.getElementById('building').value;
 
   // Fill typology listid
   for (var i = 0; i < room_types.length; i++) {
@@ -290,13 +290,13 @@ function get_types(value) {
 
 // Budget change
 function budget() {
-  min = parseInt(document.getElementById('95-min').value);
-  max = parseInt(document.getElementById('95-max').value);
+  min = parseInt(document.getElementById('budget-min').value);
+  max = parseInt(document.getElementById('budget-max').value);
   if (min > max) {
     min = max;
-    document.getElementById('95-min').value = min;
+    document.getElementById('budget-min').value = min;
   }
-  document.getElementById('95').value = min + ' - ' + max;
+  document.getElementById('budget').value = min + ' - ' + max;
 }
 
 // Numero de meses entre dos fechas
@@ -313,8 +313,8 @@ function months(fin, fout) {
 
 // Post
 function validate() {
-  fin = document.getElementById('96');
-  fout = document.getElementById('97');
+  fin = document.getElementById('date_from');
+  fout = document.getElementById('date_to');
   if (!months(fin.value, fout.value)) {
     fin.setCustomValidity("{{texts['cal-error'][L]}}");
   } else {
@@ -323,13 +323,13 @@ function validate() {
 };
 
 // Load
-document.getElementById('96').value  = sessionStorage.getItem('book_checkin');
-document.getElementById('97').value  = sessionStorage.getItem('book_checkout');
-document.getElementById('101').value = sessionStorage.getItem('city');
+document.getElementById('date_from').value  = sessionStorage.getItem('book_checkin');
+document.getElementById('date_to').value  = sessionStorage.getItem('book_checkout');
+document.getElementById('city').value = sessionStorage.getItem('city');
 get_buildings(null);
-document.getElementById('100').value = sessionStorage.getItem('building');
+document.getElementById('building').value = sessionStorage.getItem('building');
 get_types(null);
-document.getElementById('99').value = sessionStorage.getItem('book_type');
+document.getElementById('place_type').value = sessionStorage.getItem('book_type');
 {% include "shared/js/pipedrive.js" %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
