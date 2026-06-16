@@ -113,7 +113,7 @@ tags: page
           <select class="select" type="select" id="reason" name="reason" required>
             <option value="" disabled selected>{% literal texts, 'form-motivo', L %}</option>
             {% for r in reasons %}
-              <option value="{{r.Name}}">{{r | translate('Name', L)}}</option>
+              <option value="{{r.id}}">{{r | translate('Name', L)}}</option>
             {% endfor %}
           </select>
           </div>

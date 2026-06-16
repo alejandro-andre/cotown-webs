@@ -4,6 +4,7 @@ module.exports = async (config) => {
   const QUERY = `
   {
     data: Booking_Customer_reasonList {
+      id
       Name
       Name_en
     }
