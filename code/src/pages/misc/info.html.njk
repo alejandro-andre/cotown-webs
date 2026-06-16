@@ -230,7 +230,7 @@ var room_types = [
 {% endfor-%}
 {% set r = flats | find('id', 'eq', b.id) | first-%}
 {% for p in r.Flat_subtypes-%}
-{building_code:'{{b.Code}}',code:'{{flat_subtypes[p.Code].Code}}',name:'{{flat_subtypes[p.Code] | translate('Name', L)}}'},
+{building_code:'{{b.Code}}',code:'{{p.Flat_type}}',name:'{{flat_subtypes[p.Code] | translate('Name', L)}}'},
 {% endfor-%}
 {% endfor-%}
 ];
