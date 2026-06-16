@@ -43,13 +43,13 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
           <div class="campo">
           <label class="label">{% literal texts, 'form-nombre', L %}</label>
-          <input class="input" type="name" id="firstName" name="firstName" placeholder="{% literal texts, 'form-nombre', L %}" required>
+          <input class="input" type="name" id="first_name" name="first_name" placeholder="{% literal texts, 'form-nombre', L %}" required>
           </div>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
           <div class="campo">
           <label class="label">{% literal texts, 'form-apellidos', L %}</label>
-          <input class="input" type="name" id="lastName" name="lastName" placeholder="{% literal texts, 'form-apellidos', L %}" required>
+          <input class="input" type="name" id="last_name" name="last_name" placeholder="{% literal texts, 'form-apellidos', L %}" required>
           </div>
         </div>
         <div class="pure-u-1 pure-u-md-1-2">
@@ -68,7 +68,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
           <div class="campo">
           <label class="label">{% literal texts, 'form-edad', L %}</label>
-          <select class="select" type="select" id="1" name="1" required>
+          <select class="select" type="select" id="age" name="age" required>
             <option value="" disabled selected>{% literal texts, 'form-edad', L %}</option>
             <option value="18-24">18-24</option>
             <option value="25-34">25-34</option>
@@ -80,7 +80,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-nacionalidad', L %}</label>
-          <select class="select" type="select" id="3" name="3" required>
+          <select class="select" type="select" id="nationality" name="nationality" required>
             <option value="" disabled selected>{% literal texts, 'form-nacionalidad', L %}</option>
             {% if L == 'es' %}
             {% for c in countries | sort(false, false, 'Name') %}
@@ -98,19 +98,19 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
           <div class="campo">
           <label class="label">{% literal texts, 'form-desde', L %}</label>
-          <input class="input" type="date" id="96" name="96" required oninput="validate();">
+          <input class="input" type="date" id="date_from" name="date_from" required oninput="validate();">
           </div>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
           <div class="campo">
           <label class="label">{% literal texts, 'form-hasta', L %}</label>
-          <input class="input" type="date" id="97" name="97" required oninput="validate();">
+          <input class="input" type="date" id="date_to" name="date_to" required oninput="validate();">
           </div>
         </div>
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-motivo', L %}</label>
-          <select class="select" type="select" id="98" name="98" required>
+          <select class="select" type="select" id="reason" name="reason" required>
             <option value="" disabled selected>{% literal texts, 'form-motivo', L %}</option>
             {% for r in reasons %}
               <option value="{{r.Name}}">{{r | translate('Name', L)}}</option>
@@ -122,7 +122,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-ciudad', L %}</label>
-          <select class="select" type="select" id="101" name="101" required onchange="get_buildings(this.value);">
+          <select class="select" type="select" id="city" name="city" required onchange="get_buildings(this.value);">
             <option value="" disabled selected>{% literal texts, 'form-ciudad', L %}</option>
             {% for l in locations %}
             {% if buildings | find('District.Location.id', 'eq', l.id) | length > 0 %}
@@ -135,7 +135,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-edificio', L %}</label>
-          <select class="select" type="select" id="100" name="100" onchange="get_types(this.value);" required>
+          <select class="select" type="select" id="building" name="building" onchange="get_types(this.value);" required>
             <option value="" disabled selected>{% literal texts, 'form-edificio', L %}</option>
           </select>
           </div>
@@ -144,14 +144,14 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-tipologia', L %}</label>
-          <select class="select" type="select" id="99" name="99" required>
+          <select class="select" type="select" id="place_type" name="place_type" required>
           </select>
           </div>
         </div>
         <div class="pure-u-1 pure-u-md-1-4">
           <div class="campo">
           <label class="label">{% literal texts, 'form-presupuesto', L %}</label>
-          <select class="select" type="select" id="95-min" name="95-min" onchange="budget();" required>
+          <select class="select" type="select" id="budget-min" name="budget-min" onchange="budget();" required>
             {% for i in range(400, 2200, 100) -%}
             <option value="{{i}}"{% if i == 600 %} selected{% endif %}>{{i|number(L)}} €/{% literal texts, 'price-mes', L %}</option>
             {% endfor %}
@@ -161,25 +161,25 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-4">
           <div class="campo">
           <label class="label">&nbsp;</label>
-          <select class="select" type="select" id="95-max" name="95-max" onchange="budget();" required>
+          <select class="select" type="select" id="budger-max" name="budget-max" onchange="budget();" required>
             {% for i in range(400, 2200, 100) -%}
             <option value="{{i}}"{% if i == 900 %} selected{% endif %}>{{i|number(L)}} €/{% literal texts, 'price-mes', L %}</option>
             {% endfor %}
           </select>
           </div>
         </div>
-        <input type="hidden" id="95" name="95" value="400 - 1300">
+        <input type="hidden" id="budget" name="budget" value="400 - 1300">
 
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'language', L %}</label>
-          <select class="select" type="select" id="5" name="5" required>
+          <select class="select" type="select" id="language" name="language" required>
             {% if L == 'es' %}
-            <option value="ES">Español</option>
-            <option value="EN">Inglés</option>
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
             {%else%}
-            <option value="EN">English</option>
-            <option value="ES">Spanish</option>
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
             {% endif %}
           </select>
           </div>
@@ -198,10 +198,7 @@ tags: page
         </div>
 
         <div id="div-send" class="pure-u-1">
-          <input type="hidden" id="listid" name="listid" value="27"/>
-          <input type="hidden" id="185" name="185" value="Web"/>
-          <input type="hidden" id="186" name="186" value="{% if siteid==1 %}VSH{% else %}Cotown{% endif %}"/>
-          <input type="hidden" id="188" name="188" value="B2C"/>
+          <input type="hidden" id="brand" name="brand" value="{% if siteid==1 %}VSH{% else %}Cotown{% endif %}"/>
           <button class="btn-secondary">{% literal texts, 'form-enviar', L %}</button>
         </div>
 

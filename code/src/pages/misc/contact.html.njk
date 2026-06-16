@@ -84,13 +84,13 @@ tags: page
           <div class="pure-u-1 pure-u-md-1-2">
             <div class="campo">
             <label class="label">{% literal texts, 'form-nombre', L %}</label>
-            <input class="input" type="name" id="firstName" name="firstName" placeholder="{% literal texts, 'form-nombre', L %}" required>
+            <input class="input" type="name" id="first_name" name="first_name" placeholder="{% literal texts, 'form-nombre', L %}" required>
             </div>
           </div>
           <div class="pure-u-1 pure-u-md-1-2">
             <div class="campo">
             <label class="label">{% literal texts, 'form-apellidos', L %}</label>
-            <input class="input" type="name" id="lastName" name="lastName" placeholder="{% literal texts, 'form-apellidos', L %}" required>
+            <input class="input" type="name" id="last_name" name="last_name" placeholder="{% literal texts, 'form-apellidos', L %}" required>
             </div>
           </div>
           <div class="pure-u-1 pure-u-md-1-2">
@@ -107,18 +107,18 @@ tags: page
           </div>
           <div class="campo coment pure-u-1">
             <label class="label">{% literal texts, 'form-mensaje', L %}</label>
-            <textarea type="textarea" id="181" name="181" rows="5" cols="40"></textarea>
+            <textarea type="textarea" id="message" name="message" rows="5" cols="40"></textarea>
           </div>
           <div class="pure-u-1 pure-u-md-1-2">
             <div class="campo">
             <label class="label">{% literal texts, 'language', L %}</label>
-            <select class="select" type="select" id="5" name="5" required>
+            <select class="select" type="select" id="language" name="language" required>
               {% if L == 'es' %}
-              <option value="ES">Español</option>
-              <option value="EN">Inglés</option>
+              <option value="es">Español</option>
+              <option value="en">Inglés</option>
               {%else%}
-              <option value="EN">English</option>
-              <option value="ES">Spanish</option>
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
               {% endif %}
             </select>
             </div>
@@ -134,11 +134,8 @@ tags: page
             {% literal texts, 'contact-ok', L, true %}
           </div>
           <div id="div-send" class="pure-u-1">
-            <input type="hidden" id="listid" name="listid" value="29"/>
-            <input type="hidden" id="185" name="185" value="Web"/>
-            <input type="hidden" id="186" name="186" value="{% if siteid==1 %}VSH{% else %}Cotown{% endif %}"/>
-            <input type="hidden" id="188" name="188" value="B2C"/>
-            <input type="hidden" id="190" name="190" value="Contacto"/>
+            <input type="hidden" id="brand" name="brand" value="{% if siteid==1 %}VSH{% else %}Cotown{% endif %}"/>
+            <input type="hidden" id="form" name="form" value="Formulario Contacto"/>
             <button class="btn-secondary">{% literal texts, 'form-enviar', L %}</button>
           </div>
         </div>
