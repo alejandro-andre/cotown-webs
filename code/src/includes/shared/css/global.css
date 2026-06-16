@@ -2544,7 +2544,7 @@ ul.black-menu.cotown li .locations-container label.locations-label .loc a {
 		background-color: var(--primary-background);
 		box-shadow: none;
 		cursor: pointer;
-		padding: 8px 0px;
+		padding: 8px 0 8px 8px;
 	}
 	main .container-main section.form.cotown .form-container .campo.add-file .select label.label[for="selected"] {
 		font-size: var(--mini-title);
