@@ -40,10 +40,10 @@ function post(event) {
   formData = new FormData(event.target);
 
   // SEM
-  formData.append('168', sessionStorage.getItem('utm_campaign'));
-  formData.append('169', sessionStorage.getItem('utm_medium'));
-  formData.append('170', sessionStorage.getItem('utm_source'));
-  formData.append('173', sessionStorage.getItem('gclid'));
+  formData.append('utm_campaign', sessionStorage.getItem('utm_campaign'));
+  formData.append('utm_medium', sessionStorage.getItem('utm_medium'));
+  formData.append('utm_source', sessionStorage.getItem('utm_source'));
+  formData.append('gclid', sessionStorage.getItem('gclid'));
 
   const file = document.getElementById('file')
   if (file)
