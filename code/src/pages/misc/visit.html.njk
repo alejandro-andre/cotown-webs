@@ -148,14 +148,14 @@ var buildings = [
 function get_buildings(value) {
 
   // Empty list
-  list = document.getElementById("100");
+  list = document.getElementById("building");
   list.innerHTML = "";
 
   // Get city
   if (value)
     sessionStorage.setItem('city', value);
   else
-    value = document.getElementById('101').value
+    value = document.getElementById('city').value
 
   // Fill building listid
   for (var i = 0; i < buildings.length; i++) {
@@ -172,9 +172,9 @@ function get_buildings(value) {
 }
 
 // Load
-document.getElementById('101').value = sessionStorage.getItem('city');
+document.getElementById('city').value = sessionStorage.getItem('city');
 get_buildings(null);
-document.getElementById('100').value = sessionStorage.getItem('building');
+document.getElementById('building').value = sessionStorage.getItem('building');
 {% include "shared/js/pipedrive.js" %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
