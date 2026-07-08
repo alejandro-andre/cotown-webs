@@ -140,7 +140,7 @@ tags: page
 // Buildings list
 var buildings = [
 {% for b in buildings | find('Building_type_id', 'lt', 4)-%}
-{city:'{{b.District.Location.Name}}',building:'{{b.Name}}'},
+{city:'{{b.District.Location.Name}}',code:'{{b.Code}}',building:'{{b.Name}}'},
 {% endfor-%}
 ];
 
@@ -161,7 +161,7 @@ function get_buildings(value) {
   for (var i = 0; i < buildings.length; i++) {
     if (buildings[i].city == value) {
       var opt = document.createElement("option");
-      opt.value = buildings[i].building;
+      opt.value = buildings[i].code;
       opt.text = buildings[i].building;
       if (buildings[i].city == '') {
         buildings.disabled = true;
