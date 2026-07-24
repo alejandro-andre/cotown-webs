@@ -11,6 +11,7 @@ module.exports = async (config) => {
       Name
       Name_en
       Location_id
+      Building_id
       Questions: Faq_questionListViaTopic_id (
         orderBy: [{attribute: Order, direction:ASC, nullsGo: FIRST}]
       ) {

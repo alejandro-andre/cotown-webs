@@ -79,7 +79,7 @@ tags: page
      
       <div class="faq pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
         {% for f in faqs %}
-          {% if not f.Location_id %}
+          {% if not f.Location_id and not f.Building_id %}
           <div class="every-faq pure-u-22-24 {% if site == 'vanguard' %} pure-u-lg-5-6 {% else %} {% endif %}">
             {% if site == 'vanguard' %}
               <h2 class="head2">{{f | translate('Name', L) }}</h2>
