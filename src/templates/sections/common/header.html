@@ -1,0 +1,253 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id={{ gtm_noscript }}"
+    height="0" width="0" style="display:none;visibility:hidden">
+  </iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+
+<!-- Mobile first header
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{% for b in banners | find('Page', 'eq', 'home') %}
+{% if loop.first %}
+<section class="container-header mobile-only first pure-g hidden" id="banner_{{ b.id }}">
+  <div class="turquoise-line pure-u-1-2 pure-u-lg-1 cotown">
+    <div class="left-content pure-u-md-1-2 pure-u-1">
+      <div class="banner-container pure-u-1">
+        <div class="spot">
+          <a class="close" onclick="ocultarBannerMobile('banner_{{ b.id }}')">
+            <em class="icon-close"></em>
+          </a>
+          <span>{{ b | translate('Text', L) }}</span>
+        </div>
+        <a style="padding-top:3px;" href="{{ b | translate('Link', L) }}">
+          <button class="btn-primary">{{ literal('button-descubrir', L) }}</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+
+<!-- Desktop first header
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section class="container-header desktop-only first pure-g">
+  <div class="turquoise-line pure-u-14-24 pure-u-lg-1 cotown">
+
+    <!-- Banner -->
+    <div class="left-content pure-u-md-14-24 pure-u-1">
+      <div class="banner-container pure-u-1">
+        {% for b in banners | find('Page', 'eq', 'home') %}
+        {% if loop.first %}
+        <div class="spot">
+          <span>{{ b | translate('Text', L) }}</span>
+        </div>
+        <a style="padding-top:3px;" href="{{ b | translate('Link', L) }}">
+          <button class="btn-primary">{{ literal('button-descubrir', L) }}</button>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Cabecera -->
+    <div class="right-content pure-1-2">
+      <div class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+
+          <li class="icons-header pure-menu-item">
+            <!-- Whatsapp -->
+            {% for r in rrss | find('Name', 'eq', 'whatsapp') %}
+            <a href="{{ r.Link }}" class="pure-menu-link"><em class="icon-whatsapp"></em></a>
+            {% endfor %}
+          </li>
+
+          <!-- Idiomas -->
+          <li class="lang pure-menu-item">
+            <div class="select-container cotown">
+              {% if L == 'es' %}
+              <label class="selected-option">
+                <em class="icon-corchete-down"></em>
+                <span class="select-value">Español (ES)</span>
+              </label>
+              <div data-toggle="collapsed" class="options">
+                <a href="{{ alt.en }}"><div class="option">English (EN)</div></a>
+              </div>
+              {% else %}
+              <label class="selected-option">
+                <em class="icon-corchete-down"></em>
+                <span class="select-value">English (EN)</span>
+              </label>
+              <div data-toggle="collapsed" class="options">
+                <a href="{{ alt.es }}"><div class="option">Español (ES)</div></a>
+              </div>
+              {% endif %}
+            </div>
+          </li>
+
+          <!-- Area privada -->
+          <li class="pure-menu-item private-container">
+            <button class="private">
+              <em class="icon-log-in"></em>
+              <a href="https://www.cotowngroup.com/customer">
+                <p class="private-area">{{ literal('button-area-privada', L) }}</p>
+              </a>
+            </button>
+          </li>
+
+          <!-- Reservar -->
+          <li class="pure-menu-item ">
+            <div class="booking">
+              <button class="btn-primary hidden">
+              <a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['book'].url }}.html">
+              {{ literal('button-reservar', L) }}
+              </a>
+              </button>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Menu Desktop Horizontal y Mobile Vertical
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section class="container-header second pure-g">
+  <div class="black-line custom-wrapper pure-g cotown" id="blackMenu">
+
+    <div class="left-nav pure-u-1 pure-u-lg-6-24">
+
+      <!-- Icono menú (movil) -->
+      <div class="pure-menu pure-u-1-3">
+        <a href="#" id="menuLink" class="menu-link" type="button" onclick="mostrarMenuMobile()">
+          <em class="icon-flat"></em>
+        </a>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo pure-u-1">
+        <a class="desktop" href="{{ root }}{{ langs[L].folder }}/">
+          <div class="head1"><img class="img-logo cotown" alt="Cotown" src="{{ root }}/assets/img/cotown-logo-black.svg"></div>
+        </a>
+        <a class="mobile" href="{{ root }}{{ langs[L].folder }}/">
+          <div class="head1"><img class="img-logo cotown" alt="Cotown" src="{{ root }}/assets/img/cotown-logo-black.svg"></div>
+        </a>
+      </div>
+
+      <!-- Botón reservar (movil) -->
+      <div class="booking pure-u-1-3">
+        <button class="btn-primary hidden">
+          <a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['book'].url }}.html">
+            {{ literal('button-reservar', L) }}
+          </a>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Menu movil -->
+    <div class="right-nav pure-u-1 pure-u-xl-16-24 pure-u-lg-18-24 pure-menu pure-menu-horizontal custom-can-transform" id="menu">
+      <ul class="black-menu pure-menu-list cotown" id="menu-desplegado">
+
+        <div class="only-mobile-menu pure-u-1" id="only-mobile-menu">
+
+          <!-- Título menu -->
+          <div class="only-text pure-u-5-24">
+            <p style="color: var(--secondary-text-header);">Menu</p>
+          </div>
+
+          <!-- Logo -->
+          <div class="logo pure-u-11-24">
+            <a href="{{ root }}{{ langs[L].folder }}/">
+              <img class="img-logo" alt="logo" src="{{ root }}/assets/img/cotown-logo-black.svg">
+            </a>
+          </div>
+
+          <!-- Cerrar -->
+          <div class="menu-mobile-icons pure-u-5-24">
+            <a type="button" onclick="ocultarMenuMobile()"><em class="icon-close"></em></a>
+          </div>
+
+        </div>
+
+        <div class="only-mobile-private pure-u-1">
+
+          <div class="area">
+            <span><em class="icon-user"></em></span>
+            <a href="https://www.cotowngroup.com/customer">
+            <p>{{ literal('button-area-privada', L) }}</p>
+            </a>
+          </div>
+
+          <div class="lang-mobile">
+            <div class="select-container-mobile">
+              {% if L == 'es' %}
+              <label class="selected-option-mobile">
+                <span class="select-value-mobile">ES</span>
+                <em class="icon-corchete-down mobile"></em>
+              </label>
+              <div data-toggle="collaps" class="options-mobile">
+                <a href="{{ alt.en }}"><div class="option-mobile">EN</div></a>
+              </div>
+              {% else %}
+              <label class="selected-option-mobile">
+                <span class="select-value-mobile">EN</span>
+                <em class="icon-corchete-down mobile"></em>
+              </label>
+              <div data-toggle="collaps" class="options-mobile">
+                <a href="{{ alt.es }}"><div class="option-mobile">ES</div></a>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Locations -->
+        <li class="locations-dropdown pure-menu-item">
+          <div class="locations-container ">
+            <label class="locations-label">
+              <a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['locations'].url }}.html">{{ langs[L].pages['locations'].text }}</a>
+            </label>
+          </div>
+        </li>
+
+        <!-- Advantages -->
+        <li class="advantages"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['advantages'].url }}.html">{{ langs[L].pages['advantages'].text }}</a>
+        </li>
+
+        <!-- Faqs -->
+        <li class="faqs"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['faqs'].url }}.html">{{ langs[L].pages['faqs'].text }}</a>
+        </li>
+
+        <!-- Blog -->
+        <li class="blog"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['blog'].url }}.html">{{ langs[L].pages['blog'].text }}</a>
+        </li>
+
+        <!-- Contact -->
+        <li class="contact"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['contact'].url }}.html">{{ langs[L].pages['contact'].text }}</a>
+        </li>
+
+        <!-- Redes sociales (movil) -->
+        <li class="only-menu-mobile pure-menu-item">
+          <div class="redes-mobile">
+            <a href="{{ globals.rrss.wh }}" rel="noopener, noreferrer" target="_blank"><em class="icon-whatsapp"></em></a>
+            <a href="{{ globals.rrss.fb }}" rel="noopener, noreferrer" target="_blank"><em class="icon-facebook"></em></a>
+            <a href="{{ globals.rrss.in }}" rel="noopener, noreferrer" target="_blank"><em class="icon-linkedin"></em></a>
+            <a href="{{ globals.rrss.tk }}" rel="noopener, noreferrer" target="_blank"><em class="icon-tiktok"></em></a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+</header>

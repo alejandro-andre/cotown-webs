@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ L }}">
+
+<!-- Head -->
+<head>
+{% include 'sections/common/head.html' %}
+<link rel="stylesheet" href="{{ root }}/assets/css/global.css">
+{% block head %}{% endblock %}
+</head>
+
+<!-- Body -->
+<body>
+
+<!-- Header -->
+{% include 'sections/common/header.html' %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Icono whatsapp -->
+<section class="only-mobile iconos-chat">
+  {% for r in rrss | find('Name', 'eq', 'whatsapp') %}
+  <a href="{{ r.Link }}" rel="noreferrer" target="_blank">
+  <div><em class="icon-whatsapp"></em></div>
+  </a>
+  {% endfor %}
+</section>
+
+<!-- Spinner -->
+<div id="overlay"><div id="spinner"></div></div>
+
+<!-- Footer -->
+{% include 'sections/common/footer.html' %}
+{% block footer %}{% endblock %}
+
+</body>
+
+</html>

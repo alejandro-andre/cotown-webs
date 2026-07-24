@@ -1,0 +1,86 @@
+{% extends 'layouts/base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ root }}/assets/css/home.css">
+{% endblock %}
+
+{% block content %}
+<!-- Main -->
+<main class="main">
+  <div class="container-main">
+
+    <!-- Cabecera -->
+    {% include 'sections/home/main-header.html' %}
+
+    <!-- What is -->
+    {% include 'sections/home/what-is.html' %}
+
+    <!-- Locations -->
+    {% include 'sections/home/locations.html' %}
+
+    <!-- Pisos -->
+    {% include 'sections/home/choose.html' %}
+
+    <!-- Servicios -->
+    {% include 'sections/home/services.html' %}
+
+    <!-- Cotownity -->
+    {% include 'sections/home/cotownity.html' %}
+
+    <!-- Partners -->
+    {% include 'sections/home/partners.html' %}
+
+    <!-- Testimonials -->
+    {% include 'sections/home/testimonial.html' %}
+
+  </div>
+</main>
+{% endblock %}
+
+{% block footer %}
+<script>
+// Sliders
+new Splide('.splide-partners', {
+  type: 'loop',
+  fixedWidth: '240px',
+  focus: 0,
+  perMove: 1,
+  drag: 'free',
+  arrows: false,
+  pagination: false,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  autoScroll: { speed: 2 }
+}).mount( window.splide.Extensions );
+
+new Splide(".splide-locations", {
+  type: 'slide',
+  height: '360px',
+  focus: 0,
+  perPage: 2,
+  perMove: 1,
+  padding: '5em',
+  gap: '15px',
+  breakpoints: {
+    1279: { perPage: 2 },
+    1023: { padding: '3em', height: '300px' },
+    767: { perPage: 1 },
+  },
+}).mount();
+
+new Splide(".splide-opinions", {
+  type: 'slide',
+  focus: 0,
+  height: 340,
+  perPage: 3,
+  perMove: 1,
+  padding: '10em',
+  gap: '20px',
+  breakpoints: {
+    1599: { perPage: 2 },
+    1023: { perPage: 1 },
+    767: { padding: 0 },
+  },
+}).mount();
+</script>
+{% endblock %}
