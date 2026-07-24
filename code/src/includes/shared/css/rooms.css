@@ -1038,3 +1038,211 @@ main.flat.cotown .last .last-zone .last-content .left .text p {
 .sticker-secondary {
   top: 102px;
 }
+
+/* FAQS
+-------------------------------- */
+
+/* Bandas a todo el ancho, el contenido mantiene el ancho de .last-content \*/
+.last .last-zone .faqs-container,
+.last .last-zone .district-container {
+  width: 100%;
+  padding: 0em 0 3em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Fondos alternos: FAQs en beige, barrio en blanco.
+   En apartamentos privados (.last.prive) el barrio conserva su color \*/
+.last .last-zone .faqs-container {
+  background-color: var(--new-bg);
+}
+.last:not(.prive) .last-zone .district-container {
+  background-color: var(--white);
+}
+
+/* Igual que .last-content pero con padding-top a 0 \*/
+.last .last-zone .faq-content {
+  padding: 0px 0 0;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279.9px) {
+  .last .last-zone .faq-content {
+    width: 98%;
+  }
+}
+
+/* Textos siempre oscuros, aunque la seccion .last sea de color \*/
+.last .faq-content,
+.last .faq-content .head2,
+.last .faq-content .head2 span,
+.last .faq-content .head3,
+.last .faq-content .content,
+.last .faq-content .content p,
+.last .faq-content .content p a,
+.last .faq-content .content ul li,
+.last .faq-content .content strong,
+.last .faq-content .open-close-icon em {
+  color: var(--black);
+}
+
+.last .faq-content .head2 {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+  margin: 1em 0 0;
+  text-transform: uppercase;
+}
+.last .faq-content .faq {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.last .faq-content .faq .every-faq {
+  margin: 0 auto;
+}
+.last .faq-content .description.text {
+  border-bottom: 1px solid var(--grey-light);
+}
+.last .faq-content .description.text .expansion {
+  padding: 0;
+  position: relative;
+  height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.last .faq-content .description.text .expansion .head3 {
+  width: 90%;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 150%;
+  margin: 1em 0.2em;
+  font-family: var(--text-font);
+  text-align: left;
+}
+.last .faq-content .description.text .expansion label[class^="tab"] {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 32px;
+  margin: 0;
+  width: 5%;
+}
+.last .faq-content .description.text .expansion .content p,
+.last .faq-content .description.text .expansion .content p a,
+.last .faq-content .description.text .expansion .content ul li {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+/* FAQS COTOWN NEW \*/
+main.cotown .last .faq-content {
+  align-items: center;
+}
+main.cotown .last .faq-content .faq {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+main.cotown .last .faq-content .faq .every-faq {
+  margin: 0 auto;
+}
+main.cotown .last .faq-content .head2.cotown {
+  font-family: var(--text-font);
+  font-weight: var(--semibold);
+  font-size: var(--title);
+  line-height: 1;
+  margin: 1em 0 0;
+  text-transform: none;
+}
+main.cotown .last .faq-content .description.text {
+  border-bottom: 1px solid var(--black);
+}
+main.cotown .last .faq-content .description.text .expansion .head3 {
+  width: 90%;
+  font-weight: var(--semibold);
+  font-size: var(--text-title);
+  line-height: 1;
+  margin: 2em 0.2em 0.5em;
+  font-family: var(--text-font);
+  text-align: left;
+}
+main.cotown .last .faq-content .description.text .expansion label[class^="tab"] {
+  width: fit-content;
+}
+main.cotown .last .faq-content .description.text .expansion .open-close-icon {
+  margin-right: 0!important;
+  padding-top: 0.5em;
+}
+main.cotown .last .faq-content .description.text .expansion .open-close-icon em {
+  font-size: var(--subtitle);
+}
+main.cotown .last .faq-content .description.text .expansion label[class^="tab"] p {
+  text-decoration: underline;
+}
+main.cotown .last .faq-content .description.text .expansion label[class^="tab"]:hover {
+  cursor: pointer;
+}
+
+/* FAQS RESPONSIVE \*/
+@media only screen and (min-width: 1280px) and (max-width: 1599px) {
+  .last .faq-content .head2 {
+    font-size: var(--title);
+  }
+  .last .faq-content .description.text .expansion .head3 {
+    font-size: 26px;
+  }
+  .last .faq-content .description.text .expansion .content p,
+  .last .faq-content .description.text .expansion .content p a,
+  .last .faq-content .description.text .expansion .content ul li {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1023.9px) {
+  .last .last-zone .faqs-container,
+  .last .last-zone .district-container {
+    padding: 0em 0 2em;
+  }
+  .last .faq-content .head2 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    margin: 1em 0 0;
+  }
+  .last .faq-content .description.text .expansion .head3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 5px 0 10px 0;
+  }
+  .last .faq-content .description.text .expansion .content p,
+  .last .faq-content .description.text .expansion .content p a,
+  .last .faq-content .description.text .expansion .content ul li {
+    font-size: 14px;
+  }
+
+  /* FAQS COTOWN NEW \*/
+  main.cotown .last .faq-content .head2.cotown {
+    font-size: var(--resp-title);
+    line-height: 1;
+    margin: 1em 0 0;
+    text-transform: none;
+  }
+  main.cotown .last .faq-content .description.text .expansion .head3 {
+    font-weight: var(--regular);
+    font-size: var(--mini-title);
+    margin: 2em 0.2em 1em;
+  }
+  main.cotown .last .faq-content .description.text .expansion .open-close-icon em {
+    font-size: 20px;
+  }
+}

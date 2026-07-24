@@ -1,59 +1,99 @@
-<anchor class="anchor" id="barrio"></anchor> 
-<section class="last-content pure-u-11-12 pure-u-lg-22-24">
+{% set buildingfaqs = faqs | find('Building_id', 'eq', building.id) %}
+{% if buildingfaqs | length > 0 %}
+<anchor class="anchor" id="faqs"></anchor>
+<section class="faqs-container pure-u-1">
+  <div class="faq-content pure-u-11-12 pure-u-lg-22-24">
 
-  <div class="pure-u-1">
-    {% if site == 'vanguard' %}
-      <h2 class="head2">{% literal texts, 'rooms-bienvenido', L %} <span>{{building.District.Name}}</span></h2>
-    {% else %} 
-    {% endif %}
-  </div>
-
-  <div class="left pure-u-1 pure-u-lg-7-12">
-    {% if site == 'vanguard' %}      
-    {% else %}
-    <h2 class="head2">{% literal texts, 'rooms-bienvenido', L %} <span>{{building.District.Name}}</span></h2>
-    {% endif %}
-    <div class="text pure-u-23-24">
-      {{ building.District.Texts[0] | translate('Description', L) | markdown | safe }}
+    <div class="faq pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
+      {% for f in buildingfaqs %}
+      <div class="every-faq pure-u-1">
+        {% if site == 'vanguard' %}
+          <h2 class="head2">{{f | translate('Name', L) }}</h2>
+        {% else %}
+          <h2 class="head2 cotown">{{f | translate('Name', L) }}</h2>
+        {% endif %}
+        {% for q in f.Questions %}
+          <div class="description text pure-u-1">
+            <div class="expansion pure-u-1">
+              <h3 class="head3">
+              {{q | translate('Question', L)}}
+              </h3>
+              <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
+              <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
+                <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+              </label>
+              <div class="content pure-u-1">
+              {{q | translate('Response', L) | markdown | safe }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
     </div>
-  </div>
 
-  <div class="right pure-u-1 pure-u-lg-5-12">
+  </div>
+</section>
+{% endif %}
+
+<anchor class="anchor" id="barrio"></anchor>
+<section class="district-container pure-u-1">
+  <div class="last-content pure-u-11-12 pure-u-lg-22-24">
+
     <div class="pure-u-1">
-
-      <section id="main-gallery" class="splide rooms-carousel" aria-label="Gallery">
-        <div class="splide__track">
-          <ul class="splide__list">
-            {% for f in building.District.Photos %}
-            <li class="splide__slide">
-              {% image
-                constants.SERVER + "/wopi/files/Marketing/Media_district/" + f.id +"/Image/contents?access_token=" + token,
-                L, f.Name, f.Name, f.Name + '-' + f.id | slugify, "",
-                [1280], ""
-              %}
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </section>
-
-      <section id="thumbnail-gallery" class="splide" aria-label="Thumbnails">
-        <div class="splide__track">
-          <ul class="splide__list">
-            {% for f in building.District.Photos %}
-            <li class="splide__slide">
-              {% image
-                constants.SERVER + "/wopi/files/Marketing/Media_district/" + f.id +"/Image/contents?access_token=" + token,
-                L, f.Name, f.Name, f.Name + '-' + f.id | slugify, "",
-                [1280], ""
-              %}
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </section>
-
+      {% if site == 'vanguard' %}
+        <h2 class="head2">{% literal texts, 'rooms-bienvenido', L %} <span>{{building.District.Name}}</span></h2>
+      {% else %}
+      {% endif %}
     </div>
-  </div>
 
+    <div class="left pure-u-1 pure-u-lg-7-12">
+      {% if site == 'vanguard' %}
+      {% else %}
+      <h2 class="head2">{% literal texts, 'rooms-bienvenido', L %} <span>{{building.District.Name}}</span></h2>
+      {% endif %}
+      <div class="text pure-u-23-24">
+        {{ building.District.Texts[0] | translate('Description', L) | markdown | safe }}
+      </div>
+    </div>
+
+    <div class="right pure-u-1 pure-u-lg-5-12">
+      <div class="pure-u-1">
+
+        <section id="main-gallery" class="splide rooms-carousel" aria-label="Gallery">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% for f in building.District.Photos %}
+              <li class="splide__slide">
+                {% image
+                  constants.SERVER + "/wopi/files/Marketing/Media_district/" + f.id +"/Image/contents?access_token=" + token,
+                  L, f.Name, f.Name, f.Name + '-' + f.id | slugify, "",
+                  [1280], ""
+                %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+
+        <section id="thumbnail-gallery" class="splide" aria-label="Thumbnails">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% for f in building.District.Photos %}
+              <li class="splide__slide">
+                {% image
+                  constants.SERVER + "/wopi/files/Marketing/Media_district/" + f.id +"/Image/contents?access_token=" + token,
+                  L, f.Name, f.Name, f.Name + '-' + f.id | slugify, "",
+                  [1280], ""
+                %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </div>
 </section>
