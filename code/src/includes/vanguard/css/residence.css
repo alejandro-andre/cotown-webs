@@ -900,7 +900,7 @@ margin-bottom: 0.5em;
   font-weight: 500;
   font-size: 30px;
   line-height: 150%;
-  margin: 1em 0.2em;
+  margin: 1em 0;
   font-family: var(--text-font);
   text-align: left;
 }
@@ -951,7 +951,7 @@ main.cotown .last .faq-content .description.text .expansion .head3 {
   font-weight: var(--semibold);
   font-size: var(--text-title);
   line-height: 1;
-  margin: 2em 0.2em 0.5em;
+  margin: 2em 0 0.5em;
   font-family: var(--text-font);
   text-align: left;
 }
@@ -1019,7 +1019,7 @@ main.cotown .last .faq-content .description.text .expansion label[class^="tab"]:
   main.cotown .last .faq-content .description.text .expansion .head3 {
     font-weight: var(--regular);
     font-size: var(--mini-title);
-    margin: 2em 0.2em 1em;
+    margin: 2em 0 1em;
   }
   main.cotown .last .faq-content .description.text .expansion .open-close-icon em {
     font-size: 20px;

@@ -1,0 +1,37 @@
+{% set locationfaqs = faqs | find('Location_id', 'eq', location.id) %}
+{% if locationfaqs | length > 0 %}
+<anchor class="anchor" id="faqs"></anchor>
+<section class="faqs-container {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
+  <div class="faq-content pure-u-1">
+
+    <div class="faq pure-u-1 {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
+      {% for f in locationfaqs %}
+      <div class="every-faq pure-u-1">
+        {% if site == 'vanguard' %}
+          <h2 class="head2">{{f | translate('Name', L) }}</h2>
+        {% else %}
+          <h2 class="head2 cotown">{{f | translate('Name', L) }}</h2>
+        {% endif %}
+        {% for q in f.Questions %}
+          <div class="description text pure-u-1">
+            <div class="expansion pure-u-1">
+              <h3 class="head3">
+              {{q | translate('Question', L)}}
+              </h3>
+              <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
+              <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
+                <span class="open-close-icon"><em class="icon-corchete-down"></em></span>
+              </label>
+              <div class="content pure-u-1">
+              {{q | translate('Response', L) | markdown | safe }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+{% endif %}
