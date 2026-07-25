@@ -89,13 +89,7 @@
 
       <!-- Navegación -->
       <ul class="menu-list pure-menu-list {{ site }}">
-        <li class="locations-dropdown pure-menu-item">
-          <div class="locations-container">
-            <label class="locations-label">
-              <a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['locations'].url }}.html">{{ langs[L].pages['locations'].text }}</a>
-            </label>
-          </div>
-        </li>
+        <li class="menu-item"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['locations'].url }}.html">{{ langs[L].pages['locations'].text }}</a></li>
         <li class="menu-item"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['advantages'].url }}.html">{{ langs[L].pages['advantages'].text }}</a></li>
         <li class="menu-item"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['faqs'].url }}.html">{{ langs[L].pages['faqs'].text }}</a></li>
         <li class="menu-item"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['blog'].url }}.html">{{ langs[L].pages['blog'].text }}</a></li>

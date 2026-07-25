@@ -34,7 +34,7 @@
 	flex-shrink: 0;  /* el botón no se encoge */
 }
 .banner-link button.btn-primary {
-	border-radius: 8px;
+	border-radius: var(--btn-radius);
 	height: 40px;
 	box-sizing: border-box;
 }
@@ -52,7 +52,7 @@
 	white-space: nowrap;
 }
 .header-bar.vanguard .banner-text {
-	font-size: var(--fs-x-large);
+	font-size: var(--fs-large);
 }
 .header-bar.cotown .banner-text {
 	font-family: var(--text-font);
@@ -177,7 +177,7 @@
 		gap: 0.5em;
 	}
 	.header-bar.vanguard .banner-text {
-		font-size: var(--fs-large);
+		font-size: var(--fs-small);
 	}
 	.header-actions {
 		gap: 0.5em;
@@ -240,6 +240,9 @@
 	.header-bar.cotown .banner-text {
 		min-width: 0;
 		width: auto;
+	}
+	.header-bar.vanguard .banner-text {
+		font-size: var(--fs-small);
 	}
 	.banner-link {
 		margin: auto 0;

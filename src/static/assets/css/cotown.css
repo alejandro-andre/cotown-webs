@@ -5,6 +5,7 @@
     --text-font: "Montserrat", Helvetica, Arial, sans-serif;
 
     /* Escala tipografica fluida (rem). 14->50px + hero especial. */
+    --btn-radius: 8px;   /* redondeo de botones */
     --fs-hero:     clamp(3.25rem, 3.005rem + 1.087vw, 3.875rem); /* 52 -> 62  (especial, superior) */
     --fs-xx-large: clamp(2.5rem,  2.255rem + 1.087vw, 3.125rem); /* 40 -> 50 */
     --fs-x-large:  clamp(1.875rem, 1.728rem + 0.652vw, 2.25rem); /* 30 -> 36 */
@@ -35,6 +36,7 @@
 
     --primary-ok: #ffffff;
     --secondary-bg: #121212;
+    --secondary-black: #121212;
 
     /* // Background color */
     

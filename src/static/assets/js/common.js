@@ -51,11 +51,9 @@ optionListMobile.forEach((option) => {
 })
 
 // Menu mobile
-function showMobileMenu() { 
-    document.getElementById('menu-panel').style.position = 'absolute';
-    document.getElementById('menu-mobile-head').style.position = 'fixed';
+function showMobileMenu() {
+    document.getElementById('menu-panel').classList.add('open');
 }
 function hideMobileMenu() {
-    document.getElementById('menu-panel').style.position = 'static';
-    document.getElementById('menu-mobile-head').style.position = 'static';
+    document.getElementById('menu-panel').classList.remove('open');
 }

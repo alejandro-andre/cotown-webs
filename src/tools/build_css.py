@@ -52,7 +52,7 @@ HOME_SOURCES = [
 COPIES = [(TPL / "common" / "calendar" / "calendar.css", CSS / "calendar.css")]
 
 # Clases que añade el JS y no aparecen en el HTML estático
-SAFELIST = ["input-error", "icon-corchete-up", "selected", "inside-selected", "hover"]
+SAFELIST = ["input-error", "icon-corchete-up", "selected", "inside-selected", "hover", "open", "banner-hidden"]
 
 
 def render_all():

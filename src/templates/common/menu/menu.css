@@ -46,23 +46,6 @@
 .nav-bar .pure-menu.pure-menu-horizontal ul li button i:hover:before {
 	content: "\e90d";
 }
-ul.menu-list li .locations-container {
-	display: block;
-	position: relative;
-}
-ul.menu-list li .locations-container label.locations-label {
-	display: flex;
-	color: var(--primary-text);
-	cursor: pointer;
-	margin: 0;
-	padding: 0.5em 0.5em;
-	background-color: transparent;
-}
-
-ul.menu-list li .locations-container label.locations-label em {
-	font-size: var(--fs-medium);
-	margin: 0 0 0 0.4em;
-}
 
 
 
@@ -144,6 +127,11 @@ ul.menu-list li .locations-container label.locations-label em {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
+		width: auto;            /* ancho del logo, no 100% (no tapa la hamburguesa) */
+		pointer-events: none;   /* los clics fuera del logo pasan a la hamburguesa */
+	}
+	.section-menu .nav-bar .menu-brand .brand-logo a {
+		pointer-events: auto;   /* el enlace del logo sigue siendo clicable */
 	}
 	.section-menu .nav-bar .menu-brand .brand-logo .mobile .brand-logo-img {
 		height: 42px;
@@ -161,6 +149,8 @@ ul.menu-list li .locations-container label.locations-label em {
 	.menu-brand .pure-menu {
 		display: block;
 		padding-left: 20px;
+		position: relative;
+		z-index: 2;   /* la hamburguesa por encima del logo centrado */
 	}
 	.menu-brand .brand-logo a.desktop {
 		display: none;
@@ -177,15 +167,17 @@ ul.menu-list li .locations-container label.locations-label em {
 		font-size: var(--fs-large);
 	}
 	#menu-mobile-head {
+		position: sticky;
 		top: 0;
+		width: 100%;
 		z-index: 10001;
 		height: 57px;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
 		align-items: center;
-		background-color: var(--secondary-black);
-		color: var(--primary-text);
+		background-color: var(--white);
+		color: var(--second-header-text);
 		filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
 	}
 	.menu-mobile-head .menu-mobile-title {
@@ -201,6 +193,14 @@ ul.menu-list li .locations-container label.locations-label em {
 		line-height: 140%;
 		margin: 0;
 		color: var(--second-header-text);
+	}
+	/* Vanguard: barra del head oscura con texto/iconos blancos */
+	.nav-bar.vanguard #menu-mobile-head {
+		background-color: var(--secondary-black);
+		color: var(--primary-text);
+	}
+	.nav-bar.vanguard #menu-mobile-head .menu-mobile-title p {
+		color: var(--primary-text);
 	}
 	.menu-mobile-head .brand-logo {
 		text-align: center;
@@ -234,7 +234,6 @@ ul.menu-list li .locations-container label.locations-label em {
 		align-items: center;
 		background-color: var(--white);
 		color: var(--black);
-		margin-top: 57px;
 	}
 	.menu-mobile-account .menu-account {
 		display: flex;
@@ -279,49 +278,26 @@ ul.menu-list li .locations-container label.locations-label em {
 	}
 	.nav-bar .pure-menu.pure-menu-horizontal ul li:last-of-type {
 		margin: 0 1em;
-		border-bottom: 0px;
-		height: 400px;
 	}
-	ul.menu-list li .locations-container label.locations-label {
-		padding: 0;
-	}
-	li .locations-container label.locations-label {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0;
-	}
-	
-	li .locations-container label.locations-label em {
-		margin: 0;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	.menu-mobile-social {
 		display: flex;
 		flex-flow: column;
 		justify-content: center;
 		align-items: center;
+		margin: 2em 2em 0;   /* justo tras la última opción, con separación */
 	}
-	
-	
-	
 	.menu-mobile-social .menu-social {
-		width: calc(100% - 2em);
+		width: 100%;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1em;
+		box-sizing: border-box;
+	}
+	.menu-mobile-social .menu-social a,
+	.menu-mobile-social .menu-social em {
+		color: var(--second-header-text);
+		font-size: var(--fs-small);
 	}
 }
 .nav-bar.cotown .pure-menu.pure-menu-horizontal ul li {
@@ -367,8 +343,8 @@ ul.menu-list li .locations-container label.locations-label em {
 
 
 @media only screen and (max-width: 63.99em){
-	.nav-bar.cotown .pure-menu.pure-menu-horizontal ul li {		
-		width: 92%;
+	.nav-bar.cotown .pure-menu.pure-menu-horizontal ul li {
+		width: calc(100% - 2em);   /* margen concreto de 1em a cada lado, no % */
 		font-size: var(--fs-x-small);
 		margin: 0 1em;
 	}
