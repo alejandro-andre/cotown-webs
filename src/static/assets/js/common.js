@@ -1,8 +1,8 @@
 // Menu languages
-const selectedOption = document.querySelector('.selected-option')
-const selectValue = document.querySelector('.select-value')
-const optionContainer = document.querySelector('.options')
-const optionList = document.querySelectorAll('.option')
+const selectedOption = document.querySelector('.lang-current')
+const selectValue = document.querySelector('.lang-value')
+const optionContainer = document.querySelector('.lang-list')
+const optionList = document.querySelectorAll('.lang-item')
 const selectElement = document.querySelector('.icon-corchete-down')   
 
 const selectToggle = () => {
@@ -25,10 +25,10 @@ optionList.forEach((option) => {
 })
 
 // Menu languages Mobile
-const selectedOptionMobile = document.querySelector('.selected-option-mobile')
-const selectValueMobile = document.querySelector('.select-value-mobile')
-const optionContainerMobile = document.querySelector('.options-mobile')
-const optionListMobile = document.querySelectorAll('.option-mobile')
+const selectedOptionMobile = document.querySelector('.lang-current-mobile')
+const selectValueMobile = document.querySelector('.lang-value-mobile')
+const optionContainerMobile = document.querySelector('.lang-list-mobile')
+const optionListMobile = document.querySelectorAll('.lang-item-mobile')
 const selectElementMobile = document.querySelector('.icon-corchete-down.mobile')   
 
 const selectToggleMobile = () => {
@@ -51,11 +51,11 @@ optionListMobile.forEach((option) => {
 })
 
 // Menu mobile
-function mostrarMenuMobile() { 
-    document.getElementById('menu-desplegado').style.position = 'absolute';
-    document.getElementById('only-mobile-menu').style.position = 'fixed';
+function showMobileMenu() { 
+    document.getElementById('menu-panel').style.position = 'absolute';
+    document.getElementById('menu-mobile-head').style.position = 'fixed';
 }
-function ocultarMenuMobile() {
-    document.getElementById('menu-desplegado').style.position = 'static';
-    document.getElementById('only-mobile-menu').style.position = 'static';
+function hideMobileMenu() {
+    document.getElementById('menu-panel').style.position = 'static';
+    document.getElementById('menu-mobile-head').style.position = 'static';
 }

@@ -113,19 +113,15 @@
 <script>
 {{ asset('js/common.js') }}
 
-// Banner
-{% for b in banners | find('Page', 'eq', 'home') %}
-{% if loop.first %}
-window.onload = function() {
-  const item = "banner_{{ b.id }}"
-  if (sessionStorage.getItem('banner') != item)
-    document.getElementById(item).classList.remove("hidden");
+// Banner: en móvil se puede descartar (recordado por marca)
+function hideBanner() {
+  const el = document.getElementById('section-header');
+  el.classList.add('banner-hidden');
+  sessionStorage.setItem('banner', el.dataset.banner);
 }
-{% endif %}
-{% endfor %}
-function ocultarBannerMobile(item) {
-    document.getElementById(item).style.display = 'none';
-    document.getElementById(item).classList.add('hidden');
-    sessionStorage.setItem('banner', item);
-}
+window.addEventListener('load', function() {
+  const el = document.getElementById('section-header');
+  if (el && sessionStorage.getItem('banner') === el.dataset.banner)
+    el.classList.add('banner-hidden');
+});
 </script>

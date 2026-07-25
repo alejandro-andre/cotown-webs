@@ -677,10 +677,14 @@ button.date-button input.inputs {
 		position: fixed;
 		top: 0;
 		left: 0;
+		width: 100%;
 		z-index: 1000;
 	}
 	.only-desktop {
 		display: block;
+	}
+	.only-mobile {
+		display: none;
 	}
 }
 @media only screen and (min-width: 64em) and (max-width: 79.99em) {
@@ -734,7 +738,7 @@ button.date-button input.inputs {
 		height: 12px;
 		top: 50px;
 	}
-	#menu-desplegado {
+	#menu-panel {
 		display: flex;
 		flex-flow: column;
 		justify-content: flex-start;
@@ -1056,4 +1060,10 @@ main .container-main section.form.cotown .form-container button.btn-secondary {
 .pure-menu-link:hover {
 	cursor: pointer;
 	background-color: transparent;
+}
+
+/* Hover de botones en cabecera y menu */
+.section-header button:hover,
+.section-menu button:hover {
+	cursor: pointer;
 }
