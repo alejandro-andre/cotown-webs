@@ -1,0 +1,107 @@
+<!-- Cabecera móvil (banner)
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{% for b in banners | find('Page', 'eq', 'home') %}
+{% if loop.first %}
+<section class="container-header mobile-only first pure-g hidden" id="banner_{{ b.id }}">
+  <div class="turquoise-line pure-u-1-2 pure-u-lg-1 {{ site }}">
+    <div class="left-content pure-u-md-1-2 pure-u-1">
+      <div class="banner-container pure-u-1">
+        <div class="spot">
+          <a class="close" onclick="ocultarBannerMobile('banner_{{ b.id }}')">
+            <em class="icon-close"></em>
+          </a>
+          <span>{{ b | translate('Text', L) }}</span>
+        </div>
+        <a style="padding-top:3px;" href="{{ b | translate('Link', L) }}">
+          <button class="btn-primary">{{ literal('button-descubrir', L) }}</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+
+<!-- Cabecera escritorio (banner + idiomas / área / reservar)
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section class="container-header desktop-only first pure-g">
+  <div class="turquoise-line pure-u-14-24 pure-u-lg-1 {{ site }}">
+
+    <!-- Banner -->
+    <div class="left-content pure-u-md-14-24 pure-u-1">
+      <div class="banner-container pure-u-1">
+        {% for b in banners | find('Page', 'eq', 'home') %}
+        {% if loop.first %}
+        <div class="spot">
+          <span>{{ b | translate('Text', L) }}</span>
+        </div>
+        <a style="padding-top:3px;" href="{{ b | translate('Link', L) }}">
+          <button class="btn-primary">{{ literal('button-descubrir', L) }}</button>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Idiomas / Área privada / Reservar -->
+    <div class="right-content">
+      <div class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+
+          <li class="icons-header pure-menu-item">
+            <!-- Whatsapp -->
+            {% for r in rrss | find('Name', 'eq', 'whatsapp') %}
+            <a href="{{ r.Link }}" class="pure-menu-link"><em class="icon-whatsapp"></em></a>
+            {% endfor %}
+          </li>
+
+          <!-- Idiomas -->
+          <li class="lang pure-menu-item">
+            <div class="select-container cotown">
+              {% if L == 'es' %}
+              <label class="selected-option">
+                <em class="icon-corchete-down"></em>
+                <span class="select-value">Español (ES)</span>
+              </label>
+              <div data-toggle="collapsed" class="options">
+                <a href="{{ alt.en }}"><div class="option">English (EN)</div></a>
+              </div>
+              {% else %}
+              <label class="selected-option">
+                <em class="icon-corchete-down"></em>
+                <span class="select-value">English (EN)</span>
+              </label>
+              <div data-toggle="collapsed" class="options">
+                <a href="{{ alt.es }}"><div class="option">Español (ES)</div></a>
+              </div>
+              {% endif %}
+            </div>
+          </li>
+
+          <!-- Area privada -->
+          <li class="pure-menu-item private-container">
+            <button class="private">
+              <em class="icon-log-in"></em>
+              <a href="https://www.cotowngroup.com/customer">
+                <p class="private-area">{{ literal('button-area-privada', L) }}</p>
+              </a>
+            </button>
+          </li>
+
+          <!-- Reservar -->
+          <li class="pure-menu-item ">
+            <div class="booking">
+              <button class="btn-primary hidden">
+              <a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['book'].url }}.html">
+              {{ literal('button-reservar', L) }}
+              </a>
+              </button>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>

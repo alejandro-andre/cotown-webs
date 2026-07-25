@@ -1,0 +1,147 @@
+<!-- Menú (logo + navegación, horizontal en escritorio / vertical en móvil)
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section class="container-header second pure-g">
+  <div class="black-line custom-wrapper pure-g {{ site }}" id="blackMenu">
+
+    <div class="left-nav pure-u-1 pure-u-lg-6-24">
+
+      <!-- Icono menú (movil) -->
+      <div class="pure-menu pure-u-1-3">
+        <a href="#" id="menuLink" class="menu-link" type="button" onclick="mostrarMenuMobile()">
+          <em class="icon-flat"></em>
+        </a>
+      </div>
+
+      <!-- Logo -->
+      {% if site == 'vanguard' %}
+      <div class="logo pure-u-1-3">
+        <a class="desktop" href="{{ root }}{{ langs[L].folder }}/">
+          <img class="img-logo" alt="logo" src="{{ root }}/assets/img/vanguard-coral.svg">
+        </a>
+        <a class="mobile" href="{{ root }}{{ langs[L].folder }}/">
+          <img class="img-logo" alt="logo" src="{{ root }}/assets/img/vanguard.svg">
+        </a>
+      </div>
+      {% else %}
+      <div class="logo pure-u-1">
+        <a class="desktop" href="{{ root }}{{ langs[L].folder }}/">
+          <div class="fs-x-large"><img class="img-logo cotown" alt="Cotown" src="{{ root }}/assets/img/cotown-logo-black.svg"></div>
+        </a>
+        <a class="mobile" href="{{ root }}{{ langs[L].folder }}/">
+          <div class="fs-x-large"><img class="img-logo cotown" alt="Cotown" src="{{ root }}/assets/img/cotown-logo-black.svg"></div>
+        </a>
+      </div>
+      {% endif %}
+
+      <!-- Botón reservar (movil) -->
+      <div class="booking pure-u-1-3">
+        <button class="btn-primary hidden">
+          <a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['book'].url }}.html">
+            {{ literal('button-reservar', L) }}
+          </a>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Menu movil -->
+    <div class="right-nav pure-u-1 pure-u-xl-16-24 pure-u-lg-18-24 pure-menu pure-menu-horizontal custom-can-transform" id="menu">
+      <ul class="black-menu pure-menu-list {{ site }}" id="menu-desplegado">
+
+        <div class="only-mobile-menu pure-u-1" id="only-mobile-menu">
+
+          <!-- Título menu -->
+          <div class="only-text pure-u-5-24">
+            <p style="color: var(--secondary-text-header);">Menu</p>
+          </div>
+
+          <!-- Logo -->
+          <div class="logo pure-u-11-24">
+            <a href="{{ root }}{{ langs[L].folder }}/">
+              {% if site == 'vanguard' %}
+              <img class="img-logo" alt="logo" src="{{ root }}/assets/img/vanguard.svg">
+              {% else %}
+              <img class="img-logo" alt="logo" src="{{ root }}/assets/img/cotown-logo-black.svg">
+              {% endif %}
+            </a>
+          </div>
+
+          <!-- Cerrar -->
+          <div class="menu-mobile-icons pure-u-5-24">
+            <a type="button" onclick="ocultarMenuMobile()"><em class="icon-close"></em></a>
+          </div>
+
+        </div>
+
+        <div class="only-mobile-private pure-u-1">
+
+          <div class="area">
+            <span><em class="icon-user"></em></span>
+            <a href="https://www.cotowngroup.com/customer">
+            <p>{{ literal('button-area-privada', L) }}</p>
+            </a>
+          </div>
+
+          <div class="lang-mobile">
+            <div class="select-container-mobile">
+              {% if L == 'es' %}
+              <label class="selected-option-mobile">
+                <span class="select-value-mobile">ES</span>
+                <em class="icon-corchete-down mobile"></em>
+              </label>
+              <div data-toggle="collaps" class="options-mobile">
+                <a href="{{ alt.en }}"><div class="option-mobile">EN</div></a>
+              </div>
+              {% else %}
+              <label class="selected-option-mobile">
+                <span class="select-value-mobile">EN</span>
+                <em class="icon-corchete-down mobile"></em>
+              </label>
+              <div data-toggle="collaps" class="options-mobile">
+                <a href="{{ alt.es }}"><div class="option-mobile">ES</div></a>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Locations -->
+        <li class="locations-dropdown pure-menu-item">
+          <div class="locations-container ">
+            <label class="locations-label">
+              <a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['locations'].url }}.html">{{ langs[L].pages['locations'].text }}</a>
+            </label>
+          </div>
+        </li>
+
+        <!-- Advantages -->
+        <li class="advantages"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['advantages'].url }}.html">{{ langs[L].pages['advantages'].text }}</a>
+        </li>
+
+        <!-- Faqs -->
+        <li class="faqs"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['faqs'].url }}.html">{{ langs[L].pages['faqs'].text }}</a>
+        </li>
+
+        <!-- Blog -->
+        <li class="blog"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['blog'].url }}.html">{{ langs[L].pages['blog'].text }}</a>
+        </li>
+
+        <!-- Contact -->
+        <li class="contact"><a href="{{ root }}{{ langs[L].folder }}/{{ langs[L].pages['contact'].url }}.html">{{ langs[L].pages['contact'].text }}</a>
+        </li>
+
+        <!-- Redes sociales (movil) -->
+        <li class="only-menu-mobile pure-menu-item">
+          <div class="redes-mobile">
+            <a href="{{ globals.rrss.wh }}" rel="noopener, noreferrer" target="_blank"><em class="icon-whatsapp"></em></a>
+            <a href="{{ globals.rrss.fb }}" rel="noopener, noreferrer" target="_blank"><em class="icon-facebook"></em></a>
+            <a href="{{ globals.rrss.in }}" rel="noopener, noreferrer" target="_blank"><em class="icon-linkedin"></em></a>
+            <a href="{{ globals.rrss.tk }}" rel="noopener, noreferrer" target="_blank"><em class="icon-tiktok"></em></a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</section>

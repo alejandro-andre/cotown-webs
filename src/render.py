@@ -8,7 +8,7 @@ import operator
 import re
 import unicodedata
 
-from jinja2 import Environment, FileSystemLoader, StrictUndefined
+from jinja2 import Environment, FileSystemLoader, StrictUndefined, pass_context
 from markupsafe import Markup
 
 import data
@@ -79,12 +79,14 @@ def find(items, key, cond="eq", value=None):
 # Shortcodes
 # ---------------------------------------------------------------------------
 
-def literal(text_id, lang, markdown=False):
-    """Equivale a {% literal texts, 'id', L %}."""
-    try:
-        return Markup(data.TEXTS[text_id][lang])
-    except KeyError:
+@pass_context
+def literal(ctx, text_id, lang):
+    """Equivale a {% literal texts, 'id', L %}; la marca se lee del contexto."""
+    override = data.TEXTS_SITE.get(ctx.get("site"), {})
+    entry = override.get(text_id) or data.TEXTS.get(text_id)
+    if entry is None:
         return Markup(f"<span style='color:red;'>[text missing {lang}: {text_id}]</span>")
+    return Markup(entry[lang])
 
 
 def picture(name, alt="", cls="", width=640, height=400, fmt="jpeg"):
@@ -137,29 +139,30 @@ def make_env():
 ENV = make_env()
 
 
-def context(lang="en"):
+def context(site="cotown", lang="en"):
     """Contexto global de la página (equivale a los datos globales de 11ty)."""
+    cfg = data.SITES[site]
     page = data.LANGS[lang]["pages"]["index"]
     return {
         "L": lang,
-        "site": data.SITE,
-        "siteid": data.SITEID,
+        "site": site,
+        "cfg": cfg,
+        "siteid": cfg["siteid"],
         "root": data.ROOT,
         "langs": data.LANGS,
-        "globals": data.GLOBALS,
-        "gtm": data.GTM_ID,
-        "gtm_noscript": data.GTM_NOSCRIPT_ID,
-        "texts": data.TEXTS,
-        "banners": data.BANNERS,
-        "locations": data.LOCATIONS,
+        "globals": cfg["globals"],
+        "gtm": cfg["gtm"],
+        "gtm_noscript": cfg["gtm_noscript"],
+        "banners": data.BANNERS_SITE[site],
+        "locations": data.LOCATIONS_SITE[site],
         "services": data.SERVICES,
         "partners": data.PARTNERS,
         "rrss": data.RRSS,
         "offices": data.OFFICES,
         "images": data.IMAGES,
         "promos": data.PROMOS,
-        "title": page[data.SITE]["title"],
-        "description": page[data.SITE]["description"],
+        "title": page[site]["title"],
+        "description": page[site]["description"],
         "city": "",
         "url": f"{data.ROOT}{data.LANGS[lang]['folder']}/",
         "alt": {
@@ -169,5 +172,18 @@ def context(lang="en"):
     }
 
 
-def render_home(lang="en"):
-    return ENV.get_template("pages/index.html").render(**context(lang))
+def render_home(site="cotown", lang="en"):
+    return ENV.get_template("pages/home/index.html").render(**context(site, lang))
+
+
+# Bloques de la home (para la página /test que los muestra por separado)
+HOME_BLOCKS = [
+    "main-header", "what-is", "locations", "choose",
+    "services", "cotownity", "partners", "testimonial",
+]
+
+
+def render_test(site="cotown", lang="en"):
+    ctx = context(site, lang)
+    ctx["home_blocks"] = HOME_BLOCKS
+    return ENV.get_template("pages/test/index.html").render(**ctx)

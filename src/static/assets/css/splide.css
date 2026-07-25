@@ -227,23 +227,10 @@
     outline-offset: -3px;
   }
 }
-@media screen and (-ms-high-contrast: none) {
-  .splide__slide:focus-visible {
-    border: 3px solid #0bf;
-  }
-}
 @supports (outline-offset: -3px) {
   .splide.is-focus-in .splide__slide:focus {
     outline: 3px solid #0bf;
     outline-offset: -3px;
-  }
-}
-@media screen and (-ms-high-contrast: none) {
-  .splide.is-focus-in .splide__slide:focus {
-    border: 3px solid #0bf;
-  }
-  .splide.is-focus-in .splide__track > .splide__list > .splide__slide:focus {
-    border-color: #0bf;
   }
 }
 .splide__toggle {
