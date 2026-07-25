@@ -43,8 +43,8 @@ main .container-main .first-contain.home.cotown .text p {
 	main .container-main .first-contain.home .title-big.home {
         margin: 4em auto 2em
     }
-	main .container-main .first-contain.home .title-big.home .bigh .fs-x-large,
-    main .container-main .first-contain.home .title-big.home .borderh .fs-x-large {
+	main .container-main .first-contain.home .title-big.home .bigh .text-x-large,
+    main .container-main .first-contain.home .title-big.home .borderh .text-x-large {
         text-align: left;
     }
 	main .container-main .first-contain.home .title-big.home p {
@@ -59,7 +59,7 @@ main .container-main .first-contain.home.cotown .text p {
 	main .container-main .first-contain.home.cotown .title-big.home {
         margin: 4em auto 0;
     }
-	main .container-main .first-contain.home.cotown .title-big.home .bigh.cotown .fs-hero {
+	main .container-main .first-contain.home.cotown .title-big.home .bigh.cotown .text-hero {
         width: 100%;
     }
 	main .container-main .first-contain.home.cotown .title-big.home .text {

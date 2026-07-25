@@ -25,6 +25,16 @@ import render
 
 app = FastAPI(title="Cotown + Vanguard home")
 
+
+# En desarrollo: no cachear los assets, así el CSS/JS se recargan sin hard-refresh
+@app.middleware("http")
+async def no_cache_assets(request: Request, call_next):
+    response = await call_next(request)
+    if request.url.path.startswith("/assets"):
+        response.headers["Cache-Control"] = "no-store"
+    return response
+
+
 # Assets (css, icons, js, img)
 app.mount("/assets", StaticFiles(directory=render.STATIC_DIR / "assets"), name="assets")
 

@@ -10,7 +10,7 @@
     text-align: center;
     padding: 1.5em 0 0 74px;
 }
-.locations .carousel .fs-large {
+.locations .carousel .text-large {
     position: absolute !important;
     bottom: 0;
     left: 0.3em;
@@ -18,7 +18,7 @@
     margin: 0;
     text-transform: uppercase;
 }
-.locations .carousel .img:hover .fs-large {
+.locations .carousel .img:hover .text-large {
     color: var(--primary);
 }
 .locations .img img {
@@ -81,7 +81,7 @@
     width: 100%;
     padding-top: 4px;
 }
-.locations .carousel.cotown .text-slide .fs-medium {
+.locations .carousel.cotown .text-slide .text-medium {
     text-align: center;
     color: var(--black);
     margin: 0;

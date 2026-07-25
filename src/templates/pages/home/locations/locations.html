@@ -1,7 +1,7 @@
 <section class="locations {{ site }}">
 
   <div class="text-container">
-    <h2 class="fs-xx-large title {{ 'cotown' if site == 'cotown' else '' }}">
+    <h2 class="text-xx-large title {{ 'cotown' if site == 'cotown' else '' }}">
       {{ literal('home-localizaciones-titulo', L) }}
     </h2>
   </div>
@@ -19,10 +19,10 @@
           <div class="img">
             {{ image(l.image, alt=l.Name) }}
             {% if site == 'vanguard' %}
-            <h3 class="fs-large img-title">{{ l.Name }}</h3>
+            <h3 class="text-large img-title">{{ l.Name }}</h3>
             {% else %}
             <div class="text-slide">
-              <h5 class="fs-medium img-title">{{ l.Name }}</h5>
+              <h5 class="text-medium img-title">{{ l.Name }}</h5>
               <div class="line"></div>
             </div>
             {% endif %}

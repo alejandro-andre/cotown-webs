@@ -221,8 +221,8 @@ TEXTS_SITE = {
         "home-servicios-titulo": {"es": "Todos los servicios incluidos", "en": "All services included"},
         "home-cotownity-titulo": {"es": "Unete a nuestra cotownity", "en": "Join our cotownity"},
         "home-testimonios-titulo": {
-            "es": '<h2 class="fs-xx-large title">Qué dicen<div class="fs-xx-large title turquoise">de nosotros</div></h2>',
-            "en": '<h2 class="fs-xx-large title">What they say<div class="fs-xx-large title turquoise">about us</div></h2>',
+            "es": '<h2 class="text-xx-large title">Qué dicen<div class="text-xx-large title turquoise">de nosotros</div></h2>',
+            "en": '<h2 class="text-xx-large title">What they say<div class="text-xx-large title turquoise">about us</div></h2>',
         },
         "meta": {
             "es": '<meta name="google-site-verification" content="fj5OuAzbg6T7hX2HjohS-2hH_zotI8pezWjziKX2dac"/>',
@@ -260,8 +260,8 @@ TEXTS_SITE = {
         "home-servicios-titulo": {"es": "Todos nuestros servicios", "en": "All our services"},
         "home-cotownity-titulo": {"es": "Únete a nuestra comunidad Vanguard", "en": "Join our Vanguard community"},
         "home-testimonios-titulo": {
-            "es": '<h2 class="fs-xx-large title">Qué dicen<div class="fs-xx-large title turquoise">de nosotros</div></h2>',
-            "en": '<h2 class="fs-xx-large title">What they say<div class="fs-xx-large title turquoise">about us</div></h2>',
+            "es": '<h2 class="text-xx-large title">Qué dicen<div class="text-xx-large title turquoise">de nosotros</div></h2>',
+            "en": '<h2 class="text-xx-large title">What they say<div class="text-xx-large title turquoise">about us</div></h2>',
         },
         "meta": {"es": "", "en": ""},
     },

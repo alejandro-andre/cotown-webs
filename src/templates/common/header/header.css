@@ -29,12 +29,14 @@
 	display: none;   /* solo visible en móvil */
 }
 .banner-link {
-	padding-top: 3px;
+	display: flex;
+	align-items: center;
 	flex-shrink: 0;  /* el botón no se encoge */
 }
 .banner-link button.btn-primary {
 	border-radius: 8px;
-	height: 36px;
+	height: 40px;
+	box-sizing: border-box;
 }
 .banner-text {
 	font-family: var(--title-font);
@@ -92,6 +94,8 @@
 .lang-select {
 	display: block;
 	position: relative;
+	height: 40px;
+	box-sizing: border-box;
 }
 .lang-select.cotown {
 	border: 1px solid var(--primary-ok);
@@ -100,6 +104,9 @@
 }
 .lang-select label {
 	display: flex;
+	align-items: center;
+	height: 100%;
+	box-sizing: border-box;
 	color: var(--primary-text);
 	font-size: var(--fs-x-small);
 	font-weight: 500;
