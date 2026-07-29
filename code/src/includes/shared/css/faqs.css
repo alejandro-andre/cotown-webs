@@ -123,7 +123,7 @@ main .container-main .faqs-container .description.text .expansion .content p,
 main .container-main .faqs-container .description.text .expansion .content p a,
 main .container-main .faqs-container .description.text .expansion .content ul li {
 	font-weight: 400;
-	font-size: 22px;
+	font-size: 18px;
 	line-height: 150%;
 	color: var(--black)
 }
