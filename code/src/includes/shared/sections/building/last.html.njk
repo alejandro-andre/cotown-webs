@@ -1,4 +1,4 @@
-{% set buildingfaqs = faqs | find('Building_id', 'eq', building.id) %}
+{% set buildingfaqs = faqs | find('Building_id', 'eq', building.id) | find('Web_type', 'in', [null, webtype]) %}
 {% if buildingfaqs | length > 0 %}
 <anchor class="anchor" id="faqs"></anchor>
 <section class="faqs-container pure-u-1">

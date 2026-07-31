@@ -1,4 +1,4 @@
-{% set locationfaqs = faqs | find('Location_id', 'eq', location.id) %}
+{% set locationfaqs = faqs | find('Location_id', 'eq', location.id) | find('Web_type', 'in', [null, webtype]) %}
 {% if locationfaqs | length > 0 %}
 <anchor class="anchor" id="faqs"></anchor>
 <section class="faqs-container {% if site == 'vanguard' %} vanguard {% else %} cotown {% endif %}">
