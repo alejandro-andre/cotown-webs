@@ -58,6 +58,7 @@ module.exports = (eleventyConfig) => {
           case 'ge': return json[last] >= value;
           case 'lt': return json[last] < value;
           case 'le': return json[last] <= value;
+          case 'in': return (value || []).includes(json[last]);
           default: return json[last] === value;
         }
       } else {
