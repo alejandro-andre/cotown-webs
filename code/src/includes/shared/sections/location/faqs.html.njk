@@ -16,7 +16,7 @@
           <div class="description text pure-u-1">
             <div class="expansion pure-u-1">
               <h3 class="head3">
-              {{q | translate('Question', L)}}
+              <label class="head3_lab" for="tab{{q.id}}">{{q | translate('Question', L)}}</label>
               </h3>
               <input type="checkbox" class="tab pure-u-1-2" id="tab{{q.id}}" tabindex="0"/>
               <label name="tab" for="tab{{q.id}}" tabindex="-1" class="tab_lab pure-u-1-2" role="tab">
