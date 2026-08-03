@@ -425,6 +425,19 @@ button {
 	text-decoration: underline;
 }
 
+/* El título de la pregunta también abre/cierra la FAQ */
+.expansion .head3 label.head3_lab {
+	display: block;
+	width: 100%;
+	font: inherit;
+	color: inherit;
+	margin: 0;
+}
+
+.expansion .head3 label.head3_lab:hover {
+	cursor: pointer;
+}
+
 .expansion label[class^="tab"]:hover {
 	cursor: pointer;
 }
