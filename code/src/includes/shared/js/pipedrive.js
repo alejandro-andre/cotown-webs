@@ -1,3 +1,6 @@
+// Anti-bot: momento en que se cargo la pagina con el formulario
+var formLoadedAt = Date.now();
+
 // Get tags
 function gettag(name) {
   let params = (new URL(document.location)).searchParams;
@@ -44,6 +47,7 @@ function post(event) {
   formData.append('utm_medium', sessionStorage.getItem('utm_medium'));
   formData.append('utm_source', sessionStorage.getItem('utm_source'));
   formData.append('gclid', sessionStorage.getItem('gclid'));
+  formData.append('elapsed', Date.now() - formLoadedAt);
 
   const file = document.getElementById('file')
   if (file)

@@ -1076,6 +1076,14 @@ main .container-main section.form .form-container .campo .select input.selected 
 	opacity: 0;
 }
 
+main .container-main section.form .form-container .hp-field {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+	height: 0;
+	overflow: hidden;
+}
+
 section.form .form-container .text-ok {
 	display: none;
 }
