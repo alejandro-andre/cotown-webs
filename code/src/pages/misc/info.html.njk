@@ -110,7 +110,7 @@ tags: page
         <div class="pure-u-1 pure-u-md-1-2">
           <div class="campo">
           <label class="label">{% literal texts, 'form-motivo', L %}</label>
-          <select class="select" type="select" id="reason" name="reason" required onchange="leisure();">
+          <select class="select" type="select" id="reason" name="reason" required onchange="leisure_check();">
             <option value="" disabled selected>{% literal texts, 'form-motivo', L %}</option>
             {% for r in reasons %}
               <option value="{{r.id}}">{{r | translate('Name', L)}}</option>
@@ -299,7 +299,7 @@ function get_types(value) {
 }
 
 // Estancia recreativa: declaracion obligatoria (motivo 5 = Vacaciones - recreativo)
-function leisure() {
+function leisure_check() {
   div = document.getElementById('leisure_div');
   check = document.getElementById('leisure');
   holiday = (document.getElementById('reason').value == '5');
@@ -351,7 +351,7 @@ get_buildings(null);
 document.getElementById('building').value = sessionStorage.getItem('building');
 get_types(null);
 document.getElementById('place_type').value = sessionStorage.getItem('book_type');
-leisure();
+leisure_check();
 {% include "shared/js/pipedrive.js" %}
 {% endset %}<script>{{ script | jsmin | safe }}</script>
 {% endblock %}
